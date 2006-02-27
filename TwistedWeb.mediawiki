@@ -1,0 +1,23 @@
+[[PageOutline(1,Contents)]]
+
+= Twisted Web =
+
+Twisted web is a web server, and also provides basic HTTP client support. You may want to check out [http://divmod.org/projects/nevow Nevow], a templating toolkit designed for twisted.web, and [wiki:TwistedWeb2 Twisted Web2], the next generation Twisted web server.
+
+Twisted Web is available under the MIT Free Software licence.
+
+
+= Download =
+ * [http://twistedmatrix.com/projects/web/NEWS.txt Release notes] for Twisted Web 0.5.0
+ * Stable: Twisted Web is part of Twisted. Tarballs and Windows installers are at the TwistedProject page.
+ * Trunk: svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk Twisted
+ * [http://tmrc.mit.edu/mirror/twisted/Web/0.5/TwistedWeb-0.5.0.tar.bz2 Minimal Tarball]. This will require downloading of additional dependencies. We encourage you to use the downloads at TwistedProject, instead of this minimal download.
+
+= Documentation =
+
+[http://twistedmatrix.com/projects/web/documentation/ Documentation] is available for Twisted Web. An [http://twistedmatrix.com/documents/current/api/ API reference] of Twisted and all subprojects is also available.
+
+= Contact = 
+
+Subscribe to the [http://twistedmatrix.com/cgi-bin/mailman/twisted-web twisted-web] mailing list or visit the #twisted.web channel on irc.freenode.net to ask questions.
+

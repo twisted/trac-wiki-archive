@@ -1,0 +1,44 @@
+Twisted is used by many open-source projects.
+
+= Libraries and Add-Ons =
+
+ * [http://trevp.net/tlslite/ TLS Lite] - Python TLS/SSL implementation.
+ * [http://twistedsnmp.sourceforge.net/ TwistedSNMP] - PySNMP integration for Twisted.
+ * [http://beepy.sourceforge.net BEEPy] - BEEP protocol implementation for Python.
+ * [http://www.wiggy.net/code/pyrad.xhtml PyRAD]-  a RADIUS client and server.
+ * [http://ldaptor.bkbits.net/ Ldaptor] - LDAP protocol implementation and utilities.
+ * [http://slarty.polito.it:8069/~sciasbat/wiki/moin.cgi/twibber Twibber] - a Jabber implementation.
+ * [http://repose.cx/pyosd/ PyOSD] - module for displaying text on your X display, much like the "On Screen Displays" used on TVs and some monitors.
+
+= Applications =
+
+ * [http://www.hellanzb.com/trac/ hellanzb] - an application designed for *nix environments that retrieves and processes Usenet nzb files.
+ * [http://www.flumotion.net/ Flumotion] - a streaming media server.
+ * [http://www.divmod.org/ Quotient] - multi-protocol messaging server with tools for information management and retrieval, including a mail server (SMTP/POP3/IMAP/webmail) and much more.
+ * [http://shtoom.sf.net Shtoom] - a RTP/SIP VoIP phone.
+ * [http://www.fettig.net/projects/hep Hep] - Message routing super-server
+ * [http://sourceforge.net/projects/khashmir Khashmir] - distributed hash table.
+ * [http://sourceforge.net/projects/originalgamer OGC] - MUD client.
+ * [http://itamarst.org/software/bannerfish/ Bannerfish] - banner ad server.
+ * [http://apt-proxy.sourceforge.net apt-proxy2] - caching proxy for Debian apt-get clients.
+ * [http://twistedmatrix.com/users/acapnotic/wares/code/CVSToys/ CVSToys] - CVS change notification via email, IRC and HTTP.
+ * [http://www.asbahr.com/beyond.html Beyond 2] - high level framework for assembling, animating, and interacting with 3D virtual environments
+ * [http://www.zope.org/Members/infrae/DocmaServer DocmaServer] - batch processing server that does Word <-> XML conversion.
+ * [http://homepage.hispeed.ch/py430/python/index.html pyvncviewer] - a simple VNC viewer implemented in Python.
+ * [http://buildbot.sf.net BuildBot] - a distributed building/testing framework.
+ * [http://pythondirector.sf.net PythonDirector] - load balancing for web servers.
+ * [http://mithrandr.moria.org/code/ Various libraries] - pcap, SNMP integration, RSS to NNTP gateway, and other programs.
+ * [http://upstage.org.nz/ Upstage] - a "cyberperformance" chat system.
+ * [http://freevo.sourceforge.net/ Freevo] - open-source home theatre and PVR PC platform.
+ * [http://cia.navi.cx/ CIA Bot] - notification system, used by many projects for source code checkin notification.
+ * [http://cvs.zope.org/Packages/SFTPGateway/ SFTPGateway] - SFTP to FTP gateway, allowing secure access to FTP servers.
+ * [http://travishartwell.net/projects/informant/ Informant] - GNOME Panel applet for event notification.
+ * [http://gosiege.sourceforge.net/ Go Siege] - multiplayer Go game.
+ * [http://toursst.sourceforge.net/ TouRSSt] - RSS delivery system.
+ * [http://sourceforge.net/projects/pynfo/ Pynfo] - extendable multi-function IRC bot.
+ * [http://petmail.lothar.com/ PETMail] - permission based anti-spam replacement for SMTP.
+ * [http://crowsnest.sf.net Crow's Nest] - collect log information from various sources and to apply some filter to them in a very modular way.
+ * [http://thorne.ath.cx/~stephen/software.html Trash] - a web pastebin application.
+
+Got a successful project you'd like added to this page? Mail a brief description
+and an URL (if appropriate) to the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted mailing list]!

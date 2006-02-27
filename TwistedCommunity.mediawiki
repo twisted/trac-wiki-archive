@@ -1,0 +1,4 @@
+ * IRC: #twisted and #twisted.web on the [http://freenode.net Freenode IRC network]
+ * General mailing list: [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted-python]
+ * Web technologies mailing list (twisted.web, etc): [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-web twisted-web]
+ * Developer blogs: [http://planet.twistedmatrix.com Planet Twisted]

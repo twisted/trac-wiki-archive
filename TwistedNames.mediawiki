@@ -1,0 +1,22 @@
+[[PageOutline(1,Contents)]]
+
+= Twisted Names =
+
+Twisted Names is both a domain name server as well as a client resolver library. Twisted Names comes with an "out of the box" nameserver which can read most BIND-syntax zone files as well as a simple Python-based configuration format. Twisted Names can act as an authoritative server, perform zone transfers from a master to act as a secondary, act as a caching nameserver, or any combination of these. Twisted Names' client resolver library provides functions to query for all commonly used record types as well as a replacement for the blocking gethostbyname() function provided by the Python stdlib socket module.
+
+Twisted Names is available under the MIT Free Software licence. 
+
+= Download =
+ * [http://twistedmatrix.com/projects/names/NEWS.txt Release notes] for Twisted Names 0.2.0
+ * Stable: Twisted Names is part of Twisted. Tarballs and Windows installers are at the TwistedProject page.
+ * Trunk: svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk Twisted
+ * [http://tmrc.mit.edu/mirror/twisted/Names/0.2/TwistedNames-0.2.0.tar.bz2 Minimal Tarball]. This will require downloading of additional dependencies. We encourage you to use the downloads at TwistedProject, instead of this minimal download.
+
+= Documentation =
+
+[http://twistedmatrix.com/projects/names/documentation/ Documentation] is available for Twisted Names. An [http://twistedmatrix.com/documents/current/api/ API reference] of Twisted and all subprojects is also available.
+
+= Contact = 
+
+Subscribe to the [http://twistedmatrix.com/cgi-bin/mailman/twisted-python twisted-python] mailing list or visit the #twisted channel on irc.freenode.net to ask questions.
+

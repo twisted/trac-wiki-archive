@@ -1,0 +1,26 @@
+[[PageOutline(1,Contents)]]
+
+= Twisted Words =
+
+Twisted Words includes:
+
+ * Low-level protocol implementations of OSCAR (AIM and ICQ), IRC, MSN, TOC (AIM).
+ * Jabber libraries.
+ * Prototypes of chat server and client frameworks built on top of the protocols.
+
+Twisted Words is available under the MIT Free Software licence.
+
+= Download =
+ * [http://twistedmatrix.com/projects/words/NEWS.txt Release notes] for Twisted Words 0.3.0
+ * Stable: Twisted Words is part of Twisted. Tarballs and Windows installers are at the TwistedProject page.
+ * Trunk: svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk Twisted
+ * [http://tmrc.mit.edu/mirror/twisted/Words/0.3/TwistedWords-0.3.0.tar.bz2 Minimal Tarball]. This will require downloading of additional dependencies. We encourage you to use the downloads at TwistedProject, instead of this minimal download.
+
+= Documentation =
+
+[http://twistedmatrix.com/projects/words/documentation/ Documentation] is available for Twisted Words. An [http://twistedmatrix.com/documents/current/api/ API reference] of Twisted and all subprojects is also available.
+
+= Contact = 
+
+Subscribe to the [http://twistedmatrix.com/cgi-bin/mailman/twisted-python twisted-python] mailing list or visit the #twisted channel on irc.freenode.net to ask questions.
+

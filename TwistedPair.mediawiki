@@ -1,0 +1,17 @@
+[[PageOutline(1,Contents)]]
+
+= Twisted Pair =
+
+Twisted Pair can do low level TCP work. It is unmaintained.
+
+Twisted Pair is available under the MIT Free Software licence.
+
+= Download =
+ * Trunk: svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk Twisted
+ * [http://tmrc.mit.edu/mirror/twisted/Pair/0.1/TwistedPair-0.1.0.tar.bz2 Minimal Tarball]. This will require downloading of additional dependencies.
+
+= Documentation =
+
+[http://twistedmatrix.com/projects/pair/documentation/ Documentation] is available for Twisted Pair. An [http://twistedmatrix.com/documents/current/api/ API reference] of Twisted and all subprojects is also available.
+
+

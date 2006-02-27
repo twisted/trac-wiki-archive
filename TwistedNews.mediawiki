@@ -1,0 +1,22 @@
+[[PageOutline(1,Contents)]]
+
+= Twisted News =
+
+Twisted News provides a very basic NNTP server, as well as an NNTP client protocol implementation. Two messages storage systems are supported: the DB-API 2.0 backend stores and indexes messages in any compatible SQL database; the Twisted dirdbm backend uses serialized Python objects stored directly on the filesystem for message storage. Twisted News also has very rudamentary support for moderated groups.
+
+Twisted News is available under the MIT Free Software licence. 
+
+= Download =
+ * [http://twistedmatrix.com/projects/news/NEWS.txt Release notes] for Twisted News 0.1.0
+ * Stable: Twisted News is part of Twisted. Tarballs and Windows installers are at the TwistedProject page.
+ * Trunk: svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk Twisted
+ * [http://tmrc.mit.edu/mirror/twisted/News/0.1/TwistedNews-0.1.0.tar.bz2 Minimal Tarball]. This will require downloading of additional dependencies. We encourage you to use the downloads at TwistedProject, instead of this minimal download.
+
+= Documentation =
+
+[http://twistedmatrix.com/projects/news/documentation/ Documentation] is available for Twisted News. An [http://twistedmatrix.com/documents/current/api/ API reference] of Twisted and all subprojects is also available.
+
+= Contact = 
+
+Subscribe to the [http://twistedmatrix.com/cgi-bin/mailman/twisted-python twisted-python] mailing list or visit the #twisted channel on irc.freenode.net to ask questions.
+

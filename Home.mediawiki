@@ -1,0 +1,60 @@
+[[PageOutline(1-2,Contents)]]
+
+= What is Twisted? =
+
+[wiki:TwistedProject Twisted] is an event-driven networking framework written in Python and licensed under the [http://www.opensource.org/licenses/mit-license.php MIT license].
+
+[wiki:TwistedProjects Twisted projects] variously support TCP, UDP, SSL/TLS, multicast, Unix sockets, a large number of protocols (including HTTP, NNTP, IMAP, SSH, IRC, FTP, and others), and [wiki:TwistedProjects much more].
+
+ * People are [wiki:SuccessStories successful] with Twisted.
+ * People [wiki:ProjectsUsingTwisted use] Twisted.
+ * People [wiki:TwistedCommunity talk about] Twisted.
+ * People [wiki:TwistedDevelopment hack on] Twisted.
+ * People write DocumentationAnalysis for Twisted.
+
+= Where can I get Twisted? =
+
+For the most recent downloads, including the core Twisted 2.1 release, visit its [wiki:TwistedProject project page]. Windows installers are also available there.
+
+(If you are looking for the older Twisted 1.3 release, see the [http://twistedmatrix.com/products/download old download page]. Twisted 1.3 is deprecated, but may still be required by some third-party applications.)
+
+= What is Twisted Matrix Laboratories? =
+
+[wiki:TwistedMatrixLaboratories Twisted Matrix Laboratories] is a distributed group of [http://opensource.org/ open-source] developers working on a number of projects based around [wiki:TwistedProject Twisted].
+
+= Contributing =
+
+Want to help Twisted, but don't have any spare time? If you appreciate Twisted and want to help the community and future development, consider a monetary donation. This is not tax deductable. Donations will be used mostly towards payment of hosting costs.
+
+{{{
+#!html
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input type="hidden" name="cmd" value="_s-xclick" /><input src="https://www.paypal.com/en_US/i/btn/x-click-but21.gif" alt="Make payments with PayPal - it's fast, free and secure!" border="0" name="submit" type="image" /><input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+" /></form>
+}}}
+
+= Twisted Network Programming Essentials =
+
+{{{
+#!html
+<a href="http://www.amazon.com/exec/obidos/ASIN/0596100329/httpitamorg-20?creative=327641&camp=14573&link_code=as1"><img align="right" src="http://www.oreilly.com/catalog/covers/twistedadn.s.gif" /></a>
+}}}
+That's right, the first Twisted book is finally here. Thanks to Abe Fettig for writing it and O'Reilly for publishing it: Twisted is going to be much improved for it. And this is definitely the coolest O'Reilly book cover there is.
+
+= News =
+
+== Twisted 2.2.0 2006-02-12 ==
+
+Twisted 2.2.0 is out. See TwistedProject.
+
+== Twisted (core) 2.1.0 + First Virtual Sprint (2005-10-09) ==
+
+In Twisted's first virtual sprint the weekend of 2005-10-08, many people contributed to Twisted in general and helped get the Twisted 2.1.0 release out. See the Twisted project page and read about what's new.
+Australian Twisted Sprint 2005.2 (2005-08-07)
+
+A Twisted Sprint will be held in Sydney Australia on the 19-21 August 2005. Topics will probably include documentation, a VFS layer (including WebDAV support), the new Axiom database, and whatever else anyone can think of. For more information, please see the Australian Twisted Sprint Wiki.
+
+Thanks to Linux Australia for funding this sprint.
+
+== Twisted 2.0.1 NOW released (2005-05-25) ==
+
+Twisted 2.0.1 is now out. This is a minor release, only including bugfixes since 2.0.0. One of the most important fixes was a bug causing many gtk GUI apps to crash. Twisted News is now properly included in the Sumo release. Enjoy. 
