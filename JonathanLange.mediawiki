@@ -8,4 +8,4 @@ Maintainer of Trial.
  * [query:status=new|assigned|reopened&component=core Core]
  * [query:status=new|assigned|reopened&component=trial Trial]
 
- * [query:status=new|assigned|reopened&keywors=%7Ereview Pending Review]
+ * [query:status=new|assigned|reopened&keywords=%7Ereview Pending Review]
