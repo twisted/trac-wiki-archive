@@ -1,0 +1,9 @@
+== Tickets by component ==
+
+ * [query:status=new|assigned|reopened&component=conch Conch]
+ * [query:status=new|assigned|reopened&component=core Core]
+ * [query:status=new|assigned|reopened&component=trial Trial]
+
+== By stage of development ==
+
+ * [query:status=new|assigned|reopened&keywords~=review Pending Review]
