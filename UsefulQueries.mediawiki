@@ -4,6 +4,11 @@
  * [query:status=new|assigned|reopened&component=core Core]
  * [query:status=new|assigned|reopened&component=trial Trial]
 
+== Flavored Tickets == 
+
+ * [query:status=new|assigned|reopened&keywords~=documentation Documentation]
+ * [query:status=new|assigned|reopened&keywords~=win32 Windows]
+
 == By stage of development ==
 
  * [query:status=new|assigned|reopened&keywords~=review Pending Review]
