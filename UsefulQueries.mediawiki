@@ -8,6 +8,7 @@
 
  * [query:status=new|assigned|reopened&keywords~=documentation Documentation]
  * [query:status=new|assigned|reopened&keywords~=win32 Windows]
+ * [query:status=new|assigned|reopened&keywords~=tests Tests]
 
 == By stage of development ==
 
