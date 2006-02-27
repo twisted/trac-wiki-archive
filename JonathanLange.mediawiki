@@ -3,4 +3,6 @@ Maintainer of Trial.
 
 == Saved Queries ==
 
-[query:?status=new&status=assigned&status=reopened&component=trial&owner=jml&order=priority Trial]
+[query:?status=new&status=assigned&status=reopened&component=conch&order=priority Conch]
+[query:?status=new&status=assigned&status=reopened&component=core&order=priority Core]
+[query:?status=new&status=assigned&status=reopened&component=trial&order=priority Trial]
