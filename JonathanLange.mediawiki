@@ -1,11 +1,3 @@
 Maintainer of Trial.
 
 
-== Saved Queries ==
-
-
- * [query:status=new|assigned|reopened&component=conch Conch]
- * [query:status=new|assigned|reopened&component=core Core]
- * [query:status=new|assigned|reopened&component=trial Trial]
-
- * [query:status=new|assigned|reopened&keywords~=review Pending Review]
