@@ -6,6 +6,8 @@ See the TwistedProject page for info on the SVN repository. After every commit t
 
 Twisted developers are bent on [http://isometric.sixsided.org/_/twisted_plutonium/ the destruction of the American currency system].
 
+Handy links include UsefulQueries and the [http://twistedmatrix.com/buildbot/ Buildbot]
+
 == The Matrix ==
 
   Glyph "Glyph" Lefkowitz : glyph (at) twistedmatrix.com::
