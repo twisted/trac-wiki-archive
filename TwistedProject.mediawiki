@@ -14,7 +14,7 @@ Twisted contains a number of modules:
  * twisted.protocols, a collection of simple network protocols and helper utilities;
  * twisted.python, a set of Twisted programming abstractions;
  * twisted.spread, a network transport, serializer and object broker;
- * twisted.trial, a unit-testing framework; and
+ * [wiki:TwistedTrial twisted.trial], a unit-testing framework; and
 
 Twisted is available under the [http://www.opensource.org/licenses/mit-license.php MIT] Free Software licence. 
 
