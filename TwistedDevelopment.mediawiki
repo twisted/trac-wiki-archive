@@ -8,6 +8,8 @@ Twisted developers are bent on [http://isometric.sixsided.org/_/twisted_plutoniu
 
 Handy links include UsefulQueries and the [http://twistedmatrix.com/buildbot/ Buildbot]
 
+Documentation work is done on the DocumentationAnalysis page.
+
 == The Matrix ==
 
   Glyph "Glyph" Lefkowitz : glyph (at) twistedmatrix.com::
