@@ -10,7 +10,6 @@
  * People [wiki:ProjectsUsingTwisted use] Twisted.
  * People [wiki:TwistedCommunity talk about] Twisted.
  * People [wiki:TwistedDevelopment hack on] Twisted.
- * People write DocumentationAnalysis for Twisted.
 
 = Where can I get Twisted? =
 
