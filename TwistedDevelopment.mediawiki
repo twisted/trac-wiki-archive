@@ -30,7 +30,7 @@ Documentation work is done on the DocumentationAnalysis page.
   kazoo
   Travis B. "Nafai" Hartwell : nafai (at) twistedmatrix.com::
   keyboards
-  Itamar "itamar" Shtull-Trauring : twisted (at) itamarst.org::
+  Itamar "itamar" Shtull-Trauring : itamar (at) itamarst.org::
   alto recorder
   Andrew "spiv" Bennetts : andrew (at) puzzling.org::
   glockenspiel
