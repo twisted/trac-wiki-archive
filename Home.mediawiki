@@ -14,7 +14,7 @@
 
 = Where can I get Twisted? =
 
-For the most recent downloads, including the core Twisted 2.1 release, visit its [wiki:TwistedProject project page]. Windows installers are also available there.
+For the most recent downloads, including the Twisted 2.2 release, visit its [wiki:TwistedProject project page]. Windows installers are also available there.
 
 (If you are looking for the older Twisted 1.3 release, see the [http://twistedmatrix.com/products/download old download page]. Twisted 1.3 is deprecated, but may still be required by some third-party applications.)
 
