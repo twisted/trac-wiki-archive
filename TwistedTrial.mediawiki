@@ -3,3 +3,6 @@
 Trial is Twisted's unit testing framework, an extension of Python's unittest. The code is in twisted.trial and the maintainer is JonathanLange.
 
 See TrialDevNotes for thoughts on future developments.
+
+[query:status=new|assigned|reopened&component=trial Open Issues]
+
