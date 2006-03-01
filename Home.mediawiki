@@ -10,6 +10,7 @@
  * People [wiki:ProjectsUsingTwisted use] Twisted.
  * People [wiki:TwistedCommunity talk about] Twisted.
  * People [wiki:TwistedDevelopment hack on] Twisted.
+ * People document Twisted: [http://twistedmatrix.com/projects/core/documentation/howto/index.html core], [http://twistedmatrix.com/documents/current/api/ API], and sub-project documentation ([http://twistedmatrix.com/projects/mail/documentation/howto/index.html mail], [http://twistedmatrix.com/projects/conch/documentation/howto/index.html conch], etc.) are available from the appropriate [wiki:TwistedProjects project] pages.
  * People write DocumentationAnalysis for Twisted.
 
 = Where can I get Twisted? =
