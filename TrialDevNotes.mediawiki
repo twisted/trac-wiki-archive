@@ -1,0 +1,99 @@
+
+== Become a Real Twisted Application ==
+
+Currently Trial uses an abomination to make sure Deferred-returning tests finish before the next test starts. We'd all like it to behave as a regular Twisted application. That is: set things up, run the reactor, call reactor.stop when done.
+
+The implementation might look like:
+
+{{{
+class AsyncTest(unittest.TestCase):
+    def run(self):
+        from twisted.internet import reactor
+        d = self.runDeferred()
+        d.addCallback(lambda x : reactor.stop())
+        reactor.run()
+
+class TestCase(unittest.TestCase, AsyncTest):
+    def runDeferred(self):
+        d = defer.maybeDeferred(self.setUp))
+        d.addCallback(lambda x : defer.maybeDeferred(testMethod))
+        d.addCallback(lambda x : defer.maybeDeferred(self.tearDown))
+        return d
+
+class TestSuite(unittest.TestSuite, AsyncTest):
+    def runDeferred(self):
+        ds = [ test.runDeferred() for test in self ]
+        # probably use something that runs them sequentially
+        return defer.gatherResults(ds) 
+}}}
+
+This would allow Trial tests to be safely added to a pyunit suite (provided that all the Trial tests were contained within one Trial test suite/case).
+
+No matter what the implementation looks like, we'll need to address the issues of timeout and test cleanup.
+
+=== Timeout ===
+
+Currently, Trial test cases can have a timeout attribute.  The timeout attribute guarantees that the test and all of its callbacks and errbacks will complete within the given timeout period.  If the test takes longer than that, it will fail.
+
+This should be the testers responsibility, not Trial's.  The only way we support it now is by crashing the reactor at the end of each test.
+
+=== Cleanup ===
+
+I don't know enough the use cases for cleanup.
+
+I assume that if a test leaves sockets etc around after it is completed, then an error should be reported. The harsh, ridiculous cleanup that Janitor does probably will have to go, and be replaced with something like what is described in #1334
+
+
+== Random Stuff ==
+
+ * Make failUnlessRaises re-raise KeyboardInterrupt
+ * Make TestCase._wait actually call result.stop()
+
+
+== Assertion stuff ==
+
+Trial has a multiplicity of assertion methods.  It's ugly, and there is often reason to want still more assertion methods.  Two solutions have been proposed:
+
+=== Assertion objects ===
+
+{{{
+class Equal(object):
+    def __init__(self, a, b):
+        self.a, self.b = a, b
+    
+    def passed(self):
+        return self.a == self.b
+
+    def value(self):
+        return self.a
+
+    def message(self):
+        return 'rs != %r' % (self.a, self.b)
+
+
+class TestCase(unittest.TestCase):
+    def check(self, assertion):
+        if not assertion.passed():
+            self.fail(assertion.message())
+        return self.value()
+}}}
+
+
+This could be combined with some sort of registration mechanism that makes self.assertEqual just work. 
+
+The advantages of this approach are debatable. It doesn't seem to reduce code, or make it easier to write assertions. By relying on composition instead of inheritance, it clears up a little namespace pollution.
+
+`check` could be moved to an abstract base class, but then we just start encouraging people to put assertions outside of unit tests, which is a demonstrably bad idea (see the Conch tests).
+
+
+=== py.test magic ===
+
+The other solution is better, but harder. Much harder. 
+
+Add a method to TestCase called `test` (I prefer the name `contend` myself) which takes a boolean expression and then provide a bunch of magic that displays the values of variables and sub-expressions of that boolean expression.
+
+py.test is unreleased and the code we need isn't exposed in a public interface.  exarkun has volunteered to look into implementing this.
+
+
+Original Author: JonathanLange
+
