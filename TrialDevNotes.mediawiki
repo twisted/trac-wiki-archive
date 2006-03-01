@@ -50,13 +50,13 @@ I assume that if a test leaves sockets etc around after it is completed, then an
 
 == Random Stuff ==
 
- * Make failUnlessRaises re-raise KeyboardInterrupt
- * Make TestCase._wait actually call result.stop()
- * Somehow separate regular TestCase from TestCaseWithTearDownClass in some clean way
+ * Make failUnlessRaises re-raise !KeyboardInterrupt
+ * Make !TestCase._wait actually call result.stop()
+ * Somehow separate regular !TestCase from !TestCaseWithTearDownClass in some clean way
  * Make the setup, method and teardown call/errbacks public
- * Make sure cleanup calls re-raise KeyboardInterrupt
- * Make makeTodo accept None correctly (see TestCase.getTodo)
- * Double-check TestVisitor only has methods that are used.
+ * Make sure cleanup calls re-raise !KeyboardInterrupt
+ * Make makeTodo accept None correctly (see !TestCase.getTodo)
+ * Double-check !TestVisitor only has methods that are used.
 
 
 == Assertion stuff ==
@@ -99,7 +99,7 @@ The advantages of this approach are debatable. It doesn't seem to reduce code, o
 
 The other solution is better, but harder. Much harder. 
 
-Add a method to TestCase called `test` (I prefer the name `contend` myself) which takes a boolean expression and then provide a bunch of magic that displays the values of variables and sub-expressions of that boolean expression.
+Add a method to !TestCase called `test` (I prefer the name `contend` myself) which takes a boolean expression and then provide a bunch of magic that displays the values of variables and sub-expressions of that boolean expression.
 
 py.test is unreleased and the code we need isn't exposed in a public interface.  exarkun has volunteered to look into implementing this.
 
