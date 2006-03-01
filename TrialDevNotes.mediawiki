@@ -11,19 +11,22 @@ class AsyncTest(unittest.TestCase):
     def run(self):
         from twisted.internet import reactor
         d = self.runDeferred()
-        d.addCallback(lambda x : reactor.stop())
+        d.addCallback(lambda x: reactor.stop())
         reactor.run()
 
 class TestCase(unittest.TestCase, AsyncTest):
+    def __init__(self, methodName='runTest'):
+        self._methodName = methodName
     def runDeferred(self):
+        testMethod = getattr(self, self._methodName)
         d = defer.maybeDeferred(self.setUp))
-        d.addCallback(lambda x : defer.maybeDeferred(testMethod))
-        d.addCallback(lambda x : defer.maybeDeferred(self.tearDown))
+        d.addCallback(lambda x: defer.maybeDeferred(testMethod))
+        d.addCallback(lambda x: defer.maybeDeferred(self.tearDown))
         return d
 
 class TestSuite(unittest.TestSuite, AsyncTest):
     def runDeferred(self):
-        ds = [ test.runDeferred() for test in self ]
+        ds = [test.runDeferred() for test in self]
         # probably use something that runs them sequentially
         return defer.gatherResults(ds) 
 }}}
