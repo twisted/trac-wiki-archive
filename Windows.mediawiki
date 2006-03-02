@@ -5,24 +5,23 @@ The Twisted project is currently seeking resource donations to establish Windows
 
 We wish to establish a number of Windows machines accessible over the Internet via RDP (aka Remote Desktop/Terminal Services). SSH access will also be provided to Cygwin shells and to CMD.exe shells (if possible).
 
-We plan to have buildbots running on *at least* Windows 2003 Server and Windows XP Professional. As resources permit, we may include buildbots on Win XP Home and Win2K.
+We plan to have buildbots running on *at least* Windows 2003 Server and Windows XP Professional. As resources permit, we may include buildbots on Win XP Home and Win2K. The level of support given to the Win2K product family has yet to be determined. Microsoft continues to support Win2K until at least June 2010 - see http://www.microsoft.com/windows2000/server/evaluation/news/bulletins/extendedsupport.mspx
 
 == What we need: ==
 
 === Hardware: ===
-A machine to run Win2K3 Server. This will be the primary Windows development machine for the Twisted community, primarily because it allows multiple concurrent RDP sessions (XP Pro allows at most two).
+ * A machine to run Win2K3 Server. This will be the primary Windows development machine for the Twisted community, primarily because it allows multiple concurrent RDP sessions (XP Pro allows at most two). This will hopefully be a fast machine with a goodly amout of RAM and lots of HD space. 2.0Ghz+ would be nice. 1GB+ RAM would be nice. We may not be able to have a seperate 2K3 buildbot slave, so this machine may need to serve that purpose as well.
 
-This will hopefully be a fast machine with a goodly amout of RAM. 2.0Ghz+ would be nice. 1GB+ RAM would be nice. We may not be able to have a seperate 2K3 buildbot slave, so this machine may need to serve that purpose as well.'
-
-A machine to run XP Professional. 
+ * A machine to run XP Professional. 
 
 === Hosting: ===
 
 === Software Licenses - in order of priority ===
-Windows Server 2003
-Windows XP Pro
-Visual Studio - preferably the latest one
+ * Windows Server 2003
+ * Windows XP Pro
+ * Visual Studio - preferably the latest one
 
 Optional, if we can find hardware/hosting for them:
-Windows XP Home
-Windows 2000 Pro
+ * Windows XP Home
+ * Windows 2000 Professional
+ 
