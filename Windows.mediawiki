@@ -23,6 +23,11 @@ A 64-bit buildslave, and developer acess to 64-bit versions of Windwos would als
  * A machine to run Windows 2000.
 
 === Hosting: ===
+We need someone with a dedicated Internet connection to provide hosting for one or more of the above machines. In order to avoid shipping boxes around, it would be ideal if the person providing the hardware could also arrange the hosting. This may not be possible, and so we will consider shipping arrangements as the need arises.
+
+We would like to avoid residential broadband if possible. In order to provide a responsive desktop/shell environment dedicated bandwidth would be ideal (or at least enough bandwidth where it doesn't matter). Latency is also a consideration. A person downloading a file on residential broadband will easily saturate the line brinding remote desktop/shell sessions to a crawl.
+
+UPS units would be a nice touch, but not required unless your power is very unreliable.
 
 === Software Licenses - in order of priority: ===
  * Windows Server 2003
