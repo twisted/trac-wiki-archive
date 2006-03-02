@@ -16,18 +16,18 @@ A 64-bit buildslave, and developer acess to 64-bit versions of Windwos would als
 
  * A machine to run XP Professional.
 
- * A machine to run Windows 2000. (preferably a Server version to allow RDP instead of VNC)
+ * A machine to run Windows 2000.
 
 === Hosting: ===
 
-=== Software Licenses - in order of priority ===
+=== Software Licenses - in order of priority: ===
  * Windows Server 2003
  * Windows XP Pro
  * Visual Studio - preferably the latest one
 
 Optional, if we can find hardware/hosting for them:
  * Windows XP Home
- * Windows 2000 Professional, Server, Advanced Server, or Datacenter Server. (Preferably a Server version, not Pro)
+ * Windows 2000 Professional, Server, Advanced Server, or Datacenter Server. A Server version would be nice for RDP support.
 
 == What we have: ==
 
