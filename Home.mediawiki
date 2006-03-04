@@ -19,7 +19,7 @@ For the most recent downloads, including the Twisted 2.2 release, visit its [wik
 
 = Where can I read documentation for Twisted? =
 
-A good starting point are the [http://twistedmatrix.com/projects/core/documentation/howto/index.html core developer guides] and [http://twistedmatrix.com/documents/current/api/ API reference]. Sub-project documentation ([http://twistedmatrix.com/projects/conch/documentation/howto/index.html conch], etc.) is available from the appropriate [wiki:TwistedProjects project] pages. You can also purchase the book [http://www.amazon.com/exec/obidos/ASIN/0596100329/httpitamorg-20?creative=327641&camp=14573&link_code=as1 Twisted Network Programming Essentials] by Abe Fetting, published by O'Reilly.
+A good starting point are the [http://twistedmatrix.com/projects/core/documentation/howto/index.html core developer guides] ([http://twistedmatrix.com/projects/core/documentation/howto/book.pdf PDF]) and [http://twistedmatrix.com/documents/current/api/ API reference]. Sub-project documentation ([http://twistedmatrix.com/projects/conch/documentation/howto/index.html conch], etc.) is available from the appropriate [wiki:TwistedProjects project] pages. You can also purchase the book [http://www.amazon.com/exec/obidos/ASIN/0596100329/httpitamorg-20?creative=327641&camp=14573&link_code=as1 Twisted Network Programming Essentials] by Abe Fetting, published by O'Reilly.
 
 = What is Twisted Matrix Laboratories? =
 
