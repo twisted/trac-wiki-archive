@@ -69,5 +69,18 @@ Twisted 2.0.1 is now out. This is a minor release, only including bugfixes since
 
 {{{
 #!html
-<img align="right" src="http://sm7.sitemeter.com/meter.asp?site=sm7twistedmatrix" alt="Site Meter" border="0" /></a>
+<div align="right" id="sitemeter">
+<!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
+<!--
+<script type="text/javascript" language="JavaScript">var site="sm7twistedmatrix"</script>
+<script type="text/javascript" language="JavaScript1.2" src="http://sm7.sitemeter.com/js/counter.js?site=sm7twist
+</script>
+<noscript>
+-->
+<a href="http://sm7.sitemeter.com/stats.asp?site=sm7twistedmatrix" target="_top">
+<img src="http://sm7.sitemeter.com/meter.asp?site=sm7twistedmatrix" alt="Site Meter" border="0" /></a>
+<!-- </noscript> -->
+<!-- Copyright (c)2002 Site Meter -->
+<!--WEBBOT bot="HTMLMarkup" Endspan -->
+</div>
 }}}
