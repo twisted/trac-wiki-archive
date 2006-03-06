@@ -1,0 +1,131 @@
+= Review Details =
+
+ * Link to document: http://twistedmatrix.com/projects/core/documentation/howto/clients.html
+ * Reviewer's name: Andrew Bennetts
+ * Review date: 7th March 2006
+
+= Document Expectations =
+
+== Intended User ==
+
+Before someone begins using this document, I'd really really like it if they
+knew:
+
+ * more or less what a TCP socket is, and that they connect to endpoints
+   specified by host + port.
+ * more or less what Deferreds are.
+ 
+Once someone has read this document they should understand:
+
+ * how to write a Twisted program that connects (and uses) a single TCP client.
+ * how to write a Twisted program that connects & uses multiple concurrent TCP
+   clients.
+ * how to write a Twisted program that uses TCP clients concurrently with other
+   functionality, like running a TCP server.
+ * how to use `ClientCreator` to create try-once client connection.
+ * how to use `ReconnectingClientFactory` to make a client that tries to
+   reconnect lost connections automatically.
+ * how to define custom reconnection logic (in the same manner that
+   `ReconnectingClientFactory` does), including how to abort a connection attempt.
+ * that Protocols work the same way for servers and clients (even though most
+   protocols aren't symmetrical).
+
+= Document Review =
+
+== Coverage of subject matter ==
+
+This document seems to cover the following subject matter at least acceptably well:
+
+ * the relationship of protocol instances to connections (although theoretically
+   this doesn't have to be true, in practice most `ClientFactories` do this, so
+   the simplification here is fine).
+ * it recommends the use of `ReconnectingClientFactory` for reconnection logic,
+   and gives an example of using it.
+ * the `ircLogBot` example is a good, real example, that does something useful and
+   interesting, and demonstrates use of `ClientFactory` and `reactor.connectTCP`.
+   (and judging from the number of times I've seen "twistedbot" join #twisted,
+   people actually run and play with this code a fair bit).
+
+This document seems to be attempting to cover the following subject matter, but its coverage is flawed:
+
+ * the use of the term "configuration" for application state usually held in a
+   factory is confusing and probably too abstract.
+ * the example in "Simple, single-use clients" is good, except that it's not
+   quite a complete, executable example.  It should have a reactor.run() line.
+ * "Simple, single-use clients" should give a comprehensive list of methods that
+   are specific to `ClientFactories` (or perhaps this could come later in the
+   document, but it definitely should be in this document somewhere).
+ * "Simple, single-use clients" gives an example that needs to take connector
+   arguments, and although it never uses them, it's a bit weird to just never
+   mention them or what they are here.  Also, it should say that "reason" is a
+   `Failure`; basically, `ClientFactory` should be introduced with a comprehensive
+   API overview.
+ * The "To connect this `EchoClientFactory` to a server, you could use this code:"
+   snippet may as well be part of the main example in this section.
+ * The "Reconnection" section starts talking about calling various methods on
+   the "`connector`" variable, but never says what it is or links to the API docs
+   for `IConnector`.
+ * The explanation of `ClientCreator` is too terse -- e.g. it doesn't make it clear
+   that it returns a `Deferred` of the connected protocol.
+ * The `ircLogBot` example imports `twisted.protocols.irc`, which has been
+   deprecated.  It should import `twisted.words.protocols.irc` instead.
+
+This document ought to be covering the following subject matter but is not:
+
+ * Never are connectors or the `IConnector` interface explained.
+ * The APIs of `ClientFactory`, `IConnector`, `Protocol`, `ClientCreator`.
+ * How to make concurrent connections -- it should explicitly state that:
+    * `connectTCP` (and other variations like `ClientCreator`, `connector.connect()`)
+      don't block -- they start the process of establishing the connection, and
+      you wait for an event handler like `connectionMade` to be called.
+    * you can simply call `connectTCP` (or whatever) multiple times -- in a row,
+      even -- to make multiple connections.  It's obvious once you "get it", but
+      needs to be explicitly stated, as it's not obvious to many people new to
+      Twisted.
+
+This document could be supplemented by links to these existing follow-up ("now that you know X you can try Y") documents:
+
+ * GUI docs (because client programs are often interactive)
+   * Choosing a reactor and GUI toolkit integration
+   * examples: `qtdemo.py`, `pyuidemo.py`, `wxdemo.py`
+ * `stdindemo.py` (again, interactivity)
+ * Reactor basics
+ * Logging howto
+
+This document could be supplemented by as-yet non-existant pre-requisite ("you should read this first") documents on:
+
+ * "Mastering TCP in under 3 minutes" ;)
+
+This document could be supplemented by links to these as-yet non-existant follow-up ("now that you know X you can try Y") documents:
+
+ * comprehensive description of `twisted.internet.protocol.Protocol`, the methods you can
+   override, and the actions you can perfrom (e.g.
+   `self.transport.loseConnection()`).  i.e. "Guide to writing protocols"
+ * Guide to `twisted.protocols.basic`
+ * Guide to `twisted.words.protocols.irc` (for better understanding of the IRC
+   example).
+ * Guide to `twisted.internet.stdio` (many client programs are likely to be
+   interactive).
+ * `gtkdemo.py` (we seem to have one for every other GUI...)
+
+== Style ==
+
+The following changes to the style of the document would make it easier to read:
+
+ * typo: s/decended/descended/
+ * it starts with a pretty jargon-heavy introduction.  I think a simple example
+   that is then dissected would be a better introduction.
+ * "is usually where set up" -> "is where set up usually"
+ * s/protocl/protocol/
+ * first sentence of `ClientFactory` is "We use `reactor.connect*` and a
+   `ClientFactory`."  The sentence doesn't really make sense... use it to do what?
+   I'd expect some sort of explanation about why you'd want to use it, e.g.
+   "`ClientFactory` can be subclassed to XXX."
+ * "Persistent Data in the Factory" appears to be presenting an extract of the
+   previous example (to highlight certain things), but it's not clear that this
+   is an extract rather than a new example.
+
+== Overall summary ==
+
+This document is: better than having no documentation, but with some glaringly obvious improvements to make
+
