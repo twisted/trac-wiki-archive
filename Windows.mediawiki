@@ -4,7 +4,9 @@
 }}}
 
 The current Windows maintainers are:
+
 Eric (teratorn) Mangold (teratorn -at- twistedmatrix -dot- com)
+
 Timothy (FireMoth) Fitz (FireMoth -at gmail -dot com)
 
 = Call for help! =
