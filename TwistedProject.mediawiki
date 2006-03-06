@@ -20,10 +20,11 @@ Twisted is available under the [http://www.opensource.org/licenses/mit-license.p
 
 = Download =
 
- * Stable: Download the latest release - 2.2.0!  [http://twistedmatrix.com/projects/core/README-sumo.txt Release announcement]
-   * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.2/TwistedSumo-2006-02-12.tar.bz2 Tarball]
+ * Stable: Download the latest release - 2.2.0!  [http://twistedmatrix.com/projects/core/NEWS.txt Release announcement]
+   * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.2/TwistedSumo-2006-02-12.tar.bz2 Tarball of all of Twisted]; this includes core 2.2.0 as well as the latest versions of TwistedWeb, TwistedConch, etc..
    * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.2/Twisted_NoDocs-2.2.0.win32-py2.4.exe Win32 installer for Python 2.4]
-   * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.2/Twisted_NoDocs-2.2.0.win32-py2.3.exe Win32 installer for Python 2.3] 
+   * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.2/Twisted_NoDocs-2.2.0.win32-py2.3.exe Win32 installer for Python 2.3]
+   * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.2/Twisted-2.2.0.tar.bz2 Minimal tarbal]; this includes only core Twisted (i.e. without TwistedMail, TwistedWeb, etc.) and is only recommended for advanced users.
  * Trunk: svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk Twisted
 
 = Documentation =
