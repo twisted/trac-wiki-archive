@@ -5,7 +5,7 @@
 
 === The current Windows maintainers are: ===
 '''Eric (teratorn) Mangold''' (teratorn -at- twistedmatrix -dot- com) [[BR]]
-'''Timothy (!FireMoth) Fitz''' (!FireMoth -at gmail -dot com) [[BR]]
+'''Timothy (!FireMoth) Fitz''' (!FireMoth -at gmail -dot- com) [[BR]]
 
 = Call for help! =
 The Twisted project is currently seeking resource donations to establish Windows development environments for Twisted commiters! Please direct offers and inquiries to Eric Mangold.
