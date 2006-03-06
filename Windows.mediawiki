@@ -3,7 +3,7 @@
 <h1 style="color: red">Twisted on Microsoft Windows</h1>
 }}}
 
-The current Windows maintainers are: [[BR]]
+=== The current Windows maintainers are: === [[BR]]
 '''Eric (teratorn) Mangold''' (teratorn -at- twistedmatrix -dot- com) [[BR]]
 '''Timothy (!FireMoth) Fitz''' (!FireMoth -at gmail -dot com) [[BR]]
 
