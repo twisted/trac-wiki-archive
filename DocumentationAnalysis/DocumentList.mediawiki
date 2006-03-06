@@ -1,0 +1,39 @@
+This list is the list of documents that people are working on reviewing or have reviewed as part of the DocumentationAnalysis project.
+
+= Choosing a document =
+
+Ideally, we'd like users to focus on:
+ * documents they found problematic when they tried to use them in the past
+ * documents that pertain to their current Twisted use-cases (ask on IRC for suggestions)
+
+Ideally, we'd like experts and developers to focus on:
+ * documents that (supposedly) cover ground that they frequently assist people with on the mailing list or IRC
+Developers may choose to focus on documentation of their pet projects or on documentation of other people's pet projects. However, if you focus on your own pet projects, make a special effort to think about the intended audience of the document -- it's almost certainly not you -- and what they're likely to find useful and what they are likely to know and not know.
+
+While two or three people may review the same document if they like (particularly if one review is by an expert and another by a user) we would prefer to get a wide spread of reviews if possible, so if something has been reviewed already you could:
+ * do a mini-review, commenting only on things you think the original reviewer missed (just snip bits from the template that you need)
+ * review something else
+
+= Making a review wiki page =
+
+To work on a document that's not in this list:
+ * Choose a simple wiki link for it, eg wiki:DocumentationAnalysis/Tutorial or wiki:DocumentationAnalyis/CodingStyle or something similarly descriptive
+ * Add it to the bottom of the table
+
+Once a document is in the list:
+ * Link to and add your own review at Document / Yourname, eg wiki:DocumentationAnalysis/Tutorial/MaryGardiner
+ * Review the document as per the template
+ * File bugs related to your todo list items.
+
+Review templates are available at wiki:DocumentationAnalysis/UserReviewTemplate for reviews by Twisted users (or for any part of Twisted about which you feel you know comparitively little) and wiki:DocumentationAnalysis/ExpertReviewTemplate for reviews by experts in that part of Twisted.
+
+= Review table =
+
+The second line of the table (after the heading) is an example line. Add your own review links after that.
+
+|| '''Document name and link''' || '''User reviews''' || '''Expert reviews''' ||
+|| [http://twistedmatrix.com/ Example document] || wiki:DocumentationAnalysis/Example/JoeBlow || wiki:DocumentationAnalysis/Example/JaneBlogs ||
+|| [http://twistedmatrix.com/projects/mail/documentation/ Mail] || wiki:DocumentationAnalysis/Mail/DavidBlewett ||  ||
+|| [http://twistedmatrix.com/projects/core/documentation/howto/threading.html Using Threads in Twisted] || wiki:DocumentationAnalysis/Threads/MaryGardiner || wiki:DocumentationAnalysis/Threads/AndrewBennetts ||
+|| [http://twistedmatrix.com/projects/core/documentation/howto/process.html Using Processes] || || wiki:DocumentationAnalysis/UsingProcesses/AndrewBennetts ||
+|| [http://twistedmatrix.com/projects/core/documentation/howto/clients.html Writing Clients] || || wiki:DocumentationAnalysis/Clients/AndrewBennetts ||
