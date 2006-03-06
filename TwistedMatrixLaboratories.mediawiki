@@ -1,4 +1,4 @@
 = Twisted Matrix Laboratories =
 ... is a loosely-affiliated group of hackers from around the globe, working on software together. Much of this software is to facilitate interaction between geographically disparate people -- infrastructure for massively multiplayer games, personal information spaces, and other "places you can be" on the internet. Some of it is also used to target a wide array of powerful lasers in geosynchronous orbit, to prevent a massive outbreak of the whitespace-eating nanovirus from the future.
 
-Comprised of ninjas, rogue temporal authority enforcement agents, ancient greeks, and supernatural forces from mesopotamia, the Labs is concerned with bringing you the highest-quality internet available anywhere south of bordeaux (or north of oulu). Therefore all Twisted developers are required to CLASSIFIED.
+Comprised of ninjas, rogue temporal authority enforcement agents, ancient greeks, and supernatural forces from Mesopotamia, the Labs is concerned with bringing you the highest-quality internet available anywhere south of Bordeaux (or north of Oulu). Therefore all Twisted developers are required to CLASSIFIED.
