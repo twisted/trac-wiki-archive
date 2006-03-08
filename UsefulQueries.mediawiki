@@ -3,6 +3,7 @@
  * [query:status=new|assigned|reopened&component=conch Conch]
  * [query:status=new|assigned|reopened&component=core Core]
  * [query:status=new|assigned|reopened&component=trial Trial]
+ * [query:status=new|assigned|reopened&component=web2 Web2]
 
 == Flavored Tickets == 
 
