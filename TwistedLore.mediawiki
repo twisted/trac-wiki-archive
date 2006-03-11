@@ -20,3 +20,4 @@ Twisted Lore is available under the MIT Free Software licence.
 
 Subscribe to the [http://twistedmatrix.com/cgi-bin/mailman/twisted-python twisted-python] mailing list or visit the #twisted channel on irc.freenode.net to ask questions.
 
+[http://twistedmatrix.com/trac/newticket?type=defect&component=lore Report a bug] or [http://twistedmatrix.com/trac/newticket?type=enhancement&component=lore request a feature] using the issue tracker (registration required).
