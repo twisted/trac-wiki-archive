@@ -18,5 +18,5 @@ An [http://twistedmatrix.com/documents/current/api/ API reference] of Twisted an
 
 = Contact = 
 
-Subscribe to the [http://twistedmatrix.com/cgi-bin/mailman/twisted-python twisted-python] mailing list or visit the #twisted channel on irc.freenode.net to ask questions.
+Subscribe to the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted-python] mailing list or visit the #twisted channel on irc.freenode.net to ask questions.
 
