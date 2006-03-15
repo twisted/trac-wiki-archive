@@ -1,0 +1,84 @@
+This is a '''template''' for experts in Twisted to use when reviewing documents as part of the DocumentationAnalysis project. See wiki:DocumentationAnalysis/DocumentList for further instructions about what to do with this template.
+
+Things in ''italics'' get replaced with your own text or removed.
+
+''How to review: as you go to the document, think very careful about the '''intended user''' (the template asks you to describe the intended user, and eventually this information will go into the document itself in some form). Think of the type of person you would love to hand this document to. Think of the type of questions on IRC that you'd love to be able to say "go to http://blahblahblah and see section 3".''
+
+''What do these users know already? What do they think they know and are likely to actually be confused about? What don't they know that you want this document to teach them?''
+
+''This is the purpose of the document. Any bit of text you read and any example in the document should be able to be explained in terms of either clarifying the user's understanding or teaching them something relevant and new. (Anything that's there and not doing one of these two things is presumably serving some other purpose of the author's and you might want to consider whether this purpose is worthy of its own document. Otherwise it should be removed.)''
+
+''Recall that the intended user of this review itself is a documentation writer, and your role as a reviewer is to make their job easier. Therefore address problems that it is a writer's job to fix (mistakes, missing information, irrelevant digressions) and not problems that an improved document can't help with (say, the lack of common sense, imagination and intelligence in people you have cause to interact with on a day-to-day basis).''
+
+= Review details =
+
+ * Link to document: ''http://twistedmatrix.com''
+ * Reviewer's name: ''Jane Bloggs''
+ * Review date: ''14 January 2006 (please don't use locale specific dating styles, ie not 1/14/06 or 14/1/06, it's confusing)''
+
+= Document expectations =
+
+''Fill this out '''before''' you read the document, based on the title of it. This gives us a good idea of what's missing.''
+
+== Intended user ==
+
+Before someone begins using this document, I'd really really like it if they knew:
+ * ''the fundamentals of the server/client model''
+
+ * ''the basics of the HTTP GET request''
+ * ''component architecture design''
+
+== Outcomes ==
+
+Once someone has read this document they should understand ''[this list can be quite long if you like, you're really writing a specification for the document]'':
+ * ''that having a function return a Deferred doesn't make it asynchronous''
+ * ''that the Application framework can be used to avoid a lot of server setup boilerplate''
+
+= Document review =
+
+''Have a look at wiki:DocumentationAnalysis/UserReviewTemplate for an alternative review style you might prefer.''
+
+== Coverage of subject matter ==
+
+''Documents should demonstrate and recommend only '''best practice''', except in clearly marked examples of bad code which leads to a justification of best practice. Any out-of-date or questionably intelligent ways of doing things shown in our documentation are problems. Best practice should be exhibited even when it makes examples longer.'' 
+
+'''''Best practice''' includes: code doing what it puports to do; following Twisted coding style; using accepted idioms; and unless the documentation is to demonstrating a lower level feature by reimplementing a higher level one it should use appropriate library functions (eg LineReceiver) instead of doing a half-baked reimplementation. Further, code should be '''easily readable''' at the expense of lines of code -- code is more readable when the number of things it does per line is limited.''
+
+This document seems to cover the following subject matter at least acceptably well:
+''list here''
+
+This document seems to be attempting to cover the following subject matter, but its coverage is flawed:
+ * ''example 3 puports to demonstrate a webserver, but does not in fact run''
+ * ''section 2 says that the design of X solves Y problem when it actually doesn't''
+ * ''example 7 is using a sequence of functions to get Y result when we actually provide a convienience function Z''
+
+This document ought to be covering the following subject matter but is not:
+ * ''the reason why Y is a better design than Z in this case''
+ * ''Foo useful library function''
+ * ''the X class of problems for which this approach needs to be modified''
+
+This document is recommending the following things that it shouldn't be recommending: ''[recall that merely mentioning something in a document often counts as a recommendation, and mentioning something only to denounce it is confusing and should be limited]'':
+ * ''X out-of-date library function''
+ * ''Y sequence of calls which have been superceded by Z library''
+
+This document could be supplemented by links to these existing pre-requisitie ("you should read this first") documents:
+''list here''
+
+This document could be supplemented by links to these existing follow-up ("now that you know X you can try Y") documents:
+''list here''
+
+This document could be supplemented by as-yet non-existant pre-requisite ("you should read this first") documents on:
+''list here''
+
+This document could be supplemented by links to these as-yet non-existant follow-up ("now that you know X you can try Y") documents:
+''list here''
+
+== Style ==
+The following changes to the style of the document would make it easier to read:
+
+ * ''shorter paragraphs in section 4''
+ * ''less hyperbole about the Twisted Way in the introduction''
+
+== Overall summary ==
+
+This document is: ''excellent / good, with some minor improvements to recommend / reasonable, with some pretty obvious improvements to make / better than having no documentation, but with some glaringly obvious improvements to make / so bad that it would be better to have no documentation on this''
