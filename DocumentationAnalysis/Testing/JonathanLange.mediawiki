@@ -1,4 +1,3 @@
-
 = Review details =
 
  * Link to document: http://twistedmatrix.com/projects/core/documentation/howto/testing.html
@@ -26,49 +25,58 @@ Once someone has read this document they should understand:
 
 = Document review =
 
-''Have a look at wiki:DocumentationAnalysis/UserReviewTemplate for an alternative review style you might prefer.''
-
 == Coverage of subject matter ==
 
-''Documents should demonstrate and recommend only '''best practice''', except in clearly marked examples of bad code which leads to a justification of best practice. Any out-of-date or questionably intelligent ways of doing things shown in our documentation are problems. Best practice should be exhibited even when it makes examples longer.'' 
-
-'''''Best practice''' includes: code doing what it puports to do; following Twisted coding style; using accepted idioms; and unless the documentation is to demonstrating a lower level feature by reimplementing a higher level one it should use appropriate library functions (eg LineReceiver) instead of doing a half-baked reimplementation. Further, code should be '''easily readable''' at the expense of lines of code -- code is more readable when the number of things it does per line is limited.''
-
 This document seems to cover the following subject matter at least acceptably well:
-''list here''
+ * Don't use reactor.start, reactor.stop, reactor.iterate
 
 This document seems to be attempting to cover the following subject matter, but its coverage is flawed:
- * ''example 3 puports to demonstrate a webserver, but does not in fact run''
- * ''section 2 says that the design of X solves Y problem when it actually doesn't''
- * ''example 7 is using a sequence of functions to get Y result when we actually provide a convienience function Z''
+ * The timeout description doesn't describe what a timeout does to the test results
+ * The heading "Twisted-specific quirks: ..." shouldn't enumerate the quirks, and probably shouldn't call them quirks
+ * Discusses how to clean up the reactor but doesn't mention that leaving the reactor unclean will fail the test
+ * Should provide examples of how to clean up the reactor
+ * Explains that Trial extends unittest, but doesn't tease out what that means for writing tests
 
 This document ought to be covering the following subject matter but is not:
- * ''the reason why Y is a better design than Z in this case''
- * ''Foo useful library function''
- * ''the X class of problems for which this approach needs to be modified''
+ * the todo attribute
+   * its existence
+   * appropriate values to set it to
+   * why one might want to use it
+ * skipping tests
+   * that it is possible
+   * how to do it with the skip attribute
+   * how to do it by raising SkipTest
+ * That calling log.err will fail a test
+   * [although the api surrounding this is still under discussion!]
 
-This document is recommending the following things that it shouldn't be recommending: ''[recall that merely mentioning something in a document often counts as a recommendation, and mentioning something only to denounce it is confusing and should be limited]'':
- * ''X out-of-date library function''
- * ''Y sequence of calls which have been superceded by Z library''
+
+This document is recommending the following things that it shouldn't be recommending:
+ * Maybe mentioning reactor.iterate et al is a bad idea
 
 This document could be supplemented by links to these existing pre-requisitie ("you should read this first") documents:
-''list here''
+ * some sort of document on how to write unit tests
+   * Python's unittest documentation?
+   * diveintopython.org has an excellent chapter on test-driven development
+ * The Trial manpage
 
-This document could be supplemented by links to these existing follow-up ("now that you know X you can try Y") documents:
-''list here''
+This document could be supplemented by links to these existing follow-up ("now that you know X you can try Y") documents: 
 
 This document could be supplemented by as-yet non-existant pre-requisite ("you should read this first") documents on:
-''list here''
 
 This document could be supplemented by links to these as-yet non-existant follow-up ("now that you know X you can try Y") documents:
-''list here''
+ * How to extend Trial
+
 
 == Style ==
 The following changes to the style of the document would make it easier to read:
 
- * ''shorter paragraphs in section 4''
- * ''less hyperbole about the Twisted Way in the introduction''
+ * Way more examples
+ * Structure the entire document around how to test code, rather than documenting quirks
+ * Create headings within "Leave the Reactor as you found it" section
+
 
 == Overall summary ==
 
-This document is: ''excellent / good, with some minor improvements to recommend / reasonable, with some pretty obvious improvements to make / better than having no documentation, but with some glaringly obvious improvements to make / so bad that it would be better to have no documentation on this''
+The document seems particularly slanted toward writing tests to be ''contributed'' to Twisted, rather than writing tests for code that ''uses'' Twisted.  I recommend that the idiosyncracies of code destined for the Twisted repository be documented in the coding standards.
+
+This document is: better than having no documentation, but with some glaringly obvious improvements to make
