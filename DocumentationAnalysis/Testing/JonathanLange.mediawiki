@@ -1,38 +1,28 @@
-This is a '''template''' for experts in Twisted to use when reviewing documents as part of the DocumentationAnalysis project. See wiki:DocumentationAnalysis/DocumentList for further instructions about what to do with this template.
-
-Things in ''italics'' get replaced with your own text or removed.
-
-''How to review: as you go to the document, think very careful about the '''intended user''' (the template asks you to describe the intended user, and eventually this information will go into the document itself in some form). Think of the type of person you would love to hand this document to. Think of the type of questions on IRC that you'd love to be able to say "go to http://blahblahblah and see section 3".''
-
-''What do these users know already? What do they think they know and are likely to actually be confused about? What don't they know that you want this document to teach them?''
-
-''This is the purpose of the document. Any bit of text you read and any example in the document should be able to be explained in terms of either clarifying the user's understanding or teaching them something relevant and new. (Anything that's there and not doing one of these two things is presumably serving some other purpose of the author's and you might want to consider whether this purpose is worthy of its own document. Otherwise it should be removed.)''
-
-''Recall that the intended user of this review itself is a documentation writer, and your role as a reviewer is to make their job easier. Therefore address problems that it is a writer's job to fix (mistakes, missing information, irrelevant digressions) and not problems that an improved document can't help with (say, the lack of common sense, imagination and intelligence in people you have cause to interact with on a day-to-day basis).''
 
 = Review details =
 
- * Link to document: ''http://twistedmatrix.com''
- * Reviewer's name: ''Jane Bloggs''
- * Review date: ''14 January 2006 (please don't use locale specific dating styles, ie not 1/14/06 or 14/1/06, it's confusing)''
+ * Link to document: http://twistedmatrix.com/projects/core/documentation/howto/testing.html
+ * Reviewer's name: Jonathan Lange
+ * Review date: 15 March 2006
 
 = Document expectations =
-
-''Fill this out '''before''' you read the document, based on the title of it. This gives us a good idea of what's missing.''
 
 == Intended user ==
 
 Before someone begins using this document, I'd really really like it if they knew:
- * ''the fundamentals of the server/client model''
-
- * ''the basics of the HTTP GET request''
- * ''component architecture design''
+ * what a unit test is
+ * how to write unit tests using xUnit
+ * how to run Trial
+ * how Deferreds work and how to use them
 
 == Outcomes ==
 
-Once someone has read this document they should understand ''[this list can be quite long if you like, you're really writing a specification for the document]'':
- * ''that having a function return a Deferred doesn't make it asynchronous''
- * ''that the Application framework can be used to avoid a lot of server setup boilerplate''
+Once someone has read this document they should understand:
+ * how to write tests for code that returns Deferreds
+ * how to write tests for Twisted protocols (maybe)
+ * how to use skip to write platform specific tests
+ * how to use todo to write tests for non-existent/broken code
+
 
 = Document review =
 
