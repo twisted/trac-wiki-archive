@@ -37,3 +37,4 @@ The second line of the table (after the heading) is an example line. Add your ow
 || [http://twistedmatrix.com/projects/core/documentation/howto/threading.html Using Threads in Twisted] || wiki:DocumentationAnalysis/Threads/MaryGardiner || wiki:DocumentationAnalysis/Threads/AndrewBennetts ||
 || [http://twistedmatrix.com/projects/core/documentation/howto/process.html Using Processes] || || wiki:DocumentationAnalysis/UsingProcesses/AndrewBennetts ||
 || [http://twistedmatrix.com/projects/core/documentation/howto/clients.html Writing Clients] || || wiki:DocumentationAnalysis/Clients/AndrewBennetts ||
+|| [http://twistedmatrix.com/projects/core/documentation/howto/testing.html Testing] || || wiki:DocumentationAnalysis/Testing/JonathanLange ||
