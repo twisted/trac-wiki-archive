@@ -19,6 +19,6 @@ Twisted Web is available under the MIT Free Software licence.
 
 = Contact = 
 
-Subscribe to the [http://twistedmatrix.com/cgi-bin/mailman/twisted-web twisted-web] mailing list or visit the #twisted.web channel on irc.freenode.net to ask questions.
+Subscribe to the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-web twisted-web] mailing list or visit the #twisted.web channel on irc.freenode.net to ask questions.
 
 [http://twistedmatrix.com/trac/newticket?type=defect&component=web Report a bug] or [http://twistedmatrix.com/trac/newticket?type=enhancement&component=web request a feature] using the issue tracker (registration required).
