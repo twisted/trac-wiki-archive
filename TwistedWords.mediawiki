@@ -2,7 +2,24 @@
 
 = Twisted Words =
 
-Twisted Words includes:
+Twisted Words provides two separate high-level end-user features:
+
+ * a multiprotocol instant messaging server
+ * a multiprotocol instant messaging client
+
+These are both still in the early stages of development and are not expected to work flawlessly in all configurations, however each is quite usable for a limited set of functionality.  A Twisted Words server can be created with just a couple commands:
+
+{{{
+#!sh
+$ mktap words --irc-port 6667 --pb-port 8787 --passwd password_file --group somegroup
+$ twistd -f words.tap
+}}}
+
+The Twisted Words client is named {{{im}}} and is usable as an IRC client, and possibly an AIM client (depending on the phase of the moon).
+
+= Low Level Functionality =
+
+Twisted Words also includes:
 
  * Low-level protocol implementations of OSCAR (AIM and ICQ), IRC, MSN, TOC (AIM).
  * Jabber libraries.
