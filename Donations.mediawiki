@@ -1,0 +1,6 @@
+{{{
+#!html
+<h1 style="color: red">Twisted Project Sponsors</h1>
+}}}
+
+=== The Twisted project would like the recognize the following individuals and organisations for their sponsorship of Twisted's development via donations of money, hardware, software licenses, server hosting, and so on. ===
