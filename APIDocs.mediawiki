@@ -1,0 +1,23 @@
+To generate the API docs for the Twisted web site.
+
+In a checkout of WebSite, in the trunk/vhosts/twistedmatrix.com/documents/current directory, run:
+{{{
+% pydoctor -c ~/Projects/pydoctor/trunk/twisted.cfg --add-package ~/Projects/Twisted/trunk/twisted -o twisted-doc-model
+...
+% bzip2 twisted-doc-model 
+% svn commit twisted-doc-model.bz2
+}}}
+
+
+Now, ssh to pyramid.
+
+{{{
+% sudo su - www-data
+% pwd
+/var/www
+% svn up WebSite
+% cd WebSite/vhosts/twistedmatrix.com
+% ./generate-apidocs.sh
+}}}
+
+HOORAY
