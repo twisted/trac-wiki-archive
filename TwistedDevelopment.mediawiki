@@ -1,14 +1,18 @@
+== General Info ==
+
 If you want to become a developer, it is important to understand that all your contributions (including those initial patches you send to the bug tracker) will have to licenced under the MIT licence.
 
 Patches should be submitted in diff -u format so they're easy to read.
 
 See the TwistedProject page for info on the SVN repository. After every commit to Twisted, the [http://twistedmatrix.com/buildbot/ Buildbot] runs all the unit tests on several separate machines on a few different platforms, and reports the status of those tests. Watch the buildbot. Because sometimes, the buildbot watches back.
 
-Twisted developers are bent on [http://isometric.sixsided.org/_/twisted_plutonium/ the destruction of the American currency system].
+== Links and Resources ==
 
-Handy links include UsefulQueries and the [http://twistedmatrix.com/buildbot/ Buildbot]
-
-Documentation work is done on the DocumentationAnalysis page.
+ * Twisted developers are bent on [http://isometric.sixsided.org/_/twisted_plutonium/ the destruction of the American currency system].
+ * There are some UsefulQueries for finding issues in the tracker.
+ * [http://twistedmatrix.com/buildbot/ Buildbot]. Watch it. 
+ * Documentation work is done on the DocumentationAnalysis page.
+ * Instructions on how to generate the [wiki:APIDocs API Docs] for the twistedmatrix.com web site.
 
 == The Matrix ==
 
