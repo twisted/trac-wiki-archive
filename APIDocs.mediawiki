@@ -1,13 +1,16 @@
 To generate the API docs for the Twisted web site.
 
+You will need a checkout of the latest release of Twisted.
+
 In a checkout of WebSite, in the trunk/vhosts/twistedmatrix.com/documents/current directory, run:
 {{{
-% pydoctor -c ~/Projects/pydoctor/trunk/twisted.cfg --add-package ~/Projects/Twisted/trunk/twisted -o twisted-doc-model
+% pydoctor -c twisted.cfg -o twisted-doc-model
 ...
 % bzip2 twisted-doc-model 
 % svn commit twisted-doc-model.bz2
 }}}
 
+This will generate API documentation for the latest release of Twisted.  If there has been a new release, edit twisted.cfg to point to that release.
 
 Now, ssh to pyramid.
 
