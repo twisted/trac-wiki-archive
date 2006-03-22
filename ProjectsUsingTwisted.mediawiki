@@ -1,4 +1,4 @@
-Twisted is used by many open-source projects.
+Twisted is used by many open-source, academic and commercial projects.
 
 = Libraries and Add-Ons =
 
@@ -39,6 +39,13 @@ Twisted is used by many open-source projects.
  * [http://petmail.lothar.com/ PETMail] - permission based anti-spam replacement for SMTP.
  * [http://crowsnest.sf.net Crow's Nest] - collect log information from various sources and to apply some filter to them in a very modular way.
  * [http://thorne.ath.cx/~stephen/software.html Trash] - a web pastebin application.
+
+= Research Projects =
+
+ * [http://tycoon.hpl.hp.com/ Tycoon @ HP Labs] is a market-based system for managing compute resources in distributed clusters.
+ * [http://dharma.cis.upenn.edu/ Dharma @ UPenn]: Distributed Home Agent for Robust Mobile Access.
+ * [http://robotmanipulation.org/pysense/ PySense @ MIT] is an open source python library devoted to first person sensing for robots and wearables.
+
 
 Got a successful project you'd like added to this page? Mail a brief description
 and an URL (if appropriate) to the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted mailing list]!
