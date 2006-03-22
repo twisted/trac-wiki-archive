@@ -12,6 +12,9 @@ Twisted is used by many open-source, academic and commercial projects.
 
 = Applications =
 
+ * [http://www.bittorrent.com BitTorrent] - a peer-to-peer file sharing program.
+ * [http://www.osafoundation.org/ Chandler] - a desktop PIM.
+ * [http://www.zope.org/DevHome/Zope3 Zope3] - next-generation of the Zope application server and content management system.
  * [http://www.hellanzb.com/trac/ hellanzb] - an application designed for *nix environments that retrieves and processes Usenet nzb files.
  * [http://www.flumotion.net/ Flumotion] - a streaming media server.
  * [http://www.divmod.org/ Quotient] - multi-protocol messaging server with tools for information management and retrieval, including a mail server (SMTP/POP3/IMAP/webmail) and much more.
