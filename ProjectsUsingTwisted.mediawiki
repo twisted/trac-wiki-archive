@@ -42,6 +42,7 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://petmail.lothar.com/ PETMail] - permission based anti-spam replacement for SMTP.
  * [http://crowsnest.sf.net Crow's Nest] - collect log information from various sources and to apply some filter to them in a very modular way.
  * [http://thorne.ath.cx/~stephen/software.html Trash] - a web pastebin application.
+ * [http://www.galaxymage.org GalaxyMage] - a cross-platform, open-source tactical RPG with online multiplayer play.
 
 = Research Projects =
 
