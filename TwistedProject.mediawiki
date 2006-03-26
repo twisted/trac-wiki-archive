@@ -35,4 +35,4 @@ Twisted is available under the [http://www.opensource.org/licenses/mit-license.p
 
 Subscribe to the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted-python] mailing list or visit the #twisted channel on irc.freenode.net to ask questions.
 
-[http://twistedmatrix.com/trac/newticket?type=defect&component=core Report a bug] or [http://twistedmatrix.com/trac/newticket?type=enhancement&component=core request a feature] using the issue tracker (registration required).
+[http://twistedmatrix.com/trac/newticket?type=defect&component=core Report a bug] or [http://twistedmatrix.com/trac/newticket?type=enhancement&component=core request a feature] using the issue tracker (registration required), or browse [query:status=new|assigned|reopened&component=core Twisted Core tickets].
