@@ -17,6 +17,12 @@ Without further ado we would like the recognize the following individuals and or
 
  * '''Stephen Thorne''' provides our Mac OS X buildslave. (bot-jerub)
 
- * '''Mike Taylor''' provides our Windows 2000 buildbot slave. (bot-win32-select, bot-win32-win32er, bot-win32-iocp)
+ * '''Mike Taylor''' provides our Windows 2000 buildslave. (bot-win32-select, bot-win32-win32er, bot-win32-iocp)
 
  * '''Landon Fuller''' provides our FreeBSD buildslave. (bot-landonf)
+
+=== Other hardware and hosting: ===
+
+=== Software: ===
+
+=== Money: ===
