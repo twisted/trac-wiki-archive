@@ -7,7 +7,7 @@
 
  *  Mike Taylor provides our Windows 2000 buildbot slave. (bot-win32-select, bot-win32-win32er, bot-win32-iocp)
 
- * Tummy, hosts Pyr which has bot1, bot2
+ * Tummy, hosts Pyr which has (bot1, bot2)
 
  * JP Calderone (full-2.3, full-2.4)
 
