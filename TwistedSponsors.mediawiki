@@ -1,0 +1,20 @@
+{{{
+#!html
+<h1 style="color: red">Twisted Project Sponsors</h1>
+}}}
+
+=== The Twisted project would like the recognize the following individuals and organisations for their sponsorship of Twisted's development via donations of money, hardware, software licenses, server hosting, and so on. ===
+
+'''Buildbot slave machines provided by:'''
+
+ * '''Glyph Lefkowitz''' provided our main server, Pyramid, which runs Linux buildslaves among other services. (bot1, bot2)
+
+ * '''Tummy Inc.''' provides hosting for several Twisted servers, including Pyramid.
+
+ * '''JP Calderone''' provides a Linux buildslave. (full-2.3, full-2.4)
+
+ * '''Stephen Thorne''' provides our Mac OS X buildslave. (bot-jerub)
+
+ * '''Mike Taylor''' provides our Windows 2000 buildbot slave. (bot-win32-select, bot-win32-win32er, bot-win32-iocp)
+
+ * '''Landon Fuller''' provides our FreeBSD buildslave. (bot-landonf)
