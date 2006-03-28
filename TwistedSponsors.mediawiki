@@ -7,11 +7,12 @@ First and foremost, the most important sponsors of Twisted are the men and women
 
 Without further ado we would like the recognize the following individuals and organisations for their sponsorship of Twisted's development via donations of money, hardware, software licenses, server hosting, and so on.
 
+=== Hosting ===
+
+[http://www.tummy.com Tummy Inc.] expertly provides hosting for several Twisted servers, including our website and Subversion repository.
+
+
 === Buildbot slave machines: ===
-
- * '''Glyph Lefkowitz (?)''' provided our main server, Pyramid, which runs Linux buildslaves among other services. (bot1, bot2)
-
- * '''Tummy Inc.''' provides hosting for several Twisted servers, including Pyramid.
 
  * '''JP Calderone''' provides a Linux buildslave. (full-2.3, full-2.4)
 
