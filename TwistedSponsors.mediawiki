@@ -1,6 +1,6 @@
 {{{
 #!html
-<h1 style="color: red">Twisted Project Sponsors</h1>
+<h1 style="color: red">Twisted Project Sponsors</h1> (This page is in development)
 }}}
 
 First and foremost, the most important sponsors of Twisted are the men and women who give their time to make it the greatest networking framework in the world. Twisted isn't best-of-class - it's in a class all its own. Without the massive amout of time and effort put forth by those people, there would be no project worth sponsoring.
@@ -26,5 +26,3 @@ Without further ado we would like the recognize the following individuals and or
 === Software: ===
 
 === Money: ===
-
-Note: this page is in development
