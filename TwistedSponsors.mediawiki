@@ -1,6 +1,6 @@
 {{{
 #!html
-<h1 style="color: red">Twisted Project Sponsors</h1> (This page is in development)
+<h1 style="color: red">Twisted Project Sponsors</h1> (This page is in development and may not be accurate)
 }}}
 
 First and foremost, the most important sponsors of Twisted are the men and women who give their time to make it the greatest networking framework in the world. Twisted isn't best-of-class - it's in a class all its own. Without the massive amout of time and effort put forth by those people, there would be no project worth sponsoring.
@@ -9,7 +9,7 @@ Without further ado we would like the recognize the following individuals and or
 
 === Buildbot slave machines: ===
 
- * '''Glyph Lefkowitz''' provided our main server, Pyramid, which runs Linux buildslaves among other services. (bot1, bot2)
+ * '''Glyph Lefkowitz (?)''' provided our main server, Pyramid, which runs Linux buildslaves among other services. (bot1, bot2)
 
  * '''Tummy Inc.''' provides hosting for several Twisted servers, including Pyramid.
 
