@@ -39,7 +39,8 @@ UPS units would be a nice touch, but not required unless your power is very unre
 === Software Licenses - in order of priority: ===
  * Windows Server 2003
  * Windows XP Pro
- * Visual Studio - preferably the latest one
+ * Visual Studio 2003
+ * Visual Studio 2005
 
 Optional, if we can find hardware/hosting for them:
  * Windows XP Home
