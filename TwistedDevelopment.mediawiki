@@ -4,7 +4,7 @@ See the TwistedProject page for info on the SVN repository. After every commit t
 
 == Development Process ==
 
-Twisted uses same process as Divmod: [http://divmod.org/trac/wiki/BranchBasedDevelopment branch based development]. If you don't have commit access to Twisted, please submit branches in diff -u format to the [http://twistedmatrix.com/trac/newticket ticket tracker].
+Twisted uses same process as Divmod: [http://divmod.org/trac/wiki/BranchBasedDevelopment branch based development]. If you don't have commit access to Twisted, please submit branches in diff -u format to the [http://twistedmatrix.com/trac/newticket ticket tracker]. To submit tickets, you must first [http://twistedmatrix.com/trac/register register].
 
 If you want to become a developer, it is important to understand that all your contributions (including those initial patches you send to the bug tracker) will have to licenced under the MIT licence.
 
