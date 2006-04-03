@@ -2,8 +2,10 @@
 
 Trial is Twisted's unit testing framework, an extension of Python's unittest. The code is in twisted.trial and the maintainer is JonathanLange.
 
+Trial's primary feature is the ability to return a Deferred from a test-case method - the test case will not complete until the Deferred has fired.  If it fires successfully, the test passes.  If it fires with an error, the test fails.  This makes it possible to easily unit-test asynchronous event-driven code.
+
 See TrialDevNotes for thoughts on future developments.
 
 [query:status=new|assigned|reopened&component=trial Open Issues]
 
-I use the tracker lots. The best way to get your bug fixed is to file it here.
+I use the tracker lots. The best way to get your bug fixed is to file it here.  --JonathanLange
