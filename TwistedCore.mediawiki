@@ -1,0 +1,34 @@
+[[PageOutline(1,Contents)]]
+
+= Twisted Core =
+
+Twisted Core is an asynchronous event loop and associated utilities, supporting TCP, UDP, multicast, SSL/TLS, serial communication and more. It is used by most of the servers, clients and protocols that are part of other [wiki:TwistedProjects Twisted projects].
+
+The core "minimal" distribution contains a number of modules:
+
+ * twisted.internet, the Twisted event loop;
+ * twisted.cred, a pluggable authentication system for servers;
+ * twisted.enterprise, an asynchonous adaptor of Python DB-API 2.0 database interfaces;
+ * twisted.manhole, a debugging service;
+ * twisted.persisted, a collection of object persistance systems
+ * twisted.protocols, a collection of simple network protocols and helper utilities;
+ * twisted.python, a set of Twisted programming abstractions;
+ * twisted.spread, a network transport, serializer and object broker;
+ * [wiki:TwistedTrial twisted.trial], a unit-testing framework; and
+
+Twisted is available under the [http://www.opensource.org/licenses/mit-license.php MIT] Free Software licence. 
+
+= Download =
+
+You probably want to [wiki:TwistedProject download all of Twisted].  If you are sure you need a more recent version of Twisted Core only, or you are trying to conserve disk space for a small installation,
+[http://tmrc.mit.edu/mirror/twisted/Twisted/2.2/Twisted-2.2.0.tar.bz2 download the latest Twisted Core here.].
+
+= Documentation =
+
+[http://twistedmatrix.com/projects/core/documentation/ All sorts of documentation] is available for Twisted Core, including a complete [http://twistedmatrix.com/documents/current/api/ API reference] of the full [wiki:TwistedProject Twisted] distribution.
+
+= Contact = 
+
+Subscribe to the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted-python] mailing list or visit the #twisted channel on irc.freenode.net to ask questions.
+
+[http://twistedmatrix.com/trac/newticket?type=defect&component=core Report a bug] or [http://twistedmatrix.com/trac/newticket?type=enhancement&component=core request a feature] using the issue tracker (registration required), or browse [query:status=new|assigned|reopened&component=core Twisted Core tickets].
