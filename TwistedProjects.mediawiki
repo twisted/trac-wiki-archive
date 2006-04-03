@@ -1,7 +1,10 @@
 = Twisted Matrix Laboratories Projects =
 
   '''[wiki:TwistedProject Twisted]'''::
-  Asynchronous networking framework
+  Full-featured, integrated suite of asynchronous clients and servers: this project contains everything below.
+
+  '''[wiki:TwistedCore Twisted Core]'''::
+  Asynchronous event loop
   '''[wiki:TwistedConch Twisted Conch]'''::
   An SSH and SFTP protocol implementation together with clients and servers
   '''[wiki:TwistedWeb Twisted Web]'''::
