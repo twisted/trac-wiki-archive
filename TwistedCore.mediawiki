@@ -11,7 +11,7 @@ The core "minimal" distribution contains a number of modules:
  * twisted.enterprise, an asynchonous adaptor of Python DB-API 2.0 database interfaces;
  * twisted.manhole, a debugging service;
  * twisted.persisted, a collection of object persistance systems
- * twisted.protocols, a collection of simple network protocols and helper utilities;
+ * twisted.protocols, a collection of helper protocols (such as a line-oriented helper, a length-prefixed helper, a netstrings helper, etc);
  * twisted.python, a set of Twisted programming abstractions;
  * twisted.spread, a network transport, serializer and object broker;
  * [wiki:TwistedTrial twisted.trial], a unit-testing framework; and
