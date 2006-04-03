@@ -6,10 +6,12 @@
 
 [wiki:TwistedProjects Twisted projects] variously support TCP, UDP, SSL/TLS, multicast, Unix sockets, a large number of protocols (including HTTP, NNTP, IMAP, SSH, IRC, FTP, and others), and [wiki:TwistedProjects much more].
 
- * People are [wiki:SuccessStories successful] with Twisted.
- * People [wiki:ProjectsUsingTwisted use] Twisted.
- * People [wiki:TwistedCommunity talk about] Twisted.
- * People [wiki:TwistedDevelopment hack on] Twisted.
+What else would you like to do?
+
+ * [wiki:SuccessStories Read about people who have been successful with Twisted].
+ * [wiki:ProjectsUsingTwisted Learn what other projects are using Twisted].
+ * [wiki:TwistedCommunity Get in touch with other Twisted users and developers].
+ * [wiki:TwistedDevelopment Contribute to Twisted].
 
 = Where can I get Twisted? =
 
