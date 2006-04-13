@@ -20,8 +20,16 @@ Now, ssh to pyramid.
 /var/www
 % svn up WebSite
 % cd WebSite/vhosts/twistedmatrix.com
-% ./generate-apidocs.sh
+% ./generate-apidocs.sh newapi
 }}}
+
+Look at the output in {{{documents/current/newapi}}} and make sure it looks alright, then replace the existing documentat:
+
+{{{
+#!sh
+% mv documents/current/api documents/current/oldapi; mv documents/current/newapi documents/current/api; rm -rf documents/current/oldapi
+}}}
+
 
 If there have been useful pydoctor changes, make sure to update your pydoctor checkout/installation on both hosts before running it.
 
