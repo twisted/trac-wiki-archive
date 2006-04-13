@@ -23,7 +23,7 @@ Now, ssh to pyramid.
 % ./generate-apidocs.sh newapi
 }}}
 
-Look at the output in {{{documents/current/newapi}}} and make sure it looks alright, then replace the existing documentat:
+Look at the output in {{{documents/current/newapi}}} and make sure it looks alright, then replace the existing documentation:
 
 {{{
 #!sh
