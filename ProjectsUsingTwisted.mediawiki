@@ -21,7 +21,6 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://shtoom.sf.net Shtoom] - a RTP/SIP VoIP phone.
  * [http://www.fettig.net/projects/hep Hep] - Message routing super-server
  * [http://sourceforge.net/projects/khashmir Khashmir] - distributed hash table.
- * [http://sourceforge.net/projects/originalgamer OGC] - MUD client.
  * [http://itamarst.org/software/bannerfish/ Bannerfish] - banner ad server.
  * [http://apt-proxy.sourceforge.net apt-proxy2] - caching proxy for Debian apt-get clients.
  * [http://twistedmatrix.com/users/acapnotic/wares/code/CVSToys/ CVSToys] - CVS change notification via email, IRC and HTTP.
@@ -36,12 +35,15 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://cia.navi.cx/ CIA Bot] - notification system, used by many projects for source code checkin notification.
  * [http://cvs.zope.org/Packages/SFTPGateway/ SFTPGateway] - SFTP to FTP gateway, allowing secure access to FTP servers.
  * [http://travishartwell.net/projects/informant/ Informant] - GNOME Panel applet for event notification.
- * [http://gosiege.sourceforge.net/ Go Siege] - multiplayer Go game.
  * [http://toursst.sourceforge.net/ TouRSSt] - RSS delivery system.
  * [http://sourceforge.net/projects/pynfo/ Pynfo] - extendable multi-function IRC bot.
  * [http://petmail.lothar.com/ PETMail] - permission based anti-spam replacement for SMTP.
  * [http://crowsnest.sf.net Crow's Nest] - collect log information from various sources and to apply some filter to them in a very modular way.
  * [http://thorne.ath.cx/~stephen/software.html Trash] - a web pastebin application.
+
+= Games =
+ * [http://sourceforge.net/projects/originalgamer OGC] - MUD client.
+ * [http://gosiege.sourceforge.net/ Go Siege] - multiplayer Go game.
  * [http://www.galaxymage.org GalaxyMage] - a cross-platform, open-source tactical RPG with online multiplayer play.
  * [http://www.openrts.org OpenRTS] - an open source real-time strategy game with multiplayer and scenario games.
 
