@@ -24,7 +24,6 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://itamarst.org/software/bannerfish/ Bannerfish] - banner ad server.
  * [http://apt-proxy.sourceforge.net apt-proxy2] - caching proxy for Debian apt-get clients.
  * [http://twistedmatrix.com/users/acapnotic/wares/code/CVSToys/ CVSToys] - CVS change notification via email, IRC and HTTP.
- * [http://www.asbahr.com/beyond.html Beyond 2] - high level framework for assembling, animating, and interacting with 3D virtual environments
  * [http://www.zope.org/Members/infrae/DocmaServer DocmaServer] - batch processing server that does Word <-> XML conversion.
  * [http://homepage.hispeed.ch/py430/python/index.html pyvncviewer] - a simple VNC viewer implemented in Python.
  * [http://buildbot.sf.net BuildBot] - a distributed building/testing framework.
@@ -44,6 +43,7 @@ Twisted is used by many open-source, academic and commercial projects.
 = Games =
  * [http://sourceforge.net/projects/originalgamer OGC] - MUD client.
  * [http://gosiege.sourceforge.net/ Go Siege] - multiplayer Go game.
+ * [http://www.asbahr.com/beyond.html Beyond 2] - high level framework for assembling, animating, and interacting with 3D virtual environments
  * [http://www.galaxymage.org GalaxyMage] - a cross-platform, open-source tactical RPG with online multiplayer play.
  * [http://www.openrts.org OpenRTS] - an open source real-time strategy game with multiplayer and scenario games.
 
