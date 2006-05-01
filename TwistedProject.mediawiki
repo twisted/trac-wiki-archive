@@ -26,4 +26,4 @@ Individual project downloads may be found on their respective pages.
 
 Subscribe to the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted-python] mailing list or visit the #twisted channel on irc.freenode.net to ask questions.
 
-[http://twistedmatrix.com/trac/newticket?type=defect&component=core Report a bug] or [http://twistedmatrix.com/trac/newticket?type=enhancement&component=core request a feature] using the issue tracker (registration required), or browse [query:status=new|assigned|reopened&component=core Twisted Core tickets].
+You can browse the [query:status=new|assigned|reopened&component=core Twisted Core tickets]. Furthermore, if you [http://twistedmatrix.com/trac/register register] and [http://twistedmatrix.com/trac/login login], then you can [http://twistedmatrix.com/trac/newticket?type=defect&component=core report a bug] or [http://twistedmatrix.com/trac/newticket?type=enhancement&component=core request a feature] using the issue tracker.
