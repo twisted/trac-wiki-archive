@@ -38,6 +38,7 @@ UPS units would be a nice touch, but not required unless your power is very unre
 
 === Software Licenses - in order of priority: ===
  * Windows Server 2003
+ *   (We also need someone who understands Terminal Services licensing to explain it to us :)
  * Windows XP Pro
  * Visual Studio 2003
  * Visual Studio 2005
