@@ -10,11 +10,23 @@ Twisted is available under the [http://www.opensource.org/licenses/mit-license.p
 
 = Download =
 
- * Stable: Download the latest release - 2.2.0!  [http://twistedmatrix.com/projects/core/NEWS.txt Release announcement]
+ * Stable: Download the latest release - 2.4.0!
+   * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/Twisted-2.4.0.tar.bz2 Tarball of all of Twisted]
+ * Previous Stable - 2.2.0:
    * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.2/TwistedSumo-2006-02-12.tar.bz2 Tarball of all of Twisted]
    * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.2/Twisted_NoDocs-2.2.0.win32-py2.4.exe Win32 installer for Python 2.4]
    * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.2/Twisted_NoDocs-2.2.0.win32-py2.3.exe Win32 installer for Python 2.3]
  * Trunk: svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk Twisted
+ * What's New
+   * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-core-2.4.0/twisted/topfiles/NEWS?format=raw Core]
+   * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-conch-0.7.0/twisted/conch/topfiles/NEWS?format=raw Conch]
+   * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-lore-0.2.0/twisted/lore/topfiles/NEWS?format=raw Lore]
+   * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-mail-0.3.0/twisted/mail/topfiles/NEWS?format=raw Mail]
+   * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-names-0.3.0/twisted/names/topfiles/NEWS?format=raw Names]
+   * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-news-0.2.0/twisted/news/topfiles/NEWS?format=raw News]
+   * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-runner-0.2.0/twisted/runner/topfiles/NEWS?format=raw Runner]
+   * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-web-0.6.0/twisted/web/topfiles/NEWS?format=raw Web]
+   * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-words-0.4.0/twisted/words/topfiles/NEWS?format=raw Words]
 
 Individual project downloads may be found on their respective pages.
 
