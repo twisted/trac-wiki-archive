@@ -10,7 +10,7 @@
   '''[wiki:TwistedWeb Twisted Web]'''::
   An HTTP protocol implementation together with clients and servers
   '''[wiki:TwistedWeb2 Twisted Web2]'''::
-  An HTTP/1.1 Server Framework
+  An HTTP/1.1 Server Framework (Experimental)
   '''[wiki:TwistedMail Twisted Mail]'''::
   An SMTP, IMAP and POP protocol implementation together with clients and servers
   '''[wiki:TwistedNames Twisted Names]'''::
