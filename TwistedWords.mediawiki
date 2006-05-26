@@ -28,10 +28,10 @@ Twisted Words also includes:
 Twisted Words is available under the MIT Free Software licence.
 
 = Download =
- * [http://twistedmatrix.com/projects/words/NEWS.txt Release notes] for Twisted Words 0.3.0
+ * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-words-0.4.0/twisted/words/topfiles/NEWS?format=raw Release notes] for Twisted Words 0.4.0
  * Stable: Twisted Words is part of Twisted. Tarballs and Windows installers are at the TwistedProject page.
  * Trunk: svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk Twisted
- * [http://tmrc.mit.edu/mirror/twisted/Words/0.3/TwistedWords-0.3.0.tar.bz2 Minimal Tarball]. This will require downloading of additional dependencies. We encourage you to use the downloads at TwistedProject, instead of this minimal download.
+ * [http://tmrc.mit.edu/mirror/twisted/Words/0.4/TwistedWords-0.4.0.tar.bz2 Minimal Tarball]. This will require downloading of additional dependencies. We encourage you to use the downloads at TwistedProject, instead of this minimal download.
 
 = Documentation =
 
