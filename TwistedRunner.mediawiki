@@ -7,7 +7,7 @@ Runner has process management, including an inetd replacement.
 Twisted Runner is available under the MIT Free Software licence. 
 
 = Download =
- * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-runner-0.2.0/twisted/runner/topfiles/NEWS?format=raw Release notes] for Twisted Runner 0.2.0
+ * [source:/tags/releases/twisted-runner-0.2.0/twisted/runner/topfiles/NEWS?format=raw Release notes] for Twisted Runner 0.2.0
  * Stable: Twisted Runner is part of Twisted. Tarballs and Windows installers are at the TwistedProject page.
  * Trunk: svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk Twisted
  * [http://tmrc.mit.edu/mirror/twisted/Runner/0.2/TwistedRunner-0.2.0.tar.bz2 Minimal Tarball]. This will require downloading of additional dependencies. We encourage you to use the downloads at TwistedProject, instead of this minimal download.
