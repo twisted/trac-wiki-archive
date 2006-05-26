@@ -52,6 +52,10 @@ That's right, the first Twisted book is finally here. Thanks to Abe Fettig for w
 
 = News =
 
+== Twisted 2.4.0 2006-05-25 ==
+
+Including updates to Words, Web, Names, Mail, Conch, and more.  See TwistedProject.
+
 == Twisted Sprint in Sydney ==
 
 Twisted's Australian hackers are converging in Sydney on the June 3-4 weekend.  If you are Australian and think you might be made of internet, find out more about the SydneySprint
