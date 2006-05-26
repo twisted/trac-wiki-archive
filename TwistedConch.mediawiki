@@ -5,10 +5,10 @@
 Conch is an SSHv2 implementation written in Python. SSH is a protocol designed to allow remote access to shells and commands, but it is generic enough to allow everything from TCP forwarding to generic filesystem access. Since conch is written in Python, it interfaces well with other Python projects, such as Imagination. Conch also includes a implementations of the telnet and vt102 protocols, as well as support for rudimentary line editing behaviors. A new implementation of Twisted's Manhole application is also included, featuring server-side input history and interactive syntax coloring.
 
 = Download =
- * [http://twistedmatrix.com/projects/conch/NEWS.txt Release notes] for Conch 0.6.0
+ * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-conch-0.7.0/twisted/conch/topfiles/NEWS?format=raw Release notes] for Conch 0.7.0
  * Stable: Conch is part of Twisted. Tarballs and Windows installers are at the TwistedProject page.
  * Trunk: svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk Twisted
- * [http://tmrc.mit.edu/mirror/twisted/Conch/0.6/TwistedConch-0.6.0.tar.bz2 Minimal Tarball]. This will require downloading of additional dependencies. We encourage you to use the downloads at TwistedProject, instead of this minimal download.
+ * [http://tmrc.mit.edu/mirror/twisted/Conch/0.7/TwistedConch-0.7.0.tar.bz2 Minimal Tarball]. This will require downloading of additional dependencies. We encourage you to use the downloads at TwistedProject, instead of this minimal download.
 
 = Documentation =
 
