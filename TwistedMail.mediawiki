@@ -7,10 +7,10 @@ Twisted Mail contains high-level, efficient protocol implementations for both cl
 Twisted Mail is available under the MIT Free Software licence. 
 
 = Download =
- * [http://twistedmatrix.com/projects/mail/NEWS.txt Release notes] for Twisted Mail 0.2.0
+ * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-mail-0.3.0/twisted/mail/topfiles/NEWS?format=raw Release notes] for Twisted Mail 0.3.0
  * Stable: Twisted Mail is part of Twisted. Tarballs and Windows installers are at the TwistedProject page.
  * Trunk: svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk Twisted
- * [http://tmrc.mit.edu/mirror/twisted/Mail/0.2/TwistedMail-0.2.0.tar.bz2 Minimal Tarball]. This will require downloading of additional dependencies. We encourage you to use the downloads at TwistedProject, instead of this minimal download.
+ * [http://tmrc.mit.edu/mirror/twisted/Mail/0.3/TwistedMail-0.3.0.tar.bz2 Minimal Tarball]. This will require downloading of additional dependencies. We encourage you to use the downloads at TwistedProject, instead of this minimal download.
 
 = Documentation =
 
