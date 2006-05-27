@@ -17,8 +17,8 @@ What else would you like to do?
 
 You can download:
  * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/Twisted-2.4.0.tar.bz2 Twisted 2.4.0 tarball]
- * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.2/Twisted_NoDocs-2.2.0.win32-py2.3.exe Twisted 2.2 Win32 installer for Python 2.3]
- * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.2/Twisted_NoDocs-2.2.0.win32-py2.4.exe Twisted 2.2 Win32 installer Python 2.4]
+ * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/Twisted_NoDocs-2.4.0.win32-py2.3.exe Twisted 2.4 Win32 installer for Python 2.3]
+ * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/Twisted_NoDocs-2.4.0.win32-py2.4.exe Twisted 2.4 Win32 installer Python 2.4]
 
 Or, for the most recent downloads, including the Twisted 2.4 release, visit its [wiki:TwistedProject project page]. You can get older releases from our [http://tmrc.mit.edu/mirror/twisted/ download site].
 
