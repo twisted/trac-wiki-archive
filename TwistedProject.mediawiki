@@ -12,6 +12,8 @@ Twisted is available under the [http://www.opensource.org/licenses/mit-license.p
 
  * Stable: Download the latest release - 2.4.0!
    * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/Twisted-2.4.0.tar.bz2 Tarball of all of Twisted]
+   * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/Twisted_NoDocs-2.4.0.win32-py2.3.exe Win32 installer for Python 2.3]
+   * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/Twisted_NoDocs-2.4.0.win32-py2.4.exe Win32 installer for Python 2.4]
  * Previous Stable - 2.2.0:
    * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.2/TwistedSumo-2006-02-12.tar.bz2 Tarball of all of Twisted]
    * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.2/Twisted_NoDocs-2.2.0.win32-py2.4.exe Win32 installer for Python 2.4]
