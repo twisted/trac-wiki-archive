@@ -35,7 +35,7 @@ My team is developing a modular application to integrate CAD/CAE/CAM tools and d
 
 -- Stephen C. Waterbury, NASA
 
-= [http://adelux.c2a.fr/ Adelux] =
+= [http://www.adelux.fr/ Adelux] =
 
 Adelux develops custom internet applications such as portals, network security tools, communication-related programs, and software that leverages other systems.
 
