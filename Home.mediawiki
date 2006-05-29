@@ -13,7 +13,7 @@ What else would you like to do?
  * [wiki:TwistedCommunity Get in touch with other Twisted users and developers].
  * [wiki:TwistedDevelopment Contribute to Twisted].
 
-= Where can I get Twisted? =
+= Downloading =
 
 You can download:
  * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/Twisted-2.4.0.tar.bz2 Twisted 2.4.0 tarball]
@@ -24,11 +24,11 @@ For more information about Twisted, including release notes, please see the [wik
 
 (If you are looking for the older Twisted 1.3 release, see the [http://twistedmatrix.com/products/download old download page]. Twisted 1.3 is deprecated, but may still be required by some third-party applications.)
 
-= Where can I read documentation for Twisted? =
+= Documentation =
 
 A good starting point are the [http://twistedmatrix.com/projects/core/documentation/howto/index.html core developer guides] ([http://twistedmatrix.com/projects/core/documentation/howto/book.pdf PDF]) and [http://twistedmatrix.com/documents/current/api/ API reference]. Sub-project documentation ([http://twistedmatrix.com/projects/conch/documentation/howto/index.html conch], etc.) is available from the appropriate [wiki:TwistedProjects project] pages. You can also purchase the book [http://www.amazon.com/exec/obidos/ASIN/0596100329/httpitamorg-20?creative=327641&camp=14573&link_code=as1 Twisted Network Programming Essentials] by Abe Fetting, published by O'Reilly.
 
-= What is Twisted Matrix Laboratories? =
+= About Twisted Matrix Laboratories =
 
 [wiki:TwistedMatrixLaboratories Twisted Matrix Laboratories] is a distributed group of [http://opensource.org/ open-source] developers working on a number of projects based around [wiki:TwistedProject Twisted].
 
