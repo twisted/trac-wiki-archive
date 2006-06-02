@@ -4,7 +4,7 @@ You probably know me more as Jadestorm than as Daniel Henninger.  Either way, ou
 
 * PyICQt (Python Jabber Transport for ICQ)
 
-* JWGC (Jabber WindowGram Client)
+* JWGC (Jabber !WindowGram Client)
 
 * Jabber Script Repository
 
