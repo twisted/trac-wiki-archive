@@ -30,6 +30,8 @@ Unfortunately neither Nevow nor Athena is completely stable; there has not yet b
 
 In this case your best bet is to use Twisted Web directly.  Porting to Twisted Web 2 for these kinds of applications will be fairly trivial (changing a few imports, method names).
 
+Twisted Web already has basic support for XMLRPC and SOAP, and it is fairly straightforward to set up a web service.  Twisted Web also provides various facilities for being set up behind a reverse-proxy, which is the suggested mechanism to integrate your Twisted application with an existing site.
+
 === I Want a Web Framework ===
 
 AKA
