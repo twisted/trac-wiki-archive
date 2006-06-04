@@ -15,3 +15,17 @@ There are a number of packages in and around Twisted that do things with the web
 == So You Want To Be A Web Developer ==
 
 Having reviewed this list, the obvious question is, ''which of these tools should I use for my application???''  The short answer is: "It depends."
+
+Here are some different things you might be trying to do with Twisted.
+
+=== I want a web UI for my existing Twisted networking application ===
+
+Assuming that your networking application has its own data persistence, or does not require persistence, and needs a web-based control panel or monitoring UI, you probably want to use Nevow.  While not completely stable, Nevow provides some degree of backwards compatibility between releases, and will insulate you from the upcoming Twisted Web -> Twisted Web 2 transition.  It will also make designing user interfaces that integrate with the event loop much easier than coding directly to either the Web or Web 2 APIs.
+
+If you want a spiffier interface and you are willing to invest a bit more work, most of these comments about relative API stability also apply to Nevow Athena, and Athena lets you take advantage of the event loop on multiple levels; you can push events from network triggers straight out to a web page.
+
+Unfortunately neither Nevow nor Athena is completely stable; there has not yet been a 1.0 release.  But neither are they churning rapidly and requiring up-to-the-minute monitoring of development.  They also have an active community that understands Twisted integration issues well.
+
+=== I want a container for my WSGI application ===
+
+In this case it's suggested that you use Twisted Web 2.  In this case the instability of the API shouldn't concern you much, since your application should already be written to the stable (standardized, even) WSGI API.  In this sense you are really just using the webserver as a tool rather than an API, and Twisted Web 2 is ready for that kind of use.  Zope 3 has been using it in this capacity and (so far) it seems to be working fine.
