@@ -26,6 +26,20 @@ If you want a spiffier interface and you are willing to invest a bit more work, 
 
 Unfortunately neither Nevow nor Athena is completely stable; there has not yet been a 1.0 release.  But neither are they churning rapidly and requiring up-to-the-minute monitoring of development.  They also have an active community that understands Twisted integration issues well.
 
+=== I Want a Web Framework ===
+
+AKA
+
+==== I want to write a Wiki ====
+==== I want to write a blog ====
+==== I want something to compare to Zope or TurboGears or Django or Ruby on Rails ====
+
+The short version is that this is more complicated in Twisted than in other tools at the moment.  Sadly, you aren't going to find a straight-up competitor  with the sort of polished web presence and easy instant integration with your SQL database and existing environment that the aforementioned products offer.
+
+Zope 3 uses Twisted now, and the next version of Zope 2 will have experimental Twisted support!  You ''can'' just use that, if you are willing to delve into their innards to find the appropriate integration point for Twisted code and Zope code :).
+
+[http://divmod.org/trac/wiki/DivmodMantissa Divmod Mantissa] is a full-featured application server and will likely appeal to you if you want an integrated database and other high-level framework support.
+
 === I want a container for my WSGI application ===
 
 In this case it's suggested that you use Twisted Web 2.  In this case the instability of the API shouldn't concern you much, since your application should already be written to the stable (standardized, even) WSGI API.  In this sense you are really just using the webserver as a tool rather than an API, and Twisted Web 2 is ready for that kind of use.  Zope 3 has been using it in this capacity and (so far) it seems to be working fine.
