@@ -1,10 +1,10 @@
 [[PageOutline(1,Contents)]]
 
-[wiki:WebDevelopmentWithTwisted If you're here to learn about web development with Twisted, please read this page first!]
-
 = Twisted Web =
 
 Twisted web is a web server, and also provides basic HTTP client support.
+
+[wiki:WebDevelopmentWithTwisted If you're here to learn about web development with Twisted, please read this page first!]
 
 Twisted Web is available under the MIT Free Software licence.
 
