@@ -1,11 +1,12 @@
 [[PageOutline(1,Contents)]]
 
+[wiki:WebDevelopmentWithTwisted If you're here to learn about web development with Twisted, please read this page first!]
+
 = Twisted Web =
 
-Twisted web is a web server, and also provides basic HTTP client support. You may want to check out [http://divmod.org/projects/nevow Nevow], a templating toolkit designed for twisted.web, and [wiki:TwistedWeb2 Twisted Web2], the next generation Twisted web server.
+Twisted web is a web server, and also provides basic HTTP client support.
 
 Twisted Web is available under the MIT Free Software licence.
-
 
 = Download =
  * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-web-0.6.0/twisted/web/topfiles/NEWS?format=raw Release notes] for Twisted Web 0.6.0
