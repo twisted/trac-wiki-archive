@@ -16,7 +16,7 @@ There are a number of packages in and around Twisted that do things with the web
 
 Having reviewed this list, the obvious question is, ''which of these tools should I use for my application???''  The short answer is: "It depends."
 
-Here are some different things you might be trying to do with Twisted.
+You can always ask about these kinds of issues on the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-web Twisted Web mailing list], but here's a cheat-sheet that you may want to read in advance, listing some of the things that you might want to be doing with Twisted and the consensus as to the correct (or multiple possible correct) solutions for each case.
 
 === I want a web UI for my existing Twisted networking application ===
 
@@ -25,6 +25,10 @@ Assuming that your networking application has its own data persistence, or does 
 If you want a spiffier interface and you are willing to invest a bit more work, most of these comments about relative API stability also apply to Nevow Athena, and Athena lets you take advantage of the event loop on multiple levels; you can push events from network triggers straight out to a web page.
 
 Unfortunately neither Nevow nor Athena is completely stable; there has not yet been a 1.0 release.  But neither are they churning rapidly and requiring up-to-the-minute monitoring of development.  They also have an active community that understands Twisted integration issues well.
+
+=== I want to write a REST / WS-* interface to my Twisted application ===
+
+In this case your best bet is to use Twisted Web directly.  Porting to Twisted Web 2 for these kinds of applications will be fairly trivial (changing a few imports, method names).
 
 === I Want a Web Framework ===
 
@@ -38,7 +42,7 @@ The short version is that this is more complicated in Twisted than in other tool
 
 Zope 3 uses Twisted now, and the next version of Zope 2 will have experimental Twisted support!  You ''can'' just use that, if you are willing to delve into their innards to find the appropriate integration point for Twisted code and Zope code :).
 
-[http://divmod.org/trac/wiki/DivmodMantissa Divmod Mantissa] is a full-featured application server and will likely appeal to you if you want an integrated database and other high-level framework support.
+[http://divmod.org/trac/wiki/DivmodMantissa Divmod Mantissa] is a full-featured Twisted-powered application server and will likely appeal to you if you want an integrated database and other high-level framework support.
 
 === I want a container for my WSGI application ===
 
