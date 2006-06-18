@@ -19,7 +19,7 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://www.flumotion.net/ Flumotion] - a streaming media server.
  * [http://www.divmod.org/ Quotient] - multi-protocol messaging server with tools for information management and retrieval, including a mail server (SMTP/POP3/IMAP/webmail) and much more.
  * [http://shtoom.sf.net Shtoom] - a RTP/SIP VoIP phone.
- * [http://www.fettig.net/projects/hep Hep] - Message routing super-server
+ * [http://www.fettig.net/projects/hep Hep] - Message routing super-server.
  * [http://sourceforge.net/projects/khashmir Khashmir] - distributed hash table.
  * [http://itamarst.org/software/bannerfish/ Bannerfish] - banner ad server.
  * [http://apt-proxy.sourceforge.net apt-proxy2] - caching proxy for Debian apt-get clients.
@@ -46,10 +46,15 @@ Twisted is used by many open-source, academic and commercial projects.
 = Games =
  * [http://sourceforge.net/projects/originalgamer OGC] - MUD client.
  * [http://gosiege.sourceforge.net/ Go Siege] - multiplayer Go game.
- * [http://www.asbahr.com/beyond.html Beyond 2] - high level framework for assembling, animating, and interacting with 3D virtual environments
+ * [http://www.asbahr.com/beyond.html Beyond 2] - high level framework for assembling, animating, and interacting with 3D virtual environments.
+ * [http://sourceforge.net/projects/innerspace InnerSpace] - a pseudo-MUD engine.
  * [http://www.galaxymage.org GalaxyMage] - a cross-platform, open-source tactical RPG with online multiplayer play.
  * [http://www.openrts.org OpenRTS] - an open source real-time strategy game with multiplayer and scenario games.
  * [http://pyscrabble.sourceforge.net/ PyScrabble] - an online, multiplayer Scrabble game.
+ * [http://freshmeat.net/projects/poker3d/ Poker3d] - a 3d poker game server and client.
+ * [http://web.mit.edu/bshi/www/buyasta/ Buyasta] - a MUD engine.
+ * [http://www.eecs.umich.edu/~pelzlpj/londonlaw/ London Law] - an online multiplayer adaptation of the classic Scotland Yard board game.
+
 
 = Research Projects =
 
