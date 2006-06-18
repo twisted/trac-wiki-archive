@@ -42,6 +42,8 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://theendmusic.org/programming/MaxJax MaxJax] - a solution for real-time web based control of any open sound control enabled sound synthesis engine.
  * [http://www.spring-alpha.org/svs/index.php?content=about svs] - a framework for supporting collaborative projects that combine coding with other media.
  * [http://sourceforge.net/projects/msngateway/ msn-gateway] - an msn messenger gateway for mobile phones using email and web access.
+ * [http://solipsis.netofpeers.net/wiki2/index.php/Main_Page Solipsis] - a pure peer-to-peer system for a massively shared virtual world.
+ * [http://howie.sourceforge.net/ Howie the Chatterbot] - a conversational AI.
 
 = Games =
  * [http://sourceforge.net/projects/originalgamer OGC] - MUD client.
