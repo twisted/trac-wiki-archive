@@ -39,6 +39,9 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://petmail.lothar.com/ PETMail] - permission based anti-spam replacement for SMTP.
  * [http://crowsnest.sf.net Crow's Nest] - collect log information from various sources and to apply some filter to them in a very modular way.
  * [http://thorne.ath.cx/~stephen/software.html Trash] - a web pastebin application.
+ * [http://theendmusic.org/programming/MaxJax MaxJax] - a solution for real-time web based control of any open sound control enabled sound synthesis engine.
+ * [http://www.spring-alpha.org/svs/index.php?content=about svs] - a framework for supporting collaborative projects that combine coding with other media.
+ * [http://sourceforge.net/projects/msngateway/ msn-gateway] - an msn messenger gateway for mobile phones using email and web access.
 
 = Games =
  * [http://sourceforge.net/projects/originalgamer OGC] - MUD client.
@@ -46,6 +49,7 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://www.asbahr.com/beyond.html Beyond 2] - high level framework for assembling, animating, and interacting with 3D virtual environments
  * [http://www.galaxymage.org GalaxyMage] - a cross-platform, open-source tactical RPG with online multiplayer play.
  * [http://www.openrts.org OpenRTS] - an open source real-time strategy game with multiplayer and scenario games.
+ * [http://pyscrabble.sourceforge.net/ PyScrabble] - an online, multiplayer Scrabble game.
 
 = Research Projects =
 
