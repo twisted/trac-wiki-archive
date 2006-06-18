@@ -44,6 +44,7 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://sourceforge.net/projects/msngateway/ msn-gateway] - an msn messenger gateway for mobile phones using email and web access.
  * [http://solipsis.netofpeers.net/wiki2/index.php/Main_Page Solipsis] - a pure peer-to-peer system for a massively shared virtual world.
  * [http://howie.sourceforge.net/ Howie the Chatterbot] - a conversational AI.
+ * [http://en.wikipedia.org/wiki/Wikipedia:Cleaning_up_vandalism/Bots Pgkbot] - a bot for monitoring mediawiki changes.
 
 = Games =
  * [http://sourceforge.net/projects/originalgamer OGC] - MUD client.
