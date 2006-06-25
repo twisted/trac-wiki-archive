@@ -1,6 +1,6 @@
 {{{
 #!html
-<h1 style="color: red">Twisted Project Sponsors</h1> (This page is in development and may not be accurate)
+<h1 style="color: red">Twisted Project Sponsors</h1>
 }}}
 
 First and foremost, the most important sponsors of Twisted are the men and women who give their time to make it the greatest networking framework in the world. Twisted isn't best-of-class - it's in a class all its own. Without the massive amout of time and effort put forth by those people, there would be no project worth sponsoring.
@@ -14,16 +14,17 @@ Without further ado we would like the recognize the following individuals and or
 
 === Buildbot slave machines: ===
 
- * '''JP Calderone''' provides a Linux buildslave. (full-2.3, full-2.4)
+ * '''JP Calderone''' provides a Linux buildslave.
 
- * '''Stephen Thorne''' provides our Mac OS X buildslave. (bot-jerub)
+ * '''Stephen Thorne''' provides our Mac OS X buildslave.
 
- * '''Mike Taylor''' provides our Windows 2000 buildslave. (bot-win32-select, bot-win32-win32er, bot-win32-iocp)
+ * '''Mike Taylor''' provides our Windows 2000 buildslave.
 
- * '''Landon Fuller''' provides our FreeBSD buildslave. (bot-landonf)
+ * '''Landon Fuller''' provides our FreeBSD buildslave.
 
 === Other hardware and hosting: ===
 
 === Software: ===
 
 === Money: ===
+ * '''Bryan D. Thomas''' graciously donated a sum of money to help our Windows efforts. Thanks Bryan!
