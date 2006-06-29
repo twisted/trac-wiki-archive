@@ -45,6 +45,10 @@ A good starting point is the [http://twistedmatrix.com/projects/core/documentati
 
 [wiki:TwistedMatrixLaboratories Twisted Matrix Laboratories] is a distributed group of [http://opensource.org/ open-source] developers working on a number of projects based around [wiki:TwistedProject Twisted].
 
+= Twisted Sponsors =
+
+Twisted development is [wiki:TwistedSponsors sponsored] by a number of individuals and organisations with donations of hardware, software, hosting, and so on. We're especially seeking resources to help improve [wiki:Windows Twisted on MS Windows].
+
 = Contributing =
 
 Want to help Twisted, but don't have any spare time? If you appreciate Twisted and want to help the community and future development, consider a monetary donation. This is not tax deductable. Donations will be used mostly towards payment of hosting costs.
