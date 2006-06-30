@@ -9,6 +9,7 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://ldaptor.bkbits.net/ Ldaptor] - LDAP protocol implementation and utilities.
  * [http://slarty.polito.it:8069/~sciasbat/wiki/moin.cgi/twibber Twibber] - a Jabber implementation.
  * [http://repose.cx/pyosd/ PyOSD] - module for displaying text on your X display, much like the "On Screen Displays" used on TVs and some monitors.
+ * [http://foss.eepatents.com/sAsync/ sAsync] - SQLAlchemy Made Asynchronous.
 
 = Applications =
 
@@ -46,6 +47,7 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://howie.sourceforge.net/ Howie the Chatterbot] - a conversational AI.
  * [http://en.wikipedia.org/wiki/Wikipedia:Cleaning_up_vandalism/Bots Pgkbot] - a bot for monitoring mediawiki changes.
  * [http://www.cps-project.org/sections/projects/nxlucene NXLucene] - a standalone multi-threaded Lucene-based text indexing server.
+ * [http://foss.eepatents.com/WinDictator WinDictator] - Dictate in the MS Windows OS, have the text typed in Linux via X faked keystroke events.
 
 = Games =
  * [http://sourceforge.net/projects/originalgamer OGC] - MUD client.
