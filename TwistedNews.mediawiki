@@ -14,7 +14,7 @@ Twisted News is available under the MIT Free Software licence.
 
 = Documentation =
 
-[http://twistedmatrix.com/projects/news/documentation/ Documentation] is available for Twisted News. An [http://twistedmatrix.com/documents/current/api/ API reference] of Twisted and all subprojects is also available.
+An [http://twistedmatrix.com/documents/current/api/ API reference] of Twisted and all subprojects is available.
 
 = Contact = 
 
