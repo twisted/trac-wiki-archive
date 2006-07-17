@@ -48,6 +48,7 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://en.wikipedia.org/wiki/Wikipedia:Cleaning_up_vandalism/Bots Pgkbot] - a bot for monitoring mediawiki changes.
  * [http://www.cps-project.org/sections/projects/nxlucene NXLucene] - a standalone multi-threaded Lucene-based text indexing server.
  * [http://foss.eepatents.com/WinDictator WinDictator] - Dictate in the MS Windows OS, have the text typed in Linux via X faked keystroke events.
+ * [http://onlinegamegroup.com/projects/palaver/ Palaver] - multi-user chat for Jabber.
 
 = Games =
  * [http://sourceforge.net/projects/originalgamer OGC] - MUD client.
