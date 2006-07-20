@@ -13,18 +13,18 @@ Without further ado we would like the recognize the following individuals and or
 
 
 === Buildbot slave machines: ===
-
  * '''JP Calderone''' provides a Linux buildslave.
 
  * '''Stephen Thorne''' provides our Mac OS X buildslave.
 
  * '''Mike Taylor''' provides our Windows 2000 buildslave.
+ 
+ * '''Michael Schneider''' provides a Suse Linux and Windows XP buildslave.
 
  * '''Landon Fuller''' provides our FreeBSD buildslave.
 
 === Other hardware and hosting: ===
-
-=== Software: ===
+ * '''Vitorio Miliano''' provides software licenses as well as hosting for a Windows XP development machine.
 
 === Money: ===
  * '''Bryan D. Thomas''' graciously donated a sum of money to help our Windows efforts. Thanks Bryan!
