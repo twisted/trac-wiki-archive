@@ -38,7 +38,6 @@ UPS units would be a nice touch, but not required unless your power is very unre
 
 === Software Licenses - in order of priority: ===
  * Windows Server 2003
- *   (We also need someone who understands Terminal Services licensing to explain it to us :)
  * Windows XP Pro
  * Visual Studio 2003
  * Visual Studio 2005
@@ -47,3 +46,22 @@ Optional, if we can find hardware/hosting for them:
  * Windows XP Home
  * Windows 2000 Professional, Server, Advanced Server, or Datacenter Server. A Server version would be nice for RDP support.
 
+=== Specifics about Windows Server 2003 licensing ===
+
+First, you need the OS license to install Windows Server 2003 on a machine.
+
+Second, since people will be connecting to the server either through SSH, Remote Desktop, etc., each user needs a separate license.  These are '''Client Access Licenses'''.  When you install Server 2003, you have to choose how your CALs will be applied.
+
+''Per Server'' means you have one license for each simultaneous connection.  If there are fifteen users who need SSH access to the machine, but only five will ever be connected at once, you can get five CALs and be done with it.  In ''Per Server'' licensing mode, users '''cannot''' connect via Terminal Server (Remote Desktop, RDP).
+
+''Per Device or Per User'' means you have one license for each device-agnostic user or each user-agnostic device.  If there are fifteen users who need SSH and/or RDP access to the machine, but only five will ever be connected at once, you still need fifteen CALs.  If five of them share one computer and only one of those sharing users will be logged on at once, you can get 1 Device CAL for those five, and 10 User CALs for everyone else.  ''Per Device or Per User'' licensing mode is the only licensing mode that allows Windows sessions and use of Terminal Server.
+
+You can change your licensing mode a single time post-install.
+
+If you are in ''Per Device or Per User'' licensing mode and you want to allow users to connect via Remote Desktop, each CAL user or device connecting via Terminal Server requires a '''Terminal Server Client Access License''' in addition to the CAL license.
+
+Fourth, as an alternative, since Twisted as an "organization" has no "employees, temporary personnel, or independent contractors on assignment at the worksite of the organization," and people logging into Server 2004 over Terminal Server are not "customers to whom organization provides hosted services," instead of getting CALs + TS CALs, you can get a Terminal Server External Connector License that is a blanket license.
+
+Per the Microsoft Windows Server 2003 R2 retail licensing page (all prices in USD), Server 2003 with five CALs is $1000, or with ten CALs it is $1200.  If SSH is your only way in, that may suffice.  If you will be logging into the GUI via Terminal Server, then you additionally need at least five TS CALs, which are $750 for five; there's no individual pricing or ten-pack.  So that's either $1750 or $2500 or five or ten TS users.
+
+Alternately, it's the $1000 Server 2003 license plus $8000 for the TS ECL. 
