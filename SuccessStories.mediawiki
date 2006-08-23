@@ -3,7 +3,7 @@
 
 Thusa is a solution provider for many businesses in South Africa. This requires tracking and maintenance of many Linux based servers deployed in a wide range of locations. 
 
-Twisted has enabled Thusa to build a wide range of applications to ease this task and improve efficiency both for Thusa and it's customers. From distributed package management and security auditing of all servers deployed in the field, to simplified LDAP tree management. Thanks to the multi protocol capabilities of Twisted and Nevow, creating a web interfaces for otherwise complex applications becomes trivial. 
+Twisted has enabled Thusa to build a wide range of applications to ease this task and improve efficiency both for Thusa and its customers. From distributed package management and security auditing of all servers deployed in the field, to simplified LDAP tree management. Thanks to the multi protocol capabilities of Twisted and Nevow, creating a web interfaces for otherwise complex applications becomes trivial. 
 
 -- Colin Alston, Software Developer, Thusa Business Support (PTY) Ltd
 
