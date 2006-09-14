@@ -1,0 +1,69 @@
+The development process Twisted has adopted is this:
+ 
+ * Commits to trunk/ must be the result of the review process outlined below.
+The only exception to this is the Twisted.Quotes file.  There are no other
+exceptions.
+ 
+ * Changes to Twisted must be accompanied by a ticket in the tracker.
+ 
+ * Changes must be reviewed by a developer other than the author of the changes.
+If changes are paired on, a third party must review them.  If changes
+constitute the work of several people who worked independently, a non-author
+must review them.
+ 
+ * A reviewer can be anyone who is familiar with the Twisted codebase, coding
+standard, and review requirements.  A reviewer need not necessarily be familiar
+with the specific area of Twisted being changed, but he or she should feel
+confident in his or her abilities to spot problems in the change.
+ 
+ * A reviewer must reject a set of changes in any of the following
+circumstances:
+ 
+   * The test suite fails on any of the supported* platforms as a result of the
+changes.
+ 
+   * The changes alter the behavior of code in a way which is not tested.
+ 
+   * The changes add new behavior without adding test coverage for that
+behavior.
+ 
+   * The changes modify public APIs which are undocumented (ie, a function which
+has no docstring is modified, or a class which has no docstring has methods
+added to it).
+ 
+   * The changes modify the behavior of a documented API without updating the
+documentation.
+ 
+   * The changes violate the coding standard.
+ 
+ * A reviewer may reject a set of changes for other reasons, most of which are
+hard to quantify.  Basically, use your best judgement, and don't be afraid to
+point out problems which don't fit into the above list.
+ 
+ * After a reviewer has given a change set the okay, the author (or another
+developer, if the author is so inclined or lacks commit privileges) may commit
+the change set to trunk.
+ 
+ * The trunk commit must include the name of the author or authors, reviewer or
+reviews, and the tickets which are being resolved by the changes being
+committed.  The suggested format for this is:
+{{{
+    Author: <names>
+    Reviewer: <names>
+    Fixes #<ticket number>
+ }}}
+  
+  Only the "Fixes" line actually *needs* to conform to this (since it is
+automatically processed in order to update the ticket's state in the tracker).
+The commit message should also describe the change being made in a modest
+amount of detail.  This should be detailed enough for someone doing a release
+to formulate a changelog entry.
+ 
+ * If a change set somehow introduces a test suite regression or is otherwise
+found to be undesirable, it is to be reverted.  Any developer may revert a
+commit which introduces a test suite regression on a supported platform.
+ 
+ * If a branch is used, it should be deleted a short time after after it is
+merged into trunk (leaving enough time for the buildslaves to run to completion
+is a good idea, in case a regression has been introduced and the merge must be
+reverted).
