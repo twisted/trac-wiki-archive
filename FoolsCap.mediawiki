@@ -1,0 +1,39 @@
+"Foolscap" is the name for the next-generation RPC protocol, intended to replace Perspective Broker. It has been under development (on and off) by Brian Warner for several years.
+
+The two primary responsibilities of an RPC protocol are to:
+
+ 1. serialize an object graph, and reconstruct a useful equivalent on the remote side
+ 1. allow the holder of a !RemoteReference in one process to invoke methods on a Referenceable in a different one
+
+In addition, there are details like object naming, connection establishment, controlling object serialization, reference lifetime, and error reporting.
+
+== New features ==
+(relative to oldpb, aka twisted.spread)
+
+ * all methods take keyword arguments instead of positional arguments
+ * most inert Python types are serializable, including unicode and sets
+ * clients and servers are implemented as Services, which share connections when possible and are easy to shut down
+ * links are encrypted/authenticated by default (using SSL)
+ * all objects are accessed through secure/unguessable "PB-URLs"
+  * explicitly published objects can be accessed through well-known PB-URLs
+ * you can declare method signatures (with "constraints", either in Interface classes or as method attribute/decorators)
+  * this enables defenses against resource-consumption DoS attacks, including stack-frame-exhaustion attacks
+  * you can ask the deserializer about your current maximum memory/stackframe exposure, based upon what objects are visible and
+    what 
+ * serializers for third-party classes can be registered using Adapters
+ * serializers are more "streaming" than in oldpb
+  * serializers can pause themselves, deferring serialization until later
+  * serializers can be paused when the network pipe is full
+ * newpb is architected to make it possible to rewrite serializers/deserializers in C, for speed
+ * object graph depth is limited by available heap memory, not available stack depth
+
+== Show Me The Code ==
+
+The first release is available in my [http://twistedmatrix.com/~warner/Foolscap/ home directory]: [http://twistedmatrix.com/~warner/Foolscap/foolscap-0.0.2.tar.gz]. This is an alpha release, more of a technology preview than anything else, but should serve to give potential users an idea of what to expect from newpb.
+
+The latest Foolscap code lives in my SVN sandbox, svn://svn.twistedmatrix.com/svn/Twisted/sandbox/warner/Foolscap/trunk, in the 'foolscap' module (source:sandbox/warner/Foolscap/trunk). The documentation is in source:sandbox/warner/Foolscap/trunk/doc and includes both the protocol specification and a short user's manual. It is currently only available via SVN and as a separate module. Some day, it will probably be shipped as part of the "Twisted-Core" distribution, but only after the protocol and code have stabilized a bit.
+
+== Status ==
+
+Foolscap is not yet ready for production use. source:sandbox/warner/Foolscap/trunk/doc/newpb-todo.txt and source:sandbox/warner/Foolscap/trunk/doc/newpb-jobs.txt contain some of the things that need finishing before it will be ready. Connection negotiation needs to be changed to use variable-length certificate digests and variable-length object names, various questions about making objects "giftable" by default or not need to be answered and implemented, and we need to acquire operational experience with Foolscap as a whole to think about usability.
+
