@@ -73,4 +73,5 @@
   Maintainer: Ed "edsuom" Suominen <ed@eepatents.com>
 
   '''Web site'''::
-  Maintainer: Nicola "tekNico" Larosa <nico@tekNico.net>
+  Maintainer: Duncan "oubiwann" !McGreggor <duncan.mcgreggor@gmail.com>[[BR]]
+  Co-maintainer: Nicola "tekNico" Larosa <nico@tekNico.net>
