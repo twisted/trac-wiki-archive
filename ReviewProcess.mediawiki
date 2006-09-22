@@ -12,7 +12,8 @@ The development process Twisted has adopted is this:
    * The test suite fails on any of the supported* platforms as a result of the changes.
    * The changes alter the behavior of code in a way which is not tested. 
    * The changes add new behavior without adding test coverage for that behavior. 
-   * The changes modify public APIs which are undocumented (ie, a function which has no docstring is modified, or a class which has no docstring has methods added to it) without adding documentation. 
+   * The changes add new public APIs or test methods without adding documentation for them.
+   * The changes modify public APIs or test methods which are undocumented (ie, a function which has no docstring is modified, or a class which has no docstring has methods added to it) without adding documentation. 
    * The changes modify the behavior of a documented API without updating the documentation. 
    * The changes violate the coding standard.
  
