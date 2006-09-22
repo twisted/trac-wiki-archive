@@ -32,3 +32,12 @@ The development process Twisted has adopted is this:
  * If a change set somehow introduces a test suite regression or is otherwise found to be undesirable, it is to be reverted.  Any developer may revert a commit which introduces a test suite regression on a supported platform.
  
  * If a branch is used, it should be deleted a short time after after it is merged into trunk (leaving enough time for the buildslaves to run to completion is a good idea, in case a regression has been introduced and the merge must be reverted).
+
+Some of the higher level things for a reviewer to consider about a branch:
+
+  * Does it change existing APIs in an incompatible way?  Are these APIs stable enough to warrent backwards compatibility or a deprecation period?
+  * Is the code written in a straightforward manner which will allow it to be easily maintained in the future, possibly by a developer other than the author?
+  * If it introduces a new feature, is that feature generally useful and have its long term implications been considered and accounted for?
+    * Will it result in confusion to application developers?
+    * Does it encourage application code using it to be well factored and easily testable?
+    * Is it similar to any existing feature offered by Twisted, such that it might make sense as an extension or modification to some other piece of code, rather than an entirely new functional unit?
