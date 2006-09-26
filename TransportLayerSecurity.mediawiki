@@ -16,6 +16,6 @@ There are other competing TLS libraries which might let us do this.
 
 [http://trevp.net/tlslite/ TLS Lite] is a TLS layer which integrates with Twisted via a layered protocol.  It can use mutiple backends, including OpenSSL and PyCrypto, for fast cryptographic operations. 
 
-[http://wiki.osafoundation.org/bin/view/Projects/MeTooCrypto M2Crypto] is a more complete Python wrapper for OpenSSL.  
+[http://wiki.osafoundation.org/bin/view/Projects/MeTooCrypto M2Crypto] is a more complete Python wrapper for OpenSSL.  It also has a layered protocol for integrating with twisted.
 
 The primary reason why Twisted uses PyOpenSSL is that it came first; it was available before either of the other replacements, and while there are currently some reasons keeping us from switching, even once another alternative has emerged as clearly superior, we'll need to develop a transition plan.
