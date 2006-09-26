@@ -14,8 +14,8 @@ The reason for this limitation is that PyOpenSSL does not expose the BIO APIs wh
 
 There are other competing TLS libraries which might let us do this.
 
-[http://trevp.net/tlslite/ TLS Lite] is a TLS layer which integrates with Twisted via a layered protocol.  It can use mutiple backends, including OpenSSL and PyCrypto, for fast cryptographic operations.  We are currently not using this because of unresolved security issues.   (XXX ADD SOME EXAMPLES)
+[http://trevp.net/tlslite/ TLS Lite] is a TLS layer which integrates with Twisted via a layered protocol.  It can use mutiple backends, including OpenSSL and PyCrypto, for fast cryptographic operations. 
 
-[http://wiki.osafoundation.org/bin/view/Projects/MeTooCrypto M2Crypto] is a more complete Python wrapper for OpenSSL.  We are not using this because it is written with Swig and prone to crashes and other problems.  (XXX ADD MORE EXAMPLES HERE TOO)
+[http://wiki.osafoundation.org/bin/view/Projects/MeTooCrypto M2Crypto] is a more complete Python wrapper for OpenSSL.  
 
 The primary reason why Twisted uses PyOpenSSL is that it came first; it was available before either of the other replacements, and while there are currently some reasons keeping us from switching, even once another alternative has emerged as clearly superior, we'll need to develop a transition plan.
