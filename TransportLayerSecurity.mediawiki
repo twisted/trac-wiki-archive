@@ -1,0 +1,21 @@
+For its integrated TLS support, Twisted uses PyOpenSSL, and provides reactor APIs such as connectSSL and listenSSL, as well the startTLS transport API.
+
+While this is sufficient for most applications, it is generally acknowledged by the Twisted team that this is a sub-optimal way to provide integration.  A better API would provide layering, whereby the transport would be a TCP transport, which would deliver data to a TLS protocol, which would decrypt that data and deliver the decrypted data to an application protocol.  Conversely, the TLS protocol would also serve as the application's transport, encrypting the data before sending it to the TLS transport.
+
+This type of API would have numerous benefits:
+
+ * SSL encryption could be done on multiplexing protocols, over non-socket connections, such as:
+   * peer-to-peer protocols like [http://www.divmod.org/trac/wiki/DivmodVertex Q2Q]
+   * serial ports
+   * standard IO and subprocesses
+ * Throttling policies could be directed at the input and output directly to sockets, measuring the cost of encryption and padding as well as the application data
+
+The reason for this limitation is that PyOpenSSL does not expose the BIO APIs which would allow us to feed it data from an unknown source; although PyOpenSSL exposes an asynchronous API, it only allows us to write to the socket BIO, which requires Twisted to wrap its socket-like API in a different type of transport.
+
+There are other competing TLS libraries which might let us do this.
+
+[http://trevp.net/tlslite/ TLS Lite] is a TLS layer which integrates with Twisted via a layered protocol.  It can use mutiple backends, including OpenSSL and PyCrypto, for fast cryptographic operations.  We are currently not using this because of unresolved security issues.   (XXX ADD SOME EXAMPLES)
+
+[http://wiki.osafoundation.org/bin/view/Projects/MeTooCrypto M2Crypto] is a more complete Python wrapper for OpenSSL.  We are not using this because it is written with Swig and prone to crashes and other problems.  (XXX ADD MORE EXAMPLES HERE TOO)
+
+The primary reason why Twisted uses PyOpenSSL is that it came first; it was available before either of the other replacements, and while there are currently some reasons keeping us from switching, even once another alternative has emerged as clearly superior, we'll need to develop a transition plan.
