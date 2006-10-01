@@ -6,6 +6,12 @@ The development process Twisted has adopted is this:
  
  * Changes must be reviewed by a developer other than the author of the changes. If changes are paired on, a third party must review them.  If changes constitute the work of several people who worked independently, a non-author must review them.
  
+ * When a ticket becomes ready for review, the trac workflow for the developer is as follows:
+  1. Add {{{review}}} to the comma-separated keywords field
+  1. Change the ticket priority to {{{highest}}}
+  1. Change the owner to either no one or, if a particular developer is likely to review a branch or a particular developer's input is desired on the branch, that developer.  For the former case, when starting a review the reviewer should assign the ticket to themselves.
+  1. Comment on the ticket indicating whether the changes to be reviewed can be found.
+
  * A reviewer can be anyone who is familiar with the Twisted codebase, coding standard, and review requirements.  A reviewer need not necessarily be familiar with the specific area of Twisted being changed, but he or she should feel confident in his or her abilities to spot problems in the change.
  
  * A reviewer must reject a set of changes in any of the following circumstances: 
@@ -18,6 +24,11 @@ The development process Twisted has adopted is this:
    * The changes violate the coding standard.
  
  * A reviewer may reject a set of changes for other reasons, most of which are hard to quantify.  Basically, use your best judgement, and don't be afraid to point out problems which don't fit into the above list.
+
+ * When a reviewer has completed a review, the trac workflow is as follows:
+  1. Remove {{{review}}} from the comma-separated keywords field
+  1. Change the owner back to the developer who put the ticket up for review
+  1. Put whatever whatever review comments are being offered into a comment on the ticket
  
  * After a reviewer has given a change set the okay, the author (or another developer, if the author is so inclined or lacks commit privileges) may commit the change set to trunk.
  
