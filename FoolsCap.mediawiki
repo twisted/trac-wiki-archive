@@ -29,7 +29,7 @@ In addition, there are details like object naming, connection establishment, con
 
 == Show Me The Code ==
 
-The first release is available in my [http://twistedmatrix.com/~warner/Foolscap/ home directory]: [http://twistedmatrix.com/~warner/Foolscap/foolscap-0.0.2.tar.gz]. This is an alpha release, more of a technology preview than anything else, but should serve to give potential users an idea of what to expect from newpb.
+The current release is available in my [http://twistedmatrix.com/~warner/Foolscap/ home directory], in the file [http://twistedmatrix.com/~warner/Foolscap/foolscap-0.0.3.tar.gz]. This is an alpha release, more of a technology preview than anything else, but should serve to give potential users an idea of what to expect from newpb.
 
 The latest Foolscap code lives in my SVN sandbox, svn://svn.twistedmatrix.com/svn/Twisted/sandbox/warner/Foolscap/trunk, in the 'foolscap' module (source:sandbox/warner/Foolscap/trunk). The documentation is in source:sandbox/warner/Foolscap/trunk/doc and includes both the protocol specification and a short user's manual. Some day, it will probably be shipped as part of the "Twisted-Core" distribution, but only after the protocol and code have stabilized a bit.
 
