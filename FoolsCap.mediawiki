@@ -1,3 +1,5 @@
+= Foolscap =
+
 "Foolscap" is the name for the next-generation RPC protocol, intended to replace Perspective Broker. It has been under development (on and off) by Brian Warner for several years.
 
 The two primary responsibilities of an RPC protocol are to:
