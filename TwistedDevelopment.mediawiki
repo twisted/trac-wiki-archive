@@ -8,6 +8,10 @@ Twisted uses same process as Divmod: [http://divmod.org/trac/wiki/UltimateQualit
 
 If you want to become a developer, it is important to understand that all your contributions (including those initial patches you send to the bug tracker) will have to licenced under the MIT licence.
 
+== Win32 development ==
+
+If you want to hack Twisted or just use Twisted SVN on Win32, see Ying Li's [http://cyli.livejournal.com/22274.html short tutorial on setting up a Twisted win32 development environment] (and a [http://cyli.livejournal.com/22921.html small addendum on paths]).
+
 == Links and Resources ==
 
  * Twisted developers are bent on [http://isometric.sixsided.org/_/twisted_plutonium/ the destruction of the American currency system].
