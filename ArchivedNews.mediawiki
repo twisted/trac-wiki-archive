@@ -1,0 +1,15 @@
+= News Archives = 
+
+
+== Twisted (core) 2.1.0 + First Virtual Sprint (2005-10-09) ==
+
+In Twisted's first virtual sprint the weekend of 2005-10-08, many people contributed to Twisted in general and helped get the Twisted 2.1.0 release out. See the Twisted project page and read about what's new.
+Australian Twisted Sprint 2005.2 (2005-08-07)
+
+A Twisted Sprint will be held in Sydney Australia on the 19-21 August 2005. Topics will probably include documentation, a VFS layer (including WebDAV support), the new Axiom database, and whatever else anyone can think of. For more information, please see the Australian Twisted Sprint Wiki.
+
+Thanks to Linux Australia for funding this sprint.
+
+== Twisted 2.0.1 NOW released (2005-05-25) ==
+
+Twisted 2.0.1 is now out. This is a minor release, only including bugfixes since 2.0.0. One of the most important fixes was a bug causing many gtk GUI apps to crash. Twisted News is now properly included in the Sumo release. Enjoy. 
