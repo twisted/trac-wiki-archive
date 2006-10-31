@@ -1,10 +1,26 @@
-= News Archives = 
+= Twistery In the News =
 
+== Apple Releases iCal Server Code (2006-08-07) ==
+
+Apple's iCal Server is written in Twisted. Visit the [http://trac.macosforge.org/projects/calendarserver development site] to read more about the software and to get started with it now.
+
+== Twisted 2.4.0 (2006-05-25) ==
+
+Including updates to Words, Web, Names, Mail, Conch, and more.  See TwistedProject.
+
+== Twisted Sprint in Sydney  (2006-05-19) ==
+
+Twisted's Australian hackers are converging in Sydney on the June 3-4 weekend.  If you are Australian and think you might be made of internet, find out more about the SydneySprint
+
+== Twisted 2.2.0 (2006-02-12) ==
+
+Twisted 2.2.0 is out. See TwistedProject.
 
 == Twisted (core) 2.1.0 + First Virtual Sprint (2005-10-09) ==
 
 In Twisted's first virtual sprint the weekend of 2005-10-08, many people contributed to Twisted in general and helped get the Twisted 2.1.0 release out. See the Twisted project page and read about what's new.
-Australian Twisted Sprint 2005.2 (2005-08-07)
+
+== Australian Twisted Sprint 2005.2 (2005-08-07) ==
 
 A Twisted Sprint will be held in Sydney Australia on the 19-21 August 2005. Topics will probably include documentation, a VFS layer (including WebDAV support), the new Axiom database, and whatever else anyone can think of. For more information, please see the Australian Twisted Sprint Wiki.
 
