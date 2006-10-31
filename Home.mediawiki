@@ -75,6 +75,6 @@ Twisted's Australian hackers are converging in Sydney on the June 3-4 weekend.  
 
 Twisted 2.2.0 is out. See TwistedProject.
 
-== New Archives ==
+== News Archives ==
 
 See the [wiki:ArchivedNews News Archives] for more.
