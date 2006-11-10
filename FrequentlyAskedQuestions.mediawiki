@@ -1,4 +1,4 @@
-[[PageOutline()]]
+[[PageOutline(2-6,,inline)]]
 ----
 
 == Core ==
