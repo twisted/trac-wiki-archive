@@ -63,10 +63,6 @@ That's right, the first Twisted book is finally here. Thanks to Abe Fettig for w
 
 = News =
 
-== Google Uses Twisted (2006-10-31) ==
-
-Perhaps the headline is a little sensationalist, but Google has acquired [http://www.jot.com/ JotSpot], a company that makes use of Twisted. In fact, [http://fettig.net/weblog/ one of] !JotSpot's employees is the author of the [http://www.amazon.com/exec/obidos/ASIN/0596100329/httpitamorg-20?creative=327641&camp=14573&link_code=as1" O'Reilly Twisted book]. Time will tell how much of their Twisted code survives as !JotSpot migrates its infrastructure to Google.
-
 == Apple Releases iCal Server Code (2006-08-07) ==
 
 Apple's iCal Server is written in Twisted. Visit the [http://trac.macosforge.org/projects/calendarserver development site] to read more about the software and to get started with it now.
