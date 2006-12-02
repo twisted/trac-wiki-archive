@@ -14,6 +14,11 @@ There are many ways individuals and organizations can make contributions to Twis
 
 What you need to read if you are planning on contributing technically:
  * Be sure you've read and understand the applicable [wiki:Documentation docs] 
- * How to do code reviews
- * How to submit patches
- * Our coding procedures and conventions 
+ * [http://twistedmatrix.com/trac/register Register] on this site
+ * Intimately familiarize yourself with [http://divmod.org/trac/wiki/UltimateQualityDevelopmentSystem The Ultimate Quality Development System]
+ * Examine some of the [source:branches current branches]
+ * Take a look at the [http://twistedmatrix.com/trac/report open tickets]
+ * Memorize the [http://twistedmatrix.com/projects/core/documentation/howto/policy/coding-standard.html Twisted coding standard]
+ * Practice all of these by submitting patches (submit branches in {{{diff -u}}} format to the [http://twistedmatrix.com/trac/newticket ticket tracker])
+ * Explore the [wiki:ReviewProcess code review process] and help a brother/sister out
+ * [http://twistedmatrix.com/buildbot/ Buildbot]. Watch it.
