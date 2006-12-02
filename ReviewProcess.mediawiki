@@ -30,7 +30,7 @@ The post-development, pre-commit process Twisted has adopted is this:
  * When a reviewer has completed a review, the trac workflow is as follows:
   1. Remove {{{review}}} from the comma-separated keywords field
   1. Change the owner back to the developer who put the ticket up for review
-  1. Put whatever whatever review comments are being offered into a comment on the ticket
+  1. Put whatever review comments are being offered into a comment on the ticket
  
  * After a reviewer has given a change set the okay, the author (or another developer, if the author is so inclined or lacks commit privileges) may commit the change set to trunk.
  
