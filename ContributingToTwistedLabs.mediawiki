@@ -1,0 +1,19 @@
+= Contributing to Twisted =
+
+There are many ways individuals and organizations can make contributions to Twisted.
+ * Money (how much? what for?)
+ * Buildslaves (which ones? how to do this?)
+ * Perform code reviews
+ * Submit bug reports
+ * Provide patches
+ * [wiki:DocumentationAnalysis Review documentation]
+ * Apply for an [wiki:OpenMaintainerPositions open maintainer position]
+ * Provide technical support (answer questions on [wiki:TwistedCommunity IRC and the mail lists])
+
+== Documentation ==
+
+What you need to read if you are planning on contributing technically:
+ * Be sure you've read and understand the applicable [wiki:Documentation docs] 
+ * How to do code reviews
+ * How to submit patches
+ * Our coding procedures and conventions 
