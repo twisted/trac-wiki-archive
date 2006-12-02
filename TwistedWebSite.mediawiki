@@ -40,7 +40,7 @@ Like any engine, Twisted has many "moving parts." [wiki:TwistedProjects Twisted 
 
 General Information:
 
- * [wiki:TwistedNewsStand News] - Read the latest news items about Twisted. 
+ * [wiki:ArchivedNews News] - Read the latest news items about Twisted. 
  * [wiki:SuccessStories Success Stories] - Read about people who have been successful with Twisted.
  * [wiki:ProjectsUsingTwisted Software that uses Twisted] - Learn what other projects are using Twisted.
 
