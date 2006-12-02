@@ -38,6 +38,16 @@ Like any engine, Twisted has many "moving parts." [wiki:TwistedProjects Twisted 
 
 == Quick Links ==
 
+Software:
+
+ * [wiki:Downloads Download it]!
+ * [source:trunk View the source] on the web
+ * Check out the source: 
+{{{
+svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk
+}}}
+
+
 General Information:
 
  * [wiki:ArchivedNews News] - Read the latest news items about Twisted. 
