@@ -1,9 +1,163 @@
+= Twistsed FAQ =
+
+Here are a list of Frequently Asked Questions regarding Twisted.
+
+----
 [[PageOutline(2-6,,inline)]]
 ----
 
-== Core ==
+== General ==
+
+=== What is Twisted? ===
+
+See the [wiki:TwistedProject Twisted Project].
+
+=== Why should I use Twisted? ===
+
+See the [wiki:TwistedAdvantage TwistedAdvantage].
+
+=== I have a problem getting Twisted. ===
+
+Did you check the HOWTO collection? There are so many documents there that they might overwhelm you... try starting from the index, reading through the overviews and seeing if there seems to be a chapter which explains what you need to. You can try reading the PostScript or PDF formatted books, inside the distribution. And, remember, the source will be with you... always.
+
+=== Why are there so many parts and subprojects? Isn't Twisted just Twisted? ===
+
+As of version 2.0, Twisted was split up into many subprojects, because it was getting too much to handle in a monolithic release, and we believe breaking the project into smaller chunks will help people understand the things they need to understand (There used to be a FAQ entry here asking Why is Twisted so big?). More information is available in the [http://twistedmatrix.com/projects/core/documentation/upgrades/2.0/split.html Split FAQ].
+
+== Stability ==
+
+=== Does the 1.0 release mean that all of Twisted's APIs are stable? ===
+
+No, only specific parts of Twisted are stable, i.e. we only promise backwards compatibility for some parts of Twisted. While these APIs may be extended, they will not change in ways that break existing code that uses them.
+
+While other parts of Twisted are not stable, we will however do our best to make sure that there is backwards compatibility for these parts as well. In general, the more the module or package are used, and the closer they are to being feature complete, the more we will concentrate on providing backwards compatibility when API changes take place.
+
+=== Which parts of Twisted are stable? ===
+
+Only modules explictily marked as such can be considered stable. Semi-stable modules may change, but not in a large way and some sort of backwards-compatibily will probably be provided. If no comment about API stability is present, assume the module is unstable.
+
+In Twisted 1.1, ''most of twisted.internet, .cred and .application are completely stable'' (excepting of course code marked as deprecated).
+
+But as always, the only accurate way of knowing a module's stability is reading the module's docstrings.
+
+== Installation ==
+
+=== I run mktap (from site-packages/twisted/scripts/mktap.py) and nothing happens! ===
+
+Don't run scripts out of {{{site-packages}}}. The Windows installer should install executable scripts to someplace like {{{C:\Python22\scripts\}}}, *nix installers put them in {{{$PREFIX/bin}}}, which should be in your {{{$PATH}}}.
+
+=== Why do the Debian packages for Alphas and Release Candidates have weird versions containing old version numbers? ===
+
+An example: 1.0.6+1.0.7rc1-1
+
+In Debian versioning, 1.0.7rc1 is greater than 1.0.7. This means that if you install a package with Version: 1.0.7rc1, and then that package gets a new version 1.0.7, apt will not upgrade it for you, because 1.0.7 looks like an older version. So, we prefix the previous version to the actual version. 1.0.6+1.0.7rc1 is less than 1.0.7. 
+
+== Core Twisted ==
 
 === Why does Twisted depend on Zope? ===
 
 Actually, Twisted depends on [http://www.zope.org/Products/ZopeInterface Zope Interface], an interface package which is also bundled independently from the main Zope distribution.  Twisted uses Zope Interface to define and document APIs.  The [http://twistedmatrix.com/trac/wiki/TwistedProject Twisted source distribution] includes a source package for Zope Interface.  Zope Interface is is also [http://packages.debian.org/cgi-bin/search_packages.pl?keywords=zopeinterface&searchon=names&subword=1&version=stable&release=all packaged by Debian].
 
+=== How can I access self.factory from my Protocol's __init__? ===
+
+You can't. A Protocol doesn't have a Factory when it is created. Instead, you should probably be doing that in your Protocol's connectionMade method.
+
+Similarly you shouldn't be doing real work, like connecting to databases, in a Factory's __init__ either. Instead, do that in startFactory.
+
+See [http://twistedmatrix.com/projects/core/documentation/howto/servers.html Writing Servers] and [http://twistedmatrix.com/projects/core/documentation/howto/clients.html Writing Clients] for more details.
+
+=== Where can I find out how to write Twisted servers? ===
+
+Try [http://twistedmatrix.com/projects/core/documentation/howto/servers.html Writing Servers].
+
+=== When I try to install my reactor, I get errors about a reactor already being installed. What gives? ===
+
+Here's the rule - installing a reactor should always be the '''first''' thing you do, and I do mean first. Importing other stuff before you install the reactor can break your code.
+
+Tkinter and wxPython support, as they do not install a new reactor, can be done at any point, IIRC.
+
+=== {{{twistd}}} won't load my {{{.tap}}} file! What's this Ephemeral nonsense? ===
+
+When the pickled application state cannot be loaded for some reason, it is common to get a rather opaque error like so:
+{{{
+% twistd -f test2.tap 
+
+Failed to load application: global name 'initRun' is not defined
+}}}
+The rest of the error will try to explain how to solve this problem, but a short comment first: this error is indeed terse -- but there is probably more data available elsewhere -- namely, the {{{twistd.log}}} file. Open it up to see the full exception.
+
+The error might also look like this:
+{{{
+Failed to load application: <twisted.persisted.styles.Ephemeral instance at 
+0x82450a4> is not safe for unpickling
+}}}
+To load a {{{.tap}}} file, as with any unpickling operation, all the classes used by all the objects inside it must be accessible at the time of the reload. This may require the PYTHONPATH variable to have the same directories as were available when the application was first pickled.
+
+A common problem occurs in single-file programs which define a few classes, then create instances of those classes for use in a server of some sort. If the class is used directly, the name of the class will be recorded in the {{{.tap}}} file as something like {{{__main__.MyProtocol}}}. When the application is reloaded, it will look for the class definition in {{{__main__}}}, which probably won't have it. The unpickling routines need to know the module name, and therefore the source file, from which the class definition can be loaded.
+
+The way to fix this is to import the class from the same source file that defines it: if your source file is called {{{myprogram.py}}} and defines a class called {{{MyProtocol}}}, you will need to do a {{{from myprogram import MyProtocol}}} before (and in the same namespace as) the code that references the MyProtocol class. This makes it important to write the module cleanly: doing an {{{import myprogram}}} should only define classes, and should not cause any other subroutines to get run. All the code that builds the Application and saves it out to a .tap file must be inside an {{{if __name__ == '__main__'}}} clause to make sure it is not run twice (or more).
+
+When you import the class from the module using an external name, that name will be recorded in the pickled {{{.tap}}} file. When the {{{.tap}}} is reloaded by twistd, it will look for {{{myprogram.py}}} to provide the definition of {{{MyProtocol}}}.
+
+Here is a short example of this technique:
+{{{
+#!python
+# file dummy.py
+from twisted.internet import protocol
+class Dummy(protocol.Protocol): pass
+if __name__ == '__main__':
+    from twisted.application import service, internet
+    a = service.Application("dummy")
+    import dummy
+    f = protocol.Factory()
+    f.protocol = dummy.Dummy # Note! Not "Dummy"
+    internet.TCPServer(2000, f).setServiceParent(a)
+    a.save()
+}}}
+
+
+=== I get Interrupted system call errors when I use os.popen2. How do I read results from a sub-process in Twisted? ===
+
+You should be using {{{reactor.spawnProcess}}} (see [http://twistedmatrix.com/documents/current/api/twisted.internet.interfaces.IReactorProcess.spawnProcess.html interfaces.IReactorProcess.spawnProcess]). There's also a convenience function, [http://twistedmatrix.com/documents/current/api/twisted.internet.utils.getProcessOutput.html getProcessOutput], in [http://twistedmatrix.com/documents/current/api/twisted.internet.utils.html twisted.internet.utils].
+
+=== Why don't my spawnProcess programs see my environment variables? ===
+
+[http://twistedmatrix.com/documents/current/api/twisted.internet.interfaces.IReactorProcess.spawnProcess.html spawnProcess] defaults to clearing the environment of child processes as a security feature. You can either provide a dictionary with exactly the name-value pairs you want the child to use, or you can simply pass in {{{os.environ}}} to inherit the complete environment.
+
+=== My Deferred or DeferredList never fires, so my program just mysteriously hangs! What's wrong? ===
+
+It really depends on what your program is doing, but the most common cause is this: it is firing -- but it's an error, not a success, and you have forgotten to add an [http://twistedmatrix.com/projects/core/documentation/howto/glossary.html#errback errback], so nothing happens. Always add errbacks!
+
+The reason Deferred can't automatically show your errors is because a Deferred can still have callbacks and errbacks added to it even after a result is available -- so we have no reasonable place to put a logging call that wouldn't result in spurious tracebacks that are handled later on. There is a facility for printing tracebacks when the Deferreds are garbage collected -- call defer.setDebugging(True) to enable it.
+
+=== My exceptions and tracebacks aren't getting printed! ===
+
+See previous question.
+
+=== How do I use Deferreds to make my blocking code non-blocking? ===
+
+You don't. Deferreds don't magically turn a blocking function call into a non-blocking one. A Deferred is just a simple object that represents a deferred result, with methods to allow convenient adding of callbacks. (This is a common misunderstanding; suggestions on how to make this clearer in the [http://twistedmatrix.com/projects/core/documentation/howto/defer.html Deferred Execution] howto are welcome!)
+
+If you have blocking code that you want to use non-blockingly in Twisted, either rewrite it to be non-blocking, or run it in a thread. There is a convenience function, [http://twistedmatrix.com/documents/current/api/twisted.internet.threads.deferToThread.html deferToThread], to help you with the threaded approach -- but be sure to read [http://twistedmatrix.com/projects/core/documentation/howto/threading.html Using Threads in Twisted].
+
+=== I get exceptions.ValueError: signal only works in main thread when I try to run my Twisted program! What's wrong? ===
+
+The default reactor, by default, will install signal handlers to catch events like Ctrl-C, SIGTERM, and so on. However, you can't install signal handlers from non-main threads in Python, which means that {{{reactor.run()}}} will cause an error. Pass the {{{installSignalHandlers=0}}} keyword argument to {{{reactor.run}}} to work around this.
+
+=== I'm trying to stop my program with sys.exit(), but Twisted seems to catch it! How do I exit my program? ===
+=== How do I find out the IP address of the other end of my connection? ===
+=== Why don't Twisted's network methods support Unicode objects as well as strings? ===
+== Perspective Broker ==
+=== How can I get the reference to a client from a Perspective? ===
+== Requests and Contributing ==
+=== Twisted is cool, but I need to add more functionality. ===
+=== I have a patch. How do I maximize the chances the Twisted developers will include it? ===
+=== And to whom do I send it? ===
+=== My company would love to use Twisted, but it's missing feature X, can you implement it? ===
+== Documentation ==
+=== Twisted really needs documentation for X, Y or Z - how come it's not documented?. ===
+=== Wow the Twisted documentation is nice! I want my docs to look like that too! ===
+== Communicating with us ==
+=== There's a bug in Twisted. Where do I report it? ===
+=== Where do I go for help? ===
+=== How do I e-mail a Twisted developer? ===
