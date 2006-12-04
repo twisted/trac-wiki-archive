@@ -1,4 +1,4 @@
-= Twistsed FAQ =
+= Twisted FAQ =
 
 Here are a list of Frequently Asked Questions regarding Twisted.
 
