@@ -58,11 +58,11 @@ In Debian versioning, 1.0.7rc1 is greater than 1.0.7. This means that if you ins
 
 Actually, Twisted depends on [http://www.zope.org/Products/ZopeInterface Zope Interface], an interface package which is also bundled independently from the main Zope distribution.  Twisted uses Zope Interface to define and document APIs.  The [http://twistedmatrix.com/trac/wiki/TwistedProject Twisted source distribution] includes a source package for Zope Interface.  Zope Interface is is also [http://packages.debian.org/cgi-bin/search_packages.pl?keywords=zopeinterface&searchon=names&subword=1&version=stable&release=all packaged by Debian].
 
-=== How can I access self.factory from my Protocol's __init__? ===
+=== How can I access self.factory from my Protocol's !__init!__? ===
 
 You can't. A Protocol doesn't have a Factory when it is created. Instead, you should probably be doing that in your Protocol's connectionMade method.
 
-Similarly you shouldn't be doing real work, like connecting to databases, in a Factory's __init__ either. Instead, do that in startFactory.
+Similarly you shouldn't be doing real work, like connecting to databases, in a Factory's !__init!__ either. Instead, do that in startFactory.
 
 See [http://twistedmatrix.com/projects/core/documentation/howto/servers.html Writing Servers] and [http://twistedmatrix.com/projects/core/documentation/howto/clients.html Writing Clients] for more details.
 
