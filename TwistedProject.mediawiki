@@ -30,7 +30,7 @@ Twisted is available under the [http://www.opensource.org/licenses/mit-license.p
    * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-web-0.6.0/twisted/web/topfiles/NEWS?format=raw Web]
    * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-words-0.4.0/twisted/words/topfiles/NEWS?format=raw Words]
 
-Individual project downloads may be found on their respective pages.
+Individual project downloads may be found on their [wiki:TwistedProjects respective pages].
 
 = Documentation =
 
