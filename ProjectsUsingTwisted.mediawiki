@@ -13,6 +13,7 @@ Twisted is used by many open-source, academic and commercial projects.
 
 = Applications =
 
+ * [http://www.dohop.com dohop.com] - a flight planning web site which searches many other flight databases.
  * [http://www.bittorrent.com BitTorrent] - a peer-to-peer file sharing program.
  * [http://www.osafoundation.org/ Chandler] - a desktop PIM.
  * [http://www.zope.org/DevHome/Zope3 Zope3] - next-generation of the Zope application server and content management system.
