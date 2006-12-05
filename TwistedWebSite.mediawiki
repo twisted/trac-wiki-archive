@@ -44,7 +44,7 @@ General Information:
  * [wiki:ArchivedNews News] - Read the latest news items about Twisted. 
  * [wiki:SuccessStories Success Stories] - Read about people who have been successful with Twisted.
  * [wiki:ProjectsUsingTwisted Software that uses Twisted] - Learn what other projects are using Twisted.
-
+ * [wiki:TwistedMatrixLaboratories The Labs] - What is ''Twisted Matrix Laboratories''?
 More Useful Pointers:
 
  * [wiki:Documentation] - Everything you need to know to get started.
