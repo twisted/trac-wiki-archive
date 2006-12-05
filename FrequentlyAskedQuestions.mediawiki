@@ -124,7 +124,7 @@ You should be using {{{reactor.spawnProcess}}} (see [http://twistedmatrix.com/do
 
 [http://twistedmatrix.com/documents/current/api/twisted.internet.interfaces.IReactorProcess.spawnProcess.html spawnProcess] defaults to clearing the environment of child processes as a security feature. You can either provide a dictionary with exactly the name-value pairs you want the child to use, or you can simply pass in {{{os.environ}}} to inherit the complete environment.
 
-=== My Deferred or DeferredList never fires, so my program just mysteriously hangs! What's wrong? ===
+=== My Deferred or !DeferredList never fires, so my program just mysteriously hangs! What's wrong? ===
 
 It really depends on what your program is doing, but the most common cause is this: it is firing -- but it's an error, not a success, and you have forgotten to add an [http://twistedmatrix.com/projects/core/documentation/howto/glossary.html#errback errback], so nothing happens. Always add errbacks!
 
@@ -140,12 +140,25 @@ You don't. Deferreds don't magically turn a blocking function call into a non-bl
 
 If you have blocking code that you want to use non-blockingly in Twisted, either rewrite it to be non-blocking, or run it in a thread. There is a convenience function, [http://twistedmatrix.com/documents/current/api/twisted.internet.threads.deferToThread.html deferToThread], to help you with the threaded approach -- but be sure to read [http://twistedmatrix.com/projects/core/documentation/howto/threading.html Using Threads in Twisted].
 
-=== I get exceptions.ValueError: signal only works in main thread when I try to run my Twisted program! What's wrong? ===
+=== I get {{{exceptions.ValueError: signal only works in main thread}}} when I try to run my Twisted program! What's wrong? ===
 
 The default reactor, by default, will install signal handlers to catch events like Ctrl-C, SIGTERM, and so on. However, you can't install signal handlers from non-main threads in Python, which means that {{{reactor.run()}}} will cause an error. Pass the {{{installSignalHandlers=0}}} keyword argument to {{{reactor.run}}} to work around this.
 
 === I'm trying to stop my program with sys.exit(), but Twisted seems to catch it! How do I exit my program? ===
+
+Use {{{reactor.stop()}}} instead. This will cleanly shutdown the reactor.
+
 === How do I find out the IP address of the other end of my connection? ===
+
+The {{{.transport}}} object (which implements the [http://twistedmatrix.com/documents/current/api/twisted.internet.interfaces.ITransport.html ITransport] interface) offers a pair of methods named [http://twistedmatrix.com/documents/current/api/twisted.internet.interfaces.ITransport.getPeer.html getPeer] and [http://twistedmatrix.com/documents/current/api/twisted.internet.interfaces.ITransport.getHost.html getHost]. {{{getPeer}}} will give you a tuple that describes the address of the system at the other end of the connection. For example:
+
+{{{
+#!python
+class MyProtocol(protocol.Protocol):
+    def connectionMade(self):
+        print "connection from", self.transport.getPeer()
+}}}
+
 === Why don't Twisted's network methods support Unicode objects as well as strings? ===
 == Perspective Broker ==
 === How can I get the reference to a client from a Perspective? ===
