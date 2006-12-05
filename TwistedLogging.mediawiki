@@ -1,0 +1,35 @@
+== Why Twisted Doesn't Use logging.py ==
+
+=== What is logging.py? ===
+
+Python 2.3 introduced a standard library module, [http://www.python.org/doc/2.3.1/lib/module-logging.html:logging].  This module provides support for dispatching and observing messages within a single process, with an emphasis on logging messages, such as for debugging information and other such things as relate to the ongoing operation of a Python process.
+
+=== Twisted Doesn't Use It ===
+
+The very first reason Twisted doesn't use it is that Twisted's logging system predates this module by some years.  This is not a sufficient reason, by itself, for Twisted not to gradually switch over to the logging module though.  The reasons Twisted does not do that are as follows:
+
+  1. The .ini configuration language used to specify the behavior of the logging module is totally gross.  Not only is it a classic example of inappropriate use of a partially conceived ad-hoc sub-language for configuration, the syntax is confusing enough to rival apache.conf.  The comments in the example file are long and mostly of the form, "This isn't X, as you think it might be, but Y, which is similar but  different in the following ways...".
+  1. Blocking.  One feature that is often touted in favor of the use of the logging module is the multiple backends it supports, most of which are networked.  These are no good because they all block; we'd need to rewrite them using Twisted anyway so we might as well implement to our own (simpler) API that can cope with errors and use Deferreds and such.  There are also a few uses of threading which would be outside the Twisted threadpool system.  (Our own threads are bad enough.  I don't want to debug thread interactions with the logging system.)
+  1. No support for structured objects.  This leads to 2 problems:
+    1. No support for system metrics.  Because you can't log structured data, there's no way to install an observer which watches all events of a particular type and aggregates numerical data associated with them as the server is running.
+    1. Hard to avoid string formatting work when unnecessary.  Ideally, systems which want to log a lot in debug mode and log only a little in production mode ought to be able to call the logging system with a format string and some description data, and then let it decide whether to do work or not.  However, with the "logging" module, you need to do most of the string formatting work up front, passing a complete message to the system, rather than a message format and some arguments to populate it with in the event that it should actually be logged. (Some people have complained to me that it actually *does* support structured data, considering that you can subclass LogRecord, but that does not look well supported and LogRecord itself is ugly.  8 attributes for every log message?  name, lvl, pathname, lineno, msg, args, exc_info ...?  That looks dangerously introspective to me.  Also, LogRecord could easily have been a dict rather than an instance; logging tends to be HIGHLY performance critical so little details like that bother me.)
+  1. Hard-coded log levels.  This is a more personal objection, but I've never seen a sensible way to distinguish between messages which should be "INFO" and which should be "DEBUG".  It seems to boil down to personal style differences, which means that in the same application you will get different levels of verbosity from the logging system depending on which programmer was coding.  Also, I dislike the workflow that a "DEBUG" loglevel encourages.  Information that you need while initially debugging an application should be *removed*; leaving it in is like (although obviously not as bad as) releasing your code
+with 'pdb.set_trace()' calls in it.  Our current logging system is simple and elegant.  It needs to be better documented, and perhaps broken down into a hierarchy to avoid spurious notifications (for slightly more efficiency).
+
+=== But Isn't Anything About Logging Good? ===
+
+One good thing that the logging module has going for it that we don't is the convention of using
+
+{{{
+#!python
+  log = logging.getLogger("MyModule")
+}}}
+
+rather than just
+
+{{{
+#!python
+  from twisted.python import log
+}}}
+
+--GlyphLefkowitz
