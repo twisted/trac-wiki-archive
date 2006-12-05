@@ -2,7 +2,7 @@
 
 There are many ways individuals and organizations can make contributions to Twisted.
  * Money (how much? what for?)
- * Provide a [wiki:NeededBuildSlaves needed buildslaves]
+ * Provide [wiki:NeededBuildSlaves needed buildslaves]
  * Perform code reviews (see below)
  * Submit bug reports (you must first be [http://twistedmatrix.com/trac/register registered])
  * Provide patches (see below)
