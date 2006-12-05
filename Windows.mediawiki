@@ -3,11 +3,12 @@
 <h1 style="color: red">Twisted on Microsoft Windows</h1>
 }}}
 
-=== The current Windows maintainers are: ===
+=== Current Windows Maintainers ===
 '''Eric (teratorn) Mangold''' (teratorn -at- twistedmatrix -dot- com) [[BR]]
 '''Timothy (!FireMoth) Fitz''' (!FireMoth -at gmail -dot- com) [[BR]]
 
 = Call for help! =
+
 The Twisted project is currently seeking resource donations to establish Windows development environments for Twisted commiters! Please direct offers and inquiries to Eric Mangold.
 
 We wish to establish a number of Windows machines accessible over the Internet via RDP (aka Remote Desktop/Terminal Services). On versions of Windows where RDP is unavailable VNC will be provided. SSH access will also be provided to Cygwin shells, and to CMD.exe shells (if possible).
@@ -15,6 +16,8 @@ We wish to establish a number of Windows machines accessible over the Internet v
 We plan to have buildbots running on *at least* Windows 2003 Server and Windows XP Professional. As resources permit, we may include buildbots on Win XP Home and Win2K (our sole Windows buildbot is currently running Win2K). The level of support given to the Win2K product family has yet to be determined. Microsoft continues to support Win2K until at least June 2010 - see http://www.microsoft.com/windows2000/server/evaluation/news/bulletins/extendedsupport.mspx
 
 A 64-bit buildslave, and developer acess to 64-bit versions of Windows would also be ideal. The exact hardware/software requirements are yet to be determined.
+
+For reference, here is a sampling of [http://twistedmatrix.com/trac/query?status=new&status=assigned&status=reopened&summary=%7Ewindows&summary=%7Ewin32&order=priority open Windows tickets].
 
 == What we have: ==
 
