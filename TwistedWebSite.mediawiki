@@ -2,24 +2,32 @@
 #!html
 <!-- Begin side bar //-->
 <div id="side_bar">
-
   <div id="download_top">
   &nbsp;
   </div>
   <div id="download">
-<!-- place holder for download image /-->
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/Twisted-2.4.0.tar.bz2">Twisted 2.4.0 tarball</a><br />
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/Twisted_NoDocs-2.4.0.win32-py2.3.exe">Twisted 2.4 Win32 installer for Python 2.3</a><br />
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/Twisted_NoDocs-2.4.0.win32-py2.4.exe">Twisted 2.4 Win32 installer for Python 2.4</a><br />
   </div>
   <div id="download_bottom">
   &nbsp;
   </div>
-
-
   <div id="donate">
-<!-- place holder for donations /-->
-  </div>
+    <h3>Contributing</h3>
+Want to help Twisted, but don't have any spare time? If you appreciate Twisted and want to help the community and future development, consider a monetary donation. This is not tax deductable. Donations will be used mostly towards payment of hosting costs.
 
-<!-- End side bar //-->
-</div>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input name="cmd" value="_s-xclick" type="hidden"><input src="https://www.paypal.com/en_US/i/btn/x-click-but21.gif" alt="Make payments with PayPal - it's fast, free and secure!" name="submit" type="image" border="0"><input name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----" type="hidden">
+    </form>
+  </div>
+  <div id="donate">
+    <h3>Twisted Book</h3>
+<a href="http://www.amazon.com/exec/obidos/ASIN/0596100329/httpitamorg-20?creative=327641&camp=14573&link_code=as1"><img align="center" src="http://www.oreilly.com/catalog/covers/twistedadn.s.gif" /></a>
+
+    <p>
+    </p>
+  </div>
+<!-- End side bar //--></div>
 }}}
 
 = What is Twisted? =
