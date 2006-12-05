@@ -1,18 +1,18 @@
 = Documentation =
 
  * Read our [wiki:FrequentlyAskedQuestions FAQ].
- * Want to use Twisted for web development? Please read [wiki:WebDevelopmentWithTwisted this page] first!
+ * Want to use Twisted for '''web development'''? Please read [wiki:WebDevelopmentWithTwisted this page] first!
  * [http://twistedmatrix.com/projects/core/documentation/howto/index.html Core Documentation] ([http://twistedmatrix.com/projects/core/documentation/howto/book.pdf view as PDF]) - the code developer guide for Twisted Core, with the famous "Finger" tutorial, details on how to use deferreds, etc.
  * Twisted Core [http://twistedmatrix.com/projects/core/documentation/man/ man pages].
  * View the current [http://twistedmatrix.com/documents/current/api/ API reference].
  * The [wiki:TwistedProjects project] pages have documentation links that are pertinent to each Twisted project. For convenience, we offer some of these links below:
-   * conch [http://twistedmatrix.com/projects/conch/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/conch/documentation/examples/ examples]
-   * lore [http://twistedmatrix.com/projects/lore/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/lore/documentation/examples/ examples]
-   * mail [http://twistedmatrix.com/projects/mail/documentation/tutorial/ tutorial] and [http://twistedmatrix.com/projects/mail/documentation/examples/ examples]
-   * names [http://twistedmatrix.com/projects/names/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/names/documentation/examples/ examples]
-   * web [http://twistedmatrix.com/projects/web/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/web/documentation/examples/ examples]
-   * web2 [http://twistedmatrix.com/projects/web2/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/web2/documentation/examples/ examples]
-   * words [http://twistedmatrix.com/projects/words/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/words/documentation/examples/ examples]
+   * '''conch''' - [http://twistedmatrix.com/projects/conch/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/conch/documentation/examples/ examples]
+   * '''lore''' - [http://twistedmatrix.com/projects/lore/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/lore/documentation/examples/ examples]
+   * '''mail''' - [http://twistedmatrix.com/projects/mail/documentation/tutorial/ tutorial] and [http://twistedmatrix.com/projects/mail/documentation/examples/ examples]
+   * '''names''' - [http://twistedmatrix.com/projects/names/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/names/documentation/examples/ examples]
+   * '''web''' - [http://twistedmatrix.com/projects/web/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/web/documentation/examples/ examples]
+   * '''web2''' - [http://twistedmatrix.com/projects/web2/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/web2/documentation/examples/ examples]
+   * '''words''' - [http://twistedmatrix.com/projects/words/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/words/documentation/examples/ examples]
 
 == Developer Docs ==
 
