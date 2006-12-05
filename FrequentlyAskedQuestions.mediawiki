@@ -160,8 +160,28 @@ class MyProtocol(protocol.Protocol):
 }}}
 
 === Why don't Twisted's network methods support Unicode objects as well as strings? ===
+
+In general, such methods (e.g. [http://twistedmatrix.com/documents/current/api/twisted.internet.abstract.FileDescriptor.html FileDescriptor]'s write) are designed to send bytes over the network. These methods use non-Unicode string objects as a container for the bytes that they send and receive.
+
+Unicode objects are not byte-based and are an abstraction used for representing strings of human readable text. In order to send Unicode strings using these methods, you should explicitly specify a byte-based encoding for them, for example: s.encode("utf-8") and explicitly decode them at the receiving end.
+
+Twisted cannot choose an encoding for you at this level: your encoding choice will be protocol specific and may need to be specified in the message you send (for example, HTTP headers include a encoding specification).
+
+For a more complete discussion of the distinction between Unicode strings and specific encodings of Unicode strings, see the following articles:
+
+    * Dan Sugalski's [http://www.sidhe.org/~dan/blog/archives/000255.html What the heck is: A string]; and
+    * Joel Spolsky's [http://www.joelonsoftware.com/articles/Unicode.html The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)].
+
 == Perspective Broker ==
+
 === How can I get the reference to a client from a Perspective? ===
+
+Firstly, the client must send a reference when it connects to the perspective broker. This can be done by passing the reference as a parameter to [http://twistedmatrix.com/documents/current/api/twisted.spread.pb.connect.html pb.connect].
+
+At the server end, you must override the [http://twistedmatrix.com/documents/current/api/twisted.spread.pb.Perspective.attach.html Perspective.attach], which is called when a client attaches to a perspective. The first argument of this method is a remote reference to the client object that was passed to [http://twistedmatrix.com/documents/current/api/twisted.spread.pb.connect.html pb.connect].
+
+Note that a single perspective can have many attached clients. For further information, see [http://twistedmatrix.com/projects/core/documentation/howto/pclients.html Managing Clients of Perspectives] HOWTO and the [http://twistedmatrix.com/documents/current/api/twisted.spread.pb.html twisted.spread.pb] API docs.
+
 == Requests and Contributing ==
 === Twisted is cool, but I need to add more functionality. ===
 === I have a patch. How do I maximize the chances the Twisted developers will include it? ===
