@@ -48,7 +48,7 @@ Like any engine, Twisted has many "moving parts." [wiki:TwistedProjects Twisted 
 
 General Information:
 
- * [wiki:Downloads Downloads] - get it!
+ * [wiki:Downloads Downloads] - Get it!
  * [wiki:Documentation] - Everything you need to know to get started.
  * List Info - Access the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted-python] and [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-web twisted-web] mailing lists.
  * [wiki:ArchivedNews News] - Read the latest news items about Twisted. 
