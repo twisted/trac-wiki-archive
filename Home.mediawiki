@@ -50,7 +50,7 @@ General Information:
 
  * [wiki:Downloads Downloads] - get it!
  * [wiki:Documentation] - Everything you need to know to get started.
- * [wiki:TwistedCommunity List Info] - Access the Twisted-Python mailing list.
+ * List Info - Access the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted-python] and [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-web twisted-web] mailing lists.
  * [wiki:ArchivedNews News] - Read the latest news items about Twisted. 
 
 More Useful Pointers:
