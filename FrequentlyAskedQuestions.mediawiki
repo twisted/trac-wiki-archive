@@ -192,6 +192,7 @@ Great! Read [wiki:Documentation our docs], and if you're feeling generous, contr
 
 There are several steps you can take to increase the chances of inclusion into Twisted:
 
+ 1. Be sure you have read and are familiar with the information and linked material [wiki:TwistedDevelopment here] and [wiki:ContributingToTwistedLabs here].
  1. [http://twistedmatrix.com/trac/newticket Open a ticket] for the feature you wish to add.
  1. Get feedback from others on your ideas and thoughts.
  1. Write {{{trial}}} tests for your code!
@@ -203,10 +204,33 @@ There are several steps you can take to increase the chances of inclusion into T
 [http://twistedmatrix.com/trac/newticket Open a ticket], and if it's an urgent or important issue you may want to tell the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python mailing list] about the issue you added.
 
 === My company would love to use Twisted, but it's missing feature X, can you implement it? ===
+
+You have 3 options:
+
+ 1. Pay one of the Twisted developers to implement the feature.
+ 1. Implement the feature yourself.
+ 1. Add a feature request to our bug tracker. We will try to implement the feature, but there are no guarantees when and if this will happen.
+
 == Documentation ==
+
 === Twisted really needs documentation for X, Y or Z - how come it's not documented?. ===
+
+Twisted's documentation is a work in progress, and one that we would appreciate assistance with. If you notice a gap or flaw in the documentation, please file a bug in the [http://twistedmatrix.com/trac/report Twisted issue tracker] and mark it as having topic 'documentation'. Patches appreciated. Unit tests even more so.
+
 === Wow the Twisted documentation is nice! I want my docs to look like that too! ===
+
+Now you can, with [wiki:TwistedLore Lore].
+
 == Communicating with us ==
+
 === There's a bug in Twisted. Where do I report it? ===
+
+Unless it is a show-stopper bug, we usually won't roll out a new release with a fix it if it's already fixed in [source:trunk Subversion], so check if it is fixed there. If it is not fixed in Subversion, you should add it to the [http://twistedmatrix.com/trac/newticket issue tracker], including pertinent information about the bug (hopefully as much information needed to reproduce it: OS, Subversion versions of any important files, Python version, code you wrote or things you did to trigger the bug, etc. If the bug appears to be severe, you should also raise it on the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python mailing list], with a pointer to the issue already filed in the bug tracker.
+
 === Where do I go for help? ===
+
+Ask for help [wiki:TwistedCommunity where the Twisted team hangs out].
+
 === How do I e-mail a Twisted developer? ===
+
+First, note that in many cases this is the wrong thing to do: if you have a question about a part of Twisted, it's usually better to e-mail the mailing list. However, the preferred e-mail addresses for all Twisted developers are listed in the file CREDITS in the Subversion repository.
