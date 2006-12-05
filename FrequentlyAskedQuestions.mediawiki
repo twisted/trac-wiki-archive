@@ -183,9 +183,25 @@ At the server end, you must override the [http://twistedmatrix.com/documents/cur
 Note that a single perspective can have many attached clients. For further information, see [http://twistedmatrix.com/projects/core/documentation/howto/pclients.html Managing Clients of Perspectives] HOWTO and the [http://twistedmatrix.com/documents/current/api/twisted.spread.pb.html twisted.spread.pb] API docs.
 
 == Requests and Contributing ==
+
 === Twisted is cool, but I need to add more functionality. ===
+
+Great! Read [wiki:Documentation our docs], and if you're feeling generous, contribute patches.
+
 === I have a patch. How do I maximize the chances the Twisted developers will include it? ===
+
+There are several steps you can take to increase the chances of inclusion into Twisted:
+
+ 1. [http://twistedmatrix.com/trac/newticket Open a ticket] for the feature you wish to add.
+ 1. Get feedback from others on your ideas and thoughts.
+ 1. Write {{{trial}}} tests for your code!
+ 1. When providing a patch, use unified {{{diff}}}. Either use {{{svn diff}}} or, better yet, make a clean checkout and use {{{diff -urN}}} between them. Make sure your patch applies cleanly. 
+ 1. If you post the patch to the mailing list, make sure it is inlined and without any word wrapping.
+
 === And to whom do I send it? ===
+
+[http://twistedmatrix.com/trac/newticket Open a ticket], and if it's an urgent or important issue you may want to tell the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python mailing list] about the issue you added.
+
 === My company would love to use Twisted, but it's missing feature X, can you implement it? ===
 == Documentation ==
 === Twisted really needs documentation for X, Y or Z - how come it's not documented?. ===
