@@ -36,10 +36,15 @@ The post-development, pre-commit process Twisted has adopted is this:
  
  * The trunk commit must include the name of the author or authors, reviewer or reviews, and the tickets which are being resolved by the changes being committed.  The suggested format for this is:
 {{{
-    Author: <names>
-    Reviewer: <names>
-    Fixes #<ticket number>
- }}}
+#!html
+<pre class="wiki">
+Merge &lt;branch name&gt;<br />
+Author: &lt;names&gt;
+Reviewer: &lt;names&gt;
+Fixes #&lt;ticket number&gt;<br />
+&lt;description of changes&gt;
+</pre>
+}}}
 
  Only the "Fixes" line actually *needs* to conform to this (since it is automatically processed in order to update the ticket's state in the tracker). The commit message should also describe the change being made in a modest amount of detail.  This should be detailed enough for someone doing a release to formulate a changelog entry.
  
