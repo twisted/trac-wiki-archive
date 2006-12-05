@@ -13,10 +13,18 @@
    * web [http://twistedmatrix.com/projects/web/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/web/documentation/examples/ examples]
    * web2 [http://twistedmatrix.com/projects/web2/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/web2/documentation/examples/ examples]
    * words [http://twistedmatrix.com/projects/words/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/words/documentation/examples/ examples]
- * Search the [http://www.google.com/search?q=site%3Atwistedmatrix.com+inurl%3Apipermail%2Ftwisted-python&btnG=Search twisted-python] or [http://www.google.com/search?q=site%3Atwistedmatrix.com+inurl%3Apipermail%2Ftwisted-web&btnG=Search twisted-web] mail list archives.
+
+== Developer Docs ==
+
  * Want to contribute? We have a page dedicated to [wiki:ContributingToTwistedLabs documentation for contributors].
+ * Here are some notes about [wiki:TwistedDevelopment Twisted Development].
+
+== Mail Lists ==
+
+ * Search the [http://www.google.com/search?q=site%3Atwistedmatrix.com+inurl%3Apipermail%2Ftwisted-python&btnG=Search twisted-python] or [http://www.google.com/search?q=site%3Atwistedmatrix.com+inurl%3Apipermail%2Ftwisted-web&btnG=Search twisted-web] mail list archives.
 
 == Books == 
 
  * [http://www.amazon.com/exec/obidos/ASIN/0596100329/httpitamorg-20?creative=327641&camp=14573&link_code=as1 Twisted Network Programming Essentials] by Abe Fetting, published by O'Reilly.
  * [http://www.amazon.com/exec/obidos/ASIN/1590593715/httpitamorg-20?creative=327641&camp=14573&link_code=as1 Foundations of Python Network Programming] also covers the use of Twisted to some extent.
+
