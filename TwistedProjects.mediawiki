@@ -48,18 +48,20 @@
   Process management, including an inetd server.[[BR]]
   Maintainer: Andrew "spiv" Bennetts <spiv@twistedmatrix.com>
 
+== Unmaintained Projects ==
+
   '''[wiki:TwistedFlow Twisted Flow]'''::
-  Generator based asynchronous result flows (unmaintained).[[BR]]
+  Generator based asynchronous result flows.[[BR]]
   Former maintainer: Clark Evans <cce@twistedmatrix.com>
 
   '''[wiki:TwistedPair Twisted Pair]'''::
-  Low-level stuff (unmaintained).[[BR]]
+  Low-level stuff.[[BR]]
   Former maintainer: Tommi "Tv" Virtanen <tv@twistedmatrix.com>
-
-== Projects for Other Languages ==
 
   '''[http://java.twistedmatrix.com/eio/ EIO]'''::
   High-level java.nio wrapper networking framework
+
+== Projects for Other Languages ==
 
   '''[http://itamarst.org/software/twistedjava/ PB for Java]'''::
   Perspective Broker remote object protocol implementation in Java
