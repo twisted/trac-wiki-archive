@@ -73,7 +73,7 @@ Three commands and I had an nntp server with a single newsgroup that was feature
 
 I was writing [http://mc-foo.sf.net/ MC Foo], a networked multiuser learning Ogg/MP3 jukebox application, in C, and was frustrated about the amount of time it took to debug. I decided I should use a higher-level language. I liked how Python felt, but had never written a single line of Python. I decided it was time to learn. Five hours later, the core of my application was rewritten in Python, using Twisted for main loop and networking. Another five hours later, I had replaced my oversimplistic line-based protocols with PB, the Twisted RPC protocol. Twisted has also enabled me to easily add features such as implicit persistence into MC Foo. And it even has nice GUI integration, allowing one to do sane networking in a GUI application.
 
-Since then, I have created [http://ldaptor.bkbits.net/ Ldaptor], a pure-Python LDAP library, utilities and a web interface, as a data structure library, Twisted protocol and Twisted applications. The way how the web interface plugs in with the LDAP protocol handling still manages to amaze me.
+Since then, I have created [http://www.inoi.fi/open/trac/ldaptor/ Ldaptor], a pure-Python LDAP library, utilities and a web interface, as a data structure library, Twisted protocol and Twisted applications. The way how the web interface plugs in with the LDAP protocol handling still manages to amaze me.
 
 The developer community behind Twisted is just great, and the IRC channel is a great source of information. All in all, I feel Twisted is one of the most interesting projects on the net.
 
