@@ -23,8 +23,18 @@ Without further ado we would like the recognize the following individuals and or
 
  * '''Landon Fuller''' provides our FreeBSD buildslave.
 
+ * '''Timothy Fitz''' provides a Windows 2003 buildslave.
+
 === Other hardware and hosting: ===
  * '''Vitorio Miliano''' provides software licenses as well as hosting for a Windows XP development machine.
 
 === Money: ===
  * '''Bryan D. Thomas''' graciously donated a sum of money to help our Windows efforts. Thanks Bryan!
+
+ * '''Richard Smith''' donated money for the Windows buildslave. Thanks Richard!
+
+ * '''David Reid''' donated money for the Windows buildslave. Thanks David!
+
+ * '''Dan Heidebrecht''' donated money for the Windows buildslave. Thanks Dan!
+
+ * '''Terry Jones''' donated money for the Windows buildslave. Thanks Terry!
