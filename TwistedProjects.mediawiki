@@ -66,6 +66,9 @@
   '''[http://itamarst.org/software/twistedjava/ PB for Java]'''::
   Perspective Broker remote object protocol implementation in Java
 
+  '''[http://itamarst.org/software/ Fusion]'''::
+  Implement Twisted protocols using C++ instead of Python
+
 == Other maintainers ==
 
   '''Release management'''::
