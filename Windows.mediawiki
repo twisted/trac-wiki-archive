@@ -5,66 +5,30 @@
 
 === Current Windows Maintainers ===
 '''Eric (teratorn) Mangold''' (teratorn -at- twistedmatrix -dot- com) [[BR]]
-'''Timothy (!FireMoth) Fitz''' (!FireMoth -at gmail -dot- com) [[BR]]
+'''Timothy (!FireMoth) Fitz''' (!FireMoth -at- gmail -dot- com) [[BR]]
 
-= Call for help! =
+= Help us resolve Windows issues! =
 
-The Twisted project is currently seeking resource donations to establish Windows development environments for Twisted commiters! Please direct offers and inquiries to Eric Mangold.
+Here are the [http://twistedmatrix.com/trac/query?status=new&status=assigned&status=reopened&summary=%7Ewindows&summary=%7Ewin32&order=priority open Windows tickets]. If you have the skills please grab an issue and submit a patch! Just because an issue is assign doesn't mean that anyone is actively working on it. Contact the owner if you would like to help.
 
-We wish to establish a number of Windows machines accessible over the Internet via RDP (aka Remote Desktop/Terminal Services). On versions of Windows where RDP is unavailable VNC will be provided. SSH access will also be provided to Cygwin shells, and to CMD.exe shells (if possible).
+If you need help you may contact others invovled with the ticket, or the maintainers listed above, or the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted mailing list]. Have fun!
 
-We plan to have buildbots running on *at least* Windows 2003 Server and Windows XP Professional. As resources permit, we may include buildbots on Win XP Home and Win2K (our sole Windows buildbot is currently running Win2K). The level of support given to the Win2K product family has yet to be determined. Microsoft continues to support Win2K until at least June 2010 - see http://www.microsoft.com/windows2000/server/evaluation/news/bulletins/extendedsupport.mspx
+= Donate resources! =
 
-A 64-bit buildslave, and developer acess to 64-bit versions of Windows would also be ideal. The exact hardware/software requirements are yet to be determined.
+The Twisted project is currently seeking resource donations to improve our level of Windows support! Please direct offers and inquiries to Eric Mangold.
 
-For reference, here is a sampling of [http://twistedmatrix.com/trac/query?status=new&status=assigned&status=reopened&summary=%7Ewindows&summary=%7Ewin32&order=priority open Windows tickets].
+ * A machine to run Windows Visa.
+ * A Windows Visa license.
 
-== What we have: ==
+ * A 64-bit machine to run either Visa or XP Pro.
+ * A 64-bit Visa or XP Pro license.
 
-We currently have a single Win2K Pro buildslave generously hosted by Mike Taylor.
-
-== What we need: ==
-
-=== Hardware: ===
- * A machine to run Win2K3 Server. This will be the primary Windows development machine for the Twisted community, primarily because it allows multiple concurrent RDP sessions (XP Pro allows at most two). This will hopefully be a fast machine with a goodly amout of RAM and lots of HD space. 2.0Ghz+ would be nice. 1GB+ RAM would be nice. We may not be able to have a seperate 2K3 buildbot slave, so this machine may need to serve that purpose as well.
-
- * A machine to run XP Professional.
-
- * A machine to run Windows 2000.
-
-=== Hosting: ===
-We need someone with a broadband Internet connection to provide hosting for one or more of the above machines. In order to avoid shipping boxes around, it would be ideal if the person providing the hardware could also arrange the hosting. This may not be possible, and so we will consider shipping arrangements as the need arises.
-
-We would like to avoid residential broadband if possible. However, as dedicated Internet connections are hard to come by, we will be gracious for any hosting offers that we receive. In order to provide a responsive desktop/shell environment dedicated bandwidth would be ideal (or at least enough bandwidth where it doesn't matter). Latency is also a consideration. A person downloading a file on residential broadband can easily saturate the line brinding remote desktop/shell sessions to a crawl.
+ * Visual Studio license (2005 or 2003)
+ 
+We need someone with a broadband Internet connection to provide hosting for one or more of the above machines. In order to avoid shipping boxes around, it would be ideal if the person providing the hardware could also arrange the hosting. This may not be possible, and so we will consider shipping arrangements as the need arises. Dedicated/colo bandwidth preferred (of course), but please don't hesitate to offer residential broadband (most of our buildslaves run on residential lines, after all)
 
 UPS units would be a nice touch, but not required unless your power is very unreliable.
 
-=== Software Licenses - in order of priority: ===
- * Windows Server 2003
- * Windows XP Pro
- * Visual Studio 2003
- * Visual Studio 2005
+Virtual Machines (VMWare, etc) are very much welcome!
 
-Optional, if we can find hardware/hosting for them:
- * Windows XP Home
- * Windows 2000 Professional, Server, Advanced Server, or Datacenter Server. A Server version would be nice for RDP support.
 
-=== Specifics about Windows Server 2003 licensing ===
-
-First, you need the OS license to install Windows Server 2003 on a machine.
-
-Second, since people will be connecting to the server either through SSH, Remote Desktop, etc., each user needs a separate license.  These are '''Client Access Licenses'''.  When you install Server 2003, you have to choose how your CALs will be applied.
-
-''Per Server'' means you have one license for each simultaneous connection.  If there are fifteen users who need SSH access to the machine, but only five will ever be connected at once, you can get five CALs and be done with it.  In ''Per Server'' licensing mode, users '''cannot''' connect via Terminal Server (Remote Desktop, RDP).
-
-''Per Device or Per User'' means you have one license for each device-agnostic user or each user-agnostic device.  If there are fifteen users who need SSH and/or RDP access to the machine, but only five will ever be connected at once, you still need fifteen CALs.  If five of them share one computer and only one of those sharing users will be logged on at once, you can get 1 Device CAL for those five, and 10 User CALs for everyone else.  ''Per Device or Per User'' licensing mode is the only licensing mode that allows Windows sessions and use of Terminal Server.
-
-You can change your licensing mode a single time post-install.
-
-If you are in ''Per Device or Per User'' licensing mode and you want to allow users to connect via Remote Desktop, each CAL user or device connecting via Terminal Server requires a '''Terminal Server Client Access License''' in addition to the CAL license.
-
-As an alternative, since Twisted as an "organization" has no "employees, temporary personnel, or independent contractors on assignment at the worksite of the organization," and people logging into Server 2003 over Terminal Server are not "customers to whom organization provides hosted services," instead of getting CALs or CALs + TS CALs, you can get an '''External Connector License''' or '''Terminal Server External Connector License''' that are blanket licenses for unlimited users/devices/connections.
-
-Per the Microsoft Windows Server 2003 R2 retail licensing page (all prices in USD), Server 2003 with five CALs is $1000, or with ten CALs it is $1200.  If SSH is your only way in, that may suffice.  If you will be logging into the GUI via Terminal Server, then you additionally need at least five TS CALs, which are $750 for five; there's no individual pricing or ten-pack.  So that's either $1750 or $2500 or five or ten TS users.
-
-Alternately, it's the $1000 Server 2003 license, plus either $2000 for the ECL (which would be SSH only) or $8000 for the TS ECL (which would allow Remote Desktop sessions). 
