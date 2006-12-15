@@ -9,9 +9,9 @@
 
 = Help us resolve Windows issues! =
 
-Here are the [http://twistedmatrix.com/trac/query?status=new&status=assigned&status=reopened&summary=%7Ewindows&summary=%7Ewin32&order=priority open Windows tickets]. If you have the skills please grab an issue and submit a patch! Just because an issue is assign doesn't mean that anyone is actively working on it. Contact the owner if you would like to help.
+Here are the [http://twistedmatrix.com/trac/query?status=new&status=assigned&status=reopened&summary=%7Ewindows&summary=%7Ewin32&order=priority open Windows tickets]. If you have the skills please grab an issue and submit a patch! Just because an issue is assigned doesn't mean that anyone is actively working on it. Contact the owner if you would like to help.
 
-If you need help you may contact others invovled with the ticket, or the maintainers listed above, or the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted mailing list]. Have fun!
+If you need help you may contact others involved with the ticket, or the maintainers listed above, or the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted mailing list]. Have fun!
 
 = Donate resources! =
 
@@ -30,5 +30,3 @@ We need someone with a broadband Internet connection to provide hosting for one 
 UPS units would be a nice touch, but not required unless your power is very unreliable.
 
 Virtual Machines (VMWare, etc) are very much welcome!
-
-
