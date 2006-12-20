@@ -3,9 +3,7 @@
 <h1 style="color: red">Twisted Project Sponsors</h1>
 }}}
 
-First and foremost, the most important sponsors of Twisted are the developers who give their time to make it the greatest networking framework in the world. Twisted isn't best-of-class - it's in a class all its own. Without the massive amout of time and effort put forth by these people, there would be no project worth sponsoring.
-
-Without further ado we would like the recognize the following individuals and organisations for their sponsorship of Twisted's development via donations of money, hardware, software licenses, server hosting, and so on.
+We would like the thank the following individuals and organizations for their sponsorship of Twisted's development via donations of money, hardware, software licenses, server hosting, and so on. We would also, of course, like to thank the developers who put time and effort into developing it and the many users who submit bugs and feature requests.
 
 === Hosting ===
 
