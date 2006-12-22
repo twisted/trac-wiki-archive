@@ -1,6 +1,6 @@
 = QT integration =
 Twisted main loop can be integrated with the QT main loop in the same process. Due to licensing concerns (Twisted is MIT, QT is GPL), the code to do this cannot be included in Twisted itself.
 
-= Download =
- * [http://twistedmatrix.com/users/pahan/qt_files/qtreactor.py top-level module] for the QT reactor. Place this in site-packages somewhere.
- * [http://twistedmatrix.com/users/pahan/qt_files/qtdemo.py QT GUI demo]
+= Downloads =
+ * [http://twistedmatrix.com/users/pahan/qt_files/qtreactor.tar.gz module and plugin] for the QT reactor. Unpack this into PYTHONPATH somewhere. Import as "qtreactor" or pass "-r qt3" to twistd.
+ * [http://twistedmatrix.com/users/pahan/qt_file/qtdemo.py QT reactor demo]
