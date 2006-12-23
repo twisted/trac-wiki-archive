@@ -3,4 +3,3 @@ Twisted main loop can be integrated with the QT main loop in the same process. D
 
 = Downloads =
  * [http://twistedmatrix.com/users/pahan/qt_files/qtreactor.tar.gz module and plugin] for the QT reactor. Unpack this into PYTHONPATH somewhere. Import as "qtreactor" or pass "-r qt3" to twistd.
- * [http://twistedmatrix.com/users/pahan/qt_file/qtdemo.py QT reactor demo]
