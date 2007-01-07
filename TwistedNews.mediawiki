@@ -7,10 +7,8 @@ Twisted News provides a very basic NNTP server, as well as an NNTP client protoc
 Twisted News is available under the MIT Free Software licence. 
 
 = Download =
- * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-news-0.2.0/twisted/news/topfiles/NEWS?format=raw Release notes] for Twisted News 0.2.0
- * Stable: Twisted News is part of Twisted. Tarballs and Windows installers are at the TwistedProject page.
- * Trunk: svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk Twisted
- * [http://tmrc.mit.edu/mirror/twisted/News/0.2/TwistedNews-0.2.0.tar.bz2 Minimal Tarball]. This will require downloading of additional dependencies. We encourage you to use the downloads at TwistedProject, instead of this minimal download.
+
+See the [wiki:Downloads] page.
 
 = Documentation =
 
