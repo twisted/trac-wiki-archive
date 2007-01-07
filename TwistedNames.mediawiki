@@ -7,10 +7,8 @@ Twisted Names is both a domain name server as well as a client resolver library.
 Twisted Names is available under the MIT Free Software licence. 
 
 = Download =
- * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-names-0.3.0/twisted/names/topfiles/NEWS?format=raw Release notes] for Twisted Names 0.3.0
- * Stable: Twisted Names is part of Twisted. Tarballs and Windows installers are at the TwistedProject page.
- * Trunk: svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk Twisted
- * [http://tmrc.mit.edu/mirror/twisted/Names/0.3/TwistedNames-0.3.0.tar.bz2 Minimal Tarball]. This will require downloading of additional dependencies. We encourage you to use the downloads at TwistedProject, instead of this minimal download.
+
+See the [wiki:Downloads] page.
 
 = Documentation =
 
