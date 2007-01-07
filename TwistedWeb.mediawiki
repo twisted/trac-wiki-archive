@@ -9,10 +9,8 @@ Twisted web is a web server, and also provides basic HTTP client support.
 Twisted Web is available under the MIT Free Software licence.
 
 = Download =
- * [http://twistedmatrix.com/trac/browser/tags/releases/twisted-web-0.6.0/twisted/web/topfiles/NEWS?format=raw Release notes] for Twisted Web 0.6.0
- * Stable: Twisted Web is part of Twisted. Tarballs and Windows installers are at the TwistedProject page.
- * Trunk: svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk Twisted
- * [http://tmrc.mit.edu/mirror/twisted/Web/0.6/TwistedWeb-0.6.0.tar.bz2 Minimal Tarball]. This will require downloading of additional dependencies. We encourage you to use the downloads at TwistedProject, instead of this minimal download.
+
+See the [wiki:Downloads] page.
 
 = Documentation =
 
