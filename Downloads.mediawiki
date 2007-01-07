@@ -1,13 +1,19 @@
 = Downloads =
 
-== Source and Installers ==
+For more information about Twisted, including release notes, please see the [wiki:TwistedProject Twisted project page]. You can get older releases from our [http://tmrc.mit.edu/mirror/twisted/ download site].
 
-You can download:
- * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/Twisted-2.4.0.tar.bz2 Twisted 2.4.0 tarball]
+== Ubuntu and Debian ==
+
+ For now, Twisted Matrix Laboratories does not make an apt repository available. However, both Ubuntu and Debian ship Twisted in their main repositories.
+
+== Windows ==
+
  * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/Twisted_NoDocs-2.4.0.win32-py2.3.exe Twisted 2.4 Win32 installer for Python 2.3]
  * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/Twisted_NoDocs-2.4.0.win32-py2.4.exe Twisted 2.4 Win32 installer for Python 2.4]
 
-For more information about Twisted, including release notes, please see the [wiki:TwistedProject Twisted project page]. You can get older releases from our [http://tmrc.mit.edu/mirror/twisted/ download site].
+== Source Tarball ==
+
+ * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/Twisted-2.4.0.tar.bz2 Twisted 2.4.0 tarball]
 
 == View on the Web ==
 
