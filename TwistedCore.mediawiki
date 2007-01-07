@@ -20,8 +20,7 @@ Twisted is available under the [http://www.opensource.org/licenses/mit-license.p
 
 = Download =
 
-You probably want to [wiki:TwistedProject download all of Twisted].  If you are sure you need a more recent version of Twisted Core only, or you are trying to conserve disk space for a small installation,
-[http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/TwistedCore-2.4.0.tar.bz2 download the latest Twisted Core here.].
+See the [wiki:Downloads] page.
 
 = Documentation =
 
