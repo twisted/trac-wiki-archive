@@ -27,7 +27,8 @@ Look at the output in {{{documents/current/newapi}}} and make sure it looks alri
 
 {{{
 #!sh
-% mv documents/current/api documents/current/<old version number>
+% mkdir documents/<old version number>
+% mv documents/current/api documents/<old version number>/
 % mv documents/current/newapi documents/current/api
 }}}
 
