@@ -7,6 +7,7 @@
   </div>
   <div id="download">
     <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/Twisted-2.5.0.tar.bz2">Twisted 2.5.0 tarball</a><br />
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/Twisted_NoDocs-2.5.0.win32-py2.3.exe">Twisted 2.5 Win32 installer for Python 2.3</a><br />
     <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/Twisted_NoDocs-2.5.0.win32-py2.4.exe">Twisted 2.5 Win32 installer for Python 2.4</a><br />
     <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/Twisted_NoDocs-2.5.0.win32-py2.5.exe">Twisted 2.5 Win32 installer for Python 2.5</a><br />
   </div>
