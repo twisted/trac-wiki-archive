@@ -30,13 +30,13 @@ To checkout code from the repository, use:
 
 You probably don't want these unless you have special considerations:
 
- * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/TwistedCore-2.4.0.tar.bz2 Twisted Core] - 2.4.0 ([source:/tags/releases/twisted-core-2.4.0/twisted/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Conch/0.7/TwistedConch-0.7.0.tar.bz2 Twisted Conch] - 0.7.0 ([source:/tags/releases/twisted-conch-0.7.0/twisted/conch/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Web/0.6/TwistedWeb-0.6.0.tar.bz2 Twisted Web] - 0.6.0 ([source:/tags/releases/twisted-web-0.6.0/twisted/web/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/TwistedCore-2.5.0.tar.bz2 Twisted Core] - 2.5.0 ([source:/tags/releases/twisted-core-2.5.0/twisted/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Conch/0.8/TwistedConch-0.8.0.tar.bz2 Twisted Conch] - 0.8.0 ([source:/tags/releases/twisted-conch-0.8.0/twisted/conch/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Web/0.7/TwistedWeb-0.7.0.tar.bz2 Twisted Web] - 0.7.0 ([source:/tags/releases/twisted-web-0.7.0/twisted/web/topfiles/NEWS?format=raw Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Web2/TwistedWeb2-0.2.0.tar.bz2 Twisted Web2] - 0.2.0 ([source:/tags/releases/twisted-web2-0.2.0/twisted/web2/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Mail/0.3/TwistedMail-0.3.0.tar.bz2 Twisted Mail] - 0.3.0 ([source:/tags/releases/twisted-mail-0.3.0/twisted/mail/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Names/0.3/TwistedNames-0.3.0.tar.bz2 Twisted Names] - 0.3.0 ([source:/tags/releases/twisted-names-0.3.0/twisted/names/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/News/0.2/TwistedNews-0.2.0.tar.bz2 Twisted News] - 0.2.0 ([source:/tags/releases/twisted-news-0.2.0/twisted/news/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Words/0.4/TwistedWords-0.4.0.tar.bz2 Twisted Words] - 0.4.0 ([source:/tags/releases/twisted-words-0.4.0/twisted/words/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Lore/0.2/TwistedLore-0.2.0.tar.bz2 Twisted Lore] - 0.2.0 ([source:/tags/releases/twisted-lore-0.2.0/twisted/lore/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Mail/0.4/TwistedMail-0.4.0.tar.bz2 Twisted Mail] - 0.4.0 ([source:/tags/releases/twisted-mail-0.4.0/twisted/mail/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Names/0.4/TwistedNames-0.4.0.tar.bz2 Twisted Names] - 0.4.0 ([source:/tags/releases/twisted-names-0.4.0/twisted/names/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/News/0.3/TwistedNews-0.3.0.tar.bz2 Twisted News] - 0.3.0 ([source:/tags/releases/twisted-news-0.3.0/twisted/news/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Words/0.5/TwistedWords-0.5.0.tar.bz2 Twisted Words] - 0.5.0 ([source:/tags/releases/twisted-words-0.5.0/twisted/words/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Lore/0.3/TwistedLore-0.3.0.tar.bz2 Twisted Lore] - 0.3.0 ([source:/tags/releases/twisted-lore-0.3.0/twisted/lore/topfiles/NEWS?format=raw Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Runner/0.2/TwistedRunner-0.2.0.tar.bz2 Twisted Runner] - 0.2.0 ([source:/tags/releases/twisted-runner-0.2.0/twisted/runner/topfiles/NEWS?format=raw Release notes])
