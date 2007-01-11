@@ -1,5 +1,9 @@
 = Twistery In the News =
 
+== Twisted 2.4.0 (2007-01-11) ==
+
+Major Twisted release! Read the [http://twistedmatrix.com/pipermail/twisted-python/2007-January/014589.html release announcement] and click on things on the [wiki:Downloads] page.
+
 == New Twisted Site Goes Live! (2006-12-04) ==
 
 Thanks to the efforts of the Twisted Team and the visual design and CSS skills of [http://huw.ugbox.net/blog/home.php Huw Wilkins], we have rolled out our latest version of the Twisted Matrix Labs web site.
