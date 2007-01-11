@@ -1,6 +1,6 @@
 = Twistery In the News =
 
-== Twisted 2.4.0 (2007-01-11) ==
+== Twisted 2.5.0 (2007-01-11) ==
 
 Major Twisted release! Read the [http://twistedmatrix.com/pipermail/twisted-python/2007-January/014589.html release announcement] and click on things on the [wiki:Downloads] page.
 
