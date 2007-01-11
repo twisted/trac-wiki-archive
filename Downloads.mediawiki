@@ -29,7 +29,7 @@ To checkout code from the repository, use:
 
 == Individual Project Tarballs ==
 
-You probably don't want these unless you have special considerations:
+You probably don't want these unless you have special considerations (note: TwistedWeb2 listed here is not in the integrated tarball mentioned above):
 
  * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/TwistedCore-2.5.0.tar.bz2 Twisted Core] - 2.5.0 ([source:/tags/releases/twisted-core-2.5.0/twisted/topfiles/NEWS?format=raw Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Conch/0.8/TwistedConch-0.8.0.tar.bz2 Twisted Conch] - 0.8.0 ([source:/tags/releases/twisted-conch-0.8.0/twisted/conch/topfiles/NEWS?format=raw Release notes])
