@@ -46,7 +46,7 @@ Fixes #&lt;ticket number&gt;<br />
 </pre>
 }}}
 
- Only the "Fixes" line actually *needs* to conform to this (since it is automatically processed in order to update the ticket's state in the tracker). The commit message should also describe the change being made in a modest amount of detail.  This should be detailed enough for someone doing a release to formulate a changelog entry.
+ Only the "Fixes" line actually *needs* to conform to this (since it is automatically processed in order to update the ticket's state in the tracker). Multiple fixes lines will close multiple tickets. The commit message should also describe the change being made in a modest amount of detail.  This should be detailed enough for someone doing a release to formulate a changelog entry.
  
  * If a change set somehow introduces a test suite regression or is otherwise found to be undesirable, it is to be reverted.  Any developer may revert a commit which introduces a test suite regression on a supported platform.
 
