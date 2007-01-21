@@ -17,11 +17,11 @@ If you need help you may contact others involved with the ticket, or the maintai
 
 The Twisted project is currently seeking resource donations to improve our level of Windows support! Please direct offers and inquiries to Eric Mangold.
 
- * A machine to run Windows Visa.
- * A Windows Visa license.
+ * A machine to run Windows Vista.
+ * A Windows Vista license.
 
- * A 64-bit machine to run either Visa or XP Pro.
- * A 64-bit Visa or XP Pro license.
+ * A 64-bit machine to run either Vista or XP Pro.
+ * A 64-bit Vista or XP Pro license.
 
  * Visual Studio license (2005 or 2003)
  
