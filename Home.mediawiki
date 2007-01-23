@@ -53,9 +53,9 @@ Like any engine, Twisted has many "moving parts." [wiki:TwistedProjects Twisted 
 }}}
 '''The Twisted Show'''
 
-[wiki:TwistedMatrixLaboratories The Labs] is currently exploring the possibility of producing semi-regular podcasts that explore the use of the Twisted networking framework within various businesses and projects around the world. We've been getting great feedback and we want to be able to share this with a wider audience. 
+[wiki:TwistedMatrixLaboratories The Labs] is currently exploring the possibility of producing semi-regular podcasts that discuss the use of the Twisted networking framework within various businesses and projects around the world. We've been getting great feedback and we want to be able to share this with a wider audience. 
 
-Initially, we will be presenting transcripts of conversations with these folks. As part of the editing process, we will include contextual links to related material (both Twisted-centric as well as other, off-site content). Additionally, we will present "bonus" material at the end of each interview transcript (or podcast) that are intended to encourage curious readers in further play and exploration.
+Initially, we will be presenting transcripts of conversations with these folks. As part of the editing process, we will include contextual links to related material (both Twisted-centric as well as other, off-site content). Additionally, we will present "bonus" material at the end of each interview transcript (or podcast) that is intended to encourage curious readers in further play and exploration.
 
 Join us as we explore how others are uniquely deploying Twisted, while making bazillions of dollars and friends: 
 
