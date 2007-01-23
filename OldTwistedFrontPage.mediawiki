@@ -93,7 +93,3 @@ Twisted 2.2.0 is out. See TwistedProject.
 
 
 [wiki:ArchivedNews more news]
-
-
-[wiki:800a60346a011cf8274a671e7b10b88e]
-
