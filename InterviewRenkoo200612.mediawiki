@@ -1,0 +1,130 @@
+= Interview with Renkoo =
+
+{{{
+#!html
+<a href="http://renkoo.com">
+<img src="http://renkoo.com/images/renkooLogo.png" align="right" style="padding:1.5em;" border="0" />
+</a>
+}}}
+This is a pilot of a new feature we're exploring at Twisted Matrix Labs: interviews with businesses that use and/or develop twisted applications. The motivation for this is to provide practical, real-world examples of the kinds of things you can do with Twisted as well as exposing the more human side of the equation.
+
+== About Renkoo ==
+
+Prior to the interview, I had a few quick conversations with Adam Rifkin about [http://renkoo.com Renkoo] and their service offering. Afterwards, I was invited to try out Renkoo, and I must say that I was delighted with it. I find that nearly all of the gatherings I have with my friends start as ill-defined events that slowly (and often painfully) evolve into events with exact space-time coordinates. Renkoo looks like the kind of app that could soothe or eliminate that pain.
+
+== The Players ==
+
+This interview was conducted over the phone with Adam Rifkin and Kevin Murphy of Renkoo in Silicon Valley, and me (Duncan !McGreggor) at the base of the Rocky Mountains in Colorado.
+
+At the end of the interview are pasted some links of interest. Enjoy!
+
+----
+
+'''Q: Let's start at the beginning: how did you guys first get into python?'''
+
+'''Adam''': Oh, wow... let's see. Java wasn't cutting it. We were looking for another language that we could use on the backend. And honestly, python was ''really'' easy to learn.
+
+'''Kevin''': I hadn't done a lot of python before I started working on [http://sourceforge.net/projects/mod-pubsub mod-pubsub]. My biggest exposure prior to that had been working with [http://www.gnu.org/software/mailman/ mailman]. I'd done a little bit of extending and tweaking over time and it proved to be very easy to work with. Once I started working on mod-pubsub, I just jumped in heard first, learning python and Twisted.
+
+'''Q: mod-pubsub being one of the technical cornerstones of the Renkoo event planning service...'''
+
+'''Adam''': As a company, we haven't been around that long, but we've been using [http://twistedmatrix.com/trac/ Twisted] way before there was a company. And yes, mod-pubsub is our open source project that helps power Renkoo. mod-pubsub's first incarnation was actually as a CGI. When we converted to be a stand-alone server, we went with python instead of Java and actually learned the language as we wrote the software.
+
+'''Kevin''': As far as twisted goes, I found the learning curve to be really, really steep. But once you get acclimated, the power you have is undeniable. What's more, you can write these crazy, concurrent applications and then go back six months later and actually see the execution flow easily and know what everything in the code is actually doing. And none of those locking headaches you get when writing threaded programs.
+
+'''Q: So was your first exposure to Twisted with mod-pubsub?'''
+
+'''Kevin''': That was my first exposure - but I'm newer to Renkoo and mod-pubsub.
+
+'''Adam''': We'd actually been looking at Twisted very early on. You know, the reason that we actually got the idea to work with Twisted in the first place was through exposure to the code that [http://fettig.net/ Abe Fettig] had in place with his [http://fettig.net/projects/hep/ Hep server]. Finding Abe's project  was a natural discovery, seeing how we wanted to do something similar with messaging and multiple end points. That was at least two and a half years ago, maybe three years by now.
+
+'''Q: I actually downloaded mod-pubsub from !SourceForge today and took a look.'''
+
+'''Adam''': Ah, yes. That one's old; it's pre-Twisted. We migrated form [http://docs.python.org/lib/module-asyncore.html asyncore] to Twisted last year. We plan on releasing the new one this year.
+
+'''Q: What kinds of issues prompted you to switch from asyncore?'''
+
+'''Adam''': Well, as you can imagine, we found that as connections went up, performance went down. Asyncore is not designed to be used in highly concurrent applications.
+
+'''Kevin''': To add a little more about the limitations we had with asyncore, it was my understanding that not only did it not scale well, but it seemed to have a lot of problems especially if many of its open network connections were idle.
+
+'''Adam''': Yeah, basically, once we got past tens of connections, it really started to drag.
+
+'''Kevin''': And it was really great to take advantage of all the work that's been put into the Twisted reactor.
+
+'''Q: How did you go about migrating to Twisted? Was this a complete rewrite? Or a series of incremental changes?'''
+
+'''Adam''': After initial, exploratory work, we decided that we didn't have the time to build both a business offering while simultaneously rebuilding the software underneath it. So we contracted with a company called [http://omniti.com/home OmniTI], based in Maryland.
+
+'''Q: How was the original code that you guys wrote treated during the rewrite? Did any of it make it into the Twisted version?'''
+
+'''Adam''': The code that's in !SourceForge was treated as a "living spec"; OmniTI did the rebuild based on what mod-pubsub was designed to do: publish and subscribe. However, even though the rewrite didn't happen until last year, we'd been looking at Twisted from the very start of our project.
+
+'''Kevin''': In fact, there was a re-implementation of mod-pubsub before the work that [http://www.schlossnagle.org/~george/ George Schlossnagle] from OmniTI did, where we bolted on Twisted and made use of the reactor in all the places where asyncore used to be. Even in that state, we were already seeing a pretty big performance improvement.
+
+'''Q: So, in practical terms, how does Renkoo make use of the Twisted framework? What work do you make it do?'''
+
+'''Adam''': Basically, mod-pubsub is in charge of real-time delivery to the web browser. [http://twistedmatrix.com/trac/wiki/TwistedWeb twisted.web] is what drives this.
+
+'''Q: So this is the actual "Renkoo service" that drives what people are seeing? Riding on the back of twisted.web?'''
+
+'''Adam''': You've got it. The other place where we are using Twisted is in messaging, with [wiki:TwistedWords twisted.words].
+
+'''Kevin''': Yeah, we're sending out various types of notifications such as AIM and Yahoo! Messenger. Additionally, we use [http://twistedmatrix.com/trac/wiki/TwistedMail twisted.mail] for SMTP. We using this in conjunction with libxslt for generating different types of messages from templates that are appropriate for the context.
+
+'''Q: Did you run into any issues with twisted.words with regard to the moving target of the AIM protocol?'''
+
+'''Kevin''': Yeah... words seems, right now, to be one of the least polished parts of twisted. I ended up taking some of the Yahoo! Messenger code from [http://www.nongnu.org/curphoo/ curphoo]. Working around the dual-login aspect of AOL really complicated things and I had to come up with solutions for working around disconnects with the cookie server such that the chat server connection wasn't affected. It would be nice if the AIM support was stronger in twisted.words, providing something that people could more easily build off of.
+
+'''Q: I do know that lately [http://ralphm.net/blog/ Ralph Meijer] has been putting a great deal of work into [wiki:TwistedWords twisted.words] for [http://www.jabber.org/ Jabber]/[http://en.wikipedia.org/wiki/XMPP XMPP] support...
+
+'''Kevin''': Cool! That's great to hear.
+
+'''Q: On a related note, what sorts of things would you like to see get more attention in Twisted?'''
+
+'''Kevin''': Well, I've been following the development of epoll (see [http://www.xmailserver.org/linux-patches/nio-improve.html Improving Network I/O Performance], [http://twistedmatrix.com/pipermail/twisted-python/2007-January/014589.html Twisted 2.5 Release notes]), and we're really interested in seeing that get released. In our benchmarks, though we have seen that the poll collector scales much better than the select reactor, it does start to get bogged down once it gets above 1000 connections or so. It's my understanding that epoll should be better for that kind of workload, especially if a lot of the connections are idle.
+
+'''Q: Is there anything you can think of that the Twisted community might have done that would have made your job easier?'''
+
+'''Kevin''': Well, when I started, I really could have used better documentation. But my experiences with the community were fantastic as I was learning: people were very helpful on IRC and on the mail lists. And now, the documentation is actually quite excellent.
+
+'''Q: I've got a couple quick questions for you about Renkoo itself.'''
+
+'''Adam:''' Go for it.
+
+'''Q: How does [http://renkoo.com Renkoo] see itself in the market compared to such offerings as [http://www.evite.com/ evite]?'''
+
+'''Adam''': Well, evite's been around for a while and the people that are using it are going to keep using it. For some people, though, evite is not actually that useful. Many people don't know upfront where they want to meet - or even when. Renkoo is perfect for them, as it gives them a friendly application that helps them decide the "when" and "where" of any get together.
+
+'''Q: If you don't mind my asking, what avenues is Renkoo exploring for producing revenue?'''
+
+'''Adam''': Not at all. We're looking at ways of non-invasively offering suggestions for things such as where to meet, if it hasn't been decided. Not traditional advertising, but more along the lines of working with a user's or a group's past preferences. Have they enjoyed their meetings at these places before? Then here as some other places that are similar.
+
+'''Kevin''': We're also exploring partnerships with third-party reservation services. This would enable users to easily make reservations as part of an organic experience within the Renkoo application.
+
+'''Q: Well guys, thanks so much for your time and sharing with us how you make use Twisted -- I do look forward to playing with Renkoo.''' 
+
+'''Adam''': It's been our pleasure. Thanks!
+
+'''Kevin''': Take care.
+
+----
+
+== Resources ==
+
+=== Renkoo ===
+  * http://renkoo.com/
+  * [http://www.techcrunch.com/2006/04/28/renkoo-beeta-launches/ Renkoo launch]
+  * [http://renkoo.typepad.com/renkoo/2006/01/why_the_name_re.html Why the name?]
+  * [http://sourceforge.net/projects/mod-pubsub Renkoo's publish-subscribe open source server] (public release of twisted version expected later in 2007)
+
+=== Adam Rifkin ===
+  * http://renkoo.com/team/adam.php
+  * http://ifindkarma.com/blog/
+  * http://del.icio.us/ifindkarma/
+
+=== Kevin Murphy ===
+  * http://www.feedblog.org/2006/08/subcon_cluster_.html
+
+=== Fun ===
+  * [http://en.wikipedia.org/wiki/Renku How to write a renga (renku)]
