@@ -116,6 +116,7 @@ At the end of the interview are pasted some links of interest. Enjoy!
   * [http://www.techcrunch.com/2006/04/28/renkoo-beeta-launches/ Renkoo launch]
   * [http://renkoo.typepad.com/renkoo/2006/01/why_the_name_re.html Why the name?]
   * [http://sourceforge.net/projects/mod-pubsub Renkoo's publish-subscribe open source server] (public release of twisted version expected later in 2007)
+  * [http://swik.net/mod-pubsub Renkoo on Swik]
 
 === Adam Rifkin ===
   * http://renkoo.com/team/adam.php
