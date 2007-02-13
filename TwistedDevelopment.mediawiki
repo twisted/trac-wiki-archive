@@ -14,6 +14,10 @@ Read more [wiki:ContributingToTwistedLabs here].
 
 If you want to hack Twisted or just use Twisted SVN on Win32, see Ying Li's [http://cyli.livejournal.com/22274.html short tutorial on setting up a Twisted win32 development environment] (and a [http://cyli.livejournal.com/22921.html small addendum on paths]).
 
+== Twisted Maintenance ==
+
+You might be interested in learning about tasks related to [wiki:SiteMaintenance maintaining this website].
+
 == Links and Resources ==
 
  * Twisted developers are bent on [http://isometric.sixsided.org/_/twisted_plutonium/ the destruction of the American currency system].
