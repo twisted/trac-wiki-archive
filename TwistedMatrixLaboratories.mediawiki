@@ -5,60 +5,60 @@ Comprised of ninjas, rogue temporal authority enforcement agents, ancient greeks
 
 == The Matrix ==
 
-  Glyph "Glyph" Lefkowitz : glyph (at) twistedmatrix.com::
-  electric violin
-  Sean "Riley" Riley : sean (at) twistedmatrix.com::
-  grand piano
-  Allen "Dash" Short : washort (at) twistedmatrix.com::
-  vocals and guitar
-  Christopher "radix" Armstrong : radix (at) twistedmatrix.com::
-  percussion
-  Paul "z3p" Swartz : z3p (at) twistedmatrix.com::
-  oboe
-  Jürgen "snibril" Hermann : jh (at) twistedmatrix.com::
-  synthesizer
-  Moshe "vertical" Zadka : moshez (at) twistedmatrix.com::
-  accordion
-  Benjamin Bruheim : grolgh (at) online.no::
-  kazoo
-  Travis B. "Nafai" Hartwell : nafai (at) twistedmatrix.com::
-  keyboards
-  Itamar "itamar" Shtull-Trauring : itamar (at) itamarst.org::
-  alto recorder
-  Andrew "spiv" Bennetts : andrew (at) puzzling.org::
-  glockenspiel
-  Kevin "Acapnotic" Turner : acapnotic (at) twistedmatrix.com::
-  trombone
-  Donovan "fzZzy" Preston : dp (at) twistedmatrix.com::
-  bass and harmonium
-  Jp "exarkun" Calderone : exarkun (at) twistedmatrix.com::
-  geopolitical sociographic dissonance engine
-  Gavin "skreech" Cooper : coop (at) coopweb.org::
-  torque wrench
-  Jonathan "jml" Lange : jml (at) twistedmatrix.com::
-  pipe organ
-  Bob "etrepum" Ippolito : bob (at) redivi.com::
-  low frequency oscillator
-  Pavel "PenguinOfDoom" Pergamenshchik : pp64 (at) codelock.com::
-  electronic balalaika
-  Jonathan D. "slyphon" Simms : slyphon (at) twistedmatrix.com::
-  theramin and drums
-  Brian "warner" Warner : warner (at) twistedmatrix.com::
-  hertzian field renderer
-  Mary Gardiner : mary-twisted (at) puzzling.org::
-  krummhorn
-  Eric "teratorn" Mangold : teratorn (at) twistedmatrix.com::
-  serpentine bassoon
-  Tommi "Tv" Virtanen : tv (at) twistedmatrix.com::
-  didgeridoo
-  Justin "justinj" Johnson : justinj (at) twistedmatrix.com::
-  bass mandolin
-  Ralph "ralphm" Meijer: twisted (at) ralphm.ik.nu::
-  vocals and timbales
-  Stephen "jerub" Thorne: jerub (at) twistedmatrix.com::
-  trumpet
-  Duncan !McGreggor: oubiwann@adytum.us::
-  bagpipes
+  '''Glyph "Glyph" Lefkowitz''' : glyph (at) twistedmatrix.com::
+     electric violin
+  '''Sean "Riley" Riley''' : sean (at) twistedmatrix.com::
+     grand piano
+  '''Allen "Dash" Short''' : washort (at) twistedmatrix.com::
+     vocals and guitar
+  '''Christopher "radix" Armstrong''' : radix (at) twistedmatrix.com::
+     percussion
+  '''Paul "z3p" Swartz''' : z3p (at) twistedmatrix.com::
+     oboe
+  '''Jürgen "snibril" Hermann''' : jh (at) twistedmatrix.com::
+     synthesizer
+  '''Moshe "vertical" Zadka''' : moshez (at) twistedmatrix.com::
+     accordion
+  '''Benjamin Bruheim''' : grolgh (at) online.no::
+     kazoo
+  '''Travis B. "Nafai" Hartwell''' : nafai (at) twistedmatrix.com::
+     keyboards
+  '''Itamar "itamar" Shtull-Trauring''' : itamar (at) itamarst.org::
+     alto recorder
+  '''Andrew "spiv" Bennetts''' : andrew (at) puzzling.org::
+     glockenspiel
+  '''Kevin "Acapnotic" Turner''' : acapnotic (at) twistedmatrix.com::
+     trombone
+  '''Donovan "fzZzy" Preston''' : dp (at) twistedmatrix.com::
+     bass and harmonium
+  '''Jp "exarkun" Calderone''' : exarkun (at) twistedmatrix.com::
+     geopolitical sociographic dissonance engine
+  '''Gavin "skreech" Cooper''' : coop (at) coopweb.org::
+     torque wrench
+  '''Jonathan "jml" Lange''' : jml (at) twistedmatrix.com::
+     pipe organ
+  '''Bob "etrepum" Ippolito''' : bob (at) redivi.com::
+     low frequency oscillator
+  '''Pavel "!PenguinOfDoom" Pergamenshchik''' : pp64 (at) codelock.com::
+     electronic balalaika
+  '''Jonathan D. "slyphon" Simms''' : slyphon (at) twistedmatrix.com::
+     theramin and drums
+  '''Brian "warner" Warner''' : warner (at) twistedmatrix.com::
+     hertzian field renderer
+  '''Mary Gardiner''' : mary-twisted (at) puzzling.org::
+     krummhorn
+  '''Eric "teratorn" Mangold''' : teratorn (at) twistedmatrix.com::
+     serpentine bassoon
+  '''Tommi "Tv" Virtanen''' : tv (at) twistedmatrix.com::
+     didgeridoo
+  '''Justin "justinj" Johnson''' : justinj (at) twistedmatrix.com::
+     bass mandolin
+  '''Ralph "ralphm" Meijer''': twisted (at) ralphm.ik.nu::
+     vocals and timbales
+  '''Stephen "jerub" Thorne''': jerub (at) twistedmatrix.com::
+     trumpet
+  '''Duncan "oubiwann" !McGreggor''': oubiwann (at) adytum.us::
+     bagpipes
 
 == Extras ==
 
