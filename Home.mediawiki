@@ -33,7 +33,7 @@ Want to help Twisted, but don't have any spare time? If you appreciate Twisted a
 
 = What is Twisted? =
 
-[wiki:TwistedProject Twisted] is an event-driven networking framework written in Python and licensed under the [http://www.opensource.org/licenses/mit-license.php MIT license].  
+[wiki:TwistedProject Twisted] is an event-driven networking engine written in Python and licensed under the [http://www.opensource.org/licenses/mit-license.php MIT license].  
 
 See [wiki:FrequentlyAskedQuestions the FAQ] for commonly asked questions about Twisted.
 
