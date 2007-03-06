@@ -1,0 +1,18 @@
+
+== Problem ==
+
+There exists a pattern in Twisted plugin-using applications where a user interface is presented (typically via a command line tool, but this is not the only possible case) for the selection of a specific plugin from a list of possibilities.  Selection is often done by name -- that is, a short, unique string associated with each provider of the desired interface.
+
+The drawbacks of this approach are manifold:
+
+  * Implementation of this selection is often duplicated by each user for each plugin interface.
+  * Each plugin interface is required to supply the name attribute.
+  * In order for users to make a meaningful selection, some further descriptive information must generally be provided (often in the form of a description attribute which references a string containing prose explaining the features of a particular provider).
+  * Users must repeat their selection each time they invoke a tool which uses plugins.
+  * Only objects found by the plugin system can be used, precluding more static configurations where it is desirable for a specific or otherwise well-known object to be used in place of any existing plugin.
+
+== Solution ==
+
+Invert the APIs, so that instead of application-level code searching for objects and providing an interface to allow the user to select one, library code implements the selection process and passes one (or more, if multi-selection is allowed) in to the application code.
+
+Details for features of the library code should be filled in here.
