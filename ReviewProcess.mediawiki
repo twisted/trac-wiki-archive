@@ -34,7 +34,7 @@ The post-development, pre-commit process Twisted has adopted is this:
  
  * After a reviewer has given a change set the okay, the author (or another developer, if the author is so inclined or lacks commit privileges) may commit the change set to trunk.
  
- * The trunk commit must include the name of the author or authors, reviewer or reviews, and the tickets which are being resolved by the changes being committed.  The suggested format for this is:
+ * The trunk commit must include the name of the author or authors, reviewer or reviewers, and the tickets which are being resolved by the changes being committed.  The suggested format for this is:
 {{{
 #!html
 <pre class="wiki">
