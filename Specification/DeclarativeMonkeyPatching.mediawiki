@@ -1,0 +1,13 @@
+== Problem ==
+
+When writing unit tests, it is often necessary to provide alternate implementations of APIs which are used by the code being tested.  Relying on the real implementations of these APIs would expand the scope of the test such that it no longer tested only the relevant unit.  Various techniques exist for inserting the alternate implementations into the runtime environment so they are used:
+
+  * Parameterize the objects which provide the implementations, as to {{{___init__}}} or as attributes on the object the methods of which are being tested.
+  * Factor usage of these implementations into well-defined functions or methods and them override those to provide the alternates.
+  * Replace names in the global scope of the functions being tested.
+  * Replace attributes on module objects which are used by the functions being tested.
+
+These all accomplish the desired goal.  However, each requires a somewhat ad-hoc approach to the problem, and rarely is any of the resulting test fixture code reusable except across very similar test methods.  The first involves expanding an API in a way often only exploited by test code.  The second often requires the definition of a new subclass solely for the use of the test code.  The third and fourth are less invasive, but require even more whitebox knowledge of the code being tested and are prone to unexpected failures when the implementation changes in an otherwise trivial or straightforward manner.
+
+== Solution ==
+
