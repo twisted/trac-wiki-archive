@@ -43,3 +43,8 @@ class MyThingTest(TestCase):
 
 Here, the 'mocked' decorator takes a single positional argument indicating the target for temporary rebinding and {{{**kw}}} indicating the names to temporarily rebind.
  
+----
+This doesn't address the fact that the implementation being tested might change to use different globals without the test being updated.  Also, the use of a decorator might be a good idea, but eliminating the need for setUp/tearDown isn't the primary motivating concern here.
+
+-exarkun
+----
