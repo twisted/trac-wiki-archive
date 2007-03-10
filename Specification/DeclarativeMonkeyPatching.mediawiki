@@ -18,7 +18,7 @@ Trial should expose a declarative API for modifying a particular global scope du
 Here's a sketch of how such a thing might work:
 
 {{{
-#!python
+#!py
 ## mything.py ##
 from foo import bar
 
