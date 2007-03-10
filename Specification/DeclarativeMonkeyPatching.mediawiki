@@ -2,7 +2,7 @@
 
 When writing unit tests, it is often necessary to provide alternate implementations of APIs which are used by the code being tested.  Relying on the real implementations of these APIs would expand the scope of the test such that it no longer tested only the relevant unit.  Various techniques exist for inserting the alternate implementations into the runtime environment so they are used:
 
-  * Parameterize the objects which provide the implementations, as to {{{___init__}}} or as attributes on the object the methods of which are being tested.
+  * Parameterize the objects which provide the implementations, as to {{{__init__}}} or as attributes on the object the methods of which are being tested.
   * Factor usage of these implementations into well-defined functions or methods and them override those to provide the alternates.
   * Replace names in the global scope of the functions being tested.
   * Replace attributes on module objects which are used by the functions being tested.
@@ -11,3 +11,35 @@ These all accomplish the desired goal.  However, each requires a somewhat ad-hoc
 
 == Solution ==
 
+''In Progress...''
+
+Trial should expose a declarative API for modifying a particular global scope during a particular test.  The best form for such an API would be a function decorator, since that would preclude the need for matching bookends in {{{setUp}}} and {{{tearDown}}}.
+
+Here's a sketch of how such a thing might work:
+
+{{{
+#!python
+## mything.py ##
+from foo import bar
+
+def doIt():
+    return bar.value() + 1
+
+## test_mything.py ##
+
+import mything
+from twisted.trial.unittest import TestCase, mocked
+
+class MockBar(object):
+    def value(self):
+        return 4
+
+class MyThingTest(TestCase):
+    def test_myGlobalThing(self):
+        self.failUnless(mything.doIt(), 5)
+        self.failUnless(self.mock['bar'].valueCalled)
+    test_globalMyThing = mocked(foo, bar=MockBar)(test_myGlobalThing)
+}}}
+
+Here, the 'mocked' decorator takes a single positional argument indicating the target for temporary rebinding and {{{**kw}}} indicating the names to temporarily rebind.
+ 
