@@ -1,0 +1,9 @@
+Potential Projects (Super-High-Level Overview)
+
+1. Distribution Trial test runner
+1. Conch (SSH) test cleanups, documentation, high-level interface
+1. Finish web2 streams
+1. Overall test suite cleanup (remove deprecations, cleanup errors, fix non-deterministic tests)
+1. Friendly, usable DNS server application
+1. Low-level network support (IP, ICMP, raw sockets)
+1. Edge-triggered epoll reactor
