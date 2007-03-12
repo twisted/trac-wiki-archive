@@ -12,3 +12,4 @@ Potential Projects (Super-High-Level Overview)
 Potential Mentors
 
   1. [mailto:exarkun@divmod.com Jean-Paul Calderone]
+  1. [mailto:glyph@divmod.com Glyph Lefkowitz]
