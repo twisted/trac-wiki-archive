@@ -1,4 +1,8 @@
-Potential Projects (Super-High-Level Overview)
+= Summer of Code =
+
+== Potential Projects == 
+
+Super-High-Level Overview
 
   1. Distribution Trial test runner
   1. Conch (SSH) test cleanups, documentation, high-level interface
@@ -9,7 +13,7 @@ Potential Projects (Super-High-Level Overview)
   1. Edge-triggered epoll reactor
   1. Generator-based interface to all event-notification APIs
 
-Potential Mentors
+== Potential Mentors ==
 
   1. [mailto:exarkun@divmod.com Jean-Paul Calderone]
   1. [mailto:glyph@divmod.com Glyph Lefkowitz]
