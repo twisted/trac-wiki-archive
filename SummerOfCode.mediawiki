@@ -7,3 +7,8 @@ Potential Projects (Super-High-Level Overview)
   1. Friendly, usable DNS server application
   1. Low-level network support (IP, ICMP, raw sockets)
   1. Edge-triggered epoll reactor
+  1. Generator-based interface to all event-notification APIs
+
+Potential Mentors
+
+  1. [mailto:exarkun@divmod.com Jean-Paul Calderone]
