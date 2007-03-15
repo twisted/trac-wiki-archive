@@ -56,7 +56,7 @@ Fixes #&lt;ticket number&gt;<br />
 
 Some of the higher level things for a reviewer to consider about a branch:
 
-  * Does it change existing APIs in an incompatible way?  Are these APIs stable enough to warrent backwards compatibility or a deprecation period?
+  * Does it change existing APIs in an incompatible way?  Are these APIs stable enough to warrant backwards compatibility or a deprecation period?
   * Is the code written in a straightforward manner which will allow it to be easily maintained in the future, possibly by a developer other than the author?
   * If it introduces a new feature, is that feature generally useful and have its long term implications been considered and accounted for?
     * Will it result in confusion to application developers?
