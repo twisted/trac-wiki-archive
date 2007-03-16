@@ -37,5 +37,5 @@ The latest Foolscap code lives in my SVN sandbox, svn://svn.twistedmatrix.com/sv
 
 Foolscap is not yet ready for production use. The [source:sandbox/warner/Foolscap/trunk/doc/newpb-todo.txt todo] file and the [source:sandbox/warner/Foolscap/trunk/doc/newpb-jobs.txt jobs] file contain some of the things that need finishing before it will be ready. Connection negotiation needs to be changed to use variable-length certificate digests and certificate chains and variable-length object names, various questions about making objects "giftable" by default or not need to be answered and implemented, and we need to acquire operational experience with Foolscap as a whole to think about usability.
 
-Release 0.0.7 is available in my [http://twistedmatrix.com/~warner/Foolscap/ home directory].
+Release 0.1.0 is available in my [http://twistedmatrix.com/~warner/Foolscap/ home directory].
 
