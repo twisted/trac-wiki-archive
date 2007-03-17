@@ -1,6 +1,22 @@
-== General Info ==
+== Contributing ==
 
-See the TwistedProject page for info on the SVN repository. After every commit to Twisted, the [http://twistedmatrix.com/buildbot/ Buildbot] runs all the unit tests on several separate machines on a few different platforms, and reports the status of those tests. Watch the buildbot. Because sometimes, the buildbot watches back.
+If you want to work on Twisted, check out this URL:
+{{{
+svn://svn.twistedmatrix.com/svn/Twisted/trunk
+}}}
+Generate patches via editing your checkout of trunk and running 'svn diff' at the ''root'' of your checkout - the folder with "twisted", "bin", "doc", etc. in it.
+
+Make sure that you have written unit tests and docstrings for all code which has changed in your patch.  For more details about what will be considered an acceptable patch, see the "Development Process" section below.
+
+Attach the output of 'svn diff' to a ticket in the tracker and assign it the 'review' keyword so that a core developer will notice it and review it.  Don't be discouraged if it is not immediately accepted!  To keep the quality of Twisted high, almost all patches are rejected on their initial submission.  Check back to see if the patch has been re-assigned to you for further work.
+
+Finally, if your patch is good, it will be applied to trunk and included as part of the next release.
+
+If you are interested in contributing to Twisted for the first time, consider working on an existing ticket rather than contributing a new feature.  Fixes for existing problems or implementations of already-requested features will generally take priority over new ideas.
+
+== Buildbot ==
+
+After every commit to Twisted, the [http://twistedmatrix.com/buildbot/ Buildbot] runs all the unit tests on several separate machines on a few different platforms, and reports the status of those tests. Watch the buildbot. Because sometimes, the buildbot watches back.
 
 == Development Process ==
 
@@ -25,4 +41,3 @@ You might be interested in learning about tasks related to [wiki:SiteMaintenance
  * [http://twistedmatrix.com/buildbot/ Buildbot]. Watch it.
  * Documentation work is done on the DocumentationAnalysis page.
  * Instructions on how to generate the [wiki:APIDocs API Docs] for the twistedmatrix.com web site.
-
