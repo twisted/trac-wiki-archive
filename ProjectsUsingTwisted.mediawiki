@@ -63,7 +63,7 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://freshmeat.net/projects/poker3d/ Poker3d] - a 3d poker game server and client.
  * [http://web.mit.edu/bshi/www/buyasta/ Buyasta] - a MUD engine.
  * [http://www.eecs.umich.edu/~pelzlpj/londonlaw/ London Law] - an online multiplayer adaptation of the classic Scotland Yard board game.
-
+ * [http://linux-games.com/castle-combat Castle Combat] - a multiplayer game designed after the arcade game "Rampart"
 
 = Research Projects =
 
