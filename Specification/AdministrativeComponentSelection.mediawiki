@@ -13,6 +13,73 @@ The drawbacks of this approach are manifold:
 
 == Solution ==
 
+=== General Form ===
+
 Invert the APIs, so that instead of application-level code searching for objects and providing an interface to allow the user to select one, library code implements the selection process and passes one (or more, if multi-selection is allowed) in to the application code.
 
-Details for features of the library code should be filled in here.
+=== Library-level Interface ===
+
+A manual, not-entirely-inverted interface to this functionality might look something like this:
+
+{{{
+#!python
+
+def getComponent(interface):
+    """
+    Return the appropriate provider of the given interface.
+
+    "appropriate" may be inferred based on available plugins,
+    it may have been previously specified via some user
+    configuration mechanism, it may be selected based on site-
+    wide policy, or some other mechanism may be used.
+    """
+}}}
+
+Someone might come up with a better name than {{{getComponent}}}, though.
+
+For example, twistd might use this to set up logging like this:
+
+{{{
+#!python
+
+    def setUpLogging(self):
+        logger = getComponent(ILogger)
+        logger.start()
+}}}
+
+Some good things about this:
+
+  * As far as twistd is concerned, this is pretty simple (a ton simpler than the current code and a ton simpler than the code in the #638 branch).
+  * It's flexible: twistd doesn't need to change in order for new loggers to be used (that's the whole point, duh)
+
+Some less good things:
+
+  * To a reader, this might not be entirely obvious.  One needs to understand {{{getComponent}}} and find the system configuration in order to understand what's going on.
+  * Whoever wrote this had to make a conscious decision to use this system.
+
+The simplest implementation of this could call getPlugins and give back the first plugin.  A more useful implementation might look at environment variables or  files or registry keys (or some other platform-appropriate persistence mechanism) to find existing configuration.  A useful property of this interface is that each of these mechanisms can be implemented and deployed separately from the development of applications using the interface.  This lets applications begin to benefit immediately and to benefit without change from improvements as they are made.
+
+The kind of configuration which is possible has at least two aspects:
+
+  * Selecting a particular provider of an interface.
+  * Providing arguments to an implementor of an interface in order to get a provider.
+
+The plugin system may be involved (particularly as a way of suggesting available providers through some user interface), but possible choices may not be limited to plugins.  A simple mechanism might just store the FQPN of a provider.  A more advanced mechanism might store the FQPN of an implementor, along with some arguments to pass to it.  The UI for selecting these things might initially be a text editor (to edit a config file) or a shell (to set environment variables).  Later it might be a more advanced tool which queries for plugins.
+
+=== Framework-level interface ===
+
+A completely inverted interface would be invisible.  The application-code written to use it would look like this, though:
+
+{{{
+#!python
+
+    def setUpLogging(self, logger):
+        logger.start()
+}}}
+
+There are several things which need to be addressed for this to work:
+
+  * someone has to figure out that logger is supposed to be an ILogger provider
+  * whoever is calling setUpLogging has to invoke the necessary machinery to find an ILogger and supply it
+
+There are probably numerous ways to address each of these issues.  Whatever solution is found for the second point probably resembles {{{getComponent}}} above quite closely.  Some specifics for the first point should be explored.  (TODO: explore some specifics)
