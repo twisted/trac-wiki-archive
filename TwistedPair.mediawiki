@@ -12,6 +12,6 @@ Twisted Pair is available under the MIT Free Software licence.
 
 = Documentation =
 
-[http://twistedmatrix.com/projects/pair/documentation/ Documentation] is available for Twisted Pair. An [http://twistedmatrix.com/documents/current/api/ API reference] of Twisted and all subprojects is also available.
+[http://twistedmatrix.com/projects/pair/documentation/ Documentation] is available for Twisted Pair. An [http://twistedmatrix.com/documents/current/api/twisted.pair.html API reference] of Twisted and all subprojects is also available.
 
 
