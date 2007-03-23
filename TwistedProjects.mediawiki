@@ -78,5 +78,5 @@
   Maintainer: Ed "edsuom" Suominen <ed@eepatents.com>
 
   '''Web site'''::
-  Maintainer: Duncan "oubiwann" !McGreggor <duncan@adytum.us>[[BR]]
+  Maintainer: Duncan "oubiwann" !McGreggor <oubiwann@adytum.us>[[BR]]
   Co-maintainer: Nicola "tekNico" Larosa <nico@tekNico.net>
