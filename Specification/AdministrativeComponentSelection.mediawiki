@@ -92,3 +92,8 @@ The kind of configuration which is possible has at least two aspects:
 
 The plugin system may be involved (particularly as a way of suggesting available providers through some user interface), but possible choices may not be limited to plugins.  A simple mechanism might just store the FQPN of a provider.  A more advanced mechanism might store the FQPN of an implementor, along with some arguments to pass to it.  The UI for selecting these things might initially be a text editor (to edit a config file) or a shell (to set environment variables).  Later it might be a more advanced tool which queries for plugins.
 
+
+=== Open Issues ===
+
+There is a strange issue that crops up given a combination of per-process configuration issues (such as command line arguments) and starting Twisted-using child processes.  Given regular, persistent configuration, there is no problem: Twisted-using child processes can fetch configuration data via the same mechanisms that the parent process does. However, when per-process configuration is introduced, it may be expected that a getComponent (or whatever) call in the child process will honor settings affecting the parent process. There are a couple of general options here: either the getComponent calls in the child process can automatically honor those in the parent process (somehow), or the parent process could somehow send that configuration data explicitly to the child process. The main problem is that *some* mechanism for passing configuration state around must be provided.
+
