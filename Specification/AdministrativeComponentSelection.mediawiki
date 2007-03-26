@@ -18,7 +18,7 @@ The drawbacks of this approach are manifold:
 
 ==== General Form ====
 
-Remove the responsibility of finding and choosing objects providing particular functionality from the application code.
+Remove the responsibility of finding objects providing particular functionality and providing a user interface for choosing which of those objects to use.
 
 ==== Library-level Interface ====
 
