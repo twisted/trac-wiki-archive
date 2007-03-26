@@ -14,11 +14,11 @@ The drawbacks of this approach are manifold:
 
 == Solution ==
 
+The solution will need to provide a couple parts: an application interface for dealing with configuration and providing configuration mechanisms to the end-user.
+
 === Application Interfaces ===
 
-==== General Form ====
-
-Remove the responsibility of finding objects providing particular functionality and providing a user interface for choosing which of those objects to use.
+There is a decision to be made about what kind of interface to expose to solve this problem. The general form of these solutions is to remove the responsibility of finding objects providing particular functionality and providing a user interface for choosing which of those objects to use.
 
 ==== Library-level Interface ====
 
