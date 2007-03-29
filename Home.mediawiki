@@ -68,7 +68,8 @@ General Information:
  * [wiki:Downloads Downloads] - Get it!
  * [wiki:Documentation] - Everything you need to know to get started.
  * List Info - Access the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted-python] and [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-web twisted-web] mailing lists.
- * [wiki:ArchivedNews News] - Read the latest news items about Twisted. 
+ * [wiki:ArchivedNews News] - Read the latest news items about Twisted.
+ * [http://twistedmatrix.com/trac/report Tracker] - [http://twistedmatrix.com/trac/newticket?type=defect Report a bug] or [http://twistedmatrix.com/trac/newticket?type=enhancement request a feature] ([http://twistedmatrix.com/trac/register Registration] is required)
 
 More Useful Pointers:
 
