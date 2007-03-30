@@ -48,3 +48,8 @@ This doesn't address the fact that the implementation being tested might change 
 
 -exarkun
 ----
+I don't understand how that might be addressed.  The implementation might always change to do something the test isn't testing, and then it's the implementor's responsibility to change the test, or the reviewer's responsibility to change it.  The reason I suggest a decorator rather than setUp/tearDown is that I don't see setUp/tearDown as "declarative".  You can imperatively mutate global state in setUp, and forget the imperative command in tearDown to reverse it, which silently corrupts global state in the test.
+
+I also still don't understand why we're using a wiki page rather than a ticket, especially now that we've gone into discussion mode.
+
+-glyph
