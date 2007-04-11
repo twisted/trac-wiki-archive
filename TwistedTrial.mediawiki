@@ -1,11 +1,27 @@
-== Trial ==
+= Trial =
 
-Trial is Twisted's unit testing framework, an extension of Python's unittest. The code is in twisted.trial and the maintainer is JonathanLange.
+Trial is Twisted's unit testing framework, an extension of Python's unittest.
 
 Trial's primary feature is the ability to return a Deferred from a test-case method - the test case will not complete until the Deferred has fired.  If it fires successfully, the test passes.  If it fires with an error, the test fails.  This makes it possible to easily unit-test asynchronous event-driven code.
+
+= Download =
+
+Trial is a core component of Twisted. As such, there is no need to download it separately. If you have downloaded the Twisted tarball, you'll find the Trial source code in the
+`TwistedCore-2.5.0/twisted/trial` directory (your Twisted version number may be different). If you have Twisted checked out from `svn`, you'll find the source in `trunk/twisted/trial`.
+
+= Documentation =
+
+You can find Trial API documentation [http://twistedmatrix.com/documents/current/api/twisted.trial.html here]. If you run `trial --help` from the command line, you'll see
+a list of possible invocation arguments (the `trial` command can be found in `TwistedCore-2.5.0/bin` in the tarball and `trunk/bin/trial` in `svn`). Beyond, seeing as much of Twisted
+itself is of course tested with Trial, you can examine the
+`test` directories of the various Twisted projects to see examples of Trial use. And as ever, having a look through the source code is also instructive.
+
+= Other =
 
 See TrialDevNotes for thoughts on future developments.
 
 [query:status=new|assigned|reopened&component=trial Open Issues]
 
-I use the tracker lots. The best way to get your bug fixed is to file it here.  --JonathanLange
+= Contact =
+
+The maintainer of Trial is JonathanLange. The best way to get your bug fixed is to file it in the tracker (see the View Tickets and New Ticket links above).
