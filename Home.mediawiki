@@ -80,3 +80,5 @@ More Useful Pointers:
  * [wiki:TheTwistedShow The Twisted Show] - Interviews and podcasts with businesses and projects that use Twisted.
  * [wiki:ProjectsUsingTwisted Software that uses Twisted] - Learn what other projects are using Twisted.
  * [wiki:TwistedMatrixLaboratories The Labs] - What is ''Twisted Matrix Laboratories''?
+
+Twisted is supported by [http://www.divmod.org/trac the Divmod corporation].
