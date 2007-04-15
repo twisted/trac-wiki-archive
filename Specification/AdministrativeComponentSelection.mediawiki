@@ -59,6 +59,7 @@ Some less good things:
 
   * To a reader, this might not be entirely obvious.  One needs to understand {{{getComponent}}} and find the system configuration in order to understand what's going on.
   * Whoever wrote this had to make a conscious decision to use this system.
+  * The failure condition, where {{{ILogger}}} has not been specified, results in an entirely inscrutable traceback.  Why does this code expect an {{{ILogger}}} to be available?  What happens when one isn't?  We've had this problem with Nevow's context object for years now.  Personally, I think that this problem alone should be considered a deal-breaker for this interface.  The "inverted" interface, below, leaves all the problems of location and configuration error reporting to the user, and they all occur ''before'' any application code is invoked, which is vastly superior.  --GlyphLefkowitz
 
 ==== Framework-level ("inverted") interface ====
 
