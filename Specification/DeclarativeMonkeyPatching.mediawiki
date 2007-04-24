@@ -53,3 +53,11 @@ I don't understand how that might be addressed.  The implementation might always
 I also still don't understand why we're using a wiki page rather than a ticket, especially now that we've gone into discussion mode.
 
 -glyph
+----
+
+ * Ditto on 'wiki vs ticket'.
+ * A concrete improvement can be made without implementing a fully declarative interface.
+ * teratorn has already implemented a thing called 'masker' (see source:sandbox/teratorn/masker.py). If it were made to be re-usable, then it could helpfully simplify many tests. 
+ * A feature like `addCleanup` can go a long way to solving the tearDown problem. Simply put, `addCleanup` registers functions to be called after `tearDown` completes.
+ 
+-jml, 2007-04-24
