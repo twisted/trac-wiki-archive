@@ -40,7 +40,6 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://sourceforge.net/projects/pynfo/ Pynfo] - extendable multi-function IRC bot.
  * [http://petmail.lothar.com/ PETMail] - permission based anti-spam replacement for SMTP.
  * [http://crowsnest.sf.net Crow's Nest] - collect log information from various sources and to apply some filter to them in a very modular way.
- * [http://thorne.ath.cx/~stephen/software.html Trash] - a web pastebin application.
  * [http://theendmusic.org/programming/MaxJax MaxJax] - a solution for real-time web based control of any open sound control enabled sound synthesis engine.
  * [http://www.spring-alpha.org/svs/index.php?content=about svs] - a framework for supporting collaborative projects that combine coding with other media.
  * [http://sourceforge.net/projects/msngateway/ msn-gateway] - an msn messenger gateway for mobile phones using email and web access.
