@@ -1,6 +1,6 @@
 = HELP ME =
 
-If you are looking for help on Twisted, please see the [Documentation] section.
+If you are looking for help on Twisted, please see the [wiki:Documentation] section.
 
 If you are looking for help on Trac, read below.
 
