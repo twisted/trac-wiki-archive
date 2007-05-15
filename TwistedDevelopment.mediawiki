@@ -36,8 +36,9 @@ You might be interested in learning about tasks related to [wiki:SiteMaintenance
 
 == Links and Resources ==
 
- * Twisted developers are bent on [http://isometric.sixsided.org/_/twisted_plutonium/ the destruction of the American currency system].
+ * [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/coding-standard.xhtml?format=raw The Twisted Coding standard].
  * There are some UsefulQueries for finding issues in the tracker.
  * [http://twistedmatrix.com/buildbot/ Buildbot]. Watch it.
  * Documentation work is done on the DocumentationAnalysis page.
  * Instructions on how to generate the [wiki:APIDocs API Docs] for the twistedmatrix.com web site.
+ * Twisted developers are bent on [http://isometric.sixsided.org/_/twisted_plutonium/ the destruction of the American currency system].
