@@ -2,7 +2,7 @@
 
 "Foolscap" is the name for the next-generation RPC protocol, intended to replace Perspective Broker. It has been under development (on and off) by Brian Warner for several years.
 
-The current release is [http://twistedmatrix.com/~warner/Foolscap/foolscap-0.1.3.tar.gz foolscap-0.1.3] .
+The current release is [http://twistedmatrix.com/~warner/Foolscap/foolscap-0.1.4.tar.gz foolscap-0.1.4] .
 
 The two primary responsibilities of an RPC protocol are to:
 
@@ -31,7 +31,7 @@ In addition, there are details like object naming, connection establishment, con
 
 == Show Me The Code ==
 
-The current release is available in my [http://twistedmatrix.com/~warner/Foolscap/ home directory], in the file [http://twistedmatrix.com/~warner/Foolscap/foolscap-0.1.3.tar.gz]. This is an alpha release, more of a technology preview than anything else, but should serve to give potential users an idea of what to expect from newpb.
+The current release is available in my [http://twistedmatrix.com/~warner/Foolscap/ home directory], in the file [http://twistedmatrix.com/~warner/Foolscap/foolscap-0.1.4.tar.gz]. This is an alpha release, since the protocol has not been finalized, and incompatible changes are being made every few months.
 
 The latest Foolscap code lives in my SVN sandbox, svn://svn.twistedmatrix.com/svn/Twisted/sandbox/warner/Foolscap/trunk, in the 'foolscap' module (source:sandbox/warner/Foolscap/trunk). The documentation is in source:sandbox/warner/Foolscap/trunk/doc and includes both the protocol specification and a short user's manual. Some day, it will probably be shipped as part of the "Twisted-Core" distribution, but only after the protocol and code have stabilized a bit.
 
@@ -39,5 +39,5 @@ The latest Foolscap code lives in my SVN sandbox, svn://svn.twistedmatrix.com/sv
 
 Foolscap is not yet ready for production use. The [source:sandbox/warner/Foolscap/trunk/doc/newpb-todo.txt todo] file and the [source:sandbox/warner/Foolscap/trunk/doc/newpb-jobs.txt jobs] file contain some of the things that need finishing before it will be ready. Connection negotiation needs to be changed to use variable-length certificate digests and certificate chains and variable-length object names, various questions about making objects "giftable" by default or not need to be answered and implemented, and we need to acquire operational experience with Foolscap as a whole to think about usability.
 
-Release 0.1.3 is available in my [http://twistedmatrix.com/~warner/Foolscap/ home directory].
+Release 0.1.4 is available in my [http://twistedmatrix.com/~warner/Foolscap/ home directory].
 
