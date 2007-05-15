@@ -4,7 +4,7 @@ For more information about Twisted, including release notes, please see the [wik
 
 == Ubuntu and Debian ==
 
- For now, Twisted Matrix Laboratories does not make an apt repository available. However, both Ubuntu and Debian ship Twisted in their main repositories.
+ Packages of Twisted are available in Ubuntu and Debian as 'python-twisted'.
 
 == Windows ==
 
