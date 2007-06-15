@@ -38,11 +38,13 @@ The post-development, pre-commit process Twisted has adopted is this:
 {{{
 #!html
 <pre class="wiki">
-Merge &lt;branch name&gt;<br />
+Merge &lt;branch name&gt;: Brief description<br />
+
+Long description (as long as you wish)<br />
+
 Author: &lt;names&gt;
 Reviewer: &lt;names&gt;
 Fixes #&lt;ticket number&gt;<br />
-&lt;description of changes&gt;
 </pre>
 }}}
 
