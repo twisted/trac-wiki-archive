@@ -162,7 +162,7 @@ That's 75 warnings on python 2.4, with the select reactor, arguably our best-sup
 
 {{{DeprecationError}}} does not currently exist and would need to be introduced.
 
-Trial has support for suppressing warnings, but not for asserting about them.  That means it is not really feasible to verify that deprecations have been done correctly, although it is possible to quash them.
+~~Trial has support for suppressing warnings, but not for asserting about them.  That means it is not really feasible to verify that deprecations have been done correctly, although it is possible to quash them.~~ ''(trial now provides TestCase.assertWarns)''
 
 Trial also needs a way to do the equivalent of -Werror that was specific to Twisted warnings, since it may not be possible to avoid certain kinds of warning while remaining compatible between all Python versions.
 
