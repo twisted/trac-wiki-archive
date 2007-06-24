@@ -5,6 +5,7 @@ For more information about Twisted, including release notes, please see the [wik
 == Ubuntu and Debian ==
 
  Packages of Twisted are available in Ubuntu and Debian as 'python-twisted'.
+
  If you wish to build and install the latest Twisted by-hand on Ubuntu ensure that you have the 'python2.5-dev' and 'build-essentials' packages installed.  
 
 == Windows ==
