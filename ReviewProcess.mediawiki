@@ -24,6 +24,10 @@ The post-development, pre-commit process Twisted has adopted is this:
    * The changes modify public APIs or test methods which are undocumented (ie, a function which has no docstring is modified, or a class which has no docstring has methods added to it) without adding documentation. 
    * The changes modify the behavior of a documented API without updating the documentation. 
    * The changes violate the coding standard.
+   * pyflakes is an useful tool to check basic quality of code. The following command will check all the files modified and added by a branch merge:
+{{{
+svn status | grep '^\M\|^A' | cut -c 8- | xargs pyflakes
+}}}
  
  * A reviewer may reject a set of changes for other reasons, most of which are hard to quantify.  Basically, use your best judgement, and don't be afraid to point out problems which don't fit into the above list.
 
