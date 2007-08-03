@@ -1,0 +1,64 @@
+THIS SPECIFICATION IS IN PROGRESS DO NOT READ IT.
+
+{{wrongtitle|title=Asynchronous File I/O}}
+
+=== Problem ===
+
+Twisted has no API for asynchronous file I/O. It oughtta.
+
+
+=== Solution ===
+
+{{{
+#!html
+<pre class="wiki">
+def FilePath.openAsynchronously()
+    """
+    @return: AsynchronousFileIOLayer.
+    """
+<br/>
+def AsynchronousFileIOLayer.produceTo(consumer, start=0, end=None)
+    """
+    @param consumer: IFilePathConsumer provider.
+    @param start: The byte offset into the file at which to start producing.
+    @param end: The byte offset into the file at which to stop producing,
+        or None to indicate the end of the file.
+    @return: None
+    """
+<br/> 
+def AsynchronousFileIOLayer.consumeFrom(producer)
+    """
+    @param producer: IFilePathProducer provider. Its produceTo method
+        will be called.
+    @return: None.
+    """
+<br/> 
+
+interface IFilePathConsumer(IConsumer):
+    def finished(reason):
+        """
+        @param reason: An instance of L{Failure}. If it's
+            CONNECTION_DONE then everything's great.
+            Otherwise it's a failure describing the problem.
+        """
+<br/>
+
+interface IFilePathProducer(IProducer):
+    def produceTo(consumer):
+        """
+        Send some data to the given consumer.
+
+        @param consumer: The IFilePathConsumer to which data
+            should be sent. Implement this to call 
+            consumer.consumeFrom(self), followed by 0 or more
+            calls to consumer.write(data), followed by a
+            mandatory call to consumer.finished(reason). Pass
+            CONNECTION_DONE to finished to indicate normal
+            completion.
+        """
+</pre>
+}}}
+
+=== Open Issues ===
+
+Should produceTo and consumeFrom return Deferreds? If they do, it is important to note this means there will be duplicate completion notifications between the deferred and the .finished method. The order these are called in should perhaps be well-defined.
