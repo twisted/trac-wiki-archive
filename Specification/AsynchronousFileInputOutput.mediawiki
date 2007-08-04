@@ -21,44 +21,109 @@ def AsynchronousFileIOLayer.produceTo(consumer, start=0, end=None)
     """
     @param consumer: IFilePathConsumer provider.
     @param start: The byte offset into the file at which to start producing.
-    @param end: The byte offset into the file at which to stop producing,
-        or None to indicate the end of the file.
+    @param end: The byte offset into the file at which to stop
+        producing, or None to indicate the end of the file.
     @return: None
     """
-<br/> 
+<br/>
 def AsynchronousFileIOLayer.consumeFrom(producer)
     """
     @param producer: IFilePathProducer provider. Its produceTo method
         will be called.
     @return: None.
     """
-<br/> 
-
-interface IFilePathConsumer(IConsumer):
-    def finished(reason):
-        """
-        @param reason: An instance of L{Failure}. If it's
-            CONNECTION_DONE then everything's great.
-            Otherwise it's a failure describing the problem.
-        """
 <br/>
 
-interface IFilePathProducer(IProducer):
+interface IFilePathConsumer:
+    """
+    A consumer of data. Code which calls methods on this interface
+    should call consumeFrom(p), followed by zero or more calls to
+    write(d), followed by finished(r). Implementors should expect
+    such.
+    """
+    def consumeFrom(producerRegulator):
+        """
+        Get ready to receive data.
+        @param producerRegulator: The provider of L{IProducerRegulator}
+            which will control the production of data.
+        """
+        <br/>
+
+    def write(data):
+        """
+        Handle incoming data.
+        """
+        <br/>
+
+    def finished(reason):
+        """
+        @param reason: An instance of L{Failure} or None. If it's None
+            then everything's great.  Otherwise it's a failure
+            describing the problem.
+        """
+        <br/>
+
+<br/>
+
+interface IFilePathProducer:
+    """
+    A thing what has data to send.
+    """
     def produceTo(consumer):
         """
-        Send some data to the given consumer.
+        Start sending data to the given consumer.
 
-        @param consumer: The IFilePathConsumer to which data
-            should be sent. Implement this to call 
-            consumer.consumeFrom(self), followed by 0 or more
-            calls to consumer.write(data), followed by a
-            mandatory call to consumer.finished(reason). Pass
-            CONNECTION_DONE to finished to indicate normal
-            completion.
+        @param consumer: The IFilePathConsumer to which data should be
+            sent.
+
+        An appopriate L{IProducerRegulator} must be created and passed
+        to the consumer's L{consumeFrom<IConsumer.consumeFrom>}
+        method, to allow the consumer to control the production of
+        data.
+        """
+        <br/>
+
+class IProducerRegulator:
+    """
+    A thing which pauses, resumes, and perhaps stops an IProducer.
+    """
+    def pause():
+        """
+        Consumer is busy.  Temporarily cease calling L{IConsumer.write}.
+
+        Absolutely stop calling write on the consumer until resume is
+        called.
+        """
+        <br/>
+
+    def resume():
+        """
+        Consumer is no longer busy.  Start calling L{IConsumer.write}
+        again.  This must only be called after a call to L{pause}, and
+        must not be called twice in a row.
+        """
+        <br/>
+
+    def stop(reason):
+        """
+        Called to indicate that the producer should send no more
+        data. L{IConsumer.finished} must be called and the producer
+        must stop calling L{IConsumer.write}.
+
+        @param reason: a Failure instance.
         """
 </pre>
 }}}
 
 === Open Issues ===
 
-Should produceTo and consumeFrom return Deferreds? If they do, it is important to note this means there will be duplicate completion notifications between the deferred and the .finished method. The order these are called in should perhaps be well-defined.
+Should produceTo and consumeFrom return Deferreds? If they do, it is
+important to note this means there will be duplicate completion
+notifications between the deferred and the .finished method. The order
+these are called in should perhaps be well-defined.
+
+
+=== Punchline ===
+
+The astute reader will notice that this is actually a redesign of the
+producer/consumer framework.
