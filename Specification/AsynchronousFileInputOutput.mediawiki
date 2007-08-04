@@ -17,7 +17,7 @@ def FilePath.openAsynchronously()
     @return: AsynchronousFileIOLayer.
     """
 <br/>
-def AsynchronousFileIOLayer.produceTo(consumer, start=0, end=None)
+def AsynchronousFileIOLayer.read(consumer, start=0, end=None)
     """
     @param consumer: IFilePathConsumer provider.
     @param start: The byte offset into the file at which to start producing.
@@ -26,10 +26,11 @@ def AsynchronousFileIOLayer.produceTo(consumer, start=0, end=None)
     @return: None
     """
 <br/>
-def AsynchronousFileIOLayer.consumeFrom(producer)
+def AsynchronousFileIOLayer.write(producer, start=0)
     """
     @param producer: IFilePathProducer provider. Its produceTo method
         will be called.
+    @param start: The byte offset into the file at which to start writing. [what about appending?]
     @return: None.
     """
 <br/>
@@ -121,6 +122,8 @@ Should produceTo and consumeFrom return Deferreds? If they do, it is
 important to note this means there will be duplicate completion
 notifications between the deferred and the .finished method. The order
 these are called in should perhaps be well-defined.
+
+What about appending to a file? Should there be a special value passable as the 'start' parameter to write to indicate that the file should be appended to?
 
 
 === Punchline ===
