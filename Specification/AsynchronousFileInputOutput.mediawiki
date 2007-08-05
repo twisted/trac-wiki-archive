@@ -130,6 +130,8 @@ What about duplicating filepath.create()'s behavior asynchronously?
 
 openStream is kind of a strange name, given web2.streams.
 
+I tried writing a "copy a file" example but got confused. someone do that please.
+
 === Punchline ===
 
 The astute reader will notice that this is actually a redesign of the
