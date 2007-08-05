@@ -12,9 +12,10 @@ Twisted has no API for asynchronous file I/O. It oughtta.
 {{{
 #!html
 <pre class="wiki">
-def FilePath.openAsynchronously()
+def FilePath.openStream(mode)
     """
-    @return: AsynchronousFileIOLayer.
+    @param mode: As per C{file.__init__}'s C{mode} parameter.
+    @return: A L{Deferred} which results in an L{AsynchronousFileIOLayer}.
     """
 <br/>
 def AsynchronousFileIOLayer.read(consumer, start=0, end=None)
@@ -30,7 +31,9 @@ def AsynchronousFileIOLayer.write(producer, start=0)
     """
     @param producer: IFilePathProducer provider. Its produceTo method
         will be called.
-    @param start: The byte offset into the file at which to start writing. [what about appending?]
+    @param start: The byte offset into the file at which to start
+        writing. If the file was opened in append mode, then this
+        parameter must not be specified.
     @return: None.
     """
 <br/>
@@ -123,8 +126,9 @@ important to note this means there will be duplicate completion
 notifications between the deferred and the .finished method. The order
 these are called in should perhaps be well-defined.
 
-What about appending to a file? Should there be a special value passable as the 'start' parameter to write to indicate that the file should be appended to?
+What about duplicating filepath.create()'s behavior asynchronously?
 
+openStream is kind of a strange name, given web2.streams.
 
 === Punchline ===
 
