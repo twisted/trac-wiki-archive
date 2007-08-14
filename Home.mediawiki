@@ -55,7 +55,7 @@ We have tentatively scheduled a September interview with the CEO and lead develo
 
   "Chesspark was created by chess lovers to bring chess to a wide audience of casual, club, and professional players. Our modern and easy to use interface makes use of the latest technologies for the Web as well as Instant Messaging in order to make online chess accessible to everyone, not just the elite players. However, those elite players will find features at Chesspark that are available no where else and made just for them."
 
-Join us as we explore how others are uniquely deploying Twisted, while making bazillions of dollars and friends. Read more about it here: 
+Join us as we explore how others are uniquely deploying Twisted, while making bazillions of dollars and friends. Read more about the show here: 
 
  TheTwistedShow
 
