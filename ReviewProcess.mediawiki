@@ -12,7 +12,7 @@ The post-development, pre-commit process Twisted has adopted is this:
   1. Add {{{review}}} to the comma-separated keywords field
   1. Change the ticket priority to {{{highest}}}
   1. Change the owner to either no one or, if a particular developer is likely to review a branch or a particular developer's input is desired on the branch, that developer.  For the former case, when starting a review the reviewer should assign the ticket to themselves.
-  1. Comment on the ticket indicating whether the changes to be reviewed can be found.
+  1. Comment on the ticket indicating where the changes to be reviewed can be found.
 
  * A reviewer can be anyone who is familiar with the Twisted codebase, coding standard, and review requirements.  A reviewer need not necessarily be familiar with the specific area of Twisted being changed, but he or she should feel confident in his or her abilities to spot problems in the change.
  
