@@ -13,7 +13,7 @@ We would like the thank the following individuals and organizations for their sp
 === Buildbot slave machines: ===
  * '''JP Calderone''' provides a Linux buildslave.
 
- * '''Stephen Thorne''' provides our Mac OS X buildslave.
+ * [http://www.apple.com/ Apple] contributed a Mac OS X buildslave, which is currently hosted and operated by [http://divmod.org/ Divmod].
 
  * '''Mike Taylor''' provides our Windows 2000 buildslave.
  
