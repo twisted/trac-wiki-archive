@@ -14,7 +14,7 @@ The post-development, pre-commit process Twisted has adopted is this:
   1. Change the owner to either no one or, if a particular developer is likely to review a branch or a particular developer's input is desired on the branch, that developer.  For the former case, when starting a review the reviewer should assign the ticket to themselves.
   1. Comment on the ticket indicating where the changes to be reviewed can be found.
 
- * A reviewer can be anyone who is familiar with the Twisted codebase, coding standard, and review requirements.  A reviewer need not necessarily be familiar with the specific area of Twisted being changed, but he or she should feel confident in his or her abilities to spot problems in the change.
+ * A reviewer can be anyone who is familiar with the Twisted codebase, [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/coding-standard.xhtml?format=raw coding standard], and review requirements.  A reviewer need not necessarily be familiar with the specific area of Twisted being changed, but he or she should feel confident in his or her abilities to spot problems in the change.
  
  * A reviewer must reject a set of changes in any of the following circumstances: 
    * The test suite fails on any of the supported* platforms as a result of the changes.
@@ -23,7 +23,7 @@ The post-development, pre-commit process Twisted has adopted is this:
    * The changes add new public APIs or test methods without adding documentation for them.
    * The changes modify public APIs or test methods which are undocumented (ie, a function which has no docstring is modified, or a class which has no docstring has methods added to it) without adding documentation. 
    * The changes modify the behavior of a documented API without updating the documentation. 
-   * The changes violate the coding standard.
+   * The changes violate the [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/coding-standard.xhtml?format=raw coding standard].
    * pyflakes is an useful tool to check basic quality of code. The following command will check all the files modified and added by a branch merge:
 {{{
 svn status | grep '^\M\|^A' | cut -c 8- | xargs pyflakes
