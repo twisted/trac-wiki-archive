@@ -39,7 +39,7 @@ See [wiki:FrequentlyAskedQuestions the FAQ] for commonly asked questions about T
 
 {{{
 #!html
-<a href=http://twistedmatrix.com/projects/core/documentation/howto/index.html><b>Core howto index</font></a> - You probably want to read this.
+<a href="http://twistedmatrix.com/projects/core/documentation/howto/index.html"><b>Core howto index</b></a> - You probably want to read this.
 }}}
 
 
