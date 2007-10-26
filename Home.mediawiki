@@ -37,6 +37,10 @@ Want to help Twisted, but don't have any spare time? If you appreciate Twisted a
 
 See [wiki:FrequentlyAskedQuestions the FAQ] for commonly asked questions about Twisted.
 
+{{{
+#!html
+<a href=http://twistedmatrix.com/projects/core/documentation/howto/index.html><b>Core howto index</font></a> - You probably want to read this.
+}}}
 
 
 == Twisted Projects ==
