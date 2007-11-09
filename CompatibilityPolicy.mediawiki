@@ -19,7 +19,7 @@ Throughout this document, "compatible" changes are those which meet these specif
 
 The most basic thing that can happen between Twisted versions, of course, is that the code may change.  That means that no application may ever rely on, for example, the value of any func_code object's co_code attribute remaining stable, or the checksum of a .py file remaining stable.
 
-New code may also be added.  No application may ever rely on the output of the 'dir' function on any object remaining stable, nor on any object's !__all!__ attribute, nor on any object's !__dict!__ having new keys added to it.  These may happen in any maintenance or bugfix release, no matter how minor.
+New code may also be added.  No application may ever rely on the output of the 'dir' function on any object remaining stable, nor on any object's !__all!__ attribute, nor on any object's !__dict!__ not having new keys added to it.  These may happen in any maintenance or bugfix release, no matter how minor.
 
 Docstrings may also change at any time.  No application code may expect any Twisted class, module, or method's !__doc!__ attribute to remain the same.
 
