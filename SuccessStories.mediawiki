@@ -3,7 +3,7 @@
 
 Justin.tv is a platform for sharing live video online.  We allow anyone to broadcast live video from their PC and chat with viewers.  Every second of every broadcast is archived so it can later be browsed, searched, or made into highlight clips.
 
-We developed custom Flash video software, the Python Media Server, which uses Twisted as the event framework.  Thanks to Twisted and the Amazon Elastic Compute Cloud, we save thousands of dollars by avoiding expensive software licenses and premium CDN bandwidth charges.  In addition, we were able to set the record for the highest number of simultaneous viewers (over 14,000) for a live Flash video stream.  Our video cluster currently supports hundreds of simultaneous broadcasts and serves over 500,000 live video sessions per day.  
+We developed custom Flash video software, the Python Media Server, which uses Twisted as the event framework.  Thanks to Twisted and the Amazon Elastic Compute Cloud, we save thousands of dollars by avoiding expensive software licenses and premium CDN bandwidth charges.  In addition, we were able to set the record for the highest number of simultaneous viewers (over 14,000) for a live Flash video stream.  Our Twisted video cluster currently supports hundreds of simultaneous broadcasts and serves over 500,000 live video sessions per day.  
 
 -- Kyle Vogt, VP Engineering, Justin.tv, Inc.
 
