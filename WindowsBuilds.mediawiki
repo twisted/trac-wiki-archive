@@ -30,12 +30,14 @@ With Cygwin installed, you need to make sure these two packages are installed:
 
 Once that's done, just issue the command:
 
-{{{$ python setup.py build --compiler=mingw32 install
+{{{
+python setup.py build --compiler=mingw32 install
 }}}
 
 If for some reason extensions won't build, try this instead:
 
-{{{$ python setup.py build_py build_scripts install --skip-build
+{{{
+python setup.py build_py build_scripts install --skip-build
 }}}
 
 
@@ -46,48 +48,51 @@ Cygwin version of Python, however it is built with the help of Cygwin
 packages.
 
  * Python 2.5 AND Python 2.4
-You need both.
+ You need both.
 
 
- * ZopeInterface 3.3.0
-Download and install it for both versions of Python.
+ * Zope``Interface 3.3.0
+ Download and install it for both versions of Python.
 
 
  * A-A-P
-This is what actually does the building.  http://www.a-a-p.org/download.html
-After installing it, make sure the file aap.bat is in your system PATH, using (for example) the environment variable applet.
+ This is what actually does the building.  http://www.a-a-p.org/download.html
+
+ After installing it, make sure the file aap.bat is in your system PATH, using (for example) the environment variable applet.
 
 
  * winreg
-You need this little module:
-http://www.rutherfurd.net/python/winreg/   # FIXME -- make aap fetch it
+ You need this little module:  http://www.rutherfurd.net/python/winreg/
 
 
  * Cygwin
-You will need Cygwin, with the gcc-mingw package installed.  Get Cygwin at: http://cygwin.com
+ You will need Cygwin, with the gcc-mingw package installed.  Get Cygwin at: http://cygwin.com
 
-DO NOT INSTALL CYGWIN PYTHON!
-DO NOT INSTALL CYGWIN PYTHON!
-(Install Native Windows Python.)
+ DO NOT INSTALL CYGWIN PYTHON!
+
+ DO NOT INSTALL CYGWIN PYTHON!
+
+ (Install Native Windows Python.)
 
 
  * Inno Setup
-This creates nice self-installers with uninstall functionality:  http://www.jrsoftware.org/isinfo.php
-You need version 4.0.8 or above.  (5.0.8 or later preferred.)
+ This creates nice self-installers with uninstall functionality:  http://www.jrsoftware.org/isinfo.php
+
+ You need version 4.0.8 or above.  (5.0.8 or later preferred.)
 
 
  * Bootstrap Twisted
-You will need an existing installation of Twisted, as the build script uses some utilities within Twisted.  The "bare minimum" install described above will suffice.
+ You will need an existing installation of Twisted, as the build script uses some utilities within Twisted.  The "bare minimum" install described above will suffice.
 
 
  * Issue the build command
+ Bring up a Cygwin prompt.  Change directories to the root of your Twisted source tree.  It should contain the directory "win32/". Now run the following:
 
-Bring up a Cygwin prompt.  Change directories to the root of your Twisted source tree.  It should contain the directory "win32/". Now run the following:
+ {{{
+ aap.bat -f win32/build.aap
+ }}}
 
-{{{$ aap.bat -f win32/build.aap
-}}}
-
-The four distributable files will be in dist/ when this is done.
+ The four distributable files will be in dist/ when this is done.
 
 == TROUBLESHOOTING ==
 If you have trouble building the official build, try the following:
