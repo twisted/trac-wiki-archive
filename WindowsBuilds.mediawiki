@@ -1,45 +1,40 @@
 == OVERVIEW ==
 
-Some requirements must be met to build the "Official" win32
-Twisted.  The Official build produces two files with the following
-features:
+Some requirements must be met to build the "Official" win32 Twisted.  The Official build produces two files with the following features:
 
  - One of the builds is for Python 2.5, the other is for Python 2.4.
  - There is a shortcut in the start menu for the Twisted Command Prompt which is a standard Windows command prompt with PATH and environment variables set up to invoke the Twisted commands the same way you would on Unix; e.g. "mktap".
 
-There are two ways to get Twisted installed from source.  One is to do
-the bare minimum necessary so that 'import twisted' works; the other
-is the Official method.
+There are two ways to get Twisted installed from source.  One is to do the bare minimum necessary so that 'import twisted' works; the other is the Official method.
 
 
 == BARE MINIMUM ==
-This method is only necessary if you are trying to install Twisted
-from e.g. the Subversion repository, and you don't want to acquire all the
+This method is only necessary if you are trying to install Twisted from e.g. the Subversion repository, and you don't want to acquire all the
 tools necessary to do the Official build.
 
  * Install either Python 2.4 or Python 2.5
 
  * Install Zope``Interface 3.3.0 or later for Python
 
- * With MSVC ***
+=== With MSVC ===
 Without Cygwin installed, you need MSVC installed for the cl.exe
 compiler, which is the default on windows.  Just issue the command:
 $ python setup.py install
 
- * With Cygwin ***
+=== With Cygwin ===
 With Cygwin installed, you need to make sure these two packages are installed:
-- gcc
-- gcc-mingw
-You also need libpython22.a (or libpython23.a as appropriate).  
-Instructions can be found at http://sebsauvage.net/python/mingw.html .
+  - gcc
+  - gcc-mingw
 
 Once that's done, just issue the command:
 
-$ python setup.py build --compiler=mingw32 install
+{{{$ python setup.py build --compiler=mingw32 install
+}}}
 
 If for some reason extensions won't build, try this instead:
 
-$ python setup.py build_py build_scripts install --skip-build
+{{{$ python setup.py build_py build_scripts install --skip-build
+}}}
 
 
 == OFFICIAL ==
@@ -48,60 +43,49 @@ The Official Twisted is built with native Python 2.3 (latest), not the
 Cygwin version of Python, however it is built with the help of Cygwin
 packages.
 
- * Python 2.3 AND Python 2.4 ***
+ * Python 2.5 AND Python 2.4
 You need both.
 
 
- * ZopeInterface 3.0.1
+ * ZopeInterface 3.3.0
 Download and install it for both versions of Python.
 
 
- * A-A-P ***
-This is what actually does the building.
-http://www.a-a-p.org/download.html
-After installing it, make sure the file aap.bat is in your system PATH, using
-(for example) the environment variable applet.
+ * A-A-P
+This is what actually does the building.  http://www.a-a-p.org/download.html
+After installing it, make sure the file aap.bat is in your system PATH, using (for example) the environment variable applet.
 
 
- * winreg ***
+ * winreg
 You need this little module:
 http://www.rutherfurd.net/python/winreg/   # FIXME -- make aap fetch it
 
 
- * Cygwin ***
-You will need Cygwin, with the gcc-mingw package installed.  Get
-Cygwin at:
-
-http://cygwin.com
+ * Cygwin
+You will need Cygwin, with the gcc-mingw package installed.  Get Cygwin at: http://cygwin.com
 
 DO NOT INSTALL CYGWIN PYTHON!
 DO NOT INSTALL CYGWIN PYTHON!
 (Install Native Windows Python.)
 
 
- * Inno Setup ***
-This creates nice self-installers with uninstall functionality:
-http://www.jrsoftware.org/isinfo.php
+ * Inno Setup
+This creates nice self-installers with uninstall functionality:  http://www.jrsoftware.org/isinfo.php
 You need version 4.0.8 or above.  (5.0.8 or later preferred.)
 
 
- * Bootstrap Twisted ***
-You will need an existing installation of Twisted, as the build script
-uses some utilities within Twisted.  The "bare minimum" install
-described above will suffice.
+ * Bootstrap Twisted
+You will need an existing installation of Twisted, as the build script uses some utilities within Twisted.  The "bare minimum" install described above will suffice.
 
 
- * Issue the build command ***
+ * Issue the build command
 
-Bring up a Cygwin prompt.  Change directories to the root of your Twisted
-source tree.  It should contain the directory "win32/".
-Now run the following:
+Bring up a Cygwin prompt.  Change directories to the root of your Twisted source tree.  It should contain the directory "win32/". Now run the following:
 
-$ aap.bat -f win32/build.aap
+{{{$ aap.bat -f win32/build.aap
+}}}
 
 The four distributable files will be in dist/ when this is done.
-
-
 
 == TROUBLESHOOTING ==
 If you have trouble building the official build, try the following:
