@@ -2,7 +2,7 @@ To generate the API docs for the Twisted web site.
 
 You will need a checkout of the latest release of Twisted.
 
-In a checkout of WebSite, in the trunk/vhosts/twistedmatrix.com/documents/current directory, run:
+In a checkout of !WebSite (<svn://svn.twistedmatrix.com/svn/WebSite/trunk>), in the trunk/vhosts/twistedmatrix.com/documents/current directory, run:
 {{{
 % pydoctor -c twisted.cfg -o twisted-doc-model
 ...
