@@ -4,7 +4,7 @@
  * Want to use Twisted for '''web development'''? Please read [wiki:WebDevelopmentWithTwisted this page] first!
  * [http://twistedmatrix.com/projects/core/documentation/howto/index.html Core Documentation] ([http://twistedmatrix.com/projects/core/documentation/howto/book.pdf view as PDF]) - the code developer guide for Twisted Core, with the famous "Finger" tutorial, details on how to use deferreds, etc.
  * Twisted Core [http://twistedmatrix.com/projects/core/documentation/man/ man pages].
- * Twisted Core [http://twistedmatrix.com/projects/conch/documentation/examples/ examples].
+ * Twisted Core [http://twistedmatrix.com/projects/core/documentation/examples/ examples].
  * View the current [http://twistedmatrix.com/documents/current/api/ API reference].
  * The [wiki:TwistedProjects project] pages have documentation links that are pertinent to each Twisted project. For convenience, we offer some of these links below:
    * '''conch''' - [http://twistedmatrix.com/projects/conch/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/conch/documentation/examples/ examples]
