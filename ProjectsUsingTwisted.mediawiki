@@ -57,8 +57,8 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://gosiege.sourceforge.net/ Go Siege] - multiplayer Go game.
  * [http://www.asbahr.com/beyond.html Beyond 2] - high level framework for assembling, animating, and interacting with 3D virtual environments.
  * [http://sourceforge.net/projects/innerspace InnerSpace] - a pseudo-MUD engine.
- * [http://www.galaxymage.org GalaxyMage] - a cross-platform, open-source tactical RPG with online multiplayer play.
- * [http://www.openrts.org OpenRTS] - an open source real-time strategy game with multiplayer and scenario games.
+ * [https://gna.org/projects/tactics GalaxyMage] - a cross-platform, open-source tactical RPG with online multiplayer play.
+ * [http://arrakis.sourceforge.net OpenRTS] - an open source real-time strategy game with multiplayer and scenario games.
  * [http://pyscrabble.sourceforge.net/ PyScrabble] - an online, multiplayer Scrabble game.
  * [http://freshmeat.net/projects/poker3d/ Poker3d] - a 3d poker game server and client.
  * [http://web.mit.edu/bshi/www/buyasta/ Buyasta] - a MUD engine.
