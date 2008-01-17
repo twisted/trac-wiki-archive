@@ -1,5 +1,8 @@
 = Downloads =
 
+'''Note: The server hosting Twisted packages is currently down due to infrastructure maintenance.  It will probably return late today (Jan 17) or sometime tomorrow.'''
+
+
 For more information about Twisted, including release notes, please see the [wiki:TwistedProject Twisted project page]. You can get older releases from our [http://tmrc.mit.edu/mirror/twisted/ download site].
 
 == Ubuntu and Debian ==
