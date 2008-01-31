@@ -25,7 +25,7 @@ Want to help Twisted, but don't have any spare time? If you appreciate Twisted a
           <tr>
             <td align="right" nowrap="nowrap" width="1%">
               $
-              <input name="donationAmount" onfocus="this.style.color='black'; this.value='';" size="11" style="color:grey;" type="text" value="Enter Amount"/>
+              <input name="donationAmount" size="11" style="color:grey;" type="text" value="25"/>
             </td>
             <td align="left" width="1%">
               <input alt="Donate" src="https://checkout.google.com/buttons/donateNow.gif?merchant_id=622836985124940&amp;w=115&amp;h=50&amp;style=white&amp;variant=text&amp;loc=en_US" type="image"/>
