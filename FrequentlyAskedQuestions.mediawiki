@@ -52,6 +52,14 @@ An example: 1.0.6+1.0.7rc1-1
 
 In Debian versioning, 1.0.7rc1 is greater than 1.0.7. This means that if you install a package with Version: 1.0.7rc1, and then that package gets a new version 1.0.7, apt will not upgrade it for you, because 1.0.7 looks like an older version. So, we prefix the previous version to the actual version. 1.0.6+1.0.7rc1 is less than 1.0.7. 
 
+=== Why am I getting !ImportErrors for Twisted subpackages on OS X 10.5? ===
+
+OS X 10.5 comes with a partial installation of Twisted.  This version is found first by Python and will hide any other version of Twisted you install.  In order to use a different version of Twisted, you need to modify your `PYTHONPATH` environment variable so that the location of the alternate install is inspected first.
+
+=== Why am I getting !ImportErrors for Twisted subpackages on my 64bit installation of RedHat/Fedora/CentOS? ===
+
+Red Hat and derived Linux distributions arrange to have certain Python libraries installed in `/usr/lib/` and other parts installed in `/usr/lib64/`.  This is problematic for Twisted, since it results in some of Twisted being installed in one directory and the rest installed in another.  Python will load a package from only one directory.  You can override this default behavior when you install Twisted by supplying the `--install-lib` parameter when running Twisted's `setup.py`.
+
 == Core Twisted ==
 
 === Why does Twisted depend on Zope? ===
