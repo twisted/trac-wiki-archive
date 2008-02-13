@@ -104,10 +104,11 @@ More Useful Pointers:
 
  * [wiki:TwistedCommunity The Twisted Community] - Get in touch with other Twisted users and developers.
  * [wiki:TwistedDevelopment Development] - Our development process; also, don't miss out on [wiki:ContributingToTwistedLabs contributing] to Twisted.
- * [wiki:TwistedSponsors Sponsors] - Twisted development is sponsored by a number of individuals and organisations with donations of hardware, software, hosting, and so on. We're especially seeking resources to help improve [wiki:Windows Twisted on MS Windows].
  * [wiki:SuccessStories Success Stories] - Read about people who have been successful with Twisted.
  * [wiki:TheTwistedShow The Twisted Show] - Interviews and podcasts with businesses and projects that use Twisted.
  * [wiki:ProjectsUsingTwisted Software that uses Twisted] - Learn what other projects are using Twisted.
  * [wiki:TwistedMatrixLaboratories The Labs] - What is ''Twisted Matrix Laboratories''?
+ * [wiki:TwistedSponsors Sponsors] - Individuals and organisations aid development with donations of hardware, software, hosting, and so on.
+ * [wiki:Windows Windows] We're especially seeking resources to help improve Twisted on Windows.
 
 Twisted is supported by [http://www.divmod.org/trac the Divmod corporation].
