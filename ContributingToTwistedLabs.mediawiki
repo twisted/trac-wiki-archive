@@ -22,6 +22,6 @@ What you need to read if you are planning on contributing technically:
  * Memorize the [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/coding-standard.xhtml?format=raw Twisted Coding standard].
  * Practice all of these by submitting patches (submit branches in {{{diff -u}}} format to the [http://twistedmatrix.com/trac/newticket ticket tracker])
  * Explore the [wiki:ReviewProcess code review process] and help a brother/sister out
- * [http://twistedmatrix.com/buildbot/ Buildbot]. Watch it.
+ * [http://buildbot.twistedmatrix.com/ Buildbot]. Watch it.
 
 See also [wiki:TwistedDevelopment Twisted Development].
