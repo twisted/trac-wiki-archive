@@ -1,6 +1,6 @@
 = Twistery In the News =
 
-== The Twisted Joins Software Freedom Conservancy (2008-02-07) ==
+== Twisted Joins Software Freedom Conservancy (2008-02-07) ==
 
 A little less than a year ago, we were approached by Erik Dahl of Zenoss
 about creating a legal entity which Zenoss (and hopefully others!) could
