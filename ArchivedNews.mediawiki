@@ -1,5 +1,11 @@
 = Twistery In the News =
 
+== Episode 1 of the "Twisted Show" (2007-01-22) ==
+
+The TwistedShow is a new experiment we are trying at TM Labs in an effort to let people and business who are solving unique and/or interesting problems with Twisted share their solutions with a wide audience.
+
+This first installment is an interview with a few folks at [http://renkoo.com/ Renkoo] who are using Twisted to innovate meetings as part of the social media landscape.
+
 == Twisted 2.5.0 (2007-01-11) ==
 
 Major Twisted release! Read the [http://twistedmatrix.com/pipermail/twisted-python/2007-January/014589.html release announcement] and click on things on the [wiki:Downloads] page.
