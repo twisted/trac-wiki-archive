@@ -1,5 +1,9 @@
 = Twistery In the News =
 
+== Twisted Matrix Laboratories Blog (2007-12-02) ==
+
+TM Labs has a [http://labs.twistedmatrix.com new blog]! We will be posting various items of interest that relate to development of Twisted, useful community information, and enthralling news events. Add us to your reader!
+
 == Episode 1 of the "Twisted Show" (2007-01-22) ==
 
 [wiki:TheTwistedShow The Twisted Show] is a new experiment we are trying at TM Labs in an effort to let people and business who are solving unique and/or interesting problems with Twisted share their solutions with a wide audience.
