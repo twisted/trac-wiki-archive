@@ -6,10 +6,24 @@
 
 == Goals ==
 
+Our goals are simple: we want to be able to continue improving Twisted -- everything from specialized bug fixes to paying hosting bills -- for the benefit of the community, the users of Twisted. We want to provide sponsors with the ability to make tax-deductible donations, and we want to provide a forum where our sponsors can give voice to their own vision of how Twisted can be better.
+
 == Sponsorship Levels ==
+
+Below are the names and amounts associated with levels of sponsorship. 
+
+   * Platinum: $20,000
+   * Gold: $10,000
+   * Silver: $1,000
+   * Bronze: $500
+   * Aluminum: $50
+
+These will be used on the front page of http://twistedmatrix.com to group sponsor's logos. Sponsor logos will be sorted by time: earlier sponsors at the top.
 
 == Sponsors ==
 
-[founding sponsors, corporate and individual]
+We are currently engaged with multiple companies/organizations, building a solid base of Founding Sponsors. Check back soon; we'll be posting information and acknowledgments here! 
 
 == How to Donate ==
+
+You can use the form on the front page at anytime to make a donation to the TSF! Look for the PayPal and Google Checkout "Dontate" buttons.
