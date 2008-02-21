@@ -20,7 +20,7 @@ Below are the names and amounts associated with levels of sponsorship.
    * Bronze: $500
    * Aluminum: $50
 
-These will be used on the front page of http://twistedmatrix.com to group sponsor's logos. Sponsor logos will be sorted by time: earlier sponsors at the top.
+These will be used on the front page of http://twistedmatrix.com/ to group sponsor's logos. Sponsor logos will be sorted by time: earlier sponsors at the top.
 
 == Sponsors ==
 
