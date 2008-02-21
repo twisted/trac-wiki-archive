@@ -1,8 +1,10 @@
 = Twisted Software Foundation =
 
-[prelim text]
+The name "Twisted Software Foundation" is a reference of convenience to our legal non-profit status through the Software Freedom Conservancy. The Conservancy has allowed us to pool legal resources with other projects, such as Inkscape, Samba, and Wine, to reduce the management overhead associated with creating an official legal entity.
 
 == Background ==
+
+At the end of January, 2008, the Twisted project finalized an agreement with the [http://conservancy.softwarefreedom.org/ Software Freedom Conservancy] this most recent effort was a culmination of hard work over the last year between the Twisted project and the Conservancy.
 
 == Goals ==
 
@@ -26,4 +28,8 @@ We are currently engaged with multiple companies/organizations, building a solid
 
 == How to Donate ==
 
-You can use the form on the front page at anytime to make a donation to the TSF! Look for the PayPal and Google Checkout "Dontate" buttons.
+You can use the form on the front page at anytime to make a donation to the TSF! Look for the !PayPal and Google Checkout "Donate" buttons. These linked buttons point to the Conservancy's account for us, which is a tax-exempt 501(c)(3) organization. As a result, donations to Twisted are now tax-deductible.
+
+== Acknowledgments ==
+
+Once our founding sponsors list is complete, we will also be making acknowledgments of those who played key roles in setting up the TSF.
