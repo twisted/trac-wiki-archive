@@ -1,5 +1,8 @@
 = Twistery In the News =
 
+{{{
+#!html
+<!--
 == Twisted Joins Software Freedom Conservancy (2008-02-07) ==
 
 A little less than a year ago, we were approached by Erik Dahl of Zenoss
@@ -14,6 +17,8 @@ finally, very recently joined the Software Freedom Conservancy.
 
 Read the full announcement [http://twistedmatrix.com/pipermail/twisted-python/2008-February/016740.html here]. 
 
+-->
+}}}
 == Twisted Matrix Laboratories Blog (2007-12-02) ==
 
 TM Labs has a [http://labs.twistedmatrix.com new blog]! We will be posting various items of interest that relate to development of Twisted, useful community information, and enthralling news events. Add us to your reader!
