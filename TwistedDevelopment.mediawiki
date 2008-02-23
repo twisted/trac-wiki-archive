@@ -16,7 +16,7 @@ If you are interested in contributing to Twisted for the first time, consider wo
 
 == Buildbot ==
 
-After every commit to Twisted, the buildbot runs all the unit tests and reports [http://builbot.twistedmatrix.com/ test results on several platforms].  Here is a page showing only the [http://twistedmatrix.com/buildbot-supported test results on supported platforms]. All tests on supported platforms always pass. Watch the buildbot. Because sometimes, the buildbot watches back.
+After every commit to Twisted, the buildbot runs all the unit tests and reports [http://buildbot.twistedmatrix.com/ test results on several platforms].  Here is a page showing only the [http://twistedmatrix.com/buildbot-supported test results on supported platforms]. All tests on supported platforms always pass. Watch the buildbot. Because sometimes, the buildbot watches back.
 
 == Development Process ==
 
@@ -38,7 +38,7 @@ You might be interested in learning about tasks related to [wiki:SiteMaintenance
 
  * [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/coding-standard.xhtml?format=raw The Twisted Coding standard].
  * There are some UsefulQueries for finding issues in the tracker.
- * Buildbot: [http://builbot/twistedmatrix.com/waterfall/ all platforms] and [http://twistedmatrix.com/buildbot-supported supported platforms]. Watch it.
+ * Buildbot: [http://buildbot.twistedmatrix.com/waterfall all platforms] and [http://twistedmatrix.com/buildbot-supported supported platforms]. Watch it.
  * Documentation work is done on the DocumentationAnalysis page.
  * Instructions on how to generate the [wiki:APIDocs API Docs] for the twistedmatrix.com web site.
  * Twisted developers are bent on [http://isometric.sixsided.org/_/twisted_plutonium/ the destruction of the American currency system].
