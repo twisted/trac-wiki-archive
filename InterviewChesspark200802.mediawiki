@@ -1,0 +1,29 @@
+= Interview with Chesspark =
+
+{{{
+#!html
+<a href="http://www.chesspark.com">
+<img src="http://www.chesspark.com/images/logo2.png" align="right" style="padding:1.5em;" border="0" />
+</a>
+}}}
+
+== About Chesspark ==
+
+
+== The Players ==
+
+At the end of the interview are pasted some links of interest. Enjoy!
+
+----
+
+
+
+
+== Resources ==
+
+=== Chesspark ===
+
+=== Jack ===
+
+=== Chris ===
+  * http://www.feedblog.org/2006/08/subcon_cluster_.html
