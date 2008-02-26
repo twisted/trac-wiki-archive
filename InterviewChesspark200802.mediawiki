@@ -25,13 +25,15 @@ Though a bit rough, this interview was in good enough audio shape to post as a p
 
 We are also trying out podcasting via the [http://feeds.feedburner.com/TheTwistedShow RSS feed] for the [http://thetwistedshow.blogspot.com/ Twisted Show on blogger].
 
+== Conference ==
+
+Jack will be talking about using Open Source solutions like Twisted at the [http://2008.sxsw.com/interactive/programming/panels_schedule/?action=show&id=IAP060401 SXSW conference] this March in Austin, TX.
 
 == Resources ==
 
 === Chesspark ===
  * http://www.chesspark.com/
  * http://blog.chesspark.com/
- * http://2008.sxsw.com/interactive/programming/panels_schedule/?action=show&id=IAP060401
  * http://mashable.com/2007/07/13/chesspark-funded/
  * http://www.podtech.net/home/3750/lunchmeet-online-chess-with-chesspark
  * http://kara.allthingsd.com/category/chesspark/
