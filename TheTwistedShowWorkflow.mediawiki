@@ -2,7 +2,7 @@
 
  1. Get approval, schedule the interview, obtain links and background information
  1. Create a list of questions, topics to cover, etc., optionally sharing them with the interviewee
- 1. Conduct the interview, recording the conversation (Audio !Hijack + Skype are a good set of tools on Mac OS X)
+ 1. Conduct the interview, recording the conversation (Audio Hijack + Skype are a good set of tools on Mac OS X)
  1. Create a wiki page with a page name of the form "InterviewPERSONORGNAMEYYYYMM"
    * Add a section describing the person or organization
    * Provide a list of the people interviewed as well as who conducted the interview
