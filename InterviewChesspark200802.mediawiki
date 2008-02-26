@@ -13,7 +13,7 @@ Chesspark was created by chess lovers to bring chess to a wide audience of casua
 
 == The Players ==
 
-This interview was conducted via Skype with Jack Moffitt in Albuquerque, NM and Chris Zorn in Charleston, SC, while I lounged in my basement office in the Niobrara River "valley" of Valentine, NE.
+This interview was conducted via Skype with Jack Moffitt in Albuquerque, NM and Christopher Zorn in Charleston, SC, while I lounged in my basement office in the Niobrara River "valley" of Valentine, NE.
 
 At the end of the interview are pasted some links of interest. Enjoy!
 
@@ -31,6 +31,7 @@ We are also trying out podcasting via the [http://feeds.feedburner.com/TheTwiste
 === Chesspark ===
  * http://www.chesspark.com/
  * http://blog.chesspark.com/
+ * http://2008.sxsw.com/interactive/programming/panels_schedule/?action=show&id=IAP060401
  * http://mashable.com/2007/07/13/chesspark-funded/
  * http://www.podtech.net/home/3750/lunchmeet-online-chess-with-chesspark
  * http://kara.allthingsd.com/category/chesspark/
