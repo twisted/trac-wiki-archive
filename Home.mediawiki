@@ -43,7 +43,7 @@ return false;
         <tr>
             <td align="right" nowrap="nowrap" width="1%">
             $
-            <input id="item_price_1" name="item_price_1" size="11" style="color:grey;" type="text" value="Enter Amount"/>
+            <input id="item_price_1" name="item_price_1" size="11" style="color:grey;" type="text" value="25"/>
             </td>
             <td align="left" width="1%">
                 <input alt="Donate" src="https://checkout.google.com/buttons/donateNow.gif?merchant_id=622836985124940&amp;w=115&amp;h=50&amp;style=white&amp;variant=text&amp;loc=en_US" type="image"/>
