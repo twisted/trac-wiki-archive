@@ -22,8 +22,18 @@ At the end of the interview are pasted some links of interest. Enjoy!
 == Resources ==
 
 === Chesspark ===
+ * http://www.chesspark.com/
+ * http://blog.chesspark.com/
+ * http://mashable.com/2007/07/13/chesspark-funded/
+ * http://www.podtech.net/home/3750/lunchmeet-online-chess-with-chesspark
+ * http://kara.allthingsd.com/category/chesspark/
 
-=== Jack ===
+=== Jack Moffitt ===
+ * http://metajack.wordpress.com/
+ * http://www.linux.com/articles/2407
+ * http://www.betanews.com/article/999316586
 
-=== Chris ===
-  * http://www.feedblog.org/2006/08/subcon_cluster_.html
+=== Christopher Zorn ===
+ * http://thetofu.livejournal.com/
+ * http://www.butterfat.net/wiki/Projects/PunJab
+ * http://www.butterfat.net/wiki/Documentation/TwistedJabberComponentExample
