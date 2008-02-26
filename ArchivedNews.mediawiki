@@ -19,6 +19,16 @@ Read the full announcement [http://twistedmatrix.com/pipermail/twisted-python/20
 
 -->
 }}}
+
+== The Twisted Show: Episode 2 (2008-02-26) ==
+
+Yesterday, Duncan had the chance to talk with Jack Moffitt and Christopher Zorn of [http://www.chesspark.com/ Chesspark] about their company, their vision, and how Twisted played an integral role in their application and helped them to meet their goals.
+
+The interview is on [http://twistedmatrix.com/trac/wiki/InterviewChesspark200802 the site] and the feed is available [http://feeds.feedburner.com/TheTwistedShow here].
+
+We're still experimenting with podcasting and feed enclosures, so please be patient with us! If you have any issues, the media files are available at [http://www.archive.org/details/TwistedMatrixLabsInterviewWithChesspark archive.org].
+
+
 == Twisted Matrix Laboratories Blog (2007-12-02) ==
 
 TM Labs has a [http://labs.twistedmatrix.com new blog]! We will be posting various items of interest that relate to development of Twisted, useful community information, and enthralling news events. Add us to your reader!
