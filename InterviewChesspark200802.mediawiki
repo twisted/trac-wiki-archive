@@ -9,8 +9,11 @@
 
 == About Chesspark ==
 
+Chesspark was created by chess lovers to bring chess to a wide audience of casual, club, and professional players. Twisted was used to write the core of the application, instant messaging. This has made online chess accessible to everyone, not just the elite players. However, elite players will find features at Chesspark that are available no where else and made just for them.
 
 == The Players ==
+
+This interview was conducted via Skype with Jack Moffitt in Albuquerque, NM and Chris Zorn in Charleston, SC, while I lounged in my basement office in the Niobrara River "valley" of Valentine, NE.
 
 At the end of the interview are pasted some links of interest. Enjoy!
 
