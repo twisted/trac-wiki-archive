@@ -22,4 +22,16 @@ This one's much more involved:
 
  1. Save the audio interview as .ogg, editing out as much noise as possible
  1. Upload the audio files to archive.org using the tmlabs account (contact oubiwann for user/password info)
- 1. 
+   * tag content
+ 1. Upload logo
+ 1. Update wiki page with links to uploaded material on archive.org
+ 1. Create blog post on http://thetwistedshow.blogspot.com
+   * line feed setting
+   * podcast setting
+   * enclosures
+ 1. Check iTunes
+   * In order to post to iTunes, we had to submit the feed via [https://phobos.apple.com/WebObjects/MZFinance.woa/wa/publishPodcast this URL].
+   * If that link is broken and you need to submit another feed, try [http://www.apple.com/itunes/store/podcaststechspecs.html this page].
+   * Open iTunes and [... TBD]
+ 1. Update news on launchpad
+ 1. Create a labs.tm.com blog post announcing the interview
