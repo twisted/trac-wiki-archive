@@ -31,6 +31,8 @@ This one's much more involved:
    * line feed setting
    * podcast setting
    * enclosures
+ 1. Check !FeedBurner RSS.
+   * Had to enable !FeedBurner's !SmarCast service [more notes later]
  1. Check iTunes.
    * In order to post to iTunes, we had to submit the feed via [https://phobos.apple.com/WebObjects/MZFinance.woa/wa/publishPodcast this URL].
    * If that link is broken and you need to submit another feed, try [http://www.apple.com/itunes/store/podcaststechspecs.html this page].
