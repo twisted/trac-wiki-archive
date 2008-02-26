@@ -1,0 +1,25 @@
+= The Twisted Show Workflow =
+
+ 1. Get approval, schedule the interview, obtain links and background information
+ 1. Create a list of questions, topics to cover, etc., optionally sharing them with the interviewee
+ 1. Conduct the interview, recording the conversation (AudioHijack + Skype are a good set of tools on Mac OS X)
+ 1. Create a wiki page with a page name of the form "InterviewPERSONORGNAMEYYYYMM"
+   * Add a section describing the person or organization
+   * Provide a list of the people interviewed as well as who conducted the interview
+   * For the body of the wiki page, follow the instructions below, depending upon the medium
+   * At the end of the body, add a section for "Resources", to include such things as company links, news articles, other interviews, blogs, software projects, etc.
+
+== Text Media: Transcripts ==
+
+This one's easy:
+
+ 1. Transcribe the text and edit it.
+ 1. Paste it to the wiki page, bolding the questions for easy visual cueing by readers.
+
+== Audio Media: Podcasts ==
+
+This one's much more involved:
+
+ 1. Save the audio interview as .ogg, editing out as much noise as possible
+ 1. Upload the audio files to archive.org using the tmlabs account (contact oubiwann for user/password info)
+ 1. 
