@@ -23,7 +23,7 @@ This one's much more involved:
  1. Save the audio interview as .ogg, editing out as much noise as possible.
  1. Upload the audio files to archive.org using the tmlabs account (contact oubiwann for user/password info).
    * Provide titles of the form "Twisted Matrix Labs: Interview with ..." or "Twisted Matrix Labs: ..."
-   * This should give corresponding identifiers of "TwistedMatrixLabsInterviewWith..." or "TwistedMatrixLabs..."
+   * This should give corresponding identifiers of "!TwistedMatrixLabsInterviewWith..." or "!TwistedMatrixLabs..."
    * Tag content with at least the following "twisted, python, twisted show, tmlabs, twisted matrix laboratories".
  1. Upload logo.
  1. Update wiki page with links to uploaded material on archive.org.
