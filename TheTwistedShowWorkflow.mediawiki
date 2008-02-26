@@ -1,12 +1,12 @@
 = The Twisted Show Workflow =
 
- 1. Get approval, schedule the interview, obtain links and background information
- 1. Create a list of questions, topics to cover, etc., optionally sharing them with the interviewee
- 1. Conduct the interview, recording the conversation (Audio Hijack + Skype are a good set of tools on Mac OS X)
- 1. Create a wiki page with a page name of the form "InterviewPERSONORGNAMEYYYYMM"
-   * Add a section describing the person or organization
-   * Provide a list of the people interviewed as well as who conducted the interview
-   * For the body of the wiki page, follow the instructions below, depending upon the medium
+ 1. Get approval, schedule the interview, obtain links and background information.
+ 1. Create a list of questions, topics to cover, etc., optionally sharing them with the interviewee.
+ 1. Conduct the interview, recording the conversation (Audio Hijack + Skype are a good set of tools on Mac OS X).
+ 1. Create a wiki page with a page name of the form "InterviewPERSONORGNAMEYYYYMM".
+   * Add a section describing the person or organization.
+   * Provide a list of the people interviewed as well as who conducted the interview.
+   * For the body of the wiki page, follow the instructions below, depending upon the medium.
    * At the end of the body, add a section for "Resources", to include such things as company links, news articles, other interviews, blogs, software projects, etc.
 
 == Text Media: Transcripts ==
@@ -20,16 +20,18 @@ This one's easy:
 
 This one's much more involved:
 
- 1. Save the audio interview as .ogg, editing out as much noise as possible
- 1. Upload the audio files to archive.org using the tmlabs account (contact oubiwann for user/password info)
-   * tag content
- 1. Upload logo
- 1. Update wiki page with links to uploaded material on archive.org
- 1. Create blog post on http://thetwistedshow.blogspot.com
+ 1. Save the audio interview as .ogg, editing out as much noise as possible.
+ 1. Upload the audio files to archive.org using the tmlabs account (contact oubiwann for user/password info).
+   * Provide titles of the form "Twisted Matrix Labs: Interview with ..." or "Twisted Matrix Labs: ..."
+   * This should give corresponding identifiers of "TwistedMatrixLabsInterviewWith..." or "TwistedMatrixLabs..."
+   * Tag content with at least the following "twisted, python, twisted show, tmlabs, twisted matrix laboratories".
+ 1. Upload logo.
+ 1. Update wiki page with links to uploaded material on archive.org.
+ 1. Create blog post on http://thetwistedshow.blogspot.com.
    * line feed setting
    * podcast setting
    * enclosures
- 1. Check iTunes
+ 1. Check iTunes.
    * In order to post to iTunes, we had to submit the feed via [https://phobos.apple.com/WebObjects/MZFinance.woa/wa/publishPodcast this URL].
    * If that link is broken and you need to submit another feed, try [http://www.apple.com/itunes/store/podcaststechspecs.html this page].
    * Open iTunes and [... TBD]
