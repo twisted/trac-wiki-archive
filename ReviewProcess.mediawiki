@@ -10,9 +10,8 @@ The post-development, pre-commit process Twisted has adopted is this:
  
  * When a ticket becomes ready for review, the trac workflow for the developer is as follows:
   1. Add {{{review}}} to the comma-separated keywords field
-  1. Change the ticket priority to {{{highest}}}
   1. Change the owner to either no one or, if a particular developer is likely to review a branch or a particular developer's input is desired on the branch, that developer.  For the former case, when starting a review the reviewer should assign the ticket to themselves.
-  1. Comment on the ticket indicating where the changes to be reviewed can be found.
+  1. Comment on the ticket indicating anything it might be beneficial for the reviewer to know.  Tickets should be described well enough that the change is already justified and the new code should be easy enough to read that further explanations aren't necessary to understand it, but sometimes diffs themselves can be more difficult to read than either the old or new state of the code, so comments like ''the implementation of foo moved from bar.py to baz.py'' can sometimes make a reviewer's job easier.
 
  * A reviewer can be anyone who is familiar with the Twisted codebase, [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/coding-standard.xhtml?format=raw coding standard], and review requirements.  A reviewer need not necessarily be familiar with the specific area of Twisted being changed, but he or she should feel confident in his or her abilities to spot problems in the change.
  
@@ -52,9 +51,9 @@ Fixes #&lt;ticket number&gt;<br />
 </pre>
 }}}
 
- Only the "Fixes" line actually *needs* to conform to this (since it is automatically processed in order to update the ticket's state in the tracker). Multiple fixes lines will close multiple tickets. The commit message should also describe the change being made in a modest amount of detail.  This should be detailed enough for someone doing a release to formulate a changelog entry.
+ Several tools exist which parse commit messages to trunk, so the ''Author'', ''Reviewer'', and ''Fixes'' lines should conform to this format exactly.  Multiple ''Fixes'' lines will close multiple tickets.  ''Refs'' may also be used to attach the commit message to another ticket which is not being closed.  The commit message should also describe the change being made in a modest amount of detail.  This should be detailed enough for someone doing a release to formulate a changelog entry.
  
- * If a change set somehow introduces a test suite regression or is otherwise found to be undesirable, it is to be reverted.  Any developer may revert a commit which introduces a test suite regression on a supported platform. The revert message should be as explicit as possible. If it's a failure, put the message of the error in the commit message, possibly with the identifier of the buildbot slave. If there are too much failures, it can be put in the tracker, with a reference in the message. Use the "Reopens" tag to automatically reopen the ticket:
+ * If a change set somehow introduces a test suite regression or is otherwise found to be undesirable, it is to be reverted.  Any developer may revert a commit which introduces a test suite regression on a supported platform. The revert message should be as explicit as possible. If it's a failure, put the message of the error in the commit message, possibly with the identifier of the buildbot slave. If there are too many failures, it can be put in the tracker, with a reference in the message. Use the "Reopens" tag to automatically reopen the ticket:
 {{{
 #!html
 <pre class="wiki">
