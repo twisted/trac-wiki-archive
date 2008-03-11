@@ -78,6 +78,41 @@ See [http://twistedmatrix.com/projects/core/documentation/howto/servers.html Wri
 
 Try [http://twistedmatrix.com/projects/core/documentation/howto/servers.html Writing Servers].
 
+=== How do I make Twisted talk to multiple clients / connect to multiple servers? ===
+
+Twisted already does this.  If you want to connect to multiple servers, call `connectTCP` (or similar) multiple times, and each call will result in a single outgoing connection.  `listenTCP` will result in your factory (and therefore your protocol) being invoked for each incoming connection.
+
+Sometimes people ask this question when they write a function that calls `connectTCP`, then `reactor.run()`.  You don't usually need to call `reactor.run()` yourself; let `twistd` do it.  If you do need to call it yourself, call it ''just once'' after your initial setup.  When `reactor.run()` exits, your program should too.
+
+=== How do I make input on one connection result in output on another? ===
+
+This seems like it's a Twisted question, but actually it's a Python question.  Each `Protocol` object represents one connection; you can call its `transport.write` to write some data to it.  These are regular Python objects; you can put them into lists, dictionaries, or whatever other data structure is appropriate to your application.
+
+As a simple example, add a list to your factory, and in your protocol's `connectionMade` and `connectionLost`, add it and remove it to that list.  Here's the Python code:
+
+{{{
+#!py
+from twisted.internet.protocol import Protocol, Factory
+from twisted.internet import reactor
+
+class MultiEcho(Protocol):
+    def connectionMade(self):
+        self.factory.echoers.append(self)
+    def dataReceived(self, data):
+        for echoer in self.factory.echoers:
+            echoer.transport.write(data)
+    def connectionLost(self, reason):
+        self.factory.echoers.remove(self)
+
+class MultiEchoFactory(Factory):
+    protocol = MultiEcho
+    def __init__(self):
+        self.echoers = []
+
+reactor.listenTCP(4321, MultiEchoFactory())
+reactor.run()
+}}}
+
 === When I try to install my reactor, I get errors about a reactor already being installed. What gives? ===
 
 Here's the rule - installing a reactor should always be the '''first''' thing you do, and I do mean first. Importing other stuff before you install the reactor can break your code.
