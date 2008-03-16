@@ -2,7 +2,7 @@
 
 == Twisted Announces Membership in the Software Freedom Conservancy (2008-03-16) ==
 
-At !PyCon 2008 we were delighted to share some good news with the Python community: the announcement of the [wiki:TwistedSoftwareFoundation Twisted Software Foundation]. Glyph had previously emailed the Twisted mail list, letting those close to the project know of this major event shortly after the paperwork was signed. Before we brought this before a more public audience, we wanted to give companies a chance to become "founding sponsors" -- and this is what has happened at !PyCon. We're looking forward to issuing a formal press release about this (inclung info on the founding sponsors) and will have more details in the near future.
+At !PyCon 2008 we were delighted to share some good news with the Python community: the announcement of the [wiki:TwistedSoftwareFoundation Twisted Software Foundation]. Glyph had previously emailed the Twisted mail list, letting those close to the project know of this major event shortly after the paperwork was signed. Before we brought this before a more public audience, we wanted to give companies a chance to become "founding sponsors" -- and this is what has happened at !PyCon. We're looking forward to issuing a formal press release about this (including info on the founding sponsors) and will have more details in the near future.
 
 We would like to send a special thank-you out to those sponsors who made contributions immediately. In order of contribution, they are:
  * Chris Armstrong
