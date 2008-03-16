@@ -1,24 +1,19 @@
 = Twistery In the News =
 
-{{{
-#!html
-<!--
-== Twisted Joins Software Freedom Conservancy (2008-02-07) ==
+== Twisted Announces Membership in the Software Freedom Conservancy (2008-03-16) ==
 
-A little less than a year ago, we were approached by Erik Dahl of Zenoss
-about creating a legal entity which Zenoss (and hopefully others!) could
-use to donate to Twisted.  Accepting money in some official capacity
-would allow us to finance things like sprints, releases, maintenance
-work, dedicated reviewer time, as well as offsetting the ongoing costs
-to the founders of the project such as hosting and domain registration.
+At !PyCon 2008 we were delighted to share some good news with the Python community: the announcement of the [wiki:TwistedSoftwareFoundation Twisted Software Foundation]. Glyph had previously emailed the Twisted mail list, letting those close to the project know of this major event shortly after the paperwork was signed. Before we brought this before a more public audience, we wanted to give companies a chance to become "founding sponsors" -- and this is what has happened at !PyCon. We're looking forward to issuing a formal press release about this (inclung info on the founding sponsors) and will have more details in the near future.
 
-It's been a long, hard road to get there, but the Twisted project has
-finally, very recently joined the Software Freedom Conservancy. 
+We would like to send a special thank-you out to those sponsors who made contributions immediately. In order of contribution, they are:
+ * Chris Armstrong
+ * Michel Pelletier
+ * !AdytumSolutions, Inc.
+ * tummy.com
+ * Drew Perttula
+ * Glenn Tarbox
+ * Ilya Novoselov
 
-Read the full announcement [http://twistedmatrix.com/pipermail/twisted-python/2008-February/016740.html here]. 
-
--->
-}}}
+Read the initial announcement [http://twistedmatrix.com/pipermail/twisted-python/2008-February/016740.html here]. If the video for the announcement made at !PyCon gets published somewhere, we will post an update.
 
 == The Twisted Show: Episode 2 (2008-02-26) ==
 
