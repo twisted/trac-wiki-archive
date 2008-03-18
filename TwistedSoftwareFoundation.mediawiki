@@ -10,6 +10,13 @@ At the end of January, 2008, the Twisted project finalized an agreement with the
 
 Our goals are simple: we want to be able to continue improving Twisted -- everything from specialized bug fixes to paying hosting bills -- for the benefit of the community, the users of Twisted. We want sponsors to be able to make tax-deductible donations, and we want to provide a dedicated forum (initially, a sponsors-only mail list) where our sponsors can give voice to their own vision of how Twisted can be better.
 
+== Benefits of Sponsorship ==
+
+ * You (or your company) are contributing to an extraordinary open source project
+ * You will have the opportunity to join the sponsors-only mail list, with a direct line of communication to the core Twisted developers
+ * For corporate donations over $500, your logo will be placed on the front page (must be 160 pixels wide) as well as on the sponsor wiki pages
+ * Community consciousness of your company's use of Twisted will be increased in the minds of Python programmers, Twisted users, and Twisted developers
+
 == Sponsorship Levels ==
 
 Below are the names and amounts associated with levels of sponsorship. 
