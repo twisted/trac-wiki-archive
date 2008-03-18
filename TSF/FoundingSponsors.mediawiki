@@ -23,7 +23,7 @@ Glenn Tarbox<br/>
 {{{
 #!html
 Chris Armstrong<br/>
-<a href="http://tummy.com"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/adytum.jpg?format=raw" /></a><br/>
+<img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/adytum.png?format=raw" /><br/>
 Drew Perttula<br/>
 }}}
 
