@@ -68,7 +68,7 @@ value="-----BEGIN PKCS7-----MIIH2QYJKoZIhvcNAQcEoIIHyjCCB8YCAQExggEwMIIBLAIBADCB
     PayPal (Note, PayPal charges a transaction fee.  If possible, please use Google Checkout.)
 
     <h3>Silver Sponsors</h3>
-<a href="http://tummy.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/tummy.png" /></a>
+<a href="http://tummy.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/tummy.png?format=raw" /></a>
 
     <h3>Twisted Book</h3>
 <a href="http://www.amazon.com/exec/obidos/ASIN/0596100329/httpitamorg-20?creative=327641&camp=14573&link_code=as1"><img align="center" src="http://www.oreilly.com/catalog/covers/twistedadn.s.gif" /></a>
