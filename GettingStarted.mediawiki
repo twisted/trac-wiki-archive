@@ -24,7 +24,7 @@ Okay, you're now knowledgeable enough to be dangerous.  Time to delve in further
 
 = What Next? =
 
-If you use Twisted, you may want to help out the project as a whole by [wiki: contributing to Twisted].
+If you use Twisted, you may want to help out the project as a whole by [wiki:ContributingToTwistedLabs contributing to Twisted].
 
 
 
