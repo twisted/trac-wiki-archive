@@ -8,6 +8,22 @@
 
 === Silver ===
 
+{{{#!html
+<ul><li><a href="http://tummy.com"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/tummy.png?format=raw" /></a>
+</li></ul>
+}}}
+
 === Bronze ===
 
+ * Glenn Tarbox
+
 === Aluminum ===
+
+ * Chris Armstrong
+ * !AdytumSolutions, Inc.
+ * Drew Perttula
+
+=== Other ===
+
+ * Michel Pelletier
+ * Ilya Novoselov
