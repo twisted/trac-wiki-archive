@@ -68,7 +68,7 @@ value="-----BEGIN PKCS7-----MIIH2QYJKoZIhvcNAQcEoIIHyjCCB8YCAQExggEwMIIBLAIBADCB
     PayPal (Note, PayPal charges a transaction fee.  If possible, please use Google Checkout.)
 
     <h3>TSF Sponsors</h3>
-    <h3>Silver</h3>
+    <h4>Silver</h4>
 <a href="http://tummy.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/tummy.png?format=raw" /></a>
 
     <h3>Twisted Book</h3>
