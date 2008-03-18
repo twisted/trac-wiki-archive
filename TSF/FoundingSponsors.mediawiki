@@ -14,8 +14,10 @@
 }}}
 
 === Bronze ===
-
- * Glenn Tarbox
+{{{
+#!html
+Glenn Tarbox<br/>
+}}}
 
 === Aluminum ===
 {{{
