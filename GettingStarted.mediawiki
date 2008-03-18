@@ -15,12 +15,16 @@ Now that you understand the base idea that drives Twisted, let's build a somewha
  * Install Twisted
  * [http://twistedmatrix.com/projects/core/documentation/howto/tutorial/index.html Moshe's Finger Tutorial]
 
-
+= Learn More About Twisted =
 
 Okay, you're now knowledgeable enough to be dangerous.  Time to delve in further into the APIs.
 
  * [http://twistedmatrix.com/documents/current/api/ API Documentation] - This is the full API documentation for Twisted
  * [http://twistedmatrix.com/documents/current/api/twisted.internet.interfaces.html Twisted.Internet.Interfaces] - This is a collection of interfaces that are core to Twisted
+
+= What Next? =
+
+If you use Twisted, you may want to help out the project as a whole by [wiki: contributing to Twisted].
 
 
 
