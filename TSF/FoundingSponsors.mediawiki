@@ -10,8 +10,7 @@
 
 {{{
 #!html
-<ul><li><a href="http://tummy.com"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/tummy.png?format=raw" /></a>
-</li></ul>
+<a href="http://tummy.com"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/tummy.png?format=raw" /></a><br/>
 }}}
 
 === Bronze ===
@@ -19,10 +18,12 @@
  * Glenn Tarbox
 
 === Aluminum ===
-
- * Chris Armstrong
- * !AdytumSolutions, Inc.
- * Drew Perttula
+{{{
+#!html
+Chris Armstrong<br/>
+<a href="http://tummy.com"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/adytum.png?format=raw" /></a><br/>
+Drew Perttula<br/>
+}}}
 
 === Other ===
 
