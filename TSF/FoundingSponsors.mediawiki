@@ -1,6 +1,6 @@
 = Twisted Software Foundation =
 
-== Founding Sponsors ==
+== Founding Sponsors: Companies ==
 
 === Platinum ===
 
@@ -14,20 +14,33 @@
 }}}
 
 === Bronze ===
-{{{
-#!html
-Glenn Tarbox<br/>
-}}}
 
 === Aluminum ===
 {{{
 #!html
-Chris Armstrong<br/>
 <img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/adytum.png?format=raw" /><br/>
-Drew Perttula<br/>
 }}}
 
+== Founding Sponsors: Individuals ==
+
+=== Platinum ===
+
+=== Gold ===
+
+=== Silver ===
+
+=== Bronze ===
+ * Glenn Tarbox
+
+=== Aluminum ===
+
+ * Chris Armstrong
+ * Drew Perttula
+
+
+
 === Other ===
+
 
  * Michel Pelletier
  * Ilya Novoselov
