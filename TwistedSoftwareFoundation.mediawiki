@@ -22,14 +22,15 @@ Below are the names and amounts associated with levels of sponsorship.
 
 These will be used on the front page of http://twistedmatrix.com/ to group sponsor's logos. Sponsor logos will be sorted by time: earlier sponsors at the top.
 
+== Founding Sponsors ==
+
+We are currently engaged with multiple companies/organizations, building a solid base of [wiki:TSF/FoundingSponsors Founding Sponsors]. Visit the [wiki:TSF/FoundingSponsors Founding Sponsors] wiki page to see the list of those who got us started.
+
 == Sponsors ==
 
-We are currently engaged with multiple companies/organizations, building a solid base of [wiki:TSF/FoundingSponsors Founding Sponsors]. Check back soon!
+Once the deadline for founding sponsors has passed, sponsors will be listed here.
 
 == How to Donate ==
 
 You can use the form on the front page at anytime to make a donation to the TSF! Look for the !PayPal and Google Checkout "Donate" buttons. These linked buttons point to the Conservancy's account for us, which is a tax-exempt 501(c)(3) organization. As a result, donations to Twisted are now tax-deductible.
 
-== Acknowledgments ==
-
-Once our founding sponsors list is complete, we will also be making acknowledgments of those who played key roles in setting up the TSF.
