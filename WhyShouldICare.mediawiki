@@ -1,6 +1,6 @@
 = What Twisted Is =
 
-Twisted is an asynchronous framework written.  This allows for concurrency without requiring the use of forking processes or spawning threads.  Now, this obviously does not come without some additional work, especially if you're used to using one of the other methods.  
+Twisted is an asynchronous framework designed specifically around networks and databases.  This allows for concurrency without requiring the use of forking processes or spawning threads.  Now, this obviously does not come without some additional work, especially if you're used to using one of the other methods.  
 
 For a simple program that only is concerned about doing exactly one thing at one time, standard synchronous blocking programming will do just fine.  
 
