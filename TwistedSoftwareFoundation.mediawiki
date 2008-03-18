@@ -16,6 +16,7 @@ Our goals are simple: we want to be able to continue improving Twisted -- everyt
  * You will have the opportunity to join the sponsors-only mail list, with a direct line of communication to the core Twisted developers
  * For corporate donations over $500, your logo will be placed on the front page (must be 160 pixels wide) as well as on the sponsor wiki pages
  * Community consciousness of your company's use of Twisted will be increased in the minds of Python programmers, Twisted users, and Twisted developers
+ * Contributions are tax-deductible
 
 == Sponsorship Levels ==
 
