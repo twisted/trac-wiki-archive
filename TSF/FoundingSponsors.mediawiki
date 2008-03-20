@@ -15,6 +15,11 @@
 
 === Bronze ===
 
+{{{
+#!html
+<img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/allmydata.jpg?format=raw" /><br/>
+}}}
+
 === Aluminum ===
 {{{
 #!html
