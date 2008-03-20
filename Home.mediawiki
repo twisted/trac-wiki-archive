@@ -74,9 +74,6 @@ value="-----BEGIN PKCS7-----MIIH2QYJKoZIhvcNAQcEoIIHyjCCB8YCAQExggEwMIIBLAIBADCB
 <a href="http://allmydata.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/allmydata.jpg?format=raw" /></a><br/>
 
 
-    <h3>Twisted Book</h3>
-<a href="http://www.amazon.com/exec/obidos/ASIN/0596100329/httpitamorg-20?creative=327641&camp=14573&link_code=as1"><img align="center" src="http://www.oreilly.com/catalog/covers/twistedadn.s.gif" /></a>
-
     <p>
     </p>
   </div>
@@ -139,3 +136,11 @@ More Useful Pointers:
  * [wiki:Windows Windows] We're especially seeking resources to help improve Twisted on Windows.
 
 Twisted is supported by [http://www.divmod.org/trac the Divmod corporation].
+
+{{{
+#!html
+
+    <h2>The Twisted Book</h2>
+<a href="http://www.amazon.com/exec/obidos/ASIN/0596100329/httpitamorg-20?creative=327641&camp=14573&link_code=as1"><img align="center" src="http://www.oreilly.com/catalog/covers/twistedadn.s.gif" /></a>
+
+}}}
