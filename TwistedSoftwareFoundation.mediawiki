@@ -1,6 +1,6 @@
 = Twisted Software Foundation =
 
-The name "Twisted Software Foundation" is a reference of convenience to our legal non-profit status through the [http://conservancy.softwarefreedom.org/ Software Freedom Conservancy]. The Conservancy has allowed us to pool legal resources with other projects, such as Inkscape, Samba, and Wine, to reduce the management overhead associated with creating our own, dedicated legal entity.
+The name "Twisted Software Foundation" is a reference of convenience to our legal non-profit status through the [http://conservancy.softwarefreedom.org/ Software Freedom Conservancy]. The Conservancy has allowed us to pool organizational resources with other projects, such as Inkscape, Samba, and Wine, to reduce the management overhead associated with creating our own, dedicated legal entity.
 
 == Background ==
 
