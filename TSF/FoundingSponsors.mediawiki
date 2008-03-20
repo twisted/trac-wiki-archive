@@ -17,7 +17,7 @@
 
 {{{
 #!html
-<img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/allmydata.jpg?format=raw" /><br/>
+<a href="http://allmydata.com"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/allmydata.jpg?format=raw" /></a><br/>
 }}}
 
 === Aluminum ===
