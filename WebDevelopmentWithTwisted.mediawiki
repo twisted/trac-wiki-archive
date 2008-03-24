@@ -8,9 +8,9 @@ There are a number of packages in and around Twisted that do things with the web
 
  * [wiki:TwistedWeb Twisted Web] provides a simple, stable resource publishing API, on top of an HTTP/1.0 server implementation with some HTTP/1.1 features.  Twisted Web is widely regarded as clunky and old, but extremely stable.
    * Several deprecated templating toolkits included with twisted.web, such as "woven" and "twisted web widgets".  Don't use these!  They're only there for compatibility.
- * [wiki:TwistedWeb2 Twisted Web 2] is a complete re-write of [wiki:TwistedWeb Twisted Web], with a new HTTP/1.1 implementation and a new, more powerful and efficient resource publishing model.  Unfortunately, it is currently still a work in progress.  Some aspects of its design are not finalized, but it is ready for interested early-adopting developers.  If you are going to use Web 2, you ''really'' need to stay current with recent developments in Twisted; [wiki:TracRss subscribe to Twisted RSS feeds] of changes to trunk, etc.
- * [http://divmod.org/trac/wiki/DivmodNevow Divmod Nevow] is a templating toolkit that provides its own resource model and simple application server API.  It requires Twisted, is fully integrated with the Twisted reactor, provides mechanisms for asynchronous page rendering, and an event-driven [http://en.wikipedia.org/wiki/COMET_(programming) COMET]/AJAX implementation called [http://divmod.org/trac/wiki/DivmodNevow/Athena "Nevow Athena"].  Currently Nevow uses Twisted Web but it will be ported to Twisted Web 2 once that stabilizes.
- * [http://divmod.org/trac/wiki/DivmodMantissa Divmod Mantissa] is a full-featured multi-protocol application server, with a built-in object database, authentication model based on Twisted Cred, a capability-based security model, and many more features.  It integrates Nevow, twisted.web, and a number of other Twisted-related technologies to provide a full-featured system.
+ * [wiki:TwistedWeb2 Twisted Web 2] is a complete re-write of [wiki:TwistedWeb Twisted Web], with a new HTTP/1.1 implementation and a new resource publishing model.  Development focus has shifted to porting the best parts of Twisted Web 2 back to Twisted Web where existing applications will benefit from them.
+ * [http://divmod.org/trac/wiki/DivmodNevow Divmod Nevow] is a templating toolkit that provides its own resource model and simple application server API.  It requires Twisted, is fully integrated with the Twisted reactor, provides mechanisms for asynchronous page rendering, and an event-driven [http://en.wikipedia.org/wiki/COMET_(programming) COMET]/AJAX implementation called [http://divmod.org/trac/wiki/DivmodNevow/Athena "Nevow Athena"].  Nevow uses Twisted Web, but provides its own Request and resource model on top of it.
+ * [http://divmod.org/trac/wiki/DivmodMantissa Divmod Mantissa] is a full-featured multi-protocol application server, with a built-in object database, authentication model based on Twisted Cred, a capability-based security model, and many more features.  It integrates Nevow (and therefore Twisted Web) and a number of other Twisted-related technologies to provide a full-featured system.
 
 == So You Want To Be A Web Developer ==
 
@@ -20,15 +20,11 @@ You can always ask about these kinds of issues on the [http://twistedmatrix.com/
 
 === I want a web UI for my existing Twisted networking application ===
 
-Assuming that your networking application has its own data persistence, or does not require persistence, and needs a web-based control panel or monitoring UI, you probably want to use Nevow.  While not completely stable, Nevow provides some degree of backwards compatibility between releases, and will insulate you from the upcoming Twisted Web -> Twisted Web 2 transition.  It will also make designing user interfaces that integrate with the event loop much easier than coding directly to either the Web or Web 2 APIs.
-
-If you want a spiffier interface and you are willing to invest a bit more work, most of these comments about relative API stability also apply to Nevow Athena, and Athena lets you take advantage of the event loop on multiple levels; you can push events from network triggers straight out to a web page.
-
-Unfortunately neither Nevow nor Athena is completely stable; there has not yet been a 1.0 release.  But neither are they churning rapidly and requiring up-to-the-minute monitoring of development.  They also have an active community that understands Twisted integration issues well.
+Assuming that your networking application has its own data persistence, or does not require persistence, and needs a web-based control panel or monitoring UI, you probably want to use Nevow.  Nevow provides backwards compatibility between releases (as does Twisted Web, on which it is built), just like all Twisted projects.  It also provides a templating system  which makes implementing user interfaces that integrate with the event loop much easier than coding directly to the Twisted Web API.  Nevow also has support for the AJAX and COMET, via Nevow Athena.  Athena lets you take advantage of the event loop on multiple levels; you can push events from network triggers straight out to a web page.
 
 === I want to write a REST / WS-* interface to my Twisted application ===
 
-In this case your best bet is to use Twisted Web directly.  Porting to Twisted Web 2 for these kinds of applications will be fairly trivial (changing a few imports, method names).
+In this case your best bet is to use Twisted Web directly.  You won't need XHTML templating, so Nevow buys you little extra.
 
 Twisted Web already has basic support for XMLRPC and SOAP, and it is fairly straightforward to set up a web service.  Twisted Web also provides various facilities for being set up behind a reverse-proxy, which is the suggested mechanism to integrate your Twisted application with an existing site.
 
@@ -48,4 +44,4 @@ Zope 3 uses Twisted now, and the next version of Zope 2 will have experimental T
 
 === I want a container for my WSGI application ===
 
-In this case it's suggested that you use Twisted Web 2.  In this case the instability of the API shouldn't concern you much, since your application should already be written to the stable (standardized, even) WSGI API.  In this sense you are really just using the webserver as a tool rather than an API, and Twisted Web 2 is ready for that kind of use.  Zope 3 has been using it in this capacity and (so far) it seems to be working fine.
+In this case it's suggested that you use Twisted Web 2.  The instability of the API doesn't concern you, since the WSGI interface is well-defined and will not change.  In this sense you are really just using the webserver as a tool rather than an API.  Zope 3 has been using it in this capacity and (so far) it seems to be working fine.  At some point, Twisted Web will provide a WSGI container and it will make sense to switch to that (a simple change).
