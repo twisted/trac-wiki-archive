@@ -6,7 +6,7 @@ Twisted has a long and checkered past in web development.  This page is a roadma
 
 There are a number of packages in and around Twisted that do things with the web:
 
- * [wiki:TwistedWeb Twisted Web] provides a simple, stable resource publishing API, on top of an HTTP/1.0 server implementation with some HTTP/1.1 features.  Twisted Web is widely regarded as clunky and old, but extremely stable.
+ * [wiki:TwistedWeb Twisted Web] provides a simple, stable resource publishing API, on top of an HTTP/1.0 server implementation with some HTTP/1.1 features.  Twisted Web is extremely stable.
    * Several deprecated templating toolkits included with twisted.web, such as "woven" and "twisted web widgets".  Don't use these!  They're only there for compatibility.
  * [wiki:TwistedWeb2 Twisted Web 2] is a complete re-write of [wiki:TwistedWeb Twisted Web], with a new HTTP/1.1 implementation and a new resource publishing model.  Development focus has shifted to porting the best parts of Twisted Web 2 back to Twisted Web where existing applications will benefit from them.
  * [http://divmod.org/trac/wiki/DivmodNevow Divmod Nevow] is a templating toolkit that provides its own resource model and simple application server API.  It requires Twisted, is fully integrated with the Twisted reactor, provides mechanisms for asynchronous page rendering, and an event-driven [http://en.wikipedia.org/wiki/COMET_(programming) COMET]/AJAX implementation called [http://divmod.org/trac/wiki/DivmodNevow/Athena "Nevow Athena"].  Nevow uses Twisted Web, but provides its own Request and resource model on top of it.
