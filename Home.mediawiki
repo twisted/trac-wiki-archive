@@ -100,6 +100,10 @@ value="-----BEGIN PKCS7-----MIIH2QYJKoZIhvcNAQcEoIIHyjCCB8YCAQExggEwMIIBLAIBADCB
 <!-- End side bar //--></div>
 }}}
 
+= ''Act Now: Be a Founding Sponsor'' =
+
+Do you want your name, or your company's name, to be immortalized as one of the first sponsors of the Twisted project?  [TwistedSoftwareFoundation Find out about the benefits of sponsorship today!]
+
 = What is Twisted? =
 
 [wiki:TwistedProject Twisted] is an event-driven networking engine written in Python and licensed under the [http://www.opensource.org/licenses/mit-license.php MIT license].  
@@ -110,7 +114,6 @@ See [wiki:FrequentlyAskedQuestions the FAQ] for commonly asked questions about T
 #!html
 If you want to get started with Twisted, the first thing you should do is read the <a href="http://twistedmatrix.com/projects/core/documentation/howto/index.html"><b>Twisted Core Documentation</b></a>.
 }}}
-
 
 == Twisted Projects ==
 
