@@ -8,10 +8,6 @@ For more information about Twisted, including release notes, please see the [wik
 
  If you wish to build and install the latest Twisted by-hand on Ubuntu ensure that you have the 'python-dev' and 'build-essentials' packages installed.  
 
-== Mac OS X ==
-
- * [http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted-8.0.0_py2.5_osx10.5.pkg Twisted 8.0 installer]
- * [http://tmrc.mit.edu/mirror/twisted/Dependencies/Mac/PyCrypto-2.0.1_py2.5_osx10.5.pkg PyCrypto 2.0.1 installer] (needed by Conch)
 
 == Windows ==
 
@@ -44,7 +40,7 @@ You probably don't want these unless you have special considerations (note: Twis
  * [http://tmrc.mit.edu/mirror/twisted/Web2/8.0/TwistedWeb2-8.0.0.tar.bz2 Twisted Web2] - 8.0.0 ([source:/tags/releases/twisted-8.0.0/twisted/web2/topfiles/NEWS?format=raw Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Mail/8.0/TwistedMail-8.0.0.tar.bz2 Twisted Mail] - 8.0.0 ([source:/tags/releases/twisted-8.0.0/twisted/mail/topfiles/NEWS?format=raw Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Names/8.0/TwistedNames-8.0.0.tar.bz2 Twisted Names] - 8.0.0 ([source:/tags/releases/twisted-8.0.0/twisted/names/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twist== Mac OS X 10.5 ==ed/News/8.0/TwistedNews-8.0.0.tar.bz2 Twisted News] - 8.0.0 ([source:/tags/releases/twisted-8.0.0/twisted/news/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/News/8.0/TwistedNews-8.0.0.tar.bz2 Twisted News] - 8.0.0 ([source:/tags/releases/twisted-8.0.0/twisted/news/topfiles/NEWS?format=raw Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Words/8.0/TwistedWords-8.0.0.tar.bz2 Twisted Words] - 8.0.0 ([source:/tags/releases/twisted-8.0.0/twisted/words/topfiles/NEWS?format=raw Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Lore/8.0/TwistedLore-8.0.0.tar.bz2 Twisted Lore] - 8.0.0 ([source:/tags/releases/twisted-8.0.0/twisted/lore/topfiles/NEWS?format=raw Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Runner/8.0/TwistedRunner-8.0.0.tar.bz2 Twisted Runner] - 8.0.0 ([source:/tags/releases/twisted-8.0.0/twisted/runner/topfiles/NEWS?format=raw Release notes])
