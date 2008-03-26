@@ -6,16 +6,21 @@ The current release is Twisted 8.0.1: [source:/tags/releases/twisted-8.0.1/NEWS?
 
 == Ubuntu and Debian ==
 
- Packages of Twisted are available in Ubuntu and Debian as 'python-twisted'.
+Packages of Twisted are available in Ubuntu and Debian as 'python-twisted'.
 
- If you wish to build and install the latest Twisted by-hand on Ubuntu ensure that you have the 'python-dev' and 'build-essentials' packages installed.  
+If you wish to build and install the latest Twisted by-hand on Ubuntu ensure that you have the 'python-dev' and 'build-essentials' packages installed.  
 
 
 == Windows ==
 
- * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/Twisted_NoDocs-2.5.0.win32-py2.3.exe Twisted 2.5.0 installer for Python 2.3]
- * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/Twisted_NoDocs-2.5.0.win32-py2.4.exe Twisted 2.5.0 installer for Python 2.4]
- * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/Twisted_NoDocs-2.5.0.win32-py2.5.exe Twisted 2.5.0 installer for Python 2.5]
+ * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/Twisted_NoDocs-2.5.0.win32-py2.3.exe Twisted 2.5.0 for Python 2.3]
+ * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/Twisted_NoDocs-2.5.0.win32-py2.4.exe Twisted 2.5.0 for Python 2.4]
+ * [http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/Twisted_NoDocs-2.5.0.win32-py2.5.exe Twisted 2.5.0 for Python 2.5]
+
+== Mac OS X ==
+
+ * [http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted-8.0.1_py2.5_osx10.5.pkg Twisted 8.0.1 for OS X 10.5]
+ * [http://tmrc.mit.edu/mirror/twisted/Dependencies/Mac/PyCrypto-2.0.1_py2.5_osx10.5.pkg PyCrypto 2.0.1 for OS X 10.5] (needed by Conch)
 
 == Source Tarball ==
 
