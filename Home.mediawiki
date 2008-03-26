@@ -118,22 +118,6 @@ Like any engine, Twisted has many "moving parts." [wiki:TwistedProjects Twisted 
 
 [wiki:TwistedProjects Twisted projects] variously support TCP, UDP, SSL/TLS, multicast, Unix sockets, a large number of protocols (including HTTP, NNTP, IMAP, SSH, IRC, FTP, and others), and [wiki:TwistedProjects much more].
 
-== The Twisted Show ==
-
-{{{
-#!html
-<img src="http://farm1.static.flickr.com/170/366351394_e301191f84_o.png" style="padding-right:1em;padding-bottom:1em;" align="left" />
-}}}
-The new episode is up! We met with Chesspark about their Twisted-based venture.
-
-  "Chesspark was created by chess lovers to bring chess to a wide audience of casual, club, and professional players. Our modern and easy to use interface makes use of the latest technologies for the Web as well as Instant Messaging in order to make online chess accessible to everyone, not just the elite players. However, those elite players will find features at Chesspark that are available no where else and made just for them."
-
-Check out [http://twistedmatrix.com/trac/wiki/InterviewChesspark200802 the interview page] for podcast links!
-
-Join us as we explore how others are uniquely deploying Twisted, while making bazillions of dollars and friends. Read more about the show here: 
-
- TheTwistedShow
-
 == Quick Links ==
 
 General Information:
