@@ -7,13 +7,13 @@
   </div>
   <div id="download" style="color: white">
     Source:<br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted-8.0.0.tar.bz2">Twisted 8.0 tar</a><br />
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted-8.0.1.tar.bz2">Twisted 8.0.1 tar</a><br />
     Win32:<br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/Twisted_NoDocs-2.5.0.win32-py2.3.exe">Twisted 2.5 installer for Python 2.3</a><br />
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/Twisted_NoDocs-2.5.0.win32-py2.4.exe">Twisted 2.5 installer for Python 2.4</a><br />
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/Twisted_NoDocs-2.5.0.win32-py2.5.exe">Twisted 2.5 installer for Python 2.5</a><br />
-    <!-- mac installer is a bit broken... Mac OS X 10.5:<br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted-8.0.0_py2.5_osx10.5.pkg">Twisted 8.0 installer</a> -->
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/Twisted_NoDocs-2.5.0.win32-py2.3.exe">Twisted 2.5 for Python 2.3</a><br />
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/Twisted_NoDocs-2.5.0.win32-py2.4.exe">Twisted 2.5 for Python 2.4</a><br />
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/Twisted_NoDocs-2.5.0.win32-py2.5.exe">Twisted 2.5 for Python 2.5</a><br />
+    Mac OS X 10.5:<br/>
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted-8.0.1_py2.5_osx10.5.pkg">Twisted 8.0.1</a>
   </div>
   <div id="download_bottom">
   &nbsp;
