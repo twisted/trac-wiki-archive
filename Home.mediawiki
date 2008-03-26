@@ -5,7 +5,7 @@
   <div id="download_top">
   &nbsp;
   </div>
-  <div id="download">
+  <div id="download" style="color: white">
     Source:<br/>
     <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted-8.0.0.tar.bz2">Twisted 8.0 tar</a><br />
     Win32:<br/>
