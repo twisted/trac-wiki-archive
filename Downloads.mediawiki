@@ -17,7 +17,7 @@ For more information about Twisted, including release notes, please see the [wik
 
 == Source Tarball ==
 
- * [http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted-8.0.0.tar.bz2 Twisted 8.0.0 tarball]  ([source:/tags/releases/twisted-8.0.0/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted-8.0.1.tar.bz2 Twisted 8.0.1 tarball]  ([source:/tags/releases/twisted-8.0.1/NEWS?format=raw Release notes])
 
 == View on the Web ==
 
@@ -34,10 +34,10 @@ To checkout code from the repository, use:
 
 You probably don't want these unless you have special considerations (note: TwistedWeb2 listed here is not in the integrated tarball mentioned above):
 
- * [http://tmrc.mit.edu/mirror/twisted/Core/8.0/TwistedCore-8.0.0.tar.bz2 Twisted Core] - 8.0.0 ([source:/tags/releases/twisted-8.0.0/twisted/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Core/8.0/TwistedCore-8.0.1.tar.bz2 Twisted Core] - 8.0.1 ([source:/tags/releases/twisted-8.0.1/twisted/topfiles/NEWS?format=raw Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Conch/8.0/TwistedConch-8.0.0.tar.bz2 Twisted Conch] - 8.0.0 ([source:/tags/releases/twisted-8.0.0/twisted/conch/topfiles/NEWS?format=raw Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Web/8.0/TwistedWeb-8.0.0.tar.bz2 Twisted Web] - 8.0.0 ([source:/tags/releases/twisted-8.0.0/twisted/web/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Web2/8.0/TwistedWeb2-8.0.0.tar.bz2 Twisted Web2] - 8.0.0 ([source:/tags/releases/twisted-8.0.0/twisted/web2/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Web2/8.0/TwistedWeb2-8.0.1.tar.bz2 Twisted Web2] - 8.0.1 ([source:/tags/releases/twisted-8.0.1/twisted/web2/topfiles/NEWS?format=raw Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Mail/8.0/TwistedMail-8.0.0.tar.bz2 Twisted Mail] - 8.0.0 ([source:/tags/releases/twisted-8.0.0/twisted/mail/topfiles/NEWS?format=raw Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Names/8.0/TwistedNames-8.0.0.tar.bz2 Twisted Names] - 8.0.0 ([source:/tags/releases/twisted-8.0.0/twisted/names/topfiles/NEWS?format=raw Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/News/8.0/TwistedNews-8.0.0.tar.bz2 Twisted News] - 8.0.0 ([source:/tags/releases/twisted-8.0.0/twisted/news/topfiles/NEWS?format=raw Release notes])
