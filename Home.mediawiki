@@ -30,7 +30,7 @@
 
   <div id="donate">
     <h3>Contributing</h3>
-Want to help Twisted, but don't have any spare time? If you appreciate Twisted and want to help the community and future development, consider a tax-deductable monetary donation.
+Want to help Twisted, but don't have any spare time? If you appreciate Twisted and want to help the community and future development, consider a <a href="http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation">tax-deductible</a> monetary donation.
 
 <!-- BEGIN GOOGLE CHECKOUT GARBAGE -->
 <script type="text/javascript">
