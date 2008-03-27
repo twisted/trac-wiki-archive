@@ -114,10 +114,6 @@ See [wiki:FrequentlyAskedQuestions the FAQ] for commonly asked questions about T
 If you want to get started with Twisted, the first thing you should do is read the <a href="http://twistedmatrix.com/projects/core/documentation/howto/index.html"><b>Twisted Core Documentation</b></a>.
 }}}
 
-== Twisted Projects ==
-
-Like any engine, Twisted has many "moving parts." [wiki:TwistedProjects Twisted Projects] is our name for these components of Twisted. Taken together, they form the whole of Twisted. 
-
 [wiki:TwistedProjects Twisted projects] variously support TCP, UDP, SSL/TLS, multicast, Unix sockets, a large number of protocols (including HTTP, NNTP, IMAP, SSH, IRC, FTP, and others), and [wiki:TwistedProjects much more].
 
 == Quick Links ==
