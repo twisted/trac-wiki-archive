@@ -50,7 +50,7 @@ Once the deadline for founding sponsors has passed, sponsors will be listed here
 
 You can use the form on the front page at anytime to make a donation to the TSF: just click one of the !PayPal and Google Checkout "Donate" buttons. These linked buttons point to the Conservancy's account for us, which is a tax-exempt 501(c)(3) organization. As a result, donations to Twisted are now tax-deductible.
 
-If you would prefer to cut a check, you may do this as well. Make the check payable to "Software Freedom Conservancy" and write "Directed Donation for Twisted" somewhere on the check, such as in the "memo" field. Checks should be sent to the following address, so that the Conservancy can process them:
+If you would prefer to cut a check, you may do this as well. Make the check payable to "Software Freedom Conservancy" and write "Directed Donation for Twisted" in the "memo" field. Checks should be sent to the following address, so that the Conservancy can process them:
 {{{
  Software Freedom Conservancy
  1995 Broadway Fl 17
