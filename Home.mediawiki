@@ -18,7 +18,7 @@
   &nbsp;
   </div>
 
-  <div id="donate">
+  <div>
     <h3>Twisted Sponsors</h3>
     <h4>Silver</h4>
 <a href="http://tummy.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/tummy.png?format=raw" /></a><br/>
