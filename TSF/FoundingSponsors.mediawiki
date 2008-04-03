@@ -18,6 +18,7 @@
 {{{
 #!html
 <a href="http://allmydata.com"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/allmydata.jpg?format=raw" /></a><br/>
+<a href="http://hydralabs.com"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/hydra.png?format=raw" /></a><br/>
 }}}
 
 === Aluminum ===
