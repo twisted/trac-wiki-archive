@@ -8,6 +8,7 @@
 {{{
 #!html
 <a href="http://zenoss.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/zenoss.gif?format=raw" /></a><br/>
+}}}
 
 === Silver ===
 
