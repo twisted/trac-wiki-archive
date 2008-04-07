@@ -1,0 +1,33 @@
+= What's Going On With Twisted Web =
+
+== The Problems ==
+
+Currently there is a lot of confusion as to what to do and where to go to get a good, supported twisted.web server.  Users are confronted with 3 options and an infinite number of permutations of those options: twisted.web, nevow, and twisted.web2.  This confusion is made manifest in the [wiki:WebDevelopmentWithTwisted lengthy explanation of web development with twisted] hosted here on this wiki.
+
+This is mostly a problem of perception, but there are some real issues.  For example, there is a lot of redundant maintenance going on in, for example: `twisted.web.static`, `twisted.web2.static`, and `nevow.static`; `twisted.python.urlpath` and `nevow.url`; `nevow.appserver` and `twisted.web.server`.
+
+== The (Current) Solution ==
+
+We are phasing out the twisted.web2 ''namespace'' in favor of twisted.web.  There is a half-decent webserver in that namespace, but there is also a lot of garbage.  If this doesn't make sense to you, and you thought that twisted.web2 was the future, consider [http://twistedmatrix.com/trac/browser/trunk/twisted/web2/proxy.py?rev=17455#L1 the twisted.web2.proxy] module.  There are others which are slightly less obviously bad, but the quality of twisted.web2 is so dramatically inconsistent that we feel it would be better to evolve a working, stable, but somewhat outdated collection of functionality (twisted.web) into better shape than try to take a pile of functionality that is in some ways better but in some ways completely broken (twisted.web2) and make it all work.
+
+We are also trying to migrate all of the nevow application-server functionality back into twisted.web, so that nevow is just templating.  We may, as a second, later phase, also move the templating stuff, but the main goal right now is to separate those two pieces of functionality completely, and stop maintaining a redundant one in Nevow.
+
+Nominally, twisted.web2 was never finished, never officially released in any capacity, and never supposed to be stable.  So our compatibility policy may be slightly more lax there than on twisted.web.  However, some compatibility will be maintained, and for most users the upgrade path will be gentle as you can gradually start importing more things from twisted.web instead?
+
+== The Goal Of The Solution ==
+
+The goal is to have '''one supported, good web server in the Twisted community''' so that:
+
+  * Users know where to start.
+  * Developers know where to send patches.
+  * We don't have to do the same work three times.
+
+If you are considering contributing some patches in web-land, please contribute them to twisted.web.  Ideally, you would contribute patches which use code from web2 to eliminate redundancy between web2 and web.
+
+== What This Means to You ==
+
+There will be some deprecation warnings in twisted.web for the really old stuff that we know isn't good any more.
+
+Eventually you may have to make some gradual changes to your code to use newer versions of twisted.web.  Eventually your Nevow applications will tell you that you don't need to use nevow.appserver or nevow's `IResource` any more, and you can use the versions from twisted.web.
+
+However, at some point in the future, there will be ''one supported, good web server in the Twisted community'', and that will be twisted.web.  In the meanwhile, twisted.web2 will still be around and will still have a reasonable HTTP/1.1 implementation if you need that right now.  At no point during this transition do we intend to make a major earthquake.  You do not need to worry that your code will suddenly all be broken, but you will need to change some imports to eliminate some warnings every so often.
