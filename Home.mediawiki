@@ -27,6 +27,7 @@
 <a href="http://tummy.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/tummy.png?format=raw" /></a><br/>
 <!-- DCIT: Donated 2008-03-28 -->
 <a href="http://www.dcit.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/dcitlogo.png?format=raw" /></a><br/>
+<a href="http://sun.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/sun.png?format=raw" /></a><br/>
 
     <h4>Bronze</h4>
 <a href="http://allmydata.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/allmydata.jpg?format=raw" /></a><br/>
