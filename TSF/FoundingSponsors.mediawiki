@@ -16,6 +16,8 @@
 #!html
 <a href="http://tummy.com"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/tummy.png?format=raw" /></a><br/>
 <a href="http://www.dcit.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/dcitlogo.png?format=raw" /></a><br/>
+<a href="http://sun.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/sun.png?format=raw" /></a><br/>
+
 }}}
 
 === Bronze ===
