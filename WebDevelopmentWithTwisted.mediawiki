@@ -2,6 +2,8 @@
 
 Twisted has a long and checkered past in web development.  This page is a roadmap to the wilderness that the landscape of web development with Twisted has become.
 
+For an explanation of what's going on in the ''future'' of the web with Twisted, check out our [wiki:TwistedWebPlan plan for development of twisted.web].
+
 == What's Going On Around Here ==
 
 There are a number of packages in and around Twisted that do things with the web:
