@@ -5,6 +5,7 @@ Drafts
  * [wiki:TSF/SponsorLogos TSF Sponsor Logos]
  * PressReleases
  * FeedTest
+ * TestFrontPage
 
 Twisted Show
  * The [wiki:TheTwistedShow Twisted Show Page] 
