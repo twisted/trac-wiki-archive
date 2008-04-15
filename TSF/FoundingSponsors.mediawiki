@@ -54,11 +54,11 @@
 
 === Aluminum ===
 
-
  * Drew Perttula
  * Eino Makitalo
  * David T Ripton III
  * Alex Clemesha
+ * Karl Bartel
 
 === Other ===
 
