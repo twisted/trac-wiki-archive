@@ -157,10 +157,12 @@ More Useful Pointers:
  * [wiki:TwistedSponsors Sponsors] - Individuals and organisations aid development with donations of hardware, software, hosting, and so on.
  * [wiki:Windows Windows] We're especially seeking resources to help improve Twisted on Windows.
 
-Twisted is supported by [http://www.divmod.org/trac the Divmod corporation].
-
 {{{
 #!html
+
+<p>Twisted is supported by
+<a href="http://www.divmod.org/trac"><img src="http://divmod.com/ximages/anonymous_logo.png" border="0" align="center" alt="the Divmod Corporation"/></a>
+</p>
 
     <h2>The Twisted Book</h2>
 <a href="http://www.amazon.com/exec/obidos/ASIN/0596100329/httpitamorg-20?creative=327641&camp=14573&link_code=as1"><img align="center" src="http://www.oreilly.com/catalog/covers/twistedadn.s.gif" /></a>
