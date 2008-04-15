@@ -1,7 +1,12 @@
 {{{
 #!html
-<!-- Begin side bar //-->
-<div id="side_bar">
+
+<table width="100%" border="0" cellpadding="20">
+
+  <tr>
+    <!-- begin left column/-->
+    <td valign="top">
+
   <div id="download_top">
   &nbsp;
   </div>
@@ -17,6 +22,71 @@
   <div id="download_bottom">
   &nbsp;
   </div>
+
+    <h2>The Twisted Book</h2>
+<a href="http://www.amazon.com/exec/obidos/ASIN/0596100329/httpitamorg-20?creative=327641&camp=14573&link_code=as1"><img align="center" src="http://www.oreilly.com/catalog/covers/twistedadn.s.gif" /></a>
+
+
+    <!-- end left column /-->
+    </td>
+
+
+    <!-- begin center column/-->
+    <td valign="top">
+
+<h1 id="ActNow:BeaFoundingSponsor"><i>Act Now: Be a Founding Sponsor</i></h1>
+<p>
+Do you want your name, or your company's name, to be immortalized as one of the first sponsors of the Twisted project?  <a class="wiki" href="/trac/wiki/TwistedSoftwareFoundation">Find out about the benefits of sponsorship today!</a>
+</p>
+<h1 id="WhatisTwisted">What is Twisted?</h1>
+
+<p>
+<a class="wiki" href="/trac/wiki/TwistedProject">Twisted</a> is an event-driven networking engine written in Python and licensed under the <a class="ext-link" href="http://www.opensource.org/licenses/mit-license.php"><span class="icon">MIT license</span></a>.
+</p>
+<p>
+See <a class="wiki" href="/trac/wiki/FrequentlyAskedQuestions">the FAQ</a> for commonly asked questions about Twisted.
+</p>
+If you want to get started with Twisted, the first thing you should do is read the <a href="http://twistedmatrix.com/projects/core/documentation/howto/index.html"><b>Twisted Core Documentation</b></a>.
+<p>
+
+<a class="wiki" href="/trac/wiki/TwistedProjects">Twisted projects</a> variously support TCP, UDP, SSL/TLS, multicast, Unix sockets, a large number of protocols (including HTTP, NNTP, IMAP, SSH, IRC, FTP, and others), and <a class="wiki" href="/trac/wiki/TwistedProjects">much more</a>.
+</p>
+<h2 id="QuickLinks">Quick Links</h2>
+<p>
+General Information:
+</p>
+<ul><li><a class="wiki" href="/trac/wiki/Downloads">Downloads</a> - Get it!
+</li><li><a class="wiki" href="/trac/wiki/Documentation">Documentation</a> - Everything you need to know to get started.
+
+</li><li>List Info - Access the <a href="http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python">twisted-python</a> and <a href="http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-web">twisted-web</a> mailing lists.
+</li><li><a class="ext-link" href="http://labs.twistedmatrix.com/"><span class="icon">News</span></a> - Read the latest news about Twisted.
+</li><li><a href="http://twistedmatrix.com/trac/report">Tracker</a> - <a href="http://twistedmatrix.com/trac/newticket?type=defect">Report a bug</a> or <a href="http://twistedmatrix.com/trac/newticket?type=enhancement">request a feature</a> (<a href="http://twistedmatrix.com/trac/register">Registration</a> is required)
+
+</li></ul><p>
+More Useful Pointers:
+</p>
+<ul><li><a class="wiki" href="/trac/wiki/TwistedCommunity">The Twisted Community</a> - Get in touch with other Twisted users and developers.
+</li><li><a class="wiki" href="/trac/wiki/TwistedDevelopment">Development</a> - Our development process; also, don't miss out on <a class="wiki" href="/trac/wiki/ContributingToTwistedLabs">contributing</a> to Twisted.
+</li><li><a class="wiki" href="/trac/wiki/SuccessStories">Success Stories</a> - Read about people who have been successful with Twisted.
+</li><li><a class="wiki" href="/trac/wiki/TheTwistedShow">The Twisted Show</a> - Interviews and podcasts with businesses and projects that use Twisted.
+
+</li><li><a class="wiki" href="/trac/wiki/ProjectsUsingTwisted">Software that uses Twisted</a> - Learn what other projects are using Twisted.
+</li><li><a class="wiki" href="/trac/wiki/TwistedMatrixLaboratories">The Labs</a> - What is <i>Twisted Matrix Laboratories</i>?
+</li><li><a class="wiki" href="/trac/wiki/TwistedSponsors">Sponsors</a> - Individuals and organisations aid development with donations of hardware, software, hosting, and so on.
+</li><li><a class="wiki" href="/trac/wiki/Windows">Windows</a> We're especially seeking resources to help improve Twisted on Windows.
+</li></ul>
+
+<p>Twisted is supported by
+<a href="http://www.divmod.org/trac"><img src="http://divmod.com/ximages/anonymous_logo.png" border="0" align="center" alt="the Divmod Corporation"/></a>
+</p>
+
+
+    <!-- end center column /-->
+    </td>
+
+
+    <!-- begin right column/-->
+    <td valign="top">
 
   <div>
     <h3>Twisted Sponsors</h3>
@@ -115,56 +185,12 @@ value="-----BEGIN PKCS7-----MIIH2QYJKoZIhvcNAQcEoIIHyjCCB8YCAQExggEwMIIBLAIBADCB
         </tr>
     </table>
 
-  </div>
-<!-- End side bar //--></div>
-}}}
 
-= ''Act Now: Be a Founding Sponsor'' =
+    <!-- end right column /-->
+    </td>
 
-Do you want your name, or your company's name, to be immortalized as one of the first sponsors of the Twisted project?  [TwistedSoftwareFoundation Find out about the benefits of sponsorship today!]
+  </tr>
 
-= What is Twisted? =
-
-[wiki:TwistedProject Twisted] is an event-driven networking engine written in Python and licensed under the [http://www.opensource.org/licenses/mit-license.php MIT license].  
-
-See [wiki:FrequentlyAskedQuestions the FAQ] for commonly asked questions about Twisted.
-
-{{{
-#!html
-If you want to get started with Twisted, the first thing you should do is read the <a href="http://twistedmatrix.com/projects/core/documentation/howto/index.html"><b>Twisted Core Documentation</b></a>.
-}}}
-
-[wiki:TwistedProjects Twisted projects] variously support TCP, UDP, SSL/TLS, multicast, Unix sockets, a large number of protocols (including HTTP, NNTP, IMAP, SSH, IRC, FTP, and others), and [wiki:TwistedProjects much more].
-
-== Quick Links ==
-
-General Information:
-
- * [wiki:Downloads Downloads] - Get it!
- * [wiki:Documentation] - Everything you need to know to get started.
- * List Info - Access the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted-python] and [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-web twisted-web] mailing lists.
- * [http://labs.twistedmatrix.com/ News] - Read the latest news about Twisted.
- * [http://twistedmatrix.com/trac/report Tracker] - [http://twistedmatrix.com/trac/newticket?type=defect Report a bug] or [http://twistedmatrix.com/trac/newticket?type=enhancement request a feature] ([http://twistedmatrix.com/trac/register Registration] is required)
-
-More Useful Pointers:
-
- * [wiki:TwistedCommunity The Twisted Community] - Get in touch with other Twisted users and developers.
- * [wiki:TwistedDevelopment Development] - Our development process; also, don't miss out on [wiki:ContributingToTwistedLabs contributing] to Twisted.
- * [wiki:SuccessStories Success Stories] - Read about people who have been successful with Twisted.
- * [wiki:TheTwistedShow The Twisted Show] - Interviews and podcasts with businesses and projects that use Twisted.
- * [wiki:ProjectsUsingTwisted Software that uses Twisted] - Learn what other projects are using Twisted.
- * [wiki:TwistedMatrixLaboratories The Labs] - What is ''Twisted Matrix Laboratories''?
- * [wiki:TwistedSponsors Sponsors] - Individuals and organisations aid development with donations of hardware, software, hosting, and so on.
- * [wiki:Windows Windows] We're especially seeking resources to help improve Twisted on Windows.
-
-{{{
-#!html
-
-<p>Twisted is supported by
-<a href="http://www.divmod.org/trac"><img src="http://divmod.com/ximages/anonymous_logo.png" border="0" align="center" alt="the Divmod Corporation"/></a>
-</p>
-
-    <h2>The Twisted Book</h2>
-<a href="http://www.amazon.com/exec/obidos/ASIN/0596100329/httpitamorg-20?creative=327641&camp=14573&link_code=as1"><img align="center" src="http://www.oreilly.com/catalog/covers/twistedadn.s.gif" /></a>
+</table>
 
 }}}
