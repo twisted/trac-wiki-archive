@@ -48,18 +48,23 @@
 
 === Silver ===
 
-=== Bronze ===
  * Glenn Tarbox
+
+=== Bronze ===
 
 === Aluminum ===
 
- * Chris Armstrong
+
  * Drew Perttula
  * Eino Makitalo
-
+ * David T Ripton III
+ * Alex Clemesha
 
 === Other ===
 
-
+ * Chris Armstrong
  * Michel Pelletier
+ * Valentino Volonghi
+ * Hein-Pieter van Braam
  * Ilya Novoselov
+ * N J Carriero
