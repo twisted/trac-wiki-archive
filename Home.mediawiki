@@ -28,6 +28,7 @@
 
 
     <h2>Contributing</h2>
+<div>
 Want to help Twisted, but don't have any spare time? If you appreciate Twisted and want to help the community and future development, consider a <a href="http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation">tax-deductible</a> monetary donation.
 
 <!-- BEGIN GOOGLE CHECKOUT GARBAGE -->
@@ -93,13 +94,13 @@ value="-----BEGIN PKCS7-----MIIH2QYJKoZIhvcNAQcEoIIHyjCCB8YCAQExggEwMIIBLAIBADCB
             </td>
         </tr>
     </table>
-
+</div>
     <!-- end left column /-->
     </td>
 
 
     <!-- begin center column/-->
-    <td valign="top" class="centercol" style="padding-left: 20px; padding-right: 10px;">
+    <td valign="top" class="centercol" style="padding-left: 10px; padding-right: 15px;">
 
 <h1 id="ActNow:BeaFoundingSponsor"><i>Act Now: Be a Founding Sponsor</i></h1>
 <p>
@@ -143,10 +144,14 @@ More Useful Pointers:
 </li><li><a class="wiki" href="/trac/wiki/Windows">Windows</a> We're especially seeking resources to help improve Twisted on Windows.
 </li></ul>
 
-<p>Twisted is supported by
+<br/>
+<br/>
+<br/>
+<center>
+<p>Twisted is supported by <br/>
 <a href="http://www.divmod.org/trac"><img src="http://divmod.com/ximages/anonymous_logo.png" border="0" align="center" alt="the Divmod Corporation"/></a>
 </p>
-
+</center>
 
     <!-- end center column /-->
     </td>
