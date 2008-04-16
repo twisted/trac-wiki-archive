@@ -7,10 +7,10 @@
     <!-- begin left column/-->
     <td valign="top" width="273">
 
-  <div id="download_top">
+  <div id="download_top" style="position: relative; left: -30px;">
   &nbsp;
   </div>
-  <div id="download" style="color: white">
+  <div id="download" style="color: white;position: relative; left: -30px;">
     Source:<br/>
     <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted-8.0.1.tar.bz2#md5=1ba5bb530356a867cfee35e65e58a43c">Twisted 8.0.1 tar</a><br />
     Win32:<br/>
@@ -19,7 +19,7 @@
     Mac OS X 10.5:<br/>
     <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted-8.0.1_py2.5_osx10.5.pkg">Twisted 8.0.1</a>
   </div>
-  <div id="download_bottom">
+  <div id="download_bottom" style="position: relative; left: -30px;">
   &nbsp;
   </div>
 
