@@ -186,6 +186,7 @@ More Useful Pointers:
 <!-- Magnetk: Donated 2008-04-10 -->
 <a href="http://magnetk.com/expandrive"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/ExpanDrive.gif?format=raw" /></a><br/>
 
+<a href="http://lucasfilm.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/lucasfilm.jpg?format=raw" /></a><br/>
 
   </div>
 
