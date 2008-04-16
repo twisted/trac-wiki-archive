@@ -47,7 +47,7 @@ Long description (as long as you wish)<br />
 
 Author: &lt;names&gt;
 Reviewer: &lt;names&gt;
-Fixes #&lt;ticket number&gt;<br />
+Fixes: #&lt;ticket number&gt;<br />
 </pre>
 }}}
 
