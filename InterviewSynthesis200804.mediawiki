@@ -1,0 +1,44 @@
+= Interview with Synthesis Studios =
+
+{{{
+#!html
+<a href="http://www.synthesisstudios.com/">
+<img src="http://twistedmatrix.com/trac/attachment/wiki/TwistedShowGuestLogos/synthesis_logo_final_RGB.gif?format=raw" align="right" style="padding:1.5em;" border="0" />
+</a>
+}}}
+
+== About Synthesis Studios ==
+
+From the Synthesis website:
+
+"Synthesis deals with engineering on the edge. Our atmosphere is one charged with creativity, something we consider absolutely vital. We focus our pioneering spirit on solving tricky engineering problems not only for a variety of clients, but also for ourselves. We explore blue sky ideas with exceptional cleverness and a high level of expertise, while keeping an anchor to practicality.
+
+"Our workspace is a unique place, comprised of remarkable individuals and novel technologies - it is an ecosystem which is central to the quality of our work. We are continually striving to balance work and play, and the studios are carefully set up to make that happen. For example, we frequently have recess to indulge our lighthearted side and dream up new playground games. By championing professional and playful time equally, Synthesis provides a place to bring together our staff's extensive skills, as well as encourage inventiveness."
+
+== The Players ==
+
+This interview was conducted via Skype with Raffi Krikorian in his Boston, MA office digs, while I basked in a sliver of sunshine coming in the basement window of my Valentine, NE office.
+
+At the end of the interview are pasted some links of interest. Enjoy!
+
+== Interview ==
+
+This interview is available online as a podcast, thanks to the [http://www.archive.org/ Internet Archive]. You can view the available formats at the link below, though we encourage you to use the open format of Ogg:
+
+ [http://www.archive.org/details/TwistedMatrixLabsInterviewWithSynthesisStudiosapril232008 Twisted Matrix Labs: Interview with Synthesis Studios (April 23, 2008)]
+
+We are also trying out podcasting via the [http://feeds.feedburner.com/TheTwistedShow RSS feed] for the [http://thetwistedshow.blogspot.com/ Twisted Show on blogger].
+
+== Resources ==
+
+=== Synthesis Studios ===
+ * http://www.synthesisstudios.com/
+ * http://www.synthesisstudios.com/blog/
+ * http://www.synthesisstudios.com/projects/busradio
+ * http://www.flickr.com/photos/synthesisstudios/
+
+=== Raffi Krikorian ===
+ * http://www.synthesisstudios.com/about/raffi
+ * http://www.oreillynet.com/pub/au/163
+ * http://www.oreilly.com/catalog/tivohks/
+ * http://www.media.mit.edu/physics/publications/papers/04.10.sciam/
