@@ -3,7 +3,7 @@
 {{{
 #!html
 <a href="http://www.chesspark.com">
-<img src="http://www.chesspark.com/images/logo2.png" align="right" style="padding:1.5em;" border="0" />
+<img src="http://twistedmatrix.com/trac/attachment/wiki/TwistedShowGuestLogos/chesspark.png?format=raw" align="right" style="padding:1.5em;" border="0" />
 </a>
 }}}
 
