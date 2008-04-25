@@ -174,7 +174,8 @@ More Useful Pointers:
 <a href="https://www.securitymetrics.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/securitymetrics.png?format=raw" /></a><br />
 <!-- OnResolve (tnelson): Donated 2008-04-04 -->
 <a href="http://www.onresolve.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/onresolve3.png?format=raw" /></a><br />
-
+<br />
+<a href="http://www.seafelt.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/seafelt.png?format=raw" /></a><br />
 
     <h4>Bronze</h4>
 <a href="http://allmydata.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/allmydata.jpg?format=raw" /></a><br/>
