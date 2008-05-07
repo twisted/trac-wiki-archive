@@ -189,6 +189,9 @@ More Useful Pointers:
 
 <a href="http://lucasfilm.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/lucasfilm.jpg?format=raw" /></a><br/>
 
+<br/>
+<a href="http://chesspark.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/chesspark.png?format=raw" /></a><br/>
+
   </div>
 
 
