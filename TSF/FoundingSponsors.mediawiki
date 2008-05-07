@@ -5,7 +5,7 @@
 === Platinum ===
 {{{
 #!html
-<a href="http://zenoss.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/microsoft.png?format=raw" /></a> -- <i>for donations valued at over $10,000; made by special arrangement</i> <br/>
+<a href="http://microsoft.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/microsoft.png?format=raw" /></a> -- <i>for donations valued at over $10,000; made by special arrangement</i> <br/>
 }}}
 
 === Gold ===
