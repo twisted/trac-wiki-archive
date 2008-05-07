@@ -162,6 +162,10 @@ More Useful Pointers:
 
   <div>
     <h3>Twisted Sponsors</h3>
+    <h4>Platinum</h4>
+
+<a href="http://microsoft.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/microsoft.png?format=raw" /></a> <br/>
+
     <h4>Gold</h4>
 <a href="http://zenoss.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/zenoss.gif?format=raw" /></a><br/>
 
