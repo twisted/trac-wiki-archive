@@ -40,7 +40,7 @@ Below are the names and amounts associated with levels of sponsorship.
 
 === Non-Monetary Donations ===
 
-The TSF will consider the value of non-monetary donations to the project - for example, donations of hardware, software licenses, or hosting - on a case-by-case basis.  We will set a sponsorship level appropriately.  The SFC will also need to help us determine the tax status of these items on a case-by-case basis, but anything donated directly to an individual (for example, software licenses associated with a particular individual's name) will almost certainly not qualify.
+The TSF will consider the value of non-monetary donations to the project - for example, donations of hardware, software licenses, or hosting - on a case-by-case basis.  We will set a sponsorship level appropriately.  The SFC will also need to help us determine - separate from their sponsorship level value - the tax status of these items on a case-by-case basis, but anything donated directly to an individual (for example, software licenses associated with a particular individual's name) will almost certainly not qualify for a tax deduction.
 
 In general, we suggest cash donations, as that process is much simpler.
 
