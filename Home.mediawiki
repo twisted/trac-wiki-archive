@@ -169,7 +169,7 @@ More Useful Pointers:
 -->
 
     <h4>Gold</h4>
-<a href="http://zenoss.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/zenoss.gif?format=raw" /></a><br/>
+<a href="http://www.zenoss.com/tsf?utm_source=tsf&utm_medium=logolink&utm_campaign=inbound"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/zenoss.gif?format=raw" /></a><br/>
 
     <h4>Silver</h4>
 <a href="http://tummy.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/tummy.png?format=raw" /></a><br/>
