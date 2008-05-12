@@ -215,6 +215,11 @@ For a more complete discussion of the distinction between Unicode strings and sp
     * Dan Sugalski's [http://www.sidhe.org/~dan/blog/archives/000255.html What the heck is: A string]; and
     * Joel Spolsky's [http://www.joelonsoftware.com/articles/Unicode.html The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)].
 
+
+=== Why can't the Twisted's reactor be restarted? ===
+
+There is no interesting reason. This is mainly a limitation of the current implementation, and a lack of interest on this particular feature. It's just a matter of someone spending the time on it.
+
 == Perspective Broker ==
 
 === How can I get the reference to a client from a Perspective? ===
