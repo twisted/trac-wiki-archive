@@ -199,6 +199,8 @@ More Useful Pointers:
 
 <br/>
 <a href="http://chesspark.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/chesspark.png?format=raw" /></a><br/>
+<br/>
+<a href="http://divmod.org/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/divlogo4_8_w160_banner.jpg?format=raw" /></a><br/>
 
   </div>
 
