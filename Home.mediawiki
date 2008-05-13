@@ -147,11 +147,6 @@ More Useful Pointers:
 <br/>
 <br/>
 <br/>
-<center>
-<p>Twisted is supported by <br/>
-<a href="http://www.divmod.org/trac"><img src="http://divmod.com/ximages/anonymous_logo.png" border="0" align="center" alt="the Divmod Corporation"/></a>
-</p>
-</center>
 
     <!-- end center column /-->
     </td>
