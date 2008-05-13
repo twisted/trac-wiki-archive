@@ -27,7 +27,7 @@
 <br />
 <a href="http://www.seafelt.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/seafelt.png?format=raw" /></a><br />
 <br />
-<a href="http://www.ubm.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/ubm.png?format=raw" /></a><br />
+<a href="http://www.unitedbusinessmedia.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/ubm.png?format=raw" /></a><br />
 
 }}}
 
