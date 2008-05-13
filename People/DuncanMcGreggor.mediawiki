@@ -3,6 +3,7 @@ A page for wiki drafts, etc.
 Drafts
  * [wiki:TwistedSoftwareFoundation The TSF Page]
  * [wiki:TSF/SponsorLogos TSF Sponsor Logos]
+ * [wiki:TSF/FoundingSponsors Founding Sponsors Page]
  * PressReleases
  * FeedTest
  * TestFrontPage
