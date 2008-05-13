@@ -24,8 +24,11 @@
 <a href="http://www.dcit.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/dcitlogo.png?format=raw" /></a><br/>
 <a href="http://sun.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/sun.png?format=raw" /></a><br/>
 <a href="https://www.securitymetrics.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/securitymetrics.png?format=raw" /></a><br />
-<br >
+<br />
 <a href="http://www.seafelt.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/seafelt.png?format=raw" /></a><br />
+<br />
+<a href="http://www.ubm.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/ubm.png?format=raw" /></a><br />
+
 }}}
 
 === Bronze ===
