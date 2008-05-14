@@ -26,8 +26,6 @@
 <a href="https://www.securitymetrics.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/securitymetrics.png?format=raw" /></a><br />
 <br />
 <a href="http://www.seafelt.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/seafelt.png?format=raw" /></a><br />
-<br />
-<a href="http://www.unitedbusinessmedia.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/ubm.png?format=raw" /></a><br />
 
 }}}
 
@@ -44,6 +42,9 @@
 <a href="http://lucasfilm.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/lucasfilm.jpg?format=raw" /></a><br/>
 <br/>
 <a href="http://chesspark.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/chesspark.png?format=raw" /></a><br/>
+<a href="http://www.contentinople.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/Contentinople.jpg?format=raw" /></a><br />
+<a href="http://www.internetevolution.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/InternetEvolution.jpg?format=raw" /></a><br />
+<a href="http://www.lightreading.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/LightReading.jpg?format=raw" /></a><br />
 <br/>
 <a href="http://divmod.org/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/divlogo4_8_w160_banner.jpg?format=raw" /></a><br/>
 
