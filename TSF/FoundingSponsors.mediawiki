@@ -26,7 +26,8 @@
 <a href="https://www.securitymetrics.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/securitymetrics.png?format=raw" /></a><br />
 <br />
 <a href="http://www.seafelt.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/seafelt.png?format=raw" /></a><br />
-
+<br/>
+<a href="http://www.appropriatesolutions.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/Appropriate-Solutions-Inc.gif?format=raw" /></a><br />
 }}}
 
 === Bronze ===
@@ -76,6 +77,7 @@
  * David T Ripton III
  * Alex Clemesha
  * Karl Bartel
+ * Nicola Larosa
 
 === Other ===
 
