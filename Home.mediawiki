@@ -102,9 +102,9 @@ value="-----BEGIN PKCS7-----MIIH2QYJKoZIhvcNAQcEoIIHyjCCB8YCAQExggEwMIIBLAIBADCB
     <!-- begin center column/-->
     <td valign="top" class="centercol" style="padding-left: 10px; padding-right: 15px;">
 
-<h1 id="ActNow:BeaFoundingSponsor"><i>Act Now: Be a Founding Sponsor</i></h1>
+<h1 id="ActNow:BeaFoundingSponsor">Thank You, Twisted Sponsors!</h1>
 <p>
-Do you want your name, or your company's name, to be immortalized as one of the first sponsors of the Twisted project?  <a class="wiki" href="/trac/wiki/TwistedSoftwareFoundation">Find out about the benefits of sponsorship today!</a>
+We'd like to thank all the companies that have sponsored Twisted this year. All of you have contributed to getting the Foundation of the ground, and have thus entered history as <a class="wiki" href="/trac/wiki/TSF/FoundingSponsors">Founding Sponsors</a>. We will be making an official announcenment in about two week, in order to catch up with the accounting.
 </p>
 <h1 id="WhatisTwisted">What is Twisted?</h1>
 
