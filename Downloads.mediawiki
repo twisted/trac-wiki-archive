@@ -59,33 +59,23 @@ You probably don't want these unless you have special considerations (note: Twis
 <pre>
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
-&nbsp; 
-11b3f8261339904ff96c04d4efb34b6b  Conch/8.0/TwistedConch-8.0.0.tar.bz2
-f7312425b771f2a07c30a677a99bbcc5  Core/8.0/TwistedCore-8.0.0.tar.bz2
-1c84354d99a291bc89c598140c2d6a1f  Core/8.0/TwistedCore-8.0.1.tar.bz2
-8a6abe304c3bd9b2ba054c397a2580a0  Flow/8.0/TwistedFlow-8.0.0.tar.bz2
-4fc8f743bdd52ffbc582084500b1a7ff  Lore/8.0/TwistedLore-8.0.0.tar.bz2
-8dfc37a6aae464cd6a28476a253a4cea  Mail/8.0/TwistedMail-8.0.0.tar.bz2
-09533501b9e1ae02c8a969a289df2d80  Names/8.0/TwistedNames-8.0.0.tar.bz2
-1b1a98cd31b8dd80d0da36d0f71d438f  News/8.0/TwistedNews-8.0.0.tar.bz2
-e42bcfbaf3b5b0d0ddfc4423e99ddca9  Pair/8.0/TwistedPair-8.0.0.tar.bz2
-8dcc0f4cbb0621b761ef67aae73051a8  Runner/8.0/TwistedRunner-8.0.0.tar.bz2
-4abac8985913790e8ed70d5a0754e079  Twisted/8.0/Twisted-8.0.0_py2.5_osx10.5.pkg
-5ac977fd40887c3b078457cfcc616adc  Twisted/8.0/Twisted-8.0.0.tar.bz2
-549da5ae9bc0103acee4e1dce0843ef2  Twisted/8.0/Twisted-8.0.1_py2.5_osx10.5.pkg
-1ba5bb530356a867cfee35e65e58a43c  Twisted/8.0/Twisted-8.0.1.tar.bz2
-47ee3101c38630c7c2548060cf322cf4  Twisted/8.0/Twisted_NoDocs-8.0.1.win32-py2.4.exe
-469682b64f5c3fc69642512dea7a5f59  Twisted/8.0/Twisted_NoDocs-8.0.1.win32-py2.5.exe
-598eb0f4efc8bfb8b0b75ae3ace51816  Web2/8.0/TwistedWeb2-8.0.0.tar.bz2
-9176ca76c2d177e38737139776f78d4f  Web2/8.0/TwistedWeb2-8.0.1.tar.bz2
-f13d39085503ac5cb7edc2c4a0012d52  Web/8.0/TwistedWeb-8.0.0.tar.bz2
-8c142fc30bcadf41b1ff68b5f4101418  Words/8.0/TwistedWords-8.0.0.tar.bz2
+&nbsp;
+e746618618ba93f707f7725899e141a9  Conch/8.1/TwistedConch-8.1.0.tar.bz2
+b6f766c7512d342be1844eeee974031d  Core/8.1/TwistedCore-8.1.0.tar.bz2
+ec7226b88218586ec1d5c3b3624376b7  Lore/8.1/TwistedLore-8.1.0.tar.bz2
+b471434356da5cdfb04dbe38802425ef  Mail/8.1/TwistedMail-8.1.0.tar.bz2
+e5f49fc23bef015484dbd025bf835611  Names/8.1/TwistedNames-8.1.0.tar.bz2
+25849ad7d4aa8e516ca486986109eba0  News/8.1/TwistedNews-8.1.0.tar.bz2
+a575f29ead4cc02c54e9061d0e6ac7c3  Twisted/8.1/Twisted-8.1.0.tar.bz2
+e34b48edf6fef075bd41ddbd215aed32  Web2/8.1/TwistedWeb2-8.1.0.tar.bz2
+0710b8976f64bec768bb5218ab1802c0  Web/8.1/TwistedWeb-8.1.0.tar.bz2
+40cecdc6d58efefdb02b50961bb9a381  Words/8.1/TwistedWords-8.1.0.tar.bz2
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.6 (GNU/Linux)
 &nbsp;
-iD8DBQFILKGBzG3xEdDSIIgRAg3HAJoCAJcRxGT6baxq8xDySe3KkOENQACfWJLJ
-aN4XDD4KNpEt1tdLtKZ6uwY=
-=aKY8
+iD8DBQFIMIWOzG3xEdDSIIgRAmu4AJ9pB/6D9823ZelwuMmwb7Pas65fyQCggBBF
+Ys21EqYTVcjQm9+MhjgfBJ4=
+=dTHf
 -----END PGP SIGNATURE-----
 </pre>
 }}}
