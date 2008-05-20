@@ -157,6 +157,9 @@ More Useful Pointers:
 
   <div>
     <h3>Twisted Sponsors</h3>
+    <h4>Diamond</h4>
+<a href="http://www.itasoftware.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/ITA_logo_160x80.jpg?format=raw" /></a><br/>
+
 <!-- # Why's this here?
     <h4>Platinum</h4>
 
