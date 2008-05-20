@@ -2,18 +2,20 @@
 
 == Founding Sponsors: Companies ==
 
-=== Platinum ===
+=== Diamond ===
 {{{
 #!html
-<!--
-<a href="http://microsoft.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/microsoft.png?format=raw" /></a> - <i>for donations valued at over $10,000; made by special arrangement</i> <br/>
-/-->
+<a href="http://www.itasoftware.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/ITA_logo_160x80.jpg?format=raw" /></a><br/>
 }}}
 
 === Gold ===
 {{{
 #!html
 <a href="http://www.zenoss.com/tsf?utm_source=tsf&utm_medium=logolink&utm_campaign=inbound"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/zenoss.gif?format=raw" /></a><br/>
+<!--
+<a href="http://microsoft.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/microsoft.png?format=raw" /></a> - <i>for donations valued at over $10,000; made by special arrangement</i> <br/>
+/-->
+
 }}}
 
 === Silver ===
