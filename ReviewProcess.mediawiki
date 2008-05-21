@@ -15,19 +15,21 @@ The post-development, pre-commit process Twisted has adopted is this:
 
  * A reviewer can be anyone who is familiar with the Twisted codebase, [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/coding-standard.xhtml?format=raw coding standard], and review requirements.  A reviewer need not necessarily be familiar with the specific area of Twisted being changed, but he or she should feel confident in his or her abilities to spot problems in the change.
  
- * A reviewer must reject a set of changes in any of the following circumstances: 
-   * The test suite fails on any of the supported* platforms as a result of the changes.
-   * The changes alter the behavior of code in a way which is not tested. 
-   * The changes add new behavior without adding test coverage for that behavior. 
-   * The changes add new public APIs or test methods without adding documentation for them.
-   * The changes modify public APIs or test methods which are undocumented (ie, a function which has no docstring is modified, or a class which has no docstring has methods added to it) without adding documentation. 
-   * The changes modify the behavior of a documented API without updating the documentation. 
-   * The changes violate the [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/coding-standard.xhtml?format=raw coding standard].
-   * pyflakes is an useful tool to check basic quality of code. The following command will check all the files modified and added by a branch merge:
+ * A reviewer must reject a set of changes which doesn't meet all of the following conditions: 
+   * The test suite passes on all of the supported* platforms with the changes.
+   * The changes must have tests for any alterations of behavior.
+   * The changes must have test coverage for all new behavior.
+   * The changes must have full documentation for new public APIs and test methods.
+   * The changes must add docstrings for any modifed public APIs or test methods which were previously undocumented (ie, if a function which has no docstring was modified, or a class which has no docstring had methods added to it).
+   * The changes must include updates to the documentation for any modified behavior of an API.
+   * If appropriate, the changes must include "user guide" documentation in the doc/ directory.
+   * The changes must include updated documentation for any APIs which are being deprecated or otherwise obsoleted.
+   * The changes must follow the [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/coding-standard.xhtml?format=raw coding standard].
+   * The changes must not be obviously buggy: pyflakes is an useful tool to check basic quality of code. The following command will check all the files modified and added by a branch merge:
 {{{
 svn status | grep '^\M\|^A' | cut -c 8- | xargs pyflakes
 }}}
- 
+
  * A reviewer may reject a set of changes for other reasons, most of which are hard to quantify.  Basically, use your best judgement, and don't be afraid to point out problems which don't fit into the above list.
 
  * When a reviewer has completed a review, the trac workflow is as follows:
