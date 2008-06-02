@@ -16,6 +16,10 @@ This seems to have been a good idea, as we've made a good start with three newly
 
 We are making no proclamations about standards, adherences, etc.: community members are free to follow their own development practices, etc. We would like to encourage people to use the "tx" prefix for their projects, in the same way that "py" is used for general Python projects. For example, we would like the authors of "Twisted SNMP" and "Twisted Storage" to instead use something like "txSNMP" and "txStorage." We want the "Twisted" name to be reserved for projects that are part of Twisted proper.
 
+== Leadership ==
+
+In so much as an autonomous collective has leadership, Phil Christensen has kindly agreed to act as the point of contact for this community effort. He will maintain the community presence on Launchpad, send out announcements as necessary, and respond to inquiries, while at the same time receiving the full support of [TwistedMatrixLaboratories the Labs' members].
+
 == Launchpad ==
 
 We are encouraging community members to use [https://launchpad.net/ Launchpad] to manage their Twisted code projects, or at the very least, mirror them. Doing so allows the project managers to assign the "tx" super project to their own, thus including them in the community of projects that use or depend on Twisted.
