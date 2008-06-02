@@ -4,7 +4,7 @@ This wiki page is the home for information about projects to which we are collec
 
 == Motivation ==
 
-This effort was a culmination of [http://twistedmatrix.com/pipermail/twisted-python/2008-May/017790.html this discussion] that occurred on the Twisted mail list (and condensed [http://twistedmatrix.com/pipermail/twisted-python/2008-May/017817.html here]). In summary, by creating a place where anyone can contribute whatever they want, we address the long-lamented barrier to entry for Twisted community members:
+This effort was a culmination of [http://twistedmatrix.com/pipermail/twisted-python/2008-May/017790.html this discussion] that occurred on the Twisted mail list (and expressed in condensed form [http://twistedmatrix.com/pipermail/twisted-python/2008-May/017817.html here]). In summary, by creating a place where anyone can contribute whatever they want, we address the long-lamented barrier to entry for Twisted community members:
   1. what are often perceived as impossibly high standards, and
   1. limitations on what projects are included in Twisted.
 
