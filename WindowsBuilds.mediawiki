@@ -23,6 +23,17 @@ Without Cygwin installed, you need MSVC installed for the cl.exe
 compiler, which is the default on windows.  Just issue the command:
 $ python setup.py install
 
+=== With Mingw ===
+The easiest way to build the extensions without MSVC is to install MinGW, for example using the [http://sourceforge.net/project/showfiles.php?group_id=2435&package_id=240780 automated installer].
+Then, create a distutils.cfg file in your distutils installation path (for example, C:\Python2.5\Lib\distutils\distutils.cfg), and put the following content:
+{{{
+[build]
+compiler=mingw32
+}}}
+
+And then issue {{{$ python setup.py install}}}. You can also pass the {{{--compiler=mingw32}}} option to the build command instead of using distutils.cfg.
+
+
 === With Cygwin ===
 With Cygwin installed, you need to make sure these two packages are installed:
   - gcc
