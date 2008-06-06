@@ -184,7 +184,7 @@ More Useful Pointers:
 <a href="http://www.appropriatesolutions.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/Appropriate-Solutions-Inc.gif?format=raw" /></a><br />
 
     <h4>Bronze</h4>
-<a href="http://allmydata.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/allmydata.jpg?format=raw" /></a><br/>
+<a href="http://www.allmydata.com/index.php?tracking=twisted-home"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/allmydata.jpg?format=raw" /></a><br/>
 <!-- Holden Web: Donated 2008-03-19 -->
 <a href="http://holdenweb.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/HoldenWebTSF.png?format=raw" /></a><br/>
 
