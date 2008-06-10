@@ -29,3 +29,6 @@ The Launchpad super project site is here:
 
 To associate your Launchpad project with this super project, click the "Change details" link on your project overview page and type "tx" in the super project field. Your project should then show up in the list on the tx front page.
 
+== Useful Info ==
+
+ * [http://oubiwann.blogspot.com/2008/06/bazaar-with-subversion-and-combinator.html Bazaar with Subversion]
