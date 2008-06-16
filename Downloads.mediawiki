@@ -16,11 +16,14 @@ If you wish to build and install the latest Twisted by-hand on Ubuntu ensure tha
  * [http://tmrc.mit.edu/mirror/twisted/Twisted/8.1/Twisted_NoDocs-8.1.0.win32-py2.4.exe Twisted 8.1.0 for Python 2.4]
  * [http://tmrc.mit.edu/mirror/twisted/Twisted/8.1/Twisted_NoDocs-8.1.0.win32-py2.5.exe Twisted 8.1.0 for Python 2.5]
  * [http://tmrc.mit.edu/mirror/twisted/Dependencies/Win/pycrypto-2.0.1.win32-py2.5.exe PyCrypto 2.0.1 for Python 2.5] (needed by Conch)
+ * [http://sourceforge.net/project/showfiles.php?group_id=31249 PyOpenSSL] (needed for SSL)
+
 
 == Mac OS X ==
 
  * [http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted-8.0.1_py2.5_osx10.5.pkg Twisted 8.0.1 for OS X 10.5]
  * [http://tmrc.mit.edu/mirror/twisted/Dependencies/Mac/PyCrypto-2.0.1_py2.5_osx10.5.pkg PyCrypto 2.0.1 for OS X 10.5] (needed by Conch)
+ * [http://sourceforge.net/project/showfiles.php?group_id=31249 PyOpenSSL] (needed for SSL)
 
 == Source Tarball ==
 
