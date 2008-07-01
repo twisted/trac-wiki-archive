@@ -9,7 +9,7 @@
  * The [wiki:TwistedProjects project] pages have documentation links that are pertinent to each Twisted project. For convenience, we offer some of these links below:
    * '''conch''' (SSH protocol) - [http://twistedmatrix.com/projects/conch/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/conch/documentation/examples/ examples]
    * '''lore''' (documentation) - [http://twistedmatrix.com/projects/lore/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/lore/documentation/examples/ examples]
-   * '''mail''' (SMTP protocol) - [http://twistedmatrix.com/projects/mail/documentation/tutorial/ tutorial] and [http://twistedmatrix.com/projects/mail/documentation/examples/ examples]
+   * '''mail''' (SMTP protocol) - [http://twistedmatrix.com/projects/mail/documentation/tutorial/smtpclient/smtpclient.html client tutorial] and [http://twistedmatrix.com/projects/mail/documentation/examples/ examples]
    * '''names''' (DNS protocol) - [http://twistedmatrix.com/projects/names/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/names/documentation/examples/ examples]
    * '''trial''' (testing framework) - [wiki:TwistedTrial docs]
    * '''web''' (HTTP protocol) - [http://twistedmatrix.com/projects/web/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/web/documentation/examples/ examples]
