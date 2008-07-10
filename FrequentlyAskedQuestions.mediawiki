@@ -226,6 +226,10 @@ For a more complete discussion of the distinction between Unicode strings and sp
 
 There is no interesting reason. This is mainly a limitation of the current implementation, and a lack of interest on this particular feature. It's just a matter of someone spending the time on it.
 
+=== What's the best way of integrating Twisted with pygame? ===
+
+Take a look at [https://launchpad.net/game game] to see an example of the world's best practice for integrating pygame and Twisted.
+
 == Perspective Broker ==
 
 === How can I get the reference to a client from a Perspective? ===
