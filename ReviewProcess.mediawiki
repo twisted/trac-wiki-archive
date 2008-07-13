@@ -13,7 +13,7 @@ The post-development, pre-commit process Twisted has adopted is this:
   1. Change the owner to either no one or, if a particular developer is likely to review a branch or a particular developer's input is desired on the branch, that developer.  For the former case, when starting a review the reviewer should assign the ticket to themselves.
   1. Comment on the ticket indicating anything it might be beneficial for the reviewer to know.  Tickets should be described well enough that the change is already justified and the new code should be easy enough to read that further explanations aren't necessary to understand it, but sometimes diffs themselves can be more difficult to read than either the old or new state of the code, so comments like ''the implementation of foo moved from bar.py to baz.py'' can sometimes make a reviewer's job easier.
 
- * A reviewer can be anyone who is familiar with the Twisted codebase, [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/coding-standard.xhtml?format=raw coding standard], and review requirements.  A reviewer need not necessarily be familiar with the specific area of Twisted being changed, but he or she should feel confident in his or her abilities to spot problems in the change.
+ * A reviewer can be anyone who is familiar with the Twisted codebase, [source:trunk/doc/development/policy/coding-standard.xhtml?format=raw coding standard], and review requirements.  A reviewer need not necessarily be familiar with the specific area of Twisted being changed, but he or she should feel confident in his or her abilities to spot problems in the change.
  
  * A reviewer must reject a set of changes which doesn't meet all of the following conditions: 
    * The test suite passes on all of the supported* platforms with the changes.
@@ -22,9 +22,9 @@ The post-development, pre-commit process Twisted has adopted is this:
    * The changes must have full documentation for new public APIs and test methods.
    * The changes must add docstrings for any modifed public APIs or test methods which were previously undocumented (ie, if a function which has no docstring was modified, or a class which has no docstring had methods added to it).
    * The changes must include updates to the documentation for any modified behavior of an API.
-   * If appropriate, the changes must include "user guide" documentation in the doc/ directory.
+   * If appropriate, the changes must include "user guide" documentation in the [source:doc doc/] directory.
    * The changes must include updated documentation for any APIs which are being deprecated or otherwise obsoleted.
-   * The changes must follow the [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/coding-standard.xhtml?format=raw coding standard].
+   * The changes must follow the [source:trunk/doc/development/policy/coding-standard.xhtml?format=raw coding standard].
    * The changes must not be obviously buggy: pyflakes is an useful tool to check basic quality of code. The following command will check all the files modified and added by a branch merge:
 {{{
 svn status | grep '^\M\|^A' | cut -c 8- | xargs pyflakes
