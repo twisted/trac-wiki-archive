@@ -170,11 +170,11 @@ More Useful Pointers:
 <a href="http://www.zenoss.com/tsf?utm_source=tsf&utm_medium=logolink&utm_campaign=inbound"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/zenoss.gif?format=raw" /></a><br/>
 
 
-<a href="http://bazaar-vcs.org/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/google.png?format=raw" /></a><br/>
+<a href="http://code.google.com/opensource/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/google.png?format=raw" /></a><br/>
 
 <br/>
 
-<a href="http://code.google.com/opensource/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/bazaar2.png?format=raw" /></a><br/>
+<a href="http://bazaar-vcs.org/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/bazaar2.png?format=raw" /></a><br/>
 
 
     <h4>Silver</h4>
