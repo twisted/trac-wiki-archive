@@ -1,0 +1,19 @@
+
+ * Issue tracking
+   * IRC notification of new tickets and ticket review / openness state
+   * Mail notification of new tickets
+   * Mail notification of subscribed tickets
+   * Ability to delete comments (spam)
+ * Web site
+ * Source browser
+   * line number links
+ * Revision control
+   * commit notification to IRC
+   * commit notification to email
+   * buildbot builds on trunk commits
+   * buildbot builds on arbitrary branches
+ * Revision control / ticket integration
+   * automatic or easy association of branches with tickets
+   * ability to close a ticket with a commit
+   * reopen a ticket with a commit
+   * automatically post a comment with a commit message
