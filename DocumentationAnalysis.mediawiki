@@ -1,0 +1,25 @@
+= Documentation Analysis =
+
+The '''documentation analyis''' is the work of the January 14 2006 twisted documentation sprint.
+
+== Overview ==
+
+This sprint will hopefully be the first in a series, and it will be
+focussed on ''reading'' the documentation, rather than writing it. We
+would therefore especially welcome the input of people who are either
+users of the documentation, or want the documentation improved but don't
+want to write it.
+
+We will focus on reviewing present documentation against the following
+criteria:
+ * does it reflect best practices for Twisted coders?
+ * is it up-to-date?
+ * is it complete?
+
+For people who are newer to Twisted, reviews on the general useability
+of any particular piece of Twisted documentation as per my post at
+http://twistedmatrix.com/pipermail/twisted-python/2005-May/010386.html
+
+== What to do ==
+
+See the wiki:DocumentationAnalysis/DocumentList
