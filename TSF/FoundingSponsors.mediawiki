@@ -43,7 +43,8 @@
 <br/>
 <a href="http://bazaar-vcs.org/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/bazaar2.png?format=raw" /></a><br/>
 
-
+<br/>
+<a href="http://flumotion.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/flumotion-logo-160x50.gif?format=raw" /></a><br/>
 }}}
 
 === Bronze ===
