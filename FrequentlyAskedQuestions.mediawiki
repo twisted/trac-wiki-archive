@@ -70,7 +70,7 @@ Red Hat and derived Linux distributions arrange to have certain Python libraries
 
 === Why does Twisted depend on Zope? ===
 
-Actually, Twisted depends on [http://www.zope.org/Products/ZopeInterface Zope Interface], an interface package which is also bundled independently from the main Zope distribution.  Twisted uses Zope Interface to define and document APIs.  The [http://twistedmatrix.com/trac/wiki/TwistedProject Twisted source distribution] includes a source package for Zope Interface.  Zope Interface is also [http://packages.debian.org/cgi-bin/search_packages.pl?keywords=zopeinterface&searchon=names&subword=1&version=stable&release=all packaged by Debian].
+Actually, Twisted depends on [http://www.zope.org/Products/ZopeInterface Zope Interface], an interface package which is also bundled independently from the main Zope distribution.  Twisted uses Zope Interface to define and document APIs.  Zope Interface is also [http://packages.debian.org/cgi-bin/search_packages.pl?keywords=zopeinterface&searchon=names&subword=1&version=stable&release=all packaged by Debian].
 
 === How can I access self.factory from my Protocol's !__init!__? ===
 
