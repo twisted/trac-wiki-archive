@@ -22,7 +22,11 @@ The definitions on this page have been taken from Wikipedia, unless otherwise no
 
 === '' Jabber '' ===
 
-See ''XMPP''
+Jabber is an open, secure, spam-free, ad-free, decentralized alternative to consumer IM silos like AOL Instant Messenger, ICQ, Windows Live Messenger, and Yahoo Instant Messenger. Under the hood, Jabber is a set of streaming XML protocols (called XMPP) that enable any two entities on the Internet to exchange messages, presence, and other structured information in close to real time.
+
+For details about the underlying protocol, see ''XMPP''.
+
+''Taken from http://www.jabber.org/jabber-for-geeks/technology-overview.''
 
 === '' JID '' ===
 
@@ -101,3 +105,4 @@ Unlike most instant messaging protocols, XMPP is an open standard. Like e-mail, 
 == Sources ==
  * http://en.wikipedia.org/wiki/Jabber
  * http://www.xmpp.org/extensions/xep-0163.html
+ * http://www.jabber.org/jabber-for-geeks/technology-overview
