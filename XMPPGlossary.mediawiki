@@ -1,0 +1,103 @@
+= XMPP Glossary =
+
+The definitions on this page have been taken from Wikipedia, unless otherwise noted.
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== '' federation '' ===
+
+=== ''  '' ===
+
+=== '' instant messaging '' ===
+
+=== '' Jabber '' ===
+
+See ''XMPP''
+
+=== '' JID '' ===
+
+=== ''  '' ===
+
+=== '' node '' ===
+
+=== '' node, aggregate '' ===
+
+=== '' notification '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== '' personal eventing '' ===
+
+Personal eventing uses the XMPP publish-subscribe protocol to broadcast state change events associated with an instant messaging and presence account. This enables a standard XMPP user account to function as a virtual pubsub service, easing the discovery of syndicated data and event notifications associated with such an account.
+
+=== '' presence '' ===
+
+=== ''  '' ===
+
+=== '' publish-subscribe '' ===
+
+=== '' pubsub '' ===
+
+See ''publish-subscribe''.
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== '' subscribers '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== '' XMPP '' ===
+
+Extensible Messaging and Presence Protocol (XMPP) is an open, XML-inspired protocol originally aimed at near-real-time, extensible instant messaging (IM) and presence information (a.k.a. buddy lists), but now expanded into the broader realm of message oriented middleware. It remains the core protocol of the Jabber Instant Messaging and Presence technology. Built to be extensible, the protocol has accumulated features over time such as Voice over IP and file transfer signaling.
+
+Unlike most instant messaging protocols, XMPP is an open standard. Like e-mail, it is an open system where anyone who has a domain name and a suitable Internet connection can run their own Jabber server and talk to users on other servers. The standard server implementations and many clients are also free and open source software.
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+=== ''  '' ===
+
+== Sources ==
+ * http://en.wikipedia.org/wiki/Jabber
+ * http://www.xmpp.org/extensions/xep-0163.html
