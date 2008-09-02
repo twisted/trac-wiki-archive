@@ -16,3 +16,7 @@ Twisted Show
  * [wiki:InterviewRenkoo200612 Renkoo Interview]
  * [wiki:InterviewChesspark200802 Chesspark Interview]
  * [wiki:TwistedShowGuestLogos Guest Logos]
+
+XMPP Work
+ * [wiki:XMPPGlossary XMPP Glossary]
+ * [wiki:XMPPLinks XMPP Links of Interest]
