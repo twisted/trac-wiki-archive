@@ -26,7 +26,7 @@ Jabber is an open, secure, spam-free, ad-free, decentralized alternative to cons
 
 For details about the underlying protocol, see ''XMPP''.
 
-''Taken from http://www.jabber.org/jabber-for-geeks/technology-overview.''
+,,''Taken from http://www.jabber.org/jabber-for-geeks/technology-overview.'',,
 
 === '' JID '' ===
 
