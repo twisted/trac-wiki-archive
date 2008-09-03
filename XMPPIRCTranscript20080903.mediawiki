@@ -504,4 +504,8 @@
 2008-09-03 20:49 <oubiwann> I'm excited to see that Twisted is moving in a direction that could not only provide full XMPP support
 2008-09-03 20:49 <oubiwann> but also address messaging as a whole
 2008-09-03 20:50 <oubiwann> and potentially offer Python alternatives to Java-dominated MOM, ESB, and even SOA solutions
+2008-09-03 20:54 <glyph> there is definitely a very long-term question in here about maybe making a specific MOM package
+2008-09-03 20:54 <glyph> although that might be stretching the boundaries of what should really be 'in twisted' to the point where it wouldn't work
+2008-09-03 20:55 <glyph> (i.e. we don't put persistence systems in here any more; ask jml what he thinks about every morning when he puts in his glass eye)
+2008-09-03 20:55 <glyph> I'm generally feeling more optimistic about the state of XMPP and Twisted too
 }}}
