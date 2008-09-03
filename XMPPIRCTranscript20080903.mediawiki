@@ -5,6 +5,7 @@
 ''Copied from http://80.93.122.37/?below=2008-09-03&above=2008-09-03.''
 
 {{{
+2008-09-03 18:55 <glyph> metajack, ralphm, oubiwann: okay, you guys are all here
 2008-09-03 18:55 <metajack> oh no!
 2008-09-03 18:55 <glyph> we should talk about some stuff
 2008-09-03 18:55 * metajack sense i'm about to be volunteered for things
