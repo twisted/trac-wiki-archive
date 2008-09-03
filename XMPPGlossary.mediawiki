@@ -64,6 +64,14 @@ Personal eventing uses the XMPP publish-subscribe protocol to broadcast state ch
 
 === '' publish-subscribe '' ===
 
+Publish-subscribe is an asynchronous messaging paradigm where senders (publishers) of messages are not programmed to send their messages to specific receivers (subscribers). Rather, published messages are characterized into classes, without knowledge of what (if any) subscribers there may be. Subscribers express interest in one or more classes, and only receive messages that are of interest, without knowledge of what (if any) publishers there are. This decoupling of publishers and subscribers can allow for greater scalability and a more dynamic network topology.
+
+Publish-subscribe is a sibling of the Message Queue paradigm, and is typically one part of a larger Message-Oriented Middleware solution. Most messaging systems support in their API (e.g. JMS) both the publish-subscribe and Message Queue models.
+
+=== '' publisher '' ===
+
+The sender of a specific message.
+
 === '' pubsub '' ===
 
 See ''publish-subscribe''.
@@ -72,7 +80,9 @@ See ''publish-subscribe''.
 
 === ''  '' ===
 
-=== '' subscribers '' ===
+=== '' subscriber '' ===
+
+The recipient of a specific message of interest where, by some mechanism, interest has been indicated.
 
 === '' transport '' ===
 
