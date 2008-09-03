@@ -22,6 +22,8 @@ An XMPP gateway allows users to access networks using other protocols. This can 
 
 === '' instant messaging '' ===
 
+Instant messaging is a form of real-time communication between two or more people based on typed text. The text is conveyed via computers connected over a network such as the Internet.
+
 === '' Jabber '' ===
 
 Jabber is an open, secure, spam-free, ad-free, decentralized alternative to consumer IM silos like AOL Instant Messenger, ICQ, Windows Live Messenger, and Yahoo Instant Messenger. Under the hood, Jabber is a set of streaming XML protocols (called XMPP) that enable any two entities on the Internet to exchange messages, presence, and other structured information in close to real time.
