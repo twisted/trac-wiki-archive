@@ -490,4 +490,18 @@
 2008-09-03 20:41 <oubiwann> http://twistedmatrix.com/trac/wiki/XMPPServerArchitecture
 2008-09-03 20:41 <ralphm> thanks a bunch, I am really excited
 2008-09-03 20:41 <oubiwann> http://twistedmatrix.com/trac/wiki/XMPPIRCTranscript20080903
+2008-09-03 20:43 <glyph> oubiwann: great!
+2008-09-03 20:43 <glyph> There are a bunch of already-filed tickets that should probably be linked into that summary
+2008-09-03 20:43 <glyph> I'll do some searching as I have time later and link them in
+2008-09-03 20:43 <glyph> or file them, as the case may be
+2008-09-03 20:43 <oubiwann> nice
+2008-09-03 20:44 <ralphm> ok
+2008-09-03 20:44 <ralphm> sleep now
+2008-09-03 20:46 <oubiwann> okay, updated the ticket with links to the new wiki pages (notes and xscript)
+2008-09-03 20:47 <oubiwann> I'll twittered about this and will also send an email to the Twisted-Jabber and Twisted mail lists
+2008-09-03 20:48 <glyph> oubiwann: thanks again!
+2008-09-03 20:49 <oubiwann> no prob :-)
+2008-09-03 20:49 <oubiwann> I'm excited to see that Twisted is moving in a direction that could not only provide full XMPP support
+2008-09-03 20:49 <oubiwann> but also address messaging as a whole
+2008-09-03 20:50 <oubiwann> and potentially offer Python alternatives to Java-dominated MOM, ESB, and even SOA solutions
 }}}
