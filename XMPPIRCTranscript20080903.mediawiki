@@ -1,0 +1,481 @@
+= IRC Transcript =
+
+== Discussion about XMPP in Twisted, 3 Sep 2008 ==
+
+''Copied from http://80.93.122.37/?below=2008-09-03&above=2008-09-03.''
+
+{{{
+2008-09-03 18:55 <metajack> oh no!
+2008-09-03 18:55 <glyph> we should talk about some stuff
+2008-09-03 18:55 * metajack sense i'm about to be volunteered for things
+2008-09-03 18:55 <damoxc> metajack: cool ta
+2008-09-03 18:56 <metajack> glyph: i assume about twisted words
+2008-09-03 18:56 <glyph> metajack: that is a thing we could talk about
+2008-09-03 18:56 <glyph> but you know, you're the one who said it, not me!
+2008-09-03 18:56 * ralphm waves
+2008-09-03 18:56 <glyph> so since jack wants to, let's talk about twisted words
+2008-09-03 18:56 <oubiwann> heh
+2008-09-03 18:56 <oubiwann> sucka!
+2008-09-03 18:57 <radix> oh it's metajack, he subscribed to my identica
+2008-09-03 18:57 <ralphm> radix: who hasn't?
+2008-09-03 18:57 <radix> ralphm: too many people, I guess
+2008-09-03 18:57 <glyph> One thing that I would like to talk about re: twisted words is... where is it at
+2008-09-03 18:57 <glyph> I kind of lost track after the last time we (ralphm and I) talked about it
+2008-09-03 18:58 <ralphm> glyph: I think it is mostly at that same place
+2008-09-03 18:58 <glyph> OK cool
+2008-09-03 18:58 <glyph> so I still think that #2328 is a big deal
+2008-09-03 18:58 <glyph> and I'd like to understand why it depends on #2320 :)
+2008-09-03 18:59 <ralphm> Well, I think any server should be able to federate.
+2008-09-03 18:59 <metajack> give me a sec to look up those bugs
+2008-09-03 19:00 <thijs> hoi
+2008-09-03 19:00 <glyph> ralphm: OK. That is a good point. I guess technically the comment says 'related', not 'dependent'.
+2008-09-03 19:00 <glyph> thijs: don't start speakin' your weird moon language just because ralphm is here, we got serious business happening
+2008-09-03 19:00 <glyph> thijs: :)
+2008-09-03 19:00 <thijs> twisted in canada http://www.creativecommons.ca/blog/?p=267
+2008-09-03 19:00 <thijs> glyph: HAH
+2008-09-03 19:01 <glyph> thijs: awesome!
+2008-09-03 19:01 <thijs> als het zo moet ;)
+2008-09-03 19:01 <glyph> no thank you I don't want any moĂŤt I'm working
+2008-09-03 19:01 <thijs> :)
+2008-09-03 19:01 <metajack> so as far as i know, most of the xmpp server stuff lives in ralphm's branch at ik.nu
+2008-09-03 19:01 <ralphm> (also having XMPP Council meeting right now, but I'll try to manage)
+2008-09-03 19:02 <glyph> ralphm: how... fortuitous
+2008-09-03 19:02 <metajack> i also know that we have several patches that are not upstream yet. and i'm not sure which ones those are at the momeht :(
+2008-09-03 19:02 <glyph> From my perspective, 2328 is higher priority than 2320, because it gets the XMPP stuff into a runnable tool that developers can play with without writing any code
+2008-09-03 19:03 <glyph> metajack: by "not upstream"... do you mean not in the tracker?
+2008-09-03 19:03 <ralphm> glyph: for what kind of use cases?
+2008-09-03 19:03 <metajack> glyph: unsure if they are in the tracker or not. they are certainly not in svn.
+2008-09-03 19:03 <glyph> ralphm: 'Huh, does this do jabber? Let me type in "localhost" in gaim and see if that works. Oh it does!'
+2008-09-03 19:03 <metajack> note that #2328 requires an xmpp sever and an xmpp muc implementation.
+2008-09-03 19:04 <radix> "SPARK/ALPHA"?
+2008-09-03 19:04 <glyph> metajack: is MUC one of those things where you have to implement a billion extensions, or can it be done simply?
+2008-09-03 19:04 <oubiwann> ralphm: yeah, I'm down for getting a pre-federation-support implementation into trunk
+2008-09-03 19:04 <oubiwann> and then turning around and working on the federation stuff
+2008-09-03 19:04 <metajack> it's somewhat equivalent to the irc protocol, except with xml :)
+2008-09-03 19:05 <metajack> we have such an implementation in twisted already
+2008-09-03 19:05 <ralphm> glyph: right. Where's most of the interest I've gauged seems to be in federating entities. That could be IM servers, but also 'bots' or web-site / services with a (pubsub?) XMPP interface
+2008-09-03 19:05 <glyph> metajack: we do?
+2008-09-03 19:05 <metajack> would you like to move Palaver into twisted ?
+2008-09-03 19:06 <glyph> metajack: If I understand what it is, I think so.
+2008-09-03 19:06 <metajack> then you probably also want punjab.
+2008-09-03 19:06 <oubiwann> http://www.onlinegamegroup.com/projects/palaver/browser/trunk/palaver
+2008-09-03 19:06 <metajack> and pretty soon you have a whole xmpp stack
+2008-09-03 19:06 <ralphm> heh
+2008-09-03 19:06 <oubiwann> sweet
+2008-09-03 19:07 <metajack> i wasn't aware you wanted this much stuff in twisted
+2008-09-03 19:07 <oubiwann> http://www.butterfat.net/wiki/Projects/PunJab
+2008-09-03 19:07 <ralphm> I have some extension protocol implementations in wokkel that also need to go into Twisted Words. Like pubsub.
+2008-09-03 19:08 <glyph> metajack: It's a weird oddity of XMPP that "sending a message to a group" is "so much stuff" :) In IRC it's like 50 lines of code
+2008-09-03 19:08 <ralphm> metajack: basically Glyph wants a standalone twistd service that 'does' IM
+2008-09-03 19:08 <ralphm> i.e. person-to-person and muc
+2008-09-03 19:08 <ralphm> as in twistd jabber
+2008-09-03 19:08 <ralphm> (or something)
+2008-09-03 19:09 <metajack> i think most of the pieces are there.
+2008-09-03 19:09 <dash> yeah, i'm not seeing how punjab would really need to go into twisted
+2008-09-03 19:09 <glyph> Neither am I, really
+2008-09-03 19:09 <metajack> so the twisted jabber server only supports direct connections and not BOSH?
+2008-09-03 19:09 <glyph> Not that I'm saying we shouldn't have it, later
+2008-09-03 19:10 <ralphm> the thing we don't have is a session manager
+2008-09-03 19:10 <metajack> i assume we could do without mod_offline and other such things and just support basic roster operations
+2008-09-03 19:10 <ralphm> and a functioning internal architecture to connect 'parts' of the service (as most XMPP server do it, anyway)
+2008-09-03 19:11 <ralphm> yes, and the whole presence dance
+2008-09-03 19:11 <glyph> so, it looks to me like Punjab is mostly about transports
+2008-09-03 19:11 <glyph> and it would be nice to roll those transports in later, but we can do a fully functional implementation by just rolling in most of wokkel+palaver
+2008-09-03 19:11 <metajack> Punjab is an implementation of BOSH (XEP 124 and 206) which translates HTTP connectiosn into XMPP ones. It is needed for javascript clients.
+2008-09-03 19:12 <ralphm> metajack: I would say not a first priority
+2008-09-03 19:12 <ralphm> just like I don't think pubsub is needed for such a first approach
+2008-09-03 19:12 <glyph> my goal is not to set a full spec for everything twisted.words jabber should do
+2008-09-03 19:12 <glyph> because twisted.words jabber should do everything in the universe :)
+2008-09-03 19:12 <glyph> I just want to set a priority of getting a thing that people can run with no coding
+2008-09-03 19:13 <ralphm> right
+2008-09-03 19:13 <glyph> so that as we add these cool features, we can build a community of people actually using the server, potentially unmodified, potentially with tiny little scripts or hacks
+2008-09-03 19:13 <ralphm> but with sufficient infrastructure to build it out
+2008-09-03 19:13 <metajack> from a user perspective, i think a twisted server is fairly low on the priority list compared to things like implementing s2s, http transport, and fixing the current bugs
+2008-09-03 19:13 <glyph> rather than building up full-blown applications with it - although we obviously care about our sponsors who have full-blown applications :)
+2008-09-03 19:13 <metajack> most people are not writing servers, but bots and components and clients.
+2008-09-03 19:14 <radix> yeah, I was wondering what people actually want
+2008-09-03 19:14 <oubiwann> Well, Chris DiBona said that he'd like to see tutorial first and foremost
+2008-09-03 19:14 <radix> my impression from the recent influx of interest has been that most people aren't that interested in twisted jabber server
+2008-09-03 19:15 <radix> oubiwann: for what? writing a bot?
+2008-09-03 19:15 <oubiwann> ones that covered exactly the basics that Glyph is talking about
+2008-09-03 19:15 <radix> or running a server?
+2008-09-03 19:15 <ralphm> well, as for bots, as jack nicely explained somewhere, there seems to be a migration path from jabber-client, via jabber server component to a standalone entity that speaks the s2s protocol to reach the rest of the world
+2008-09-03 19:15 <oubiwann> radix: no, for just getting up and running with clients and servers
+2008-09-03 19:15 <radix> oubiwann: so, everything?
+2008-09-03 19:15 <oubiwann> to improve adoption
+2008-09-03 19:15 <radix> hm, ok
+2008-09-03 19:15 <oubiwann> get people interested
+2008-09-03 19:15 <glyph> yeah, I'm talking about exactly the same thing oubiwann is here
+2008-09-03 19:15 <glyph> also
+2008-09-03 19:15 <glyph> the important issue of functional testing
+2008-09-03 19:15 <oubiwann> he can't sell it at Google as it is right now
+2008-09-03 19:15 <metajack> tutorials and docs are needed, not just for twisted, but for xmpp in general.
+2008-09-03 19:16 <radix> I am sad that we don't have more specific user-originating goals
+2008-09-03 19:16 <metajack> i actually was working on a basic bot tutorial friday using twisted
+2008-09-03 19:16 <glyph> radix: we don't have user-originated goals because we don't have users. we don't have users because nobody can run the damn thing :)
+2008-09-03 19:16 <metajack> and even with that simple code there are issues.
+2008-09-03 19:16 <radix> glyph: well, I assume you saw the giant influx of people saying "Hey I want Twisted XMPP!"
+2008-09-03 19:16 <oubiwann> radix: once we have basic server capability, then we start building the stuff that metajack's talkingn about which is user-originated
+2008-09-03 19:16 <radix> glyph: but none of them said for *what*
+2008-09-03 19:16 <glyph> radix: oh
+2008-09-03 19:16 <metajack> like, client.IQ does not generate random ids for you.
+2008-09-03 19:17 <radix> I just sent an email to the list asking them to clarify.
+2008-09-03 19:18 <glyph> metajack: let me put this a different way.
+2008-09-03 19:18 <glyph> metajack: Actually, first: you should really post that partial example and file tickets for any roadblocks you hit :)
+2008-09-03 19:18 <radix> metajack: hopefully now that we have more focused development time on Twisted, those kinds of small fixes can quickly be reviewed and merged
+2008-09-03 19:19 <glyph> metajack: but let's say I decided to change a bunch of stuff in twisted.words; deprecate APIs and so on. I don't really understand XMPP, but and neither do a lot of the reviewers.
+2008-09-03 19:19 <glyph> metajack: aside from you standing up and saying, "Hey, don't break that!", how could I actually start up a process and play with it, to understand what bits of functionality are really important to what twisted does with xmpp?
+2008-09-03 19:20 <metajack> i am happy to help you guys make those decisions
+2008-09-03 19:20 <metajack> i'm not sure if there is a bigger user of this library than us
+2008-09-03 19:20 <glyph> metajack: there isn't, right now
+2008-09-03 19:20 <glyph> metajack: I am pretty sure (except maybe id, or jaiku, but they've both been very quiet about it)
+2008-09-03 19:20 <metajack> id as in quake?
+2008-09-03 19:20 <ralphm> jaiku is not a bigger client
+2008-09-03 19:21 <ralphm> I know all the current code base
+2008-09-03 19:21 <kenaan> 03thijs 10r2467614 05A(branches/module-web-ref-2213/): Branching to 'module-web-ref-2213' ...
+2008-09-03 19:21 <ralphm> I don't even know about id
+2008-09-03 19:22 <ralphm> there are a bunch of people using idavoll (the pubsub service), though
+2008-09-03 19:22 <ralphm> bug probably not programmatically
+2008-09-03 19:23 <ralphm> but
+2008-09-03 19:23 <metajack> glyph: more people are building services than running jabber servers. so it's far more important in my opinion to support people effort's there. also, twisted words is pretty advanced compared to many other libraries already
+2008-09-03 19:23 <metajack> so there is a lot of easy ground there
+2008-09-03 19:23 <metajack> on the server front, that is amassive undertaking even to catch up to the bad servers.
+2008-09-03 19:23 <metajack> except that a simple server is simple
+2008-09-03 19:24 <ralphm> people are even now starting to make (semi-)servers in php
+2008-09-03 19:24 <ralphm> (identi.ca)
+2008-09-03 19:24 <ralphm> horrible
+2008-09-03 19:24 <metajack> but i don't think many people care about it. do you find that people care about the irc server support? or more about building irc services with the protocol support?
+2008-09-03 19:24 <glyph> metajack: I am not interested in merely responding to demands from existing users
+2008-09-03 19:24 <radix> ralphm: man, the identica bot is in PHP? uggghhh
+2008-09-03 19:25 <radix> no wonder it is so crappy
+2008-09-03 19:25 <metajack> radix: you have no idea.
+2008-09-03 19:25 <glyph> metajack: Twisted did not start its life as a business requirement from someone using python and requiring a few socket operations, it is an approach to composing applications and it is designed to be comprehensive :)
+2008-09-03 19:25 <metajack> i get that. and i hope it will be comprehensive.
+2008-09-03 19:25 <glyph> metajack: So, to answer your questions one at a time.
+2008-09-03 19:25 <oubiwann> ralphm: Timothee on the Twisted-Jabber mail list works for ID Software
+2008-09-03 19:25 <oubiwann> ralphm: https://mailman.ik.nu/pipermail/twisted-jabber/2008-May/000149.html
+2008-09-03 19:26 <ralphm> oubiwann: oh, cool. I rarely check domain names in e-mail addresses.
+2008-09-03 19:26 <glyph> metajack: People don't care about the IRC server support because they try it out, it doesn't really work with most popular clients, and they give up. They care about the IRC client support because it does work with popular servers.
+2008-09-03 19:26 <radix> glyph: they also don't care about it because they don't need an IRC server at all, most of the time
+2008-09-03 19:27 <glyph> radix: yes, they do. Most distributed companies, for example, run their own IRC server, so they can deal with their own security requirements.
+2008-09-03 19:27 <radix> clearly, the desire for IRC protocol technology is 1) bots, 2) clients, 3) servers
+2008-09-03 19:27 <foom> If the twisted irc server actually worked, we might use it at ITA, for example.
+2008-09-03 19:27 <radix> I won't debate that
+2008-09-03 19:27 <glyph> radix: foom just won the argument
+2008-09-03 19:27 <radix> but you clearly misrepresented the desire
+2008-09-03 19:28 <glyph> At any rate, if you are developing an IRC bot, the first thing that you need to do in order to test it is to connect it to an IRC server.
+2008-09-03 19:29 <glyph> If twisted's IRC support weren't so shitty, we could have a bundled server that you could just start up your Twisted IRC bot against
+2008-09-03 19:29 <ralphm> Sure
+2008-09-03 19:29 <radix> it woudl be easier to connect to freenode
+2008-09-03 19:29 <radix> it's already running, for one
+2008-09-03 19:30 <ralphm> but in XMPP land, if you want to write a (simple) bot or client, you can hook it up to any existing jabber server
+2008-09-03 19:30 <ralphm> so you don't actually need to have a Twisted based server to do that
+2008-09-03 19:30 <ralphm> even if your client is build in Twisted
+2008-09-03 19:30 <glyph> ralphm: sure. if you're writing an IRC client, you can "easily" run hybrid
+2008-09-03 19:30 <ralphm> same for (simple) server-side components
+2008-09-03 19:30 <oubiwann> ralphm: right, but we want to be able to show a complete (if simple) picture of client and server in Twisted
+2008-09-03 19:30 <oubiwann> it's an education problem
+2008-09-03 19:31 <oubiwann> since we don't have adoption, we need to educate first and foremost; those that want more features first need to be patient... they need to let other catch up to them first, and that's what education will do
+2008-09-03 19:31 <radix> I am all for writing a server, but if your goal is to get tons of users, and those users clearly just want to write bots, it is a waste of time
+2008-09-03 19:31 <oubiwann> we should have a simple client and server example for folks to learn from
+2008-09-03 19:31 <glyph> All this said, that doesn't mean we won't be fixing the bugs and issues that our present users are thinking about
+2008-09-03 19:31 <ralphm> ok, then imho, you need a server that can do a) s2s, b) xep-0114 style server component acceptance, c) a c2s part, d) a basic session manager
+2008-09-03 19:31 <glyph> metajack: I don't mean to say "We're not going to fix your issues because we're going to work on a jabber server", I just think that the next major component that should be added should be a server.
+2008-09-03 19:31 <oubiwann> exactly
+2008-09-03 19:31 <radix> (that was a conditional. I don't know if most users just want to write bots)
+2008-09-03 19:32 <glyph> radix: if you are going to write a tutorial on how to write bots, you want the 'run a server' step to be one line: 'twistd words --jabber'
+2008-09-03 19:32 <radix> glyph: ha! I have one better
+2008-09-03 19:32 <radix> glyph: you don't even _have_ to run a server, because there are already servers running.
+2008-09-03 19:32 <metajack> so what do you do about twisted.words.aim :)
+2008-09-03 19:32 <glyph> radix: you don't want a big intermission where you download ejabberd and realize you have the wrong version of erlang and then compile your intertron nodes
+2008-09-03 19:33 <radix> glyph: just like for IRC. You don't *start* hybrid to test your IRC bot, you just connect it to freenode, because that's trivial.
+2008-09-03 19:33 <metajack> i think we're all agreed that a twisted server is nice.
+2008-09-03 19:33 <oubiwann> metajack: yes
+2008-09-03 19:33 <metajack> i agree iwth ralph that you want xep 114 , s2s, c2s, and some basic session manager
+2008-09-03 19:33 <glyph> radix: Sure, and because you're an ass who doesn't know how to do functional testing offline, you flood #twisted for several hours with auto-reconnect until you're G-lined
+2008-09-03 19:33 <oubiwann> especially if we can make one that is simple (at first) and highly extensble
+2008-09-03 19:33 <metajack> and it sounds like you don't care about s2s, but want muc
+2008-09-03 19:34 <glyph> metajack: I do care about s2s, I just think that s2s is interesting when you can start up a server, notice it's crappy because it doesn't federate :)
+2008-09-03 19:34 <glyph> metajack: then you make it non-crappy and add s2s
+2008-09-03 19:35 <ralphm> if you have the other parts (sm, c2s and a basic router), s2s is mostly for free
+2008-09-03 19:35 <glyph> oubiwann: I think that one thing that's clouding this discussion is the fact that xmpp servers aren't really supposed to be extensible
+2008-09-03 19:35 <ralphm> I already implemented the dialback protocol
+2008-09-03 19:35 <metajack> ejabberd is very extensible
+2008-09-03 19:35 <glyph> oubiwann: or rather, as I understand it, extension is implemented via protocols which talk to servers, not by making the servers themselves flexible
+2008-09-03 19:35 <metajack> ridiculously so
+2008-09-03 19:35 <glyph> metajack: perhaps my understanding is flawed
+2008-09-03 19:36 <ralphm> glyph: current servers are extensible in the sense that you can write components to do stuff
+2008-09-03 19:36 <glyph> ralphm: Right, this is where I start to get confused
+2008-09-03 19:36 <glyph> ralphm: Is a "component" an XMPP thing, or a jabberd/ejabberd thing
+2008-09-03 19:36 <metajack> let me give you some concrete examples
+2008-09-03 19:36 <ralphm> on the other hand, most are hard to extend in terms of protocol support that ties in with the session manager or other directly im server like stuff
+2008-09-03 19:37 <ralphm> or require erlang
+2008-09-03 19:37 <metajack> 1) we wrote a packet filter to intercept offlien messages and drop them if they aren't appropriate for storage
+2008-09-03 19:37 <ralphm> a component is an XMPP thing
+2008-09-03 19:37 <metajack> 2) we wrote a packet logger that monitors and measures all internal traffic in the server
+2008-09-03 19:37 <ralphm> basically like a client
+2008-09-03 19:37 <metajack> 3) we wrote an extension to the muc logger to log rooms to couchdb
+2008-09-03 19:37 <ralphm> that is responsible for a domain (host name)
+2008-09-03 19:37 <metajack> none of these are xep 114 components
+2008-09-03 19:37 <ralphm> with more trust from the server
+2008-09-03 19:37 <ralphm> and less requirements towards the server
+2008-09-03 19:38 <metajack> xep 114 components we have as well. these are named addresses in JID space that respond to stanzas
+2008-09-03 19:38 <ralphm> (i.e. no roster, no session management or whatever, stuff that comes in for that domain just gets routed to the component and visa versa)
+2008-09-03 19:38 <kenaan> 03thijs 10r2467714 branches/module-web-ref-2213/twisted/protocols 07M(dns.py ethernet.py imap4.py ip.py irc.py jabber.py msn.py nntp.py oscar.py pop3.py raw.py rawudp.py smtp.py sux.py toc.py): Replace old links for deprecated modu ...
+2008-09-03 19:39 <glyph> metajack: okay, so, you are using and extending ejabberd
+2008-09-03 19:39 <kenaan> thijs submitted [#2213] - Several deprecated twisted.protocols.* modules point to old twistedmatrix.com/projects/ webpages (unassigned) for review
+2008-09-03 19:39 <glyph> metajack: this begs the question of why some code is in erlang and some is in python in your system. If Twisted had been more full-featured, presumably you'd want to focus your investment and reusability and do everything in Python?
+2008-09-03 19:39 <metajack> server design usually goes like this. there is a router which accepts component connections and moves stnazas between them. there is a c2s component which accepts client connections and stanzas and sends them to a session manager. a session manager componetn implements most of the xmpp stanzas rules
+2008-09-03 19:40 <metajack> and an s2s component would handle traffic that can't be routed internally
+2008-09-03 19:40 <ralphm> and then additional components can also play for doing dedicated tasks
+2008-09-03 19:40 <metajack> glyph: exactly. but we do not have the time to spend 6 month building a server.
+2008-09-03 19:40 <ralphm> like a muc component (e.g. conference.jabber.org, that is part of the jabber.org server)
+2008-09-03 19:40 <ralphm> or a pubsub component
+2008-09-03 19:40 <glyph> metajack: OK, cool. I'm just making sure I understand things :)
+2008-09-03 19:41 <metajack> ralphm has been pushing us to do this for over a year at least
+2008-09-03 19:41 <metajack> and we _want_ to do it.
+2008-09-03 19:41 <metajack> the world woudl be a better place with another jabber server, and a much better place with another jabber server written in python
+2008-09-03 19:41 <metajack> there is a very high demand for this.
+2008-09-03 19:42 <metajack> at the summit the myspace guys were practically afraid of erlang
+2008-09-03 19:42 <metajack> the twitter guys give it sideways glances as well
+2008-09-03 19:42 <ralphm> (who isn't afraid of erlang)
+2008-09-03 19:42 <dash> i feel better about erlang already
+2008-09-03 19:42 <radix> I love erlang
+2008-09-03 19:42 <metajack> I don't seem to be, but apparently I'm quite wierd.
+2008-09-03 19:43 <ralphm> but let's not start that discussion
+2008-09-03 19:43 <metajack> so a router is step one, xep 114, step 2, and c2s/sm/muc are step 3
+2008-09-03 19:43 <glyph> okay
+2008-09-03 19:43 <glyph> this is exactly where I start to lose the plot
+2008-09-03 19:43 <metajack> the end result is a simple jabber server suitable for small use
+2008-09-03 19:44 <glyph> what the heck is the difference between a router and a c2s and an s2s component
+2008-09-03 19:44 <glyph> do these things all bind different ports?
+2008-09-03 19:44 <glyph> why are they speaking such dramatically different languages that they require independent implementation?
+2008-09-03 19:45 <ralphm> glyph: well, it seems typical xmpp server design has been to build a core router that other parts of the server connect to over xmpp
+2008-09-03 19:45 <ralphm> to form one 'server'
+2008-09-03 19:45 <glyph> metajack: actaully, your explanation above has started to make this clear to me for the first time ever
+2008-09-03 19:46 <glyph> even after reading much of the relevant and very dense protocol specs
+2008-09-03 19:46 <radix> ralphm: so the "router" is an application-agnostic process?
+2008-09-03 19:46 <ralphm> yes
+2008-09-03 19:46 <radix> ok
+2008-09-03 19:46 <metajack> yes, with no routing rules
+2008-09-03 19:46 <metajack> except to/form
+2008-09-03 19:46 <metajack> s2s and c2s have very specific routing rules on stanzas
+2008-09-03 19:46 <metajack> and often you want multiple c2s components to spread load
+2008-09-03 19:47 <metajack> ie, 10k connections on machine 1, 10k on machine 2
+2008-09-03 19:47 <ralphm> see it as service bus with no business logic
+2008-09-03 19:47 <glyph> hmmmmmmmmm
+2008-09-03 19:47 <glyph> okaaaaay
+2008-09-03 19:47 <metajack> you can make this all one process, but it wouldn't be very flexible
+2008-09-03 19:47 <metajack> i thinkt hat is the point we're making
+2008-09-03 19:47 <ralphm> you might not agree with such design, and I might even welcome a discussion on that, but that's how Jabber servers have been built up to now
+2008-09-03 19:48 <ralphm> I know it differs somewhat from components in Twisted
+2008-09-03 19:48 <metajack> jabberd2 has probably the simplest design in this modular form
+2008-09-03 19:48 <ralphm> where you mostly do many things in one process
+2008-09-03 19:49 <glyph> Thank you for all the explanations, a light bulb is definitely going off for me now
+2008-09-03 19:49 <ralphm> is that bad?
+2008-09-03 19:49 <glyph> no, that's very good :)
+2008-09-03 19:49 <glyph> So, two things: one, I'd like to know exactly which of these pieces Twisted has right now, and how it "does jabber"
+2008-09-03 19:49 <fijal> radix: ping
+2008-09-03 19:49 <dash> or perhaps it is going on? ;)
+2008-09-03 19:49 <ralphm> ok
+2008-09-03 19:49 <ralphm> here goes
+2008-09-03 19:49 <radix> fijal: good day sir
+2008-09-03 19:49 <ralphm> What is in Twisted right now is:
+2008-09-03 19:50 <fijal> ralphm: you can use --platform=maemo on pypy these days :)
+2008-09-03 19:50 <fijal> radix: you can use --platform=maemo on pypy these days :)
+2008-09-03 19:50 <fijal> (miss-tab)
+2008-09-03 19:50 <ralphm> * support for XML stream. You can use this to initiate connections, or accept them, and do stuff with incoming Stanzas
+2008-09-03 19:50 <glyph> The other thing is that my reaction to this architecture is that (A) it actually doesn't sound that bad, (B) I have no problem following this architectural pattern, (C) the in-one-process vs. in-multiple-processes thing should definitely be optional, with the single-process model just saving on serialization cost
+2008-09-03 19:50 <ralphm> * a client connector
+2008-09-03 19:50 <ralphm> * a component connector
+2008-09-03 19:50 <radix> fijal: nice :)
+2008-09-03 19:51 <ralphm> agreed on C
+2008-09-03 19:51 <oubiwann> ralphm, glyph, metajack, radix: I've been taking notes on all this
+2008-09-03 19:51 <radix> oubiwann: hooray
+2008-09-03 19:51 <oubiwann> it'll be on the wiki
+2008-09-03 19:51 <metajack> glyph: (C) is used by use quite a bit for unit tests. it's easy with twisted :)
+2008-09-03 19:51 <glyph> oubiwann: thanks :)
+2008-09-03 19:52 <metajack> it's on my todo list to write that up
+2008-09-03 19:52 <ralphm> to do XML streams, Xish implements a dom that handles streaming xml and XMPPs perculiarities with regard to serialization and namespaces
+2008-09-03 19:52 <ralphm> and a way to subscribe to specific stanzas using XPath like queries
+2008-09-03 19:53 <glyph> also I'd like to say that I _really_ appreciate you all taking the time out of your day to help educate me about this stuff
+2008-09-03 19:53 <metajack> all we are missing for a super complete component/service setup in twisted is s2s support.
+2008-09-03 19:53 <ralphm> recently, I add support for 'subprotocols', which hopes to abstract implementing a particular extension protocol in one container
+2008-09-03 19:54 <ralphm> I have code for s2s dialback in a branch
+2008-09-03 19:54 <metajack> also, ralphm's xmlpipe stuff is cool
+2008-09-03 19:54 <ralphm> and basic router code
+2008-09-03 19:54 <metajack> which is a generialized xmlstream
+2008-09-03 19:54 <ralphm> (oh yeah)
+2008-09-03 19:54 <ralphm> I started on c2s (server side)
+2008-09-03 19:54 <ralphm> but got stuck on implementing a session manager
+2008-09-03 19:55 <ralphm> but do have a beginning of the presence handling (server-side)
+2008-09-03 19:56 <ralphm> if we build an acceptor for XEP-0114, along with a router
+2008-09-03 19:56 <ralphm> we have a nice starting point
+2008-09-03 19:56 <ralphm> (XEP-0114 defines the interactions for writing a server-side component)
+2008-09-03 19:57 <glyph> okay
+2008-09-03 19:57 <metajack> xep 114 is trivial to implement. we did it for unit tests.
+2008-09-03 19:57 <glyph> I think maybe I just need to read the relevant spec
+2008-09-03 19:57 <glyph> but what is a "session manager"
+2008-09-03 19:57 <glyph> ?
+2008-09-03 19:57 <ralphm> the xmlpipe stuff that metajack notes above might be used in place of actual tcp connections and serialization
+2008-09-03 19:57 <metajack> the session manager handles the route rules for your client connection
+2008-09-03 19:57 <metajack> here are some examples
+2008-09-03 19:57 <ralphm> and keeps track of presence and contact lists
+2008-09-03 19:58 <metajack> IQ to bare jid gets handled to session manager
+2008-09-03 19:58 <metajack> IQ to full JID goes through c2s to the client
+2008-09-03 19:58 cprov is now known as cprov-afk
+2008-09-03 19:58 <glyph> metajack: can you say that without using any jabber jargon
+2008-09-03 19:58 <metajack> usually teh session manager is extend to support various server features, like private xml storage, privacy lists, etc
+2008-09-03 19:58 <metajack> an address in XMPP land is node@domain/resource
+2008-09-03 19:59 <metajack> also called a JID.
+2008-09-03 19:59 <metajack> Bare JID = node@domain | domain
+2008-09-03 19:59 <metajack> Full JID = node@domain/resource or domain/resource
+2008-09-03 20:00 <metajack> whenever you make an XMPP client connection, you do so at a resource. you may make multiple connections at different resources with the same Bare JID
+2008-09-03 20:01 <metajack> if you send stanzas to the Bare JID, the session manager handles those. in some cases (for <message/>) it routes them to one or more resources, or offline storage. For <iq/> it will do various things. In the general case it will send an error, since iq stanzas to Bare JIDs are asking the server for something.
+2008-09-03 20:01 <MakeGho> hi
+2008-09-03 20:01 <ralphm> glyph: still with us?
+2008-09-03 20:01 <glyph> ralphm: yes
+2008-09-03 20:01 <glyph> ralphm: reading intently
+2008-09-03 20:02 <metajack> if you send stanzas to the Full JID, then the session manager is not involve.d
+2008-09-03 20:02 <metajack> so the session manager is sort of the component for a client connection
+2008-09-03 20:02 <ralphm> (usually)
+2008-09-03 20:02 <metajack> it represents node@domain in the server
+2008-09-03 20:02 <glyph> I think in the light of this new understanding I can more clearly phrase what I want to happen.
+2008-09-03 20:04 <glyph> twisted.words should have a domain model for "chat", which should be protocol-independent. That should integrate extremely gracefully (i.e. properly forward any extensions) with jabber, but also with IRC and, ideally, with SILC or whatever.
+2008-09-03 20:05 <ralphm> SILC?
+2008-09-03 20:05 <glyph> However, XMPP is obviously quite a bit more than chat, and there should be separate, unrelated 'twistd' plugins for invoking the various internal XMPP components, to facilitate multiprocess separation as you were describing above.
+2008-09-03 20:05 <glyph> ralphm: http://silcnet.org/
+2008-09-03 20:05 <ralphm> and with 'chat' you mean multi-user chat?
+2008-09-03 20:06 <glyph> ralphm: I mean multi-user chat, user-to-user (instant messaging), and presence.
+2008-09-03 20:06 <ralphm> right
+2008-09-03 20:06 <metajack> so this means that the non-XMPP xmlstreams and stuff should be moved somewhere else?
+2008-09-03 20:07 <glyph> metajack: well, it depends what you mean by "somewhere else"
+2008-09-03 20:07 <glyph> metajack: they should definitely still be in twisted.
+2008-09-03 20:07 <ralphm> metajack: huh what?
+2008-09-03 20:07 <metajack> if twisted words is about chat, then it doesn't seem like the router, sm, and such would livei there
+2008-09-03 20:07 <metajack> but that client protocol support and perhaps palaver would
+2008-09-03 20:08 <metajack> so where does the rest of it go?
+2008-09-03 20:08 <glyph> metajack: I think it's an internal factoring issue
+2008-09-03 20:08 <ralphm> or at least whatever backend it provides. i.e. sans the protocol stuff
+2008-09-03 20:08 <glyph> metajack: twisted.words.jabber is a fine place for all of this code to live
+2008-09-03 20:08 <metajack> also, we should rename it at some point i think.
+2008-09-03 20:08 <metajack> the name of hte protocol is XMPP
+2008-09-03 20:08 <glyph> metajack: but there are two user-facing parts to it; one is 'twistd words --with-jabber-port 5005' and another is 'twistd xmpp-router --whatever'
+2008-09-03 20:08 <ralphm> I see twisted.words.jabber as the place for all the protocol bits
+2008-09-03 20:09 <ralphm> (and possible internal routing mechanics)
+2008-09-03 20:09 <thijs> how is xmpp different from jms, besides being open, java etc. could i use xmpp to build a jms type of service? cause were now testing apache activemq but a twisted implementation would make more sense
+2008-09-03 20:09 <ralphm> and then a server is built from that, and some kind of backend with business logic
+2008-09-03 20:09 <glyph> metajack: No, I think 'jabber' is a good name; it's "twisted.web", after all, not "twisted.http"
+2008-09-03 20:09 <ralphm> that might also cater for other protocols (like IRC)
+2008-09-03 20:10 <ralphm> glyph: does that match your view?
+2008-09-03 20:10 <glyph> ralphm: I think yes
+2008-09-03 20:10 <metajack> is this room logged publically?
+2008-09-03 20:11 <ralphm> Not many things in Twisted currently really store stuff. How do you see that?
+2008-09-03 20:11 <glyph> ralphm: ... store stuff?
+2008-09-03 20:11 <glyph> metajack: uh, it used to be
+2008-09-03 20:12 <glyph> I don't see it in the topic
+2008-09-03 20:12 <glyph> oubiwann: can you upload a raw log of this conversation along with the condensed minutes?
+2008-09-03 20:12 <metajack> glyph, oubiwann: that would be excellent.
+2008-09-03 20:13 <MattJ> http://80.93.122.37/?below=2008-09-03&above=2008-09-03
+2008-09-03 20:13 <oubiwann> glyph: aboslutely
+2008-09-03 20:13 <glyph> MattJ: thanks!
+2008-09-03 20:13 <glyph> MattJ: you mind if we put that in the topic?
+2008-09-03 20:13 <MattJ> glyph: Not at all, thank Google :)
+2008-09-03 20:15 <glyph> ralphm: So, with this newfound understanding, I think I may want to adjust my statement of near-term priorities
+2008-09-03 20:16 <glyph> I still stand by what I said about local testing and starting servers in the, let's say "medium" term, but my _real_ priority is that the XMPP code in twisted should have a user- or devloper-visible entrypoint without coding.
+2008-09-03 20:16 <glyph> Also, t
+2008-09-03 20:17 <glyph> words's domain model is kind of a piece of crap (I assume palaver has its own, and we'll probably need to do a bunch of maintenance to make a good one that can actually translate between the supported protocols without losing information)
+2008-09-03 20:17 <ralphm> I assumed we needed to build that from scratch anyway
+2008-09-03 20:17 <glyph> so do you guys think it would make more sense to have some kind of 'twistd xmpp' command, that would do ... something? Start a router, start a component, something simpler than "full s2s, muc, c2s, and session manager"
+2008-09-03 20:18 <metajack> that will be quite a bit of work. so far no one has made a generic chat client with decent xmpp support. i assume this is because it is actually hard.
+2008-09-03 20:18 <glyph> ralphm: there's already something there that could be used as a skeleton, it's just not very good :)
+2008-09-03 20:18 <metajack> perhaps you should just make twisted.words translate everything to xmpp :)
+2008-09-03 20:18 <ralphm> as for storing things, I meant things like user credentials and contact lists
+2008-09-03 20:18 <glyph> metajack: We'll have *that* argument later :)
+2008-09-03 20:19 <glyph> ralphm: Aah.
+2008-09-03 20:19 <glyph> ralphm: User credentials should go through cred, and should use the normal cred stuff for that
+2008-09-03 20:19 <glyph> ralphm: and, as the cred plugin system does, we should package one incredibly terrible contact list storage mechanism with twisted, that uses a directory full of text files or something, and provide a nice abstract avatar interface for doing the storage that you should really implement yourself
+2008-09-03 20:19 <ralphm> sure, but for a functional service you need to provide a thing that speaks cred to do that, no?
+2008-09-03 20:20 <ralphm> right
+2008-09-03 20:20 <glyph> ralphm: IRC has already partially solved this problem
+2008-09-03 20:20 <glyph> mesozoic (Alex Levy) did some work on this already
+2008-09-03 20:20 <glyph> ralphm: see twistd words --help-auth
+2008-09-03 20:21 <glyph> and that work is actually great, I think, I would like it if more things would use cred commandline plugins :)
+2008-09-03 20:21 <ralphm> I think that there is room for twistd plugins that each do a separate thing (router, c2s, sm, s2s) but can also imagine a xmpp-im one that does all of that in one process
+2008-09-03 20:22 <ralphm> (using internal things like the xmlpipe to connect them)
+2008-09-03 20:22 <ralphm> does that answer your question?
+2008-09-03 20:22 <glyph> ralphm: that definitely sounds congruent with my thinking
+2008-09-03 20:23 <glyph> ralphm: my question was more about next steps though
+2008-09-03 20:23 <glyph> ralphm: what twistd plugin do you think the current code is closest to
+2008-09-03 20:23 <ralphm> right
+2008-09-03 20:23 <metajack> tofu is happy you guys want palaver inside twisted
+2008-09-03 20:23 <glyph> (I also think that we should get xmpp talking to 'twistd words' before we do a full implementation of _all_ of those other commands)
+2008-09-03 20:23 <metajack> (was just talking to him offline)
+2008-09-03 20:23 <glyph> metajack: is tofu the main palaver guy?
+2008-09-03 20:23 <metajack> yes
+2008-09-03 20:24 <glyph> metajack: great :)
+2008-09-03 20:24 <metajack> he always expressed some concern over api stability
+2008-09-03 20:24 <ralphm> As I said I think the first focus would be the router (which would include an component acceptor, by nature)
+2008-09-03 20:25 <glyph> metajack: what do you mean?
+2008-09-03 20:25 <metajack> enough people run palaver and punjab now that it sort of sucks supporting twisted 2.5 and twisted 8.x
+2008-09-03 20:25 <ralphm> if we make it such that it also allows for non-socket connection to tie different Twisted Services together, we can also already provide the 'combined' one from then on
+2008-09-03 20:25 <metajack> and wokkel is even different from those
+2008-09-03 20:25 <ralphm> yes
+2008-09-03 20:26 <metajack> of course if it becomes part of twisted, it's not as big of a problem.
+2008-09-03 20:26 <ralphm> cause I haven't had much help in coding up twisted's jabber support up to now, I just did whatever please me ;-)
+2008-09-03 20:26 <metajack> my personal concern is all this making xmpp and irc the same internally will make the xmpp support sub-par.
+2008-09-03 20:27 <ralphm> I think part of this effort is looking if what I did makes much sense, and build a stable set up building blocks from there
+2008-09-03 20:27 <glyph> metajack: Don't worry. This will not be lowest-common-denominator support. IRC's denominator is too low to be of use to anyone interested in doing interesting stuff with chat :)
+2008-09-03 20:28 <metajack> i will say that even in its current state, twisted provides the best xmpp support for clients and components that exists in any language that i know of.
+2008-09-03 20:28 <glyph> metajack: I'm glad to hear that :)
+2008-09-03 20:28 <ralphm> unfortunately, my presence is required in meat-space. Could we continue this another time?
+2008-09-03 20:28 <metajack> erlang has a ways to go to catch up.
+2008-09-03 20:28 <glyph> ralphm: Sure. I think we have plenty to go on now.
+2008-09-03 20:28 <metajack> ok. i need to do some code review as well.
+2008-09-03 20:28 <ralphm> I missed if there was a log somewhere,
+2008-09-03 20:29 <glyph> metajack: Specifically, everything that XMPP exposes should be mapped into a specific method in the domain model so that other protocols which support similar features can deal with them
+2008-09-03 20:29 <ralphm> but otherwise record what you speak on from now
+2008-09-03 20:29 <ralphm> so I can read back
+2008-09-03 20:29 <metajack> glyph, oubiwann: are you guys interested in doing an interview about the UQDS?
+2008-09-03 20:29 <oubiwann> ralphm: I'll email you the links
+2008-09-03 20:29 <glyph> metajack: I intend for there to be support for allowing any message to come along with bundled with "protocol extensions" which, in xmpp's case, can come along with arbitrary XML, so that the server does not need to understand them
+2008-09-03 20:29 <ralphm> oubiwann: thanks a bunch
+2008-09-03 20:29 <glyph> in order for clients or components to relay them to each other
+2008-09-03 20:30 <metajack> glyph: that is more or less how xmpp itself is designed. so hopefully it will work out great
+2008-09-03 20:30 <glyph> metajack: I have plans for an AMP messaging protocol that will actually be considerably richer than jabber, and have a similar point of extensibility, so in order for that to work, everything in XMPP has to work >:-)
+2008-09-03 20:31 <ralphm> heh
+2008-09-03 20:32 <glyph> (and if "richer" seems pointless to you given XMPP's arbitrary extensibility, one of my use-cases involves devices small enough that an XML library is too much overhead if you want any application code... so you could think of it as an embedded extension mechanism for XMPP if you like)
+2008-09-03 20:32 <metajack> there is a binary mapping for XMPP
+2008-09-03 20:33 <metajack> i'm not sure if that is appropriate for that use case or not.
+2008-09-03 20:33 <glyph> metajack: this? http://www.xmpp.org/extensions/xep-0239.html
+2008-09-03 20:33 <glyph> <zero/><zero/><one/><one/><one/><one/> doesn't look like it would suit my use-case precisely ;)
+2008-09-03 20:33 <glyph> (sorry, first hit for "binary XMPP")
+2008-09-03 20:34 <metajack> hahaha, i'd forgotten that xep :)
+2008-09-03 20:34 <metajack> i think there is a real one.
+2008-09-03 20:34 <glyph> http://www.xmpp.org/extensions/xep-0231.html ?
+2008-09-03 20:34 <metajack> BOBs are for small transfers
+2008-09-03 20:34 <metajack> like images
+2008-09-03 20:34 <glyph> metajack: those are the only two "binary" features on http://www.xmpp.org/extensions/all.shtml
+2008-09-03 20:34 <metajack> i could have sworn there was a real binary mapping for things like mobile devices
+2008-09-03 20:35 <ralphm> not that I know of
+2008-09-03 20:35 <metajack> but perhaps that doesn't exist.
+2008-09-03 20:35 <ralphm> but I totally see much value in bridging protocols
+2008-09-03 20:35 <metajack> but certainly you could make such a thing, similar to how BOSH maps HTTP
+2008-09-03 20:35 <glyph> anyway, my goal is not to turn XMPP into a second-class citizen
+2008-09-03 20:35 <metajack> glyph: i am sufficiently reassured
+2008-09-03 20:35 <glyph> but to integrate with it completely
+2008-09-03 20:35 <glyph> "embrace and extend", lawhl.
+2008-09-03 20:35 <ralphm> e.g. zigbee devices contacting a local hub
+2008-09-03 20:36 <ralphm> and that communicates over xmpp to the outside world
+2008-09-03 20:36 <ralphm> or that people build services that communicate using ampq internally, but speak xmpp on the outside
+2008-09-03 20:36 <ralphm> or somethign
+2008-09-03 20:36 <metajack> yes
+2008-09-03 20:36 <metajack> that's why s2s is so important :)
+2008-09-03 20:37 <glyph> so
+2008-09-03 20:37 <glyph> first action item
+2008-09-03 20:37 <metajack> speaking jabber will eventually mean talking s2s.
+2008-09-03 20:37 <glyph> somebody needs to file a ticket for a twistd xmpp-router command
+2008-09-03 20:37 <metajack> as services become more complex
+2008-09-03 20:37 <glyph> I don't mind doing the typing but I feel like you guys could maybe spec it better
+2008-09-03 20:37 <ralphm> what if you start the ticket and we build on it?
+}}}
