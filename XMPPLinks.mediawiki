@@ -4,6 +4,6 @@
  * [http://ralphm.net/blog/ Ralph Meijer's Blog]
  * [http://googletalk.blogspot.com/ Google Talk Blog]
 
-== General Messaging ==
+= General Messaging =
 
  * [http://www.enterpriseintegrationpatterns.com/Introduction.html Enterprise Integration Patterns - Introduction]
