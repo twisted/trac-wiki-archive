@@ -1,0 +1,30 @@
+= XMPP Server Architecture  =
+
+''These notes were taken from chat on #twisted with ralphm, metajack, glyph, radix, and oubiwann.''
+
+Server design usually goes like this: 
+ * there is a router which accepts component connections and moves stnazas between them
+ * there is a c2s component which accepts client connections and stanzas and sends them to a session manager
+ * a session manager componetn implements most of the xmpp stanzas rules
+ * and an s2s component would handle traffic that can't be routed internally
+ * and then additional components can also play for doing dedicated tasks like a muc component (e.g. conference.jabber.org, that is part of the jabber.org server) or a pubsub component
+
+Key Points:
+ * the "router" is an application-agnostic process
+ * Twisted should support all components running in a single process as well as components distributed over multiple processes/machines
+ * a session manager handles the route rules for your client connection and keeps track of presence and contact lists; usually the session manager is extend to support various server features, like private xml storage, privacy lists, etc
+
+What is in Twisted right now is:
+ * support for XML stream. You can use this to initiate connections, or accept them, and do stuff with incoming Stanzas
+ * a client connector
+ * a component connector
+
+What other work has been done:
+ * to do XML streams, Xish implements a dom that handles streaming xml and XMPPs perculiarities with regard to serialization and namespaces and a way to subscribe to specific stanzas using XPath like queries
+ * support for 'subprotocols', which hopes to abstract implementing a particular extension protocol in one container
+ * s2s dialback in a branch
+ * basic router code which is a generialized xmlstream
+ * started on c2s (server side) but got stuck on implementing a session manager
+ *  a beginning of the presence handling 
+
+All we are missing for a super complete component/service setup in twisted is s2s support
