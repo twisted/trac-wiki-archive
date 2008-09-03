@@ -3,3 +3,7 @@
  * [http://wiki.jabber.org/index.php/XMPP_Case_Studies Case Studies]
  * [http://ralphm.net/blog/ Ralph Meijer's Blog]
  * [http://googletalk.blogspot.com/ Google Talk Blog]
+
+== General Messaging ==
+
+ * [http://www.enterpriseintegrationpatterns.com/Introduction.html Enterprise Integration Patterns - Introduction]
