@@ -6,7 +6,11 @@ The definitions on this page have been taken from Wikipedia, unless otherwise no
 
 === ''  '' ===
 
-=== ''  '' ===
+=== '' BOSH '' ===
+
+Bidirectional-streams Over Synchronous HTTP may be used to transport XMPP stanzas. The result is an HTTP binding for XMPP communications that is useful in situations where a device or client is unable to maintain a long-lived TCP connection to an XMPP server.
+
+,,''Taken from http://www.xmpp.org/extensions/xep-0206.html.'',,
 
 === ''  '' ===
 
@@ -128,3 +132,4 @@ Unlike most instant messaging protocols, XMPP is an open standard. Like e-mail, 
  * http://en.wikipedia.org/wiki/Jabber
  * http://www.xmpp.org/extensions/xep-0163.html
  * http://www.jabber.org/jabber-for-geeks/technology-overview
+ * http://www.xmpp.org/extensions/xep-0206.html
