@@ -479,4 +479,15 @@
 2008-09-03 20:37 <metajack> as services become more complex
 2008-09-03 20:37 <glyph> I don't mind doing the typing but I feel like you guys could maybe spec it better
 2008-09-03 20:37 <ralphm> what if you start the ticket and we build on it?
+2008-09-03 20:39 <kenaan> new words enhancement #3407 by glyph: twistd xmpp-router command for running an xmpp router
+2008-09-03 20:39 <glyph> ralphm: there you go. Assigned to you for enhancement.
+2008-09-03 20:40 <glyph> I just put a comment on it though, so if you're typing into trac, reload first or it will eat your text :\
+2008-09-03 20:40 <glyph> I think we're just about done
+2008-09-03 20:41 <glyph> oubiwann: you want to paste the notes from this discussion?
+2008-09-03 20:41 <oubiwann> Yes, I'll add links to that ticket to the wiki pages I've created
+2008-09-03 20:41 <radix> hey the conversation
+2008-09-03 20:41 <oubiwann> where are here, by the way:
+2008-09-03 20:41 <oubiwann> http://twistedmatrix.com/trac/wiki/XMPPServerArchitecture
+2008-09-03 20:41 <ralphm> thanks a bunch, I am really excited
+2008-09-03 20:41 <oubiwann> http://twistedmatrix.com/trac/wiki/XMPPIRCTranscript20080903
 }}}
