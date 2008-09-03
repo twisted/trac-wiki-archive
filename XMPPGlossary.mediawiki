@@ -82,7 +82,9 @@ See ''publish-subscribe''.
 
 === ''  '' ===
 
-=== ''  '' ===
+=== '' S2S '' ===
+
+In computing, inter-server is a technical term used in network protocol design to refer to the extension of the client-server model by having parts of a protocol which are only exchanged between the servers. In some fields server-to-server (S2S) is used as an alternative, and the term inter-domain can in some cases be used interchangeably.
 
 === '' subscriber '' ===
 
