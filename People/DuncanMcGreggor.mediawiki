@@ -19,5 +19,7 @@ Twisted Show
 
 XMPP Work
  * [wiki:XMPPGlossary XMPP Glossary]
- * [wiki:XMPPLinks XMPP Links of Interest]
  * [wiki:XMPPServerArchitecture XMPP Server Architecture]
+ * [wiki:XMPPProjects XMPP Projects]
+ * [wiki:XMPPLinks XMPP Links of Interest]
+
