@@ -16,7 +16,9 @@ The definitions on this page have been taken from Wikipedia, unless otherwise no
 
 === '' federation '' ===
 
-=== ''  '' ===
+=== '' gateway '' ===
+
+An XMPP gateway allows users to access networks using other protocols. This can be anything from other instant messaging protocols to protocols such as SMS or email. Unlike multi-protocol clients, XMPP provides this access at the server level by communicating via special gateway services running on a remote computer. Any user can "register" with one of these gateways by providing the information needed to log on to that network, and can then communicate with users of that network as though they were Jabber users. This means that any client which fully supports XMPP can be used to access any network for which a gateway exists, without the need for any extra code in the client and without the need for the client to have direct access to the Internet.
 
 === '' instant messaging '' ===
 
@@ -70,7 +72,9 @@ See ''publish-subscribe''.
 
 === '' subscribers '' ===
 
-=== ''  '' ===
+=== '' transport '' ===
+
+See ''gateway''.
 
 === ''  '' ===
 
