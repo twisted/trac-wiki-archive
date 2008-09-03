@@ -1,0 +1,5 @@
+= Twisted XMPP Projects =
+
+ * http://www.onlinegamegroup.com/projects/palaver/
+ * http://www.butterfat.net/wiki/Projects/PunJab
+ * http://wokkel.ik.nu/wiki/
