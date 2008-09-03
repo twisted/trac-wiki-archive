@@ -32,6 +32,10 @@ For details about the underlying protocol, see ''XMPP''.
 
 The Jabber ID is what is used on the network to distinguish unique users. To avoid the need for a central server with a list of IDs, the JID is structured like an e-mail address with a username and a DNS address for the server where that user resides separated by an at sign (@), such as username@domain.com.
 
+Since a user may wish to log in from multiple locations, the clients specify a further string known as a resource, which identifies which of the user's clients it is (for example home, work and mobile). This may then be included in the JID by adding a forward slash followed by the name of the resource. Each resource may have specified a numerical value called priority. For example, the full JID of a user's mobile account would be username@domain.com/mobile. Messages that are simply sent to username@domain.com will go to the client with highest priority, but those sent to username@domain.com/mobile will only go to the mobile client.
+
+JIDs without a username part are also valid and may be used (with or without a resource part) for system messages and control of special features on the server
+
 === ''  '' ===
 
 === '' node '' ===
