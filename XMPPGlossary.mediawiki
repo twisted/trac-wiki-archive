@@ -12,7 +12,7 @@ Bidirectional-streams Over Synchronous HTTP may be used to transport XMPP stanza
 
 ,,''Taken from http://www.xmpp.org/extensions/xep-0206.html.'',,
 
-=== ''  '' ===
+=== '' C2S '' ===
 
 === ''  '' ===
 
@@ -45,6 +45,10 @@ Since a user may wish to log in from multiple locations, the clients specify a f
 JIDs without a username part are also valid and may be used (with or without a resource part) for system messages and control of special features on the server
 
 === ''  '' ===
+
+=== ''  '' ===
+
+=== '' MUC '' ===
 
 === '' node '' ===
 
@@ -82,9 +86,17 @@ See ''publish-subscribe''.
 
 === ''  '' ===
 
+=== ''  '' ===
+
 === '' S2S '' ===
 
+XXX needs more info about use in XMPP
+
 In computing, inter-server is a technical term used in network protocol design to refer to the extension of the client-server model by having parts of a protocol which are only exchanged between the servers. In some fields server-to-server (S2S) is used as an alternative, and the term inter-domain can in some cases be used interchangeably.
+
+=== '' SM '' ===
+
+=== '' stanzas '' ===
 
 === '' subscriber '' ===
 
