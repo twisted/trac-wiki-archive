@@ -86,7 +86,11 @@ See ''publish-subscribe''.
 
 === ''  '' ===
 
-=== ''  '' ===
+=== '' router '' ===
+
+A router in a traditionally designed XMPP server accepts TCP connections to establish bidirectional XML streams. Other entities (usually called XMPP server-side components) connect to the router and trust it to forward XML Stanzas on their behalf. The whole of the router and its connected components is generally known as an XMPP server.
+
+,,''Taken from Ralph Meijer's comments in http://twistedmatrix.com/trac/ticket/3407.'',,
 
 === '' S2S '' ===
 
