@@ -36,7 +36,7 @@ You might be interested in learning about tasks related to [wiki:SiteMaintenance
 
 == Links and Resources ==
 
- * [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/coding-standard.xhtml?format=raw The Twisted Coding standard].
+ * [source:trunk/doc/development/policy/coding-standard.xhtml?format=raw The Twisted Coding standard].
  * There are some UsefulQueries for finding issues in the tracker.
  * Buildbot: [http://buildbot.twistedmatrix.com/waterfall all platforms] and [http://buildbot.twistedmatrix.com/supported supported platforms]. Watch it.
  * Documentation work is done on the DocumentationAnalysis page.
