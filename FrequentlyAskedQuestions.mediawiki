@@ -175,6 +175,13 @@ It really depends on what your program is doing, but the most common cause is th
 
 The reason Deferred can't automatically show your errors is because a Deferred can still have callbacks and errbacks added to it even after a result is available -- so we have no reasonable place to put a logging call that wouldn't result in spurious tracebacks that are handled later on. There is a facility for printing tracebacks when the Deferreds are garbage collected -- call defer.setDebugging(True) to enable it.
 
+=== Why does it take a long time for data I send with `transport.write` to arrive at the other side of the connection? ===
+
+Twisted TCP, UDP, and SSL transports don't buffer data before sending it.  When you write data to a connection, it should show up on the other side as quickly as the network is capable of transporting it there.  However, a couple things may prevent this from happening:
+
+  * Twisted can only send data after you give up control of execution to the reactor.  For example, if you have an infinite loop writing data to a transport, the data will never actually be sent since control will never leave your code and return to the reactor.
+  * Twisted APIs are largely not threadsafe.  If you call `transport.write` from a thread other than the reactor thread, the behavior is undefined.  This may manifest as very long delivery times, or deliveries that don't succeed until another unrelated event occurs in the system.  To use Twisted APIs from a non-reactor thread, see the documentation for `reactor.callFromThread`.
+
 === My exceptions and tracebacks aren't getting printed! ===
 
 See previous question.
