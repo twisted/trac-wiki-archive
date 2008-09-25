@@ -1,5 +1,7 @@
 = Workflow Requirements =
 
+Here's a list (incomplete - please contribute) of things we use tools for in our development process:
+
  * Issue tracking
    * IRC notification of new tickets and ticket review / openness state
    * Mail notification of new tickets
@@ -18,3 +20,5 @@
    * ability to close a ticket with a commit
    * reopen a ticket with a commit
    * automatically post a comment with a commit message
+
+If some better tools come along that can do these better, we should use them instead.
