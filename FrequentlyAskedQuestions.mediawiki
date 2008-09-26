@@ -18,7 +18,7 @@ See the [wiki:TwistedAdvantage TwistedAdvantage].
 
 === I have a problem getting Twisted. ===
 
-Did you check the HOWTO collection? There are so many documents there that they might overwhelm you... try starting from the index, reading through the overviews and seeing if there seems to be a chapter which explains what you need to. You can try reading the !PostScript or PDF formatted books, inside the distribution. And, remember, the source will be with you... always.
+Did you check the [wiki:Documentation HOWTO collection]? There are so many documents there that they might overwhelm you... try starting from the index, reading through the overviews and seeing if there seems to be a chapter which explains what you need to. You can try reading the !PostScript or PDF formatted books, inside the distribution. And, remember, the source will be with you... always.
 
 === Why are there so many parts and subprojects? Isn't Twisted just Twisted? ===
 
@@ -46,7 +46,7 @@ See CompatibilityPolicy.
 
 === I run mktap (from site-packages/twisted/scripts/mktap.py) and nothing happens! ===
 
-Don't run scripts out of {{{site-packages}}}. The Windows installer should install executable scripts to someplace like {{{C:\Python22\scripts\}}}, *nix installers put them in {{{$PREFIX/bin}}}, which should be in your {{{$PATH}}}.
+Don't run scripts out of {{{site-packages}}}. The Windows installer should install executable scripts to someplace like {{{C:\Python25\scripts\}}}, *nix installers put them in {{{$PREFIX/bin}}}, which should be in your {{{$PATH}}}.
 
 === Why do the Debian packages for Alphas and Release Candidates have weird versions containing old version numbers? ===
 
@@ -60,7 +60,7 @@ OS X 10.5 comes with a partial installation of Twisted.  This version is found f
 
 === Why am I getting !ImportErrors for Twisted subpackages on my 64bit installation of RedHat/Fedora/CentOS? ===
 
-Red Hat and derived Linux distributions arrange to have certain Python libraries installed in `/usr/lib/` and other parts installed in `/usr/lib64/`.  This is problematic for Twisted, since it results in some of Twisted being installed in one directory and the rest installed in another.  Python will load a package from only one directory.  You can override this default behavior when you install Twisted by supplying the `--install-lib` parameter when running Twisted's `setup.py`.
+Red Hat and derived Linux distributions arrange to have certain Python libraries installed in {{{/usr/lib/}}} and other parts installed in {{{/usr/lib64/}}}.  This is problematic for Twisted, since it results in some of Twisted being installed in one directory and the rest installed in another.  Python will load a package from only one directory.  You can override this default behavior when you install Twisted by supplying the {{{--install-lib}}} parameter when running Twisted's {{{setup.py}}}.
 
 == Core Twisted ==
 
@@ -70,9 +70,9 @@ Actually, Twisted depends on [http://www.zope.org/Products/ZopeInterface Zope In
 
 === How can I access self.factory from my Protocol's !__init!__? ===
 
-You can't. A Protocol doesn't have a Factory when it is created. Instead, you should probably be doing that in your Protocol's connectionMade method.
+You can't. A {{{Protocol}}} doesn't have a {{{Factory}}} when it is created. Instead, you should probably be doing that in your Protocol's {{{connectionMade}}} method.
 
-Similarly you shouldn't be doing real work, like connecting to databases, in a Factory's !__init!__ either. Instead, do that in startFactory.
+Similarly you shouldn't be doing real work, like connecting to databases, in a Factory's {{{__init__}}} either. Instead, do that in {{{startFactory}}}.
 
 See [http://twistedmatrix.com/projects/core/documentation/howto/servers.html Writing Servers] and [http://twistedmatrix.com/projects/core/documentation/howto/clients.html Writing Clients] for more details.
 
@@ -173,7 +173,7 @@ You should be using {{{reactor.spawnProcess}}} (see [http://twistedmatrix.com/do
 
 It really depends on what your program is doing, but the most common cause is this: it is firing -- but it's an error, not a success, and you have forgotten to add an [http://twistedmatrix.com/projects/core/documentation/howto/glossary.html#errback errback], so nothing happens. Always add errbacks!
 
-The reason Deferred can't automatically show your errors is because a Deferred can still have callbacks and errbacks added to it even after a result is available -- so we have no reasonable place to put a logging call that wouldn't result in spurious tracebacks that are handled later on. There is a facility for printing tracebacks when the Deferreds are garbage collected -- call defer.setDebugging(True) to enable it.
+The reason Deferred can't automatically show your errors is because a Deferred can still have callbacks and errbacks added to it even after a result is available -- so we have no reasonable place to put a logging call that wouldn't result in spurious tracebacks that are handled later on. There is a facility for printing tracebacks when the Deferreds are garbage collected -- call {{{defer.setDebugging(True)}}} to enable it.
 
 === Why does it take a long time for data I send with `transport.write` to arrive at the other side of the connection? ===
 
