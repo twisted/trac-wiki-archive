@@ -1,0 +1,19 @@
+It occured to me that building something physically always provides a direct, and accurate measurement of past progress.
+
+Like building a house... You can see with every board that it actually *is* getting built. And this tangible connection to progress is actually very motivating. You can look back with pride on all that you have accomplished so far, and you can see roughly how much more there is left to build.
+
+If we can specify software projects at sufficient granularity then we can also get this sense of "what's left". But it's also extremely important to be able to see physical evidence of tangible progress... Sometimes this is hard when you're hacking for weeks on internals and over relatively invisible components of the software.
+
+I'm imagining some kind of graph or 3d representation that takes in to account all possible progress metrics. Then you can watch as visualization changes as the weeks go by.
+ * total lines of code, including comments, docstrings, etc
+ * refactorings that *reduce* code lines
+ * commits
+ * design docs
+ * tickets and ticket changes (comments, etc)
+ * user docs
+ * new tests
+ * tests that are now passing (this gets counted in so far as you have to commit code changes to make the test pass, but making a test pass is perhaps deserving of a bit of extra credit)
+ * Improved unit-test code coverage percentage
+ * User-provided credit. If you go for a 1 hour walk and think about some coding problem you ought to have a way to give yourself some credit for that.
+
+The point is that all these measurements represent concrete progress that is being made towards reaching development milestones. Again, the project needs to be well defined, at a granular level, so that you can stay on track and see that the finish line isn't slowly creeping in to the future, as it does with so many poorly managed projects out there.
