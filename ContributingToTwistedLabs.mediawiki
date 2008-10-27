@@ -7,7 +7,6 @@ There are many ways individuals and organizations can make contributions to Twis
  * Submit bug reports (you must first be [http://twistedmatrix.com/trac/register registered])
  * Provide patches (see below)
  * [wiki:DocumentationAnalysis Review documentation]
- * Apply for an [wiki:OpenMaintainerPositions open maintainer position]
  * Provide technical support (answer questions on [wiki:TwistedCommunity IRC and the mail lists])
 
 == Documentation ==
@@ -15,7 +14,6 @@ There are many ways individuals and organizations can make contributions to Twis
 What you need to read if you are planning on contributing technically:
  * Be sure you've read and understand the applicable [wiki:Documentation docs] 
  * [http://twistedmatrix.com/trac/register Register] on this site
- * When submitting bugs, be sure to follow [wiki:IssueSubmissionGuidelines these guidelines]
  * Intimately familiarize yourself with [http://divmod.org/trac/wiki/UltimateQualityDevelopmentSystem The Ultimate Quality Development System]
  * Examine some of the [source:branches current branches]
  * Take a look at the [http://twistedmatrix.com/trac/report open tickets]
