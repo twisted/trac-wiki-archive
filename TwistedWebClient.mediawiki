@@ -1,0 +1,43 @@
+=== Problems with `twisted.web.client` ===
+
+  1. Poorly implemented and tested
+  1. Inflexible API:
+    1. can't get headers (without mucking around with url parsing and custom factories)
+    1. can't stream request/response
+    1. can't override protocol behavior without duplicating lots of code
+  1. doesn't support lots of http features, eg:
+    1. caching
+    1. pipelining
+    1. connection reuse
+    1. chunked (or any other) encoding
+    1. byte ranges
+    1. AND SO ON FOR EVER
+  1. hard to test (doesn't parameterize reactor, messes around with global state)
+
+=== Replacement API ===
+
+  * Introduce a low-level implementation of a good generic request/response interface
+  * the interface will have a single method for submitting a request and getting back a response (or an error)
+    * errors can indicate:
+      * request could not be sent at all (eg, connection does not exist)
+      * maybe some other stuff (dns?)
+    * response includes all aspects of the http response
+      * status
+      * headers
+      * streaming data/response body
+      * trailers hahahahahahahahahahahahahahahaha
+  * First implementation will be a very simple HTTP protocol implementation without support for features such as persistent connections or pipelining
+    * the class can be improved later to add these features without changing the basic request/response api
+  * Higher level wrappers (with the same request/response API) will add features like:
+    * transparent redirect handling
+    * caching/etags/if-modified-since/etc
+    * connection management (pools, reconnect, etc)
+    * ssl something?  certificate/hostname verification etc
+    * etc
+
+=== Plan ===
+
+  1. Implement minimal, good, well-tested (etc) HTTP client protocol and the basic request/response API from above (maybe based on `twisted.web2.client`)
+  1. Implement higher-level wrappers
+  1. Implement other HTTP protocol features
+  1. Implement HTTP header parsing to provide access to structured header values (based on `twisted.web2.http_headers`)
