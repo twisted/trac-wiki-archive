@@ -46,4 +46,4 @@ Zope 3 uses Twisted now, and the next version of Zope 2 will have experimental T
 
 === I want a container for my WSGI application ===
 
-In this case it's suggested that you use Twisted Web 2.  The instability of the API doesn't concern you, since the WSGI interface is well-defined and will not change.  In this sense you are really just using the webserver as a tool rather than an API.  Zope 3 has been using it in this capacity and (so far) it seems to be working fine.  At some point, Twisted Web will provide a WSGI container and it will make sense to switch to that (a simple change).
+In this case, use the Twisted Web 8.2 WSGI module (`twistd web --wsgi=application`).
