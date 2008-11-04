@@ -1,6 +1,6 @@
 = Twisted FAQ =
 
-Here are a list of Frequently Asked Questions regarding Twisted.
+This is a list of Frequently Asked Questions regarding Twisted.
 
 ----
 [[PageOutline(2-6,,inline)]]
@@ -28,7 +28,7 @@ As of version 2.0, Twisted was split up into many subprojects, because it was ge
 
 Twisted has moved to a date based version number scheme.  The major version number now indicates the year the release was made in.  So all releases made in 2008 are 8.x, all releases in 2009 will be 9.x and so on.
 
-This is similar to, but less confusing than, Ubuntu's date based versioning scheme of YEAR.MONTH.  The Twisted versions still counts up from 0 for the minor number and patches.
+This is similar to, but less confusing than, Ubuntu's date based versioning scheme of {{{YEAR.MONTH}}}.  The Twisted versions still counts up from 0 for the minor number and patches.
 
 == Stability ==
 
@@ -119,7 +119,7 @@ reactor.run()
 
 Here's the rule - installing a reactor should always be the '''first''' thing you do, and I do mean first. Importing other stuff before you install the reactor can break your code.
 
-Tkinter and wxPython support, as they do not install a new reactor, can be done at any point, IIRC.
+[http://wiki.python.org/moin/TkInter Tkinter] and [http://wxpython.org/ wxPython] support, as they do not install a new reactor, can be done at any point, IIRC.
 
 === {{{twistd}}} won't load my {{{.tap}}} file! What's this Ephemeral nonsense? ===
 
@@ -136,13 +136,13 @@ The error might also look like this:
 Failed to load application: <twisted.persisted.styles.Ephemeral instance at 
 0x82450a4> is not safe for unpickling
 }}}
-To load a {{{.tap}}} file, as with any unpickling operation, all the classes used by all the objects inside it must be accessible at the time of the reload. This may require the PYTHONPATH variable to have the same directories as were available when the application was first pickled.
+To load a {{{.tap}}} file, as with any unpickling operation, all the classes used by all the objects inside it must be accessible at the time of the reload. This may require the {{{PYTHONPATH}}} variable to have the same directories as were available when the application was first pickled.
 
 A common problem occurs in single-file programs which define a few classes, then create instances of those classes for use in a server of some sort. If the class is used directly, the name of the class will be recorded in the {{{.tap}}} file as something like {{{__main__.MyProtocol}}}. When the application is reloaded, it will look for the class definition in {{{__main__}}}, which probably won't have it. The unpickling routines need to know the module name, and therefore the source file, from which the class definition can be loaded.
 
 The way to fix this is to import the class from the same source file that defines it: if your source file is called {{{myprogram.py}}} and defines a class called {{{MyProtocol}}}, you will need to do a {{{from myprogram import MyProtocol}}} before (and in the same namespace as) the code that references the {{{MyProtocol}}} class. This makes it important to write the module cleanly: doing an {{{import myprogram}}} should only define classes, and should not cause any other subroutines to get run. All the code that builds the Application and saves it out to a .tap file must be inside an {{{if __name__ == '__main__'}}} clause to make sure it is not run twice (or more).
 
-When you import the class from the module using an external name, that name will be recorded in the pickled {{{.tap}}} file. When the {{{.tap}}} is reloaded by twistd, it will look for {{{myprogram.py}}} to provide the definition of {{{MyProtocol}}}.
+When you import the class from the module using an external name, that name will be recorded in the pickled {{{.tap}}} file. When the {{{.tap}}} is reloaded by {{{twistd}}}, it will look for {{{myprogram.py}}} to provide the definition of {{{MyProtocol}}}.
 
 Here is a short example of this technique:
 {{{
@@ -173,7 +173,7 @@ You should be using {{{reactor.spawnProcess}}} (see [http://twistedmatrix.com/do
 
 It really depends on what your program is doing, but the most common cause is this: it is firing -- but it's an error, not a success, and you have forgotten to add an [http://twistedmatrix.com/projects/core/documentation/howto/glossary.html#errback errback], so nothing happens. Always add errbacks!
 
-The reason Deferred can't automatically show your errors is because a Deferred can still have callbacks and errbacks added to it even after a result is available -- so we have no reasonable place to put a logging call that wouldn't result in spurious tracebacks that are handled later on. There is a facility for printing tracebacks when the Deferreds are garbage collected -- call {{{defer.setDebugging(True)}}} to enable it.
+The reason {{{Deferred}}} can't automatically show your errors is because a {{{Deferred}}} can still have callbacks and errbacks added to it even after a result is available -- so we have no reasonable place to put a logging call that wouldn't result in spurious tracebacks that are handled later on. There is a facility for printing tracebacks when the Deferreds are garbage collected -- call {{{defer.setDebugging(True)}}} to enable it.
 
 === Why does it take a long time for data I send with `transport.write` to arrive at the other side of the connection? ===
 
@@ -194,7 +194,7 @@ If you have blocking code that you want to use non-blockingly in Twisted, either
 
 === I get {{{exceptions.ValueError: signal only works in main thread}}} when I try to run my Twisted program! What's wrong? ===
 
-The default reactor, by default, will install signal handlers to catch events like Ctrl-C, SIGTERM, and so on. However, you can't install signal handlers from non-main threads in Python, which means that {{{reactor.run()}}} will cause an error. Pass the {{{installSignalHandlers=0}}} keyword argument to {{{reactor.run}}} to work around this.
+The default reactor, by default, will install signal handlers to catch events like Ctrl-C, {{{SIGTERM}}}, and so on. However, you can't install signal handlers from non-main threads in Python, which means that {{{reactor.run()}}} will cause an error. Pass the {{{installSignalHandlers=0}}} keyword argument to {{{reactor.run}}} to work around this.
 
 === I'm trying to stop my program with sys.exit(), but Twisted seems to catch it! How do I exit my program? ===
 
@@ -215,7 +215,7 @@ class MyProtocol(protocol.Protocol):
 
 In general, such methods (e.g. [http://twistedmatrix.com/documents/current/api/twisted.internet.abstract.FileDescriptor.html FileDescriptor]'s write) are designed to send bytes over the network. These methods use non-Unicode string objects as a container for the bytes that they send and receive.
 
-Unicode objects are not byte-based and are an abstraction used for representing strings of human readable text. In order to send Unicode strings using these methods, you should explicitly specify a byte-based encoding for them, for example: s.encode("utf-8") and explicitly decode them at the receiving end.
+Unicode objects are not byte-based and are an abstraction used for representing strings of human readable text. In order to send Unicode strings using these methods, you should explicitly specify a byte-based encoding for them, for example: {{{s.encode("utf-8")}}} and explicitly decode them at the receiving end.
 
 Twisted cannot choose an encoding for you at this level: your encoding choice will be protocol specific and may need to be specified in the message you send (for example, HTTP headers include a encoding specification).
 
@@ -294,4 +294,4 @@ Ask for help [wiki:TwistedCommunity where the Twisted team hangs out].
 
 === How do I e-mail a Twisted developer? ===
 
-First, note that in many cases this is the wrong thing to do: if you have a question about a part of Twisted, it's usually better to e-mail the mailing list. However, the preferred e-mail addresses for all Twisted developers are listed in the file CREDITS in the Subversion repository.
+First, note that in many cases this is the wrong thing to do: if you have a question about a part of Twisted, it's usually better to e-mail the mailing list. However, the preferred e-mail addresses for all Twisted developers are listed in the [source:trunk/twisted/topfiles/CREDITS CREDITS] file in the Subversion repository.
