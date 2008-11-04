@@ -1,10 +1,12 @@
 = Twisted API Documentation =
 
-To generate the API docs for the Twisted web site.
+This page describes how to generate the API docs for the Twisted web site.
 
 You will need a checkout of the latest release of Twisted.
 
-In a checkout of !WebSite (<svn://svn.twistedmatrix.com/svn/WebSite/trunk>), in the trunk/vhosts/twistedmatrix.com/documents/current directory, run:
+== Steps ==
+
+ 1. In a checkout of !WebSite (<svn://svn.twistedmatrix.com/svn/WebSite/trunk>), in the trunk/vhosts/twistedmatrix.com/documents/current directory, run:
 {{{
 % pydoctor -c twisted.cfg -o twisted-doc-model
 ...
@@ -12,9 +14,11 @@ In a checkout of !WebSite (<svn://svn.twistedmatrix.com/svn/WebSite/trunk>), in 
 % svn commit twisted-doc-model.bz2
 }}}
 
-This will generate API documentation for the latest release of Twisted.  If there has been a new release, edit twisted.cfg to point to that release.
+ This will generate API documentation for the latest release of Twisted.  
 
-Now, ssh to pyramid.
+ 2. If there has been a new release, edit {{{twisted.cfg}}} to point to that release.
+
+ 3. Now, ssh to pyramid.
 
 {{{
 % sudo su - www-data
@@ -25,7 +29,7 @@ Now, ssh to pyramid.
 % ./generate-apidocs.sh newapi
 }}}
 
-Look at the output in {{{documents/current/newapi}}} and make sure it looks alright, then replace the existing documentation:
+ 4. Look at the output in {{{documents/current/newapi}}} and make sure it looks alright, then replace the existing documentation:
 
 {{{
 #!sh
@@ -34,7 +38,6 @@ Look at the output in {{{documents/current/newapi}}} and make sure it looks alri
 % mv documents/current/newapi documents/current/api
 }}}
 
-
-If there have been useful pydoctor changes, make sure to update your pydoctor checkout/installation on both hosts before running it.
+ 5. If there have been useful pydoctor changes, make sure to update your pydoctor checkout/installation on both hosts before running it.
 
 HOORAY
