@@ -221,7 +221,8 @@ Twisted cannot choose an encoding for you at this level: your encoding choice wi
 
 For a more complete discussion of the distinction between Unicode strings and specific encodings of Unicode strings, see the following articles:
 
-    * Dan Sugalski's [http://www.sidhe.org/~dan/blog/archives/000255.html What the heck is: A string]; and
+    * Glyph's [http://twistedmatrix.com/pipermail/twisted-python/2005-October/011573.html Implicit encoding is bad example]
+    * Dan Sugalski's [http://www.sidhe.org/~dan/blog/archives/000255.html What the heck is: A string];
     * Joel Spolsky's [http://www.joelonsoftware.com/articles/Unicode.html The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)].
 
 
