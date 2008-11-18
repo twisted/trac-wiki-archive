@@ -1,4 +1,45 @@
-Some notes on the future of TwistedTrial
+== Features Trial Has, Or Tries To Have Anyway ==
+
+Near as I can tell, all of trial's behavior neatly falls into one of three categories:
+
+  * Collection
+    * trial can find a bunch of tests smeared out over a filesystem
+    * trial can find tests given a fully-qualifed Python name (either a package, module, class, or method)
+    * whatever is found is wrapped up in a ''suite'' which can be run with a reporter
+  * Reporting
+    * test ''results'' are tracked in an object separate from anything else
+    * some results are added to the ''results'' object with structured apis - errors, failures, successes
+    * some events are reported to the ''results'' object in a structured way - when a test starts, when it ends
+    * some other stuff is reported in an unstructured way - strings are written to it, like summary of results, 
+  * Running
+    * once a ''suite'' and a ''results'' object are available, the ''suite'' is run with the ''results''
+    * from here, it's up to the suite what happens, which is too bad, because trial wants to control what happens as the run progresses.  for example
+      * it wants to provide a command line option for calling gc.collect in between each test method (or maybe in between in each class, or maybe every 5 test methods, or whatever)
+      * someday it wants to connect to 10 remote hosts and start telling '''them''' to run some of the tests (ie disttrial)
+
+== Suites? ==
+
+In xUnit, a test suite is the only interface you get for interacting with tests.  The only thing you can do with a test suite is run it.  Sometimes a test suite is a collection of other test suites.  Sometimes a test suite is just one test method.  Since the only thing you can do with a test suite is run it, and you can't even figure out if a test suite is more than one test method, it's hard to do anything that involves applying behavior to individual test methods (such as actually running them in a different process or having a "dry run" mode where you don't actually run the tests, you just pretend to) or inserting code between tests (like calling gc.collect).  Since the suite's run method synchronously runs one or more test methods, parallelizing a test run is also difficult.
+
+In order to implement some of these (well, gc.collect), trial currently uses a system of suite decoration.  When the main suite is collected, trial applies the
+force-gc-decorator to it.  This decorator tries to break the main suite up into a bunch of little suites (recursively) until it gets to single test method suites, then it wraps these with a test suite which has a run method which calls gc.collect and calls through to the wrapped suite's run method.  This is neat, except trial totally breaks the test suite abstraction to do so.  It would be good to find some other approach to implementing this which didn't break the abstraction.  This may involve introducing a '''new''' abstraction which is more expressive.
+
+Aside from abstraction violation, decoration has another problem.  Some other test-related packages (eg testresources) expect to be able to find extra attributes on test suites.  They do this by having their own custom multi-method test suite (ie, a suite which wraps a bunch of other suites) with the usual run method.  This suite implements the run method to do extra things to the wrapped test suites, though.  In testresources' case, it looks for a `resources` attribute and uses this to provide more advanced set up and tear down fixtures.  When trial wraps all the single-method test suites, it blocks access to this attribute, so testresources stops working.
+
+testresources is violating abstraction too, and breaking when used with trial because of it, but it's violation is a little less severe: it's violating the xUnit test suite abstraction between two objects which basically know about each other and have agreed to this additional interface.  That doesn't help trial, though, since trial doesn't know about the agreement.
+
+So this argues further in favor of some more expressive interface whereby trial can get in between test methods to do what it wants and testresources can get at additional attributes of the test suites which let it do its thing.
+
+== Results? ==
+
+Trial sometimes calls ''results'' by a different name - ''reporters''.  The command line interface talks about ''reporters'' and some APIs use the name ''reporters'' instead of ''results''.  xUnit (and pyunit) call these ''results''.
+
+The job of a ''results'' object is to tell the user what is happening with the run.  Any reporting (hence the name ''reporters'') which happens should be done by the ''results'' object, not by a suite, not by a runner, not by anything except a ''results'' object.  This ensures that if someone wants reporting to happen differently (for example, in a format which buildbot can parse) then substituting a new kind of ''results'' object is all that is required.
+
+trial currently fails to channel everything through the ''results'' object, but it's getting closer to this goal.  A bigger outstanding concern is that some of the methods of a ''results'' object are things like ''writeln'' - unstructured data which can only be shown to a user.  Sometimes this is appropriate, but in a lot of cases where trial uses this API, it's not.
+
+
+== Some notes on the future of TwistedTrial ==
 
 == Become a Real Twisted Application ==
 
