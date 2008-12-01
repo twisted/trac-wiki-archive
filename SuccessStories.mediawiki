@@ -1,9 +1,9 @@
 [[PageOutline(1,Contents)]]
 = [http://www.justin.tv/ Justin.tv] =
 
-Justin.tv is a platform for sharing live video online.  We allow anyone to broadcast live video from their PC and chat with viewers.  Every second of every broadcast is archived so it can later be browsed, searched, or made into highlight clips.
+Justin.tv is the largest live video site on the internet.  We allow anyone to broadcast live video from their PC and chat with viewers.  Every second of every broadcast is archived so it can later be browsed, searched, or made into highlight clips.
 
-We developed custom Flash video software, the Python Media Server, which uses Twisted as the event framework.  Thanks to Twisted and the Amazon Elastic Compute Cloud, we save thousands of dollars by avoiding expensive software licenses and premium CDN bandwidth charges.  In addition, we were able to set the record for the highest number of simultaneous viewers (over 125,000) for a live Flash video stream not served from a major CDN.  Our Twisted video cluster currently supports hundreds of simultaneous broadcasts and serves over 5M live video sessions per day.  
+We developed custom Flash video software, the Python Media Server, which uses Twisted as the event framework.  We were able to set the record for the highest number of simultaneous viewers (over 400,000) for a live video site.  Our Twisted video cluster currently supports thousands of simultaneous broadcasts and serves up to 30M live video streams per day.  
 
 -- Kyle Vogt, VP Engineering, Justin.tv, Inc.
 
