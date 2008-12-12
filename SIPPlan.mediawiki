@@ -1,0 +1,4 @@
+Twisted's SIP support is currently based on the obsolete [http://www.rfc-ref.org/RFC-TEXTS/2543/contents.html RFC 2543]. Divmod Sine provides SIP code based on [[http://www.rfc-ref.org/RFC-TEXTS/3261/contents.html RFC 3261], which allows for several more useful features, such as correct handling of SIP transactions, dealing with forked requests, SRV lookup, and so forth. It should be possible to move this code into Twisted.
+
+The current plan is to update the parts of the code in which the API has not changed, and to introduce new classes where the names don't conflict (Sine's Proxy class will be added as StatefulProxy.) Base and Proxy will be deprecated in favor of !SIPTransport and StatefulProxy. Additionally, the digest auth code will be factored out into a common implementation used by both HTTP and SIP.
+
