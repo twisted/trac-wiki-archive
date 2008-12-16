@@ -25,7 +25,7 @@ Also note that !InterWiki prefixes are case insensitive.
 {{{
 PEP     http://www.python.org/peps/pep-$1.html                                       # Python Enhancement Proposal
 TracML  http://thread.gmane.org/gmane.comp.version-control.subversion.trac.general/  # Trac Mailing List
-RFC     http://www.faqs.org/rfcs/rfc$1                                               # IETF's RFC $1
+RFC     http://www.faqs.org/rfcs/rfc$1.html                                          # IETF's RFC $1
 #
 # A arbitrary pick of InterWiki prefixes...
 #
