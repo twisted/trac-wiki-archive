@@ -1,7 +1,8 @@
+= Compatibility Policy =
 
 NB: This is a work in progress.
 
-= Motivation =
+== Motivation ==
 
 The Twisted project has a small development team, and we cannot afford to provide anything but critical bug-fix support for multiple version branches of Twisted.  However, we all want Twisted to provide a positive experience during development, deployment, and usage.  Therefore we need to provide the most trouble-free upgrade process possible, so that Twisted application developers will not shy away from upgrades that include necessary bugfixes and feature enhancements.
 
@@ -9,51 +10,51 @@ Twisted is used by a wide variety of applications, many of which are proprietary
 
 The purpose of this document is to to lay out rules for Twisted application developers who wish to weather the changes when Twisted upgrades, and procedures for Twisted engine developers - both contributors and core team members - to follow when who want to make changes which may be incompatible to Twisted itself.
 
-= Defining Compatibility =
+== Defining Compatibility ==
 
 The word "compatibility" is itself difficult to define.  While comprehensive compatibility is good, ''total'' compatibility is neither feasible nor desirable.  Total compatibility requires that nothing ever change, since any change to Python code is detectable by a sufficiently determined program.  There is some folk knowledge around which kind of changes "obviously" won't break other programs, but this knowledge is spotty and inconsistent.  Rather than attempt to disallow specific kinds of changes, here we will lay out a list of changes which are considered compatible.
 
 Throughout this document, "compatible" changes are those which meet these specific criteria.  Although a change may be broadly considered backward compatible, as long as it does not meet this official standard, it will be officially deemed "incompatible" and put through the process for incompatible changes.
 
-== Non-Incompatibilties ==
+=== Non-Incompatibilties ===
 
   * Source
     * The most basic thing that can happen between Twisted versions, of course, is that the code may change.  That means that no application may ever rely on, for example, the value of any func_code object's co_code attribute remaining stable, or the checksum of a .py file remaining stable.
-    * Docstrings may also change at any time.  No application code may expect any Twisted class, module, or method's !__doc!__ attribute to remain the same.
-  * Attributes: New code may also be added.  No application may ever rely on the output of the 'dir' function on any object remaining stable, nor on any object's !__all!__ attribute, nor on any object's !__dict!__ not having new keys added to it.  These may happen in any maintenance or bugfix release, no matter how minor.
+    * Docstrings may also change at any time.  No application code may expect any Twisted class, module, or method's {{{__doc__}}} attribute to remain the same.
+  * Attributes: New code may also be added.  No application may ever rely on the output of the 'dir' function on any object remaining stable, nor on any object's {{{__all__}}} attribute, nor on any object's {{{__dict__}}} not having new keys added to it.  These may happen in any maintenance or bugfix release, no matter how minor.
   * Pickling: Even though Python objects can be pickled and unpickled without explicit support for this, whether a particular pickled object can be unpickled after any particular change to the implementation of that object is less certain.  Because of this, no application may depend on any object defined by Twisted to provide pickle compatibility between any release unless the object explicitly documents this as a feature it has.
 
-=== Fixing Gross Violation of Specifications ===
+==== Fixing Gross Violation of Specifications ====
 
 If Twisted documents an object as complying with a published specification, and there are inputs which can cause Twisted to behave in obvious violation of that specification, then changes may be made to correct the behavior in the face of those inputs.  If application code must support multiple versions of Twisted, and work around violations of such specifications, then it ''must'' test for the presence of such a bug before compensating for it.
 
-For example, Twisted supplies a DOM implementation in twisted.web.microdom.  If an issue were discovered where parsing the string "<xml>Hello</xml>" and then serializing it again resulted in ">xml<Hello>/xml<", that would grossly violate the XML specification for well-formedness.  Such code could be fixed with no warning other than release notes detailing that this error is now fixed.
+For example, Twisted supplies a DOM implementation in twisted.web.microdom.  If an issue were discovered where parsing the string {{{<xml>Hello</xml>}}} and then serializing it again resulted in {{{>xml<Hello>/xml<}}}, that would grossly violate the XML specification for well-formedness.  Such code could be fixed with no warning other than release notes detailing that this error is now fixed.
 
 However, if even such a gross violation were documented, or fixing it caused existing tests to break, then the change should be considered incompatible, regardless of how gross its violation.  It may be that such violations are introduced specifically to deal with other grossly non-compliant implementations of said specification.  If it is determined that those reasons are invalid or ought to be exposed through a different API, the change is compatible.
 
-== Explicitly Incompatible Changes ==
+=== Explicitly Incompatible Changes ===
 
 Some changes appear to be in keeping with the above rules describing what is compatible, but are in fact not.
 
-=== Interface Changes ===
+==== Interface Changes ====
 
 Although methods may be added to implementations, adding those methods to interfaces may introduce an unexpected requirement in user code.
 
-[XXX TODO]: There is currently no way to express, in zope.interface, that an interface may optionally provide certain features which need to be tested for.  Although we can add new code, we can't add new requirements on user code to implement new methods.
+[XXX TODO]: There is currently no way to express, in {{{zope.interface}}}, that an interface may optionally provide certain features which need to be tested for.  Although we can add new code, we can't add new requirements on user code to implement new methods.
 
-This is easier to deal with in a system which uses abstract base classes because new requirements can provide default implementations which provide warnings.  Something could also be put in place to do the same with interfaces, since they already install a metaclass, but this is tricky territory.  The only example I'm aware of here is the Microsoft tradition of ISomeInterfaceN where N is a monotonically ascending number for each release.
+This is easier to deal with in a system which uses abstract base classes because new requirements can provide default implementations which provide warnings.  Something could also be put in place to do the same with interfaces, since they already install a metaclass, but this is tricky territory.  The only example I'm aware of here is the Microsoft tradition of {{{ISomeInterfaceN}}} where N is a monotonically ascending number for each release.
 
-= Procedure for Incompatible Changes =
+== Procedure for Incompatible Changes ==
 
-== The First One's Always Free ==
+=== The First One's Always Free ===
 
 The general purpose of this document is to provide a pleasant upgrade experience for twisted application developers and users.  The specific purpose of this procedure is to achieve that experience by making sure that any application which runs without warnings may be upgraded one minor version of twisted (y to y+1 in x.y.z) or from the last minor revision of a major release to the first minor revision of the next major release (x to x + 1 in x.y.z to x.0.z, when there will be no x.y+1.z).  In other words, any application which runs its tests without triggering any warnings from Twisted ''should'' be able to have its Twisted version upgraded at least once with no ill effects except the possible production of new warnings.
 
-== Compatible Changes ==
+=== Compatible Changes ===
 
 Any change specifically described as "compatible" above may be made at any time, in any release.
 
-== Incompatible Changes ==
+=== Incompatible Changes ===
 
 Any change which is ''not'' specifically described as "compatible" must be made in 3 phases.  If a change is made in release R, the timeline is:
 
@@ -67,13 +68,13 @@ Any change which is ''not'' specifically described as "compatible" must be made 
   4. Release R+3:
     * Old functionality is completely removed.
 
-= Application Developer Upgrade Procedure =
+== Application Developer Upgrade Procedure ==
 
 When an application wants to be upgraded to a new version of Twisted, it can do so immediately.  However, if the application wants to get the same "for free" behavior for the next upgrade, the application's tests should be run treating warnings as errors, and fixed.
 
-= Open Issues =
+== Open Issues ==
 
-== Warnings Currently in Twisted ==
+=== Warnings Currently in Twisted ===
 
 Taken from a recent test run:
 
@@ -151,15 +152,15 @@ Taken from a recent test run:
 
 That's 69 warnings on python 2.4, with the select reactor, arguably our best-supported test configuration.  These warnings need to be eliminated so that application developers can treat warnings as errors.
 
-== Implied New APIs ==
+=== Implied New APIs ===
 
 {{{DeprecationError}}} does not currently exist and would need to be introduced.
 
 ~~Trial has support for suppressing warnings, but not for asserting about them.  That means it is not really feasible to verify that deprecations have been done correctly, although it is possible to quash them.~~ ''(trial now provides TestCase.assertWarns)''
 
-Trial also needs a way to do the equivalent of -Werror that was specific to Twisted warnings, since it may not be possible to avoid certain kinds of warning while remaining compatible between all Python versions.
+Trial also needs a way to do the equivalent of {{{-Werror}}} that was specific to Twisted warnings, since it may not be possible to avoid certain kinds of warning while remaining compatible between all Python versions.
 
-== Weaknesses of the Warnings System ==
+=== Weaknesses of the Warnings System ===
 
 Warnings are, for a variety of unfortunate reasons, often displayed to end-users before they are displayed to developers.  There should be some mechanism for specifying what warnings one wants to see and how they should be reported.  For example, if Twisted continues to have some warnings against a particular version of Python, a Twisted application developer doesn't necessarily care.  They should be able to declare that they are a developer for particular packages and see warnings only for those packages.
 
