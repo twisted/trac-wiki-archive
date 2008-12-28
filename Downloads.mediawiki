@@ -2,7 +2,7 @@
 
 For more information about Twisted, please see the [wiki:TwistedProject Twisted project page]. You can get older releases from our [http://tmrc.mit.edu/mirror/twisted/ download site].
 
-The current release is Twisted 8.1.0: [source:/tags/releases/twisted-8.1.0/NEWS?format=raw Release notes]
+The current release is Twisted 8.2.0: [source:/tags/releases/twisted-8.2.0/NEWS?format=raw Release notes]
 
 == Ubuntu and Debian ==
 
@@ -27,7 +27,7 @@ If you wish to build and install the latest Twisted by-hand on Ubuntu ensure tha
 
 == Source Tarball ==
 
- * [http://tmrc.mit.edu/mirror/twisted/Twisted/8.1/Twisted-8.1.0.tar.bz2 Twisted 8.1.0 tarball]
+ * [http://tmrc.mit.edu/mirror/twisted/Twisted/8.2/Twisted-8.2.0.tar.bz2 Twisted 8.2.0 tarball]
 
 == View on the Web ==
 
@@ -44,18 +44,23 @@ To checkout code from the repository, use:
 
 You probably don't want these unless you have special considerations (note: TwistedWeb2 listed here is not in the integrated tarball mentioned above):
 
- * [http://tmrc.mit.edu/mirror/twisted/Core/8.1/TwistedCore-8.1.0.tar.bz2 Twisted Core] - 8.1.0 ([source:/tags/releases/twisted-8.1.0/twisted/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Conch/8.1/TwistedConch-8.1.0.tar.bz2 Twisted Conch] - 8.1.0 ([source:/tags/releases/twisted-8.1.0/twisted/conch/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Web/8.1/TwistedWeb-8.1.0.tar.bz2 Twisted Web] - 8.1.0 ([source:/tags/releases/twisted-8.1.0/twisted/web/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Core/8.2/TwistedCore-8.2.0.tar.bz2 Twisted Core] - 8.2.0 ([source:/tags/releases/twisted-8.2.0/twisted/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Conch/8.2/TwistedConch-8.2.0.tar.bz2 Twisted Conch] - 8.2.0 ([source:/tags/releases/twisted-8.2.0/twisted/conch/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Web/8.2/TwistedWeb-8.2.0.tar.bz2 Twisted Web] - 8.2.0 ([source:/tags/releases/twisted-8.2.0/twisted/web/topfiles/NEWS?format=raw Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Web2/8.1/TwistedWeb2-8.1.0.tar.bz2 Twisted Web2] - 8.1.0 ([source:/tags/releases/twisted-8.1.0/twisted/web2/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Mail/8.1/TwistedMail-8.1.0.tar.bz2 Twisted Mail] - 8.1.0 ([source:/tags/releases/twisted-8.1.0/twisted/mail/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Names/8.1/TwistedNames-8.1.0.tar.bz2 Twisted Names] - 8.1.0 ([source:/tags/releases/twisted-8.1.0/twisted/names/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/News/8.1/TwistedNews-8.1.0.tar.bz2 Twisted News] - 8.1.0 ([source:/tags/releases/twisted-8.1.0/twisted/news/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Words/8.1/TwistedWords-8.1.0.tar.bz2 Twisted Words] - 8.1.0 ([source:/tags/releases/twisted-8.1.0/twisted/words/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Lore/8.1/TwistedLore-8.1.0.tar.bz2 Twisted Lore] - 8.1.0 ([source:/tags/releases/twisted-8.1.0/twisted/lore/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Runner/8.0/TwistedRunner-8.0.0.tar.bz2 Twisted Runner] - 8.0.0 ([source:/tags/releases/twisted-8.0.0/twisted/runner/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Mail/8.2/TwistedMail-8.2.0.tar.bz2 Twisted Mail] - 8.2.0 ([source:/tags/releases/twisted-8.2.0/twisted/mail/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Names/8.2/TwistedNames-8.2.0.tar.bz2 Twisted Names] - 8.2.0 ([source:/tags/releases/twisted-8.2.0/twisted/names/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/News/8.2/TwistedNews-8.2.0.tar.bz2 Twisted News] - 8.2.0 ([source:/tags/releases/twisted-8.2.0/twisted/news/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Words/8.2/TwistedWords-8.2.0.tar.bz2 Twisted Words] - 8.2.0 ([source:/tags/releases/twisted-8.2.0/twisted/words/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Lore/8.2/TwistedLore-8.2.0.tar.bz2 Twisted Lore] - 8.2.0 ([source:/tags/releases/twisted-8.2.0/twisted/lore/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Runner/8.2/TwistedRunner-8.2.0.tar.bz2 Twisted Runner] - 8.2.0 ([source:/tags/releases/twisted-8.2.0/twisted/runner/topfiles/NEWS?format=raw Release notes])
 
 == Signed MD5 Sums ==
+
+md5 sums of the 8.2.0 release are [http://tmrc.mit.edu/mirror/twisted/twisted-8.2.0-md5sums.txt here].
+
+
+Here are some md5sums for Twisted 8.1.0:
 
 {{{
 #!html
