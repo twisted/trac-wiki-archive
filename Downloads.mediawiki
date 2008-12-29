@@ -21,7 +21,7 @@ If you wish to build and install the latest Twisted by-hand on Ubuntu ensure tha
 
 == Mac OS X ==
 
- * [http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted-8.0.1_py2.5_osx10.5.pkg Twisted 8.0.1 for OS X 10.5]
+ * [http://tmrc.mit.edu/mirror/twisted/Twisted/8.2/Twisted-8.2.0_py2.5_osx10.5.dmg Twisted 8.2.0 for OS X 10.5]
  * [http://tmrc.mit.edu/mirror/twisted/Dependencies/Mac/PyCrypto-2.0.1_py2.5_osx10.5.pkg PyCrypto 2.0.1 for OS X 10.5] (needed by Conch)
  * [http://sourceforge.net/project/showfiles.php?group_id=31249 PyOpenSSL] (needed for SSL)
 
