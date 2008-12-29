@@ -17,7 +17,7 @@
     <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.1/Twisted_NoDocs-8.1.0.win32-py2.4.exe">Twisted 8.1.0 for Python 2.4</a><br/>
     <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.1/Twisted_NoDocs-8.1.0.win32-py2.5.exe">Twisted 8.1.0 for Python 2.5</a><br/>
     Mac OS X 10.5:<br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted-8.0.1_py2.5_osx10.5.pkg">Twisted 8.0.1</a>
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.2/Twisted-8.2.0_py2.5_osx10.5.dmg">Twisted 8.2.0</a>
   </div>
   <div id="download_bottom" style="position: relative; left: -30px;">
   &nbsp;
