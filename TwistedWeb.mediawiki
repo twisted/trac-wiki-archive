@@ -2,7 +2,7 @@
 
 = Twisted Web =
 
-Twisted web is a web server, and also provides basic HTTP client support.
+Twisted Web includes an HTTP server and an HTTP client and additional libraries often useful in conjunction with these.
 
 [wiki:WebDevelopmentWithTwisted If you're here to learn about web development with Twisted, please read this page first!]
 
