@@ -16,5 +16,5 @@ You will need the latest Twisted release unpacked and the latest version of pydo
      Be sure to use the tag which corresponds to the version of Twisted the docs are being generated for.  Note that if your working is the Twisted source directory you checked out, then ''that'' version of `APIBuilder` will be used!
 
   2. Upload the resulting `apidocs` directory to www-data@cube.  Use `tar cx apidocs | ssh www-data@twistedmatrix.com tar xv` or something.
-  3. Put the apidocs directory into the appropriate location beneath vhosts/twistedmatrix.com/documents/ (eg 8.2.0)
+  3. Put the apidocs directory into the appropriate location beneath vhosts/twistedmatrix.com/documents/ (eg 8.2.0/api)
   4. If desired, update the `current` symlink.
