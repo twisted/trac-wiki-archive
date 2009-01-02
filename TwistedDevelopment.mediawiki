@@ -32,7 +32,7 @@ If you want to hack Twisted or just use Twisted SVN on Win32, see Ying Li's [htt
 
 == Twisted Maintenance ==
 
-You might be interested in learning about tasks related to [wiki:SiteMaintenance maintaining this website].
+You might be interested in learning about tasks related to [wiki:SiteMaintenance maintaining this website] or for [wiki:ReleaseProcedure releasing Twisted].
 
 == Policies ==
 This series of documents is designed for people who wish to contribute to the Twisted codebase.
