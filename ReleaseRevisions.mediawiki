@@ -1,6 +1,6 @@
-8.2 - revisions 23440 to 25380
-8.1 - revisions 23026 to 23439
-8.0 - revisions 19165 to 23025
-2.5 - revisions 16938 to 19164
-2.4 - revisions 16810 to 16937
-2.3 - revisions XXX to 16809
+  * 8.2 - revisions 23440 to 25380
+  * 8.1 - revisions 23026 to 23439
+  * 8.0 - revisions 19165 to 23025
+  * 2.5 - revisions 16938 to 19164
+  * 2.4 - revisions 16810 to 16937
+  * 2.3 - revisions XXX to 16809
