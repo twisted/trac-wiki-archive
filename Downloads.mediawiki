@@ -2,7 +2,7 @@
 
 For more information about Twisted, please see the [wiki:TwistedProject Twisted project page]. You can get older releases from our [http://tmrc.mit.edu/mirror/twisted/ download site].
 
-The current release is Twisted 8.2.0: [source:/tags/releases/twisted-8.2.0/NEWS?format=raw Release notes]
+The current release is Twisted 8.2.0: [http://twistedmatrix.com/trac/browser/tags/releases/twisted-8.2.0/NEWS?format=raw Release notes]
 
 == Ubuntu and Debian ==
 
