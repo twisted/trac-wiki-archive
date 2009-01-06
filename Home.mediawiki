@@ -18,7 +18,7 @@
     <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.2/Twisted_NoDocs-8.2.0.win32-py2.5.exe">Twisted 8.2.0 for Python 2.5</a><br/>
     <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.2/Twisted_NoDocs-8.2.0.win32-py2.6.exe">Twisted 8.2.0 for Python 2.6</a><br/>
     Mac OS X 10.5:<br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.2/Twisted-8.2.0_py2.5_osx10.5.dmg">Twisted 8.2.0</a>
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.2/Twisted-8.2.0_py2.5_osx10.5.dmg">Twisted 8.2.0 for Python 2.5</a>
   </div>
   <div id="download_bottom" style="position: relative; left: -30px;">
   &nbsp;
@@ -193,6 +193,7 @@ More Useful Pointers:
 <br/>
 
 <a href="http://bazaar-vcs.org/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/bazaar2.png?format=raw" /></a><br/>
+
 
 
 <br/>
