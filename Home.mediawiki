@@ -105,7 +105,7 @@ value="-----BEGIN PKCS7-----MIIH2QYJKoZIhvcNAQcEoIIHyjCCB8YCAQExggEwMIIBLAIBADCB
 
 <h1 id="ActNow:BeaFoundingSponsor">Thank You, Twisted Sponsors!</h1>
 <p>
-We'd like to thank all the companies that have sponsored Twisted this year. All of you have contributed to getting the Foundation off the ground, and have thus entered history as <a class="wiki" href="/trac/wiki/TSF/FoundingSponsors">Founding Sponsors</a>. We will be making an official announcement in about two weeks, in order to catch up with the accounting.
+We'd like to thank all the companies that have sponsored Twisted last year. All of you have contributed to getting the Foundation off the ground, and have thus entered history as <a class="wiki" href="/trac/wiki/TSF/FoundingSponsors">Founding Sponsors</a>.
 </p>
 <h1 id="WhatisTwisted">What is Twisted?</h1>
 
