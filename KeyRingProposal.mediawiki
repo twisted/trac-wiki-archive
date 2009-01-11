@@ -1,0 +1,96 @@
+== Prior Art ==
+
+  1. [http://library.gnome.org/devel/gnome-keyring/stable/ch01.html gnome-keyring] - password keyring
+  1. [http://en.wikipedia.org/wiki/Ssh-agent ssh-agent] - SSH key ring
+  1. [http://developer.apple.com/documentation/Security/Conceptual/keychainServConcepts/01introduction/chapter_1_section_1.html Apple Keychain]
+
+== Goal ==
+
+  1. To create an API by which applications acting as clients may authenticate themselves against servers without concerning themselves with the details of how the authentication is performed.
+  1. To centralize the storage and representation of credentials for use by clients.
+  1. To integrate with platform keyring services to be able to load credentials which have already been supplied by a user for general use on a system.
+
+== API ==
+
+(incomplete, probably partially inconsistent)
+
+{{{
+#!python
+
+class IKey(Interface):
+    """
+    Represents one authentication credentials for a specific 
+    """
+
+
+class IRemoteHost(Interface):
+    host = Attribute()
+    port = Attribute()
+
+
+class IRemoteHTTP(IRemoteHost):
+    realm = Attribute()
+
+
+class IScope(Interface):
+    def includes(remote):
+        pass
+
+
+class IKeyRing(Interface):
+    """
+    Represent one or more authentication credentials for a particular client-user-facing account identifier.
+    """
+    avatarId = Attribute("The client-user-facing account identifier to which all keys in this ring belong.")
+
+    def add(key, scope):
+        """
+        Add a new key to this ring.
+        @param key: An IKey provider
+        """
+
+
+    def remove(key, scope):
+        pass
+
+
+    def find(interface, remote):
+        """
+        Return all keys which provide the given interface and which are for the given remote system.
+
+        remote is an object describing the location of the remote system.  It should be used by `IScope.includes` to decide if a particular key should be returned.
+        """
+
+
+class HostScope(object):
+    implements(IScope):
+
+    def __init__(self, name):
+        self._name = name
+
+    def includes(self, remote):
+        remote = IRemoteHost(remote, None)
+        if remote is None:
+            return False
+        return remote.host == self._name
+
+
+class HTTPRealmScope(object):
+    implements(IScope)
+
+    def __init__(self, host, port, realm):
+        self._host = host
+        self._port = port
+        self._realm = realm
+
+    def includes(self, remote):
+        remote = IRemoteHTTP(remote, None)
+        if remote is None:
+            return None
+        return remote.host == self._host and remote.port == self._port and remote.realm == self._realm
+
+
+if __name__ == '__main__':
+    rings = RingCollection(GnomeKeyRing(), SSHKeyAgent())
+    POP3Client().login("exarkun", rings.get("exarkun")
+}}}
