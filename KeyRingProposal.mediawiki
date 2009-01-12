@@ -17,24 +17,14 @@
 {{{
 #!python
 
-class IKey(Interface):
-    """
-    Represents one authentication credentials for a specific 
-    """
+class UsernamePassword(object):
+    implements(INetworkUsernamePassword)
 
-
-class IRemoteHost(Interface):
-    host = Attribute()
-    port = Attribute()
-
-
-class IRemoteHTTP(IRemoteHost):
-    realm = Attribute()
-
-
-class IScope(Interface):
-    def includes(remote):
-        pass
+    def __init__(self, u, p, h, po):
+        self.username = u
+        self.password = p
+        self.host = h
+        self.port = po
 
 
 class IKeyRing(Interface):
@@ -43,54 +33,40 @@ class IKeyRing(Interface):
     """
     avatarId = Attribute("The client-user-facing account identifier to which all keys in this ring belong.")
 
-    def add(key, scope):
+    def add(credentials):
         """
-        Add a new key to this ring.
-        @param key: An IKey provider
+        Add the given credentials object (eg, UsernamePassword) to the key ring.
         """
 
-
-    def remove(key, scope):
+    def remove(credentials):
         pass
 
 
-    def find(interface, remote):
+    def find(interface, **kwargs):
         """
-        Return all keys which provide the given interface and which are for the given remote system.
-
-        remote is an object describing the location of the remote system.  It should be used by `IScope.includes` to decide if a particular key should be returned.
+        Return all credentials which provide the given interface and have attributes matching the given kwargs.
         """
 
-
-class HostScope(object):
-    implements(IScope):
-
-    def __init__(self, name):
-        self._name = name
-
-    def includes(self, remote):
-        remote = IRemoteHost(remote, None)
-        if remote is None:
-            return False
-        return remote.host == self._name
-
-
-class HTTPRealmScope(object):
-    implements(IScope)
-
-    def __init__(self, host, port, realm):
-        self._host = host
-        self._port = port
-        self._realm = realm
-
-    def includes(self, remote):
-        remote = IRemoteHTTP(remote, None)
-        if remote is None:
-            return None
-        return remote.host == self._host and remote.port == self._port and remote.realm == self._realm
 
 
 if __name__ == '__main__':
     rings = RingCollection(GnomeKeyRing(), SSHKeyAgent())
-    POP3Client().login("exarkun", rings.get("exarkun")
+
+    host = "pop3.example.com"
+    d = ClientCreator(reactor, POP3Client).connectTCP(host, 110)
+    def cbConnected(pop3):
+        keysDeferred = rings.find(INetworkUsernamePassword, host=host, port=110)
+        def cbGotKeys(keys):
+            if not keys:
+                username = raw_input("Username? ")
+                password = raw_input("Password? ")
+                creds = UsernamePassword(username, password, host, 110)
+                rings.add(creds)
+                return creds
+            return keys[0]
+        keysDeferred.addCallback(cbGotKeys)
+        keysDeferred.addCallback(pop3.login)
+        return keysDeferred
+    d.addCallback(cbConnected)
+    reactor.run()
 }}}
