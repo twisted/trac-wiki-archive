@@ -31,8 +31,6 @@ class IKeyRing(Interface):
     """
     Represent one or more authentication credentials for a particular client-user-facing account identifier.
     """
-    avatarId = Attribute("The client-user-facing account identifier to which all keys in this ring belong.")
-
     def add(credentials):
         """
         Add the given credentials object (eg, UsernamePassword) to the key ring.
