@@ -30,17 +30,9 @@ Twisted has moved to a date based version number scheme.  The major version numb
 
 This is similar to, but less confusing than, Ubuntu's date based versioning scheme of {{{YEAR.MONTH}}}.  The Twisted versions still counts up from 0 for the minor number and patches.
 
-== Stability ==
-
-=== Does the 1.0 release mean that all of Twisted's APIs are stable? ===
-
-No, only specific parts of Twisted are stable, i.e. we only promise backwards compatibility for some parts of Twisted. While these APIs may be extended, they will not change in ways that break existing code that uses them.
-
-While other parts of Twisted are not stable, we will however do our best to make sure that there is backwards compatibility for these parts as well. In general, the more the module or package are used, and the closer they are to being feature complete, the more we will concentrate on providing backwards compatibility when API changes take place.
-
 === Which parts of Twisted are stable? ===
 
-See CompatibilityPolicy.
+In general, everything which is part of a Twisted release is stable.  See CompatibilityPolicy for details.
 
 == Installation ==
 
