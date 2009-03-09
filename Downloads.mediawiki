@@ -8,7 +8,7 @@ The current release is Twisted 8.2.0: [http://twistedmatrix.com/trac/browser/tag
 
 Packages of Twisted are available in Ubuntu and Debian as 'python-twisted'.
 
-If you wish to build and install the latest Twisted by-hand on Ubuntu ensure that you have the 'python-dev' and 'build-essentials' packages installed.  
+If you wish to build and install the latest Twisted by-hand on Ubuntu ensure that you have the 'python-dev' and 'build-essential' packages installed.  
 
 
 == Windows ==
