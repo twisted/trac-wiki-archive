@@ -18,6 +18,27 @@ Throughout this document, "compatible" changes are those which meet these specif
 
 === Non-Incompatibilties ===
 
+  * test changes.  No code in a test package should be imported by a non-test package within Twisted, so there's no chance anything could access these objects by going through the public API.
+  * "private" changes.  Code is considered "private" if the user would have to type a leading underscore to access it.  In other words, a function, module, method, attribute or class whose name begins with an underscore may be arbitrarily changed, ''unless'':
+    * a "public" entry point returns a "private" object, that "private" object must preserve its "public" attributes.  For example:
+{{{
+#!py
+class _y:
+    def z(self): return 1
+    def _q(self): return 2
+def x():
+    return _y()
+}}}
+      in this example, `_y` can no longer be arbitrarily changed.  Specifically, 'z' is now a public method, thanks to 'x' exposing it.  However, '_q' can still be arbitrarily changed or removed.
+    * a "private" class is exposed by way of a "public" subclass.  For example,
+{{{
+class _a:
+    def b(self): return 1
+    def c(result): return 2
+
+class d(_a): pass
+}}}
+      in this example `_a` is effectively public, since all of its attributes and methods are exposed via `d`.
   * Source
     * The most basic thing that can happen between Twisted versions, of course, is that the code may change.  That means that no application may ever rely on, for example, the value of any func_code object's co_code attribute remaining stable, or the checksum of a .py file remaining stable.
     * Docstrings may also change at any time.  No application code may expect any Twisted class, module, or method's {{{__doc__}}} attribute to remain the same.
