@@ -34,10 +34,10 @@ def x(): return _y()
 #!py
 class _a:
     def b(self): return 1
-    def c(result): return 2
+    def c(self): return 2
 class d(_a): pass
 }}}
-      in this example `_a` is effectively public, since all of its attributes and methods are exposed via `d`.
+      in this example `_a` is effectively public, since 'b' and 'c' are both exposed via `d`.
   * Source
     * The most basic thing that can happen between Twisted versions, of course, is that the code may change.  That means that no application may ever rely on, for example, the value of any func_code object's co_code attribute remaining stable, or the checksum of a .py file remaining stable.
     * Docstrings may also change at any time.  No application code may expect any Twisted class, module, or method's {{{__doc__}}} attribute to remain the same.
