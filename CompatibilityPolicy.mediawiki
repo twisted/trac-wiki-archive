@@ -26,16 +26,15 @@ Throughout this document, "compatible" changes are those which meet these specif
 class _y:
     def z(self): return 1
     def _q(self): return 2
-def x():
-    return _y()
+def x(): return _y()
 }}}
       in this example, `_y` can no longer be arbitrarily changed.  Specifically, 'z' is now a public method, thanks to 'x' exposing it.  However, '_q' can still be arbitrarily changed or removed.
     * a "private" class is exposed by way of a "public" subclass.  For example,
 {{{
+#!py
 class _a:
     def b(self): return 1
     def c(result): return 2
-
 class d(_a): pass
 }}}
       in this example `_a` is effectively public, since all of its attributes and methods are exposed via `d`.
