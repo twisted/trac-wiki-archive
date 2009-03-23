@@ -4,7 +4,7 @@
 
 Runner has process management, including an inetd replacement.
 
-Twisted Runner is available under the MIT Free Software licence. 
+Twisted Runner is available under the [http://www.opensource.org/licenses/mit-license.php MIT Free Software licence].
 
 = Download =
 
