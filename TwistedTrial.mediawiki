@@ -2,7 +2,7 @@
 
 Trial is Twisted's unit testing framework, an extension of Python's unittest.
 
-One of Trial's unique features is the ability to return a Deferred from a test-case method - the test case will not complete until the Deferred has fired.  If it fires successfully, the test passes.  If it fires with an error, the test fails.  This makes it possible to easily unit-test asynchronous event-driven code.  Trial also include automatic (customizable) test discovery, customizable reporting, and enhanced test cleanup features.
+One of Trial's unique features is the ability to return a Deferred from a test-case method - the test case will not complete until the Deferred has fired.  If it fires successfully, the test passes.  If it fires with an error, the test fails.  This makes it possible to easily unit-test asynchronous event-driven code.  Trial also includes automatic (customizable) test discovery, customizable reporting, and enhanced test cleanup features.
 
 = Download =
 
