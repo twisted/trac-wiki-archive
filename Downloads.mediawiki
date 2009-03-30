@@ -10,6 +10,10 @@ Packages of Twisted are available in Ubuntu and Debian as 'python-twisted'.
 
 If you wish to build and install the latest Twisted by-hand on Ubuntu ensure that you have the 'python-dev' and 'build-essential' packages installed.  
 
+An Ubuntu PPA was setup on Launchpad to obtain more recent packages:
+
+ * [https://launchpad.net/~fluidinfo/+archive/ppa Ubuntu PPA]
+
 
 == Windows ==
 
