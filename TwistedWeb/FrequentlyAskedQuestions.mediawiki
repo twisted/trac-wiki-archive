@@ -1,0 +1,11 @@
+= Twisted Web - Frequently Asked Questions =
+
+Also see the main FrequentlyAskedQuestions page for more information about Twisted.
+
+== Can Twisted Web do PHP? ==
+
+Yes. It works out-of-the-box, so long as you've got the standalone PHP interpreter installed.
+
+== Can Twisted Web do virtual hosting? ==
+
+You can decide to go with one big process for all of them, a front server and a seperate server for each virtual host (for example, for permission reasons), and you can even mix-and-match between Apache and Twisted (for example, put Apache in the front and have Twisted handle some subset of the virtual host).
