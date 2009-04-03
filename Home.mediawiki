@@ -184,7 +184,13 @@ More Useful Pointers:
 <br/>
 <a href="http://www.appropriatesolutions.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/Appropriate-Solutions-Inc.gif?format=raw" /></a><br />
 
+<!-- 
+
+Removed Google pending our figuring out whether they actually sponsored or not.
+
 <a href="http://code.google.com/opensource/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/google.png?format=raw" /></a><br/>
+
+-->
 
 <br/>
 
