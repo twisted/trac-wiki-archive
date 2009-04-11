@@ -24,7 +24,7 @@ The post-development, pre-commit process Twisted has adopted is this:
    * The changes must include updates to the documentation for any modified behavior of an API.
    * If appropriate, the changes must include "user guide" documentation in the [source:trunk/doc doc/] directory.
    * The changes must include updated documentation for any APIs which are being deprecated or otherwise obsoleted.
-   * The changes must follow the [source:trunk/doc/development/policy/coding-standard.xhtml?format=raw coding standard].
+   * The changes must follow the [/trac/browser/trunk/doc/development/policy/coding-standard.xhtml?format=raw coding standard].
    * The changes must not be obviously buggy: pyflakes is an useful tool to check basic quality of code. The following command will check all the files modified and added by a branch merge:
 {{{
 svn status | grep '^\M\|^A' | cut -c 8- | xargs pyflakes
