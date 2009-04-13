@@ -12,7 +12,7 @@ Mail list subscription information as well as list archives are available for th
 
 Server: {{{irc.freenode.net}}} (more about [http://freenode.net the Freenode IRC network])
 
-Channels: {{{#twisted}}}, {{{#twisted.web}}}
+Channels: [irc://irc.freenode.net/twisted #twisted], [irc://irc.freenode.net/twisted.web #twisted.web]
 
 == Blogs ==
 
