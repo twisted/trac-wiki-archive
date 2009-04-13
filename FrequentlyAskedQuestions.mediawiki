@@ -86,7 +86,7 @@ Sometimes people ask this question when they write a function that calls `connec
 
 This seems like it's a Twisted question, but actually it's a Python question.  Each `Protocol` object represents one connection; you can call its `transport.write` to write some data to it.  These are regular Python objects; you can put them into lists, dictionaries, or whatever other data structure is appropriate to your application.
 
-As a simple example, add a list to your factory, and in your protocol's `connectionMade` and `connectionLost`, add it and remove it to that list.  Here's the Python code:
+As a simple example, add a list to your factory, and in your protocol's `connectionMade` and `connectionLost`, add it to and remove it from that list.  Here's the Python code:
 
 {{{
 #!py
