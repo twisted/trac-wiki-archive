@@ -53,7 +53,7 @@
 #!html
 <a href="http://www.allmydata.com/index.php?tracking=twisted-home"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/allmydata.jpg?format=raw" /></a><br/>
 <!-- Holden Web: Donated 2008-03-19 -->
-<a href="http://holdenweb.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/HoldenWebTSF.png?format=raw" /></a><br/>
+<a href="http://holdenweb.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/hwebtsf160x80.png?format=raw" /></a><br/>
 <a href="http://hydralabs.com"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/hydra.png?format=raw" /></a><br/>
 <!-- Magnetk: Donated 2008-04-10 -->
 <a href="http://magnetk.com/expandrive"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/ExpanDrive.gif?format=raw" /></a><br/>
