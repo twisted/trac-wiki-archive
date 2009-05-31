@@ -7,14 +7,34 @@ Comprised of ninjas, rogue temporal authority enforcement agents, ancient greeks
 
   '''Glyph "Glyph" Lefkowitz''' : glyph (at) twistedmatrix.com::
      electric violin
-  '''Sean "Riley" Riley''' : sean (at) twistedmatrix.com::
-     grand piano
-  '''Allen "Dash" Short''' : washort (at) twistedmatrix.com::
-     vocals and guitar
+  '''Jean-Paul "exarkun" Calderone''' : exarkun (at) twistedmatrix.com::
+     geopolitical sociographic dissonance engine
   '''Christopher "radix" Armstrong''' : radix (at) twistedmatrix.com::
      percussion
+  '''Thomas "therve" Hervé''': therve (at) free.fr::
+     nuclear ocarina
   '''Paul "z3p" Swartz''' : z3p (at) twistedmatrix.com::
      oboe
+  '''Allen "Dash" Short''' : washort (at) twistedmatrix.com::
+     vocals and guitar
+  '''Jonathan "jml" Lange''' : jml (at) twistedmatrix.com::
+     pipe organ
+  '''Ralph "ralphm" Meijer''': twisted (at) ralphm.ik.nu::
+     vocals and timbales
+  '''Pavel "!PenguinOfDoom" Pergamenshchik''' : ppergame (at) gmail.com::
+     electronic balalaika
+  '''[wiki:People/DuncanMcGreggor Duncan "oubiwann" McGreggor]''': oubiwann (at) adytum.us::
+     bagpipes
+  '''Andrew "spiv" Bennetts''' : andrew (at) bemusement.org::
+     glockenspiel
+  '''Itamar "itamar" Shtull-Trauring''' : itamar (at) itamarst.org::
+     alto recorder
+  '''Stephen "jerub" Thorne''': jerub (at) twistedmatrix.com::
+     trumpet
+  '''Kevin "Acapnotic" Turner''' : acapnotic (at) twistedmatrix.com::
+     trombone
+  '''Donovan "fzZzy" Preston''' : dp (at) twistedmatrix.com::
+     bass and harmonium
   '''Jürgen "snibril" Hermann''' : jh (at) twistedmatrix.com::
      synthesizer
   '''Moshe "vertical" Zadka''' : moshez (at) twistedmatrix.com::
@@ -23,24 +43,10 @@ Comprised of ninjas, rogue temporal authority enforcement agents, ancient greeks
      kazoo
   '''Travis B. "Nafai" Hartwell''' : nafai (at) twistedmatrix.com::
      keyboards
-  '''Itamar "itamar" Shtull-Trauring''' : itamar (at) itamarst.org::
-     alto recorder
-  '''Andrew "spiv" Bennetts''' : andrew (at) bemusement.org::
-     glockenspiel
-  '''Kevin "Acapnotic" Turner''' : acapnotic (at) twistedmatrix.com::
-     trombone
-  '''Donovan "fzZzy" Preston''' : dp (at) twistedmatrix.com::
-     bass and harmonium
-  '''Jean-Paul "exarkun" Calderone''' : exarkun (at) twistedmatrix.com::
-     geopolitical sociographic dissonance engine
   '''Gavin "skreech" Cooper''' : gavin.cooper (at) gmail.com::
      torque wrench
-  '''Jonathan "jml" Lange''' : jml (at) twistedmatrix.com::
-     pipe organ
   '''Bob "etrepum" Ippolito''' : bob (at) redivi.com::
      low frequency oscillator
-  '''Pavel "!PenguinOfDoom" Pergamenshchik''' : ppergame (at) gmail.com::
-     electronic balalaika
   '''Jonathan D. "slyphon" Simms''' : slyphon (at) twistedmatrix.com::
      theramin and drums
   '''Brian "warner" Warner''' : warner (at) twistedmatrix.com::
@@ -53,14 +59,8 @@ Comprised of ninjas, rogue temporal authority enforcement agents, ancient greeks
      didgeridoo
   '''Justin "justinj" Johnson''' : justinj (at) twistedmatrix.com::
      bass mandolin
-  '''Ralph "ralphm" Meijer''': twisted (at) ralphm.ik.nu::
-     vocals and timbales
-  '''Stephen "jerub" Thorne''': jerub (at) twistedmatrix.com::
-     trumpet
-  '''[wiki:People/DuncanMcGreggor Duncan "oubiwann" McGreggor]''': oubiwann (at) adytum.us::
-     bagpipes
-  '''Thomas "therve" Hervé''': therve (at) free.fr::
-     nuclear ocarina
+  '''Sean "Riley" Riley''' : sean (at) twistedmatrix.com::
+     grand piano
 
 == Extras ==
 
