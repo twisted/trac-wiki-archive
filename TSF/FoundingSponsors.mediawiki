@@ -34,8 +34,6 @@
 <br/>
 <a href="http://www.appropriatesolutions.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/Appropriate-Solutions-Inc.gif?format=raw" /></a><br />
 
-<a href="http://code.google.com/opensource/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/google.png?format=raw" /></a><br/>
-
 <br/>
 
 <a href="http://www.canonical.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/canonical.png?format=raw" /></a><br/>
