@@ -1,22 +1,47 @@
+
 == Contributing ==
 
-If you want to work on Twisted, check out this URL:
+=== Source Access ===
+
+You can get Twisted's source code here:
+
 {{{
 svn://svn.twistedmatrix.com/svn/Twisted/trunk
 }}}
-Generate patches via editing your checkout of trunk and running 'svn diff' at the ''root'' of your checkout - the folder with "twisted", "bin", "doc", etc. in it.
 
-Make sure that you have written unit tests and docstrings for all code which has changed in your patch.  For more details about what will be considered an acceptable patch, see the "Development Process" section below.
+=== Submitting a Patch ===
 
-Attach the output of 'svn diff' to a ticket in the tracker and assign it the 'review' keyword so that a core developer will notice it and review it.  Don't be discouraged if it is not immediately accepted!  To keep the quality of Twisted high, almost all patches are rejected on their initial submission.  Check back to see if the patch has been re-assigned to you for further work.
+Here's a quick step-by-step guide to getting from an idea for an improvement to Twisted to something that we can integrate.  First, I'll explain just the mechanics of getting your code into review, not what the code itself should do.  If you actually want us to be able to use your code, you will also want to read the section below on getting your patch accepted, too!
 
-Finally, if your patch is good, it will be applied to trunk and included as part of the next release.
+  1. Check out the source code, via the URL above, like this: `svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk MyTwistedTrunk`.
+  1. Edit the code in the `MyTwistedTrunk` directory that you just checked out, making your awesome change to Twisted.
+  1. Generate a patch file by capturing the output of 'svn diff' at the ''root'' of your checkout - in this case, `MyTwistedTrunk`; the folder with "twisted", "bin", "doc", etc. in it.  On Linux or MacOS, the command to create this file would be "`cd MyTwistedTrunk; svn diff > my-twisted-patch.patch`".
+  1. If you haven't already, [http://twistedmatrix.com/trac/register register for an account on this website].  If you have, make sure you are logged in.
+  1. Search for an existing ticket which describes your change, using both the "search" field above, and Google.
+    1. If you can't find one, file a new ticket using the "new ticket" link above.  If you file a new ticket, please start with a clear description of ''why'' such a change is desirable - we can read your code to find out ''what'' you are doing, but we can't read your mind to figure out why you want it done!
+  1. Click on the "attach file" button on your ticket, and upload the `.patch` file you generated above.
+  1. Put the ticket into review.  This is accomplished by doing the following:
+    1. enter the word "review" into the "keywords" field of the ticket.  (If there are other keywords already there, just add a space to separate the keyword.)
+    1. Click on the "reassign to" radio button.
+    1. Select the topmost, blank entry from the "reassign to" button.
+    1. Optionally, add a comment explaining which patch you would like reviewed (if there are already other attached files), and explaining ''what'' your change does (as opposed to the ''why'' you want it done, which you should have put into the ticket's summary and description).
+    1. Hit "submit changes".
+  1. At this point, you need to wait for feedback.  If your patch is very good, very simple, and obviously correct, we may just apply it, but it is ''very unlikely'' that the first draft of a patch will be accepted as-is.  When a Twisted developer reviews your patch, they will re-assign the ticket to you; you can [http://twistedmatrix.com/trac/report/7 see the list of tickets assigned to you by clicking here].  Unfortunately, the time it takes us to deal with a ticket submitted for review is highly variable, and depends on how many other tickets are waiting review, the amount of free time that the Twisted core development team has, and how many resources we have available for [http://labs.twistedmatrix.com/ sponsored development].
+  1. When you do receive a review comment, attach a new patch (again un-assigning the ticket and adding the "review" keyword to it) which addresses that feedback.
+
+=== Getting Your Patch Accepted ===
 
 If you are interested in contributing to Twisted for the first time, consider working on an existing ticket rather than contributing a new feature.  Fixes for existing problems or implementations of already-requested features will generally take priority over new ideas.
 
-== Buildbot ==
+Make sure that you have written unit tests and docstrings for all code which has changed in your patch.  It works best if you use test-driven development to write your patch initially, and write your tests before your code.  (Believe me, if you write your tests after you write your code, we ''will'' know.  It's more obvious than you think.)
 
-After every commit to Twisted, the buildbot runs all the unit tests and reports [http://buildbot.twistedmatrix.com/ test results on several platforms].  Here is a page showing only the [http://buildbot.twistedmatrix.com/supported test results on supported platforms]. All tests on supported platforms always pass. Watch the buildbot. Because sometimes, the buildbot watches back.
+Run the full test suite ("`trial twisted`" on the command line) ''before'' submitting your patch, and fix any problems you discover.  If a reviewer notices failing tests, they may not give your code a deep look, and you may have to wait longer for a second review.
+
+(One minor caveat: some users may discover that their system is unusual and Twisted's test suite does not pass "out of the box".  If this is the case, just make sure that the ''same'' tests are failing for you in a pristine checkout of trunk and with your changes applied.  Then, in addition to submitting your patch, please let us know about the problem with the test suite!)
+
+Our docstrings are formatted as [http://epydoc.sourceforge.net/epytext.html Epytext].
+
+Familiarize yourself with [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/coding-standard.xhtml?format=raw the Twisted coding standard], and make sure your contribution adheres to it.
 
 == Development Process ==
 
@@ -24,7 +49,9 @@ Twisted uses same process as Divmod: [http://divmod.org/trac/wiki/UltimateQualit
 
 If you want to become a developer, it is important to understand that all your contributions (including those initial patches you send to the bug tracker) will have to be licenced under the [http://www.opensource.org/licenses/mit-license.php MIT licence].
 
-Read more [wiki:ContributingToTwistedLabs here].
+== Buildbot ==
+
+After every commit to Twisted, the buildbot runs all the unit tests and reports [http://buildbot.twistedmatrix.com/ test results on several platforms].  Here is a page showing only the [http://buildbot.twistedmatrix.com/supported test results on supported platforms]. All tests on supported platforms always pass. Watch the buildbot. Because sometimes, the buildbot watches back.
 
 == Win32 development ==
 
