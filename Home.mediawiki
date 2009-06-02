@@ -35,7 +35,7 @@
 
 <h1 id="ActNow:BeaSponsor">Twisted Needs Sponsors, 2009 Edition</h1>
 <p>
-It's a new year, and with it comes the need for additional sponsorship. The good news is, thanks to the <a href="http://twistedmatrix.com/trac/wiki/Twisted Software Foundation">Twisted Software Foundation</a>, your donations will directly contribute to the ongoing maintenance and development of Twisted. While we're very proud of our <a href="http://labs.twistedmatrix.com/2009/04/sponsorship-in-2009.html">track record so far</a>, we still need your help to continue that tradition of excellence.
+It's a new year, and with it comes the need for additional sponsorship. The good news is, thanks to the <a href="http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation">Twisted Software Foundation</a>, your donations will directly contribute to the ongoing maintenance and development of Twisted. While we're very proud of our <a href="http://labs.twistedmatrix.com/2009/04/sponsorship-in-2009.html">track record so far</a>, we still need your help to continue that tradition of excellence.
 </p>
 <p>
 We'd also like to thank all of last year's <a class="wiki" href="/trac/wiki/TSF/FoundingSponsors">Founding Sponsors</a>: Your generous contributions have not only funded Twisted development, but have been instrumental in getting our official foundation off the ground. We hope you'll be able to support our efforts this year as well!
@@ -92,9 +92,9 @@ More Useful Pointers:
   <div>
     <h3>Twisted Sponsors</h3>
 
-    <h4><a href="TwistedSoftwareFoundation">Become a 2009 Sponsor Today!</a></h4>
+    <h4><a href="/trac/wiki/TwistedSoftwareFoundation">Become a 2009 Sponsor Today!</a></h4>
 <div>
-Donations are <a href="TwistedSoftwareFoundation#Background">tax-deductible</a>.
+Donations are <a href="/trac/wiki/TwistedSoftwareFoundation#Background">tax-deductible</a>.
 
 <!-- BEGIN GOOGLE CHECKOUT GARBAGE -->
 <script type="text/javascript">
