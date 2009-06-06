@@ -1,0 +1,11 @@
+== Plaintext recovery when using CBC block cipher ==
+
+=== References ===
+
+  * http://openssh.org/txt/cbc.adv
+  * http://www.kb.cert.org/vuls/id/958563
+  * http://www.cpni.gov.uk/Docs/Vulnerability_Advisory_SSH.txt
+
+=== Relevance to Conch ===
+
+Both the Conch client and server support various CBC block ciphers.  However, they will also both prefer the CTR version of any particular block cipher (that is, AES256-CTR is preferred over AES256-CBC, AES128-CTR is preferred over AES128-CBC, etc).  Since cipher preference is ordered to group such pairs together, it is possible that the Conch client will select a CBC cipher when a server is offering some CTR cipher (for example, if a server offers `AES256-CBC,AES128-CTR` then the Conch client will select AES256-CBC, since it prefers that to either AES128-based cipher).  This seems to be an unpopular server configuration. ('''note''': is a man in the middle attack relevant here?  Can an attacker cause a downgrade?  Probably not a relevant degradation in security unless we were to disable CBC ''completely''.)
