@@ -8,11 +8,13 @@
 
 === Relevance to Conch ===
 
-Both the Conch client and server support various CBC block ciphers.  However, they will also both prefer the CTR version of any particular block cipher (that is, AES256-CTR is preferred over AES256-CBC, AES128-CTR is preferred over AES128-CBC, etc).  Since cipher preference is ordered to group such pairs together, it is possible that the Conch client will select a CBC cipher when a server is offering some CTR cipher (for example, if a server offers `AES256-CBC,AES128-CTR` then the Conch client will select AES256-CBC, since it prefers that to either AES128-based cipher).  This seems to be an unpopular server configuration. ('''note''': is a man in the middle attack relevant here?  Can an attacker cause a downgrade?  Probably not a relevant degradation in security unless we were to disable CBC ''completely''.)
+Both the Conch client and server support various CBC block ciphers.  However, they will also both prefer the CTR version of any particular block cipher (that is, AES256-CTR is preferred over AES256-CBC, AES128-CTR is preferred over AES128-CBC, etc).  Since cipher preference is ordered to group such pairs together, it is possible that the Conch client will select a CBC cipher when a server is offering some CTR cipher (for example, if a server offers `AES256-CBC,AES128-CTR` then the Conch client will select AES256-CBC, since it prefers that to either AES128-based cipher).  This seems to be an unpopular server configuration. ('''XXX''': is a man in the middle attack relevant here?  Can an attacker cause a downgrade?  Probably not a relevant degradation in security unless we were to disable CBC ''completely''.)
+
+There is a timing attack closely associated with this issue.  If an implementation closes the connection immediately upon detecting an invalid packet length or MAC, information about the plaintext may be leaked due to observable differences in the time at which the connection was closed ('''XXX''': is Conch vulnerable to this?).
 
 === Possible Changes ===
 
   1. Conch could be changed to prefer all non-CBC block ciphers to any CBC block ciphers.  This would minimize the possibility of a CBC cipher being used while retaining compatibility with implementations which only support CBC block ciphers.
-  1. Conch could be changed to not support CBC block ciphers at all, eliminating the possibility of this attack at the cost of removing interoperability with implementations only supporting CBC block ciphers ('''note''': I think it is possible to only support CBC and be compliant with the base SSHv2 RFC; is this right?)
+  1. Conch could be changed to not support CBC block ciphers at all, eliminating the possibility of this attack at the cost of removing interoperability with implementations only supporting CBC block ciphers ('''XXX''': I think it is possible to only support CBC and be compliant with the base SSHv2 RFC; is this right?)
 
 Each of these options applies to the default behavior of Conch.  It is easy to customize Conch to change the list of supported block ciphers, even on a per-connection basis.
