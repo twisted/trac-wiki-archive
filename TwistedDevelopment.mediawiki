@@ -41,7 +41,7 @@ Run the full test suite ("`trial twisted`" on the command line) ''before'' submi
 
 Our docstrings are formatted as [http://epydoc.sourceforge.net/epytext.html Epytext].
 
-Familiarize yourself with [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/coding-standard.xhtml?format=raw the Twisted coding standard], and make sure your contribution adheres to it.
+Familiarize yourself with [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/policy/coding-standard.xhtml?format=raw the Twisted coding standard], and make sure your contribution adheres to it.
 
 == Development Process ==
 
@@ -64,14 +64,14 @@ You might be interested in learning about tasks related to [wiki:SiteMaintenance
 == Policies ==
 This series of documents is designed for people who wish to contribute to the Twisted codebase.
 
- * [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/coding-standard.xhtml?format=raw Coding Standard]
- * [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/svn-dev.xhtml?format=raw Subversion Development]
- * [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/test-standard.xhtml?format=raw Unit Tests in Twisted]
- * [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/doc-standard.xhtml?format=raw HTML Documentation Standard]
- * [http://twistedmatrix.com/trac/browser/trunk/doc/development/policy/writing-standard.xhtml?format=raw Writing Standard]
- * [http://twistedmatrix.com/trac/browser/trunk/doc/development/naming.xhtml?format=raw Naming Conventions]
- * [http://twistedmatrix.com/trac/browser/trunk/doc/development/philosophy.xhtml?format=raw Philosophy]
- * [http://twistedmatrix.com/trac/browser/trunk/doc/development/security.xhtml?format=raw Security]
+ * [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/policy/coding-standard.xhtml?format=raw Coding Standard]
+ * [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/policy/svn-dev.xhtml?format=raw Subversion Development]
+ * [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/policy/test-standard.xhtml?format=raw Unit Tests in Twisted]
+ * [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/policy/doc-standard.xhtml?format=raw HTML Documentation Standard]
+ * [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/policy/writing-standard.xhtml?format=raw Writing Standard]
+ * [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/naming.xhtml?format=raw Naming Conventions]
+ * [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/philosophy.xhtml?format=raw Philosophy]
+ * [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/security.xhtml?format=raw Security]
 
 == Links and Resources ==
 
