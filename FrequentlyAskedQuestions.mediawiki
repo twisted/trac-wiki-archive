@@ -237,6 +237,10 @@ For a more complete discussion of the distinction between Unicode strings and sp
     * Dan Sugalski's [http://www.sidhe.org/~dan/blog/archives/000255.html What the heck is: A string];
     * Joel Spolsky's [http://www.joelonsoftware.com/articles/Unicode.html The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)].
 
+=== Why do I get a ''Permission denied'' error trying to write `.../site-packages/twisted/plugins/dropin.cache.new` when I use `twistd` or `trial` or some other Twisted program? ===
+
+Twisted's plugin system uses certain cache files to improve performance.  These cache files are automatically updated as necessary.  However, when a Twisted installation is used by processes without write permission to it (as is commonly the case for a site-wide installation), if this cache file is not up to date, attempts to rewrite it will result in this error.  The solution is for the administrator (whoever performed the site install) to generate the cache.  See the [http://twistedmatrix.com/projects/core/documentation/howto/plugin.html#auto3 Plugin Caching] section of the plugin documentation for details on how to regenerate this cache.
+
 
 === Why can't the Twisted's reactor be restarted? ===
 
