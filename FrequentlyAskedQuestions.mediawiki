@@ -52,7 +52,7 @@ In Debian versioning, 1.0.7rc1 is greater than 1.0.7. This means that if you ins
 
 === Why am I getting !ImportErrors for Twisted subpackages on OS X 10.5? ===
 
-OS X 10.5 comes with a partial installation of Twisted.  This version is found first by Python and will hide any other version of Twisted you install.  In order to use a different version of Twisted, you need to modify your `PYTHONPATH` environment variable so that the location of the alternate install is inspected first.
+OS X 10.5 comes with a partial installation of Twisted.  This version is found first by Python and will hide any other version of Twisted you install.  In order to use a different version of Twisted, you need to modify your `PYTHONPATH` environment variable so that the location of the alternate install (`/Library/Python/2.5/site-packages/`) is inspected first.
 
 === Why am I getting !ImportErrors for Twisted subpackages on my 64bit installation of RedHat/Fedora/CentOS? ===
 
