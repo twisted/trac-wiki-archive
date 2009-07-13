@@ -49,18 +49,6 @@ Twisted uses same process as Divmod: [http://divmod.org/trac/wiki/UltimateQualit
 
 If you want to become a developer, it is important to understand that all your contributions (including those initial patches you send to the bug tracker) will have to be licenced under the [http://www.opensource.org/licenses/mit-license.php MIT licence].
 
-== Buildbot ==
-
-After every commit to Twisted, the buildbot runs all the unit tests and reports [http://buildbot.twistedmatrix.com/ test results on several platforms].  Here is a page showing only the [http://buildbot.twistedmatrix.com/supported test results on supported platforms]. All tests on supported platforms always pass. Watch the buildbot. Because sometimes, the buildbot watches back.
-
-== Win32 development ==
-
-If you want to hack Twisted or just use Twisted SVN on Win32, see Ying Li's [http://cyli.livejournal.com/22274.html short tutorial on setting up a Twisted win32 development environment] (and a [http://cyli.livejournal.com/22921.html small addendum on paths]).
-
-== Twisted Maintenance ==
-
-You might be interested in learning about tasks related to [wiki:SiteMaintenance maintaining this website] or for [wiki:ReleaseProcedure releasing Twisted].
-
 == Policies ==
 This series of documents is designed for people who wish to contribute to the Twisted codebase.
 
@@ -72,6 +60,18 @@ This series of documents is designed for people who wish to contribute to the Tw
  * [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/naming.xhtml?format=raw Naming Conventions]
  * [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/philosophy.xhtml?format=raw Philosophy]
  * [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/security.xhtml?format=raw Security]
+
+== Buildbot ==
+
+After every commit to Twisted, the buildbot runs all the unit tests and reports [http://buildbot.twistedmatrix.com/ test results on several platforms].  Here is a page showing only the [http://buildbot.twistedmatrix.com/supported test results on supported platforms]. All tests on supported platforms always pass. Watch the buildbot. Because sometimes, the buildbot watches back.
+
+== Win32 development ==
+
+If you want to hack Twisted or just use Twisted SVN on Win32, see Ying Li's [http://cyli.livejournal.com/22274.html short tutorial on setting up a Twisted win32 development environment] (and a [http://cyli.livejournal.com/22921.html small addendum on paths]).
+
+== Twisted Maintenance ==
+
+You might be interested in learning about tasks related to [wiki:SiteMaintenance maintaining this website] or for [wiki:ReleaseProcedure releasing Twisted].
 
 == Links and Resources ==
 
