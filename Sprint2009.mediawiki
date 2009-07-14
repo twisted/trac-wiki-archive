@@ -1,7 +1,5 @@
 = Twisted Sprint 2009 =
 
-'''All details here are tentative. They will be made final by August 7, 2009.'''
-
  * '''Where:''' Boston
  * '''When:''' September 28th - October 2nd
  * '''Coordinator:''' jml.
