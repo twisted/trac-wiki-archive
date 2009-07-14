@@ -1,0 +1,44 @@
+= Twisted Sprint 2009 =
+
+'''All details here are tentative. They will be made final by August 10, 2009.'''
+
+ * '''Where:''' Boston
+ * '''When:''' September 28th - October 2nd
+ * '''Coordinator:''' jml
+
+== Location? ==
+
+We'd like the sprint to be in a place that promises the largest attendance. A rough survey suggests that place is either Boston or San Francisco.
+
+ * Boston (0)
+ * San Francisco (0)
+
+Please increment the number in parentheses if you would definitely go to the sprint if it were in that city. Increment both if you can make to either city.
+
+Note that the city with the highest number might not be the final location of the sprint -- there are many factors, these numbers are one of them.
+
+== Date? ==
+
+To be worth it at all, the sprint should be a week long. However, perhaps it should start on a Wednesday on go into a weekend in order to give more people a chance to attend. Thoughts?
+
+== Venue ==
+
+To be decided.
+
+Need a volunteer to organize this.
+
+== Goals? ==
+
+ * Under 1000 Open Tickets
+ * General twistd improvements, logging in particular
+ * conch bugs fixing
+ * Any bugs that will make some buildbot slaves green (and kill intermittent failures)
+ * Maybe twisted web client?
+
+== Agenda ==
+
+ * glyph says, "Even more specifically: I recommend that we dedicate at least one day of the sprint purely to triage."
+
+== Attendance ==
+
+ * Name (definite|tentative)
