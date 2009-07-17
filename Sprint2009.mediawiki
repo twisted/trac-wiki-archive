@@ -39,6 +39,7 @@ Need a volunteer to organize this.
  * Thomas Hervé (tentative; yes)
  * Glyph Lefkowitz (definite; no)
  * Itamar Shtull-Trauring (definite; no)
+ * Jean-Paul Calderone (tentative; no)
 
 
 == Non-attendance ==
