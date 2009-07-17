@@ -29,8 +29,17 @@ Need a volunteer to organize this.
 == Attendance ==
 
  * Name (definite|tentative; need travel assistance?)
- * Jonathan Lange (tentative; Yes)
+ * Jonathan Lange (tentative; yes)
  * Jamu Kakar (tentative; probably not)
+ * Paul Swartz (tentative; no; Wed-Fri only)
+ * Thijs Triemstra (tentative; ?)
+ * Steve Steiner (definite; no)
+ * Raymond Cote (tentative; no; "a day or two")
+ * Michael Hudson (tentative; yes)
+ * Thomas Hervé (tentative; yes)
+ * Glyph Lefkowitz (definite; no)
+ * Itamar Shtull-Trauring (definite; no)
+
 
 == Non-attendance ==
 
