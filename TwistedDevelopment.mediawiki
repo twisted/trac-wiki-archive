@@ -9,6 +9,9 @@ You can get Twisted's source code here:
 svn://svn.twistedmatrix.com/svn/Twisted/trunk
 }}}
 
+
+(Bazaar access is also available. Instructions are at BazaarMirror.)
+
 === Submitting a Patch ===
 
 Here's a quick step-by-step guide to getting from an idea for an improvement to Twisted to something that we can integrate.  First, I'll explain just the mechanics of getting your code into review, not what the code itself should do.  If you actually want us to be able to use your code, you will also want to read the section below on getting your patch accepted, too!
