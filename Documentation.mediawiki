@@ -27,6 +27,6 @@
 
 == Books == 
 
- * [http://www.amazon.com/exec/obidos/ASIN/0596100329/httpitamorg-20?creative=327641&camp=14573&link_code=as1 Twisted Network Programming Essentials] by Abe Fetting, published by O'Reilly.
+ * [http://www.amazon.com/exec/obidos/ASIN/0596100329/httpitamorg-20?creative=327641&camp=14573&link_code=as1 Twisted Network Programming Essentials] by Abe Fettig, published by O'Reilly.
  * [http://www.amazon.com/exec/obidos/ASIN/1590593715/httpitamorg-20?creative=327641&camp=14573&link_code=as1 Foundations of Python Network Programming] also covers the use of Twisted to some extent.
  * [http://www.amazon.com/exec/obidos/ASIN/1584502584/httpitamorg-20?creative=327641&camp=14573&link_code=as1 Game Programming With Python] covers Twisted in the chapters on programming networked games.
