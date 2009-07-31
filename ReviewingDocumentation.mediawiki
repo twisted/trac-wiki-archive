@@ -71,3 +71,6 @@ This produces a folder called `apidocs` in your current working directory. You c
 `file:///path/to/apidocs/index.html`
 
 If everything looks good, submit a patch as described [wiki:TwistedDevelopment#SubmittingaPatch here]
+
+=== More ===
+see also [wiki:DocumentationAnalysis DocumentationAnalysis] from an old Twisted documentation sprint.
