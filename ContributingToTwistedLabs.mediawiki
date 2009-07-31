@@ -6,7 +6,7 @@ There are many ways individuals and organizations can make contributions to Twis
  * Perform code reviews (see below)
  * Submit bug reports (you must first be [/trac/register registered])
  * Provide patches (see below)
- * [wiki:DocumentationAnalysis Review documentation]
+ * [wiki:ReviewingDocumentation Review and add documentation]
  * Provide technical support (answer questions on [wiki:TwistedCommunity IRC and the mail lists])
 
 == Documentation ==
