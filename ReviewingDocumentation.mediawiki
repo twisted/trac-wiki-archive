@@ -44,6 +44,20 @@ If everything looks good, submit a patch as described [wiki:TwistedDevelopment#S
 
 The API docs are generated from the doc strings in the code by [http://codespeak.net/~mwh/pydoctor/ pydoctor], so to update what will be displayed in the API docs just update the doc strings. After making your changes, generate a test set of API docs to preview how they will look.
 
+1. check out a copy of the Twisted svn repository
+
+`svn checkout svn://svn.twistedmatrix.com/svn/Twisted/trunk ~/my-code-dir/Twisted/trunk`
+
+2. make sure you have the latest version of the code
+
+`cd ~/my-code-dir/Twisted/trunk`[[BR]]
+
+`svn update`
+
+3. Edit away! Be sure to adhere to the docstring guidelines in the [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/policy/coding-standard.xhtml?format=raw Twisted coding standard].
+
+4. Preview your changes
+
 To generate API docs you need to have installed: 
  * [http://codespeak.net/~mwh/pydoctor/ pydoctor] - API documentation tool for Python written to be used with Twisted
  * [http://epydoc.sourceforge.net/ Epydoc] - an API documentation tool on which pydoctor depends
