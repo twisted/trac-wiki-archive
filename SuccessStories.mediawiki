@@ -7,6 +7,24 @@ We developed custom Flash video software, the Python Media Server, which uses Tw
 
 -- Kyle Vogt, VP Engineering, Justin.tv, Inc.
 
+= [http://www.tweetdeck.com TweetDeck] =
+
+!TweetDeck aims to build a browser for the
+real-time web. Right now we're the biggest Twitter client after the
+website itself, and are rolling out full integration with Facebook and
+other services. With !TweetDeck you can organize real-time streams of
+information into a convenient grid format that allows easy digestion.
+
+We use Twisted to power our backend services, specifically our new
+accounts system and sync functionality we introduced recently
+(http://tweetdeck.com/beta/features/take-tweetdeck-with-you/). We've
+deployed our Twisted services over the Amazon cloud - specifically, we
+use EC2 and SimpleDB. Writing a REST api service used by hundreds of
+thousands active users was a snap with Twisted. We'll continue to use
+Twisted as we broaden our server-side processing goals.
+
+-- Reza Lotun, Software Engineer, !TweetDeck, Inc.
+
 = [http://www.thusa.co.za/ Thusa Business Support] =
 
 Thusa is a solution provider for many businesses in South Africa. This requires tracking and maintenance of many Linux based servers deployed in a wide range of locations. 
