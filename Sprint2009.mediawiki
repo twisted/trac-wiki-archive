@@ -36,7 +36,6 @@ Need a volunteer to organize this.
  * Steve Steiner (definite; no)
  * Raymond Cote (tentative; no; "a day or two")
  * Michael Hudson (tentative; yes)
- * Thomas Hervé (tentative; yes)
  * Glyph Lefkowitz (definite; no)
  * Itamar Shtull-Trauring (definite; no)
  * Jean-Paul Calderone (tentative; no)
@@ -47,3 +46,4 @@ Need a volunteer to organize this.
 
 If you definitely cannot attend, please list your name here.
 
+ * Thomas Hervé
