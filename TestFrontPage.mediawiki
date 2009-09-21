@@ -1,45 +1,49 @@
 {{{
 #!html
 
-<table width="100%" border="0" cellpadding="20">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
 
   <tr>
     <!-- begin left column/-->
-    <td valign="top">
+    <td valign="top" width="273">
 
-  <div id="download_top">
+  <div id="download_top" style="position: relative; left: -30px;">
   &nbsp;
   </div>
-  <div id="download" style="color: white">
+  <div id="download" style="color: white;position: relative; left: -30px;">
     Source:<br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted-8.0.1.tar.bz2#md5=1ba5bb530356a867cfee35e65e58a43c">Twisted 8.0.1 tar</a><br />
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.2/Twisted-8.2.0.tar.bz2#md5=c85f151999df3ecf04c49a781b4438d2">Twisted 8.2.0 tar</a><br />
     Win32:<br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted_NoDocs-8.0.1.win32-py2.4.exe">Twisted 8.0.1 for Python 2.4</a><br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted_NoDocs-8.0.1.win32-py2.5.exe">Twisted 8.0.1 for Python 2.5</a><br/>
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.2/Twisted_NoDocs-8.2.0.win32-py2.4.exe">Twisted 8.2.0 for Python 2.4</a><br/>
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.2/Twisted_NoDocs-8.2.0.win32-py2.5.exe">Twisted 8.2.0 for Python 2.5</a><br/>
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.2/Twisted_NoDocs-8.2.0.win32-py2.6.exe">Twisted 8.2.0 for Python 2.6</a><br/>
     Mac OS X 10.5:<br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.0/Twisted-8.0.1_py2.5_osx10.5.pkg">Twisted 8.0.1</a>
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.2/Twisted-8.2.0_py2.5_osx10.5.dmg">Twisted 8.2.0 for Python 2.5</a><br/>
+    And More:<br/>
+    <a class="wiki" href="/trac/wiki/Downloads">Other Downloads</a>
   </div>
-  <div id="download_bottom">
+  <div id="download_bottom" style="position: relative; left: -30px;">
   &nbsp;
   </div>
 
     <h2>The Twisted Book</h2>
 <a href="http://www.amazon.com/exec/obidos/ASIN/0596100329/httpitamorg-20?creative=327641&camp=14573&link_code=as1"><img align="center" src="http://www.oreilly.com/catalog/covers/twistedadn.s.gif" /></a>
-
-
-    <!-- end left column /-->
+    <!-- end left column -->
     </td>
 
 
-    <!-- begin center column/-->
-    <td valign="top">
+    <!-- begin center column -->
+    <td valign="top" class="centercol" style="padding-left: 10px; padding-right: 15px;">
 
-<h1 id="ActNow:BeaFoundingSponsor"><i>Act Now: Be a Founding Sponsor</i></h1>
+<h1 id="ActNow:BeaSponsor">Twisted Needs Sponsors, 2009 Edition</h1>
 <p>
-Do you want your name, or your company's name, to be immortalized as one of the first sponsors of the Twisted project?  <a class="wiki" href="/trac/wiki/TwistedSoftwareFoundation">Find out about the benefits of sponsorship today!</a>
+It's a new year, and with it comes the need for additional sponsorship. The good news is, thanks to the <a href="http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation">Twisted Software Foundation</a>, your donations will directly contribute to the ongoing maintenance and development of Twisted. While we're very proud of our <a href="http://labs.twistedmatrix.com/2009/04/sponsorship-in-2009.html">track record so far</a>, we still need your help to continue that tradition of excellence.
 </p>
-<h1 id="WhatisTwisted">What is Twisted?</h1>
+<p>
+We'd also like to thank all of last year's <a class="wiki" href="/trac/wiki/TSF/FoundingSponsors">Founding Sponsors</a>: Your generous contributions have not only funded Twisted development, but have been instrumental in getting our official foundation off the ground. We hope you'll be able to support our efforts this year as well!
+</p>
 
+<h1 id="WhatisTwisted">What is Twisted?</h1>
 <p>
 <a class="wiki" href="/trac/wiki/TwistedProject">Twisted</a> is an event-driven networking engine written in Python and licensed under the <a class="ext-link" href="http://www.opensource.org/licenses/mit-license.php"><span class="icon">MIT license</span></a>.
 </p>
@@ -76,50 +80,23 @@ More Useful Pointers:
 </li><li><a class="wiki" href="/trac/wiki/Windows">Windows</a> We're especially seeking resources to help improve Twisted on Windows.
 </li></ul>
 
-<p>Twisted is supported by
-<a href="http://www.divmod.org/trac"><img src="http://divmod.com/ximages/anonymous_logo.png" border="0" align="center" alt="the Divmod Corporation"/></a>
-</p>
-
+<br/>
+<br/>
+<br/>
 
     <!-- end center column /-->
     </td>
 
 
     <!-- begin right column/-->
-    <td valign="top">
+    <td valign="top" width="200">
 
   <div>
     <h3>Twisted Sponsors</h3>
-    <h4>Gold</h4>
-<a href="http://zenoss.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/zenoss.gif?format=raw" /></a><br/>
 
-    <h4>Silver</h4>
-<a href="http://tummy.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/tummy.png?format=raw" /></a><br/>
-<!-- DCIT: Donated 2008-03-28 -->
-<a href="http://www.dcit.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/dcitlogo.png?format=raw" /></a><br/>
-<a href="http://sun.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/sun.png?format=raw" /></a><br/>
-<!-- Security Metrics: Not sure when they donated -->
-<a href="https://www.securitymetrics.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/securitymetrics.png?format=raw" /></a><br />
-<!-- OnResolve (tnelson): Donated 2008-04-04 -->
-<a href="http://www.onresolve.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/onresolve3.png?format=raw" /></a><br />
-
-
-    <h4>Bronze</h4>
-<a href="http://allmydata.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/allmydata.jpg?format=raw" /></a><br/>
-<!-- Holden Web: Donated 2008-03-19 -->
-<a href="http://holdenweb.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/HoldenWebTSF.png?format=raw" /></a><br/>
-
-<a href="http://hydralabs.com"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/hydra.png?format=raw" /></a><br/>
-
-<!-- Magnetk: Donated 2008-04-10 -->
-<a href="http://magnetk.com/expandrive"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/ExpanDrive.gif?format=raw" /></a><br/>
-
-
-  </div>
-
-  <div id="donate">
-    <h3>Contributing</h3>
-Want to help Twisted, but don't have any spare time? If you appreciate Twisted and want to help the community and future development, consider a <a href="http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation">tax-deductible</a> monetary donation.
+    <h4><a href="/trac/wiki/TwistedSoftwareFoundation">Become a 2009 Sponsor Today!</a></h4>
+<div>
+Donations are <a href="/trac/wiki/TwistedSoftwareFoundation#Background">tax-deductible</a>.
 
 <!-- BEGIN GOOGLE CHECKOUT GARBAGE -->
 <script type="text/javascript">
@@ -178,12 +155,43 @@ value="-----BEGIN PKCS7-----MIIH2QYJKoZIhvcNAQcEoIIHyjCCB8YCAQExggEwMIIBLAIBADCB
 
             </td>
         </tr>
-        <tr>
-            <td colspan="2">
-               <i>Note that PayPal charges us a transaction fee; if possible, please use Google Checkout instead.</i>
-            </td>
-        </tr>
     </table>
+</div>
+
+    <h4>Your Logo Here</h4>
+You can use the form above both for both personal donations and corporate sponsorships; for any donation above <a href="http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation#SponsorshipLevels">the Bronze level</a>, we will display your logo here on the front page. 
+<!-- 
+    <h4>Diamond</h4>
+<a href="http://www.itasoftware.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/ITA_logo_160x80.jpg?format=raw" /></a><br/>
+-->
+
+<!-- # Why's this here?
+    <h4>Platinum</h4>
+
+<a href="http://microsoft.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/microsoft.png?format=raw" /></a> <br/>
+-->
+
+<!--
+    <h4>Gold</h4>
+-->
+    <h4>Silver</h4>
+<a href="http://www.appropriatesolutions.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/Appropriate-Solutions-Inc.gif?format=raw" /></a>
+<a href="http://www.zenoss.org/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/zenoss.2.png?format=raw" /></a>
+<!-- 
+
+Removed Google pending our figuring out whether they actually sponsored or not.
+
+<a href="http://code.google.com/opensource/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/google.png?format=raw" /></a><br/>
+
+-->
+
+<!--
+    <h4>Bronze</h4>
+-->
+
+  </div>
+
+
 
 
     <!-- end right column /-->
