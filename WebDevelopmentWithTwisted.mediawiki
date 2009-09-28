@@ -8,7 +8,7 @@ For an explanation of what's going on in the ''future'' of the web with Twisted,
 
 There are a number of packages in and around Twisted that do things with the web:
 
- * [wiki:TwistedWeb Twisted Web] provides a simple, stable resource publishing API, on top of an HTTP/1.0 server implementation with some HTTP/1.1 features.  Twisted Web is extremely stable.
+ * [wiki:TwistedWeb Twisted Web] provides a simple, stable resource publishing API, on top of an HTTP/1.0 server implementation with some HTTP/1.1 features.  '''Twisted Web is extremely stable.'''
    * Several deprecated templating toolkits included with twisted.web, such as "woven" and "twisted web widgets".  Don't use these!  They're only there for compatibility.
  * [wiki:TwistedWeb2 Twisted Web 2] was (emphasis past tense!) a complete re-write of [wiki:TwistedWeb Twisted Web], with a new HTTP/1.1 implementation and a new resource publishing model.  We decided this was a mistake and development focus has shifted to porting the best parts of Twisted Web 2 back to Twisted Web where existing applications will benefit from them.
  * [http://divmod.org/trac/wiki/DivmodNevow Divmod Nevow] is a templating toolkit that provides its own resource model and simple application server API.  It requires Twisted, is fully integrated with the Twisted reactor, provides mechanisms for asynchronous page rendering, and an event-driven [http://en.wikipedia.org/wiki/COMET_(programming) COMET]/AJAX implementation called [http://divmod.org/trac/wiki/DivmodNevow/Athena "Nevow Athena"].  Nevow uses Twisted Web, but provides its own Request and resource model on top of it.
@@ -22,11 +22,11 @@ You can always ask about these kinds of issues on the [http://twistedmatrix.com/
 
 === I want a web UI for my existing Twisted networking application ===
 
-Assuming that your networking application has its own data persistence, or does not require persistence, and needs a web-based control panel or monitoring UI, you probably want to use Nevow.  Nevow provides backwards compatibility between releases (as does Twisted Web, on which it is built), just like all Twisted projects.  It also provides a templating system  which makes implementing user interfaces that integrate with the event loop much easier than coding directly to the Twisted Web API.  Nevow also has support for the AJAX and COMET, via Nevow Athena.  Athena lets you take advantage of the event loop on multiple levels; you can push events from network triggers straight out to a web page.
+Assuming that your networking application has its own data persistence, or does not require persistence, and needs a web-based control panel or monitoring UI, you probably want to '''use Nevow'''.  Nevow provides backwards compatibility between releases (as does Twisted Web, on which it is built), just like all Twisted projects.  It also provides a templating system  which makes implementing user interfaces that integrate with the event loop much easier than coding directly to the Twisted Web API.  Nevow also has support for the AJAX and COMET, via Nevow Athena.  Athena lets you take advantage of the event loop on multiple levels; you can push events from network triggers straight out to a web page.
 
 === I want to write a REST / WS-* interface to my Twisted application ===
 
-In this case your best bet is to use Twisted Web directly.  You won't need XHTML templating, so Nevow buys you little extra.
+In this case your best bet is to '''use Twisted Web''' directly.  You won't need XHTML templating, so Nevow buys you little extra.
 
 Twisted Web already has basic support for XMLRPC and SOAP, and it is fairly straightforward to set up a web service.  Twisted Web also provides various facilities for being set up behind a reverse-proxy, which is the suggested mechanism to integrate your Twisted application with an existing site.
 
@@ -46,4 +46,4 @@ Zope 3 uses Twisted now, and the next version of Zope 2 will have experimental T
 
 === I want a container for my WSGI application ===
 
-In this case, use the Twisted Web 8.2 WSGI module (`twistd web --wsgi=application`).
+In this case, '''use the Twisted Web 8.2 WSGI module''' (`twistd web --wsgi=application`).
