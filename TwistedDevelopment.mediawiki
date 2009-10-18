@@ -62,7 +62,7 @@ This series of documents is designed for people who wish to contribute to the Tw
  * [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/policy/writing-standard.xhtml?format=raw Writing Standard]
  * [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/naming.xhtml?format=raw Naming Conventions]
  * [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/philosophy.xhtml?format=raw Philosophy]
- * [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/security.xhtml?format=raw Security]
+ * [wiki:Security Security]
 
 == Buildbot ==
 
