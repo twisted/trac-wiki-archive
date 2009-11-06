@@ -14,6 +14,7 @@ Twisted is used by many open-source, academic and commercial projects. Got a suc
  * [http://scrapy.org/ Scrapy] - a screen scraping and web crawling framework, used to crawl websites and extract structured data from their pages.
 
 = Applications =
+ * [http://your.gridspy.co.nz/powertech Gridspy] - live power monitoring and analysis
  * [http://allmydata.org allmydata.org "Tahoe"] - a secure, decentralized, fault-tolerant filesystem.
  * [http://www.dohop.com dohop.com] - a flight planning web site which searches many other flight databases.
  * [http://www.bittorrent.com BitTorrent] - a peer-to-peer file sharing program.
