@@ -52,6 +52,14 @@ Twisted uses same process as Divmod: [http://divmod.org/trac/wiki/UltimateQualit
 
 If you want to become a developer, it is important to understand that all your contributions (including those initial patches you send to the bug tracker) will have to be licenced under the [http://www.opensource.org/licenses/mit-license.php MIT licence].
 
+=== Filing Tickets ===
+
+As [http://divmod.org/trac/wiki/UltimateQualityDevelopmentSystem The Ultimate Quality Development System] mentions, all changes require a ticket.  A Twisted ticket can be of one of three types.
+
+  * Enhancements are used for feature additions.  These typically take the form of a new API or an expansion of an existing API.  Enhancement tickets should clearly describe the desired feature.  The more well specified a feature is, the more likely it is to be implemented (and importantly, the more likely it is that what is implemented will actually be what the reporter wanted!) and the easier it is to implement.  Remember that the ticket is possibly the only persistent record of the feature request.  If it is not self-contained and sufficiently detailed, then it will likely fail to communicate the reporter's idea, diminishing its value (possibly all the way down to zero).
+  * Defects are used to track bugs in existing APIs.  Defect tickets are easier to specify than enhancements.  A defect should briefly describe the problem, but the bulk of the ticket should be a runnable program (ideally in the form of a unit test) which demonstrates the bug.
+  * Regressions are similar to defects, but are for bugs which are introduced into APIs in newer releases of Twisted.  Like defect tickets, regression tickets should have a runnable program attached to demonstrate the problem.
+
 == Policies ==
 This series of documents is designed for people who wish to contribute to the Twisted codebase.
 
