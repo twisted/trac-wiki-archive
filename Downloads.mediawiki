@@ -48,16 +48,16 @@ To checkout code from the repository, use:
 
 You probably don't want these unless you have special considerations (note: TwistedWeb2 listed here is not in the integrated tarball mentioned above):
 
- * [http://tmrc.mit.edu/mirror/twisted/Core/9.0/TwistedCore-9.0.0.tar.bz2 Twisted Core] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Conch/9.0/TwistedConch-9.0.0.tar.bz2 Twisted Conch] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/conch/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Web/9.0/TwistedWeb-9.0.0.tar.bz2 Twisted Web] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/web/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Web2/8.1/TwistedWeb2-8.1.0.tar.bz2 Twisted Web2] - 8.1.0 ([source:/tags/releases/twisted-8.1.0/twisted/web2/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Mail/9.0/TwistedMail-9.0.0.tar.bz2 Twisted Mail] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/mail/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Names/9.0/TwistedNames-9.0.0.tar.bz2 Twisted Names] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/names/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/News/9.0/TwistedNews-9.0.0.tar.bz2 Twisted News] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/news/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Words/9.0/TwistedWords-9.0.0.tar.bz2 Twisted Words] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/words/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Lore/9.0/TwistedLore-9.0.0.tar.bz2 Twisted Lore] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/lore/topfiles/NEWS?format=raw Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Runner/9.0/TwistedRunner-9.0.0.tar.bz2 Twisted Runner] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/runner/topfiles/NEWS?format=raw Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Core/9.0/TwistedCore-9.0.0.tar.bz2 Twisted Core] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Conch/9.0/TwistedConch-9.0.0.tar.bz2 Twisted Conch] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/conch/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Web/9.0/TwistedWeb-9.0.0.tar.bz2 Twisted Web] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/web/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Web2/8.1/TwistedWeb2-8.1.0.tar.bz2 Twisted Web2] - 8.1.0 ([source:/tags/releases/twisted-8.1.0/twisted/web2/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Mail/9.0/TwistedMail-9.0.0.tar.bz2 Twisted Mail] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/mail/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Names/9.0/TwistedNames-9.0.0.tar.bz2 Twisted Names] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/names/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/News/9.0/TwistedNews-9.0.0.tar.bz2 Twisted News] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/news/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Words/9.0/TwistedWords-9.0.0.tar.bz2 Twisted Words] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/words/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Lore/9.0/TwistedLore-9.0.0.tar.bz2 Twisted Lore] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/lore/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Runner/9.0/TwistedRunner-9.0.0.tar.bz2 Twisted Runner] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/runner/topfiles/NEWS Release notes])
 
 == Signed MD5 Sums ==
 
