@@ -21,7 +21,7 @@ An Ubuntu PPA was setup on Launchpad to obtain more recent packages:
  * [http://tmrc.mit.edu/mirror/twisted/Twisted/8.2/Twisted_NoDocs-8.2.0.win32-py2.5.exe Twisted 8.2.0 for Python 2.5]
  * [http://tmrc.mit.edu/mirror/twisted/Twisted/8.2/Twisted_NoDocs-8.2.0.win32-py2.6.exe Twisted 8.2.0 for Python 2.6]
  * [http://tmrc.mit.edu/mirror/twisted/Dependencies/Win/pycrypto-2.0.1.win32-py2.5.exe PyCrypto 2.0.1 for Python 2.5] (needed by Conch)
- * [http://sourceforge.net/project/showfiles.php?group_id=31249 PyOpenSSL] (needed for SSL)
+ * [http://pypi.python.org/pypi/pyOpenSSL PyOpenSSL] (needed for SSL)
 
 
 == Mac OS X ==
