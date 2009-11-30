@@ -9,7 +9,7 @@ Both authors and reviewers should be intimately familiar with all requirements o
  * Code which follows the [/trac/browser/trunk/doc/core/development/policy/coding-standard.xhtml?format=raw coding standard].
  * 100% unit test coverage for all modified and new code (even if it didn't have tests before)
  * 100% API docstring coverage for all modified and new code (even if it didn't have docs before)
- * No backwards-incompatible changes
+ * No [CompatibilityPolicy backwards-incompatible] changes
  * Appropriate new or modified "End User" guide documentation (in the form of Lore-formatted xhtml files in the [source:trunk/doc doc/] directory)
  * A file in all relevant "topfiles" directories describing changes which affect users (See [#Newsfiles below])
 
@@ -54,12 +54,23 @@ Fixes: #&lt;ticket number&gt;<br />
 
 === News files ===
 
-Changes must be accompanied by an entry in at least one `topfiles` directory (eg [source:trunk/twisted/topfiles/] or [source:trunk/twisted/names/topfiles/]).  This policy allows [source:/trunk/NEWS news files] for releases to be generated automatically.  See [http://bazaar.launchpad.net/~exarkun/twisted-trac-integration/trunk/annotate/head%3A/svn-hooks/enforcenews.py enforcenews.py] for the svn pre-commit hook which enforces this policy.  The entry must be a filed named `<ticket number>.<change type>`.  The contents of the file must be a short (roughly one sentence) description of the change suitable for use in the release news file.`<ticket number>` is replaced by the ticket which is being resolved by the change (if multiple tickets are resolved, multiple files with the same contents should be added).  `<change type>` is replaced by one of the following literal strings:
+It is now up to the authors of individual changes to write high-level descriptions for their changes. These descriptions will be aggregated into the release notes distributed with Twisted releases. If we just let each author add to the NEWS files on every commit, though, we would run into lots of spurious conflicts. To avoid this, we have come up with a scheme involving separate files for each change.
 
-    * `feature` - for tickets which are adding a new feature.
-    * `bugfix` - for tickets which are fixing a bug.
-    * `removal` - for tickets which are deprecating something or removing something which was already deprecated.
-    * `misc` - for tickets which are very minor and not worth summarizing outside of the svn changelog.  These may be empty (their contents will be ignored).
+Changes must be accompanied by an entry in at least one `topfiles` directory (eg [source:trunk/twisted/topfiles/] or [source:trunk/twisted/names/topfiles/]). The entry must be a file named `<ticket number>.<change type>`.  `<ticket number>` is replaced by the ticket number which is being resolved by the change (if multiple tickets are resolved, multiple files with the same contents should be added).  `<change type>` is replaced by one of the following literal strings:
+ * `feature` - for tickets which are adding a new feature.
+ * `bugfix` - for tickets which are fixing a bug.
+ * `removal` - for tickets which are deprecating something or removing something which was already deprecated.
+ * `misc` - for tickets which are very minor and not worth summarizing outside of the svn changelog.  These may be empty (their contents will be ignored).
+
+The entry should contain a high-level description of the change suitable for end users. Generally, the grammatical subject of the sentence should be a Python object, and the verb should be something that the object does, prefixed with "now". Here's an example:
+
+{{{
+twisted.protocols.amp now raises InvalidSignature when bad arguments are passed to Command.makeArguments
+}}}
+
+You don't need to worry about newlines in the file; the contents will be rewrapped when added to the NEWS files.
+
+See [http://bazaar.launchpad.net/~exarkun/twisted-trac-integration/trunk/annotate/head%3A/svn-hooks/enforcenews.py enforcenews.py] for the svn pre-commit hook which enforces this policy. 
 
 === Filing bugs and writing review requests ===
 
@@ -92,7 +103,7 @@ Here are some extra things to consider while reviewing a change:
 
 === The commit message ===
 
-Several tools exist which parse commit messages to trunk, so the ''Author'', ''Reviewer'', and ''Fixes'' lines should conform to this format exactly.  Multiple ''Fixes'' lines will close multiple tickets.  ''Refs'' may also be used to attach the commit message to another ticket which is not being closed.  The commit message should also describe the change being made in a modest amount of detail.  This should be detailed enough for someone doing a release to formulate a changelog entry.
+Several tools exist which parse commit messages to trunk, so the ''Author'', ''Reviewer'', and ''Fixes'' lines should conform to this format exactly.  Multiple ''Fixes'' lines will close multiple tickets.  ''Refs'' may also be used to attach the commit message to another ticket which is not being closed.  The commit message should also describe the change being made in a modest amount of detail.
 
 === Reverting a change ===
 
