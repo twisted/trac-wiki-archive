@@ -61,34 +61,9 @@ You probably don't want these unless you have special considerations (note: Twis
 
 == Signed MD5 Sums ==
 
+md5 sums of the 9.0.0 release are [http://tmrc.mit.edu/mirror/twisted/twisted-9.0.0-md5sums.txt here].
+
 md5 sums of the 8.2.0 release are [http://tmrc.mit.edu/mirror/twisted/twisted-8.2.0-md5sums.txt here].
 
+md5 sums of the 8.1.0 release are [http://tmrc.mit.edu/mirror/twisted/twisted-8.1.0-md5sums.txt here].
 
-Here are some md5sums for Twisted 8.1.0:
-
-{{{
-#!html
-<pre>
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-&nbsp;
-e746618618ba93f707f7725899e141a9  Conch/8.1/TwistedConch-8.1.0.tar.bz2
-b6f766c7512d342be1844eeee974031d  Core/8.1/TwistedCore-8.1.0.tar.bz2
-ec7226b88218586ec1d5c3b3624376b7  Lore/8.1/TwistedLore-8.1.0.tar.bz2
-b471434356da5cdfb04dbe38802425ef  Mail/8.1/TwistedMail-8.1.0.tar.bz2
-e5f49fc23bef015484dbd025bf835611  Names/8.1/TwistedNames-8.1.0.tar.bz2
-25849ad7d4aa8e516ca486986109eba0  News/8.1/TwistedNews-8.1.0.tar.bz2
-a575f29ead4cc02c54e9061d0e6ac7c3  Twisted/8.1/Twisted-8.1.0.tar.bz2
-e34b48edf6fef075bd41ddbd215aed32  Web2/8.1/TwistedWeb2-8.1.0.tar.bz2
-0710b8976f64bec768bb5218ab1802c0  Web/8.1/TwistedWeb-8.1.0.tar.bz2
-40cecdc6d58efefdb02b50961bb9a381  Words/8.1/TwistedWords-8.1.0.tar.bz2
-8dcc0f4cbb0621b761ef67aae73051a8  Runner/8.0/TwistedRunner-8.0.0.tar.bz2
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
-&nbsp;
-iD8DBQFIMIr7zG3xEdDSIIgRAsPeAJ9g9xkYVWsFcErBD6emCXU2dPZmmACgivRD
-BmDZi6u6pYGo2aQvMCGWfcA=
-=r1Ja
------END PGP SIGNATURE-----
-</pre>
-}}}
