@@ -68,10 +68,10 @@ Tickets should be described well enough that the change is already justified and
 === Who can review? ===
 
 Changes must be reviewed by a developer other than the author of the changes. If changes are paired on, a third party must review them.  If changes constitute the work of several people who worked independently, a non-author must review them.
- 
-=== How to be a good reviewer ===
 
 A reviewer need not necessarily be familiar with the specific area of Twisted being changed, but he or she should feel confident in his or her abilities to spot problems in the change.
+ 
+=== How to be a good reviewer ===
 
 First, make sure all of the obvious things are accounted for. Check the "Things your branch or patch must contain" list above, and make sure each point applies to the branch.
  
