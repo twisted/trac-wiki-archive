@@ -1,51 +1,40 @@
 = Twisted Code Review Process =
 
-The post-development, pre-commit process Twisted has adopted is this:
- 
- * Commits to [source:trunk trunk/] must be the result of the review process outlined below. The only exception to this is the [source:trunk/doc/fun/Twisted.Quotes Twisted.Quotes] file.  There are no other exceptions.
- 
- * Changes to Twisted must be accompanied by a ticket in the tracker.
+All commits to Twisted's trunk must follow this review process. The only exception is for the [source:trunk/doc/fun/Twisted.Quotes Twisted Quotes] file. There are no other exceptions!
 
- * Changes must be accompanied by an entry in at least one `topfiles` directory (eg [source:trunk/twisted/topfiles/] or [source:trunk/twisted/names/topfiles/]).  This policy allows news files for releases to be generated automatically.  See [http://bazaar.launchpad.net/~exarkun/twisted-trac-integration/trunk/annotate/head%3A/svn-hooks/enforcenews.py enforcenews.py] for the svn pre-commit hook which enforces this policy.  The entry must be a filed named `<ticket number>.<change type>`.  The contents of the file must be a short (roughly one sentence) description of the change suitable for use in the release news file.`<ticket number>` is replaced by the ticket which is being resolved by the change (if multiple tickets are resolved, multiple files with the same contents should be added).  `<change type>` is replaced by one of the following literal strings:
-    * `feature` - for tickets which are adding a new feature.
-    * `bugfix` - for tickets which are fixing a bug.
-    * `removal` - for tickets which are deprecating something or removing something which was already deprecated.
-    * `misc` - for tickets which are very minor and not worth summarizing outside of the svn changelog.  These may be empty (their contents will be ignored).
- 
- * Changes must be reviewed by a developer other than the author of the changes. If changes are paired on, a third party must review them.  If changes constitute the work of several people who worked independently, a non-author must review them.
- 
- * When a ticket becomes ready for review, the trac workflow for the developer is as follows:
-  1. Add {{{review}}} to the comma-separated keywords field
-  1. Change the owner to either no one or, if a particular developer is likely to review a branch or a particular developer's input is desired on the branch, that developer.  For the former case, when starting a review the reviewer should assign the ticket to themselves.
-  1. Comment on the ticket indicating anything it might be beneficial for the reviewer to know.  Tickets should be described well enough that the change is already justified and the new code should be easy enough to read that further explanations aren't necessary to understand it, but sometimes diffs themselves can be more difficult to read than either the old or new state of the code, so comments like ''the implementation of foo moved from bar.py to baz.py'' can sometimes make a reviewer's job easier.
+Both authors and reviewers should be intimately familiar with all requirements on this page.
 
- * A reviewer can be anyone who is familiar with the Twisted codebase, [/trac/browser/trunk/doc/core/development/policy/coding-standard.xhtml?format=raw coding standard], and review requirements.  A reviewer need not necessarily be familiar with the specific area of Twisted being changed, but he or she should feel confident in his or her abilities to spot problems in the change.
- 
- * A reviewer must reject a set of changes which doesn't meet all of the following conditions: 
-   * The test suite passes on all of the supported* platforms with the changes.
-   * The changes must have tests for any alterations of behavior.
-   * The changes must have test coverage for all new behavior.
-   * The changes must have full documentation for new public APIs and test methods.
-   * The changes must add docstrings for any modifed public APIs or test methods which were previously undocumented (ie, if a function which has no docstring was modified, or a class which has no docstring had methods added to it).
-   * The changes must include updates to the documentation for any modified behavior of an API.
-   * If appropriate, the changes must include "user guide" documentation in the [source:trunk/doc doc/] directory.
-   * The changes must include updated documentation for any APIs which are being deprecated or otherwise obsoleted.
-   * The changes must follow the [/trac/browser/trunk/doc/core/development/policy/coding-standard.xhtml?format=raw coding standard].
-   * The changes must not be obviously buggy: pyflakes is an useful tool to check basic quality of code. The following command will check all the files modified and added by a branch merge:
-{{{
-svn status | grep '^\M\|^A' | cut -c 8- | xargs pyflakes
-}}}
+== Authors: Things your branch or patch must contain ==
 
- * A reviewer may reject a set of changes for other reasons, most of which are hard to quantify.  Basically, use your best judgement, and don't be afraid to point out problems which don't fit into the above list.
+ * Code which follows the [/trac/browser/trunk/doc/core/development/policy/coding-standard.xhtml?format=raw coding standard].
+ * 100% unit test coverage for all modified and new code (even if it didn't have tests before)
+ * 100% API docstring coverage for all modified and new code (even if it didn't have docs before)
+ * No backwards-incompatible changes
+ * Appropriate new or modified "End User" guide documentation (in the form of Lore-formatted xhtml files in the [source:trunk/doc doc/] directory)
+ * A file in all relevant "topfiles" directories describing changes which affect users (See [#Newsfiles below])
 
- * When a reviewer has completed a review, the trac workflow is as follows:
-  1. Remove {{{review}}} from the comma-separated keywords field
-  1. Change the owner back to the developer who put the ticket up for review
-  1. Put whatever review comments are being offered into a comment on the ticket
- 
- * After a reviewer has given a change set the okay, the author (or another developer, if the author is so inclined or lacks commit privileges) may commit the change set to trunk.
- 
- * The trunk commit must include the name of the author or authors, reviewer or reviewers, and the tickets which are being resolved by the changes being committed.  The suggested format for this is:
+== Authors: How to get your change reviewed ==
+
+ * There must be a bug in the Twisted bug tracker describing the desired outcome (See [#Filingbugsandwritingreviewrequests below]).
+ * Add the review keyword to the ticket.
+ * Remove the owner field by selecting the blank option next to "Assign to".
+   * Alternatively, assign it to someone who has already agreed to review it.
+ * Write a comment with any relevant information for the reviewer.
+
+== Reviewers: How to review a change ==
+
+ * Be familiar with the Twisted codebase, coding standard, and these review requirements.
+ * Don't be the author of the change (See [#Whocanreview below]).
+ * Assign the ticket to yourself.
+ * Review the change, and write a detailed comment about all potential improvements to the branch (See [#Howtobeagoodreviewer below]).
+ * Remove the "review" keyword from the ticket.
+ * Assign the ticket back to the author.
+ * If the change is ready for trunk, indicate so by writing "please merge" or "+1".
+   * Alternatively, if the author does not have commit access to trunk, merge the change for them.
+
+== Authors: How to merge the change to trunk ==
+
+ * Merge the change into a checkout of Twisted trunk and commit it. The message must follow this format (See [#Thecommitmessage below]).
 {{{
 #!html
 <pre class="wiki">
@@ -58,10 +47,56 @@ Reviewer: &lt;names&gt;
 Fixes: #&lt;ticket number&gt;<br />
 </pre>
 }}}
+ * After the change is merged and the buildbots have completed running, delete the branch.
 
- Several tools exist which parse commit messages to trunk, so the ''Author'', ''Reviewer'', and ''Fixes'' lines should conform to this format exactly.  Multiple ''Fixes'' lines will close multiple tickets.  ''Refs'' may also be used to attach the commit message to another ticket which is not being closed.  The commit message should also describe the change being made in a modest amount of detail.  This should be detailed enough for someone doing a release to formulate a changelog entry.
+
+== Details ==
+
+=== News files ===
+
+Changes must be accompanied by an entry in at least one `topfiles` directory (eg [source:trunk/twisted/topfiles/] or [source:trunk/twisted/names/topfiles/]).  This policy allows [source:/trunk/NEWS news files] for releases to be generated automatically.  See [http://bazaar.launchpad.net/~exarkun/twisted-trac-integration/trunk/annotate/head%3A/svn-hooks/enforcenews.py enforcenews.py] for the svn pre-commit hook which enforces this policy.  The entry must be a filed named `<ticket number>.<change type>`.  The contents of the file must be a short (roughly one sentence) description of the change suitable for use in the release news file.`<ticket number>` is replaced by the ticket which is being resolved by the change (if multiple tickets are resolved, multiple files with the same contents should be added).  `<change type>` is replaced by one of the following literal strings:
+
+    * `feature` - for tickets which are adding a new feature.
+    * `bugfix` - for tickets which are fixing a bug.
+    * `removal` - for tickets which are deprecating something or removing something which was already deprecated.
+    * `misc` - for tickets which are very minor and not worth summarizing outside of the svn changelog.  These may be empty (their contents will be ignored).
+
+=== Filing bugs and writing review requests ===
+
+Tickets should be described well enough that the change is already justified and the new code should be easy enough to read that further explanations aren't necessary to understand it, but sometimes diffs themselves can be more difficult to read than either the old or new state of the code, so comments like ''the implementation of foo moved from bar.py to baz.py'' can sometimes make a reviewer's job easier.
+
+=== Who can review? ===
+
+Changes must be reviewed by a developer other than the author of the changes. If changes are paired on, a third party must review them.  If changes constitute the work of several people who worked independently, a non-author must review them.
  
- * If a change set somehow introduces a test suite regression or is otherwise found to be undesirable, it is to be reverted.  Any developer may revert a commit which introduces a test suite regression on a supported platform. The revert message should be as explicit as possible. If it's a failure, put the message of the error in the commit message, possibly with the identifier of the buildbot slave. If there are too many failures, it can be put in the tracker, with a reference in the message. Use the "Reopens" tag to automatically reopen the ticket:
+=== How to be a good reviewer ===
+
+A reviewer need not necessarily be familiar with the specific area of Twisted being changed, but he or she should feel confident in his or her abilities to spot problems in the change.
+
+First, make sure all of the obvious things are accounted for. Check the "Things your branch or patch must contain" list above, and make sure each point applies to the branch.
+ 
+Use pyflakes to check the basic quality of the code. The following command will check all the files modified and added by a branch merge:
+{{{
+svn status | grep '^\M\|^A' | cut -c 8- | xargs pyflakes
+}}}
+
+A reviewer may reject a set of changes for other reasons, most of which are hard to quantify.  Basically, use your best judgement, and don't be afraid to point out problems which don't fit into the above list.
+
+Here are some extra things to consider while reviewing a change:
+  * Is the code written in a straightforward manner which will allow it to be easily maintained in the future, possibly by a developer other than the author?
+  * If it introduces a new feature, is that feature generally useful and have its long term implications been considered and accounted for?
+    * Will it result in confusion to application developers?
+    * Does it encourage application code using it to be well factored and easily testable?
+    * Is it similar to any existing feature offered by Twisted, such that it might make sense as an extension or modification to some other piece of code, rather than an entirely new functional unit?
+
+
+=== The commit message ===
+
+Several tools exist which parse commit messages to trunk, so the ''Author'', ''Reviewer'', and ''Fixes'' lines should conform to this format exactly.  Multiple ''Fixes'' lines will close multiple tickets.  ''Refs'' may also be used to attach the commit message to another ticket which is not being closed.  The commit message should also describe the change being made in a modest amount of detail.  This should be detailed enough for someone doing a release to formulate a changelog entry.
+
+=== Reverting a change ===
+
+If a change set somehow introduces a test suite regression or is otherwise found to be undesirable, it is to be reverted.  Any developer may revert a commit which introduces a test suite regression on a supported platform. The revert message should be as explicit as possible. If it's a failure, put the message of the error in the commit message, possibly with the identifier of the buildbot slave. If there are too many failures, it can be put in the tracker, with a reference in the message. Use the "Reopens" tag to automatically reopen the ticket:
 {{{
 #!html
 <pre class="wiki">
@@ -73,15 +108,6 @@ Reopens #&lt;ticket number&gt;<br />
 </pre>
 }}}
 
- * Reverted branches are to be reviewed again before being merged.
+Reverted branches are to be reviewed again before being merged.
  
- * If a branch is used, it should be deleted a short time after after it is merged into trunk (leaving enough time for the buildslaves to run to completion is a good idea, in case a regression has been introduced and the merge must be reverted).
-
 Some of the higher level things for a reviewer to consider about a branch:
-
-  * Does it change existing APIs in an incompatible way?  Are these APIs stable enough to warrant backwards compatibility or a deprecation period?
-  * Is the code written in a straightforward manner which will allow it to be easily maintained in the future, possibly by a developer other than the author?
-  * If it introduces a new feature, is that feature generally useful and have its long term implications been considered and accounted for?
-    * Will it result in confusion to application developers?
-    * Does it encourage application code using it to be well factored and easily testable?
-    * Is it similar to any existing feature offered by Twisted, such that it might make sense as an extension or modification to some other piece of code, rather than an entirely new functional unit?
