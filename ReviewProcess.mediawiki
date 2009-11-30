@@ -91,7 +91,7 @@ Use pyflakes to check the basic quality of the code. The following command will 
 svn status | grep '^\M\|^A' | cut -c 8- | xargs pyflakes
 }}}
 
-A reviewer may reject a set of changes for other reasons, most of which are hard to quantify.  Basically, use your best judgement, and don't be afraid to point out problems which don't fit into the above list.
+A reviewer may reject a change for various reasons, many of which are hard to quantify.  Basically, use your best judgement, and don't be afraid to point out problems which don't fit into the list of branch requirements laid out in this document.
 
 Here are some extra things to consider while reviewing a change:
   * Is the code written in a straightforward manner which will allow it to be easily maintained in the future, possibly by a developer other than the author?
