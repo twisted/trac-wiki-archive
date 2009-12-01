@@ -115,7 +115,7 @@ Revert r&lt;revision number&gt;: Brief description<br />
 
 A description of the problem, or a traceback if pertinent<br />
 
-Reopens #&lt;ticket number&gt;<br />
+Reopens: #&lt;ticket number&gt;<br />
 </pre>
 }}}
 
