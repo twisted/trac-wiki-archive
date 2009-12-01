@@ -99,6 +99,7 @@ Here are some extra things to consider while reviewing a change:
     * Will it result in confusion to application developers?
     * Does it encourage application code using it to be well factored and easily testable?
     * Is it similar to any existing feature offered by Twisted, such that it might make sense as an extension or modification to some other piece of code, rather than an entirely new functional unit?
+  * Does it require new documentation and examples?
 
 
 === The commit message ===
