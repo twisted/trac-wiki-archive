@@ -12,7 +12,7 @@ If you wish to build and install the latest Twisted by-hand on Ubuntu ensure tha
 
 An Ubuntu PPA was setup on Launchpad to obtain more recent packages:
 
- * [https://launchpad.net/~fluidinfo/+archive/ppa Ubuntu PPA]
+ * [https://launchpad.net/~twisted-dev/+archive/ppa Ubuntu PPA]
 
 
 == Windows ==
