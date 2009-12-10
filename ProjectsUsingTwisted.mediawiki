@@ -15,7 +15,7 @@ Twisted is used by many open-source, academic and commercial projects. Got a suc
 
 = Applications =
  * [http://www.gridspy.co.nz/ Gridspy] - live power monitoring and analysis
- * [http://allmydata.org allmydata.org "Tahoe"] - a secure, decentralized, fault-tolerant filesystem.
+ * [http://allmydata.org Tahoe-LAFS] - a secure, decentralized, fault-tolerant filesystem.
  * [http://www.dohop.com dohop.com] - a flight planning web site which searches many other flight databases.
  * [http://www.bittorrent.com BitTorrent] - a peer-to-peer file sharing program.
  * [http://www.osafoundation.org/ Chandler] - a desktop PIM.
