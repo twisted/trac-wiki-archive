@@ -18,7 +18,7 @@ Twisted is used by many open-source, academic and commercial projects. Got a suc
  * [http://allmydata.org Tahoe-LAFS] - a secure, decentralized, fault-tolerant filesystem.
  * [http://www.dohop.com dohop.com] - a flight planning web site which searches many other flight databases.
  * [http://www.bittorrent.com BitTorrent] - a peer-to-peer file sharing program.
- * [http://home.jongsma.org/software/downpour/ Downpour] - a web-based BitTorrent client.
+ * [http://home.jongsma.org/software/downpour/ Downpour] - a web-based !BitTorrent client.
  * [http://www.osafoundation.org/ Chandler] - a desktop PIM.
  * [http://www.zope.org/DevHome/Zope3 Zope3] - next-generation of the Zope application server and content management system.
  * [http://www.hellanzb.com/trac/ hellanzb] - an application designed for *nix environments that retrieves and processes Usenet nzb files.
