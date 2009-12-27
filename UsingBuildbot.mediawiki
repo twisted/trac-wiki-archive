@@ -1,4 +1,4 @@
-Always run buildbot against a branch before merging it it trunk. 
+Always run [http://buildbot.twistedmatrix.com buildbot] against a branch before merging it it trunk. 
 
  1. Get the `force-builds.py` script out of exarkun's [http://twistedmatrix.com/trac/browser/sandbox/exarkun sandbox].
  1. Run the script on your branch with `python force-builds.py /branches/<branch name> '<Comment>'`
