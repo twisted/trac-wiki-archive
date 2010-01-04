@@ -8,7 +8,7 @@ Twisted is used by many open-source, academic and commercial projects. Got a suc
  * [http://beepy.sourceforge.net BEEPy] - BEEP protocol implementation for Python.
  * [http://www.wiggy.net/code/pyrad/ PyRAD]-  a RADIUS client and server.
  * [http://www.inoi.fi/open/trac/ldaptor/ Ldaptor] - LDAP protocol implementation and utilities.
- * [http://slarty.polito.it:8069/~sciasbat/wiki/moin.cgi/twibber Twibber] - a Jabber implementation.
+ * Twibber - a Jabber implementation.
  * [http://ichi2.net/pyosd/ PyOSD] - module for displaying text on your X display, much like the "On Screen Displays" used on TVs and some monitors.
  * [http://pypi.python.org/pypi/sAsync/0.7 sAsync] - __S__QLAlchemy done __Async__hronously.
  * [http://scrapy.org/ Scrapy] - a screen scraping and web crawling framework, used to crawl websites and extract structured data from their pages.
@@ -51,7 +51,7 @@ Twisted is used by many open-source, academic and commercial projects. Got a suc
  * [http://howie.sourceforge.net/ Howie the Chatterbot] - a conversational AI.
  * [http://en.wikipedia.org/wiki/Wikipedia:Cleaning_up_vandalism/Bots Pgkbot] - a bot for monitoring mediawiki changes.
  * [http://www.cps-project.org/sections/projects/nxlucene NXLucene] - a standalone multi-threaded Lucene-based text indexing server.
- * [http://foss.eepatents.com/WinDictator WinDictator] - Dictate in the MS Windows OS, have the text typed in Linux via X faked keystroke events.
+ * WinDictator - Dictate in the MS Windows OS, have the text typed in Linux via X faked keystroke events.
  * [http://code.stanziq.com/palaver Palaver] - multi-user chat for Jabber.
  * [http://zenoss.org/ Zenoss] - open source network/systems monitoring and management
  * [http://www.jardinpresente.com.ar/trac/itaka/ Itaka] - an on-demand screen capture server
@@ -66,13 +66,13 @@ Twisted is used by many open-source, academic and commercial projects. Got a suc
  * [http://pyscrabble.sourceforge.net/ PyScrabble] - an online, multiplayer Scrabble game.
  * [http://freshmeat.net/projects/poker3d/ Poker3d] - a 3d poker game server and client.
  * [http://freshmeat.net/projects/buyasta/ Buyasta] - a MUD engine.
- * [http://pessimization.com/software/londonlaw/ Law] - an online multiplayer adaptation of the classic Scotland Yard board game.
+ * [http://pessimization.com/software/londonlaw/ London Law] - an online multiplayer adaptation of the classic Scotland Yard board game.
  * [http://linux-games.com/castle-combat Castle Combat] - a multiplayer game designed after the arcade game "Rampart"
 
 = Research Projects =
 
  * [http://tycoon.hpl.hp.com/ Tycoon @ HP Labs] is a market-based system for managing compute resources in distributed clusters.
- * [http://dharma.cis.upenn.edu/ Dharma @ UPenn]: Distributed Home Agent for Robust Mobile Access.
- * [http://robotmanipulation.org/pysense/ PySense @ MIT] is an open source python library devoted to first person sensing for robots and wearables.
+ * Dharma @ UPenn: Distributed Home Agent for Robust Mobile Access.
+ * PySense @ MIT is an open source python library devoted to first person sensing for robots and wearables.
  * [http://dsd.lbl.gov/gtg/projects/pyGridWare/ pyGridWare @ Lawrence Berkeley National Labs] is a Python implementation of the WS-Resource framework. It includes support for WS-Addressing, WS-Notification, WS-Lifetime management, and WS-Security. 
  * [http://viff.dk/ VIFF @ University of Aarhus, Denmark] is an open source Python library for implementing secure multi-party computation.
