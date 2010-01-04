@@ -72,7 +72,7 @@ Twisted is used by many open-source, academic and commercial projects. Got a suc
 = Research Projects =
 
  * [http://tycoon.hpl.hp.com/ Tycoon @ HP Labs] is a market-based system for managing compute resources in distributed clusters.
- * !Dharma @ UPenn: Distributed Home Agent for Robust Mobile Access.
+ * Dharma @ UPenn: Distributed Home Agent for Robust Mobile Access.
  * !PySense @ MIT is an open source python library devoted to first person sensing for robots and wearables.
  * [http://dsd.lbl.gov/gtg/projects/pyGridWare/ pyGridWare @ Lawrence Berkeley National Labs] is a Python implementation of the WS-Resource framework. It includes support for WS-Addressing, WS-Notification, WS-Lifetime management, and WS-Security. 
  * [http://viff.dk/ VIFF @ University of Aarhus, Denmark] is an open source Python library for implementing secure multi-party computation.
