@@ -6,11 +6,11 @@ Twisted is used by many open-source, academic and commercial projects. Got a suc
  * [http://trevp.net/tlslite/ TLS Lite] - Python TLS/SSL implementation.
  * [http://twistedsnmp.sourceforge.net/ TwistedSNMP] - PySNMP integration for Twisted.
  * [http://beepy.sourceforge.net BEEPy] - BEEP protocol implementation for Python.
- * [http://www.wiggy.net/code/pyrad.xhtml PyRAD]-  a RADIUS client and server.
+ * [http://www.wiggy.net/code/pyrad/ PyRAD]-  a RADIUS client and server.
  * [http://www.inoi.fi/open/trac/ldaptor/ Ldaptor] - LDAP protocol implementation and utilities.
  * [http://slarty.polito.it:8069/~sciasbat/wiki/moin.cgi/twibber Twibber] - a Jabber implementation.
- * [http://repose.cx/pyosd/ PyOSD] - module for displaying text on your X display, much like the "On Screen Displays" used on TVs and some monitors.
- * [http://foss.eepatents.com/sAsync/ sAsync] - __S__QLAlchemy done __Async__hronously.
+ * [http://ichi2.net/pyosd/ PyOSD] - module for displaying text on your X display, much like the "On Screen Displays" used on TVs and some monitors.
+ * [http://pypi.python.org/pypi/sAsync/0.7 sAsync] - __S__QLAlchemy done __Async__hronously.
  * [http://scrapy.org/ Scrapy] - a screen scraping and web crawling framework, used to crawl websites and extract structured data from their pages.
 
 = Applications =
@@ -24,7 +24,7 @@ Twisted is used by many open-source, academic and commercial projects. Got a suc
  * [http://www.hellanzb.com/trac/ hellanzb] - an application designed for *nix environments that retrieves and processes Usenet nzb files.
  * [http://www.flumotion.net/ Flumotion] - a streaming media server.
  * [http://www.divmod.org/ Quotient] - multi-protocol messaging server with tools for information management and retrieval, including a mail server (SMTP/POP3/IMAP/webmail) and much more.
- * [http://shtoom.sf.net Shtoom] - a RTP/SIP VoIP phone.
+ * [http://divmod.org/trac/wiki/ShtoomProject Shtoom] - a RTP/SIP VoIP phone.
  * [http://www.fettig.net/projects/hep Hep] - Message routing super-server.
  * [http://sourceforge.net/projects/khashmir Khashmir] - distributed hash table.
  * [http://itamarst.org/software/bannerfish/ Bannerfish] - banner ad server.
@@ -39,15 +39,15 @@ Twisted is used by many open-source, academic and commercial projects. Got a suc
  * [http://freevo.sourceforge.net/ Freevo] - open-source home theatre and PVR PC platform.
  * [http://cia.navi.cx/ CIA Bot] - notification system, used by many projects for source code checkin notification.
  * [http://cvs.zope.org/Packages/SFTPGateway/ SFTPGateway] - SFTP to FTP gateway, allowing secure access to FTP servers.
- * [http://travishartwell.net/projects/informant/ Informant] - GNOME Panel applet for event notification.
- * [http://toursst.sourceforge.net/ TouRSSt] - RSS delivery system.
+ * [http://www.travishartwell.net/blog/static/informant-index Informant] - GNOME Panel applet for event notification.
+ * [http://pypi.python.org/pypi/toursst/0.0.3 TouRSSt] - RSS delivery system.
  * [http://sourceforge.net/projects/pynfo/ Pynfo] - extendable multi-function IRC bot.
  * [http://petmail.lothar.com/ PETMail] - permission based anti-spam replacement for SMTP.
  * [http://crowsnest.sf.net Crow's Nest] - collect log information from various sources and to apply some filter to them in a very modular way.
  * [http://theendmusic.org/programming/MaxJax MaxJax] - a solution for real-time web based control of any open sound control enabled sound synthesis engine.
  * [http://www.spring-alpha.org/svs/index.php?content=about svs] - a framework for supporting collaborative projects that combine coding with other media.
  * [http://sourceforge.net/projects/msngateway/ msn-gateway] - an msn messenger gateway for mobile phones using email and web access.
- * [http://solipsis.netofpeers.net/wiki2/index.php/Main_Page Solipsis] - a pure peer-to-peer system for a massively shared virtual world.
+ * [http://solipsisarchive.netofpeers.net/ Solipsis] - a pure peer-to-peer system for a massively shared virtual world.
  * [http://howie.sourceforge.net/ Howie the Chatterbot] - a conversational AI.
  * [http://en.wikipedia.org/wiki/Wikipedia:Cleaning_up_vandalism/Bots Pgkbot] - a bot for monitoring mediawiki changes.
  * [http://www.cps-project.org/sections/projects/nxlucene NXLucene] - a standalone multi-threaded Lucene-based text indexing server.
@@ -62,11 +62,11 @@ Twisted is used by many open-source, academic and commercial projects. Got a suc
  * [http://www.asbahr.com/beyond.html Beyond 2] - high level framework for assembling, animating, and interacting with 3D virtual environments.
  * [http://sourceforge.net/projects/innerspace InnerSpace] - a pseudo-MUD engine.
  * [https://gna.org/projects/tactics GalaxyMage] - a cross-platform, open-source tactical RPG with online multiplayer play.
- * [http://arrakis.sourceforge.net OpenRTS] - an open source real-time strategy game with multiplayer and scenario games.
+ * [http://sourceforge.net/projects/arrakis/ OpenRTS] - an open source real-time strategy game with multiplayer and scenario games.
  * [http://pyscrabble.sourceforge.net/ PyScrabble] - an online, multiplayer Scrabble game.
  * [http://freshmeat.net/projects/poker3d/ Poker3d] - a 3d poker game server and client.
- * [http://web.mit.edu/bshi/www/buyasta/ Buyasta] - a MUD engine.
- * [http://www.eecs.umich.edu/~pelzlpj/londonlaw/ London Law] - an online multiplayer adaptation of the classic Scotland Yard board game.
+ * [http://freshmeat.net/projects/buyasta/ Buyasta] - a MUD engine.
+ * [http://pessimization.com/software/londonlaw/ Law] - an online multiplayer adaptation of the classic Scotland Yard board game.
  * [http://linux-games.com/castle-combat Castle Combat] - a multiplayer game designed after the arcade game "Rampart"
 
 = Research Projects =
