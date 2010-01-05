@@ -18,7 +18,7 @@ What you need to read if you are planning on contributing technically:
  * Examine some of the [source:branches current branches]
  * Take a look at the [/trac/report open tickets]
  * Learn the [wiki:BugKeywords bug keywords]
- * Memorize the [/trac/browser/trunk/doc/core/development/policy/coding-standard.xhtml?format=raw Twisted Coding standard].
+ * Memorize the [/trac/browser/trunk/doc/core/development/policy/coding-standard.xhtml?format=raw Twisted Coding standard] and the [http://twistedmatrix.com/documents/current/core/development/policy/test-standard.html Twisted Unit Tests standard].
  * Practice all of these by [wiki:TwistedDevelopment#SubmittingaPatch submitting patches] (submit branches in {{{diff -u}}} format to the [/trac/newticket ticket tracker])
  * Explore the [wiki:ReviewProcess code review process] and help a brother/sister out
  * [http://buildbot.twistedmatrix.com/ Buildbot]. Watch it. [wiki:UsingBuildbot Use it] before merging a branch.
