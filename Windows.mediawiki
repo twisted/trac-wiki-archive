@@ -4,8 +4,8 @@
 }}}
 
 === Current Windows Maintainers ===
-'''Eric (teratorn) Mangold''' (teratorn -at- twistedmatrix -dot- com) [[BR]]
-'''Timothy (!FireMoth) Fitz''' (!FireMoth -at- gmail -dot- com) [[BR]]
+
+''' ''None!'' '''
 
 = Help us resolve Windows issues! =
 
@@ -15,7 +15,7 @@ If you need help you may contact others involved with the ticket, or the maintai
 
 = Donate resources! =
 
-The Twisted project is currently seeking resource donations to improve our level of Windows support! Please direct offers and inquiries to Eric Mangold.
+The Twisted project is currently seeking resource donations to improve our level of Windows support! Please direct offers and inquiries to [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python the twisted mailing list].
 
  * A machine to run Windows Vista.
  * A Windows Vista license.
