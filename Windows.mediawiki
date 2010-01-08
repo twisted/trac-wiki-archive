@@ -5,7 +5,7 @@
 
 === Current Windows Maintainers ===
 
-''' ''None!'' '''
+''' ''None! '' '''
 
 = Help us resolve Windows issues! =
 
