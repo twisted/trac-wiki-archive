@@ -23,14 +23,14 @@ Twisted is used by many open-source, academic and commercial projects. Got a suc
  * [http://www.zope.org/DevHome/Zope3 Zope3] - next-generation of the Zope application server and content management system.
  * [http://www.hellanzb.com/trac/ hellanzb] - an application designed for *nix environments that retrieves and processes Usenet nzb files.
  * [http://www.flumotion.net/ Flumotion] - a streaming media server.
- * [http://www.divmod.org/ Quotient] - multi-protocol messaging server with tools for information management and retrieval, including a mail server (SMTP/POP3/IMAP/webmail) and much more.
+ * [http://divmod.org/trac/wiki/DivmodQuotient Quotient] - multi-protocol messaging server with tools for information management and retrieval, including a mail server (SMTP/POP3/IMAP/webmail) and much more.
  * [http://divmod.org/trac/wiki/ShtoomProject Shtoom] - a RTP/SIP VoIP phone.
  * [http://www.fettig.net/projects/hep Hep] - Message routing super-server.
  * [http://sourceforge.net/projects/khashmir Khashmir] - distributed hash table.
  * [http://itamarst.org/software/bannerfish/ Bannerfish] - banner ad server.
  * [http://apt-proxy.sourceforge.net apt-proxy2] - caching proxy for Debian apt-get clients.
  * [http://twistedmatrix.com/users/acapnotic/wares/code/CVSToys/ CVSToys] - CVS change notification via email, IRC and HTTP.
- * [http://www.zope.org/Members/infrae/DocmaServer DocmaServer] - batch processing server that does Word <-> XML conversion.
+ * [http://www.infrae.com/download/DocmaServer DocmaServer] - batch processing server that does Word <-> XML conversion.
  * [http://homepage.hispeed.ch/py430/python/index.html pyvncviewer] - a simple VNC viewer implemented in Python.
  * [http://buildbot.sf.net BuildBot] - a distributed building/testing framework.
  * [http://pythondirector.sf.net PythonDirector] - load balancing for web servers.
@@ -49,18 +49,18 @@ Twisted is used by many open-source, academic and commercial projects. Got a suc
  * [http://sourceforge.net/projects/msngateway/ msn-gateway] - an msn messenger gateway for mobile phones using email and web access.
  * [http://solipsisarchive.netofpeers.net/ Solipsis] - a pure peer-to-peer system for a massively shared virtual world.
  * [http://howie.sourceforge.net/ Howie the Chatterbot] - a conversational AI.
- * [http://en.wikipedia.org/wiki/Wikipedia:Cleaning_up_vandalism/Bots Pgkbot] - a bot for monitoring mediawiki changes.
+ * [http://meta.wikimedia.org/wiki/CVN/Bots#pgkbot Pgkbot] - a bot for monitoring mediawiki changes.
  * [http://www.cps-project.org/sections/projects/nxlucene NXLucene] - a standalone multi-threaded Lucene-based text indexing server.
  * [http://code.stanziq.com/palaver Palaver] - multi-user chat for Jabber.
  * [http://zenoss.org/ Zenoss] - open source network/systems monitoring and management
- * [http://www.jardinpresente.com.ar/trac/itaka/ Itaka] - an on-demand screen capture server
+ * [http://sourceforge.net/projects/itaka/ Itaka] - an on-demand screen capture server
  * !WinDictator - Dictate in the MS Windows OS, have the text typed in Linux via X faked keystroke events.
 
 = Games =
  * [http://sourceforge.net/projects/originalgamer OGC] - MUD client.
  * [http://gosiege.sourceforge.net/ Go Siege] - multiplayer Go game.
  * [http://www.asbahr.com/beyond.html Beyond 2] - high level framework for assembling, animating, and interacting with 3D virtual environments.
- * [http://sourceforge.net/projects/innerspace InnerSpace] - a pseudo-MUD engine.
+ * [http://jupiter.bubblehouse.org/innerspace txSpace] - a pseudo-MUD engine.
  * [https://gna.org/projects/tactics GalaxyMage] - a cross-platform, open-source tactical RPG with online multiplayer play.
  * [http://sourceforge.net/projects/arrakis/ OpenRTS] - an open source real-time strategy game with multiplayer and scenario games.
  * [http://pyscrabble.sourceforge.net/ PyScrabble] - an online, multiplayer Scrabble game.
