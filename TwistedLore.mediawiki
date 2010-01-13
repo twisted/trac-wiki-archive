@@ -18,6 +18,10 @@ See the [wiki:Downloads] page.
 
 [http://twistedmatrix.com/projects/lore/documentation/ Documentation] is available for Twisted Lore. An [http://twistedmatrix.com/documents/current/api/ API reference] of Twisted and all subprojects is also available.
 
+= Tickets =
+
+This [http://twistedmatrix.com/trac/query?status=new&status=assigned&status=reopened&group=priority&verbose=1&component=lore&order=priority report] shows Lore's open tickets.
+
 = Contact = 
 
 Subscribe to the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted-python] mailing list or visit the #twisted channel on irc.freenode.net to ask questions.
