@@ -35,7 +35,7 @@
     <!-- begin center column -->
     <td valign="top" class="centercol" style="padding-left: 10px; padding-right: 15px;">
 
-<h1 id="ActNow:BeaSponsor">Twisted Needs Sponsors, 2009 Edition</h1>
+<h1 id="ActNow:BeaSponsor">Twisted Needs Sponsors, 2010 Edition</h1>
 <p>
 It's a new year, and with it comes the need for additional sponsorship. The good news is, thanks to the <a href="http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation">Twisted Software Foundation</a>, your donations will directly contribute to the ongoing maintenance and development of Twisted. While we're very proud of our <a href="http://labs.twistedmatrix.com/2009/04/sponsorship-in-2009.html">track record so far</a>, we still need your help to continue that tradition of excellence.
 </p>
@@ -94,7 +94,7 @@ More Useful Pointers:
   <div>
     <h3>Twisted Sponsors</h3>
 
-    <h4><a href="/trac/wiki/TwistedSoftwareFoundation">Become a 2009 Sponsor Today!</a></h4>
+    <h4><a href="/trac/wiki/TwistedSoftwareFoundation">Become a 2010 Sponsor Today!</a></h4>
 <div>
 Donations are <a href="/trac/wiki/TwistedSoftwareFoundation#Background">tax-deductible</a>.
 
