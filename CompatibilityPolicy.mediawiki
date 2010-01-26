@@ -182,5 +182,6 @@ Trial also needs a way to do the equivalent of {{{-Werror}}} that was specific t
 
 === Weaknesses of the Warnings System ===
 
-Warnings are, for a variety of unfortunate reasons, often displayed to end-users before they are displayed to developers.  There should be some mechanism for specifying what warnings one wants to see and how they should be reported.  For example, if Twisted continues to have some warnings against a particular version of Python, a Twisted application developer doesn't necessarily care.  They should be able to declare that they are a developer for particular packages and see warnings only for those packages.
+~~Warnings are, for a variety of unfortunate reasons, often displayed to end-users before they are displayed to developers.  There should be some mechanism for specifying what warnings one wants to see and how they should be reported.  For example, if Twisted continues to have some warnings against a particular version of Python, a Twisted application developer doesn't necessarily care.  They should be able to declare that they are a developer for particular packages and see warnings only for those packages.~~ ''(as of Python 2.7, `DeprecationWarning` will not be emitted by default)''
+
 
