@@ -180,6 +180,37 @@ That's 69 warnings on python 2.4, with the select reactor, arguably our best-sup
 
 Trial also needs a way to do the equivalent of {{{-Werror}}} that was specific to Twisted warnings, since it may not be possible to avoid certain kinds of warning while remaining compatible between all Python versions.
 
+=== How to deprecate APIs ===
+
+==== Functions and methods ====
+
+To deprecate a free function or a method, add a call to `warnings.warn` to the beginning of the implementation of that method.  The warning should be of type `PendingDeprecationWarning` or `DeprecationWarning` and the stack level should be set so that the warning refers to the code which is invoking the deprecated function or method.  For example:
+
+{{{
+#!python
+def foo(bar):
+    warnings.warn("foo is deprecated since Twisted 1.2.  Use baz instead.", category=DeprecationWarning, stacklevel=2)
+    return bar * 3
+}}}
+
+The deprecation message must include the name of the function which is deprecated, the version of Twisted in which it was first deprecated, and a suggestion for a replacement (if the API provides functionality which it is determined is beyond the scope of Twisted, then it may be deprecated without a replacement).
+
+==== Instance attributes ====
+
+To deprecate an attribute on instances of a class, make the attribute into a property and call `warnings.warn` from the getter and/or setter function for that property.
+
+==== Module attributes ====
+
+Modules cannot have properties, so module attributes should be deprecated using `twisted.python.deprecate.deprecatedModuleAttribute`.
+
+==== Unit testing ====
+
+Like all changes in Twisted, deprecations must be unit tested.  There are several options for this.  In order of decreasing preference:
+
+    * twisted.trial.unittest.TestCase.flushWarnings
+    * twisted.trial.unittest.TestCase.assertWarns
+    * twisted.trial.unittest.TestCase.callDeprecated
+
 === Weaknesses of the Warnings System ===
 
 ~~Warnings are, for a variety of unfortunate reasons, often displayed to end-users before they are displayed to developers.  There should be some mechanism for specifying what warnings one wants to see and how they should be reported.  For example, if Twisted continues to have some warnings against a particular version of Python, a Twisted application developer doesn't necessarily care.  They should be able to declare that they are a developer for particular packages and see warnings only for those packages.~~ ''(as of Python 2.7, `DeprecationWarning` will not be emitted by default)''
