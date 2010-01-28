@@ -42,7 +42,7 @@
   1. [ticket:3987 Implement a high-level API with minimal additional functionality]
     1. [ticket:4017 Provide a file-based message body producer]
     1. [ticket:4023 Support HTTPS URLs and certificate verification]
-  1. Support HTTP proxies
+  1. [ticket:2714 Support HTTP proxies]
   1. Implement other HTTP protocol and high-level features
     1. [ticket:3420 persistent connections]
   1. Implement HTTP header parsing to provide access to structured header values (based on `twisted.web2.http_headers`)
