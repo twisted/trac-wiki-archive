@@ -17,7 +17,7 @@
   Maintainer: James "foom" Knight <foom@fuhm.net>
 
   '''[wiki:TwistedWeb2 Twisted Web2]'''::
-  An HTTP/1.1 Server Framework (Experimental).[[BR]]
+  An HTTP/1.1 Server Framework ([TwistedWebPlan Experimental]).[[BR]]
   Maintainer: James "foom" Knight <foom@fuhm.net>
 
   '''[wiki:TwistedMail Twisted Mail]'''::
