@@ -50,10 +50,6 @@
 
 == Unmaintained Projects ==
 
-  '''[wiki:TwistedFlow Twisted Flow]'''::
-  Generator based asynchronous result flows.[[BR]]
-  Former maintainer: Clark Evans <cce@twistedmatrix.com>
-
   '''[wiki:TwistedPair Twisted Pair]'''::
   Low-level networking transports and utilities.[[BR]]
   Former maintainer: Tommi "Tv" Virtanen <tv@twistedmatrix.com>
