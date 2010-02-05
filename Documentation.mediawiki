@@ -2,9 +2,9 @@
 
  * Read our [wiki:FrequentlyAskedQuestions FAQ].
  * Want to use Twisted for '''web development'''? Please read [wiki:WebDevelopmentWithTwisted this page] first!
- * [http://twistedmatrix.com/projects/core/documentation/howto/index.html Core Documentation] ([http://twistedmatrix.com/projects/core/documentation/howto/book.pdf view as PDF]) - the code developer guide for Twisted Core, with the famous "Finger" tutorial, details on how to use deferreds, etc.
- * Twisted Core [http://twistedmatrix.com/projects/core/documentation/man/ man pages].
- * Twisted Core [http://twistedmatrix.com/projects/core/documentation/examples/ examples].
+ * [http://twistedmatrix.com/documents/current/core/howto/index.html Core Documentation] ([http://twistedmatrix.com/documents/current/core/howto/book.pdf view as PDF]) - the code developer guide for Twisted Core, with the famous "Finger" tutorial, details on how to use deferreds, etc.
+ * Twisted Core [http://twistedmatrix.com/documents/current/core/man/ man pages].
+ * Twisted Core [http://twistedmatrix.com/documents/current/core/examples/ examples].
  * View the current [http://twistedmatrix.com/documents/current/api/ API reference].
  * The [wiki:TwistedProjects project] pages have documentation links that are pertinent to each Twisted project. For convenience, we offer some of these links below:
    * '''conch''' (SSH protocol) - [http://twistedmatrix.com/documents/current/conch/howto/ howtos] and [http://twistedmatrix.com/documents/current/conch/examples/ examples]
