@@ -7,14 +7,14 @@
  * Twisted Core [http://twistedmatrix.com/projects/core/documentation/examples/ examples].
  * View the current [http://twistedmatrix.com/documents/current/api/ API reference].
  * The [wiki:TwistedProjects project] pages have documentation links that are pertinent to each Twisted project. For convenience, we offer some of these links below:
-   * '''conch''' (SSH protocol) - [http://twistedmatrix.com/projects/conch/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/conch/documentation/examples/ examples]
-   * '''lore''' (documentation) - [http://twistedmatrix.com/projects/lore/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/lore/documentation/examples/ examples]
-   * '''mail''' (SMTP protocol) - [http://twistedmatrix.com/projects/mail/documentation/tutorial/smtpclient/smtpclient.html client tutorial] and [http://twistedmatrix.com/projects/mail/documentation/examples/ examples]
-   * '''names''' (DNS protocol) - [http://twistedmatrix.com/projects/names/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/names/documentation/examples/ examples]
+   * '''conch''' (SSH protocol) - [http://twistedmatrix.com/documents/current/conch/howto/ howtos] and [http://twistedmatrix.com/documents/current/conch/examples/ examples]
+   * '''lore''' (documentation) - [http://twistedmatrix.com/documents/current/lore/howto/ howtos] and [http://twistedmatrix.com/documents/current/lore/examples/ examples]
+   * '''mail''' (SMTP protocol) - [http://twistedmatrix.com/documents/current/mail/tutorial/smtpclient/smtpclient.html client tutorial] and [http://twistedmatrix.com/documents/current/mail/examples/ examples]
+   * '''names''' (DNS protocol) - [http://twistedmatrix.com/documents/current/names/howto/ howtos] and [http://twistedmatrix.com/documents/current/names/examples/ examples]
    * '''trial''' (testing framework) - [wiki:TwistedTrial docs]
-   * '''web''' (HTTP protocol) - [http://twistedmatrix.com/projects/web/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/web/documentation/examples/ examples]
+   * '''web''' (HTTP protocol) - [http://twistedmatrix.com/documents/current/web/howto/ howtos] and [http://twistedmatrix.com/documents/current/web/examples/ examples]
    * '''web2''' (HTTP protocol redux) - [http://twistedmatrix.com/trac/browser/trunk/doc/web2/howto/index.xhtml?format=raw howtos] and [http://twistedmatrix.com/trac/browser/trunk/doc/web2/examples/index.xhtml?format=raw examples]
-   * '''words''' (instant messaging) - [http://twistedmatrix.com/projects/words/documentation/howto/ howtos] and [http://twistedmatrix.com/projects/words/documentation/examples/ examples]
+   * '''words''' (instant messaging) - [http://twistedmatrix.com/documents/current/words/howto/ howtos] and [http://twistedmatrix.com/documents/current/words/examples/ examples]
 
 == Developer Docs ==
 
