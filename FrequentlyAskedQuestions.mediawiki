@@ -22,7 +22,7 @@ Did you check the [wiki:Documentation HOWTO collection]? There are so many docum
 
 === Why are there so many parts and subprojects? Isn't Twisted just Twisted? ===
 
-As of version 2.0, Twisted was split up into many subprojects, because it was getting too much to handle in a monolithic release, and we believe breaking the project into smaller chunks will help people understand the things they need to understand (There used to be a FAQ entry here asking Why is Twisted so big?). More information is available in the [http://twistedmatrix.com/projects/core/documentation/upgrades/2.0/split.html Split FAQ].
+As of version 2.0, Twisted was split up into many subprojects, because it was getting too much to handle in a monolithic release, and we believe breaking the project into smaller chunks will help people understand the things they need to understand (There used to be a FAQ entry here asking Why is Twisted so big?). More information is available in the [http://twistedmatrix.com/documents/current/core/upgrades/2.0/split.html Split FAQ].
 
 === Why did the version number go from 2.5 to 8.x? ===
 
@@ -70,11 +70,11 @@ You can't. A {{{Protocol}}} doesn't have a {{{Factory}}} when it is created. Ins
 
 Similarly you shouldn't be doing real work, like connecting to databases, in a Factory's {{{__init__}}} either. Instead, do that in {{{startFactory}}}.
 
-See [http://twistedmatrix.com/projects/core/documentation/howto/servers.html Writing Servers] and [http://twistedmatrix.com/projects/core/documentation/howto/clients.html Writing Clients] for more details.
+See [http://twistedmatrix.com/documents/current/core/howto/servers.html Writing Servers] and [http://twistedmatrix.com/documents/current/core/howto/clients.html Writing Clients] for more details.
 
 === Where can I find out how to write Twisted servers? ===
 
-Try [http://twistedmatrix.com/projects/core/documentation/howto/servers.html Writing Servers].
+Try [http://twistedmatrix.com/documents/current/core/howto/servers.html Writing Servers].
 
 === How do I make Twisted talk to multiple clients / connect to multiple servers? ===
 
@@ -183,7 +183,7 @@ You should be using {{{reactor.spawnProcess}}} (see [http://twistedmatrix.com/do
 
 === My Deferred or !DeferredList never fires, so my program just mysteriously hangs! What's wrong? ===
 
-It really depends on what your program is doing, but the most common cause is this: it is firing -- but it's an error, not a success, and you have forgotten to add an [http://twistedmatrix.com/projects/core/documentation/howto/glossary.html#errback errback], so nothing happens. Always add errbacks!
+It really depends on what your program is doing, but the most common cause is this: it is firing -- but it's an error, not a success, and you have forgotten to add an [http://twistedmatrix.com/documents/current/core/howto/glossary.html#errback errback], so nothing happens. Always add errbacks!
 
 The reason {{{Deferred}}} can't automatically show your errors is because a {{{Deferred}}} can still have callbacks and errbacks added to it even after a result is available -- so we have no reasonable place to put a logging call that wouldn't result in spurious tracebacks that are handled later on. There is a facility for printing tracebacks when the Deferreds are garbage collected -- call {{{defer.setDebugging(True)}}} to enable it.
 
@@ -200,9 +200,9 @@ See previous question.
 
 === How do I use Deferreds to make my blocking code non-blocking? ===
 
-You don't. Deferreds don't magically turn a blocking function call into a non-blocking one. A Deferred is just a simple object that represents a deferred result, with methods to allow convenient adding of callbacks. (This is a common misunderstanding; suggestions on how to make this clearer in the [http://twistedmatrix.com/projects/core/documentation/howto/defer.html Deferred Execution] howto are welcome!)
+You don't. Deferreds don't magically turn a blocking function call into a non-blocking one. A Deferred is just a simple object that represents a deferred result, with methods to allow convenient adding of callbacks. (This is a common misunderstanding; suggestions on how to make this clearer in the [http://twistedmatrix.com/documents/current/core/howto/defer.html Deferred Execution] howto are welcome!)
 
-If you have blocking code that you want to use non-blockingly in Twisted, either rewrite it to be non-blocking, or run it in a thread. There is a convenience function, [http://twistedmatrix.com/documents/current/api/twisted.internet.threads.deferToThread.html deferToThread], to help you with the threaded approach -- but be sure to read [http://twistedmatrix.com/projects/core/documentation/howto/threading.html Using Threads in Twisted].
+If you have blocking code that you want to use non-blockingly in Twisted, either rewrite it to be non-blocking, or run it in a thread. There is a convenience function, [http://twistedmatrix.com/documents/current/api/twisted.internet.threads.deferToThread.html deferToThread], to help you with the threaded approach -- but be sure to read [http://twistedmatrix.com/documents/current/core/howto/threading.html Using Threads in Twisted].
 
 === I get {{{exceptions.ValueError: signal only works in main thread}}} when I try to run my Twisted program! What's wrong? ===
 
@@ -258,7 +258,7 @@ Firstly, the client must send a reference when it connects to the perspective br
 
 At the server end, you must override the [http://twistedmatrix.com/documents/current/api/twisted.spread.pb.Perspective.attach.html Perspective.attach], which is called when a client attaches to a perspective. The first argument of this method is a remote reference to the client object that was passed to [http://twistedmatrix.com/documents/current/api/twisted.spread.pb.connect.html pb.connect].
 
-Note that a single perspective can have many attached clients. For further information, see [http://twistedmatrix.com/projects/core/documentation/howto/pclients.html Managing Clients of Perspectives] HOWTO and the [http://twistedmatrix.com/documents/current/api/twisted.spread.pb.html twisted.spread.pb] API docs.
+Note that a single perspective can have many attached clients. For further information, see [http://twistedmatrix.com/documents/current/core/howto/pclients.html Managing Clients of Perspectives] HOWTO and the [http://twistedmatrix.com/documents/current/api/twisted.spread.pb.html twisted.spread.pb] API docs.
 
 == Requests and Contributing ==
 
