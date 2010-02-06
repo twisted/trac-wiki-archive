@@ -45,4 +45,5 @@
   1. [ticket:2714 Support HTTP proxies]
   1. Implement other HTTP protocol and high-level features
     1. [ticket:3420 persistent connections]
+    1. ''100 Continue'' support
   1. Implement HTTP header parsing to provide access to structured header values (based on `twisted.web2.http_headers`)
