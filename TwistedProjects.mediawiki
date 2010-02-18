@@ -54,8 +54,8 @@
   Low-level networking transports and utilities.[[BR]]
   Former maintainer: Tommi "Tv" Virtanen <tv@twistedmatrix.com>
 
-  '''[http://java.twistedmatrix.com/eio/ EIO]'''::
-  High-level java.nio wrapper networking framework
+  '''[http://allmydata.org/trac/EIO EIO]'''::
+  High-level {{{java.nio}}} wrapper networking framework
 
 == Projects for Other Languages ==
 
