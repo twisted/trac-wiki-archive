@@ -4,7 +4,6 @@ Attendees:
  * jml
  * exarkun
 
-
 Things we're working on:
  * Releasing Twisted!
  * Fixing [http://twistedmatrix.com/trac/query?status=new&status=assigned&status=reopened&type=regression&order=priority regressions]
@@ -12,6 +11,7 @@ Things we're working on:
  * Making Twisted easier to contribute
  * Twisted Web features and bug fixes
  * Fixing obscure Windows/gtk2 compatibility issues
+ * Deferred cancellation, see #990
 
 Success!
- * Fixed #4179
+ * Fixed #4179, #3056, #3289, #4178, #4192, #4284, #4282, #3718, #4143
