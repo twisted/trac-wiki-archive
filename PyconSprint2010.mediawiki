@@ -2,6 +2,7 @@ Hey, we're all at Pycon US, sprinting on Twisted.
 
 Attendees:
  * jml
+ * exarkun
 
 
 Things we're working on:
@@ -9,7 +10,7 @@ Things we're working on:
  * Fixing [http://twistedmatrix.com/trac/query?status=new&status=assigned&status=reopened&type=regression&order=priority regressions]
  * Thinking about switching to Bazaar
  * Making Twisted easier to contribute
-
+ * Twisted Web features and bug fixes
 
 Success!
  * Fixed #4179
