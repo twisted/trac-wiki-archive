@@ -6,3 +6,4 @@ Here are some ideas / thoughts:
  * New patch contributors sometimes forget to add the review keyword, leaving the ticket unlooked at for 3 years. If someone made a point of checking up on new tickets by new people regularly, or everyone did, or some people swept the open ticket regularly, maybe that would help, although it is constant work.
  * Make it much easier to get the diff to read for review
  * Make a tool that enforces and maybe even automatically corrects for our typographical conventions.
+ * A very visible, short, bulleted list of things to do on a patch before submitting it might help guide new contributors who don't want to read through or don't find both the coding and testing standards. A bulleted list of things to remember to check during a review might be nice too.
