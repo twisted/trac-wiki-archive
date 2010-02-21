@@ -11,6 +11,7 @@ Things we're working on:
  * Thinking about switching to Bazaar
  * Making Twisted easier to contribute
  * Twisted Web features and bug fixes
+ * Fixing obscure Windows/gtk2 compatibility issues
 
 Success!
  * Fixed #4179
