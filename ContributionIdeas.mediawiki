@@ -1,0 +1,7 @@
+We want to make it easier and more fun to contribute to Twisted without lowering our standards of quality.
+
+Here are some ideas / thoughts:
+ * Very strongly encourage people to submit patches lower than 800 lines.
+ * The round-trip time between reviews is very important. Casual contributors have time now, but maybe no time later.
+ * Make it much easier to get the diff to read for review
+ * Make a tool that enforces and maybe even automatically corrects for our typographical conventions.
