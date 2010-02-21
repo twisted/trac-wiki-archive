@@ -9,3 +9,7 @@ Things we're working on:
  * Fixing regressions
  * Thinking about switching to Bazaar
  * Making Twisted easier to contribute
+
+
+Success!
+ * Fixed #4179
