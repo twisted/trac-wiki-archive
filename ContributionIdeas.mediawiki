@@ -3,5 +3,6 @@ We want to make it easier and more fun to contribute to Twisted without lowering
 Here are some ideas / thoughts:
  * Very strongly encourage people to submit patches lower than 800 lines.
  * The round-trip time between reviews is very important. Casual contributors have time now, but maybe no time later.
+ * New patch contributors sometimes forget to add the review keyword, leaving the ticket unlooked at for 3 years. If someone made a point of checking up on new tickets by new people regularly, or everyone did, or some people swept the open ticket regularly, maybe that would help, although it is constant work.
  * Make it much easier to get the diff to read for review
  * Make a tool that enforces and maybe even automatically corrects for our typographical conventions.
