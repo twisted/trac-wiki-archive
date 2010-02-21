@@ -1,0 +1,11 @@
+Hey, we're all at Pycon US, sprinting on Twisted.
+
+Attendees:
+ * jml
+
+
+Things we're working on:
+ * Releasing Twisted!
+ * Fixing regressions
+ * Thinking about switching to Bazaar
+ * Making Twisted easier to contribute
