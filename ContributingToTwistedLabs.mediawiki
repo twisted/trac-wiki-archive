@@ -1,26 +1,44 @@
-= Contributing to Twisted =
+= Contributing To Twisted =
 
 There are many ways individuals and organizations can make contributions to Twisted.
- * Money (how much? what for?)
- * Provide [wiki:NeededBuildSlaves needed buildslaves]
- * Perform code reviews (see below)
- * Submit bug reports (you must first be [/trac/register registered])
- * Provide patches (see below)
+
+Many open source projects are perpetually crunched for volunteer labor. Twisted is no different in this respect — we could always use more help from the community.  However, we are lucky to have something that most projects don't: the ability to convert dollars directly into maintenance that benefits the project.
+
+When you contribute money to the Twisted project, you are directly contributing to get bugs fixed, features implemented, and tickets reviewed
+Donations are [/trac/wiki/TwistedSoftwareFoundation#Background tax-deductible] and can be made via [/trac "Google Checkout or Paypal"] or directly to the [/trac/wiki/TwistedSoftwareFoundation Twisted Software Foundation].
+
+== Code Contributions ==
+===  [#Overview Overview] ===
+
+ * [wiki:BasicGuideToContributingCode Basic Guide To Contributing Code], a simplified overview
+ * [wiki:TwistedDevelopment Detailed Contribution Requirements]
+
+=== [#Prepare Prepare] ===
+  * [/trac/register Register] on this site
+  * Intimately familiarize yourself with [http://divmod.org/trac/wiki/UltimateQualityDevelopmentSystem The Ultimate Quality Development System]
+  * Understand the [wiki:Documentation Developer docs] (how-tos, core docs, examples, API reference)
+  * Twisted has a rigorous policy standards for code, documentation, and testing:
+    * [/trac/browser/trunk/doc/core/development/policy/coding-standard.xhtml?format=raw Coding standard]
+    * [/trac/browser/trunk/doc/core/development/policy/doc-standard.xhtml?format=raw Documentation standard]
+    * [/trac/browser/trunk/doc/core/development/policy/writing-standard.xhtml?format=raw Writing Style guide]
+    * [/trac/browser/trunk/doc/core/development/policy/test-standard.xhtml?format=raw Testing standard]
+    * [/trac/browser/trunk/doc/core/development/policy/svn-dev.xhtml?format=raw SVN Access]
+  * Understand the [wiki:ReviewProcess code review process]
+  * [http://buildbot.twistedmatrix.com/ Buildbot] is used to automate the build process across platforms and test for breakage. Watch it. 
+    * You'll need to [wiki:UsingBuildbot Use it] before merging a branch.
+
+=== [#Explore Explore and Contribute] ===
+  * Examine some of the [source:branches current branches]
+  * Take a look at the [/trac/report open tickets]
+  * Learn the [wiki:BugKeywords bug keywords]
+    * [/trac/query?status=new&status=assigned&status=reopened&keywords=%7Eeasy&order=priority 'Easy' keyword tickets] are low-hanging fruit and good to get your feet wet
+  * [wiki:TwistedDevelopment#SubmittingaPatch Submit a Patch] in the  {{{diff -u}}} format by attaching it to an [/trac/report open ticket] in the tracker. You can also create a [/trac/newticket New Ticket] after you have [/trac/register Registered]
+
+
+== [#OtherWays Other Ways to Contribute] ==
+
  * [wiki:ReviewingDocumentation Review and add documentation]
- * Provide technical support (answer questions on [wiki:TwistedCommunity IRC and the mail lists])
-
-== Documentation ==
-
-What you need to read if you are planning on contributing technically:
- * Be sure you've read and understand the applicable [wiki:Documentation docs] 
- * [/trac/register Register] on this site
- * Intimately familiarize yourself with [http://divmod.org/trac/wiki/UltimateQualityDevelopmentSystem The Ultimate Quality Development System]
- * Examine some of the [source:branches current branches]
- * Take a look at the [/trac/report open tickets]
- * Learn the [wiki:BugKeywords bug keywords]
- * Memorize the [/trac/browser/trunk/doc/core/development/policy/coding-standard.xhtml?format=raw Twisted Coding standard] and the [http://twistedmatrix.com/documents/current/core/development/policy/test-standard.html Twisted Unit Tests standard].
- * Practice all of these by [wiki:TwistedDevelopment#SubmittingaPatch submitting patches] (submit branches in {{{diff -u}}} format to the [/trac/newticket ticket tracker])
- * Explore the [wiki:ReviewProcess code review process] and help a brother/sister out
- * [http://buildbot.twistedmatrix.com/ Buildbot]. Watch it. [wiki:UsingBuildbot Use it] before merging a branch.
-
-See also [wiki:TwistedDevelopment Twisted Development].
+ * [/wiki/ReviewProcess Code Reviews] 
+ * Submit bug reports (you must first be [/trac/register registered])  
+ * Provide technical support (answer questions on [#GettingHelp IRC and the mail lists])
+ * Provide [wiki:NeededBuildSlaves needed buildslaves]
