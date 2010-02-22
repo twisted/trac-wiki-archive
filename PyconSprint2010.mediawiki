@@ -3,6 +3,7 @@ Hey, we're all at Pycon US, sprinting on Twisted.
 Attendees:
  * jml
  * exarkun
+ * dreid
  * therve
 
 Things we're working on:
@@ -14,6 +15,7 @@ Things we're working on:
  * Deferred cancellation, see #990
  * Web socket #4173
  * Reviewing #3292
+ * Iterative deferred #411
 
 Success!
  * Fixed #4179, #3056, #3289, #4178, #4192, #4284, #4282, #3718, #4143, #4255, #3925
