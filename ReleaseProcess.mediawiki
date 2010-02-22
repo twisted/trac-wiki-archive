@@ -27,6 +27,10 @@
    * But build-tarballs won't work with uncommitted changes
 
  * How do we manage the case where there are untested builds in trunk?
+ * How/when in this process are the Windows installers and/or MacOS .dmg files created?
+   * (I presume .deb and .rpm packages are left up to Linux distro packagers)
+ * How/when in this process are the docs built?
+ * When should the front page of the wiki be updated?
 
 == Notes ==
 
@@ -40,5 +44,6 @@
    * for uploading release tarballs
 
 == Suggestions for additions to pre-release steps ==
+
  * pick a release quote :)
  * bump copyrights in LICENSE and README
