@@ -14,6 +14,7 @@ Things we're working on:
  * Fixing obscure Windows/gtk2 compatibility issues
  * Deferred cancellation, see #990
  * Web socket #4173
+ * Reviewing #3292
 
 Success!
  * Fixed #4179, #3056, #3289, #4178, #4192, #4284, #4282, #3718, #4143, #4255
