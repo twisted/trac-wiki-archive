@@ -25,6 +25,8 @@
    * They leave the pre-release version in the NEWS files when doing pre-releases
    * But build-tarballs won't work with uncommitted changes
 
+ * How do we manage the case where there are untested builds in trunk?
+
 == Notes ==
 
  * Test `change-versions` with pre-releases
