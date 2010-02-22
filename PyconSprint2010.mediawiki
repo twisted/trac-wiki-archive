@@ -7,7 +7,6 @@ Attendees:
 
 Things we're working on:
  * Releasing Twisted!
- * Fixing [http://twistedmatrix.com/trac/query?status=new&status=assigned&status=reopened&type=regression&order=priority regressions]
  * Thinking about switching to Bazaar
  * Making Twisted easier to contribute
  * Twisted Web features and bug fixes
@@ -18,3 +17,5 @@ Things we're working on:
 
 Success!
  * Fixed #4179, #3056, #3289, #4178, #4192, #4284, #4282, #3718, #4143, #4255
+ * Twisted 10.0.0pre1 released
+ * All known regressions fixed
