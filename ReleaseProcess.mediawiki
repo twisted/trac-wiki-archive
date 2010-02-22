@@ -1,3 +1,5 @@
+'''This document is a draft'''
+
 = How to do a pre-release =
 
  1. File a ticket (e.g. #4290)
