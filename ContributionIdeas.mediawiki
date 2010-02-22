@@ -10,3 +10,4 @@ Here are some ideas / thoughts:
  * Make a tool that enforces and maybe even automatically corrects for our typographical conventions.
  * A very visible, short, bulleted list of things to do on a patch before submitting it might help guide new contributors who don't want to read through or don't find both the coding and testing standards. A bulleted list of things to remember to check during a review might be nice too.
    * I think ReviewProcess has a pretty good bulleted list at the top. --radix
+    * ReviewProcess unfortunately isn't on the most obvious path to submitting patches, which to me is homepage -> ContributingToTwistedLabs -> TwistedDevelopment#SubmittingaPatch. Maybe the submission parts should be integrated into TwistedDevelopment#SubmittingaPatch, or at least have an emphatic link to ReviewProcess there. --jesstess
