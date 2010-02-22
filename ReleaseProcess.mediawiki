@@ -1,0 +1,33 @@
+= How to do a pre-release =
+
+ 1. File a ticket (e.g. #4290)
+ 1. Make a branch (e.g. `mkbranch Twisted release-4290`)
+ 1. Run `./bin/admin/change-versions XX.YY.ZZpreN`
+ 1. Commit the changes made by `change-versions`
+ 1. Run `./bin/admin/build-news .`
+ 1. Commit the changes made by `build-news`
+ 1. Make a temporary directory for the tarballs to live in (e.g. `mkdir /tmp/twisted-release`)
+ 1. Run `./bin/admin/build-tarballs . /tmp/twisted-release/`
+ 1. Upload the tarballs to a public website
+ 1. Announce the pre-release on
+    1. the twisted-python mailing list
+    1. on IRC in the #twisted topic
+    1. in a blog post, ideally labs.twistedmatrix.com
+
+
+== Open questions ==
+
+ * How do I decide the version number?
+
+ * Do we need to commit the changes from `build-news` for pre-releases?
+   * They leave the pre-release version in the NEWS files when doing pre-releases
+   * But build-tarballs won't work with uncommitted changes
+
+== Notes ==
+
+ * Test `change-versions` with pre-releases
+ * There should be a template for release announcements
+ * There are missing scripts:
+   * for uploading pre-release tarballs
+   * for signing tarballs
+   * for uploading release tarballs
