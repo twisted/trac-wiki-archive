@@ -33,6 +33,7 @@
  * Test `change-versions` with pre-releases
  * There should be a template for release announcements
    * Pre-release announcements should include an exhortation to test
+   * Release announcements should include actual NEWS summaries and maybe a pointer to the full thing
  * There are missing scripts:
    * for uploading pre-release tarballs
    * for signing tarballs
