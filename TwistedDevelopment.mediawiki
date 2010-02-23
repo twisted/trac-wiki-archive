@@ -48,7 +48,7 @@ Familiarize yourself with [http://twistedmatrix.com/trac/browser/trunk/doc/core/
 
 == Development Process ==
 
-Twisted uses same process as Divmod: [http://divmod.org/trac/wiki/UltimateQualityDevelopmentSystem The Ultimate Quality Development System], in addition to this ReviewProcess. If you don't have commit access to Twisted, please submit changesets in diff -u format to the [http://twistedmatrix.com/trac/newticket ticket tracker]. To submit tickets, you must first [http://twistedmatrix.com/trac/register register].
+Twisted uses same process as Divmod: [http://divmod.org/trac/wiki/UltimateQualityDevelopmentSystem The Ultimate Quality Development System], in addition to this ReviewProcess. If you don't have commit access to Twisted, please submit changesets in `diff -u` format to the [http://twistedmatrix.com/trac/newticket ticket tracker]. To submit tickets, you must first [http://twistedmatrix.com/trac/register register].
 
 If you want to become a developer, it is important to understand that all your contributions (including those initial patches you send to the bug tracker) will have to be licenced under the [http://www.opensource.org/licenses/mit-license.php MIT licence].
 
@@ -71,6 +71,7 @@ This series of documents is designed for people who wish to contribute to the Tw
  * [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/naming.xhtml?format=raw Naming Conventions]
  * [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/philosophy.xhtml?format=raw Philosophy]
  * [wiki:Security Security]
+ * [CompatibilityPolicy Compatibility Policy]
 
 == Buildbot ==
 
