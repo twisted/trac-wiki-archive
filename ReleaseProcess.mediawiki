@@ -48,3 +48,5 @@
  * pick a release quote :)
  * bump copyrights in LICENSE and README
  * Delete the news NNNN.bugfix etc files after building NEWS
+ * Check the milestone for the upcoming release, get rid of any non-critical bugs
+ * Check for any open tickets marked regressions, get them fixed
