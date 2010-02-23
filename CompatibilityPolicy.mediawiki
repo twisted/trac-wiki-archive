@@ -39,7 +39,7 @@ class d(_a): pass
 }}}
       in this example `_a` is effectively public, since 'b' and 'c' are both exposed via `d`.
   * Source
-    * The most basic thing that can happen between Twisted versions, of course, is that the code may change.  That means that no application may ever rely on, for example, the value of any func_code object's co_code attribute remaining stable, or the checksum of a .py file remaining stable.
+    * The most basic thing that can happen between Twisted versions, of course, is that the code may change.  That means that no application may ever rely on, for example, the value of any {{{func_code}}} object's {{{co_code}}} attribute remaining stable, or the checksum of a .py file remaining stable.
     * Docstrings may also change at any time.  No application code may expect any Twisted class, module, or method's {{{__doc__}}} attribute to remain the same.
   * Attributes: New code may also be added.  No application may ever rely on the output of the 'dir' function on any object remaining stable, nor on any object's {{{__all__}}} attribute, nor on any object's {{{__dict__}}} not having new keys added to it.  These may happen in any maintenance or bugfix release, no matter how minor.
   * Pickling: Even though Python objects can be pickled and unpickled without explicit support for this, whether a particular pickled object can be unpickled after any particular change to the implementation of that object is less certain.  Because of this, no application may depend on any object defined by Twisted to provide pickle compatibility between any release unless the object explicitly documents this as a feature it has.
@@ -48,7 +48,7 @@ class d(_a): pass
 
 If Twisted documents an object as complying with a published specification, and there are inputs which can cause Twisted to behave in obvious violation of that specification, then changes may be made to correct the behavior in the face of those inputs.  If application code must support multiple versions of Twisted, and work around violations of such specifications, then it ''must'' test for the presence of such a bug before compensating for it.
 
-For example, Twisted supplies a DOM implementation in twisted.web.microdom.  If an issue were discovered where parsing the string {{{<xml>Hello</xml>}}} and then serializing it again resulted in {{{>xml<Hello>/xml<}}}, that would grossly violate the XML specification for well-formedness.  Such code could be fixed with no warning other than release notes detailing that this error is now fixed.
+For example, Twisted supplies a DOM implementation in {{{twisted.web.microdom}}}.  If an issue were discovered where parsing the string {{{<xml>Hello</xml>}}} and then serializing it again resulted in {{{>xml<Hello>/xml<}}}, that would grossly violate the XML specification for well-formedness.  Such code could be fixed with no warning other than release notes detailing that this error is now fixed.
 
 However, if even such a gross violation were documented, or fixing it caused existing tests to break, then the change should be considered incompatible, regardless of how gross its violation.  It may be that such violations are introduced specifically to deal with other grossly non-compliant implementations of said specification.  If it is determined that those reasons are invalid or ought to be exposed through a different API, the change is compatible.
 
@@ -68,7 +68,7 @@ This is easier to deal with in a system which uses abstract base classes because
 
 === The First One's Always Free ===
 
-The general purpose of this document is to provide a pleasant upgrade experience for twisted application developers and users.  The specific purpose of this procedure is to achieve that experience by making sure that any application which runs without warnings may be upgraded one minor version of twisted (y to y+1 in x.y.z) or from the last minor revision of a major release to the first minor revision of the next major release (x to x + 1 in x.y.z to x.0.z, when there will be no x.y+1.z).  In other words, any application which runs its tests without triggering any warnings from Twisted ''should'' be able to have its Twisted version upgraded at least once with no ill effects except the possible production of new warnings.
+The general purpose of this document is to provide a pleasant upgrade experience for Twisted application developers and users.  The specific purpose of this procedure is to achieve that experience by making sure that any application which runs without warnings may be upgraded one minor version of twisted (y to y+1 in x.y.z) or from the last minor revision of a major release to the first minor revision of the next major release (x to x + 1 in x.y.z to x.0.z, when there will be no x.y+1.z).  In other words, any application which runs its tests without triggering any warnings from Twisted ''should'' be able to have its Twisted version upgraded at least once with no ill effects except the possible production of new warnings.
 
 === Compatible Changes ===
 
@@ -153,8 +153,6 @@ Taken from a recent test run:
 /home/buildbot/run/buildbot-two/full2.4/Twisted/twisted/test/test_internet.py:844: exceptions.DeprecationWarning: reactor.iterate cannot be used inside unit tests. By Twisted 2.7, using iterate will fail the test and may crash or hang the test run.
 /home/buildbot/run/buildbot-two/full2.4/Twisted/twisted/test/test_internet.py:846: exceptions.DeprecationWarning: reactor.iterate cannot be used inside unit tests. By Twisted 2.7, using iterate will fail the test and may crash or hang the test run.
 /home/buildbot/run/buildbot-two/full2.4/Twisted/twisted/test/test_internet.py:848: exceptions.DeprecationWarning: reactor.iterate cannot be used inside unit tests. By Twisted 2.7, using iterate will fail the test and may crash or hang the test run.
-/home/buildbot/run/buildbot-two/full2.4/Twisted/twisted/test/test_persisted.py:161: DeprecationWarning: twisted.persisted.marmalade is deprecated
-  from twisted.persisted import marmalade
 /home/buildbot/run/buildbot-two/full2.4/Twisted/twisted/test/test_ssl.py:253: exceptions.DeprecationWarning: reactor.iterate cannot be used inside unit tests. By Twisted 2.7, using iterate will fail the test and may crash or hang the test run.
 /home/buildbot/run/buildbot-two/full2.4/Twisted/twisted/test/test_ssl.py:344: exceptions.DeprecationWarning: reactor.iterate cannot be used inside unit tests. By Twisted 2.7, using iterate will fail the test and may crash or hang the test run.
 /home/buildbot/run/buildbot-two/full2.4/Twisted/twisted/test/test_sslverify.py:328: exceptions.DeprecationWarning: log.flushErrors is deprecated since Twisted 2.5. If you need to flush errors from within a unittest, use TestCase.flushLoggedErrors instead.
@@ -170,7 +168,7 @@ Taken from a recent test run:
   warnings.warn("twisted.im will be undergoing a rewrite at some point in the future.")
 }}}
 
-That's 69 warnings on python 2.4, with the select reactor, arguably our best-supported test configuration.  These warnings need to be eliminated so that application developers can treat warnings as errors.
+That's 69 warnings on Python 2.4, with the select reactor, arguably our best-supported test configuration.  These warnings need to be eliminated so that application developers can treat warnings as errors.
 
 === Implied New APIs ===
 
@@ -207,12 +205,10 @@ Modules cannot have properties, so module attributes should be deprecated using 
 
 Like all changes in Twisted, deprecations must be unit tested.  There are several options for this.  In order of decreasing preference:
 
-    * twisted.trial.unittest.TestCase.flushWarnings
-    * twisted.trial.unittest.TestCase.assertWarns
-    * twisted.trial.unittest.TestCase.callDeprecated
+    * `twisted.trial.unittest.TestCase.flushWarnings`
+    * `twisted.trial.unittest.TestCase.assertWarns`
+    * `twisted.trial.unittest.TestCase.callDeprecated`
 
 === Weaknesses of the Warnings System ===
 
 ~~Warnings are, for a variety of unfortunate reasons, often displayed to end-users before they are displayed to developers.  There should be some mechanism for specifying what warnings one wants to see and how they should be reported.  For example, if Twisted continues to have some warnings against a particular version of Python, a Twisted application developer doesn't necessarily care.  They should be able to declare that they are a developer for particular packages and see warnings only for those packages.~~ ''(as of Python 2.7, `DeprecationWarning` will not be emitted by default)''
-
-
