@@ -6,6 +6,7 @@ Attendees:
  * dreid
  * therve
  * Tim Couper
+ * Pavel Pergamenshchik
 
 Things we're working on:
  * Releasing Twisted!
@@ -18,8 +19,9 @@ Things we're working on:
  * Reviewing #3292
  * Iterative deferred #411
  * Getting rid of 3k warnings and generally doing 2to3
+ * Event support for iocpreactor
 
 Success!
- * Fixed #4179, #3056, #3289, #4178, #4192, #4284, #4282, #3718, #4143, #4255, #3925
+ * Fixed #4179, #3056, #3289, #4178, #4192, #4284, #4282, #3718, #4143, #4255, #3925, #4172
  * Twisted 10.0.0pre1 released
  * All known regressions fixed
