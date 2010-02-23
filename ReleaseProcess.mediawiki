@@ -47,3 +47,4 @@
 
  * pick a release quote :)
  * bump copyrights in LICENSE and README
+ * Delete the news NNNN.bugfix etc files after building NEWS
