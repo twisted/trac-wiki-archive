@@ -52,3 +52,4 @@
  * Check for any open tickets marked regressions, get them fixed
  * A thought for future releases: since we'd really like folks to download the prereleases and try them out, perhaps we should put the NEWS file on the web somewhere official, too, so they can see all the cool stuff they can try out?
    * "Other fixes" and maybe all tickets should be links when they are on the web
+ * Document how and when to tag releases in SVN.
