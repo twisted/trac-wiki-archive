@@ -53,6 +53,7 @@
  * A thought for future releases: since we'd really like folks to download the prereleases and try them out, perhaps we should put the NEWS file on the web somewhere official, too, so they can see all the cool stuff they can try out?
    * "Other fixes" and maybe all tickets should be links when they are on the web
  * Document how and when to tag releases in SVN.
+ * Read through the NEWS files and write a summary of the interesting changes for the release
 
 == For the release itself ==
 
