@@ -60,10 +60,13 @@
  * Add the quote of the release
  * Make new tarballs
  * Upload to the official upload locations:
-   * ???
+   * {{{
+<radix> jml: cube:/srv/www-data/twisted/Releases/
+<radix> <Project>/<First two parts of version number>/*
+}}}
  * Announce more fully:
    * python-announce
    * PyPI
    * Launchpad
    * Blog
- 
+ * 
