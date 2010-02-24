@@ -53,3 +53,17 @@
  * A thought for future releases: since we'd really like folks to download the prereleases and try them out, perhaps we should put the NEWS file on the web somewhere official, too, so they can see all the cool stuff they can try out?
    * "Other fixes" and maybe all tickets should be links when they are on the web
  * Document how and when to tag releases in SVN.
+
+== For the release itself ==
+
+ * Remove the 'pre'
+ * Add the quote of the release
+ * Make new tarballs
+ * Upload to the official upload locations:
+   * ???
+ * Announce more fully:
+   * python-announce
+   * PyPI
+   * Launchpad
+   * Blog
+ 
