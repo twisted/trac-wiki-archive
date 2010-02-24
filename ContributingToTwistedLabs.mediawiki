@@ -38,7 +38,7 @@ Donations are [/trac/wiki/TwistedSoftwareFoundation#Background tax-deductible] a
 == [#OtherWays Other Ways to Contribute] ==
 
  * [wiki:ReviewingDocumentation Review and add documentation]
- * [/wiki/ReviewProcess Code Reviews] 
+ * [wiki:ReviewProcess Code Reviews] 
  * Submit bug reports (you must first be [/trac/register registered])  
  * Provide technical support (answer questions on [#GettingHelp IRC and the mail lists])
  * Provide [wiki:NeededBuildSlaves needed buildslaves]
