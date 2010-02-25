@@ -8,6 +8,7 @@ Attendees:
  * Tim Couper
  * Pavel Pergamenshchik
  * fijal
+ * glyph
 
 Things we're working on:
  * Releasing Twisted!
