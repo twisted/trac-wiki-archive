@@ -22,7 +22,7 @@ Things we're working on:
  * Iterative deferred #411
  * Getting rid of 3k warnings and generally doing 2to3
  * Event support for iocpreactor
- * Making Twisted fast on PyPy
+ * Making Twisted fast on !PyPy
 
 Success!
  * Fixed #4179, #3056, #3289, #4178, #4192, #4284, #4282, #3718, #4143, #4255, #3925, #4172, #4272, #2376, #733, #990, #3462, #1083, #2367, #972
