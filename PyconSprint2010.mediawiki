@@ -12,7 +12,7 @@ Attendees:
 
 Things we're working on:
  * Releasing Twisted!
- * Thinking about switching to Bazaar
+ * Thinking about [wiki:SwitchToBazaar switching to Bazaar]
  * Making Twisted easier to contribute
  * Twisted Web features and bug fixes
  * Fixing obscure Windows/gtk2 compatibility issues
