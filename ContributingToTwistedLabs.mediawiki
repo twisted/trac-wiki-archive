@@ -4,7 +4,7 @@ There are many ways individuals and organizations can make contributions to Twis
 
 Many open source projects are perpetually crunched for volunteer labor. Twisted is no different in this respect — we could always use more help from the community.  However, we are lucky to have something that most projects don't: the ability to convert dollars directly into maintenance that benefits the project.
 
-When you contribute money to the Twisted project, you are directly contributing to get bugs fixed, features implemented, and tickets reviewed
+When you contribute money to the Twisted project, you are directly contributing to get bugs fixed, features implemented, and tickets reviewed.
 Donations are [/trac/wiki/TwistedSoftwareFoundation#Background tax-deductible] and can be made via [/trac "Google Checkout or Paypal"] or directly to the [/trac/wiki/TwistedSoftwareFoundation Twisted Software Foundation].
 
 == Code Contributions ==
