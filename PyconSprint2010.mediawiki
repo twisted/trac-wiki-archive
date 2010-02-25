@@ -20,6 +20,7 @@ Things we're working on:
  * Web socket #4173
  * Reviewing #3292
  * Iterative deferred #411
+ * Endpoints #1442
  * Getting rid of 3k warnings and generally doing 2to3
  * Event support for iocpreactor
  * Making Twisted fast on !PyPy
