@@ -19,10 +19,8 @@
 
 
 == Open questions ==
-=== General ===
- * How do I decide the version number?
 
-=== News ===
+ * How do I decide the version number?
  * Do we need to commit the changes from `build-news` for pre-releases?
    * They leave the pre-release version in the NEWS files when doing pre-releases
    * But build-tarballs won't work with uncommitted changes
@@ -43,6 +41,7 @@
      * Need a standard place to upload tarballs
    * for signing tarballs
    * for uploading release tarballs
+ * It would be nice if the news fragments contained information about who made the changes
 
 == Suggestions for additions to pre-release steps ==
 
