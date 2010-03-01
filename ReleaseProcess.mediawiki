@@ -68,6 +68,9 @@
  * Tag the branch
    * XXX: How do I do this?
  * Make new tarballs
+ * Build windows installers
+   * http://buildbot.twistedmatrix.com/builders/winxp32-py2.5-msi/
+   * Branch: "branches/release-x-4290"
  * Upload to the official upload locations:
    * Prerequisites: cube account; write access to /srv/www-data/twisted/Releases/
    * <radix> jml: `cube:/srv/www-data/twisted/Releases/<Project>/<First two parts of version number>/*`
