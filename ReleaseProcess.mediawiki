@@ -64,6 +64,7 @@
    * XXX: File a bug
    * `find . -type f -not -path '*.svn*' -not -name '*~' | xargs grep -n 'pre2'`
  * Add the quote of the release
+ * Get the branch reviewed
  * Make new tarballs
  * Upload to the official upload locations:
    * Prerequisites: cube account; write access to /srv/www-data/twisted/Releases/
