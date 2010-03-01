@@ -65,10 +65,19 @@
    * `find . -type f -not -path '*.svn*' -not -name '*~' | xargs grep -n 'pre2'`
  * Add the quote of the release
  * Get the branch reviewed
+ * Merge the branch into trunk
  * Tag the branch
    * XXX: How do I do this?
    * `svn cp svn+ssh://svn.twistedmatrix.com/svn/Twisted/branches/release-x-4290 svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-10.0.0`
- * Merge the branch into trunk
+ * '''If at this point you discover a showstopper bug in the release:'''
+   * File a ticket
+   * Fix the bug
+   * Get it reviewed
+   * Land the fix
+   * Merge the change to the release branch (not the tag)
+   * Delete the tag
+   * Make a new tag with the same name from the release branch
+   * '''Or''' make a new release with a micro version change
  * Make new tarballs
  * Build windows installers
    * http://buildbot.twistedmatrix.com/builders/winxp32-py2.5-msi/
