@@ -40,6 +40,7 @@
    * Release announcements should include actual NEWS summaries and maybe a pointer to the full thing
  * There are missing scripts:
    * for uploading pre-release tarballs
+     * Need a standard place to upload tarballs
    * for signing tarballs
    * for uploading release tarballs
 
@@ -55,6 +56,7 @@
  * Document how and when to tag releases in SVN.
  * Read through the NEWS files and write a summary of the interesting changes for the release
  * Read the INSTALL file, check the required Python version. If it mentions supported platforms, check that the list matches the current set of buildbots.
+ * Get cube access
 
 == For the release itself ==
 
