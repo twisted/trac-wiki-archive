@@ -62,6 +62,7 @@
    * "Other fixes" and maybe all tickets should be links when they are on the web
  * Document how and when to tag releases in SVN.
  * Read through the NEWS files and write a summary of the interesting changes for the release
+ * Read the INSTALL file, check the required Python version. If it mentions supported platforms, check that the list matches the current set of buildbots.
 
 == For the release itself ==
 
