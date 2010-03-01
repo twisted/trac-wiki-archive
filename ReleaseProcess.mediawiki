@@ -94,12 +94,14 @@
    * foom offered to force the mirror
  * Update the WikiStart and [wiki:Downloads] pages
  * Announce more fully:
-   * python-announce
+   * twisted-python@twistedmatrix.com
+   * python-announce-list@python.org
+   * python-list@python.org,
+   * twisted-web@twistedmatrix.com
+   * twisted-jabber@ik.nu
    * PyPI
    * Launchpad; https://edge.launchpad.net/twisted/+announcements
    * `labs.twistedmatrix.com`
-   * twisted-python
-   * twisted-web
  * Packaging
    * Do we need to do anything for Debian / Ubuntu?
    * OS X
