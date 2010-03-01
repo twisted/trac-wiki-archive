@@ -67,10 +67,13 @@
  * Get the branch reviewed
  * Tag the branch
    * XXX: How do I do this?
+ * Merge the branch into trunk
+   * ???
  * Make new tarballs
  * Build windows installers
    * http://buildbot.twistedmatrix.com/builders/winxp32-py2.5-msi/
    * Branch: "branches/release-x-4290"
+   * Download from http://buildbot.twistedmatrix.com/builds/
  * Upload to the official upload locations:
    * Prerequisites: cube account; write access to /srv/www-data/twisted/Releases/
    * <radix> jml: `cube:/srv/www-data/twisted/Releases/<Project>/<First two parts of version number>/*`
@@ -84,7 +87,7 @@
  * Announce more fully:
    * python-announce
    * PyPI
-   * Launchpad
+   * Launchpad; https://edge.launchpad.net/twisted/+announcements
    * `labs.twistedmatrix.com`
    * twisted-python
    * twisted-web
