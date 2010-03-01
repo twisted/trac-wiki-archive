@@ -43,6 +43,7 @@
    * for signing tarballs
    * for uploading release tarballs
  * It would be nice if the news fragments contained information about who made the changes
+ * Mine ReleaseProcedure for useful information
 
 == Suggestions for additions to pre-release steps ==
 
