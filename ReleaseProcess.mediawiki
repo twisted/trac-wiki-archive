@@ -72,10 +72,10 @@
    * `labs.twistedmatrix.com`
    * twisted-python
    * twisted-web
- * Packaging?!?!?
+ * Packaging
    * Do we need to do anything for Debian / Ubuntu?
    * OS X
      * ~~Packaging not necessary, there's no good way to make an installer that overrides the default Python~~ see #3279
      * Definitely need instructions for OS X-using developers who want to use a more recent version of Twisted
-   * Win32
+   * Win32 - see [source:trunk/win32/maintainer-notes.txt]
    * eggs?
