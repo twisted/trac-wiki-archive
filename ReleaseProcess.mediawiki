@@ -26,18 +26,10 @@
  * Do we need to commit the changes from `build-news` for pre-releases?
    * They leave the pre-release version in the NEWS files when doing pre-releases
    * But build-tarballs won't work with uncommitted changes
-
-=== Testing ===
  * How do we manage the case where there are untested builds in trunk?
-
- === Installers ===
  * How/when in this process are the Windows installers and/or MacOS .dmg files created? See #3279.
    * (I presume .deb and .rpm packages are left up to Linux distro packagers)
-
-=== Documentation ===
  * How/when in this process are the docs built?
-
-=== Website ===
  * When should the front page of the wiki be updated?
 
 == Notes ==
