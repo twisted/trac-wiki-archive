@@ -75,6 +75,8 @@
    * Prerequisites: cube account; write access to /srv/www-data/twisted/Releases/
    * <radix> jml: `cube:/srv/www-data/twisted/Releases/<Project>/<First two parts of version number>/*`
    * We hell of need a script to do this too. XXX: file a bug
+   * New directories are 2775, and ought to be in the www-data group. New files are 664, and ought to be in the www-data group
+   * `find /srv/www-data/twisted/Releases -name '*10.0.0*' | xargs chmod g+w`
  * Wait for the tarballs to be mirrored to tmrc
    * They are mirrored 15 minutes every hour
  * Update the WikiStart and [Download] pages
