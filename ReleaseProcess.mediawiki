@@ -67,8 +67,8 @@
  * Get the branch reviewed
  * Tag the branch
    * XXX: How do I do this?
+   * `svn cp svn+ssh://svn.twistedmatrix.com/svn/Twisted/branches/release-x-4290 svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-10.0.0`
  * Merge the branch into trunk
-   * ???
  * Make new tarballs
  * Build windows installers
    * http://buildbot.twistedmatrix.com/builders/winxp32-py2.5-msi/
