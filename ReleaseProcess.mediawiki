@@ -65,11 +65,16 @@
    * `find . -type f -not -path '*.svn*' -not -name '*~' | xargs grep -n 'pre2'`
  * Add the quote of the release
  * Get the branch reviewed
+ * Tag the branch
+   * XXX: How do I do this?
  * Make new tarballs
  * Upload to the official upload locations:
    * Prerequisites: cube account; write access to /srv/www-data/twisted/Releases/
    * <radix> jml: `cube:/srv/www-data/twisted/Releases/<Project>/<First two parts of version number>/*`
    * We hell of need a script to do this too. XXX: file a bug
+ * Wait for the tarballs to be mirrored to tmrc
+   * They are mirrored 15 minutes every hour
+ * Update the WikiStart and [Download] pages
  * Announce more fully:
    * python-announce
    * PyPI
