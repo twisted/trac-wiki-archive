@@ -67,6 +67,7 @@
  * Add the quote of the release
  * Make new tarballs
  * Upload to the official upload locations:
+   * Prerequisites: cube account; write access to /srv/www-data/twisted/Releases/
    * <radix> jml: `cube:/srv/www-data/twisted/Releases/<Project>/<First two parts of version number>/*`
    * We hell of need a script to do this too. XXX: file a bug
  * Announce more fully:
