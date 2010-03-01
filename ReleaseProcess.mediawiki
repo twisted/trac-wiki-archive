@@ -61,14 +61,12 @@
 == For the release itself ==
 
  * Remove the 'pre'
-   * So tedious! Write a tool to do this.
-   * XXX: File a bug
+   * So tedious! Write a tool to do this. #4316
    * `find . -type f -not -path '*.svn*' -not -name '*~' | xargs grep -n 'pre2'`
  * Add the quote of the release
  * Get the branch reviewed
  * Merge the branch into trunk
  * Tag the branch
-   * XXX: How do I do this?
    * `svn cp svn+ssh://svn.twistedmatrix.com/svn/Twisted/branches/release-x-4290 svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-10.0.0`
  * '''If at this point you discover a showstopper bug in the release:'''
    * File a ticket
@@ -87,7 +85,7 @@
  * Upload to the official upload locations:
    * Prerequisites: cube account; write access to /srv/www-data/twisted/Releases/
    * <radix> jml: `cube:/srv/www-data/twisted/Releases/<Project>/<First two parts of version number>/*`
-   * We hell of need a script to do this too. XXX: file a bug
+   * We hell of need a script to do this too. #2888
    * New directories are 2775, and ought to be in the www-data group. New files are 664, and ought to be in the www-data group
    * `find /srv/www-data/twisted/Releases -name '*10.0.0*' | xargs chmod g+w`
  * Wait for the tarballs to be mirrored to tmrc
