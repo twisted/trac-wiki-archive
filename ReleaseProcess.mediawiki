@@ -79,7 +79,8 @@
    * `find /srv/www-data/twisted/Releases -name '*10.0.0*' | xargs chmod g+w`
  * Wait for the tarballs to be mirrored to tmrc
    * They are mirrored 15 minutes every hour
- * Update the WikiStart and [Download] pages
+   * foom offered to force the mirror
+ * Update the WikiStart and [wiki:Download] pages
  * Announce more fully:
    * python-announce
    * PyPI
