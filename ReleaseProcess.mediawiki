@@ -80,7 +80,7 @@
  * Wait for the tarballs to be mirrored to tmrc
    * They are mirrored 15 minutes every hour
    * foom offered to force the mirror
- * Update the WikiStart and [wiki:Download] pages
+ * Update the WikiStart and [wiki:Downloads] pages
  * Announce more fully:
    * python-announce
    * PyPI
