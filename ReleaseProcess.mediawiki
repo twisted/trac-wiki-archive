@@ -13,23 +13,31 @@
  1. Run `./bin/admin/build-tarballs . /tmp/twisted-release/`
  1. Upload the tarballs to a public website
  1. Announce the pre-release on
-    1. the twisted-python mailing list
+    1. the twisted-python [wiki:TwistedCommunity#MailLists mailing list]
     1. on IRC in the #twisted topic
-    1. in a blog post, ideally labs.twistedmatrix.com
+    1. in a blog post, ideally `labs.twistedmatrix.com`
 
 
 == Open questions ==
-
+=== General ===
  * How do I decide the version number?
 
+=== News ===
  * Do we need to commit the changes from `build-news` for pre-releases?
    * They leave the pre-release version in the NEWS files when doing pre-releases
    * But build-tarballs won't work with uncommitted changes
 
+=== Testing ===
  * How do we manage the case where there are untested builds in trunk?
- * How/when in this process are the Windows installers and/or MacOS .dmg files created?
+
+ === Installers ===
+ * How/when in this process are the Windows installers and/or MacOS .dmg files created? See #3279.
    * (I presume .deb and .rpm packages are left up to Linux distro packagers)
+
+=== Documentation ===
  * How/when in this process are the docs built?
+
+=== Website ===
  * When should the front page of the wiki be updated?
 
 == Notes ==
@@ -46,11 +54,11 @@
 == Suggestions for additions to pre-release steps ==
 
  * pick a release quote :)
- * bump copyrights in LICENSE and README
- * Delete the news NNNN.bugfix etc files after building NEWS
+ * bump copyrights in [source:trunk/LICENSE], [source:trunk/twisted/_version.py] and [source:trunk/README]
+ * Delete the news `NNNN.bugfix` etc files after building [source:trunk/NEWS]
  * Check the milestone for the upcoming release, get rid of any non-critical bugs
  * Check for any open tickets marked regressions, get them fixed
- * A thought for future releases: since we'd really like folks to download the prereleases and try them out, perhaps we should put the NEWS file on the web somewhere official, too, so they can see all the cool stuff they can try out?
+ * A thought for future releases: since we'd really like folks to download the prereleases and try them out, perhaps we should put the [source:trunk/NEWS NEWS] file on the web somewhere official, too, so they can see all the cool stuff they can try out?
    * "Other fixes" and maybe all tickets should be links when they are on the web
  * Document how and when to tag releases in SVN.
  * Read through the NEWS files and write a summary of the interesting changes for the release
@@ -61,18 +69,18 @@
  * Add the quote of the release
  * Make new tarballs
  * Upload to the official upload locations:
-   * <radix> jml: cube:/srv/www-data/twisted/Releases/<Project>/<First two parts of version number>/*
+   * <radix> jml: `cube:/srv/www-data/twisted/Releases/<Project>/<First two parts of version number>/*`
  * Announce more fully:
    * python-announce
    * PyPI
    * Launchpad
-   * labs.twistedmatrix.com
+   * `labs.twistedmatrix.com`
    * twisted-python
    * twisted-web
  * Packaging?!?!?
    * Do we need to do anything for Debian / Ubuntu?
    * OS X
-     * Packaging not necessary, there's no good way to make an installer that overrides the default Python
+     * ~~Packaging not necessary, there's no good way to make an installer that overrides the default Python~~ see #3279
      * Definitely need instructions for OS X-using developers who want to use a more recent version of Twisted
    * Win32
    * eggs?
