@@ -44,6 +44,7 @@
     1. [ticket:4023 Support HTTPS URLs and certificate verification]
   1. [ticket:2714 Support HTTP proxies]
   1. Implement other HTTP protocol and high-level features
-    1. [ticket:3420 persistent connections]
+    1. [ticket:3420 high-level access to persistent connections]
+      1. [ticket:4223 low-level protocol support for controlling whether the connection is re-used or not]
     1. ''100 Continue'' support
   1. Implement HTTP header parsing to provide access to structured header values (based on `twisted.web2.http_headers`)
