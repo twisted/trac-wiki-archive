@@ -38,7 +38,7 @@
 === Plan ===
 
   1. [ticket:886 Implement minimal, good, well-tested (etc) HTTP client protocol and the basic request/response API from above (maybe based on `twisted.web2.client`)]
-  1. Support timeouts: #3450, probably others
+  1. Support timeouts: #3450, #4330, probably others
   1. [ticket:3987 Implement a high-level API with minimal additional functionality]
     1. [ticket:4017 Provide a file-based message body producer]
     1. [ticket:4023 Support HTTPS URLs and certificate verification]
