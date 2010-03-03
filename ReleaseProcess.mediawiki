@@ -81,6 +81,7 @@
  * Make new tarballs
  * Build windows installers
    * http://buildbot.twistedmatrix.com/builders/winxp32-py2.5-msi/
+   * http://buildbot.twistedmatrix.com/builders/winxp32-py2.6-msi/
    * Branch: "branches/release-x-4290"
    * Download from http://buildbot.twistedmatrix.com/builds/
  * Sign them!
