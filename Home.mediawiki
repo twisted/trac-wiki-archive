@@ -15,6 +15,7 @@
     <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.tar.bz2#md5=3b226af1a19b25e3b3e93cc6edf5e284">Twisted 10.0.0 tar</a><br />
     Win32:<br/>
     <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.win32-py2.5.msi">Twisted 10.0.0 for Python 2.5</a><br/>
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.win32-py2.6.msi">Twisted 10.0.0 for Python 2.6</a><br/>
     And More:<br/>
     <a class="wiki" href="/trac/wiki/Downloads">Other Downloads</a>
   </div>
