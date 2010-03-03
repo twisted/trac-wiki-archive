@@ -83,6 +83,9 @@
    * http://buildbot.twistedmatrix.com/builders/winxp32-py2.5-msi/
    * Branch: "branches/release-x-4290"
    * Download from http://buildbot.twistedmatrix.com/builds/
+ * Sign them!
+   * `md5sum * | gpg -a --clearsign > twisted-10.0.0-md5sums.txt`
+   * `scp twisted-10.0.0-md5sums.txt  cube.twistedmatrix.com:/srv/www-data/twisted/Releases/`
  * Upload to the official upload locations:
    * Prerequisites: cube account; write access to /srv/www-data/twisted/Releases/
    * <radix> jml: `cube:/srv/www-data/twisted/Releases/<Project>/<First two parts of version number>/*`
