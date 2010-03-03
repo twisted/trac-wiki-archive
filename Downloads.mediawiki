@@ -18,6 +18,7 @@ An Ubuntu PPA was setup on Launchpad to obtain more recent packages:
 == Windows ==
 
  * [http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.win32-py2.5.msi Twisted 10.0.0 for Python 2.5]
+ * [http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.win32-py2.6.msi Twisted 10.0.0 for Python 2.6]
  * [http://tmrc.mit.edu/mirror/twisted/Dependencies/Win/pycrypto-2.0.1.win32-py2.5.exe PyCrypto 2.0.1 for Python 2.5] (needed by Conch)
  * [http://pypi.python.org/pypi/pyOpenSSL PyOpenSSL] (needed for SSL)
 
@@ -51,13 +52,14 @@ You probably don't want these unless you have special considerations:
  * [http://tmrc.mit.edu/mirror/twisted/Core/10.0/TwistedCore-10.0.0.tar.bz2 Twisted Core] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/topfiles/NEWS Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Conch/10.0/TwistedConch-10.0.0.tar.bz2 Twisted Conch] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/conch/topfiles/NEWS Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Web/10.0/TwistedWeb-10.0.0.tar.bz2 Twisted Web] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/web/topfiles/NEWS Release notes])
- * Twisted Web2 is no longer built as a tarball. If you really want it, it's present in [source:/tags/releases/twisted-10.0.0/ SVN] ([source:/tags/releases/twisted-10.0.0/twisted/web2/topfiles/NEWS Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Mail/10.0/TwistedMail-10.0.0.tar.bz2 Twisted Mail] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/mail/topfiles/NEWS Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Names/10.0/TwistedNames-10.0.0.tar.bz2 Twisted Names] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/names/topfiles/NEWS Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/News/10.0/TwistedNews-10.0.0.tar.bz2 Twisted News] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/news/topfiles/NEWS Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Words/10.0/TwistedWords-10.0.0.tar.bz2 Twisted Words] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/words/topfiles/NEWS Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Lore/10.0/TwistedLore-10.0.0.tar.bz2 Twisted Lore] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/lore/topfiles/NEWS Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Runner/10.0/TwistedRunner-10.0.0.tar.bz2 Twisted Runner] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/runner/topfiles/NEWS Release notes])
+
+Twisted Web2 is no longer built as a tarball. If you really want it, it's present in [source:/tags/releases/twisted-10.0.0/ SVN] ([source:/tags/releases/twisted-10.0.0/twisted/web2/topfiles/NEWS Release notes])
 
 == Signed MD5 Sums ==
 
