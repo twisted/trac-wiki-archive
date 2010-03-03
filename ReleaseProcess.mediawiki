@@ -86,6 +86,7 @@
  * Sign them!
    * `md5sum * | gpg -a --clearsign > twisted-10.0.0-md5sums.txt`
    * `scp twisted-10.0.0-md5sums.txt  cube.twistedmatrix.com:/srv/www-data/twisted/Releases/`
+   * [http://tmrc.mit.edu/mirror/twisted/twisted-9.0.0-md5sums.txt example of the result]
  * Upload to the official upload locations:
    * Prerequisites: cube account; write access to /srv/www-data/twisted/Releases/
    * <radix> jml: `cube:/srv/www-data/twisted/Releases/<Project>/<First two parts of version number>/*`
