@@ -2,13 +2,13 @@
 
 For more information about Twisted, please see the [wiki:TwistedProject Twisted project page]. You can get older releases from our [http://tmrc.mit.edu/mirror/twisted/ download site].
 
-The current release is Twisted 9.0.0: [http://twistedmatrix.com/trac/browser/tags/releases/twisted-9.0.0/NEWS?format=raw Release notes]
+The current release is Twisted 10.0.0: [http://twistedmatrix.com/trac/browser/tags/releases/twisted-10.0.0/NEWS?format=raw Release notes]
 
 == Ubuntu and Debian ==
 
 Packages of Twisted are available in Ubuntu and Debian as 'python-twisted'.
 
-If you wish to build and install the latest Twisted by-hand on Ubuntu ensure that you have the 'python-dev' and 'build-essential' packages installed.  
+If you wish to build and install the latest Twisted by-hand on Ubuntu ensure that you have the 'python-dev' and 'build-essential' packages installed.
 
 An Ubuntu PPA was setup on Launchpad to obtain more recent packages:
 
@@ -17,9 +17,7 @@ An Ubuntu PPA was setup on Launchpad to obtain more recent packages:
 
 == Windows ==
 
- * [http://tmrc.mit.edu/mirror/twisted/Twisted/9.0/Twisted-9.0.0.win32-py2.4.exe Twisted 9.0.0 for Python 2.4]
- * [http://tmrc.mit.edu/mirror/twisted/Twisted/9.0/Twisted-9.0.0.win32-py2.5.exe Twisted 9.0.0 for Python 2.5]
- * [http://tmrc.mit.edu/mirror/twisted/Twisted/9.0/Twisted-9.0.0.win32-py2.6.exe Twisted 9.0.0 for Python 2.6]
+ * [http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.win32-py2.5.msi Twisted 10.0.0 for Python 2.5]
  * [http://tmrc.mit.edu/mirror/twisted/Dependencies/Win/pycrypto-2.0.1.win32-py2.5.exe PyCrypto 2.0.1 for Python 2.5] (needed by Conch)
  * [http://pypi.python.org/pypi/pyOpenSSL PyOpenSSL] (needed for SSL)
 
@@ -31,7 +29,7 @@ An Ubuntu PPA was setup on Launchpad to obtain more recent packages:
 
 == Source Tarball ==
 
- * [http://tmrc.mit.edu/mirror/twisted/Twisted/9.0/Twisted-9.0.0.tar.bz2 Twisted 9.0.0 tarball]
+ * [http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.tar.bz2 Twisted 10.0.0 tarball]
 
 == View on the Web ==
 
@@ -48,22 +46,23 @@ To checkout code from the repository, use:
 
 You probably don't want these unless you have special considerations (note: TwistedWeb2 listed here is not in the integrated tarball mentioned above):
 
- * [http://tmrc.mit.edu/mirror/twisted/Core/9.0/TwistedCore-9.0.0.tar.bz2 Twisted Core] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/topfiles/NEWS Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Conch/9.0/TwistedConch-9.0.0.tar.bz2 Twisted Conch] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/conch/topfiles/NEWS Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Web/9.0/TwistedWeb-9.0.0.tar.bz2 Twisted Web] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/web/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Core/10.0/TwistedCore-10.0.0.tar.bz2 Twisted Core] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Conch/10.0/TwistedConch-10.0.0.tar.bz2 Twisted Conch] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/conch/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Web/10.0/TwistedWeb-10.0.0.tar.bz2 Twisted Web] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/web/topfiles/NEWS Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Web2/8.1/TwistedWeb2-8.1.0.tar.bz2 Twisted Web2] - 8.1.0 ([source:/tags/releases/twisted-8.1.0/twisted/web2/topfiles/NEWS Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Mail/9.0/TwistedMail-9.0.0.tar.bz2 Twisted Mail] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/mail/topfiles/NEWS Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Names/9.0/TwistedNames-9.0.0.tar.bz2 Twisted Names] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/names/topfiles/NEWS Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/News/9.0/TwistedNews-9.0.0.tar.bz2 Twisted News] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/news/topfiles/NEWS Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Words/9.0/TwistedWords-9.0.0.tar.bz2 Twisted Words] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/words/topfiles/NEWS Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Lore/9.0/TwistedLore-9.0.0.tar.bz2 Twisted Lore] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/lore/topfiles/NEWS Release notes])
- * [http://tmrc.mit.edu/mirror/twisted/Runner/9.0/TwistedRunner-9.0.0.tar.bz2 Twisted Runner] - 9.0.0 ([source:/tags/releases/twisted-9.0.0/twisted/runner/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Mail/10.0/TwistedMail-10.0.0.tar.bz2 Twisted Mail] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/mail/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Names/10.0/TwistedNames-10.0.0.tar.bz2 Twisted Names] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/names/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/News/10.0/TwistedNews-10.0.0.tar.bz2 Twisted News] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/news/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Words/10.0/TwistedWords-10.0.0.tar.bz2 Twisted Words] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/words/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Lore/10.0/TwistedLore-10.0.0.tar.bz2 Twisted Lore] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/lore/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Runner/10.0/TwistedRunner-10.0.0.tar.bz2 Twisted Runner] - 10.0.0 ([source:/tags/releases/twisted-10.0.0/twisted/runner/topfiles/NEWS Release notes])
 
 == Signed MD5 Sums ==
+
+md5 sums of the 10.0.0 release are [http://tmrc.mit.edu/mirror/twisted/twisted-10.0.0-md5sums.txt here].
 
 md5 sums of the 9.0.0 release are [http://tmrc.mit.edu/mirror/twisted/twisted-9.0.0-md5sums.txt here].
 
 md5 sums of the 8.2.0 release are [http://tmrc.mit.edu/mirror/twisted/twisted-8.2.0-md5sums.txt here].
 
 md5 sums of the 8.1.0 release are [http://tmrc.mit.edu/mirror/twisted/twisted-8.1.0-md5sums.txt here].
-
