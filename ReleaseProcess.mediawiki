@@ -44,13 +44,14 @@
    * for uploading release tarballs
  * It would be nice if the news fragments contained information about who made the changes
  * Mine ReleaseProcedure for useful information
+ * A definition or at least some examples of what bugs should be considered release blockers would be a good idea. Ultimately it's the RM's discretion though.
 
 == Suggestions for additions to pre-release steps ==
 
  * pick a release quote :)
  * bump copyrights in [source:trunk/LICENSE], [source:trunk/twisted/_version.py] and [source:trunk/README]
  * Delete the news `NNNN.bugfix` etc files after building [source:trunk/NEWS]
- * Check the milestone for the upcoming release, get rid of any non-critical bugs
+ * Check the milestone for the upcoming release, get rid of any non-critical bugs, get any critical bugs fixed
  * Check for any open tickets marked regressions, get them fixed
  * A thought for future releases: since we'd really like folks to download the prereleases and try them out, perhaps we should put the [source:trunk/NEWS NEWS] file on the web somewhere official, too, so they can see all the cool stuff they can try out?
    * "Other fixes" and maybe all tickets should be links when they are on the web
