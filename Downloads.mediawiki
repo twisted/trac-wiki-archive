@@ -24,6 +24,8 @@ An Ubuntu PPA was setup on Launchpad to obtain more recent packages:
 
 == Mac OS X ==
 
+Twisted is no longer making a .dmg for OS X because OS X versions 10.5 and greater ship with Twisted installed and the default Python path configuration makes it impossible for a user to upgrade Twisted without possibly breaking applications which depend on the system Twisted installation.
+
  * [http://tmrc.mit.edu/mirror/twisted/Twisted/8.2/Twisted-8.2.0_py2.5_osx10.5.dmg Twisted 8.2.0 for OS X 10.5]
 
 
