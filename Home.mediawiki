@@ -12,13 +12,9 @@
   </div>
   <div id="download" style="color: white;position: relative; left: -30px;">
     Source:<br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/9.0/Twisted-9.0.0.tar.bz2#md5=93fc2756a09ffd1350c046cc940e4311">Twisted 9.0.0 tar</a><br />
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.tar.bz2#md5=3b226af1a19b25e3b3e93cc6edf5e284">Twisted 10.0.0 tar</a><br />
     Win32:<br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/9.0/Twisted-9.0.0.win32-py2.4.exe">Twisted 9.0.0 for Python 2.4</a><br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/9.0/Twisted-9.0.0.win32-py2.5.exe">Twisted 9.0.0 for Python 2.5</a><br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/9.0/Twisted-9.0.0.win32-py2.6.exe">Twisted 9.0.0 for Python 2.6</a><br/>
-    Mac OS X 10.5:<br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/8.2/Twisted-8.2.0_py2.5_osx10.5.dmg">Twisted 8.2.0 for Python 2.5</a><br/>
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.win32-py2.5.msi">Twisted 10.0.0 for Python 2.5</a><br/>
     And More:<br/>
     <a class="wiki" href="/trac/wiki/Downloads">Other Downloads</a>
   </div>
