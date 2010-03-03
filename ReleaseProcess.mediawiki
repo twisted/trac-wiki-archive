@@ -105,6 +105,18 @@
    * twisted-web@twistedmatrix.com
    * twisted-jabber@ik.nu
    * PyPI
+     * You need to be exarkun to do this
+     * http://pypi.python.org/pypi/Twisted/
+     * http://pypi.python.org/pypi/Twisted%20Pair/
+     * http://pypi.python.org/pypi/Twisted%20Conch/
+     * http://pypi.python.org/pypi/Twisted%20Core/
+     * http://pypi.python.org/pypi/Twisted%20Lore/
+     * http://pypi.python.org/pypi/Twisted%20Mail/
+     * http://pypi.python.org/pypi/Twisted%20Names/
+     * http://pypi.python.org/pypi/Twisted%20News/
+     * http://pypi.python.org/pypi/Twisted%20Runner/
+     * http://pypi.python.org/pypi/Twisted%20Web/
+     * http://pypi.python.org/pypi/Twisted%20Words/
    * Launchpad; https://edge.launchpad.net/twisted/+announcements
    * `labs.twistedmatrix.com`
    * Twitter, if you feel like it
