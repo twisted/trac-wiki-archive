@@ -107,6 +107,8 @@
    * PyPI
    * Launchpad; https://edge.launchpad.net/twisted/+announcements
    * `labs.twistedmatrix.com`
+   * Twitter, if you feel like it
+   * #twisted topic on IRC (you'll need ops)
  * Packaging
    * Do we need to do anything for Debian / Ubuntu?
    * OS X
