@@ -99,6 +99,8 @@
    * They are mirrored 15 minutes every hour
    * foom offered to force the mirror
  * Update the WikiStart and [wiki:Downloads] pages
+ * Update website documentation
+   * XXX not sure what this involves
  * Announce more fully:
    * twisted-python@twistedmatrix.com
    * python-announce-list@python.org
