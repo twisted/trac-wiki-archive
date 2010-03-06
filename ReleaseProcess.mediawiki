@@ -1,4 +1,6 @@
-'''This document is a draft'''
+'''This document is a draft.'''
+
+'''jml wrote it, and wants to give it a lot of love very very soon. If you want to edit it before then, consider talking to jml'''
 
 = How to do a pre-release =
 
