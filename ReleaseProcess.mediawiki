@@ -135,3 +135,8 @@
 == Some helpful sanity checks ==
 
  * Read through the `INSTALL` and `README` files to make sure things like the supported Python versions are correct
+
+= See also =
+
+ * [http://twistedmatrix.com/trac/query?status=new&status=assigned&status=reopened&component=release+management&order=priority release management tickets]
+ * [http://twistedmatrix.com/trac/query?status=new&status=assigned&status=reopened&milestone=regular-releases&order=priority regular-release tickets]
