@@ -100,7 +100,33 @@
    * foom offered to force the mirror
  * Update the WikiStart and [wiki:Downloads] pages
  * Update website documentation
-   * XXX not sure what this involves
+   * Get the dependencies
+     * Twisted (export from tagged release branch)
+     * Pydoctor
+     * Nevow
+     * Epytext
+   * Run the unofficial build-docs script
+     * XXX: include here
+   * Update the permissions
+     * XXX: how?
+   * cp the documents to /srv/.../documentation/10.0.0
+     * XXX: full path please
+   * rm -rf twisted/{vfs,web2} from the export
+   * Run the unofficial build-api script
+     * XXX: include here
+   * Move the API docs and update the permissions
+     * cd /srv/www-data/website/vhosts/twistedmatrix.com/documents
+     * mv ~exarkun/documentation/twisted-10.0.0/api/ ./10.0.0/
+     * chown -R www-data.www-data 10.0.0/api/
+   * Run the build-docs-book.py script
+   * Copy the book
+   * Check the permissions
+     * XXX: what permissions?
+   * Test the generated docs
+     * XXX: what to look for?
+   * Change the "current" symlink
+     * XXX: exact commands
+   * Removing the staging area
  * Announce more fully:
    * twisted-python@twistedmatrix.com
    * python-announce-list@python.org
