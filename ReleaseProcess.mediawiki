@@ -6,6 +6,14 @@
 
 To release Twisted, we do a pre-release and then an actual release.
 
+By the end of a Twisted release we'll have:
+ * Tarballs for Twisted as a whole, and for each of its subprojects
+ * Windows installers for the whole Twisted project
+ * Updated documentation (API, howtos & book) on the twistedmatrix.com site
+ * Updated download links on the twistedmatrix.com site 
+ * Announcement emails sent to major Python lists
+ * Announcement post on http://labs.twistedmatrix.com
+ * A tag in our Subversion repository marking the release
 
 = Prerequisites =
 
