@@ -131,28 +131,27 @@ jml
     1. e.g. `find /srv/www-data/twisted/Releases -name '*10.0.0*' | xargs chmod g+w`
  1. Wait for the tarballs to be mirrored to tmrc
    * They are mirrored 15 minutes every hour
-   * foom offered to force the mirror
- * Update the WikiStart and [wiki:Downloads] pages
- * Update website documentation
+   * You can ask foom on #twisted to force the mirror
+ 1. Update the WikiStart and [wiki:Downloads] pages
+    1. XXX: Describe this process exactly
+ 1. Update website documentation
+   * See APIDocs
    * Get the dependencies
      * Twisted (export from tagged release branch)
      * Pydoctor
      * Nevow
      * Epytext
-   * Run the unofficial build-docs script
-     * XXX: include here
+   * Run the unofficial build-docs script (see below)
    * Update the permissions
      * XXX: how?
    * cp the documents to /srv/.../documentation/10.0.0
      * XXX: full path please
    * rm -rf twisted/{vfs,web2} from the export
-   * Run the unofficial build-api script
-     * XXX: include here
+   * Run the unofficial build-api script (see below)
    * Move the API docs and update the permissions
      * cd /srv/www-data/website/vhosts/twistedmatrix.com/documents
      * mv ~exarkun/documentation/twisted-10.0.0/api/ ./10.0.0/
      * chown -R www-data.www-data 10.0.0/api/
-   * Run the build-docs-book.py script
    * Copy the book
    * Check the permissions
      * XXX: what permissions?
@@ -161,29 +160,72 @@ jml
    * Change the "current" symlink
      * XXX: exact commands
    * Removing the staging area
- * Announce more fully:
-   * twisted-python@twistedmatrix.com
-   * python-announce-list@python.org
-   * python-list@python.org,
-   * twisted-web@twistedmatrix.com
-   * twisted-jabber@ik.nu
-   * PyPI
-     * You need to be exarkun to do this
-     * http://pypi.python.org/pypi/Twisted/
-     * http://pypi.python.org/pypi/Twisted%20Pair/
-     * http://pypi.python.org/pypi/Twisted%20Conch/
-     * http://pypi.python.org/pypi/Twisted%20Core/
-     * http://pypi.python.org/pypi/Twisted%20Lore/
-     * http://pypi.python.org/pypi/Twisted%20Mail/
-     * http://pypi.python.org/pypi/Twisted%20Names/
-     * http://pypi.python.org/pypi/Twisted%20News/
-     * http://pypi.python.org/pypi/Twisted%20Runner/
-     * http://pypi.python.org/pypi/Twisted%20Web/
-     * http://pypi.python.org/pypi/Twisted%20Words/
-   * Launchpad; https://edge.launchpad.net/twisted/+announcements
-   * `labs.twistedmatrix.com`
-   * Twitter, if you feel like it
-   * #twisted topic on IRC (you'll need ops)
+ 1. Write the release announcement (see below)
+ 1. Announce the release
+    1. Send a text version of the announcement to: twisted-python@twistedmatrix.com, python-announce-list@python.org, python-list@python.org, twisted-web@twistedmatrix.com, twisted-jabber@ik.nu
+    1. Update PyPI records
+      * XXX: You need to be exarkun to do this
+      * http://pypi.python.org/pypi/Twisted/
+      * http://pypi.python.org/pypi/Twisted%20Pair/
+      * http://pypi.python.org/pypi/Twisted%20Conch/
+      * http://pypi.python.org/pypi/Twisted%20Core/
+      * http://pypi.python.org/pypi/Twisted%20Lore/
+      * http://pypi.python.org/pypi/Twisted%20Mail/
+      * http://pypi.python.org/pypi/Twisted%20Names/
+      * http://pypi.python.org/pypi/Twisted%20News/
+      * http://pypi.python.org/pypi/Twisted%20Runner/
+      * http://pypi.python.org/pypi/Twisted%20Web/
+      * http://pypi.python.org/pypi/Twisted%20Words/
+    1. Launchpad; https://launchpad.net/twisted/+announcements
+      * Include a text version of the announcement and the new entries of the NEWS file
+    1. http://labs.twistedmatrix.com
+      * Post a web version of the announcements, with links instead of literal URLs
+    1. Twitter, if you feel like it
+    1. #twisted topic on IRC (you'll need ops)
+
+== Release announcement ==
+
+The final release announcement should:
+ * Mention the version number
+ * Include links to the release tarballs & Windows installers
+ * Summarize the significant changes in the release
+ * Consider including the quote of the release
+ * Thank the contributors to the release
+
+Here's an example:
+
+{{{
+On behalf of Twisted Matrix Laboratories, I am honored to announce the
+release of Twisted 10.0.
+
+Highlights include:
+
+ * Improved documentation, including "Twisted Web in 60 seconds"
+
+ * Faster Perspective Broker applications
+
+ * A new Windows installer that ships without zope.interface
+
+ * Twisted no longer supports Python 2.3
+
+ * Over one hundred closed tickets
+
+For more information, see the NEWS file.
+
+It's stable, backwards compatible, well tested and in every way an
+improvement. Download it now from:
+
+ http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.tar.bz2 or
+ http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.win32-py2.5.msi
+
+Many thanks to Jean-Paul Calderone and Chris Armstrong, whose work on
+release automation tools and answers to numerous questions made this
+possible. Thanks also to the supporters of the Twisted Software
+Foundation and to the many contributors for this release.
+
+jml
+}}}
+
 
 = When things go wrong =
 
@@ -262,39 +304,6 @@ r.BookBuilder().build(FilePath('doc/core/howto'), done.keys(),
                       FilePath('book.pdf'))
 }}}
 
-== Twisted 10.0.0 announcement ==
-
-{{{
-On behalf of Twisted Matrix Laboratories, I am honored to announce the
-release of Twisted 10.0.
-
-Highlights include:
-
- * Improved documentation, including "Twisted Web in 60 seconds"
-
- * Faster Perspective Broker applications
-
- * A new Windows installer that ships without zope.interface
-
- * Twisted no longer supports Python 2.3
-
- * Over one hundred closed tickets
-
-For more information, see the NEWS file.
-
-It's stable, backwards compatible, well tested and in every way an
-improvement. Download it now from:
-
- http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.tar.bz2 or
- http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.win32-py2.5.msi
-
-Many thanks to Jean-Paul Calderone and Chris Armstrong, whose work on
-release automation tools and answers to numerous questions made this
-possible. Thanks also to the supporters of the Twisted Software
-Foundation and to the many contributors for this release.
-
-jml
-}}}
 
 = Open questions =
 
