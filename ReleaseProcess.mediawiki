@@ -306,3 +306,4 @@ jml
  * [http://twistedmatrix.com/trac/query?status=new&status=assigned&status=reopened&component=release+management&order=priority release management tickets]
  * [http://twistedmatrix.com/trac/query?status=new&status=assigned&status=reopened&milestone=regular-releases&order=priority regular-release tickets]
  * ReleaseAutomation
+ * [http://doc.bazaar.canonical.com/bzr.dev/developers/releasing.html Releasing Bazaar] -- release documentation for another project that does time-based releases
