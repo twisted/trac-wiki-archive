@@ -56,7 +56,7 @@ Every release of Twisted includes the whole project, the core and all subproject
  1. Bump copyright dates in [source:trunk/LICENSE], [source:trunk/twisted/_version.py] and [source:trunk/README]
  1. Make a temporary directory for the tarballs to live in (e.g. `mkdir /tmp/twisted-release`)
  1. Run `./bin/admin/build-tarballs . /tmp/twisted-release/`
- 1. Upload the tarballs to a public website
+ 1. Upload the tarballs to a public website (see #4353)
  1. Write the pre-release announcement
     1. Read through the `NEWS` file and summarize the interesting changes for the release
     1. Get someone else to look over the announcement before doing it
@@ -239,24 +239,6 @@ If you choose the third option, then you should:
  1. Recreate the tag from the release branch once the fix has been applied to that branch
 
 
-
-== Notes ==
-
- * Test `change-versions` with pre-releases
- * There should be a template for release announcements
-   * Pre-release announcements should include an exhortation to test
-   * Release announcements should include actual NEWS summaries and maybe a pointer to the full thing
- * There are missing scripts:
-   * for uploading pre-release tarballs
-     * Need a standard place to upload tarballs
-   * for signing tarballs
-   * for uploading release tarballs
- * It would be nice if the news fragments contained information about who made the changes
- * Mine ReleaseProcedure for useful information
- * A definition or at least some examples of what bugs should be considered release blockers would be a good idea. Ultimately it's the RM's discretion though.
- * "Other fixes" and maybe all tickets should be links when they are on the web
-
-
 = Examples =
 
 == Build API docs for website ==
@@ -308,9 +290,11 @@ r.BookBuilder().build(FilePath('doc/core/howto'), done.keys(),
 = Open questions =
 
  * How do we manage the case where there are untested builds in trunk?
- * How/when in this process are the docs built?
- * When should the front page of the wiki be updated?
- * Should picking a release quote be part of the release or the pre-release
+ * Should picking a release quote be part of the release or the pre-release?
+ * What bugs should be considered release blockers?
+   * Ultimately it's the RM's discretion
+ * Should news fragments contain information about who made the changes?
+ * Does this document miss anything relevant that ReleaseProcedure includes?
  * A thought for future releases: since we'd really like folks to download the prereleases and try them out, perhaps we should put the [source:trunk/NEWS NEWS] file on the web somewhere official, too, so they can see all the cool stuff they can try out?
    * XXX: jml doesn't know what this means any more
 
