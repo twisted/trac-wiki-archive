@@ -2,65 +2,99 @@
 
 '''jml wrote it, and wants to give it a lot of love very very soon. If you want to edit it before then, consider talking to jml'''
 
+= Overview =
+
+To release Twisted, we do a pre-release and then an actual release.
+
+
+= Prerequisites =
+
+To release Twisted, you will need:
+ * Commit privileges to Twisted
+ * Shell access to cube.twistedmatrix.com
+ * Write permissions to /srv/www-data/twisted on cube (normally, www-data membership)
+ * Write permissions to /srv/www-data/website/vhosts/twistedmatrix.com/documents
+
+
+= Version numbers =
+
+Twisted releases use a time-based numbering scheme. Releases versions like YY.MM.mm, where YY is the last two digits of the year of the release, MM is the number of the release in the year, and mm is the number of the patch release.
+
+For example:
+ * The first release of 2010 is 10.0.0
+ * The second release of 2010 is 10.1.0
+ * If 10.1.0 has some critical defects, then a patch release would be numbered 10.1.1
+
+Every release of Twisted includes the whole project, the core and all subprojects. Each of these has the same number.
+
+
 = How to do a pre-release =
 
- 1. File a ticket (e.g. #4290)
- 1. Check [http://twistedmatrix.com/boxes-supported buildbot] to make sure all supported platforms are green (wait for pending builds if necessary).
+ 1. Check the milestone for the upcoming release
+    1. Get rid of any non-critical bugs
+    1. Get any critical bugs fixed
+ 1. Check for any [http://twistedmatrix.com/trac/query?status=new&status=assigned&status=reopened&type=regression&order=priority regressions]
  1. Read through the `INSTALL` and `README` files to make sure things like the supported Python versions are correct
+    1. Check the required Python version.
+    1. Check that the list matches the current set of buildbots.
+    1. Any mistakes should be fixed in trunk before making the release branch
+ 1. Choose a version number.
+ 1. File a ticket
+    1. Assign it to the upcoming release milestone
+    1. Assign it to yourself
+    1. Call it "Release <version-number>"
+ 1. Check [http://twistedmatrix.com/boxes-supported buildbot] to make sure all supported platforms are green (wait for pending builds if necessary).
  1. Make a branch (e.g. `mkbranch Twisted release-4290`)
  1. Run `./bin/admin/change-versions XX.YY.ZZpreN`
  1. Commit the changes made by `change-versions`
  1. Run `./bin/admin/build-news .`
  1. Commit the changes made by `build-news`
+ 1. Bump copyright dates in [source:trunk/LICENSE], [source:trunk/twisted/_version.py] and [source:trunk/README]
  1. Make a temporary directory for the tarballs to live in (e.g. `mkdir /tmp/twisted-release`)
  1. Run `./bin/admin/build-tarballs . /tmp/twisted-release/`
  1. Upload the tarballs to a public website
+ 1. Write the pre-release announcement
+    1. Read through the `NEWS` file and summarize the interesting changes for the release
+    1. Get someone else to look over the announcement before doing it
  1. Announce the pre-release on
     1. the twisted-python [wiki:TwistedCommunity#MailLists mailing list]
     1. on IRC in the #twisted topic
     1. in a blog post, ideally `labs.twistedmatrix.com`
 
+== Pre-release announcment ==
 
-== Open questions ==
+The pre-release announcement should mention the important changes since the last release, and exhort readers to test this pre-release.
 
- * How do I decide the version number?
- * Do we need to commit the changes from `build-news` for pre-releases?
-   * They leave the pre-release version in the NEWS files when doing pre-releases
-   * But build-tarballs won't work with uncommitted changes
- * How do we manage the case where there are untested builds in trunk?
- * How/when in this process are the Windows installers and/or MacOS .dmg files created? See #3279.
-   * (I presume .deb and .rpm packages are left up to Linux distro packagers)
- * How/when in this process are the docs built?
- * When should the front page of the wiki be updated?
+Here's what the 10.0.0pre1 release annoucement ''ought'' to have looked like:
 
-== Notes ==
+{{{
+Live from PyCon Atlanta, I'm pleased to herald the approaching
+footsteps of the 10.0 release.
 
- * Test `change-versions` with pre-releases
- * There should be a template for release announcements
-   * Pre-release announcements should include an exhortation to test
-   * Release announcements should include actual NEWS summaries and maybe a pointer to the full thing
- * There are missing scripts:
-   * for uploading pre-release tarballs
-     * Need a standard place to upload tarballs
-   * for signing tarballs
-   * for uploading release tarballs
- * It would be nice if the news fragments contained information about who made the changes
- * Mine ReleaseProcedure for useful information
- * A definition or at least some examples of what bugs should be considered release blockers would be a good idea. Ultimately it's the RM's discretion though.
+Tarballs for the first Twisted 10.0.0 pre-release are now available at:
+ http://people.canonical.com/~jml/Twisted/
 
-== Suggestions for additions to pre-release steps ==
+Highlights include:
 
- * pick a release quote :)
- * bump copyrights in [source:trunk/LICENSE], [source:trunk/twisted/_version.py] and [source:trunk/README]
- * Delete the news `NNNN.bugfix` etc files after building [source:trunk/NEWS]
- * Check the milestone for the upcoming release, get rid of any non-critical bugs, get any critical bugs fixed
- * Check for any open tickets marked regressions, get them fixed
- * A thought for future releases: since we'd really like folks to download the prereleases and try them out, perhaps we should put the [source:trunk/NEWS NEWS] file on the web somewhere official, too, so they can see all the cool stuff they can try out?
-   * "Other fixes" and maybe all tickets should be links when they are on the web
- * Document how and when to tag releases in SVN.
- * Read through the NEWS files and write a summary of the interesting changes for the release
- * Read the INSTALL file, check the required Python version. If it mentions supported platforms, check that the list matches the current set of buildbots.
- * Get cube access
+ * Improved documentation, including "Twisted Web in 60 seconds"
+
+ * Faster Perspective Broker applications
+
+ * A new Windows installer that ships without zope.interface
+
+ * Twisted no longer supports Python 2.3
+
+ * Over one hundred closed tickets
+
+For more information, see the NEWS file.
+
+Please download the tarballs and test them as much as possible.
+
+Thanks,
+jml
+}}}
+
+
 
 == For the release itself ==
 
@@ -160,11 +194,70 @@
    * Win32 - see [source:trunk/win32/maintainer-notes.txt]
    * eggs?
 
-== Some helpful sanity checks ==
+== Notes ==
 
- * Read through the `INSTALL` and `README` files to make sure things like the supported Python versions are correct
+ * Test `change-versions` with pre-releases
+ * There should be a template for release announcements
+   * Pre-release announcements should include an exhortation to test
+   * Release announcements should include actual NEWS summaries and maybe a pointer to the full thing
+ * There are missing scripts:
+   * for uploading pre-release tarballs
+     * Need a standard place to upload tarballs
+   * for signing tarballs
+   * for uploading release tarballs
+ * It would be nice if the news fragments contained information about who made the changes
+ * Mine ReleaseProcedure for useful information
+ * A definition or at least some examples of what bugs should be considered release blockers would be a good idea. Ultimately it's the RM's discretion though.
+ * "Other fixes" and maybe all tickets should be links when they are on the web
+
+
+= Examples =
+
+== Twisted 10.0.0 announcement ==
+
+{{{
+On behalf of Twisted Matrix Laboratories, I am honored to announce the
+release of Twisted 10.0.
+
+Highlights include:
+
+ * Improved documentation, including "Twisted Web in 60 seconds"
+
+ * Faster Perspective Broker applications
+
+ * A new Windows installer that ships without zope.interface
+
+ * Twisted no longer supports Python 2.3
+
+ * Over one hundred closed tickets
+
+For more information, see the NEWS file.
+
+It's stable, backwards compatible, well tested and in every way an
+improvement. Download it now from:
+
+ http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.tar.bz2 or
+ http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.win32-py2.5.msi
+
+Many thanks to Jean-Paul Calderone and Chris Armstrong, whose work on
+release automation tools and answers to numerous questions made this
+possible. Thanks also to the supporters of the Twisted Software
+Foundation and to the many contributors for this release.
+
+jml
+}}}
+
+= Open questions =
+
+ * How do we manage the case where there are untested builds in trunk?
+ * How/when in this process are the docs built?
+ * When should the front page of the wiki be updated?
+ * Should picking a release quote be part of the release or the pre-release
+ * A thought for future releases: since we'd really like folks to download the prereleases and try them out, perhaps we should put the [source:trunk/NEWS NEWS] file on the web somewhere official, too, so they can see all the cool stuff they can try out?
+   * XXX: jml doesn't know what this means any more
 
 = See also =
 
  * [http://twistedmatrix.com/trac/query?status=new&status=assigned&status=reopened&component=release+management&order=priority release management tickets]
  * [http://twistedmatrix.com/trac/query?status=new&status=assigned&status=reopened&milestone=regular-releases&order=priority regular-release tickets]
+ * ReleaseAutomation
