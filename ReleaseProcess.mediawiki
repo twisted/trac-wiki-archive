@@ -253,7 +253,7 @@ If you choose the third option, then you should:
 
 == Build API docs for website ==
 
-See also APIDocs
+See also APIDocs. See #4354.
 
 {{{
 #!python
@@ -268,6 +268,8 @@ APIBuilder().build(
 }}}
 
 == Build howto documents for website ==
+
+See #4355.
 
 {{{
 #!python
@@ -309,6 +311,14 @@ r.BookBuilder().build(FilePath('doc/core/howto'), done.keys(),
  * Does this document miss anything relevant that ReleaseProcedure includes?
  * A thought for future releases: since we'd really like folks to download the prereleases and try them out, perhaps we should put the [source:trunk/NEWS NEWS] file on the web somewhere official, too, so they can see all the cool stuff they can try out?
    * XXX: jml doesn't know what this means any more
+
+= Bugs mentioned on this page =
+
+ * [ticket:4316 Changing versions in NEWS files for pre-release increments is too hard]
+ * [ticket:2888 Automate uploading tarballs to TMRC]
+ * [ticket:4353 Automate uploading pre-release tarballs]
+ * [ticket:4354 Automate building & uploading API docs for website]
+ * [ticket:4355 Automate building & uploading howto docs for website]
 
 = See also =
 
