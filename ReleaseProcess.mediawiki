@@ -14,7 +14,10 @@ To release Twisted, you will need:
  * Shell access to cube.twistedmatrix.com
  * Write permissions to /srv/www-data/twisted on cube (normally, www-data membership)
  * Write permissions to /srv/www-data/website/vhosts/twistedmatrix.com/documents
-
+ * Channel operator permissions for #twisted
+ * Admin privileges for Twisted's PyPI packages
+ * Membership of https://launchpad.net/~twisted-dev
+ * Contributor status for http://labs.twistedmatrix.com
 
 = Version numbers =
 
@@ -24,6 +27,7 @@ For example:
  * The first release of 2010 is 10.0.0
  * The second release of 2010 is 10.1.0
  * If 10.1.0 has some critical defects, then a patch release would be numbered 10.1.1
+ * The first pre-release of 10.0.0 is 10.0.0pre1, the second is 10.0.0pre2
 
 Every release of Twisted includes the whole project, the core and all subprojects. Each of these has the same number.
 
@@ -38,7 +42,7 @@ Every release of Twisted includes the whole project, the core and all subproject
     1. Check the required Python version.
     1. Check that the list matches the current set of buildbots.
     1. Any mistakes should be fixed in trunk before making the release branch
- 1. Choose a version number.
+ 1. Choose a version number. Remember to include the 'preN' suffix
  1. File a ticket
     1. Assign it to the upcoming release milestone
     1. Assign it to yourself
@@ -96,42 +100,36 @@ jml
 
 
 
-== For the release itself ==
+= How to release Twisted =
 
- * Remove the 'pre'
-   * So tedious! Write a tool to do this. #4316
-   * `find . -type f -not -path '*.svn*' -not -name '*~' | xargs grep -n 'pre2'`
- * Add the quote of the release
- * Get the branch reviewed
- * Merge the branch into trunk
- * Tag the branch
-   * `svn cp svn+ssh://svn.twistedmatrix.com/svn/Twisted/branches/release-x-4290 svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-10.0.0`
- * '''If at this point you discover a showstopper bug in the release:'''
-   * File a ticket
-   * Fix the bug
-   * Get it reviewed
-   * Land the fix
-   * Merge the change to the release branch (not the tag)
-   * Delete the tag
-   * Make a new tag with the same name from the release branch
-   * '''Or''' make a new release with a micro version change
- * Make new tarballs
- * Build windows installers
-   * http://buildbot.twistedmatrix.com/builders/winxp32-py2.5-msi/
-   * http://buildbot.twistedmatrix.com/builders/winxp32-py2.6-msi/
-   * Branch: "branches/release-x-4290"
-   * Download from http://buildbot.twistedmatrix.com/builds/
- * Sign them!
-   * `md5sum * | gpg -a --clearsign > twisted-10.0.0-md5sums.txt`
-   * `scp twisted-10.0.0-md5sums.txt  cube.twistedmatrix.com:/srv/www-data/twisted/Releases/`
-   * [http://tmrc.mit.edu/mirror/twisted/twisted-9.0.0-md5sums.txt example of the result]
- * Upload to the official upload locations:
-   * Prerequisites: cube account; write access to /srv/www-data/twisted/Releases/
-   * <radix> jml: `cube:/srv/www-data/twisted/Releases/<Project>/<First two parts of version number>/*`
-   * We hell of need a script to do this too. #2888
-   * New directories are 2775, and ought to be in the www-data group. New files are 664, and ought to be in the www-data group
-   * `find /srv/www-data/twisted/Releases -name '*10.0.0*' | xargs chmod g+w`
- * Wait for the tarballs to be mirrored to tmrc
+ 1. Remove the 'pre' from all files that mention it (see #4316)
+    1. e.g. `find . -type f -not -path '*.svn*' -not -name '*~' | xargs grep -n 'pre1'` to find all files
+ 1. Add the quote of the release to the README
+ 1. Submit the ticket for review
+ 1. When the ticket is reviewed, merge the branch into trunk
+ 1. Tag the release
+    1. e.g. `svn cp svn+ssh://svn.twistedmatrix.com/svn/Twisted/branches/release-x-4290 svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-10.0.0`
+ 1. Create a new staging area for the release (e.g. `mkdir /tmp/twisted-release`)
+ 1. Run `./bin/admin/build-tarballs . /tmp/twisted-release/`
+ 1. Build windows installers
+    1. http://buildbot.twistedmatrix.com/builders/winxp32-py2.5-msi/
+    1. http://buildbot.twistedmatrix.com/builders/winxp32-py2.6-msi/
+    1. For "Branch" specify the tag, e.g. "tags/releases/twisted-10.0.0"
+    1. Download the latest `.msi` files from from http://buildbot.twistedmatrix.com/builds/, save them in the staging directory
+ 1. Sign the tarballs and Windows installers
+    1. e.g. `md5sum Tw* | gpg -a --clearsign > twisted-10.0.0-md5sums.txt`
+    1. e.g. `scp twisted-10.0.0-md5sums.txt  cube.twistedmatrix.com:/srv/www-data/twisted/Releases/`
+    1. [http://tmrc.mit.edu/mirror/twisted/twisted-10.0.0-md5sums.txt example of the result]
+ 1. Upload to the official upload locations (see #2888)
+    1. e.g. `scp /tmp/twisted-release/Twisted-10.0.0.tar.bz2 cube:/srv/www-data/twisted/Releases/Twisted/10.0/`
+    1. For all subprojects, upload the tarballs to `cube:/srv/www-data/twisted/Releases/<Project>/<First two parts of version number>/`
+    1. Windows installers go in the `Twisted` project
+ 1. Update the permissions on `cube`
+    1. For all new directories, `chmod 2775 $DIRECTORY`
+    1. For all new files, `chmod 664 $FILE`
+    1. For all new files and directories, `chgrp www-data $FILE_OR_DIR`
+    1. e.g. `find /srv/www-data/twisted/Releases -name '*10.0.0*' | xargs chmod g+w`
+ 1. Wait for the tarballs to be mirrored to tmrc
    * They are mirrored 15 minutes every hour
    * foom offered to force the mirror
  * Update the WikiStart and [wiki:Downloads] pages
@@ -186,13 +184,19 @@ jml
    * `labs.twistedmatrix.com`
    * Twitter, if you feel like it
    * #twisted topic on IRC (you'll need ops)
- * Packaging
-   * Do we need to do anything for Debian / Ubuntu?
-   * OS X
-     * ~~Packaging not necessary, there's no good way to make an installer that overrides the default Python~~ see #3279
-     * Definitely need instructions for OS X-using developers who want to use a more recent version of Twisted
-   * Win32 - see [source:trunk/win32/maintainer-notes.txt]
-   * eggs?
+
+= When things go wrong =
+
+If you discover a showstopper bug during the release process, you have three options.
+ 1. Abort the release, make a new point release (e.g. abort 10.0.0, make 10.0.1 after the bug is fixed)
+ 1. Abort the release, make a new pre-release (e.g. abort 10.0.0, make 10.0.0pre3 after the bug is fixed)
+ 1. Interrupt the release, fix the bug, then continue with it (e.g. release 10.0.0 with the bug fix)
+
+If you choose the third option, then you should:
+ 1. Delete the tag for the release
+ 1. Recreate the tag from the release branch once the fix has been applied to that branch
+
+
 
 == Notes ==
 
