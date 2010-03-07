@@ -213,6 +213,51 @@ jml
 
 = Examples =
 
+== Build API docs for website ==
+
+{{{
+#!python
+from twisted.python._release import APIBuilder
+from twisted.python.filepath import FilePath
+
+APIBuilder().build(
+    'Twisted', 'http://twistedmatrix.com/', 
+    'http://twistedmatrix.com/trac/browser/tags/releases/twisted-10.0.0/',
+    FilePath('twisted'),
+    FilePath('api'))
+}}}
+
+== Build howto documents for website ==
+
+{{{
+#!python
+from twisted.python import _release as r
+from twisted.python.filepath import FilePath
+done = {}
+for p in FilePath('doc').walk():
+    if p.basename() == 'man':
+        print 'processing manual pages:', p.path
+        done[p] = True
+        r.ManBuilder().build(p)
+for p in FilePath('doc').walk():
+    if p.basename().endswith('.xhtml'):
+        if p.parent() not in done:
+            print 'processing howto pages:', p.parent().path
+            done[p.parent()] = True
+            r.DocBuilder().build(
+                '10.0.0', FilePath('doc/core/howto'), p.parent(),
+                FilePath('doc/core/howto/template.tpl'),
+                'http://twistedmatrix.com/documents/10.0.0/api/%s.html',
+                False)
+
+print 'building book:'
+for p in done:
+    print '	', p.path
+r.BookBuilder().build(FilePath('doc/core/howto'), done.keys(),
+                      FilePath('doc/core/howto/book.tex'),
+                      FilePath('book.pdf'))
+}}}
+
 == Twisted 10.0.0 announcement ==
 
 {{{
