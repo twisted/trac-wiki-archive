@@ -161,6 +161,8 @@ jml
      * XXX: exact commands
    * Removing the staging area
  1. Write the release announcement (see below)
+ 1. Update ReleaseRevisions with the revision of this release
+   * XXX: What revision exactly?
  1. Announce the release
     1. Send a text version of the announcement to: twisted-python@twistedmatrix.com, python-announce-list@python.org, python-list@python.org, twisted-web@twistedmatrix.com, twisted-jabber@ik.nu
     1. Update PyPI records
@@ -242,6 +244,8 @@ If you choose the third option, then you should:
 = Examples =
 
 == Build API docs for website ==
+
+See also APIDocs
 
 {{{
 #!python
