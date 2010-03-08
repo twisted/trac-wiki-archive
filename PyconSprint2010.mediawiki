@@ -9,6 +9,7 @@ Attendees:
  * Pavel Pergamenshchik
  * fijal
  * glyph
+ * wsanchez
 
 Things we're working on:
  * Releasing Twisted!
