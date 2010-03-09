@@ -36,5 +36,9 @@ However, at some point in the future, there will be ''one supported, good web se
 
 These are the features which people have specifically requested Twisted Web support.
 
+  * [ticket:2983 Separate the concerns in twisted.web request processing to allow easier testability]
   * [ticket:288 Streaming upload handling]
   * Support for ''100 Continue''
+  * [ticket:3711 Support Deferreds returned from IResource.render]
+  * [ticket:3621 Support Deferreds returned from IResource.getChild(WithDefault)]
+
