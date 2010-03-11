@@ -7,10 +7,10 @@
     <!-- begin left column/-->
     <td valign="top" width="273">
 
-  <div id="download_top" style="position: relative; left: -30px;">
+  <div id="download_top" class="download-left">
   &nbsp;
   </div>
-  <div id="download" style="color: white;position: relative; left: -30px;">
+  <div id="download" style="color: white" class="download-left">
     Source:<br/>
     <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.tar.bz2#md5=3b226af1a19b25e3b3e93cc6edf5e284">Twisted 10.0.0 tar</a><br />
     Win32:<br/>
@@ -19,7 +19,7 @@
     And More:<br/>
     <a class="wiki" href="/trac/wiki/Downloads">Other Downloads</a>
   </div>
-  <div id="download_bottom" style="position: relative; left: -30px;">
+  <div id="download_bottom" class="download-left">
   &nbsp;
   </div>
 
