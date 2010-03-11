@@ -18,11 +18,11 @@ Donations are [/trac/wiki/TwistedSoftwareFoundation#Background tax-deductible] a
   * Intimately familiarize yourself with [http://divmod.org/trac/wiki/UltimateQualityDevelopmentSystem The Ultimate Quality Development System]
   * Understand the [wiki:Documentation Developer docs] (how-tos, core docs, examples, API reference)
   * Twisted has a rigorous policy standards for code, documentation, and testing:
-    * [/trac/browser/trunk/doc/core/development/policy/coding-standard.xhtml?format=raw Coding standard]
-    * [/trac/browser/trunk/doc/core/development/policy/doc-standard.xhtml?format=raw Documentation standard]
-    * [/trac/browser/trunk/doc/core/development/policy/writing-standard.xhtml?format=raw Writing Style guide]
-    * [/trac/browser/trunk/doc/core/development/policy/test-standard.xhtml?format=raw Testing standard]
-    * [/trac/browser/trunk/doc/core/development/policy/svn-dev.xhtml?format=raw SVN Access]
+    * [http://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html Coding standard]
+    * [http://twistedmatrix.com/documents/current/core/development/policy/doc-standard.html Documentation standard]
+    * [http://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html Writing Style guide]
+    * [http://twistedmatrix.com/documents/current/core/development/policy/test-standard.html Testing standard]
+    * [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html SVN Access]
   * Understand the [wiki:ReviewProcess code review process]
   * [http://buildbot.twistedmatrix.com/ Buildbot] is used to automate the build process across platforms and test for breakage. Watch it. 
     * You'll need to [wiki:UsingBuildbot Use it] before merging a branch.
