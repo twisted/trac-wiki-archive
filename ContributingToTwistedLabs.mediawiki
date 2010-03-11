@@ -29,16 +29,16 @@ Donations are [/trac/wiki/TwistedSoftwareFoundation#Background tax-deductible] a
 
 === [#Explore Explore and Contribute] ===
   * Examine some of the [source:branches current branches]
-  * Take a look at the [/trac/report open tickets]
+  * Take a look at the [/report open tickets]
   * Learn the [wiki:BugKeywords bug keywords]
-    * [/trac/query?status=new&status=assigned&status=reopened&keywords=%7Eeasy&order=priority 'Easy' keyword tickets] are low-hanging fruit and good to get your feet wet
-  * [wiki:TwistedDevelopment#SubmittingaPatch Submit a Patch] in the  {{{diff -u}}} format by attaching it to an [/trac/report open ticket] in the tracker. You can also create a [/trac/newticket New Ticket] after you have [/trac/register Registered]
+    * [/query?status=new&status=assigned&status=reopened&keywords=%7Eeasy&order=priority 'Easy' keyword tickets] are low-hanging fruit and good to get your feet wet
+  * [wiki:TwistedDevelopment#SubmittingaPatch Submit a Patch] in the  {{{diff -u}}} format by attaching it to an [/report open ticket] in the tracker. You can also create a [/newticket New Ticket] after you have [/register Registered]
 
 
 == [#OtherWays Other Ways to Contribute] ==
 
  * [wiki:ReviewingDocumentation Review and add documentation]
  * [wiki:ReviewProcess Code Reviews] 
- * Submit bug reports (you must first be [/trac/register registered])  
+ * Submit bug reports (you must first be [/register registered])  
  * Provide technical support (answer questions on [#GettingHelp IRC and the mail lists])
  * Provide [wiki:NeededBuildSlaves needed buildslaves]
