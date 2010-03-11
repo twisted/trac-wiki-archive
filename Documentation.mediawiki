@@ -23,7 +23,7 @@
 
 == Mail Lists ==
 
- * Search the [http://www.google.com/search?q=site%3Atwistedmatrix.com+inurl%3Apipermail%2Ftwisted-python&btnG=Search twisted-python] or [http://www.google.com/search?q=site%3Atwistedmatrix.com+inurl%3Apipermail%2Ftwisted-web&btnG=Search twisted-web] mail list archives.
+ * Search the [http://www.google.com/coop/cse?cx=000092903031650492802:wmoqkjvon0i twisted-python] or [http://www.google.com/search?q=site%3Atwistedmatrix.com+inurl%3Apipermail%2Ftwisted-web&btnG=Search twisted-web] mail list archives.
 
 == Books == 
 
