@@ -17,7 +17,9 @@
     <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.win32-py2.5.msi">Twisted 10.0.0 for Python 2.5</a><br/>
     <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.win32-py2.6.msi">Twisted 10.0.0 for Python 2.6</a><br/>
     And More:<br/>
-    <a class="wiki" href="/trac/wiki/Downloads">Other Downloads</a>
+    <a class="wiki" href="/trac/wiki/Downloads">Other Downloads</a><br/>
+    Dependencies:<br/>
+    <a href="http://pypi.python.org/pypi/zope.interface">Zope.Interface</a>
   </div>
   <div id="download_bottom" class="download-left">
   &nbsp;
