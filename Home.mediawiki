@@ -19,7 +19,7 @@
     And More:<br/>
     <a class="wiki" href="/trac/wiki/Downloads">Other Downloads</a><br/>
     Dependencies:<br/>
-    <a href="http://pypi.python.org/pypi/zope.interface">Zope.Interface</a>
+    <a href="http://pypi.python.org/pypi/zope.interface#download">Zope.Interface</a>
   </div>
   <div id="download_bottom" class="download-left">
   &nbsp;
