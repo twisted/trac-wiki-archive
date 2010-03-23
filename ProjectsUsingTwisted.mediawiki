@@ -55,6 +55,7 @@ Twisted is used by many open-source, academic and commercial projects. Got a suc
  * [http://zenoss.org/ Zenoss] - open source network/systems monitoring and management
  * [http://sourceforge.net/projects/itaka/ Itaka] - an on-demand screen capture server
  * !WinDictator - Dictate in the MS Windows OS, have the text typed in Linux via X faked keystroke events.
+ * [https://launchpad.net/launchpad] - Cross-project collaboration for the Open Source world
  * [https://launchpad.net/landscape-client Landscape Client]  - the Ubuntu system management agent that communicates with the Canonical Landscape management service.
 
 = Games =
