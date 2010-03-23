@@ -1,4 +1,14 @@
 [[PageOutline(1,Contents)]]
+= [http://launchpad.net/ Launchpad] =
+
+Canonical has been using Twisted as key part of Launchpad.net for over
+five years now. We use Twisted to run our SSH servers, our process
+pools, our package build farms, our file storage system and many other
+things. Practically every time we need to glue two systems together,
+we use Twisted. When we don't, we regret it later.
+
+-- Jonathan Lange, Product Strategist, [http://www.canonical.com/ Canonical Ltd]
+
 = [http://www.justin.tv/ Justin.tv] =
 
 Justin.tv is the largest live video site on the internet.  We allow anyone to broadcast live video from their PC and chat with viewers.  Every second of every broadcast is archived so it can later be browsed, searched, or made into highlight clips.
