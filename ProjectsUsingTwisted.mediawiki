@@ -60,6 +60,10 @@ Twisted is used by many open-source, academic and commercial projects.
  * [https://launchpad.net/launchpad Launchpad] - Cross-project collaboration for the Open Source world
  * [https://launchpad.net/landscape-client Landscape Client]  - the Ubuntu system management agent that communicates with the Canonical Landscape management service.
  * [http://www.rdbhost.com/ RdbHost] - !RdbHost uses Twisted for a streaming web-server.  The streaming server allows users to stream large SQL 'dump' files to and from the database host using a web browser.
+ * [http://toonloop.com Toonloop] - Software suite for performing with live frame by frame animation creation
+ * [http://svn.sat.qc.ca/trac/lunch Lunch] - Simple process launcher for complex distributed setup
+ * [http://svn.sat.qc.ca/trac/scenic Scenic] - Telepresence software for wide bandwidth networks and oriented toward live performances
+ * [http://wiki.dataflow.ws/Purity Purity] - Python library for Pure Data dynamic patching to create audio patches.
 
 = Games =
  * [http://sourceforge.net/projects/originalgamer OGC] - MUD client.
