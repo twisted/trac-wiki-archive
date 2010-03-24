@@ -59,7 +59,7 @@ Twisted is used by many open-source, academic and commercial projects.
  * !WinDictator - Dictate in the MS Windows OS, have the text typed in Linux via X faked keystroke events.
  * [https://launchpad.net/launchpad Launchpad] - Cross-project collaboration for the Open Source world
  * [https://launchpad.net/landscape-client Landscape Client]  - the Ubuntu system management agent that communicates with the Canonical Landscape management service.
- * [http://www.rdbhost.com/ RdbHost] - RdbHost uses Twisted for a streaming web-server.  The streaming server allows users to stream large SQL 'dump' files to and from the database host using a web browser.
+ * [http://www.rdbhost.com/ RdbHost] - !RdbHost uses Twisted for a streaming web-server.  The streaming server allows users to stream large SQL 'dump' files to and from the database host using a web browser.
 
 = Games =
  * [http://sourceforge.net/projects/originalgamer OGC] - MUD client.
