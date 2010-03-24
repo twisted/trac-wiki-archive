@@ -1,4 +1,6 @@
-Twisted is used by many open-source, academic and commercial projects. Got a successful project you'd like added to this page? Mail a brief description and an URL (if appropriate) to the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted mailing list]!
+Twisted is used by many open-source, academic and commercial projects. 
+
+'''Got a successful project you'd like added to this page?''' Mail a brief description and an URL (if appropriate) to jasonjwwilliams at gmail dot com!
 
 
 = Libraries and Add-Ons =
