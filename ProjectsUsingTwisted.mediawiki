@@ -5,17 +5,56 @@ Twisted is used by many open-source, academic and commercial projects.
 
 = Libraries and Add-Ons =
 
- * [http://trevp.net/tlslite/ TLS Lite] - Python TLS/SSL implementation.
- * [http://twistedsnmp.sourceforge.net/ TwistedSNMP] - PySNMP integration for Twisted.
+ * [https://launchpad.net/ampoule Ampoule] - Ampoule is a process pool implementation written on top of Twisted Matrix. Its name comes from the use of AMP as the default communication protocol between the pool and all its children.
  * [http://beepy.sourceforge.net BEEPy] - BEEP protocol implementation for Python.
- * [http://www.wiggy.net/code/pyrad/ PyRAD]-  a RADIUS client and server.
+ * [https://launchpad.net/corotwine Corotwine] - Coroutine-based APIs for Twisted. Corotwine lets you use Twisted with a blocking API.
+ * [https://launchpad.net/foolscap foolscap] - A Python library that implements object-capability style secure remote objects.
  * [http://www.inoi.fi/open/trac/ldaptor/ Ldaptor] - LDAP protocol implementation and utilities.
+ * [https://launchpad.net/mutant M.U.T.A.N.T.] - A library for doing test-driven GTK user-interfaces for Twisted programs.
+ * [https://launchpad.net/paisley Paisley] - Paisley is a !CouchDB client written in Python to be used within a Twisted application.
  * [http://ichi2.net/pyosd/ PyOSD] - module for displaying text on your X display, much like the "On Screen Displays" used on TVs and some monitors.
+ * [http://www.wiggy.net/code/pyrad/ PyRAD] -  a RADIUS client and server.
+ * [https://launchpad.net/python-tvi955 python-tvi955] - Python-TVI955 is a partial implementation of the TVI955 terminal. It includes a parser for the computer to terminal ("server to client") protocol and an in-memory terminal emulator.
+ * [https://launchpad.net/qt4reactor Qt4 Reactor] - Integration of Twisted and Qt4
  * [http://pypi.python.org/pypi/sAsync/0.7 sAsync] - __S__QLAlchemy done __Async__hronously.
  * [http://scrapy.org/ Scrapy] - a screen scraping and web crawling framework, used to crawl websites and extract structured data from their pages.
- * Twibber - a Jabber implementation.
+ * [https://launchpad.net/synchronous-deferred Synchronous Deferred] - Synchronous Deferred is for authors of libraries who want to support both synchronous and asynchronous APIs.
+ * [http://trevp.net/tlslite/ TLS Lite] - Python TLS/SSL implementation.
+ * [https://launchpad.net/torc Torc] - An implementation of Orc, a language for orchestrating distributed services, for the Twisted networking framework.
+ * [http://twistedsnmp.sourceforge.net/ TwistedSNMP] - !PySNMP integration for Twisted.
+ * [https://launchpad.net/twisted-x11 twisted-x11] - Experimental low-level implementation of the X11 protocol on top of twisted. This is pure python, it does not wrap libxcb or libX11. This means it does not integrate with existing libraries. It uses the xml protocol definitions from xcb, so it is pretty complete.
+ * [https://launchpad.net/twotp Twotp] - Twotp is an implementation of the Erlang node protocol written in Python using the Twisted networking engine. It makes possible to run an Erlang node in Python, like the Jinterface library of Erlang allows to do in Java. You can then call methods on an Erlang node or receive method calls.
+ * [https://launchpad.net/tx.memcache txmemcache] - Multi-Client and Hashing utilities on top of twisted.protocols.memcache.
+ * [https://launchpad.net/txamqp txAMQP] - Python library for communicating with AMQP peers and brokers using Twisted (RabbitMQ, Qpid, OpenAMQ). It also includes support for using Thrift RPC over AMQP in Twisted applications.
+ * [https://launchpad.net/txaws txAWS] - Twisted-based Asynchronous Libraries for Amazon Web Services and Eucalyptus private clouds.
+ * [https://launchpad.net/txcobalt txCobalt] - An async, Twisted-based Python library for Bluetooth communications.
+ * [https://launchpad.net/txcomputegrid txcomputegrid] - Twisted based compute grid.
+ * [https://launchpad.net/txcumulus txCumulus] - The goal of txCumulus is to provide an abstraction layer on top of other Twisted-based (Python) async cloud APIs such as txAWS and txRackspace (and possibly !txComputeGrid).
+ * [https://launchpad.net/txevolver txEvolver] - txEvolver is a Twisted-based set of libraries for performing calculations of genetic algorithms as well as genetic programs in an asynchronous, distributed manner.
+ * [https://launchpad.net/txfigleaftrial txFigleafTrial] - Allows you to use figleaf to generate code coverage reports with twisted.trial.
+ * [https://launchpad.net/txfluiddb txFluidDB] - Bindings for the [http://fluidinfo.com FluidDB] HTTP interface.
+ * [https://launchpad.net/txgenshi txGenshi] - This project provides a small Twisted/Nevow package for running Genshi templates in the Twisted web framework, Nevow.
+ * [https://launchpad.net/txjsonrpc txJSON-RPC] - This is the project page for creating Python JSON-RPC servers and clients using the Twisted Networking Engine.
+ * [https://launchpad.net/txm txM] - Twisted for microcontrollers. txM aims to provide the Twisted asynchronous network programming idiom for solid-state devices without operating systems via the Python-on-a-chip Python VM.
+ * [https://launchpad.net/txmailserver txMailServer] - This project provides a starter mail server written using Twisted.
+ * [https://launchpad.net/txnet txNetTools] - Ping, traceroute, icmp, etc., implemented in Twisted, and a library for those who want to build their own network tools.
+ * [https://launchpad.net/txnetflow txNetFlow] - !NetFlow and IPFIX protocol, client, and server support in Twisted.
+ * [https://launchpad.net/txprotobuf txProtoBuf] -Protocol buffers (http://code.google.com/p/protobuf/) RPC implemented using Twisted.
+ * [https://launchpad.net/txrackspace txRackspace] - An async, Twisted Python API for Rackspace Cloud.
+ * [https://launchpad.net/txrdq txRDQ] - Provides a !ResizableDispatchQueue class that gives you a queue to dispatch jobs and a pool of in-progress tasks. This is a combination of a Twisted !defer.DeferredQueue and a !task.Cooperator.
+ * [http://github.com/deldotdr/txRedis txRedis] - A Redis client library for Twisted Python.
+ * [https://launchpad.net/txremotedeploy txRemoteDeploy] - Remote deployment for Twisted applications.
+ * [https://launchpad.net/txsimpledb txSimpleDB] - Twisted support for Amazon's !SimpleDB with the ability to develop/test against a local !SimpleDB instance.
+ * [https://launchpad.net/txsmug txSmug] - A Twisted wrapper for !SmugMug's API.
+ * [https://launchpad.net/txspore txSpore] - An asynchronous Spore Python API using Twisted.
+ * [https://launchpad.net/txsshserver txsshserver] - Extends Twisted's SSH server with some useful features for hosting Bazaar branches. Much of this code could & should be rolled back into Twisted. The project provides a playground for experimenting with new extensions, a holding area for the extensions we've already written, and a home for the things that don't really belong in Twisted.
+ * [https://launchpad.net/txstomp txStomp] - txStomp is a Twisted implementation of the open protocol Stomp and allows for Twisted applications to be integrated in environments (e.g., ones that use !ActiveMQ) that depend on this technology.
+ * [https://launchpad.net/txuls txULS] - Twisted Python experiments and prototyping for ultra large-scale systems.
+ * [https://launchpad.net/txxcp txXCP] - This project is focused on developing an open source, Twisted-based version of Jabber XCP.
+ * [https://launchpad.net/wokkel Wokkel] - Wokkel is collection of enhancements on top of the Twisted networking framework, written in Python. It mostly provides a testing ground for enhancements to the Jabber/XMPP protocol implementation as found in Twisted Words, that are meant to eventually move there.
 
 = Applications =
+ * [https://launchpad.net/txopenid txOpenID] - A Twisted !OpenID server. txOpenID is an implementation of the !OpenID Identity Provider specification, written using Twisted Web and Divmod's Nevow.
  * [http://www.gridspy.co.nz/ Gridspy] - live power monitoring and analysis
  * [http://allmydata.org Tahoe-LAFS] - a secure, decentralized, fault-tolerant filesystem.
  * [http://www.dohop.com dohop.com] - a flight planning web site which searches many other flight databases.
@@ -34,6 +73,10 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://twistedmatrix.com/users/acapnotic/wares/code/CVSToys/ CVSToys] - CVS change notification via email, IRC and HTTP.
  * [http://www.infrae.com/download/DocmaServer DocmaServer] - batch processing server that does Word <-> XML conversion.
  * [http://homepage.hispeed.ch/py430/python/index.html pyvncviewer] - a simple VNC viewer implemented in Python.
+ * [https://launchpad.net/poetry Poetry] - Poetry is a collection of simple command line tools for working with XMPP services. It aims to provide a set of tools similar to tools like dig, curl, and man, but for interacting, configuring, and querying XMPP services.
+ * [https://launchpad.net/pymon pymon] - pymon is an open source network and process monitoring solution implemented in Twisted. Both the user interface and the software configuration are designed to be easily and rapidly deployed, saving on time and overhead often associated with other monitoring solutions.
+ * [https://launchpad.net/pysms PySMS] - This is a Short Message Server written in python. It provides the possibility to take Messages inserted into a Database and send them over a supported protocols (currently only UCP/EMI) to a SMS Provider.
+ * [https://launchpad.net/txloadbalancer txLoadBalancer] - This is a fork of Anthony Baxter's !PythonDirector. It removes all threading and asyncore code, replacing the admin UI and the remaining threading loops with the Twisted-based analogs. It also aims to provide a developer API for those who wish to provide load-balancing services from within their Twisted applications.
  * [http://buildbot.sf.net BuildBot] - a distributed building/testing framework.
  * [http://pythondirector.sf.net PythonDirector] - load balancing for web servers.
  * [http://mithrandr.moria.org/code/ Various libraries] - pcap, SNMP integration, RSS to NNTP gateway, and other programs.
