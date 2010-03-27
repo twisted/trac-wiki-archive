@@ -56,6 +56,26 @@ My team is developing a modular application to integrate CAD/CAE/CAM tools and d
 
 -- Stephen C. Waterbury, NASA
 
+= !PowerCard =
+
+!PowerCard is the software platform we developed for
+[http://www.powercard.com/ PowerCard Rewards]  and the Original Rewards program for [http://originalrestaurants.com/ Original Restaurants]. Original Restaurants promotes unique, local restaurants by providing cooperative marketing, customer sharing, and a distinctive Rewards Card program.
+
+We use Twisted extensively for back-end transaction services for the loyalty rewards and gift card programs. We also used Twisted in our client-side applications installed in demanding restaurant environments. Twisted was crucial in our ability to craft solutions to interoperate with multiple restaurant POS vendors (Micros, Aloha/Radiant, Squirrel,
+etc.), each with differing protocols and access methods. Our choice of Python and Twisted allows us to rather easily extend our system to support new features and requests with limited amount of developer time and budget.
+
+Key features for us:
+
+ * Easy implementation of custom and existing network protocols
+ * Consistent APIs for code sharing between client and server
+implementations
+ * Windows integration
+ * Client GUI applications
+ * Services are a snap to implement
+ * Community support is very helpful
+
+-- Lucas Taylor, CTO, !PowerCard
+
 = [http://www.thusa.co.za/ Thusa Business Support] =
 
 Thusa is a solution provider for many businesses in South Africa. This requires tracking and maintenance of many Linux based servers deployed in a wide range of locations. 
@@ -117,23 +137,3 @@ Since then, I have created [http://www.inoi.fi/open/trac/ldaptor/ Ldaptor], a pu
 The developer community behind Twisted is just great, and the IRC channel is a great source of information. All in all, I feel Twisted is one of the most interesting projects on the net.
 
 -- Tommi Virtanen
-
-= !PowerCard =
-
-!PowerCard is the software platform we developed for
-[http://www.powercard.com/ PowerCard Rewards]  and the Original Rewards program for [http://originalrestaurants.com/ Original Restaurants]. Original Restaurants promotes unique, local restaurants by providing cooperative marketing, customer sharing, and a distinctive Rewards Card program.
-
-We use Twisted extensively for back-end transaction services for the loyalty rewards and gift card programs. We also used Twisted in our client-side applications installed in demanding restaurant environments. Twisted was crucial in our ability to craft solutions to interoperate with multiple restaurant POS vendors (Micros, Aloha/Radiant, Squirrel,
-etc.), each with differing protocols and access methods. Our choice of Python and Twisted allows us to rather easily extend our system to support new features and requests with limited amount of developer time and budget.
-
-Key features for us:
-
- * Easy implementation of custom and existing network protocols
- * Consistent APIs for code sharing between client and server
-implementations
- * Windows integration
- * Client GUI applications
- * Services are a snap to implement
- * Community support is very helpful
-
--- Lucas Taylor, CTO, !PowerCard
