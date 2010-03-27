@@ -38,6 +38,12 @@ Twisted as we broaden our server-side processing goals.
 
 -- Reza Lotun, Software Engineer, !TweetDeck, Inc.
 
+= NASA =
+
+My team is developing a modular application to integrate CAD/CAE/CAM tools and data and to enable collaboration among distributed teams of engineers working on NASA projects. We have selected Twisted as our framework because of its pluggable, asynchronous protocols, support for multiple interfaces and protocols per service, integration with PostgreSQL, and just generally excellent layered architecture.
+
+-- Stephen C. Waterbury, NASA
+
 = [http://www.thusa.co.za/ Thusa Business Support] =
 
 Thusa is a solution provider for many businesses in South Africa. This requires tracking and maintenance of many Linux based servers deployed in a wide range of locations. 
@@ -75,12 +81,6 @@ At Masters of Branding we use Twisted as the networking core for all of our clie
 The ease and power of Python and Twisted really showed through when we took one of our applications developed in and for Linux and ported it to run as a Windows NT service in less than day. New users to the framework will not only be impressed by the power of the software, but also that the developer/user community responsible for it are incredibly helpful and often provide much better support in minutes or hours than you'll see from commercial shops given days or weeks.
 
 -- Bob Ippolito, CTO, Masters of Branding Inc.
-
-= NASA =
-
-My team is developing a modular application to integrate CAD/CAE/CAM tools and data and to enable collaboration among distributed teams of engineers working on NASA projects. We have selected Twisted as our framework because of its pluggable, asynchronous protocols, support for multiple interfaces and protocols per service, integration with PostgreSQL, and just generally excellent layered architecture.
-
--- Stephen C. Waterbury, NASA
 
 = [http://www.adelux.fr/ Adelux] =
 
