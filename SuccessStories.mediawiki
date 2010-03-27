@@ -38,6 +38,18 @@ Twisted as we broaden our server-side processing goals.
 
 -- Reza Lotun, Software Engineer, !TweetDeck, Inc.
 
+= [http://www.list.org/ Mailman] =
+
+I wanted to test out some news/mail gatewaying for Mailman 2.1 but I didn't want to go through the hassle of actually connecting things up to a real news server, and I ''definitely'' didn't want to actually try to install inn or some nonsense (I'd like to do some other work this week :).
+
+I wished I had something like Lib/smtpd.py in the Python distro for the server side of NNTP, then it dawned on me that I remember Moshe and crew saying that Twisted comes with a news server. Well, let's just see how easy it would be to hook up.
+
+You guys have a big problem, because it was ''way'' too easy to do! How are you going to make the big consulting bucks? :)
+
+Three commands and I had an nntp server with a single newsgroup that was featured enough to connect Mozilla to, and to point Mailman's gateway at and actually get messages flowing back and forth. Congratulations!
+
+-- Barry Warsaw
+
 = NASA =
 
 My team is developing a modular application to integrate CAD/CAE/CAM tools and data and to enable collaboration among distributed teams of engineers working on NASA projects. We have selected Twisted as our framework because of its pluggable, asynchronous protocols, support for multiple interfaces and protocols per service, integration with PostgreSQL, and just generally excellent layered architecture.
@@ -95,18 +107,6 @@ We intend to continue using Twisted on upcoming projects, especially since integ
 We found Twisted to be powerful, comprehensible, well documented, and backed by a good helpful community. We'll use it on our next products for sure!
 
 -- Luc Stepniewski, Head Engineer, Adelux, France
-
-= [http://www.list.org/ Mailman] =
-
-I wanted to test out some news/mail gatewaying for Mailman 2.1 but I didn't want to go through the hassle of actually connecting things up to a real news server, and I ''definitely'' didn't want to actually try to install inn or some nonsense (I'd like to do some other work this week :).
-
-I wished I had something like Lib/smtpd.py in the Python distro for the server side of NNTP, then it dawned on me that I remember Moshe and crew saying that Twisted comes with a news server. Well, let's just see how easy it would be to hook up.
-
-You guys have a big problem, because it was ''way'' too easy to do! How are you going to make the big consulting bucks? :)
-
-Three commands and I had an nntp server with a single newsgroup that was featured enough to connect Mozilla to, and to point Mailman's gateway at and actually get messages flowing back and forth. Congratulations!
-
--- Barry Warsaw
 
 = MC-Foo and Ldaptor =
 
