@@ -67,8 +67,7 @@ etc.), each with differing protocols and access methods. Our choice of Python an
 Key features for us:
 
  * Easy implementation of custom and existing network protocols
- * Consistent APIs for code sharing between client and server
-implementations
+ * Consistent APIs for code sharing between client and server implementations
  * Windows integration
  * Client GUI applications
  * Services are a snap to implement
