@@ -1,6 +1,6 @@
 [[PageOutline(1,Contents)]]
 
-'''Have a success story for Twisted? Let us know! Contact jasonjwwilliams at gmail dot com'''
+'''Have a success story for Twisted? Let us know! Contact success at twistedmatrix dot com'''
 
 = [http://launchpad.net/ Launchpad] =
 
