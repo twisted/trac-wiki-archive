@@ -1,0 +1,13 @@
+A build slave which is to run the Twisted test suite on a particular platform or in a particular configuration needs the following software:
+
+  * [http://python.org/ Python]
+  * [http://buildbot.net/ BuildBot]
+  * [http://subversion.tigris.org/ subversion]
+
+As well as all (or as many as possible) of the libraries Twisted depends on:
+
+  * PyCrypto
+  * pyOpenSSL (depends on OpenSSL)
+  * pyasn1
+  * gmpy (depends on GMP)
+  * SOAPpy
