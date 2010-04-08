@@ -1,6 +1,8 @@
 A build slave which is to run the Twisted test suite on a particular platform or in a particular configuration needs the following software:
 
   * [http://python.org/ Python]
+    * On Debian, the `python-profiler` package should also be installed.
+    * On platforms where the Python headers are separated from the main Python package, these should also be installed (usually `python-dev` or `python-devel`).
   * [http://buildbot.net/ BuildBot]
   * [http://subversion.tigris.org/ subversion]
 
