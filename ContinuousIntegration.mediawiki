@@ -1,0 +1,17 @@
+=== Software ===
+
+Twisted's continuous integration solution is BuildBot.
+
+=== Configuration ===
+
+==== Test Suite ====
+
+The slaves connecting to Twisted's BuildBot master run in a variety of platforms.  These platforms determine what the ''supported'' configurations of Twisted are.
+
+==== Code Coverage ====
+
+As well as running the Twisted test suite, BuildBot also runs coverage reporting tools to generate reports of how much of Twisted is covered by its test suite.  The [wiki:ContinuousIntegration/CoverageSlaveConfiguration configuration] for these slaves is similar to that of normal test slaves, but there are a couple extra dependencies.
+
+==== Documentation ====
+
+BuildBot also generates Twisted's API and howto-style documentation.  These development snapshots are available for people looking for the most bleeding edge Twisted documentation.
