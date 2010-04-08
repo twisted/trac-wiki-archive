@@ -3,6 +3,7 @@ A build slave which is to run the Twisted test suite on a particular platform or
   * [http://python.org/ Python]
     * On Debian, the `python-profiler` package should also be installed.
     * On platforms where the Python headers are separated from the main Python package, these should also be installed (usually `python-dev` or `python-devel`).
+  * A C compiler which can build Python extension modules (On POSIX, this usually means gcc; on Windows, some version of Visual Studio, depending on which version of Python is installed)
   * [http://buildbot.net/ BuildBot]
   * [http://subversion.tigris.org/ subversion]
 
