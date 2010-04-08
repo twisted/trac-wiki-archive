@@ -1,6 +1,10 @@
 === Software ===
 
-Twisted's continuous integration solution is BuildBot.
+Twisted's continuous integration solution is BuildBot.  BuildBot runs the Twisted test suite (as well as a couple other tasks) each time a checkin is made to Twisted trunk (and can be asked to do the same for a branch checkin).  This provides developers with immediate feedback about their change across a wide array of platforms and Python versions.  If a test suite failure is ever reported on any ''supported'' platform by BuildBot, the checkin which introduced it is backed out until the failure can be fixed.
+
+==== Build Slaves ====
+
+A build slave is a long-running program that connects to the build master and executes jobs the master sends to it.  A build slave needs to be online almost all of the time.  An offline slave creates uncertainty about whether Twisted trunk is in working order or not.
 
 === Configuration ===
 
