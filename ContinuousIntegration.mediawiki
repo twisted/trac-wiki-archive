@@ -6,6 +6,8 @@ Twisted's continuous integration solution is BuildBot.  BuildBot runs the Twiste
 
 A build slave is a long-running program that connects to the build master and executes jobs the master sends to it.  A build slave needs to be online almost all of the time.  An offline slave creates uncertainty about whether Twisted trunk is in working order or not.
 
+If you have a host with good availability, [ContinuousIntegration/TestSlaveConfiguration operating a slave] is an easy and helpful way to contribute to Twisted.
+
 === Configuration ===
 
 ==== Test Suite ====
