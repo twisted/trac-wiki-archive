@@ -1,4 +1,4 @@
-Build slaves for generating coverage information have all the [wiki:ContinuousIntegration/TestSlaveConfiguration usual requirements].  Additionally, these tools are required:
+Build slaves for generating coverage information have all the [wiki:ContinuousIntegration/TestSlaveConfiguration usual requirements] (with one restriction, BuildBot 0.7.12 or newer is required).  Additionally, these tools are required:
 
   * [http://gcc.gnu.org/onlinedocs/gcc/Gcov.html gcov]
   * [http://ltp.sourceforge.net/coverage/lcov.php lcov]
