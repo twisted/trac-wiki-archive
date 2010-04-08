@@ -1,0 +1,5 @@
+Build slaves for generating coverage information have all the [wiki:ContinuousIntegration/TestSlaveConfiguration usual requirements].  Additionally, these tools are required:
+
+  * [http://gcc.gnu.org/onlinedocs/gcc/Gcov.html gcov]
+  * [http://nedbatchelder.com/code/coverage/ coverage.py]
+
