@@ -2,6 +2,20 @@
 
 '''Have a success story for Twisted? Let us know! Contact success at twistedmatrix dot com'''
 
+= [http://fluidinfo.com/ FluidDB] =
+
+At Fluidinfo we chose Twisted as the basis of all internal networking for our
+distributed, shared, always-writable database, FluidDB. We threw out
+a year's worth of working, debugged, tested C code in order to move to Twisted. As
+I often tell people, we're using Python because of Twisted, not the other
+way round. I'm an unabashed Twisted fanboy. In particular,
+Twisted's Deferreds are one of the most elegant and flexible
+programming constructs I've ever worked with.
+Plus, the Twisted community is great - not only the core developers, 
+but also the 180+ people constantly in #twisted in IRC.
+
+-- Terry Jones, CEO, Fluidinfo Inc.
+
 = [http://launchpad.net/ Launchpad] =
 
 Canonical has been using Twisted as key part of Launchpad.net for over
