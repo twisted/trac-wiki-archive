@@ -22,6 +22,7 @@ To release Twisted, you will need:
  * Shell access to cube.twistedmatrix.com
  * Write permissions to /srv/www-data/twisted on cube (normally, www-data membership)
  * Write permissions to /srv/www-data/website/vhosts/twistedmatrix.com/documents
+ * Permissions to edit WikiStart
  * Channel operator permissions for #twisted
  * Admin privileges for Twisted's PyPI packages
  * Membership of https://launchpad.net/~twisted-dev
