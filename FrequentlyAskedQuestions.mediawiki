@@ -38,6 +38,10 @@ In general, everything which is part of a Twisted release is stable.  See Compat
 
 See TwistedWebPlan.
 
+=== Why doesn't Twisted follow PEP 8? ===
+
+Twisted does follow much of PEP 8 (as is documented in the [http://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html#auto26 Twisted coding standard].  However, Twisted prefers !camelCase for variables, functions, and methods (whereas PEP 8 recommends underscores) because Twisted predates PEP 8 and converting the entire codebase now is infeasible.  Twisted continues to use its existing naming convention for new APIs to retain consistency within the project (according to PEP 8's recommendation).
+
 == Installation ==
 
 === I run mktap (from site-packages/twisted/scripts/mktap.py) and nothing happens! ===
