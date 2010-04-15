@@ -21,7 +21,7 @@ Twisted is used by many open-source, academic and commercial projects.
  * [https://launchpad.net/synchronous-deferred Synchronous Deferred] - Synchronous Deferred is for authors of libraries who want to support both synchronous and asynchronous APIs.
  * [http://trevp.net/tlslite/ TLS Lite] - Python TLS/SSL implementation.
  * [https://launchpad.net/torc Torc] - An implementation of Orc, a language for orchestrating distributed services, for the Twisted networking framework.
- * [http://code.google.com/p/twistedcronservice/] - Provides an interface for describing recurring events to be run according to a cron-like schedule.
+ * [http://code.google.com/p/twistedcronservice/ TwistedCronService] - Provides an interface for describing recurring events to be run according to a cron-like schedule.
  * [http://twistedsnmp.sourceforge.net/ TwistedSNMP] - PySNMP integration for Twisted.
  * [https://launchpad.net/twisted-x11 twisted-x11] - Experimental low-level implementation of the X11 protocol on top of twisted. This is pure python, it does not wrap libxcb or libX11. This means it does not integrate with existing libraries. It uses the xml protocol definitions from xcb, so it is pretty complete.
  * [https://launchpad.net/twotp Twotp] - Twotp is an implementation of the Erlang node protocol written in Python using the Twisted networking engine. It makes possible to run an Erlang node in Python, like the Jinterface library of Erlang allows to do in Java. You can then call methods on an Erlang node or receive method calls.
