@@ -189,6 +189,8 @@ Removed Google pending our figuring out whether they actually sponsored or not.
     <h4>Bronze</h4>
 <a href="http://www.seomoves.org/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/seomoves.png?format=raw" /></a></br>
 
+<!-- Donated Feb 22 2010.  Logo added Apr 15 2010. -->
+<a href="http://hydralabs.com"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/hydra.png?format=raw" /></a><br/> 
   </div>
 
 
