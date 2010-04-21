@@ -30,7 +30,7 @@ we use Twisted. When we don't, we regret it later.
 
 Justin.tv is the largest live video site on the internet.  We allow anyone to broadcast live video from their PC and chat with viewers.  Every second of every broadcast is archived so it can later be browsed, searched, or made into highlight clips.
 
-We developed custom Flash video software, the Python Media Server, which uses Twisted as the event framework.  We were able to set the record for the highest number of simultaneous viewers (over 400,000) for a live video site.  Our Twisted video cluster currently supports thousands of simultaneous broadcasts and serves up to 30M live video streams per day.  
+Each of Justin.tv's half a billion monthly pageviews passes through a custom Twisted caching engine.  "Twice" is a caching reverse proxy with a basic templating engine.  It runs as a cluster of roughly 120 processes across a dozen machines and handles peak loads of 20,000 dynamic pageviews per second.  The project has been [http://www.kvogt.com/twice open sourced here].
 
 -- Kyle Vogt, VP Engineering, Justin.tv, Inc.
 
