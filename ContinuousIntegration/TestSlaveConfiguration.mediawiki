@@ -14,5 +14,12 @@ As well as all (or as many as possible) of the libraries Twisted depends on:
   * pyasn1
   * gmpy (depends on GMP)
   * SOAPpy
+  * pygtk (depends on gtk2)
 
 A build slave needs authentication credentials in order to be allowed to connect to the build master.  Credentials can be obtained by emailing twisted dash python at twisted matrix dot com and expressing interest in running a slave.
+
+Unfortunately a few tests in Twisted's test suite will fail if certain guarantees are not made by the environment.  For example, the multicast tests try to use the actual network stack to send multicast packets.  Here are some things that are known about this:
+
+  * For the multicast tests to pass, multicast packets must be routable over localhost.
+    * On OS X, this means "Internet Sharing" must be disabled
+    * Some Linux distributions have a default iptables rule to drop multicast traffic, or require an explicit iptables rule to allow it.
