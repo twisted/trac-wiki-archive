@@ -15,6 +15,7 @@ As well as all (or as many as possible) of the libraries Twisted depends on:
   * gmpy (depends on GMP)
   * SOAPpy
   * pygtk (depends on gtk2)
+  * subunit
 
 A build slave needs authentication credentials in order to be allowed to connect to the build master.  Credentials can be obtained by emailing twisted dash python at twisted matrix dot com and expressing interest in running a slave.
 
