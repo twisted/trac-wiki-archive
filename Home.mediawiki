@@ -26,7 +26,7 @@
   </div>
 
     <h2>The Twisted Book</h2>
-<a href="http://www.amazon.com/exec/obidos/ASIN/0596100329/httpitamorg-20?creative=327641&camp=14573&link_code=as1"><img align="center" src="http://oreilly.com/catalog/covers/twistedadn.s.gif" /></a>
+<a href="http://www.amazon.com/gp/product/0596100329?ie=UTF8&tag=jpcalsjou-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596100329"><img align="center" src="http://oreilly.com/catalog/covers/twistedadn.s.gif" /></a>
     <!-- end left column -->
     </td>
 
