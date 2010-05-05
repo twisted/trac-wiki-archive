@@ -40,5 +40,5 @@ Donations are [http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation#Back
  * [wiki:ReviewingDocumentation Review and add documentation]
  * [wiki:ReviewProcess Code Reviews] 
  * Submit bug reports (you must first be [/register registered])  
- * Provide technical support (answer questions on [#GettingHelp IRC and the mail lists])
+ * Provide technical support (answer questions on [TwistedCommunity IRC and the mail lists])
  * Provide [wiki:NeededBuildSlaves needed buildslaves]
