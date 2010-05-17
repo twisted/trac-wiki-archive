@@ -1,0 +1,1 @@
+A Git mirror of the entire Twisted repository is available.  The clone url is http://svn.twistedmatrix.com/git/Twisted/.git
