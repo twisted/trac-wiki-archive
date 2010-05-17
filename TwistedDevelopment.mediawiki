@@ -10,7 +10,7 @@ svn://svn.twistedmatrix.com/svn/Twisted/trunk
 }}}
 
 
-(Bazaar access is also available. Instructions are at BazaarMirror.)
+(See also BazaarMirror and GitMirror if you prefer not to use svn)
 
 === Submitting a Patch ===
 
