@@ -56,8 +56,8 @@ Every release of Twisted includes the whole project, the core and all subproject
     1. Assign it to the upcoming release milestone
     1. Assign it to yourself
     1. Call it "Release <version-number>"
- 1. Check [http://twistedmatrix.com/boxes-supported buildbot] to make sure all supported platforms are green (wait for pending builds if necessary).
- 1. Make a branch (e.g. `mkbranch Twisted release-4290`)
+ 1. Check [http://buildbot.twistedmatrix.com/boxes-supported buildbot] to make sure all supported platforms are green (wait for pending builds if necessary).
+ 1. Make a branch (e.g. `mkbranch Twisted releases/release-4290`)
  1. Run `./bin/admin/change-versions XX.YY.ZZpreN`
  1. Commit the changes made by `change-versions`
  1. Run `./bin/admin/build-news .`
