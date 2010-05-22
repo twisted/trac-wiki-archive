@@ -38,13 +38,13 @@ Both authors and reviewers should be intimately familiar with all requirements o
 {{{
 #!html
 <pre class="wiki">
-Merge &lt;branch name&gt;: Brief description<br />
-
-Long description (as long as you wish)<br />
+Merge &lt;branch name&gt;: Brief description
 
 Author: &lt;names&gt;
 Reviewer: &lt;names&gt;
-Fixes: #&lt;ticket number&gt;<br />
+Fixes: #&lt;ticket number&gt;
+
+Long description (as long as you wish)
 </pre>
 }}}
  * After the change is merged and the buildbots have completed running, delete the branch.
@@ -112,11 +112,11 @@ If a change set somehow introduces a test suite regression or is otherwise found
 {{{
 #!html
 <pre class="wiki">
-Revert r&lt;revision number&gt;: Brief description<br />
+Revert r&lt;revision number&gt;: Brief description
 
-A description of the problem, or a traceback if pertinent<br />
+A description of the problem, or a traceback if pertinent
 
-Reopens: #&lt;ticket number&gt;<br />
+Reopens: #&lt;ticket number&gt;
 </pre>
 }}}
 
