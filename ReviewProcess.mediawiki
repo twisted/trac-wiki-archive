@@ -59,6 +59,7 @@ It is now up to the authors of individual changes to write high-level descriptio
 Changes must be accompanied by an entry in at least one `topfiles` directory (eg [source:trunk/twisted/topfiles/] or [source:trunk/twisted/names/topfiles/]). The entry must be a file named `<ticket number>.<change type>`.  `<ticket number>` is replaced by the ticket number which is being resolved by the change (if multiple tickets are resolved, multiple files with the same contents should be added).  `<change type>` is replaced by one of the following literal strings:
  * `feature` - for tickets which are adding a new feature.
  * `bugfix` - for tickets which are fixing a bug.
+ * `doc` - for tickets primarily about fixing or improving documentation (any variety).
  * `removal` - for tickets which are deprecating something or removing something which was already deprecated.
  * `misc` - for tickets which are very minor and not worth summarizing outside of the svn changelog.  These may be empty (their contents will be ignored).
 
