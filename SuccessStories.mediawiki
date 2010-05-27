@@ -2,6 +2,28 @@
 
 '''Have a success story for Twisted? Let us know! Contact success at twistedmatrix dot com'''
 
+
+= [http://lucasfilm.com/ Lucasfilm] =
+
+Lucasfilm has used Twisted in its business-critical production
+processes since 2004. In 2009 we became sponsors of the project.
+
+We use Twisted to proxy database connections for our render farm,
+which runs 24/7/365. In continuous deployment for six years, our
+Twisted daemons have served many billions of queries. Twisted's
+process spawning and monitoring capabilities are also used in numerous
+automation and queuing services. In addition, its excellent,
+full-featured Jabber implementation supports our person-to-person and
+application-to-application messaging services.
+
+As a large and diverse enterprise, a key to our success with Twisted
+is the professional way in which it is maintained. With a large body
+of unit tests and rigorous code reviews, Twisted provides a smooth
+upgrade path so that old features to continue to work and new ones
+are production ready and rock-solid.
+
+-- Dave Peticolas, Lead Python Developer, Lucasfilm Entertainment Company Limited
+
 = [http://fluidinfo.com/ FluidDB] =
 
 At Fluidinfo we chose Twisted as the basis of all internal networking for our
