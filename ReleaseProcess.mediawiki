@@ -254,7 +254,7 @@ If you choose the third option, then you should:
 
 == Build API docs for website ==
 
-See also APIDocs. See #4354.
+See also APIDocs. See #2891.
 
 {{{
 #!python
@@ -318,7 +318,7 @@ r.BookBuilder().build(FilePath('doc/core/howto'), done.keys(),
  * [ticket:4316 Changing versions in NEWS files for pre-release increments is too hard]
  * [ticket:2888 Automate uploading tarballs to TMRC]
  * [ticket:4353 Automate uploading pre-release tarballs]
- * [ticket:4354 Automate building & uploading API docs for website]
+ * [ticket:2891 Automate building & uploading API docs for website]
  * [ticket:4355 Automate building & uploading howto docs for website]
 
 = See also =
