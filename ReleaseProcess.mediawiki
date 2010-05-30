@@ -270,7 +270,7 @@ APIBuilder().build(
 
 == Build howto documents for website ==
 
-See #4355.
+See #2380.
 
 {{{
 #!python
@@ -319,7 +319,7 @@ r.BookBuilder().build(FilePath('doc/core/howto'), done.keys(),
  * [ticket:2888 Automate uploading tarballs to TMRC]
  * [ticket:4353 Automate uploading pre-release tarballs]
  * [ticket:2891 Automate building & uploading API docs for website]
- * [ticket:4355 Automate building & uploading howto docs for website]
+ * [ticket:2380 Automate building & uploading howto docs for website]
 
 = See also =
 
