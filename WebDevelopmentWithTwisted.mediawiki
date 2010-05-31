@@ -46,4 +46,4 @@ Zope 3 uses Twisted now, and the next version of Zope 2 will have experimental T
 
 === I want a container for my WSGI application ===
 
-In this case, '''use the Twisted Web 8.2 WSGI module''' (`twistd web --wsgi=application`).
+In this case, '''use the Twisted Web (8.2 or newer) WSGI module''' (`twistd web --wsgi=application`).
