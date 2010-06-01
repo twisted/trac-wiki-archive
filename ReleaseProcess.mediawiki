@@ -124,7 +124,7 @@ jml
     1. http://buildbot.twistedmatrix.com/builders/winxp32-py2.5-msi/
     1. http://buildbot.twistedmatrix.com/builders/winxp32-py2.6-msi/
     1. For "Branch" specify the tag, e.g. "tags/releases/twisted-10.0.0"
-    1. Download the latest `.msi` files from from http://buildbot.twistedmatrix.com/builds/, save them in the staging directory
+    1. Download the latest `.msi` and `.exe` files from from http://buildbot.twistedmatrix.com/builds/, save them in the staging directory
  1. Sign the tarballs and Windows installers
     1. e.g. `md5sum Tw* | gpg -a --clearsign > twisted-10.0.0-md5sums.txt`
     1. e.g. `scp twisted-10.0.0-md5sums.txt  cube.twistedmatrix.com:/srv/www-data/twisted/Releases/`
@@ -132,7 +132,7 @@ jml
  1. Upload to the official upload locations (see #2888)
     1. e.g. `scp /tmp/twisted-release/Twisted-10.0.0.tar.bz2 cube:/srv/www-data/twisted/Releases/Twisted/10.0/`
     1. For all subprojects, upload the tarballs to `cube:/srv/www-data/twisted/Releases/<Project>/<First two parts of version number>/`
-    1. Windows installers go in the `Twisted` project
+    1. Windows installers (msi and exe) go in the `Twisted` project
  1. Update the permissions on `cube`
     1. For all new directories, `chmod 2775 $DIRECTORY`
     1. For all new files, `chmod 664 $FILE`
