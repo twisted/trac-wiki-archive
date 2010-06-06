@@ -201,6 +201,13 @@ To deprecate an attribute on instances of a class, make the attribute into a pro
 
 Modules cannot have properties, so module attributes should be deprecated using `twisted.python.deprecate.deprecatedModuleAttribute`.
 
+==== Modules ====
+
+To deprecate an entire module, `twisted.python.deprecate.deprecatedModuleAttribute` can be used on the parent package's `__init__.py`.  There are two other options:
+
+    * put a `warnings.warn()` call into the top-level code of the module
+    * deprecate all of the attributes of the module
+
 ==== Unit testing ====
 
 Like all changes in Twisted, deprecations must be unit tested.  There are several options for this.  In order of decreasing preference:
