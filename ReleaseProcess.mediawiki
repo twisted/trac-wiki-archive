@@ -111,8 +111,7 @@ jml
 
 = How to release Twisted =
 
- 1. Remove the 'pre' from all files that mention it (see #4316)
-    1. e.g. `find . -type f -not -path '*.svn*' -not -name '*~' | xargs grep -n 'pre1'` to find all files
+ 1. Run `./bin/admin/change-versions XX.YY.ZZ`
  1. Add the quote of the release to the README
  1. Submit the ticket for review
  1. When the ticket is reviewed, merge the branch into trunk
@@ -315,7 +314,6 @@ r.BookBuilder().build(FilePath('doc/core/howto'), done.keys(),
 
 = Bugs mentioned on this page =
 
- * [ticket:4316 Changing versions in NEWS files for pre-release increments is too hard]
  * [ticket:2888 Automate uploading tarballs to TMRC]
  * [ticket:4353 Automate uploading pre-release tarballs]
  * [ticket:2891 Automate building & uploading API docs for website]
