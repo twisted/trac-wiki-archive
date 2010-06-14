@@ -62,6 +62,11 @@ OS X 10.5 comes with a partial installation of Twisted.  This version is found f
 
 Red Hat and derived Linux distributions arrange to have certain Python libraries installed in {{{/usr/lib/}}} and other parts installed in {{{/usr/lib64/}}}.  This is problematic for Twisted, since it results in some of Twisted being installed in one directory and the rest installed in another.  Python will load a package from only one directory.  You can override this default behavior when you install Twisted by supplying the {{{--install-lib}}} parameter when running Twisted's {{{setup.py}}}.
 
+=== Why am I getting a "Python does not appear to be installed" error message on Windows? ===
+
+Twisted requires a 32-bit version of Python for Windows. Using a 64-bit version of Python will result in this error message.
+
+
 == Core Twisted ==
 
 === Why does Twisted depend on Zope? ===
