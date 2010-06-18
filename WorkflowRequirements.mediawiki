@@ -13,6 +13,7 @@ Here's a list (incomplete - please contribute) of things we use tools for in our
  * Revision control
    * commit notification to IRC
    * commit notification to email
+     * RSS feed is probably sufficient
    * buildbot builds on trunk commits
    * buildbot builds on arbitrary branches
  * Revision control / ticket integration
