@@ -62,6 +62,7 @@ Every release of Twisted includes the whole project, the core and all subproject
  1. Commit the changes made by `change-versions`
  1. Run `./bin/admin/build-news .`
  1. Commit the changes made by `build-news`
+ 1. Delete the NEWS turds (see #4315)
  1. Bump copyright dates in [source:trunk/LICENSE], [source:trunk/twisted/_version.py] and [source:trunk/README]
  1. Make a temporary directory for the tarballs to live in (e.g. `mkdir /tmp/twisted-release`)
  1. Run `./bin/admin/build-tarballs . /tmp/twisted-release/`
@@ -316,6 +317,7 @@ r.BookBuilder().build(FilePath('doc/core/howto'), done.keys(),
 
  * [ticket:2888 Automate uploading tarballs to TMRC]
  * [ticket:4353 Automate uploading pre-release tarballs]
+ * [ticket:4315 Convenience command for removing news fragments]
  * [ticket:2891 Automate building & uploading API docs for website]
  * [ticket:2380 Automate building & uploading howto docs for website]
 
