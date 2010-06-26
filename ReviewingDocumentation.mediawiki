@@ -84,7 +84,7 @@ m = ManBuilder()
 m.build(dir)
 }}}
 
-you can then `lore` the resulting xhtml files as described above to generate html.
+you can then `lore` the resulting xhtml files as described [ReviewingDocumentation#Editingexampleandhowtodocumentation above] to generate html.
 
 === More ===
 see also [wiki:DocumentationAnalysis DocumentationAnalysis] from an old Twisted documentation sprint.
