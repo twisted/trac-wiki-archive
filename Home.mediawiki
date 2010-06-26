@@ -179,6 +179,8 @@ You can use the form above both for both personal donations and corporate sponso
 <a href="http://www.appropriatesolutions.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/Appropriate-Solutions-Inc.gif?format=raw" /></a>
 <a href="http://www.zenoss.org/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/zenoss.2.png?format=raw" /></a>
 <a href="https://www.securitymetrics.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/securitymetrics.png?format=raw" /></a>
+<!-- Donated Jun 23 2010; Logo added Jun 26 2010 -->
+<a href="http://fluidinfo.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/fluidinfo-logo-160x80.png?format=raw" /></a>
 
     <h4>Bronze</h4>
 <a href="http://www.seomoves.org/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/seomoves.png?format=raw" /></a></br>
