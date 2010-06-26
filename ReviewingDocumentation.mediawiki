@@ -72,5 +72,19 @@ This produces a folder called `apidocs` in your current working directory. You c
 
 If everything looks good, submit a patch as described [wiki:TwistedDevelopment#SubmittingaPatch here]
 
+=== Editing man pages ===
+
+Twisted man pages live in doc/<subproject>/man. The man pages are lore'd as part of a release to generate html files, so if you're reviewing man pages you should make sure they generate valid html through lore. The easiest way to do this is to steal from twisted.python._release. To, for example, generate xhtml from the troff files in doc/core/man:
+
+{{{
+from twisted.python.filepath import FilePath
+dir = FilePath('doc/core/man')
+from twisted.python._release import ManBuilder
+m = ManBuilder()
+m.build(dir)
+}}}
+
+you can then lore the resulting xhtml files to generate html.
+
 === More ===
 see also [wiki:DocumentationAnalysis DocumentationAnalysis] from an old Twisted documentation sprint.
