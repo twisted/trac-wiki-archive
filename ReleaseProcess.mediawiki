@@ -2,9 +2,7 @@
 
 '''jml wrote it, and wants to give it a lot of love very very soon. If you want to edit it before then, consider talking to jml'''
 
-= Overview =
-
-To release Twisted, we do a pre-release and then an actual release.
+= Outcomes =
 
 By the end of a Twisted release we'll have:
  * Tarballs for Twisted as a whole, and for each of its subprojects
@@ -40,8 +38,14 @@ For example:
 
 Every release of Twisted includes the whole project, the core and all subprojects. Each of these has the same number.
 
+= Overview =
 
-= How to do a pre-release =
+To release Twisted, we
+ 1. Prepare for a release
+ 1. Release N prereleases
+ 1. Release the final release
+
+= Prepare for a release =
 
  1. Check the milestone for the upcoming release
     1. Get rid of any non-critical bugs
@@ -56,8 +60,12 @@ Every release of Twisted includes the whole project, the core and all subproject
     1. Assign it to the upcoming release milestone
     1. Assign it to yourself
     1. Call it "Release <version-number>"
- 1. Check [http://buildbot.twistedmatrix.com/boxes-supported buildbot] to make sure all supported platforms are green (wait for pending builds if necessary).
  1. Make a branch (e.g. `mkbranch Twisted releases/release-4290`)
+
+
+= How to do a pre-release =
+
+ 1. Check [http://buildbot.twistedmatrix.com/boxes-supported buildbot] to make sure all supported platforms are green (wait for pending builds if necessary).
  1. Run `./bin/admin/change-versions XX.YY.ZZpreN`
  1. Commit the changes made by `change-versions`
  1. Run `./bin/admin/build-news .`
@@ -109,8 +117,7 @@ jml
 }}}
 
 
-
-= How to release Twisted =
+= How to do a final release =
 
  1. Run `./bin/admin/change-versions XX.YY.ZZ`
  1. Add the quote of the release to the README
