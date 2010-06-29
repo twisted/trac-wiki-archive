@@ -71,7 +71,7 @@ twisted.protocols.amp now raises InvalidSignature when bad arguments are passed 
 }}}
 
 {{{
-twisted.internet.endpoints, an interface for specifying address families separately from socket types, was added.
+The new module twisted.internet.endpoints provides an interface for specifying address families separately from socket types.
 }}}
 
 Deprecations:
