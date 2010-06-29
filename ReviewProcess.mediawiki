@@ -63,10 +63,33 @@ Changes must be accompanied by an entry in at least one `topfiles` directory (eg
  * `removal` - for tickets which are deprecating something or removing something which was already deprecated.
  * `misc` - for tickets which are very minor and not worth summarizing outside of the svn changelog.  These may be empty (their contents will be ignored).
 
-The entry should contain a high-level description of the change suitable for end users. Generally, the grammatical subject of the sentence should be a Python object, and the verb should be something that the object does, prefixed with "now". Here's an example:
+The entry should contain a high-level description of the change suitable for end users. Generally, the grammatical subject of the sentence should be a Python object, and the verb should be something that the object does, prefixed with "now". Here's are some examples:
 
+Features:
 {{{
 twisted.protocols.amp now raises InvalidSignature when bad arguments are passed to Command.makeArguments
+}}}
+
+{{{
+This release adds twisted.internet.endpoints, an interface for specifying address families separately from socket types.
+}}}
+
+Deprecations:
+{{{
+twisted.trial.util.findObject is now deprecated.
+}}}
+
+{{{
+twisted.conch.insults.colors is now deprecated in favor of twisted.conch.insults.helper.
+}}}
+
+{{{
+twisted.runner.procmon.ProcessMonitor's active, consistency, and consistencyDelay attributes are now deprecated.
+}}}
+
+Removals:
+{{{
+twisted.internet.interfaces.IReactorTime.cancelCallLater, deprecated since Twisted 2.5, has been removed.
 }}}
 
 You don't need to worry about newlines in the file; the contents will be rewrapped when added to the NEWS files.
