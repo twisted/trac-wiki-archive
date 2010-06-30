@@ -1,1 +1,3 @@
 A Git mirror of the entire Twisted repository is available.  The clone url is http://svn.twistedmatrix.com/git/Twisted/.git
+
+There is no `.gitignore` in the repository.  This is intentional.  See [http://www.kernel.org/pub/software/scm/git/docs/gitignore.html gitignore], particularly ''core.excludesfile'', for information about configuring your own ignore patterns.
