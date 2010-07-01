@@ -1,0 +1,35 @@
+=== Notes for an API to retrieve the result of a Deferred synchronously ===
+
+`resultNow` is a function which accepts a `Deferred` and returns the result of the `Deferred`.  It is an error if the `Deferred` does not have a result yet.  It is intended to simplify unit tests for cases where a `Deferred` is required to have a result at a particular time.
+
+Use cases:
+
+The latter half of
+{{{
+    def test_synchronousImplicitChain(self):
+        """
+        If a first L{Deferred} with a result is returned from a callback on a
+        second L{Deferred}, the result of the second L{Deferred} becomes the
+        result of the first L{Deferred} and the result of the first L{Deferred}
+        becomes C{None}.
+        """
+        result = object()
+        first = defer.succeed(result)
+        second = defer.Deferred()
+        second.addCallback(lambda ign: first)
+        second.callback(None)
+
+        results = []
+        first.addCallback(results.append)
+        self.assertIdentical(results[0], None)
+        second.addCallback(results.append)
+        self.assertIdentical(results[1], result)
+}}}
+
+could be rewritten more simply:
+
+{{{
+        self.assertIdentical(resultNow(first), None)
+        self.assertIdentical(resultNow(second), result)
+}}}
+
