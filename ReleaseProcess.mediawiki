@@ -158,36 +158,34 @@ jml
    * They are mirrored 15 minutes every hour
    * You can ask foom on #twisted to force the mirror
 
+== Update documentation ==
+
+ 1. See APIDocs
+ 1. Get the dependencies
+    * Twisted (export from tagged release branch)
+    * Pydoctor
+    * Nevow
+    * Epytext
+ 1. Run the unofficial build-docs script (see below)
+    1. Update the permissions (XXX: how?)
+ 1. cp the documents to /srv/.../documentation/10.0.0
+    * XXX: full path please
+ 1. rm -rf twisted/{vfs,web2} from the export
+ 1. Run the unofficial build-api script (see below)
+ 1. Move the API docs and update the permissions
+    1. cd /srv/www-data/website/vhosts/twistedmatrix.com/documents
+    1. mv ~exarkun/documentation/twisted-10.0.0/api/ ./10.0.0/
+    1. chown -R www-data.www-data 10.0.0/api/
+ 1. Copy the book
+ 1. Check the permissions (XXX: what permissions?)
+ 1. Test the generated docs (XXX: what to look for?)
+ 1. Change the "current" symlink (XXX: exact commands)
+ 1. Removing the staging area
+
 == Announce ==
 
  1. Update the WikiStart and [wiki:Downloads] pages
     1. XXX: Describe this process exactly
- 1. Update website documentation
-   * See APIDocs
-   * Get the dependencies
-     * Twisted (export from tagged release branch)
-     * Pydoctor
-     * Nevow
-     * Epytext
-   * Run the unofficial build-docs script (see below)
-   * Update the permissions
-     * XXX: how?
-   * cp the documents to /srv/.../documentation/10.0.0
-     * XXX: full path please
-   * rm -rf twisted/{vfs,web2} from the export
-   * Run the unofficial build-api script (see below)
-   * Move the API docs and update the permissions
-     * cd /srv/www-data/website/vhosts/twistedmatrix.com/documents
-     * mv ~exarkun/documentation/twisted-10.0.0/api/ ./10.0.0/
-     * chown -R www-data.www-data 10.0.0/api/
-   * Copy the book
-   * Check the permissions
-     * XXX: what permissions?
-   * Test the generated docs
-     * XXX: what to look for?
-   * Change the "current" symlink
-     * XXX: exact commands
-   * Removing the staging area
  1. Write the release announcement (see below)
  1. Update ReleaseRevisions with the revision of this release
    * XXX: What revision exactly?
