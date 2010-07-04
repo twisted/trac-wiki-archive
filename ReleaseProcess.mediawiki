@@ -231,8 +231,10 @@ See [wiki:APIDocs]
       * http://pypi.python.org/pypi/Twisted%20Runner/
       * http://pypi.python.org/pypi/Twisted%20Web/
       * http://pypi.python.org/pypi/Twisted%20Words/
-    1. Launchpad; https://launchpad.net/twisted/+announcements
-      * Include a text version of the announcement and the new entries of the NEWS file
+    1. Launchpad; 
+      * https://edge.launchpad.net/twisted/main/+addrelease
+        * Include a text version of the announcement and the new entries of the NEWS file
+      * https://launchpad.net/twisted/+announcements
     1. http://labs.twistedmatrix.com
       * Post a web version of the announcements, with links instead of literal URLs
     1. Twitter, if you feel like it
