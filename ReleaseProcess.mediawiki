@@ -204,11 +204,11 @@ See [wiki:APIDocs]
  1. Update [wiki:Downloads] pages
     1. Change text references to the old version to refer to the new version
     1. Update the link to the NEWS file to point to the new version
-    1. Update links to MSIs
-    1. Update links to the main tarball
-    1. Update links to sub tarballs
+    1. Update links and text to MSIs
+    1. Update links and text to the main tarball
+    1. Update links and text to sub tarballs, including links to news files
     1. Update web2 links
-    1. Update md5sum links
+    1. Add a new md5sum link
     1. Save the page, check all links
  1. Update WikiStart
  1. Write the release announcement (see below)
