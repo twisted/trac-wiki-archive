@@ -181,13 +181,22 @@ See [wiki:APIDocs]
     * e.g. `scp -r doc/* /srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0`, replacing "10.0.0" with the release number
  1. Run the unofficial build-api script (see below)
     * Documentation will be generated in a directory called `apidocs`
-    * `scp -r apidocs /srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0/api` replacing "10.0.0" with the release number
+    * `tar -cjf apidocs.tar.bz2 apidocs`
+    * `scp apidocs.tar.bz2 cube.twistedmatrix.com:.`
+    * On cube, `tar -xjf apidocs.tar.bz2`
+    * On cube, `mv apidocs /srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0/api`  replacing "10.0.0" with the release number
+ 1. Copy the book
+    * e.g. `scp book.pdf cube.twistedmatrix.com:/srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0/core/howto`
  1. Update the permissions
     * `cd /srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0`
     * `find . -type d | xargs chmod 2775`
     * `find . -type f | xargs chmod 664`
     * `chgrp -R www-data .`
- 1. Copy the book
+ 1. Update the permissions on cube
+    * `cd /srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0`
+    * `find . -type d | xargs chmod 2775`
+    * `find . -type f | xargs chmod 664`
+    * `chgrp -R www-data .`
  1. Test the generated docs (XXX: what to look for?)
  1. Change the "current" symlink (XXX: exact commands)
  1. Removing the staging area
