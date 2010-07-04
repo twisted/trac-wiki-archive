@@ -201,8 +201,16 @@ See [wiki:APIDocs]
 
 == Announce ==
 
- 1. Update the WikiStart and [wiki:Downloads] pages
-    1. XXX: Describe this process exactly
+ 1. Update [wiki:Downloads] pages
+    1. Change text references to the old version to refer to the new version
+    1. Update the link to the NEWS file to point to the new version
+    1. Update links to MSIs
+    1. Update links to the main tarball
+    1. Update links to sub tarballs
+    1. Update web2 links
+    1. Update md5sum links
+    1. Save the page, check all links
+ 1. Update WikiStart
  1. Write the release announcement (see below)
  1. Update ReleaseRevisions with the revision of this release
    * The final revision of the release is the revision in which the release branch was made. The starting revision is the one immediately after the final revision of the previous release.
