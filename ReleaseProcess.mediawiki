@@ -160,7 +160,7 @@ jml
 
 == Update documentation ==
 
- 1. See APIDocs
+ 1. See [wiki:APIDocs]
  1. Get the dependencies
     * Twisted (export from tagged release branch)
     * Pydoctor
@@ -271,7 +271,7 @@ If you choose the third option, then you should:
 
 == Build API docs for website ==
 
-See also APIDocs. See #2891.
+See also [wiki:APIDocs]. See #2891.
 
 {{{
 #!python
