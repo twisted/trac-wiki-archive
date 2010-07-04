@@ -1,6 +1,4 @@
-'''This document is a draft.'''
-
-'''jml wrote it, and wants to give it a lot of love very very soon. If you want to edit it before then, consider talking to jml'''
+This document describes the Twisted release process. Although it is still incomplete, every effort has been made to ensure that it is accurate and up-to-date.
 
 = Outcomes =
 
@@ -187,19 +185,19 @@ See [wiki:APIDocs]
     * On cube, `mv apidocs /srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0/api`  replacing "10.0.0" with the release number
  1. Copy the book
     * e.g. `scp book.pdf cube.twistedmatrix.com:/srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0/core/howto`
- 1. Update the permissions
-    * `cd /srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0`
-    * `find . -type d | xargs chmod 2775`
-    * `find . -type f | xargs chmod 664`
-    * `chgrp -R www-data .`
  1. Update the permissions on cube
     * `cd /srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0`
     * `find . -type d | xargs chmod 2775`
     * `find . -type f | xargs chmod 664`
     * `chgrp -R www-data .`
- 1. Test the generated docs (XXX: what to look for?)
- 1. Change the "current" symlink (XXX: exact commands)
- 1. Removing the staging area
+ 1. Test the generated docs
+    * Browse to `http://twistedmatrix.com/documents/10.0.0/`
+    * Make sure that there is content in each of the directories and that it looks good
+    * Follow each link on http://twistedmatrix.com/trac/wiki/Documentation, replace `current` with the version number (e.g. 10.0.0) and look for any obvious breakage
+ 1. Change the "current" symlink
+    * On cube `cd /srv/www-data/website/vhosts/twistedmatrix.com/documents`
+    * On cube, `rm current`
+    * On cube, `ln -s 10.0.0 current`
 
 == Announce ==
 
