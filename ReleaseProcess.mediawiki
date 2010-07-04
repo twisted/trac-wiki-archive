@@ -18,6 +18,7 @@ By the end of a Twisted release we'll have:
 To release Twisted, you will need:
  * Commit privileges to Twisted
  * Shell access to cube.twistedmatrix.com
+   * XXX: Possibly this ought to be permission to log in as `www-data`
  * Write permissions to /srv/www-data/twisted on cube (normally, www-data membership)
  * Write permissions to /srv/www-data/website/vhosts/twistedmatrix.com/documents
  * Permissions to edit WikiStart
@@ -160,17 +161,17 @@ jml
 
 == Update documentation ==
 
- 1. See [wiki:APIDocs]
+See [wiki:APIDocs]
+
  1. Get the dependencies
     * Twisted (export from tagged release branch)
     * Pydoctor
     * Nevow
     * Epytext
  1. Run the unofficial build-docs script (see below)
-    1. Update the permissions (XXX: how?)
- 1. cp the documents to /srv/.../documentation/10.0.0
-    * XXX: full path please
+ 1. cp the documents to `/srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0`, replacing "10.0.0" with the release number
  1. rm -rf twisted/{vfs,web2} from the export
+ 1. Update the permissions
  1. Run the unofficial build-api script (see below)
  1. Move the API docs and update the permissions
     1. cd /srv/www-data/website/vhosts/twistedmatrix.com/documents
