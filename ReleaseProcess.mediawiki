@@ -119,12 +119,17 @@ jml
 
 = How to do a final release =
 
+== Prepare the branch ==
+
  1. Run `./bin/admin/change-versions XX.YY.ZZ`
  1. Add the quote of the release to the README
  1. Submit the ticket for review
  1. When the ticket is reviewed, merge the branch into trunk
  1. Tag the release
     1. e.g. `svn cp svn+ssh://svn.twistedmatrix.com/svn/Twisted/branches/release-x-4290 svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-10.0.0`
+
+== Cut the tarballs & installers ==
+
  1. Create a new staging area for the release (e.g. `mkdir /tmp/twisted-release`)
  1. Run `./bin/admin/build-tarballs . /tmp/twisted-release/`
  1. Build windows installers
@@ -136,7 +141,11 @@ jml
     1. e.g. `md5sum Tw* | gpg -a --clearsign > twisted-10.0.0-md5sums.txt`
     1. e.g. `scp twisted-10.0.0-md5sums.txt  cube.twistedmatrix.com:/srv/www-data/twisted/Releases/`
     1. [http://tmrc.mit.edu/mirror/twisted/twisted-10.0.0-md5sums.txt example of the result]
+
+== Distribute ==
+
  1. Upload to the official upload locations (see #2888)
+    1. e.g. `ssh cube.twistedmatrix.com mkdir -m 2775 /srv/www-data/twisted/Releases/{Twisted,Core,Conch,Lore,Mail,Names,Pair,Runner,Web,Words}/10.0`
     1. e.g. `scp /tmp/twisted-release/Twisted-10.0.0.tar.bz2 cube:/srv/www-data/twisted/Releases/Twisted/10.0/`
     1. For all subprojects, upload the tarballs to `cube:/srv/www-data/twisted/Releases/<Project>/<First two parts of version number>/`
     1. Windows installers (msi and exe) go in the `Twisted` project
@@ -148,6 +157,9 @@ jml
  1. Wait for the tarballs to be mirrored to tmrc
    * They are mirrored 15 minutes every hour
    * You can ask foom on #twisted to force the mirror
+
+== Announce ==
+
  1. Update the WikiStart and [wiki:Downloads] pages
     1. XXX: Describe this process exactly
  1. Update website documentation
