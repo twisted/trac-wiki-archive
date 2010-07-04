@@ -175,20 +175,19 @@ See [wiki:APIDocs]
     * `cp -R doc /tmp/twisted-release/`
     * `cd /tmp/twisted-release/doc`
     * `rm -rf vfs web2`
+ 1. Make the documentation directory on cube
+    * e.g. `ssh cube.twistedmatrix.com mkdir -m 2775 /srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0`
  1. Upload the documents to cube
     * e.g. `scp -r doc/* /srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0`, replacing "10.0.0" with the release number
+ 1. Run the unofficial build-api script (see below)
+    * Documentation will be generated in a directory called `apidocs`
+    * `scp -r apidocs /srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0/api` replacing "10.0.0" with the release number
  1. Update the permissions
     * `cd /srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0`
     * `find . -type d | xargs chmod 2775`
     * `find . -type f | xargs chmod 664`
     * `chgrp -R www-data .`
- 1. Run the unofficial build-api script (see below)
- 1. Move the API docs and update the permissions
-    1. cd /srv/www-data/website/vhosts/twistedmatrix.com/documents
-    1. mv ~exarkun/documentation/twisted-10.0.0/api/ ./10.0.0/
-    1. chown -R www-data.www-data 10.0.0/api/
  1. Copy the book
- 1. Check the permissions (XXX: what permissions?)
  1. Test the generated docs (XXX: what to look for?)
  1. Change the "current" symlink (XXX: exact commands)
  1. Removing the staging area
