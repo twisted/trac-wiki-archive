@@ -139,7 +139,7 @@ jml
  1. Sign the tarballs and Windows installers
     1. e.g. `md5sum Tw* | gpg -a --clearsign > twisted-10.0.0-md5sums.txt`
     1. e.g. `scp twisted-10.0.0-md5sums.txt  cube.twistedmatrix.com:/srv/www-data/twisted/Releases/`
-    1. [http://tmrc.mit.edu/mirror/twisted/twisted-10.0.0-md5sums.txt example of the result]
+    1. [http://tmrc.mit.edu/mirror/twisted/twisted-10.1.0-md5sums.txt example of the result]
 
 == Distribute ==
 
@@ -244,7 +244,7 @@ See [wiki:APIDocs]
 
 The final release announcement should:
  * Mention the version number
- * Include links to the release tarballs & Windows installers
+ * Include links to the release tarballs & Windows installers (both msi & exe)
  * Summarize the significant changes in the release
  * Consider including the quote of the release
  * Thank the contributors to the release
@@ -273,7 +273,8 @@ It's stable, backwards compatible, well tested and in every way an
 improvement. Download it now from:
 
  http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.tar.bz2 or
- http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.win32-py2.5.msi
+ http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.win32-py2.5.msi or
+ http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.win32-py2.6.msi
 
 Many thanks to Jean-Paul Calderone and Chris Armstrong, whose work on
 release automation tools and answers to numerous questions made this
