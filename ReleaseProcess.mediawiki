@@ -1,12 +1,14 @@
 This document describes the Twisted release process. Although it is still incomplete, every effort has been made to ensure that it is accurate and up-to-date.
 
+[[PageOutline]]
+
 = Outcomes =
 
 By the end of a Twisted release we'll have:
  * Tarballs for Twisted as a whole, and for each of its subprojects
  * Windows installers for the whole Twisted project
  * Updated documentation (API, howtos & book) on the twistedmatrix.com site
- * Updated download links on the twistedmatrix.com site 
+ * Updated download links on the twistedmatrix.com site
  * Announcement emails sent to major Python lists
  * Announcement post on http://labs.twistedmatrix.com
  * A tag in our Subversion repository marking the release
@@ -16,7 +18,7 @@ By the end of a Twisted release we'll have:
 To release Twisted, you will need:
  * Commit privileges to Twisted
  * Shell access to cube.twistedmatrix.com
-   * XXX: Possibly this ought to be permission to log in as `www-data`
+   * '''XXX:''' Possibly this ought to be permission to log in as `www-data`
  * Write permissions to /srv/www-data/twisted on cube (normally, www-data membership)
  * Write permissions to /srv/www-data/website/vhosts/twistedmatrix.com/documents
  * Permissions to edit WikiStart
@@ -36,6 +38,10 @@ For example:
  * The first pre-release of 10.0.0 is 10.0.0pre1, the second is 10.0.0pre2
 
 Every release of Twisted includes the whole project, the core and all subprojects. Each of these has the same number.
+
+Throughout this document, we'll refer to the version number of the release as '''$RELEASE'''. Examples of $RELEASE include 10.0.0, 10.1.0, 10.1.1 etc.
+
+We'll refer to the first two components of the release as '''$API''', since all releases that share those numbers are mutually API compatible. e.g. for 10.0.0, $API is 10.0; for 10.1.0 and 10.1.1, $API is 10.1.
 
 = Overview =
 
@@ -58,8 +64,8 @@ To release Twisted, we
  1. File a ticket
     1. Assign it to the upcoming release milestone
     1. Assign it to yourself
-    1. Call it "Release <version-number>"
- 1. Make a branch (e.g. `mkbranch Twisted releases/release-4290`)
+    1. Call it "Release $RELEASE"
+ 1. Make a branch (e.g. `mkbranch Twisted releases/release-$RELEASE-4290`)
 
 
 = How to do a pre-release =
@@ -86,13 +92,13 @@ To release Twisted, we
 
 The pre-release announcement should mention the important changes since the last release, and exhort readers to test this pre-release.
 
-Here's what the 10.0.0pre1 release annoucement ''ought'' to have looked like:
+Here's what the $RELEASEpre1 release annoucement might look like:
 
 {{{
 Live from PyCon Atlanta, I'm pleased to herald the approaching
-footsteps of the 10.0 release.
+footsteps of the $API release.
 
-Tarballs for the first Twisted 10.0.0 pre-release are now available at:
+Tarballs for the first Twisted $RELEASE pre-release are now available at:
  http://people.canonical.com/~jml/Twisted/
 
 Highlights include:
@@ -120,12 +126,12 @@ jml
 
 == Prepare the branch ==
 
- 1. Run `./bin/admin/change-versions XX.YY.ZZ`
+ 1. Run `./bin/admin/change-versions $RELEASE`
  1. Add the quote of the release to the README
  1. Submit the ticket for review
  1. When the ticket is reviewed, merge the branch into trunk
  1. Tag the release
-    1. e.g. `svn cp svn+ssh://svn.twistedmatrix.com/svn/Twisted/branches/release-x-4290 svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-10.0.0`
+    1. e.g. `svn cp svn+ssh://svn.twistedmatrix.com/svn/Twisted/branches/release-$RELEASE-4290 svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-$RELEASE`
 
 == Cut the tarballs & installers ==
 
@@ -134,25 +140,25 @@ jml
  1. Build windows installers
     1. http://buildbot.twistedmatrix.com/builders/winxp32-py2.5-msi/
     1. http://buildbot.twistedmatrix.com/builders/winxp32-py2.6-msi/
-    1. For "Branch" specify the tag, e.g. "tags/releases/twisted-10.0.0"
+    1. For "Branch" specify the tag, e.g. "tags/releases/twisted-$RELEASE"
     1. Download the latest `.msi` and `.exe` files from from http://buildbot.twistedmatrix.com/builds/, save them in the staging directory
  1. Sign the tarballs and Windows installers
-    1. e.g. `md5sum Tw* | gpg -a --clearsign > twisted-10.0.0-md5sums.txt`
-    1. e.g. `scp twisted-10.0.0-md5sums.txt  cube.twistedmatrix.com:/srv/www-data/twisted/Releases/`
+    1. e.g. `md5sum Tw* | gpg -a --clearsign > twisted-$RELEASE-md5sums.txt`
+    1. e.g. `scp twisted-$RELEASE-md5sums.txt cube.twistedmatrix.com:/srv/www-data/twisted/Releases/`
     1. [http://tmrc.mit.edu/mirror/twisted/twisted-10.1.0-md5sums.txt example of the result]
 
 == Distribute ==
 
  1. Upload to the official upload locations (see #2888)
-    1. e.g. `ssh cube.twistedmatrix.com mkdir -m 2775 /srv/www-data/twisted/Releases/{Twisted,Core,Conch,Lore,Mail,Names,News,Pair,Runner,Web,Words}/10.0`
-    1. e.g. `scp /tmp/twisted-release/Twisted-10.0.0.tar.bz2 cube:/srv/www-data/twisted/Releases/Twisted/10.0/`
-    1. For all subprojects, upload the tarballs to `cube:/srv/www-data/twisted/Releases/<Project>/<First two parts of version number>/`
+    1. e.g. `ssh cube.twistedmatrix.com mkdir -m 2775 /srv/www-data/twisted/Releases/{Twisted,Core,Conch,Lore,Mail,Names,News,Pair,Runner,Web,Words}/$API`
+    1. e.g. `scp /tmp/twisted-release/Twisted-$RELEASE.tar.bz2 cube:/srv/www-data/twisted/Releases/Twisted/$API/`
+    1. For all subprojects, upload the tarballs to `cube:/srv/www-data/twisted/Releases/$SUBPROJECT/$API/`
     1. Windows installers (msi and exe) go in the `Twisted` project
  1. Update the permissions on `cube`
     1. For all new directories, `chmod 2775 $DIRECTORY`
     1. For all new files, `chmod 664 $FILE`
     1. For all new files and directories, `chgrp www-data $FILE_OR_DIR`
-    1. e.g. `find /srv/www-data/twisted/Releases -name '*10.0.0*' | xargs chmod g+w`
+    1. e.g. `find /srv/www-data/twisted/Releases -name '*$RELEASE*' | xargs chmod g+w`
  1. Wait for the tarballs to be mirrored to tmrc
    * They are mirrored 15 minutes every hour
    * You can ask foom on #twisted to force the mirror
@@ -164,40 +170,40 @@ jml
     * Nevow
     * Epytext
  1. Export the version of Twisted being released
-    * e.g. `svn export svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-10.0.0`
+    * e.g. `svn export svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-$RELEASE`
  1. Run the unofficial build-docs script in an export of the release tag (see below)
-    * `cd twisted-10.0.0`
+    * `cd twisted-$RELEASE`
     * Edit `doc/core/howto/template.tpl` adding the Google Analytics JavaScript (which can be found in the source of any trac page).
-    * XXX: The script below builds the docs into the current directory, mixing them up with the source files
+    * '''XXX:''' The script below builds the docs into the current directory, mixing them up with the source files
     * `python build-docs.py`
     * `cp -R doc /tmp/twisted-release/`
     * `cd /tmp/twisted-release/doc`
     * `rm -rf vfs web2`
  1. Make the documentation directory on cube
-    * e.g. `ssh cube.twistedmatrix.com mkdir -m 2775 /srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0`
+    * e.g. `ssh cube.twistedmatrix.com mkdir -m 2775 /srv/www-data/website/vhosts/twistedmatrix.com/documents/$RELEASE`
  1. Upload the documents to cube
-    * e.g. `scp -r doc/* /srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0`, replacing "10.0.0" with the release number
+    * e.g. `scp -r doc/* /srv/www-data/website/vhosts/twistedmatrix.com/documents/$RELEASE`
  1. Run the unofficial build-api script (see below)
     * Documentation will be generated in a directory called `apidocs`
     * `tar -cjf apidocs.tar.bz2 apidocs`
     * `scp apidocs.tar.bz2 cube.twistedmatrix.com:.`
     * On cube, `tar -xjf apidocs.tar.bz2`
-    * On cube, `mv apidocs /srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0/api`  replacing "10.0.0" with the release number
+    * On cube, `mv apidocs /srv/www-data/website/vhosts/twistedmatrix.com/documents/$RELEASE/api`
  1. Copy the book
-    * e.g. `scp book.pdf cube.twistedmatrix.com:/srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0/core/howto`
+    * e.g. `scp book.pdf cube.twistedmatrix.com:/srv/www-data/website/vhosts/twistedmatrix.com/documents/$RELEASE/core/howto`
  1. Update the permissions on cube
-    * `cd /srv/www-data/website/vhosts/twistedmatrix.com/documents/10.0.0`
+    * `cd /srv/www-data/website/vhosts/twistedmatrix.com/documents/$RELEASE`
     * `find . -type d | xargs chmod 2775`
     * `find . -type f | xargs chmod 664`
     * `chgrp -R www-data .`
  1. Test the generated docs
-    * Browse to `http://twistedmatrix.com/documents/10.0.0/`
+    * Browse to `http://twistedmatrix.com/documents/$RELEASE/`
     * Make sure that there is content in each of the directories and that it looks good
-    * Follow each link on http://twistedmatrix.com/trac/wiki/Documentation, replace `current` with the version number (e.g. 10.0.0) and look for any obvious breakage
+    * Follow each link on http://twistedmatrix.com/trac/wiki/Documentation, replace `current` with $RELEASE (e.g. 10.0.0) and look for any obvious breakage
  1. Change the "current" symlink
     * On cube `cd /srv/www-data/website/vhosts/twistedmatrix.com/documents`
     * On cube, `rm current`
-    * On cube, `ln -s 10.0.0 current`
+    * On cube, `ln -s $RELEASE current`
 
 == Announce ==
 
@@ -231,7 +237,7 @@ jml
       * http://pypi.python.org/pypi/Twisted%20Runner/
       * http://pypi.python.org/pypi/Twisted%20Web/
       * http://pypi.python.org/pypi/Twisted%20Words/
-    1. Launchpad; 
+    1. Launchpad;
       * https://edge.launchpad.net/twisted/main/+addrelease
         * Include a text version of the announcement and the new entries of the NEWS file
       * https://launchpad.net/twisted/+announcements
@@ -253,7 +259,7 @@ Here's an example:
 
 {{{
 On behalf of Twisted Matrix Laboratories, I am honored to announce the
-release of Twisted 10.0.
+release of Twisted $RELEASE.
 
 Highlights include:
 
@@ -272,9 +278,9 @@ For more information, see the NEWS file.
 It's stable, backwards compatible, well tested and in every way an
 improvement. Download it now from:
 
- http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.tar.bz2 or
- http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.win32-py2.5.msi or
- http://tmrc.mit.edu/mirror/twisted/Twisted/10.0/Twisted-10.0.0.win32-py2.6.msi
+ http://tmrc.mit.edu/mirror/twisted/Twisted/$API/Twisted-$RELEASE.tar.bz2 or
+ http://tmrc.mit.edu/mirror/twisted/Twisted/$API/Twisted-$RELEASE.win32-py2.5.msi or
+ http://tmrc.mit.edu/mirror/twisted/Twisted/$API/Twisted-$RELEASE.win32-py2.6.msi
 
 Many thanks to Jean-Paul Calderone and Chris Armstrong, whose work on
 release automation tools and answers to numerous questions made this
@@ -309,8 +315,8 @@ from twisted.python._release import APIBuilder
 from twisted.python.filepath import FilePath
 
 APIBuilder().build(
-    'Twisted', 'http://twistedmatrix.com/', 
-    'http://twistedmatrix.com/trac/browser/tags/releases/twisted-10.0.0/',
+    'Twisted', 'http://twistedmatrix.com/',
+    'http://twistedmatrix.com/trac/browser/tags/releases/twisted-$RELEASE/',
     FilePath('twisted'),
     FilePath('api'))
 }}}
@@ -335,9 +341,9 @@ for p in FilePath('doc').walk():
             print 'processing howto pages:', p.parent().path
             done[p.parent()] = True
             r.DocBuilder().build(
-                '10.0.0', FilePath('doc/core/howto'), p.parent(),
+                '$RELEASE', FilePath('doc/core/howto'), p.parent(),
                 FilePath('doc/core/howto/template.tpl'),
-                'http://twistedmatrix.com/documents/10.0.0/api/%s.html',
+                'http://twistedmatrix.com/documents/$RELEASE/api/%s.html',
                 False)
 
 print 'building book:'
@@ -358,7 +364,7 @@ r.BookBuilder().build(FilePath('doc/core/howto'), done.keys(),
  * Should news fragments contain information about who made the changes?
  * Does this document miss anything relevant that ReleaseProcedure includes?
  * A thought for future releases: since we'd really like folks to download the prereleases and try them out, perhaps we should put the [source:trunk/NEWS NEWS] file on the web somewhere official, too, so they can see all the cool stuff they can try out?
-   * XXX: jml doesn't know what this means any more
+   * '''XXX:''' jml doesn't know what this means any more
 
 = Bugs mentioned on this page =
 
