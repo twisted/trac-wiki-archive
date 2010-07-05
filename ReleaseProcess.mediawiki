@@ -162,12 +162,14 @@ jml
 See [wiki:APIDocs]
 
  1. Get the dependencies
-    * Twisted (export from tagged release branch)
     * Pydoctor
     * Nevow
     * Epytext
+ 1. Export the version of Twisted being released
+    * e.g. `svn export svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-10.0.0`
  1. Run the unofficial build-docs script in an export of the release tag (see below)
-    * XXX: This only seems to work in a checkout or an export, since it needs the xhtml files
+    * `cd twisted-10.0.0`
+    * Edit `doc/core/howto/template.tpl` adding the Google Analytics JavaScript (which can be found in the source of any trac page).
     * XXX: The script below builds the docs into the current directory, mixing them up with the source files
     * `python build-docs.py`
     * `cp -R doc /tmp/twisted-release/`
