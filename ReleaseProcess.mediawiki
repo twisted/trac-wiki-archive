@@ -162,7 +162,7 @@ jml
 See [wiki:APIDocs]
 
  1. Get the dependencies
-    * Pydoctor
+    * Pydoctor (use [https://code.launchpad.net/~exarkun/pydoctor/twisted-template-changes lp:~exarkun/pydoctor/twisted-template-changes] to get google analytics templates)
     * Nevow
     * Epytext
  1. Export the version of Twisted being released
