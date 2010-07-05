@@ -179,8 +179,9 @@ jml
     * `cp -R doc /tmp/twisted-release/`
     * `cd /tmp/twisted-release/doc`
     * `rm -rf vfs web2`
- 1. Fix the Google Analytics javascript (due to #4544)
+ 1. Fix the Google Analytics javascript (due to #4544 and #4545)
     * `find /tmp/twisted-release/doc -name '*.html' | xargs sed -i 's/&quot;UA-99018-6&quot;/"UA-99018-6"/'`
+    * `find . -name '*.html' | xargs sed -i 's/\(urchin\.js.*\)javascript"\/>/\1javascript"><\/script>/'`
  1. Make the documentation directory on cube
     * e.g. `ssh cube.twistedmatrix.com mkdir -m 2775 /srv/www-data/website/vhosts/twistedmatrix.com/documents/$RELEASE`
  1. Upload the documents to cube
@@ -376,6 +377,7 @@ r.BookBuilder().build(FilePath('doc/core/howto'), done.keys(),
  * [ticket:2891 Automate building & uploading API docs for website]
  * [ticket:2380 Automate building & uploading howto docs for website]
  * [ticket:4544 Lore applies quoting to contents of script tags]
+ * [ticket:4545 Lore collapses script tags]
 
 = See also =
 
