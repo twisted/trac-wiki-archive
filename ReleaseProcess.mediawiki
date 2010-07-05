@@ -159,8 +159,6 @@ jml
 
 == Update documentation ==
 
-See [wiki:APIDocs]
-
  1. Get the dependencies
     * Pydoctor (use [https://code.launchpad.net/~exarkun/pydoctor/twisted-template-changes lp:~exarkun/pydoctor/twisted-template-changes] to get google analytics templates)
     * Nevow
