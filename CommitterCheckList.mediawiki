@@ -27,4 +27,5 @@ This is a list of things that developers with commit access to the Twisted sourc
     1. No, really, use it.  It saves a lot of time.
     1. Also, update it somewhat frequently, to keep the list of supported builders up to date.
   1. Be in the IRC channel, at least when you're going to be committing to trunk (don't feel bad about avoiding the distraction when you're trying to get stuff done though).
+  1. Everything you check in to SVN is licensed under [browser:trunk/LICENSE Twisted's license]
   1. Have fun, but not too much.
