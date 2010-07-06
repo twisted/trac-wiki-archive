@@ -12,6 +12,7 @@ Donations are [http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation#Back
 
  * [wiki:BasicGuideToContributingCode Basic Guide To Contributing Code], a simplified overview
  * [wiki:TwistedDevelopment Detailed Contribution Requirements]
+ * [wiki:CommitterCheckList Checklist for Twisted committers], things that developers with commit access should know
 
 === [#Prepare Prepare] ===
   * [/register Register] on this site
