@@ -26,6 +26,8 @@ This is a list of things that developers with commit access to the Twisted sourc
   1. Use [browser:sandbox/exarkun/force-builds.py force-builds.py] if you want to test a branch on all supported builders before merging
     1. No, really, use it.  It saves a lot of time.
     1. Also, update it somewhat frequently, to keep the list of supported builders up to date.
+    1. `force-builds.py` prints a link to a results page; mention it in the ticket as a link with the text "Build results" like this: `[url-goes-here Build Results]`
+    1. There are certain unit-tests on certain builders that are known to fail intermittently. There's no official list of such tests, but you can look at the history of trunk builds for a particular builder to see if a particular failure shows up a lot. If you're sure that a given build failure is intermittent and not caused by the changes in your branch, you can still merge.
   1. Be in the IRC channel, at least when you're going to be committing to trunk (don't feel bad about avoiding the distraction when you're trying to get stuff done though).
   1. Everything you check in to SVN is licensed under [browser:trunk/LICENSE Twisted's license]
   1. Have fun, but not too much.
