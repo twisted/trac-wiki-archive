@@ -1,3 +1,41 @@
-A Git mirror of the entire Twisted repository is available.  The clone url is http://svn.twistedmatrix.com/git/Twisted/.git
+A Git mirror of the entire Twisted repository is available.
 
-There is no `.gitignore` in the repository.  This is intentional.  See [http://www.kernel.org/pub/software/scm/git/docs/gitignore.html gitignore], particularly ''core.excludesfile'', for information about configuring your own ignore patterns.
+= Checking out =
+
+{{{
+git clone http://svn.twistedmatrix.com/git/Twisted/.git
+}}}
+
+Note that even if you have Twisted commit access, you can't create or merge branches this way - you must use SVN directly, make your own Git mirror with `git svn`, or obtain a copy (not a clone) of such a Git mirror. If you do choose to make your own Git mirror with `git svn`, it takes about a week to import the entire Twisted commit history.
+
+= Git isn't ignoring .pyc files! =
+
+There is no `.gitignore` in the repository.  This is intentional - there's [http://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html#auto25 no svn:ignore properties in the official SVN repository either] - on the grounds that different people might want to ignore different things. Instead, you can tell Git to ignore things by adding rules to the `.git/info/exclude` file. Here's an example:
+{{{
+*~
+*.py[co]
+_trial_temp
+dropin.cache
+*.o
+*.lo
+*.la
+}}}
+See [http://www.kernel.org/pub/software/scm/git/docs/gitignore.html the Git documentation on .gitignore], particularly ''core.excludesfile'', for more information.
+
+= git svn operations seem to take forever =
+
+If you have your own `git svn` clone, and svn-based operations seem to take forever, try running:
+{{{
+git svn info
+}}}
+If that takes longer than 30 seconds to run, and eventually prints an error message, this is a clue that `git svn` has gotten confused about how your current branch connects to the imported SVN history. Either `git checkout` a git branch that's based on an SVN branch or (if you're already on such a branch, and it's broken) use `git reset some-remote-branch-name` to make sure your local branch is pointing exactly at a commit that was imported from SVN.
+
+= git svn branching =
+
+Follow the [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html#auto6 standard Twisted branch-name conventions] when creating branches with Git. 
+
+{{{
+git svn branch new-branch-name-XXXX
+git checkout -b new-branch-name-XXXX remotes/new-branch-name-XXXX
+}}}
+(where `XXXX` means the ticket-number in question)
