@@ -42,6 +42,18 @@ git svn branch $BRANCH_NAME
 git checkout -b $BRANCH_NAME remotes/$BRANCH_NAME
 }}}
 
+= git svn committing =
+
+No special rules apply about making Git commits, you can make as many commits as you like, then rebase them into a nice patch series as normal (although the Twisted review process generally reviews the diff of an entire branch, not individual commits, since rebasing isn't possible in SVN).
+
+However, once you send your patches to the central SVN server with `git svn dcommit`, be very careful about messing with them. Don't rebase any further back than the last push, or else the next `dcommit` is likely to go awry.
+
+Likewise, if you merge from trunk to branch, then `dcommit` the merge, it will become an ordinary commit that doesn't remember its ancestry, and merging it back onto the trunk later is likely to cause grief. So don't do that.
+
+= git svn merging forward =
+
+I haven't done this yet, but it probably needs special handling for the reasons mentioned in the previous section. Look at [http://divmod.org/trac/wiki/MergedForward the official how-to-merge-forward] docs for inspiration.
+
 = git svn branch merging =
 
 In the following example, `$BRANCH_NAME` means the name of the branch you're trying to merge to trunk.
