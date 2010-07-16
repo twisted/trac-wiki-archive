@@ -6,11 +6,11 @@ A Git mirror of the entire Twisted repository is available.
 git clone http://svn.twistedmatrix.com/git/Twisted/.git
 }}}
 
-Note that even if you have Twisted commit access, you can't create or merge branches this way - you must use SVN directly, make your own Git mirror with `git svn`, or obtain a copy (not a clone) of such a Git mirror. If you do choose to make your own Git mirror with `git svn`, it takes about a week to import the entire Twisted commit history.
+Note that even if you have Twisted commit access, you can't create or merge branches this way — you must use SVN directly, make your own Git mirror with `git svn`, or obtain a copy (not a clone) of such a Git mirror. If you do choose to make your own Git mirror with `git svn`, it takes about a week to import the entire Twisted commit history as of early 2010.
 
 = Git isn't ignoring .pyc files! =
 
-There is no `.gitignore` in the repository.  This is intentional - there's [http://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html#auto25 no svn:ignore properties in the official SVN repository either] - on the grounds that different people might want to ignore different things. Instead, you can tell Git to ignore things by adding rules to the `.git/info/exclude` file. Here's an example:
+There is no `.gitignore` in the repository.  This is intentional — there's [http://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html#auto25 no svn:ignore properties in the official SVN repository either] — on the grounds that different people might want to ignore different things. Instead, you can tell Git to ignore things by adding rules to the `.git/info/exclude` file. Here's an example:
 {{{
 *~
 *.py[co]
@@ -32,10 +32,32 @@ If that takes longer than 30 seconds to run, and eventually prints an error mess
 
 = git svn branching =
 
-Follow the [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html#auto6 standard Twisted branch-name conventions] when creating branches with Git. 
+Follow the [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html#auto6 standard Twisted branch-name conventions] when creating branches with Git. In the following example, `$BRANCH_NAME` means the name of the branch you're trying to create. 
 
 {{{
-git svn branch new-branch-name-XXXX
-git checkout -b new-branch-name-XXXX remotes/new-branch-name-XXXX
+# Make a branch in the central SVN repository.
+git svn branch $BRANCH_NAME
+
+# Make a local branch that you can commit changes to, and switch to it.
+git checkout -b $BRANCH_NAME remotes/$BRANCH_NAME
 }}}
-(where `XXXX` means the ticket-number in question)
+
+= git svn branch merging =
+
+In the following example, `$BRANCH_NAME` means the name of the branch you're trying to merge to trunk.
+
+{{{
+# Check out the trunk (what git calls 'master'), make sure it's up-to-date.
+git svn fetch && git svn rebase
+
+# Apply all the changes on the branch to the trunk as one change set.
+git merge --squash remotes/$BRANCH_NAME
+
+# Commit the change set. Remember to use the Canonical Merge Commit Message Format!
+git commit
+
+# Push the commit to the central SVN repository.
+git svn dcommit
+}}}
+
+By "Canonical Merge Commit Message Format", I mean the example merge commit message in [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html#auto6 the Working From Twisted's Subversion Repository documentation].
