@@ -1,0 +1,17 @@
+= Notes on twisted.python.log documentation. =
+
+Someday I'll have to go through and actually file tickets for all this stuff.
+
+While scanning through the documentation for #4568, I've found a number of things I wish were mentioned ''somewhere'' (either in the howto or in docstrings) but aren't. In no particular order:
+
+ * `startLogging`'s first parameter is technically "whatever is acceptable input to `FileLogObserver`", but the useful answer is "a file-handle, file-like object, or an instance of one of the special classes in `t.p.logfile`. It would be nice to have this spelled out somewhere.
+ * There should be documentation describing what happens if you call `startLogging` multiple times, and whether it's a good idea or not (it doesn't look like it would break anything, but the code doesn't look like it was ever intended to be called multiple times).
+ * Perhaps I should file a ticket to create an `IFileLog` interface that defines what `FileLogObserver` requires, and declare the various `t.p.logfile` classes as implementing it.
+ * There's actually a second way to configure where log messages go, which is to find an Observer class (say, `PythonLoggingObserver` or `SyslogObserver`) and call `.start()` on it.
+   * This should be mentioned in some hypothetical "list of ways to configure where log messages go".
+   * Since these classes are spread around the Twisted tree (some are in `t.p.log`, one's in `t.p.syslog`, there may be others), there should be a document listing what observers are available. 
+   * Confusingly, although these classes share a common suffix, they have nothing to do with the `ILogObserver` interface. That should be documented somewhere.
+   * Perhaps I should file a ticket to create an `ILogObservatory` interface that describes this common interface, and mark all the relevant classes as implementing it.
+   * There needs to be documentation of how these observer classes interact with `startLogging` (hint: they don't replace the previous log observer).
+ * There's a third way to configure where log messages go, which is to call `t.p.log.addObserver` and hand it a callable. This should be mentioned in the "list of ways to configure logging".
+ * There's even a fourth way to configure where log messages go: `startLoggingWithObserver` which is a combination of the first and third methods (actually `startLogging` instantiates an observer of the second kind, converts it to an observer of the third kind, then hands it to `startLoggingWithObserver`).
