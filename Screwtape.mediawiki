@@ -16,4 +16,6 @@ While scanning through the documentation for #4568, I've found a number of thing
  * There's a third way to configure where log messages go, which is to call `t.p.log.addObserver` and hand it a callable. This should be mentioned in the "list of ways to configure logging".
  * There's even a fourth way to configure where log messages go: `startLoggingWithObserver` which is a combination of the first and third methods (actually `startLogging` instantiates an observer of the second kind, converts it to an observer of the third kind, then hands it to `startLoggingWithObserver`).
  * Something needs to record that Twisted's logging system is actually a notification broadcast system, not limited to appending lines of text to a file.
- * Something needs to document the tricks of implementing a log observer; in particular, `textFromEventDict` does all the heavy lifting.
+ * Something needs to document the tricks of implementing a log observer:
+   * `textFromEventDict` does all the heavy lifting.
+   * You should be careful to filter out events that aren't obviously intended to be logged to files; in particular, ignore things that have neither "message" nor "format" keys (is this actually right?)
