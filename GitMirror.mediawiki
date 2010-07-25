@@ -35,10 +35,10 @@ If that takes longer than 30 seconds to run, and eventually prints an error mess
 Follow the [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html#auto6 standard Twisted branch-name conventions] when creating branches with Git. In the following example, `$BRANCH_NAME` means the name of the branch you're trying to create. 
 
 {{{
-# Make a branch in the central SVN repository.
+# Create "branches/$BRANCH_NAME" in the central SVN repository.
 git svn branch $BRANCH_NAME
 
-# Make a local branch that you can commit changes to, and switch to it.
+# Create and checkout local branch "$BRANCH_NAME" that tracks "remotes/$BRANCH_NAME"
 git checkout -b $BRANCH_NAME remotes/$BRANCH_NAME
 }}}
 
