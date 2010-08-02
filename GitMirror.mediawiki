@@ -60,6 +60,7 @@ In the following example, `$BRANCH_NAME` means the name of the branch you're try
 
 {{{
 # Check out the trunk (what git calls 'master'), make sure it's up-to-date.
+git checkout master
 git svn fetch && git svn rebase
 
 # Apply all the changes on the branch to the trunk as one change set.
