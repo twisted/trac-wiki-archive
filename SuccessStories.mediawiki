@@ -26,6 +26,14 @@ are production ready and rock-solid.
 
 = [http://fluidinfo.com/ FluidDB] =
 
+At Fluidinfo, we're heavy users of Twisted. All of our infrastructure depends on it. FluidDB, our social database, is entirely built on Twisted, and we've released several core parts of it as open source: [https://launchpad.net/txamqp txAMQP], [https://launchpad.net/txrdq txRDQ] and [https://issues.apache.org/jira/browse/THRIFT-148 txThrift]. Not only that, but we have contributed to Twisted both with code and (albeit small) personal donations.
+
+It's not just that sponsoring was the fair the thing to do, it has also produced tremendous results in a framework crucial to our business. When you donate to the TSF it's simple math that more bugs get fixed, but also the quality of the entire Twisted project is enhanced. And when that happens, all of our products are enhanced automatically without us writing one line of code. So sponsoring is not just an act of generosity, it's an investment in Fluidinfo. Using and sponsoring Twisted has been an indispensable "force multiplier" for a growing start-up like us.
+
+-- Esteve Fernandez, CTO, Fluidinfo Inc.
+
+[[BR]]
+
 At Fluidinfo we chose Twisted as the basis of all internal networking for our
 distributed, shared, always-writable database, FluidDB. We threw out
 a year's worth of working, debugged, tested C code in order to move to Twisted. As
