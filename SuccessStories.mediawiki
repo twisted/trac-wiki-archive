@@ -92,6 +92,31 @@ My team is developing a modular application to integrate CAD/CAE/CAM tools and d
 
 -- Stephen C. Waterbury, NASA
 
+= [http://www.hybrid-cluster.com/ HybridLogic] =
+
+[http://www.hybrid-cluster.com/ Hybrid Web Cluster] is a load-balanced and redundant web cluster built in Twisted which supports all standard LAMP websites.
+
+The web cluster uses ZFS on FreeBSD for its unique ability to efficiently send differential snapshots over a network. But it is Twisted that has enabled us to turn that capability into a cluster filesystem. Everything is asynchronous, for example:
+
+	* polling "zfs list" and "zfs mount" for filesystem state
+	* communicating with other nodes via XML over Spread
+	* reconfiguring distributed servers on-the-fly
+	* handling thousands of internally proxied requests over thousands of sockets simultaneously.
+
+Without Twisted we'd have to rely on threads, or spend valuable time writing an event loop that wouldn't be anywhere near as spectacular as Twisted's. Twisted has enabled us to focus on building phenomenal features (like seamlessly moving websites and databases between servers) instead of wasting precious resources re-inventing wheels.
+
+Using Twisted has been massively beneficial for us. Not only have the
+experts been always on-hand in real-time on IRC, but the code quality
+and the expressive power of the library is unparalleled. In particular
+the combination of Perspective Broker with Deferreds make expressing
+otherwise tricky distributed algorithms a pleasure.
+
+Twisted has been crucial at Hybrid Logic for making an awesome Hybrid Web Cluster platform that guarantees our customers' sites are fast and their data is safe at all times.
+
+Thank you Twisted!
+
+-- Luke Marsden, CTO, HybridLogic Ltd.
+
 = !PowerCard =
 
 !PowerCard is the software platform we developed for
