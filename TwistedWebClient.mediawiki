@@ -44,6 +44,8 @@
     1. Provide a ''multipart/form-data'' body producer
     1. [ticket:4023 Support HTTPS URLs and certificate verification]
     1. Implement a cookie-aware `Agent` wrapper
+  1. Allow binding to a particular local interface
+  1. Make requests over IPv6 when necessary/appropriate
   1. [ticket:1774 Support HTTP proxies]
   1. Implement other HTTP protocol and high-level features
     1. [ticket:3420 high-level access to persistent connections]
