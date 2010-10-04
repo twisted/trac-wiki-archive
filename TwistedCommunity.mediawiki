@@ -7,6 +7,7 @@ For interacting with the twisted community members, you have several options:
 Mail list subscription information as well as list archives are available for the following lists:
  * [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted-python]
  * [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-web twisted-web]
+ * [https://mailman.ik.nu/mailman/listinfo/twisted-jabber twisted-jabber]
 
 == Stack Overflow ==
 
