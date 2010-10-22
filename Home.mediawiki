@@ -159,7 +159,7 @@ value="-----BEGIN PKCS7-----MIIH2QYJKoZIhvcNAQcEoIIHyjCCB8YCAQExggEwMIIBLAIBADCB
 </div>
 
     <h4>Your Logo Here</h4>
-You can use the form above both for both personal donations and corporate sponsorships; for any donation above <a href="http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation#SponsorshipLevels">the Bronze level</a>, we will display your logo here on the front page. 
+You can use the form above for both personal donations and corporate sponsorships; for any donation above <a href="http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation#SponsorshipLevels">the Bronze level</a>, we will display your logo here on the front page. 
 <!-- 
     <h4>Diamond</h4>
 <a href="http://www.itasoftware.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/ITA_logo_160x80.jpg?format=raw" /></a><br/>
