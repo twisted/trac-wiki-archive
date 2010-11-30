@@ -189,7 +189,7 @@ jml
  1. Make the documentation directory on cube
     * e.g. `ssh cube.twistedmatrix.com mkdir -m 2775 /srv/www-data/website/vhosts/twistedmatrix.com/documents/$RELEASE`
  1. Upload the documents to cube
-    * e.g. `scp -r doc/* /srv/www-data/website/vhosts/twistedmatrix.com/documents/$RELEASE`
+    * e.g. `scp -r doc/* cube.twistedmatrix.com:/srv/www-data/website/vhosts/twistedmatrix.com/documents/$RELEASE`
  1. Run the unofficial build-api script (see below)
     1. Documentation will be generated in a directory called `apidocs`
     1. `tar -cjf apidocs.tar.bz2 apidocs`
