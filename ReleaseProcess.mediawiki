@@ -164,7 +164,7 @@ jml
     1. For all new files and directories, `chgrp www-data $FILE_OR_DIR`
     1. e.g. On cube, `find /srv/www-data/twisted/Releases -name '*$RELEASE*' | xargs chmod g+w`
  1. Wait for the tarballs to be mirrored to tmrc
-   * They are mirrored 15 minutes every hour
+   * They are mirrored 15 minutes after every hour
    * You can ask foom on #twisted to force the mirror
 
 == Update documentation ==
