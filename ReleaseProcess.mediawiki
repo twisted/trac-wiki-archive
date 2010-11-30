@@ -131,7 +131,7 @@ jml
  1. Add the quote of the release to the README
  1. Commit the version and README changes.
  1. Submit the ticket for review
- 1. When the ticket is reviewed, merge the branch into trunk
+ 1. Pause until the ticket is reviewed and accepted.
  1. Tag the release
     1. e.g. `svn cp svn+ssh://svn.twistedmatrix.com/svn/Twisted/branches/release-$RELEASE-4290 svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-$RELEASE`
 
@@ -251,6 +251,7 @@ jml
       * Post a web version of the announcements, with links instead of literal URLs
     1. Twitter, if you feel like it
     1. #twisted topic on IRC (you'll need ops)
+ 1. Merge the release branch into trunk, closing the release ticket at the same time.
 
 == Release announcement ==
 
