@@ -138,7 +138,7 @@ jml
 == Cut the tarballs & installers ==
 
  1. Create a new staging area for the release (e.g. `mkdir /tmp/twisted-release`)
- 1. Run `./bin/admin/build-tarballs . /tmp/twisted-release/`
+ 1. Using the release branch or the release tag (with no local changes!), run `./bin/admin/build-tarballs . /tmp/twisted-release/`
  1. Build windows installers
     1. http://buildbot.twistedmatrix.com/builders/winxp32-py2.5-msi/
     1. http://buildbot.twistedmatrix.com/builders/winxp32-py2.6-msi/
