@@ -57,6 +57,7 @@ You probably don't want these unless you have special considerations:
  * [http://tmrc.mit.edu/mirror/twisted/Mail/10.2/TwistedMail-10.2.0.tar.bz2 Twisted Mail] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/mail/topfiles/NEWS Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Names/10.2/TwistedNames-10.2.0.tar.bz2 Twisted Names] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/names/topfiles/NEWS Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/News/10.2/TwistedNews-10.2.0.tar.bz2 Twisted News] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/news/topfiles/NEWS Release notes])
+ * [http://tmrc.mit.edu/mirror/twisted/Pair/10.2/TwistedPair-10.2.0.tar.bz2 Twisted Pair] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/pair/topfiles/NEWS Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Words/10.2/TwistedWords-10.2.0.tar.bz2 Twisted Words] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/words/topfiles/NEWS Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Lore/10.2/TwistedLore-10.2.0.tar.bz2 Twisted Lore] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/lore/topfiles/NEWS Release notes])
  * [http://tmrc.mit.edu/mirror/twisted/Runner/10.2/TwistedRunner-10.2.0.tar.bz2 Twisted Runner] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/runner/topfiles/NEWS Release notes])
