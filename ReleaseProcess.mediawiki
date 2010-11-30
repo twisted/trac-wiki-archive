@@ -126,6 +126,7 @@ jml
 
 == Prepare the branch ==
 
+ 1. Have the release branch, previously used to generate a pre-release, checked out
  1. Run `./bin/admin/change-versions $RELEASE`
  1. Add the quote of the release to the README
  1. Submit the ticket for review
