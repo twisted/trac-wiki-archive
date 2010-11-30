@@ -324,7 +324,7 @@ from twisted.python.filepath import FilePath
 
 APIBuilder().build(
     'Twisted', 'http://twistedmatrix.com/',
-    'http://twistedmatrix.com/trac/browser/tags/releases/twisted-$RELEASE/',
+    'http://twistedmatrix.com/trac/browser/tags/releases/twisted-$RELEASE',
     FilePath('twisted'),
     FilePath('api'))
 }}}
