@@ -6,6 +6,8 @@ A build slave which is to run the Twisted test suite on a particular platform or
   * A C compiler which can build Python extension modules (On POSIX, this usually means gcc; on Windows, some version of Visual Studio, depending on which version of Python is installed)
   * [http://buildbot.net/ BuildBot]
   * [http://subversion.tigris.org/ subversion]
+  * [http://bazaar.canonical.com/en/ bazaar]
+  * [http://wiki.bazaar.canonical.com/ForeignBranches/Subversion?action=show&redirect=BzrForeignBranches/Subversion bzr-svn]
 
 As well as all (or as many as possible) of the libraries Twisted depends on:
 
