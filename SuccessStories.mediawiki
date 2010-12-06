@@ -46,6 +46,16 @@ but also the 180+ people constantly in #twisted in IRC.
 
 -- Terry Jones, CEO, Fluidinfo Inc.
 
+= [http://launchpad.net/ Launchpad] =
+
+Canonical has been using Twisted as key part of Launchpad.net for over
+five years now. We use Twisted to run our SSH servers, our process
+pools, our package build farms, our file storage system and many other
+things. Practically every time we need to glue two systems together,
+we use Twisted. When we don't, we regret it later.
+
+-- Jonathan Lange, Product Strategist, [http://www.canonical.com/ Canonical Ltd]
+
 = [http://www.hipchat.com HipChat] =
 
 HipChat is a hosted group chat and IM service for businesses that uses the XMPP protocol behind the scenes. We use Twisted to power our fully clustered chat server and run many important job queue workers. 
@@ -57,16 +67,6 @@ One of the greatest time savers is the combination of Deferreds and the @defer.i
 Bottom line: we built and launched a successful business on Twisted & Python in 6 months with no prior knowledge of either. It's a very productive environment with great performance and maintainability. What more could you want?
 
 -- Garret Heaton, Co-founder, [http://www.hipchat.com HipChat]
-
-= [http://launchpad.net/ Launchpad] =
-
-Canonical has been using Twisted as key part of Launchpad.net for over
-five years now. We use Twisted to run our SSH servers, our process
-pools, our package build farms, our file storage system and many other
-things. Practically every time we need to glue two systems together,
-we use Twisted. When we don't, we regret it later.
-
--- Jonathan Lange, Product Strategist, [http://www.canonical.com/ Canonical Ltd]
 
 = [http://www.justin.tv/ Justin.tv] =
 
