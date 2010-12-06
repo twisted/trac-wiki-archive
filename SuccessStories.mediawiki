@@ -46,6 +46,18 @@ but also the 180+ people constantly in #twisted in IRC.
 
 -- Terry Jones, CEO, Fluidinfo Inc.
 
+= [http://www.hipchat.com HipChat] =
+
+HipChat is a hosted group chat and IM service for businesses that uses the XMPP protocol behind the scenes. We use Twisted to power our fully clustered chat server and run many important job queue workers. 
+
+Twisted's built-in XML support via the Twisted.Words and xmlstream modules have been life savers since XMPP is very XML heavy. They've been rock-solid and keep us from having to work with with XML directly which is a wonderful thing.
+
+One of the greatest time savers is the combination of Deferreds and the @defer.inlineCallbacks decorator. These allow us to write code that is asynchronous but stays easy to read and maintain. No more getting lost in a sea of callback functions. I mention it because I truly miss them when playing with Node.js, particularly Python's 'yield' and Twisted's Deferreds! I feel crippled without them. 
+
+Bottom line: we built and launched a successful business on Twisted & Python in 6 months with no prior knowledge of either. It's a very productive environment with great performance and maintainability. What more could you want?
+
+-- Garret Heaton, Co-founder, [http://www.hipchat.com HipChat]
+
 = [http://launchpad.net/ Launchpad] =
 
 Canonical has been using Twisted as key part of Launchpad.net for over
