@@ -1,0 +1,9 @@
+`twisted.python.log` needs some fixing up.
+
+I'd like it to have a thing where there's a ring buffer of more detailed messages, and when a failure occurs it dumps that to a file, so there's some context for what was going on when there was an exception.
+
+All messages logged by Twisted should have an identifiable key associated with them (an interface maybe?)
+
+It would be great to have a built-in network logging abstraction.
+
+All of these need to be fleshed out some more.
