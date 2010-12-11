@@ -1,0 +1,5 @@
+= Twisted Path =
+
+`twisted.vfs` is possibly the crappiest name in all of Twisted.  It's unmaintained, and it's not doing great.
+
+We should have a non-broken asynchronous version of `twisted.python.filepath` at some point, and it should be called `twisted.path`.  In this same general cognitive space, `twisted.web.static` should be a ''wrapper'' around a `FilePath`, not a subclass of it.  It may be that we should go straight to a wrapper around this async `FilePath`-ish thing rather than actual `FilePath` though, if somebody gets around to doing something helpful with `twisted.path` first.
