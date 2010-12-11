@@ -1,0 +1,41 @@
+This may not really be actionable yet, but I've been thinking about it a lot.
+
+= Twisted Loop =
+
+twisted.internet has a lot of cruft in it.  In particular there are lots things like `twisted.internet.main`, `twisted.internet.posixbase`, `twisted.internet.abstract`, `twisted.internet.process`, which are sort of public, but sort of not.  There are also a bunch of old-style classes.
+
+Also, the package name, `twisted.internet`, was kind of an in-joke from a long time ago, not everything in the module is about internet networking, and doesn't really fit into the 'twisted something' naming idiom, where 'something' is a thing that idiomatically is sometimes referred to as twisted in english.  (twisted web, twisted words, etc).
+
+A better name would be 'twisted.loop'.  This would also allow us to replace the not-quite-accurately-named "reactor" object with a "Loop" object, which would ideally make more sense to newcomers.
+
+At some point, when we've addressed some of the issues like a new, clean process transport, a new, clean producer/consumer interface, I'd like to make a new public face for those APIs in a new package, `twisted.loop`.  I'd like to stress that the idea here is ''not'' to rewrite anything; this would be a very deliberate moving of code.  In fact, I imagine the first cut at something like this would be simply an empty package with some imports from twisted.internet and an `__all__`.
+
+Later, we could move the contents of `twisted.internet` to `twisted.loop._private`, and add a compatibility import, and possibly `__path__`, not quite sure about the technical deatils to `twisted.internet`, and then add a deprecation.
+
+(Except for `twisted.internet.defer`, of course; that goes back to `twisted.python`.)
+
+`dash` suggests that if we're going to jump in and scramble things around, we should also do away with our favorite `sys.modules` shenanigan, `twisted.internet.reactor`.  I agree.  One part of `twisted.loop` should be an elegant way to bootstrap the loop.  One way to do this (and this idea is really pre-new-namespace, something that would go into `twisted.internet` first) might be a way to provide a standard function that does something like this:
+
+{{{
+#!py
+@inlineCallbacks
+def runServiceInLoop(serviceFactory):
+    loop = yield waitForSomebodyToInstantiateALoop()
+    # wouldn't it be nice if stuff like callWhenRunning returned Deferreds
+    # instead of taking functions
+    yield loop.deferUntilRunning()
+    serviceFactory.startService()
+    loop.addSystemEventTrigger('before', 'shutdown', serviceFactory.stopService)
+    # or equivalent, system event triggers are pretty dumb.
+}}}
+
+Other random thoughts which might reduce confusion around reactor.run and maybe make it a bit less global:
+
+  - In the presence of a function like the proposed `runServiceInLoop`, would it be cool to call `loop.run()` in an `atexit` hook, if it hasn't been run yet?  While that seems kind of hacky, it does place quick example scripts at the same level as regular functions that are called when the reactor is already running: the rule is 'return control to your caller' in either case, instead of 'return control to your caller sometimes, and other times, call `reactor.run()`'.
+  - I keep hearing there's some thing that the `Tkinter` and `gtk` modules do which runs the reactor along with readline when you are sitting at the interactive prompt.  Can we also do that, and run the reactor when people start callin' interactive functions?
+
+A somewhat more controversial idea: once the reactor is running, I think we should put it in the context, because once the reactor is running, there is only one "real" reactor, and that's it.  It's not reentrant, and it's not ''going'' to be reentrant, so that's it.  We shouldn't install such a thing before it's actually been run, because.  `foom` suggested on IRC that dynamic scope is cool because it lets you have variables which are global, but thread-local once they've been set; I'm not sure if he meant that tongue-in-cheek, but that's what the reactor - or, should I say, the loop - should be like.
+
+  (A complete tangent: perhaps we should put a reactor into each thread?  That way we wouldn't need to have the somewhat arbitrary / weird distinction between `callInThread` and `callFromThread`; `callInThread` would just mean "find a reactor for a thread that isn't too busy, and call `callFromThread` on that reactor".  If some VM were to ever give us free-threading, it would be handy to be able to have one reactor per thread, and there isn't ''really'' any reason that we couldn't do this already, except for a few more ill-conceived global variables...)
+
+-`glyph`
