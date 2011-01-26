@@ -4,9 +4,9 @@ A build slave which is to run the Twisted test suite on a particular platform or
     * On Debian, the `python-profiler` package should also be installed.
     * On platforms where the Python headers are separated from the main Python package, these should also be installed (usually `python-dev` or `python-devel`).
   * A C compiler which can build Python extension modules (On POSIX, this usually means gcc; on Windows, some version of Visual Studio, depending on which version of Python is installed)
-  * [http://buildbot.net/ BuildBot]
+  * [http://buildbot.net/ BuildBot] - only buildbot-slave is necessary
   * [http://subversion.tigris.org/ subversion]
-  * [http://bazaar.canonical.com/en/ bazaar]
+  * [http://bazaar.canonical.com/en/ bazaar] - sometimes packaged as bazaar-ng
   * [http://wiki.bazaar.canonical.com/ForeignBranches/Subversion?action=show&redirect=BzrForeignBranches/Subversion bzr-svn]
   * [http://samba.org/~jelmer/subvertpy/ subvertpy]
   * [http://tdb.samba.org/ python-tdb]
