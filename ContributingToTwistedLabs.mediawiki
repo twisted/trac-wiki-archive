@@ -16,7 +16,7 @@ Donations are [http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation#Back
 
 === [#Prepare Prepare] ===
   * [/register Register] on this site
-  * Intimately familiarize yourself with [http://divmod.org/trac/wiki/UltimateQualityDevelopmentSystem The Ultimate Quality Development System]
+  * Intimately familiarize yourself with [UltimateQualityDevelopmentSystem The Ultimate Quality Development System]
   * Understand the [wiki:Documentation Developer docs] (how-tos, core docs, examples, API reference)
   * Twisted has a rigorous policy standards for code, documentation, and testing:
     * [http://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html Coding standard]
