@@ -1,1 +1,1 @@
-See http://divmod.org/trac/wiki/UltimateQualityDevelopmentSystem
+See UltimateQualityDevelopmentSystem
