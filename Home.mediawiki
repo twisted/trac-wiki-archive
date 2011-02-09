@@ -35,14 +35,6 @@
     <!-- begin center column -->
     <td valign="top" class="centercol" style="padding-left: 10px; padding-right: 15px;">
 
-<h1 id="ActNow:BeaSponsor">Twisted Needs Sponsors, 2010 Edition</h1>
-<p>
-It's a new year, and with it comes the need for additional sponsorship. The good news is, thanks to the <a href="http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation">Twisted Software Foundation</a>, your donations will directly contribute to the ongoing maintenance and development of Twisted. While we're very proud of our <a href="http://labs.twistedmatrix.com/2009/04/sponsorship-in-2009.html">track record so far</a>, we still need your help to continue that tradition of excellence.
-</p>
-<p>
-We'd also like to thank all of last year's <a class="wiki" href="/trac/wiki/TSF/FoundingSponsors">Founding Sponsors</a>: Your generous contributions have not only funded Twisted development, but have been instrumental in getting our official foundation off the ground. We hope you'll be able to support our efforts this year as well!
-</p>
-
 <h1 id="WhatisTwisted">What is Twisted?</h1>
 <p>
 <a class="wiki" href="/trac/wiki/TwistedProject">Twisted</a> is an event-driven networking engine written in Python and licensed under the <a class="ext-link" href="http://www.opensource.org/licenses/mit-license.php"><span class="icon">MIT license</span></a>.
@@ -95,7 +87,7 @@ More Useful Pointers:
   <div>
     <h3>Twisted Sponsors</h3>
 
-    <h4><a href="/trac/wiki/TwistedSoftwareFoundation">Become a 2010 Sponsor Today!</a></h4>
+    <h4><a href="/trac/wiki/TwistedSoftwareFoundation">Become a 2011 Sponsor Today!</a></h4>
 <div>
 Donations are <a href="/trac/wiki/TwistedSoftwareFoundation#Background">tax-deductible</a>.
 
