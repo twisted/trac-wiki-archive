@@ -3,7 +3,7 @@ Twisted is used by many open-source, academic and commercial projects.
 '''Got a successful project you'd like added to this page?''' Mail a brief description and an URL (if appropriate) to success at twistedmatrix dot com!
 
 = Community Code Project =
-[https://launchpad.net/tx "Twisted Community Code"] - This is a "super project" hosting or mirroring many Twisted add-ons, Twisted-based libraries, etc., that are not part of the Twisted Project proper, but depend upon it.
+[https://launchpad.net/tx "Twisted Community Code"] - This is a "[http://twistedmatrix.com/trac/wiki/CommunityCode "super project]" hosting or mirroring many Twisted add-ons, Twisted-based libraries, etc., that are not part of the Twisted Project proper, but depend upon it.
 
 = Libraries and Add-Ons =
 
