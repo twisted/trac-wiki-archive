@@ -148,5 +148,3 @@ Reopens: #&lt;ticket number&gt;
 }}}
 
 Reverted branches are to be reviewed again before being merged.
- 
-Some of the higher level things for a reviewer to consider about a branch:
