@@ -14,6 +14,25 @@
 
 `IReactorUDP.listenUDP` will be extended in an analogous way to `IReactorTCP.listenTCP`
 
-`IUDPTransport.write` will 
+`IUDPTransport.write` and `IUDPTransport.connect`:
 
-  1. 
+  1. For UDP ports listening on ipv6 addresses only, will be extended to accept a value for `addr` which is a 4-tuple like the one described above.
+
+`IMulticastTransport.joinGroup` and `leaveGroup` are similarly extended.  `setOutgoingInterface`, who knows?
+
+For the APIs mentioned above which can accept hostnames instead of IP address
+literals, no IPv6 name resolution (hosts file, dns, etc) will be attempted when
+a hostname is supplied.
+
+== High Level ==
+
+Introduce `HostnameClientEndpoint`.  This endpoint takes a hostname and a port
+number.  The hostname is resolved using `getaddrinfo` (#4362) and a connection
+attempted to each address (perhaps serially, perhaps concurrently, perhaps
+concurrently with a staggered start) and stops after a connection attempt
+succeeds.  Internally this will find an IPv4 or IPv6 address to try and then
+pass it to `IReactorTCP.connectTCP`.
+
+Introduce `AllLocalInterfacesServerEndpoint`.  This endpoint binds to all local
+interfaces on some port and returns an aggregate `IListeningPort` implementation
+that can deal with the multiple underlying ports.
