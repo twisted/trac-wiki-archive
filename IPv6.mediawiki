@@ -1,0 +1,19 @@
+== Low Level ==
+
+`IReactorTCP.connectTCP` will be extended with these (backwards compatible) changes:
+
+  1. An IPv6 address literal, optionally(?) with a percent-embedded scopeid will be allowed as the value of the `host` parameter
+  1. The `bindAddress` parameter will accept 4-tuples.  The first element is an address like the above, the other three are port number, flow info, and scope id.
+    1. (Maybe `bindAddress` values shouldn't be tuples but should be nice structured objects instead)
+  1. If `host` is IPv6, bindAddress must be as well, and vice versa.
+
+`IReactorTCP.listenTCP` will be extended with these (backwards compatible) changes:
+
+  1. `interface` will accept an ipv6 address literal value like the one described above
+  1. The default listen address will still be INADDR_ANY (this is a non-change; pass "::" if you want IPv6 servers, or see the high level APIs)
+
+`IReactorUDP.listenUDP` will be extended in an analogous way to `IReactorTCP.listenTCP`
+
+`IUDPTransport.write` will 
+
+  1. 
