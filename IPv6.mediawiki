@@ -47,3 +47,8 @@ pass it to `IReactorTCP.connectTCP`.
 Introduce `AllLocalInterfacesServerEndpoint`.  This endpoint binds to all local
 interfaces on some port and returns an aggregate `IListeningPort` implementation
 that can deal with the multiple underlying ports.
+
+== Other ==
+
+  1. Add a way to query `getaddrinfo` asynchronously (#4362).
+  1. Add a way to control name resolution with the endpoint APIs.
