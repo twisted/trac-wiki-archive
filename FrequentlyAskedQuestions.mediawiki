@@ -66,10 +66,6 @@ Red Hat and derived Linux distributions arrange to have certain Python libraries
 
 Twisted requires a 32-bit version of Python for Windows. Using a 64-bit version of Python will result in this error message.
 
-=== Why is my application not working properly on FreeBSD with Twisted 10.2 or newer? ===
-
-Twisted 10.2 added an optimisation which assumes that {{{/dev/fd/*}}} contains the current process's open file descriptors. On FreeBSD this is only true if you run {{{mount -t fdescfs null /dev/fd}}} - and add that to your fstab so that it survives a reboot. A fix for this issue will likely be included in Twisted 10.3.
-
 == Core Twisted ==
 
 === Why does Twisted depend on Zope? ===
