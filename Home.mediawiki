@@ -12,11 +12,11 @@
   </div>
   <div id="download" style="color: white" class="download-left">
     Source:<br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.2/Twisted-10.2.0.tar.bz2#md5=73da62c793269eade8121da336b01ba5">Twisted 10.2.0 tar</a> (<a href="http://pypi.python.org/packages/source/T/Twisted/Twisted-10.2.0.tar.bz2#md5=73da62c793269eade8121da336b01ba5">mirror</a>)<br />
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.2/Twisted-10.2.0.tar.bz2#md5=73da62c793269eade8121da336b01ba5">Twisted 10.2.0 tar</a> (<a class="ext-link" href="http://pypi.python.org/packages/source/T/Twisted/Twisted-10.2.0.tar.bz2#md5=73da62c793269eade8121da336b01ba5">mirror</a>)<br />
     Win32:<br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.2/Twisted-10.2.0.winxp32-py2.5.msi">Twisted 10.2.0 for Python 2.5</a> (<a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.2/Twisted-10.2.0.winxp32-py2.5.exe">exe</a>)<br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.2/Twisted-10.2.0.winxp32-py2.6.msi">Twisted 10.2.0 for Python 2.6</a> (<a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.2/Twisted-10.2.0.winxp32-py2.6.exe">exe</a>)<br/>
-    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.2/Twisted-10.2.0.winxp32-py2.7.msi">Twisted 10.2.0 for Python 2.7</a> (<a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.2/Twisted-10.2.0.winxp32-py2.7.exe">exe</a>)<br/>
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.2/Twisted-10.2.0.winxp32-py2.5.msi">Twisted 10.2.0/Python 2.5</a> (<a class="ext-link" href="http://pypi.python.org/packages/2.5/T/Twisted/Twisted-10.2.0.winxp32-py2.5.msi#md5=2a81db624295854e6dc9d396404099ee">mirror</a>) (<a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.2/Twisted-10.2.0.winxp32-py2.5.exe">exe</a>)<br/>
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.2/Twisted-10.2.0.winxp32-py2.6.msi">Twisted 10.2.0 for Python 2.6</a> (<a class="ext-link" href="http://pypi.python.org/packages/2.6/T/Twisted/Twisted-10.2.0.winxp32-py2.6.msi#md5=ded94c0e8d460daf3631378bb58331c5">mirror</a>) (<a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.2/Twisted-10.2.0.winxp32-py2.6.exe">exe</a>)<br/>
+    <a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.2/Twisted-10.2.0.winxp32-py2.7.msi">Twisted 10.2.0 for Python 2.7</a> (<a class="ext-link" href="http://pypi.python.org/packages/2.7/T/Twisted/Twisted-10.2.0.winxp32-py2.7.msi#md5=15efe5a9db9182b3db33137b457510b5">mirror</a>) (<a class="ext-link" href="http://tmrc.mit.edu/mirror/twisted/Twisted/10.2/Twisted-10.2.0.winxp32-py2.7.exe">exe</a>)<br/>
     And More:<br/>
     <a class="wiki" href="/trac/wiki/Downloads">Other Downloads</a><br/>
     Dependencies:<br/>
