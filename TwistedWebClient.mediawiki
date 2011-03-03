@@ -49,6 +49,10 @@
   1. Make requests over IPv6 when necessary/appropriate
   1. [ticket:1774 Support HTTP proxies]
   1. Implement other HTTP protocol and high-level features
+    1. Redirect following (perhaps multiple policies, dealing with POST/PUT/etc redirects)
+    1. Caching
+    1. Request body compression/decompression
+    1. Cookies
     1. [ticket:3420 high-level access to persistent connections]
       1. [ticket:4223 low-level protocol support for controlling whether the connection is re-used or not]
     1. Support pipelined requests in the high-level API
