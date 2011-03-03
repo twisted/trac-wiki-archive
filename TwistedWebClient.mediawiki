@@ -41,18 +41,16 @@
   1. Support timeouts: #3450, #4330, probably others
   1. [ticket:3987 Implement a high-level API with minimal additional functionality]
     1. [ticket:4017 Provide a file-based message body producer]
-    1. Provide a ''multipart/form-data'' body producer
-    1. [ticket:4023 Support HTTPS URLs and certificate verification]
-    1. Implement a cookie-aware `Agent` wrapper
-    1. Implement a gzip-aware `Agent` wrapper (sending and receiving?)
+    1. Redirect following (perhaps multiple policies, dealing with POST/PUT/etc redirects)
   1. Allow binding to a particular local interface
   1. Make requests over IPv6 when necessary/appropriate
   1. [ticket:1774 Support HTTP proxies]
   1. Implement other HTTP protocol and high-level features
-    1. Redirect following (perhaps multiple policies, dealing with POST/PUT/etc redirects)
+    1. Provide a ''multipart/form-data'' body producer
+    1. [ticket:4023 Support HTTPS URLs and certificate verification]
+    1. Implement a cookie-aware `Agent` wrapper
+    1. Implement a gzip-aware `Agent` wrapper (sending and receiving?)
     1. Caching
-    1. Request body compression/decompression
-    1. Cookies
     1. [ticket:3420 high-level access to persistent connections]
       1. [ticket:4223 low-level protocol support for controlling whether the connection is re-used or not]
     1. Support pipelined requests in the high-level API
