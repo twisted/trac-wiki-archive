@@ -62,8 +62,6 @@ You probably don't want these unless you have special considerations:
  * [http://twistedmatrix.com/Releases/Lore/10.2/TwistedLore-10.2.0.tar.bz2 Twisted Lore] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/lore/topfiles/NEWS Release notes])
  * [http://twistedmatrix.com/Releases/Runner/10.2/TwistedRunner-10.2.0.tar.bz2 Twisted Runner] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/runner/topfiles/NEWS Release notes])
 
-Twisted Web2 is no longer built as a tarball. If you really want it, it's present in [source:/tags/releases/twisted-10.2.0/ SVN] ([source:/tags/releases/twisted-10.2.0/twisted/web2/topfiles/NEWS Release notes])
-
 == Signed MD5 Sums ==
 
 md5 sums of the 10.2.0 release are [http://twistedmatrix.com/Releases/twisted-10.2.0-md5sums.txt here].
