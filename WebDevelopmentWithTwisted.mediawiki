@@ -1,17 +1,9 @@
 = Web Development with Twisted =
 
-Twisted has a long and checkered past in web development.  This page is a roadmap to the wilderness that the landscape of web development with Twisted has become.
-
-For an explanation of what's going on in the ''future'' of the web with Twisted, check out our [wiki:TwistedWebPlan plan for development of twisted.web].
-
-== What's Going On Around Here ==
-
 There are a number of packages in and around Twisted that do things with the web:
 
- * [http://twistedmatrix.com/documents/current/web/ Twisted Web] provides a simple, stable resource publishing API, on top of an HTTP/1.0 server implementation with some HTTP/1.1 features.  '''Twisted Web is extremely stable.'''
-   * Several deprecated templating toolkits included with twisted.web, such as "woven" and "twisted web widgets".  Don't use these!  They're only there for compatibility.
- * [wiki:TwistedWeb2 Twisted Web 2] was (emphasis past tense!) a complete re-write of [http://twistedmatrix.com/documents/current/web/ Twisted Web], with a new HTTP/1.1 implementation and a new resource publishing model.  We decided this was a mistake and development focus has shifted to porting the best parts of Twisted Web 2 back to Twisted Web where existing applications will benefit from them.
- * [http://divmod.org/trac/wiki/DivmodNevow Divmod Nevow] is a templating toolkit that provides its own resource model and simple application server API.  It requires Twisted, is fully integrated with the Twisted reactor, provides mechanisms for asynchronous page rendering, and an event-driven [http://en.wikipedia.org/wiki/COMET_(programming) COMET]/AJAX implementation called [http://divmod.org/trac/wiki/DivmodNevow/Athena "Nevow Athena"].  Nevow uses Twisted Web, but provides its own Request and resource model on top of it.
+ * [http://twistedmatrix.com/documents/current/web/ Twisted Web] provides a simple, stable HTTP server, suitable for all types of web apps and web services. It provides a flexible resource publishing API, and implements HTTP 1.0 with some 1.1 features.  '''Twisted Web is extremely stable.'''
+ * [http://divmod.org/trac/wiki/DivmodNevow Divmod Nevow] is a templating toolkit that provides its own resource model and simple application server API.  It requires Twisted, is fully integrated with the Twisted reactor, provides mechanisms for asynchronous page rendering, and an event-driven [http://en.wikipedia.org/wiki/COMET_(programming) COMET]/AJAX implementation called [http://divmod.org/trac/wiki/DivmodNevow/Athena "Nevow Athena"].  Nevow uses Twisted Web, but provides its own request objects and resource model on top of it.
  * [http://divmod.org/trac/wiki/DivmodMantissa Divmod Mantissa] is a full-featured multi-protocol application server, with a built-in object database, authentication model based on Twisted Cred, a capability-based security model, and many more features.  It integrates Nevow (and therefore Twisted Web) and a number of other Twisted-related technologies to provide a full-featured system.
 
 == So You Want To Be A Web Developer ==
@@ -19,6 +11,11 @@ There are a number of packages in and around Twisted that do things with the web
 Having reviewed this list, the obvious question is, ''which of these tools should I use for my application???''  The short answer is: "It depends."
 
 You can always ask about these kinds of issues on the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-web Twisted Web mailing list], but here's a cheat-sheet that you may want to read in advance, listing some of the things that you might want to be doing with Twisted and the consensus as to the correct (or multiple possible correct) solutions for each case.
+
+
+=== I want a container for my WSGI application ===
+
+In this case, '''use the Twisted Web (8.2 or newer) WSGI module''' (`twistd web --wsgi=application`).
 
 === I want a web UI for my existing Twisted networking application ===
 
@@ -36,14 +33,8 @@ AKA
 
 ==== I want to write a Wiki ====
 ==== I want to write a blog ====
-==== I want something to compare to Zope or TurboGears or Django or Ruby on Rails ====
+==== I want something to compare to Flask or Django or Ruby on Rails ====
 
 The short version is that this is more complicated in Twisted than in other tools at the moment.  Sadly, you aren't going to find a straight-up competitor  with the sort of polished web presence and easy instant integration with your SQL database and existing environment that the aforementioned products offer.
 
-Zope 3 uses Twisted now, and the next version of Zope 2 will have experimental Twisted support!  You ''can'' just use that, if you are willing to delve into their innards to find the appropriate integration point for Twisted code and Zope code :).
-
 [http://divmod.org/trac/wiki/DivmodMantissa Divmod Mantissa] is a full-featured Twisted-powered application server and will likely appeal to you if you want an integrated database and other high-level framework support.
-
-=== I want a container for my WSGI application ===
-
-In this case, '''use the Twisted Web (8.2 or newer) WSGI module''' (`twistd web --wsgi=application`).
