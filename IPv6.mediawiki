@@ -1,7 +1,7 @@
 = Plan =
 
   1. Support IPv6 when explicitly requested (reactor methods) #3014
-  1. Provide an API which can support either IPv4 or IPv6 (endpoints) or other arbitrary policies #4470
+  1. Provide an API which can support either IPv4 or IPv6 (endpoints) or other arbitrary policies #4470 #4859
   1. (In the year 2525) Deprecate current hostname-based APIs which do not support IPv6 in favor of endpoints
 
 Other related tickets:
