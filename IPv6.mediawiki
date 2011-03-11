@@ -18,6 +18,8 @@
     1. (Maybe `bindAddress` values shouldn't be tuples but should be nice structured objects instead)
   1. If `host` is IPv6, bindAddress must be as well, and vice versa.
 
+  (''jknight comment'': bindAddress should accept a 2-tuple, just like with ipv4: host/port. flow id needs a lot more work before it can be supported...you can't just use arbitrary numbers, you need to wrap the kernel api for allocating them, and enable them on the socket. [http://xpg.dk/projects/linux-ipv6-flow-label-mangement-api]. Scope-id is implicit in the first argument (address), just like it is in connectTCP's host parameter, so doesn't need to be specified separately)
+
 `IReactorTCP.listenTCP` will be extended with these (backwards compatible) changes:
 
   1. `interface` will accept an ipv6 address literal value like the one described above
