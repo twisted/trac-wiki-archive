@@ -36,7 +36,7 @@ In general, everything which is part of a Twisted release is stable.  See Compat
 
 === Should I use Twisted Web2? ===
 
-See TwistedWebPlan.
+What's that?
 
 === Why doesn't Twisted follow PEP 8? ===
 
