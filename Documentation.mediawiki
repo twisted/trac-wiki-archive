@@ -13,7 +13,6 @@
    * '''names''' (DNS protocol) - [http://twistedmatrix.com/documents/current/names/howto/ howtos] and [http://twistedmatrix.com/documents/current/names/examples/ examples]
    * '''trial''' (testing framework) - [wiki:TwistedTrial docs]
    * '''web''' (HTTP protocol) - [http://twistedmatrix.com/documents/current/web/howto/ howtos] and [http://twistedmatrix.com/documents/current/web/examples/ examples]
-   * '''web2''' (HTTP protocol now defunct, see TwistedWebPlan) - [http://twistedmatrix.com/trac/browser/trunk/doc/web2/howto/index.xhtml?format=raw howtos] and [http://twistedmatrix.com/trac/browser/trunk/doc/web2/examples/index.xhtml?format=raw examples]
    * '''words''' (instant messaging) - [http://twistedmatrix.com/documents/current/words/howto/ howtos] and [http://twistedmatrix.com/documents/current/words/examples/ examples]
 
 == Third Party Documentation ==
