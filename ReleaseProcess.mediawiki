@@ -71,6 +71,7 @@ To release Twisted, we
 = How to do a pre-release =
 
  1. Check [http://buildbot.twistedmatrix.com/boxes-supported buildbot] to make sure all supported platforms are green (wait for pending builds if necessary).
+ 1. If a previously supported platform does not currently have a buildbot, move from supported platforms to "expected to work" in `INSTALL`.
  1. Run `./bin/admin/change-versions XX.YY.ZZpreN`
  1. Commit the changes made by `change-versions`
  1. Run `./bin/admin/build-news .`
@@ -370,7 +371,6 @@ r.BookBuilder().build(FilePath('doc/core/howto'), done.keys(),
  * What bugs should be considered release blockers?
    * Ultimately it's the RM's discretion
  * Should news fragments contain information about who made the changes?
- * Does this document miss anything relevant that ReleaseProcedure includes?
  * A thought for future releases: since we'd really like folks to download the prereleases and try them out, perhaps we should put the [source:trunk/NEWS NEWS] file on the web somewhere official, too, so they can see all the cool stuff they can try out?
    * '''XXX:''' jml doesn't know what this means any more
 
