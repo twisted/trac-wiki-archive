@@ -71,7 +71,7 @@ To release Twisted, we
 = How to do a pre-release =
 
  1. Check [http://buildbot.twistedmatrix.com/boxes-supported buildbot] to make sure all supported platforms are green (wait for pending builds if necessary).
- 1. If a previously supported platform does not currently have a buildbot, move from supported platforms to "expected to work" in `INSTALL`.
+ 1. If a previously supported platform does not currently have a buildbot, move from supported platforms to "expected to work" in `INSTALL`. (Pending #1305)
  1. Run `./bin/admin/change-versions XX.YY.ZZpreN`
  1. Commit the changes made by `change-versions`
  1. Run `./bin/admin/build-news .`
