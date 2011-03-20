@@ -13,7 +13,7 @@ A build slave which is to run the Twisted test suite on a particular platform or
 
 As well as all (or as many as possible) of the libraries Twisted depends on:
 
-  * [http://pypi.python.org/pypi/zope.interface zope.interface] [Debian package python-zope.interface]
+  * [http://pypi.python.org/pypi/zope.interface zope.interface] (Debian package python-zope.interface)
   * [http://www.dlitz.net/software/pycrypto/ PyCrypto] (Debian package python-crypto)
   * [http://launchpad.net/pyopenssl pyOpenSSL] (depends on [http://openssl.org/ OpenSSL]) (Debian package python-pyopenssl)
   * [http://pyasn1.sourceforge.net/ pyasn1] (Debian package python-pyasn1)
@@ -21,6 +21,7 @@ As well as all (or as many as possible) of the libraries Twisted depends on:
   * SOAPpy (Debian package python-soappy)
   * pygtk (depends on gtk2) (Debian package python-gtk2)
   * [https://launchpad.net/subunit subunit] (Debian package python-subunit)
+  * On Windows, [http://sourceforge.net/projects/pywin32/files/pywin32/ pywin32]
 
 A build slave needs authentication credentials in order to be allowed to connect to the build master.  Credentials can be obtained by emailing twisted dash python at twisted matrix dot com and expressing interest in running a slave.
 
