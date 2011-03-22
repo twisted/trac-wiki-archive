@@ -77,7 +77,7 @@ To release Twisted, we
  1. Run `./bin/admin/build-news .`
  1. Commit the changes made by `build-news`
  1. Delete the NEWS turds (see #4315)
- 1. Bump copyright dates in `LICENSE`, `twisted/_version.py`, `twisted/copyright.py`, and `README`
+ 1. Bump copyright dates in `LICENSE`, `twisted/copyright.py`, and `README`
  1. Make a temporary directory for the tarballs to live in (e.g. `mkdir /tmp/twisted-release`)
  1. Run `./bin/admin/build-tarballs . /tmp/twisted-release/`
  1. Upload the tarballs to a public website (see #4353)
