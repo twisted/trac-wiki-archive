@@ -9,10 +9,11 @@ A build slave which is to run the Twisted test suite on a particular platform or
   * [http://twistedmatrix.com/ Twisted] - required by buildbot
   * [http://buildbot.net/ BuildBot] - only buildbot-slave is necessary
   * [http://subversion.tigris.org/ subversion]
-  * [http://bazaar.canonical.com/en/ bazaar] - sometimes packaged as bazaar-ng
-  * [http://wiki.bazaar.canonical.com/ForeignBranches/Subversion?action=show&redirect=BzrForeignBranches/Subversion bzr-svn]
-  * [http://samba.org/~jelmer/subvertpy/ subvertpy]
-  * [http://tdb.samba.org/ python-tdb]
+  * If possible, some bzr tools which reduce latency and network overhead of builds (this is strongly preferred):
+      * [http://bazaar.canonical.com/en/ bazaar] - sometimes packaged as bazaar-ng
+      * [http://wiki.bazaar.canonical.com/ForeignBranches/Subversion?action=show&redirect=BzrForeignBranches/Subversion bzr-svn]
+      * [http://samba.org/~jelmer/subvertpy/ subvertpy]
+      * [http://tdb.samba.org/ python-tdb]
 
 As well as all (or as many as possible) of the libraries Twisted depends on:
 
@@ -37,7 +38,7 @@ Unfortunately a few tests in Twisted's test suite will fail if certain guarantee
 
 A build slave is created with the `buildbot create-slave` command.  This takes the master address, slave name, and slave password as arguments.  The master address is `buildbot.twistedmatrix.com:9987`.  Several other optional arguments are allowed.  It is a good idea to specify a value of around 10 for `--log-count` to avoid unbounded log file growth.  If there are special networking considerations, it may also be useful to specify a value for `--keepalive`.  Other options generally aren't needed.
 
-On the very first build by a new slave, a lengthy bzr initialization step is required.  This usually needs to be completed manually after buildbot times out the operation for taking too long.  The command which will fail on buildbot is:
+If bzr is being used then on the very first build by a new slave a lengthy bzr initialization step is required.  This usually needs to be completed manually after buildbot times out the operation for taking too long.  The command which will fail on buildbot is:
 
 {{{
 bzr checkout svn://svn.twistedmatrix.com/svn/Twisted/trunk Twisted
