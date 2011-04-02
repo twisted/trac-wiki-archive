@@ -148,7 +148,8 @@ jml
     1. http://buildbot.twistedmatrix.com/builders/winxp32-py2.6-msi/
     1. http://buildbot.twistedmatrix.com/builders/windows7-64-py2.7-msi
     1. For "Branch" specify the tag, e.g. "tags/releases/twisted-$RELEASE"
-    1. Download the latest `.msi` and `.exe` files from from http://buildbot.twistedmatrix.com/builds/, save them in the staging directory
+    1. Download the latest `.msi` and `.exe` files from from http://buildbot.twistedmatrix.com/builds/twisted-packages/ and save them in the staging directory
+       1. The installers built from windows7-64-py2.7-msi will counter-intuitively have names that end in winxp32-py2.7.exe and winxp32-py2.7.msi. This is because of "distutils weirdness and other things".
  1. Sign the tarballs and Windows installers
     1. e.g. `md5sum Tw* | gpg -a --clearsign > twisted-$RELEASE-md5sums.txt`
     1. e.g. `scp twisted-$RELEASE-md5sums.txt cube.twistedmatrix.com:/srv/www-data/twisted/Releases/`
