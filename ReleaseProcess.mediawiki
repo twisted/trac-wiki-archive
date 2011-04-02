@@ -159,8 +159,8 @@ jml
 
  1. Upload to the official upload locations (see #2888)
     1. e.g. `ssh cube.twistedmatrix.com mkdir -m 2775 /srv/www-data/twisted/Releases/{Twisted,Core,Conch,Lore,Mail,Names,News,Pair,Runner,Web,Words}/$API`
-    1. e.g. `scp /tmp/twisted-release/Twisted-$RELEASE.tar.bz2 cube:/srv/www-data/twisted/Releases/Twisted/$API/`
-    1. For all subprojects, upload the tarballs to `cube:/srv/www-data/twisted/Releases/$SUBPROJECT/$API/`
+    1. e.g. `scp /tmp/twisted-release/Twisted-$RELEASE.tar.bz2 cube.twistedmatrix.com:/srv/www-data/twisted/Releases/Twisted/$API/`
+    1. For all subprojects, upload the tarballs to `cube.twistedmatrix.com:/srv/www-data/twisted/Releases/$SUBPROJECT/$API/`
     1. Windows installers (msi and exe) go in the `Twisted` project
  1. Update the permissions on `cube`
     1. For all new directories, `chmod 2775 $DIRECTORY`
