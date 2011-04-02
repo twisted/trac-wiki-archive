@@ -136,7 +136,7 @@ jml
  1. Submit the ticket for review
  1. Pause until the ticket is reviewed and accepted.
  1. Tag the release
-    * e.g. `svn cp svn+ssh://svn.twistedmatrix.com/svn/Twisted/branches/release-$RELEASE-4290 svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-$RELEASE`
+    * e.g. `svn cp svn+ssh://svn.twistedmatrix.com/svn/Twisted/branches/releases/release-$RELEASE-4290 svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-$RELEASE`
     * A good commit message to use is something like "Tag $RELEASE release"
 
 == Cut the tarballs & installers ==
