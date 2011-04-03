@@ -181,8 +181,8 @@ jml
  1. Export the version of Twisted being released
     * e.g. `svn export svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-$RELEASE`
  1. Create and run the unofficial build-docs script in an export of the release tag
-    1. Create a {{{build-docs.py}}} containing the code from ReleaseProcess#Buildhowtodocumentsforwebsite. Be sure to replace the instances of `$RELEASE` in that script.
     1. `cd twisted-$RELEASE`
+    1. Create a {{{build-docs.py}}} containing the code from ReleaseProcess#Buildhowtodocumentsforwebsite. Be sure to replace the instances of `$RELEASE` in that script.
     1. Edit `doc/core/howto/template.tpl` adding the Google Analytics JavaScript (which can be found in the source of any trac page).
       * '''XXX:''' The script below builds the docs into the current directory, mixing them up with the source files
       * If you get a traceback like below, the Analytics JavaScript may been in an inappropriate place in {{{template.tpl}}}:
