@@ -181,7 +181,7 @@ jml
  1. Export the version of Twisted being released
     * e.g. `svn export svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-$RELEASE`
  1. Create and run the unofficial build-docs script in an export of the release tag
-    1. Create a {{{build-docs.py}}} containing the code from ReleaseProcess#Buildhowtodocumentsforwebsite.
+    1. Create a {{{build-docs.py}}} containing the code from ReleaseProcess#Buildhowtodocumentsforwebsite. Be sure to replace the instances of `$RELEASE` in that script.
     1. `cd twisted-$RELEASE`
     1. Edit `doc/core/howto/template.tpl` adding the Google Analytics JavaScript (which can be found in the source of any trac page).
       * '''XXX:''' The script below builds the docs into the current directory, mixing them up with the source files
@@ -207,7 +207,7 @@ xml.parsers.expat.ExpatError: junk after document element: line 25, column 0
  1. Upload the documents to cube
     * e.g. `scp -r doc/* cube.twistedmatrix.com:~www-data/distributable/documentation/$RELEASE`
  1. Create and run the unofficial build-api script to build the API docs
-    1. Create a {{{build-api.py}}} containing the code from ReleaseProcess#BuildAPIdocsforwebsite
+    1. Create a {{{build-api.py}}} containing the code from ReleaseProcess#BuildAPIdocsforwebsite. Be sure to replace the instances of `$RELEASE` in that script.
     1. `python build-api.py`
     1. Documentation will be generated in a directory called `api`
     1. `tar -cjf apidocs.tar.bz2 apid`
