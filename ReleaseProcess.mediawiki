@@ -210,7 +210,7 @@ xml.parsers.expat.ExpatError: junk after document element: line 25, column 0
     1. Create a {{{build-api.py}}} containing the code from ReleaseProcess#BuildAPIdocsforwebsite. Be sure to replace the instances of `$RELEASE` in that script.
     1. `python build-api.py`
     1. Documentation will be generated in a directory called `api`
-    1. `tar -cjf apidocs.tar.bz2 apid`
+    1. `tar -cjf apidocs.tar.bz2 api`
     1. `scp apidocs.tar.bz2 cube.twistedmatrix.com:.`
     1. On cube, `tar -xjf apidocs.tar.bz2`
     1. On cube, `mv apidocs ~www-data/distributable/documentation/$RELEASE/api`
