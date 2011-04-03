@@ -2,7 +2,7 @@
 
 For more information about Twisted, please see the [wiki:TwistedProject Twisted project page]. You can get older releases from our [http://twistedmatrix.com/Releases/ download site].
 
-The current release is Twisted 10.2.0: [http://twistedmatrix.com/trac/browser/tags/releases/twisted-10.2.0/NEWS?format=raw Release notes]
+The current release is Twisted 11.0.0: [http://twistedmatrix.com/trac/browser/tags/releases/twisted-11.0.0/NEWS?format=raw Release notes]
 
 == Ubuntu and Debian ==
 
@@ -17,9 +17,9 @@ An Ubuntu PPA was setup on Launchpad to obtain more recent packages:
 
 == Windows ==
 
- * Twisted 10.2.0 for Python 2.5 ([http://twistedmatrix.com/Releases/Twisted/10.2/Twisted-10.2.0.winxp32-py2.5.msi msi] | [http://twistedmatrix.com/Releases/Twisted/10.2/Twisted-10.2.0.winxp32-py2.5.exe exe])
- * Twisted 10.2.0 for Python 2.6 ([http://twistedmatrix.com/Releases/Twisted/10.2/Twisted-10.2.0.winxp32-py2.6.msi msi] | [http://twistedmatrix.com/Releases/Twisted/10.2/Twisted-10.2.0.winxp32-py2.6.exe exe])
- * Twisted 10.2.0 for Python 2.7 ([http://twistedmatrix.com/Releases/Twisted/10.2/Twisted-10.2.0.winxp32-py2.7.msi msi] | [http://twistedmatrix.com/Releases/Twisted/10.2/Twisted-10.2.0.winxp32-py2.7.exe exe])
+ * Twisted 11.0.0 for Python 2.5 ([http://twistedmatrix.com/Releases/Twisted/11.0/Twisted-11.0.0.winxp32-py2.5.msi msi] | [http://twistedmatrix.com/Releases/Twisted/11.0/Twisted-11.0.0.winxp32-py2.5.exe exe])
+ * Twisted 11.0.0 for Python 2.6 ([http://twistedmatrix.com/Releases/Twisted/11.0/Twisted-11.0.0.winxp32-py2.6.msi msi] | [http://twistedmatrix.com/Releases/Twisted/11.0/Twisted-11.0.0.winxp32-py2.6.exe exe])
+ * Twisted 11.0.0 for Python 2.7 ([http://twistedmatrix.com/Releases/Twisted/11.0/Twisted-11.0.0.winxp32-py2.7.msi msi] | [http://twistedmatrix.com/Releases/Twisted/11.0/Twisted-11.0.0.winxp32-py2.7.exe exe])
  * [http://pypi.python.org/pypi/zope.interface#download Zope.Interface] (required)
  * [http://twistedmatrix.com/Releases/Dependencies/Win/pycrypto-2.0.1.win32-py2.5.exe PyCrypto 2.0.1 for Python 2.5] (needed for Conch)
  * [http://pypi.python.org/pypi/pyOpenSSL PyOpenSSL] (needed for SSL)
@@ -34,7 +34,7 @@ Twisted is no longer making a .dmg for OS X because OS X versions 10.5 and great
 
 == Source Tarball ==
 
- * [http://twistedmatrix.com/Releases/Twisted/10.2/Twisted-10.2.0.tar.bz2 Twisted 10.2.0 tarball]
+ * [http://twistedmatrix.com/Releases/Twisted/11.0/Twisted-11.0.0.tar.bz2 Twisted 11.0.0 tarball]
 
 == View on the Web ==
 
@@ -51,18 +51,20 @@ To checkout code from the repository, use:
 
 You probably don't want these unless you have special considerations:
 
- * [http://twistedmatrix.com/Releases/Core/10.2/TwistedCore-10.2.0.tar.bz2 Twisted Core] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/Conch/10.2/TwistedConch-10.2.0.tar.bz2 Twisted Conch] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/conch/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/Web/10.2/TwistedWeb-10.2.0.tar.bz2 Twisted Web] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/web/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/Mail/10.2/TwistedMail-10.2.0.tar.bz2 Twisted Mail] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/mail/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/Names/10.2/TwistedNames-10.2.0.tar.bz2 Twisted Names] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/names/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/News/10.2/TwistedNews-10.2.0.tar.bz2 Twisted News] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/news/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/Pair/10.2/TwistedPair-10.2.0.tar.bz2 Twisted Pair] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/pair/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/Words/10.2/TwistedWords-10.2.0.tar.bz2 Twisted Words] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/words/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/Lore/10.2/TwistedLore-10.2.0.tar.bz2 Twisted Lore] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/lore/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/Runner/10.2/TwistedRunner-10.2.0.tar.bz2 Twisted Runner] - 10.2.0 ([source:/tags/releases/twisted-10.2.0/twisted/runner/topfiles/NEWS Release notes])
+ * [http://twistedmatrix.com/Releases/Core/11.0/TwistedCore-11.0.0.tar.bz2 Twisted Core] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/topfiles/NEWS Release notes])
+ * [http://twistedmatrix.com/Releases/Conch/11.0/TwistedConch-11.0.0.tar.bz2 Twisted Conch] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/conch/topfiles/NEWS Release notes])
+ * [http://twistedmatrix.com/Releases/Web/11.0/TwistedWeb-11.0.0.tar.bz2 Twisted Web] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/web/topfiles/NEWS Release notes])
+ * [http://twistedmatrix.com/Releases/Mail/11.0/TwistedMail-11.0.0.tar.bz2 Twisted Mail] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/mail/topfiles/NEWS Release notes])
+ * [http://twistedmatrix.com/Releases/Names/11.0/TwistedNames-11.0.0.tar.bz2 Twisted Names] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/names/topfiles/NEWS Release notes])
+ * [http://twistedmatrix.com/Releases/News/11.0/TwistedNews-11.0.0.tar.bz2 Twisted News] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/news/topfiles/NEWS Release notes])
+ * [http://twistedmatrix.com/Releases/Pair/11.0/TwistedPair-11.0.0.tar.bz2 Twisted Pair] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/pair/topfiles/NEWS Release notes])
+ * [http://twistedmatrix.com/Releases/Words/11.0/TwistedWords-11.0.0.tar.bz2 Twisted Words] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/words/topfiles/NEWS Release notes])
+ * [http://twistedmatrix.com/Releases/Lore/11.0/TwistedLore-11.0.0.tar.bz2 Twisted Lore] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/lore/topfiles/NEWS Release notes])
+ * [http://twistedmatrix.com/Releases/Runner/11.0/TwistedRunner-11.0.0.tar.bz2 Twisted Runner] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/runner/topfiles/NEWS Release notes])
 
 == Signed MD5 Sums ==
+
+md5 sums of the 11.0.0 release are [http://twistedmatrix.com/Releases/twisted-11.0.0-md5sums.txt here].
 
 md5 sums of the 10.2.0 release are [http://twistedmatrix.com/Releases/twisted-10.2.0-md5sums.txt here].
 
