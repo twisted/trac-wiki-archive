@@ -206,7 +206,9 @@ xml.parsers.expat.ExpatError: junk after document element: line 25, column 0
     * e.g. `ssh cube.twistedmatrix.com mkdir -m 2775 ~www-data/distributable/documentation/$RELEASE`
  1. Upload the documents to cube
     * e.g. `scp -r doc/* cube.twistedmatrix.com:~www-data/distributable/documentation/$RELEASE`
- 1. Run the unofficial build-api script (see below)
+ 1. Create and run the unofficial build-api script to build the API docs
+    1. Create a {{{build-api.py}}} containing the code from ReleaseProcess#BuildAPIdocsforwebsite
+    1. `python build-api.py`
     1. Documentation will be generated in a directory called `apidocs`
     1. `tar -cjf apidocs.tar.bz2 apidocs`
     1. `scp apidocs.tar.bz2 cube.twistedmatrix.com:.`
