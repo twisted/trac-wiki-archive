@@ -238,30 +238,29 @@ xml.parsers.expat.ExpatError: junk after document element: line 25, column 0
     1. Update links and text to MSIs
     1. Update links and text to the main tarball
     1. Update links and text to sub tarballs, including links to news files
-    1. Update web2 links
     1. Add a new md5sum link
     1. Save the page, check all links
+ 1. Update PyPI records & upload files
+    * http://pypi.python.org/pypi/Twisted/
+      * Edit the version
+      * Upload tarball and MSIs
+ 1. Update PyPI records, editing the version  
+    * http://pypi.python.org/pypi/Twisted%20Pair/
+    * http://pypi.python.org/pypi/Twisted%20Conch/
+    * http://pypi.python.org/pypi/Twisted%20Core/
+    * http://pypi.python.org/pypi/Twisted%20Lore/
+    * http://pypi.python.org/pypi/Twisted%20Mail/
+    * http://pypi.python.org/pypi/Twisted%20Names/
+    * http://pypi.python.org/pypi/Twisted%20News/
+    * http://pypi.python.org/pypi/Twisted%20Runner/
+    * http://pypi.python.org/pypi/Twisted%20Web/
+    * http://pypi.python.org/pypi/Twisted%20Words/
  1. Update WikiStart
  1. Write the release announcement (see below)
  1. Update ReleaseRevisions with the revision of this release
    * The final revision of the release is the revision in which the release branch was made. The starting revision is the one immediately after the final revision of the previous release.
  1. Announce the release
     1. Send a text version of the announcement to: twisted-python@twistedmatrix.com, python-announce-list@python.org, python-list@python.org, twisted-web@twistedmatrix.com, twisted-jabber@ik.nu
-    1. Update PyPI records & upload files
-      * http://pypi.python.org/pypi/Twisted/
-        * Edit the version
-        * Upload tarball and MSIs
-    1. Update PyPI records, editing the version
-      * http://pypi.python.org/pypi/Twisted%20Pair/
-      * http://pypi.python.org/pypi/Twisted%20Conch/
-      * http://pypi.python.org/pypi/Twisted%20Core/
-      * http://pypi.python.org/pypi/Twisted%20Lore/
-      * http://pypi.python.org/pypi/Twisted%20Mail/
-      * http://pypi.python.org/pypi/Twisted%20Names/
-      * http://pypi.python.org/pypi/Twisted%20News/
-      * http://pypi.python.org/pypi/Twisted%20Runner/
-      * http://pypi.python.org/pypi/Twisted%20Web/
-      * http://pypi.python.org/pypi/Twisted%20Words/
     1. Launchpad;
       * https://launchpad.net/twisted/main/+addrelease
         * Include a text version of the announcement and the new entries of the NEWS file
