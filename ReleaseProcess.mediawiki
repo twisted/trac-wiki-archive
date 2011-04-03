@@ -177,12 +177,24 @@ jml
     * Pydoctor (use [https://code.launchpad.net/~exarkun/pydoctor/twisted-template-changes lp:~exarkun/pydoctor/twisted-template-changes] to get google analytics templates)
     * Nevow
     * Epytext
+    * netpbm (graphics conversion tools used by the book-builder)
  1. Export the version of Twisted being released
     * e.g. `svn export svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-$RELEASE`
  1. Run the unofficial build-docs script in an export of the release tag (see below)
     1. `cd twisted-$RELEASE`
     1. Edit `doc/core/howto/template.tpl` adding the Google Analytics JavaScript (which can be found in the source of any trac page).
       * '''XXX:''' The script below builds the docs into the current directory, mixing them up with the source files
+      * If you get a traceback like below, the Analytics JavaScript may been in an inappropriate place in {{{template.tpl}}}:
+{{{
+...
+  File "/usr/lib/python2.6/xml/dom/minidom.py", line 1918, in parse
+    return expatbuilder.parse(file)
+  File "/usr/lib/python2.6/xml/dom/expatbuilder.py", line 928, in parse
+    result = builder.parseFile(file)
+  File "/usr/lib/python2.6/xml/dom/expatbuilder.py", line 207, in parseFile
+    parser.Parse(buffer, 0)
+xml.parsers.expat.ExpatError: junk after document element: line 25, column 0
+}}}
     1. `python build-docs.py`
     1. `cp -R doc /tmp/twisted-release/`
     1. `cd /tmp/twisted-release/doc`
