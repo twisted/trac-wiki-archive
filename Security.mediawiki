@@ -20,6 +20,8 @@ To wit:
  1. Review comments will be relayed outside of the issue tracker, via email.  Remove the ''review'' keyword as usual, but only comment that feedback has been sent to the developer.
  1. When the branch is reviewed and accepted, generate a diff from the bzr branch and apply it to svn trunk; update the tracker issue to describe the security issue.
 
+Aside from hiding the details of the issue while development is ongoing, all of the normal policies apply; security fixes require unit tests, etc.  See ReviewProcess for further details.
+
 === Our PGP key ===
 
 {{{
