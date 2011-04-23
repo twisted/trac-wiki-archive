@@ -16,6 +16,7 @@ Both authors and reviewers should be intimately familiar with all requirements o
 == Authors: How to get your change reviewed ==
 
  * There must be a bug in the Twisted bug tracker describing the desired outcome (See [#Filingbugsandwritingreviewrequests below]).
+   * '''Note''': For security issues, see [wiki:Security Security].
  * Add the "review" keyword to the ticket.
  * Remove the owner field by selecting the blank option next to "Assign to".
    * Alternatively, assign it to someone who has already agreed to review it.
