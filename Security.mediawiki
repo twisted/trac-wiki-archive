@@ -6,7 +6,21 @@ We take security very seriously.  Your input and feedback on our security is alw
 
 Send urgent or sensitive reports directly to security at twistedmatrix dot com. Use our public key (below) to keep your message safe and please provide us with a secure way to respond. We'll get back to you as soon as we can; please bear in mind that Twisted is an all volunteer project and there may be some delay before we can respond.  But please feel free to follow up if you think an unreasonable amount of time has elapsed without a response!
 
-Our PGP key:
+=== Security Procedure for Developers ===
+
+The goal of the normal Twisted development procedure is to make all steps transparent and record all information at all times in a public location - either the issue tracker or a branch.
+
+The goal of the security variation of the Twisted development procedure is to keep track of progress resolving security issues without divulging information which might be useful to attackers before a fix for the issue is available to Twisted users.
+
+To wit:
+
+ 1. File a ticket which does not describe the issue and simply says 'security issue, description pending' and has the 'security' keyword.
+ 1. When the ticket goes into review, don't attach a patch or SVN branch, but put the code into a bzr branch in your home directory on svn.twistedmatrix.com.  In lieu of a ticket description, the branch should of course contain a NEWS file that explains the issue and the resolution clearly.
+ 1. Mark the ticket for review as usual.  Point to the location of the branch (which only committers will be able to read).
+ 1. Review comments will be relayed outside of the issue tracker, via email.  Remove the ''review'' keyword as usual, but only comment that feedback has been sent to the developer.
+ 1. When the branch is reviewed and accepted, generate a diff from the bzr branch and apply it to svn trunk; update the tracker issue to describe the security issue.
+
+=== Our PGP key ===
 
 {{{
 #!html
