@@ -15,7 +15,7 @@ The goal of the security variation of the Twisted development procedure is to ke
 To wit:
 
  1. File a ticket which does not describe the issue and simply says 'security issue, description pending' and has the 'security' keyword.
- 1. When the ticket goes into review, don't attach a patch or SVN branch, but put the code into a bzr branch in your home directory on svn.twistedmatrix.com.  In lieu of a ticket description, the branch should of course contain a NEWS file that explains the issue and the resolution clearly.
+ 1. When the ticket goes into review, don't attach a patch or SVN branch, but put the code into a bzr branch in your home directory on svn.twistedmatrix.com.  Give the branch a name like 'security-issue-NNNN' for ticket NNNN, to avoid exposing more details in the branch name.  In lieu of a ticket description, the branch should of course contain a NEWS file that explains the issue and the resolution clearly. 
  1. Mark the ticket for review as usual.  Point to the location of the branch (which only committers will be able to read).
  1. Review comments will be relayed outside of the issue tracker, via email.  Remove the ''review'' keyword as usual, but only comment that feedback has been sent to the developer.
  1. When the branch is reviewed and accepted, generate a diff from the bzr branch and apply it to svn trunk; update the tracker issue to describe the security issue.
