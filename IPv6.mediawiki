@@ -1,6 +1,21 @@
 = Plan =
 
-  1. Support IPv6 when explicitly requested (reactor methods) #3014
+This is distilled from #3014 and personal correspondence.
+
+  1. Support IPv6 when explicitly requested (reactor methods) (ie, when an IPv6 address literal is given)
+    1. TCP
+      1. IReactorTCP.listenTCP
+      1. IReactorTCP.connectTCP
+    1. SSL (but this might be automatic when IReactorTCP supports it)
+      1. IReactorSSL.listenSSL
+      1. IReactorSSL.connectTCP
+    1. UDP
+      1. IReactorUDP.listenUDP
+      1. IUDPTransport.connect
+    1. Multicast
+      1. IReactorMulticast.listenMulticast
+      1. IMulticastTransport.joinGroup
+      1. IMulticastTransport.leaveGroup
   1. Provide an API which can support either IPv4 or IPv6 (endpoints) or other arbitrary policies #4470 #4859
   1. (In the year 2525) Deprecate current hostname-based APIs which do not support IPv6 in favor of endpoints
 
