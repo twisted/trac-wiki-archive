@@ -4,13 +4,13 @@ This is distilled from #3014 and personal correspondence.
 
   1. Support IPv6 when explicitly requested (reactor methods) (ie, when an IPv6 address literal is given)
     1. TCP
-      1. IReactorTCP.listenTCP
-      1. IReactorTCP.connectTCP
+      1. (#5084) IReactorTCP.listenTCP
+      1. (#5085) IReactorTCP.connectTCP 
     1. SSL (but this might be automatic when IReactorTCP supports it)
       1. IReactorSSL.listenSSL
       1. IReactorSSL.connectTCP
     1. UDP
-      1. IReactorUDP.listenUDP
+      1. IReactorUDP.listenUDP and IUDPTransport.write
       1. IUDPTransport.connect
     1. Multicast
       1. IReactorMulticast.listenMulticast
