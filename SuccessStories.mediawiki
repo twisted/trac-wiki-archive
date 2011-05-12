@@ -94,6 +94,14 @@ Twisted as we broaden our server-side processing goals.
 
 -- Reza Lotun, Software Engineer, !TweetDeck, Inc.
 
+= [http://www.evennia.com/ Evennia] =
+
+Evennia is a modern Python MUD/MUX/MU* server, aimed at the easy creation of text-based massively multi-user online games. We use Twisted for all our networking needs, along with [http://www.djangoproject.com/ Django] for database abstraction and web features. The two work beautifully together.
+
+When developing Evennia we have found that using Twisted not only gives us great performance advantages, but also helps us to easily expand on the ways people connect to Evennia-powered games. Whereas traditional MUD servers only speak telnet, Evennia additionally comes with its own browser-based client and allows for expanding with custom game protocols in any combination. Evennia also serves the MUD’s website, alleviating the need to install and set up a third-party web server. All of this is straightforward to implement and maintain thanks to Twisted!
+
+-- Griatch, Maintainer, Evennia project
+
 = [http://www.list.org/ Mailman] =
 
 I wanted to test out some news/mail gatewaying for Mailman 2.1 but I didn't want to go through the hassle of actually connecting things up to a real news server, and I ''definitely'' didn't want to actually try to install inn or some nonsense (I'd like to do some other work this week :).
