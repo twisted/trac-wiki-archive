@@ -1,4 +1,4 @@
-This document describes the Twisted release process. Although it is still incomplete, every effort has been made to ensure that it is accurate and up-to-date.
+This document describes the Twisted release process. Although it is still incomplete, every effort has been made to ensure that it is accurate and up-to-date. There are plans to eventually move this document into the source tree (#4543).
 
 This process has only been tested on Linux, so we recommend that you do the release on Linux.
 
