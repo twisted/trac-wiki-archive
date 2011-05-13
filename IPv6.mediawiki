@@ -3,20 +3,20 @@
 This is distilled from #3014 and personal correspondence.
 
   1. Support IPv6 when explicitly requested (reactor methods) (ie, when an IPv6 address literal is given)
-    1. TCP
-      1. (#5084) IReactorTCP.listenTCP
-      1. (#5085) IReactorTCP.connectTCP 
-    1. SSL (but this might be automatic when IReactorTCP supports it)
-      1. IReactorSSL.listenSSL
-      1. IReactorSSL.connectTCP
-    1. UDP
-      1. (#5086) IReactorUDP.listenUDP and IUDPTransport.write
-      1. (#5087) IUDPTransport.connect
-    1. Multicast
-      1. IReactorMulticast.listenMulticast
-      1. IMulticastTransport.joinGroup
-      1. IMulticastTransport.leaveGroup
-  1. Provide an API which can support either IPv4 or IPv6 (endpoints) or other arbitrary policies #4470 #4859
+    1. '''TCP'''
+      1. (#5084) `IReactorTCP.listenTCP`
+      1. (#5085) `IReactorTCP.connectTCP`
+    1. '''SSL''' (but this might be automatic when `IReactorTCP` supports it)
+      1. `IReactorSSL.listenSSL`
+      1. `IReactorSSL.connectTCP`
+    1. '''UDP'''
+      1. (#5086) `IReactorUDP.listenUDP` and `IUDPTransport.write`
+      1. (#5087) `IUDPTransport.connect`
+    1. '''Multicast'''
+      1. `IReactorMulticast.listenMulticast`
+      1. `IMulticastTransport.joinGroup`
+      1. `IMulticastTransport.leaveGroup`
+  1. Provide an API which can support either IPv4 or IPv6 (endpoints) or other arbitrary policies (#4470, #4859)
   1. (In the year 2525) Deprecate current hostname-based APIs which do not support IPv6 in favor of endpoints
 
 Other related tickets:
@@ -29,21 +29,21 @@ Other related tickets:
 
 == Low Level ==
 
-`IReactorTCP.connectTCP` will be extended with these (backwards compatible) changes:
+`IReactorTCP.connectTCP` will be extended with these (backwards-compatible) changes:
 
-  1. An IPv6 address literal, optionally(?) with a percent-embedded scopeid will be allowed as the value of the `host` parameter
+  1. An IPv6 address literal, optionally(?) with a percent-embedded `scopeid` will be allowed as the value of the `host` parameter
   1. The `bindAddress` parameter will accept 4-tuples.  The first element is an address like the above, the other three are port number, flow info, and scope id.
     1. (Maybe `bindAddress` values shouldn't be tuples but should be nice structured objects instead)
-  1. If `host` is IPv6, bindAddress must be as well, and vice versa.
+  1. If `host` is IPv6, `bindAddress` must be as well, and vice versa.
 
   (''jknight comment'': bindAddress should accept a 2-tuple, just like with ipv4: host/port. flow id needs a lot more work before it can be supported...you can't just use arbitrary numbers, you need to wrap the kernel api for allocating them, and enable them on the socket. [http://xpg.dk/projects/linux-ipv6-flow-label-mangement-api]. Scope-id is implicit in the first argument (address), just like it is in connectTCP's host parameter, so doesn't need to be specified separately)
 
 `IReactorTCP.listenTCP` will be extended with these (backwards compatible) changes:
 
-  1. `interface` will accept an ipv6 address literal value like the one described above
-  1. The default listen address will still be INADDR_ANY (this is a non-change; pass "::" if you want IPv6 servers, or see the high level APIs)
+  1. `interface` will accept an IPv6 address literal value like the one described above
+  1. The default listen address will still be `INADDR_ANY` (this is a non-change; pass "::" if you want IPv6 servers, or see the high level APIs)
 
-`IReactorUDP.listenUDP` will be extended in an analogous way to `IReactorTCP.listenTCP`
+`IReactorUDP.listenUDP` will be extended in an analogous way to `IReactorTCP.listenTCP`.
 
 `IUDPTransport.write` and `IUDPTransport.connect`:
 
