@@ -8,7 +8,7 @@ This is distilled from #3014 and personal correspondence.
       1. (#5085) `IReactorTCP.connectTCP`
     1. '''SSL''' (but this might be automatic when `IReactorTCP` supports it)
       1. `IReactorSSL.listenSSL`
-      1. `IReactorSSL.connectTCP`
+      1. `IReactorSSL.connectSSL`
     1. '''UDP'''
       1. (#5086) `IReactorUDP.listenUDP` and `IUDPTransport.write`
       1. (#5087) `IUDPTransport.connect`
