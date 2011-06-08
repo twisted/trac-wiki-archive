@@ -30,6 +30,7 @@
     * the class can be improved later to add these features without changing the basic request/response api
   * Higher level wrappers (with the same request/response API) will add features like:
     * transparent redirect handling
+    * authentication
     * caching/etags/if-modified-since/etc
     * connection management (pools, reconnect, etc)
     * ssl something?  certificate/hostname verification etc
