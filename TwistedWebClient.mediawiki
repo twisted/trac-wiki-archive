@@ -51,7 +51,8 @@
     1. [ticket:4023 Support HTTPS URLs and certificate verification]
     1. [ticket:4922 Implement a cookie-aware `Agent` wrapper]
     1. Implement a gzip-aware `Agent` wrapper (sending and [ticket:5053 receiving]?)
-    1. Caching
+    1. [ticket:5148 Implement an authentication wrapper]
+    1. [ticket:5126 Implement a caching wrapper]
     1. [ticket:3420 high-level access to persistent connections]
       1. [ticket:4223 low-level protocol support for controlling whether the connection is re-used or not]
     1. Support pipelined requests in the high-level API
