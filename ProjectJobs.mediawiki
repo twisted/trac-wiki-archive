@@ -1,0 +1,41 @@
+== Twisted Project Jobs ==
+
+This page is a list of jobs which need to be done for the continued operation of the Twisted project itself.  These jobs are not represented as tickets because they do not represent direct development on the project.  Instead, they are tasks which involve either some level of ongoing attention, administrative work, or development on software which is not part of Twisted.
+
+The page is currently organized roughly by the piece of software the jobs most require interaction with.
+
+=== BuildBot ===
+
+See ContinuousIntegration for some information about how Twisted uses BuildBot.  
+
+==== Keeping our slaves online ====
+
+The Twisted project itself operates several build slaves.  If these go offline for some reason, they need to be investigated and brought back online.  This job involves monitoring the status of the slaves (email notification of offline slaves is available) and restarting slaves as necessary (for example, after a reboot of a Windows slave).
+
+Assigned to: ''unassigned''
+Assignment duration: 
+
+==== Keeping volunteer slaves online ====
+
+Various community members also operate build slaves.  If these go offline, the community member needs to be prodded to bring the slave online again.  This is a monitoring job similar to the previous one, but involves asking the community member to resolve the problem until it is resolved.
+
+Assigned to: ''unassigned''
+Assignment duration: 
+
+=== Speed Center ===
+
+Speed Center is a Django application which collects and reports benchmark results.  Twisted's instance is visible at <http://speed.twistedmatrix.com/>.
+
+==== Maintain the deployment ====
+
+Speed Center is developed primarily by tobami on github - <https://github.com/tobami/codespeed>.  Since the project is very new, we should try to run an up-to-date version, particularly if there are known bug fixes in newer versions.  This job is about upgrading Speed Center once in a while while preserving our existing collected data.
+
+Assigned to: ''unassigned''
+Assignment duration: 
+
+==== Reporting bugs upstream ====
+
+If we encounter a problem with Speed Center, these need to be reported and any help given to upstream to ensure they are fixed in a timely manner.  (As of the creation of this wiki page, our Speed Center deployment is somewhat badly broken and needs some attention before it can be useful again.)  This job is about looking over our deployment once in a while and reporting any new issues that are observed, then following up with them with upstream and working with the person maintaining our deployment to deploy fixes.
+
+Assigned to: ''unassigned''
+Assignment duration: 
