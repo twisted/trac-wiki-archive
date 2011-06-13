@@ -39,3 +39,21 @@ If we encounter a problem with Speed Center, these need to be reported and any h
 
 Assigned to: ''unassigned''
 Assignment duration: 
+
+=== Trac ===
+
+Twisted uses Trac for several things.  It is the project's issue tracker and runs much of the project's website (everything that's a wiki page).
+
+==== Ticket Spam ====
+
+Anyone can register a new account in trac, and spammers take advantage of this from time to time to file new tickets containing spam or comment on old tickets with spam.  This job is for skimming all new tickets and deleting the ones filed by spammers, as well as deleting the spam account.
+
+Assigned to: ''unassigned''
+Assignment duration: 
+
+==== Privilege Assignment ====
+
+Certain other activities in Trac are only available to privileged accounts (for example, editing the descriptions of existing tickets).  This job is for handing out these privileges via the Trac web admin user interface to users who have demonstrated they can be trusted with them.
+
+Assigned to: ''unassigned''
+Assignment duration: 
