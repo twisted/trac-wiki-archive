@@ -16,10 +16,6 @@
   An HTTP protocol implementation together with clients and servers.[[BR]]
   Maintainer: James "foom" Knight <foom@fuhm.net>
 
-  '''[wiki:TwistedWeb2 Twisted Web2]'''::
-  An HTTP/1.1 Server Framework ([TwistedWebPlan Experimental]).[[BR]]
-  Maintainer: James "foom" Knight <foom@fuhm.net>
-
   '''[wiki:TwistedMail Twisted Mail]'''::
   An SMTP, IMAP and POP protocol implementation together with clients and servers.[[BR]]
   Maintainer: Jp "exarkun" Calderone <exarkun@divmod.com>
