@@ -4,7 +4,7 @@ This page is a list of jobs which need to be done for the continued operation of
 
 The page is currently organized roughly by the piece of software the jobs most require interaction with.
 
-See a task you like? Awesome! Send mail to [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python the mailing list] describing your interest and we'll get you set up.
+See a task you like? Awesome! Send mail to [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python the Twisted mailing list] describing your interest and we'll get you set up.
 
 === BuildBot ===
 
