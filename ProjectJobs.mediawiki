@@ -12,8 +12,13 @@ See ContinuousIntegration for some information about how Twisted uses BuildBot.
 
 The Twisted project itself operates several build slaves.  If these go offline for some reason, they need to be investigated and brought back online.  This job involves monitoring the status of the slaves (email notification of offline slaves is available) and restarting slaves as necessary (for example, after a reboot of a Windows slave).
 
-Assigned to: ''unassigned''
-Assignment duration: 
+Unclaimed [http://buildbot.twistedmatrix.com/buildslaves buildslaves]:
+ * Assigned to: ''unassigned''
+ * Assignment duration: 
+
+bot-glyph-2, bot-exarkun-1:
+ * Assigned to: jesstess
+ * Assignment duration: 3 months
 
 ==== Keeping volunteer slaves online ====
 
