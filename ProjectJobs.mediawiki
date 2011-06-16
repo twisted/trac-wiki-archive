@@ -64,3 +64,21 @@ Certain other activities in Trac are only available to privileged accounts (for 
 
 Assigned to: ''unassigned''
 Until: 
+
+=== Version Control Mirrors ===
+
+Twisted continues to be hosted primarily in subversion.  There is interest in (read-only) mirrors hosted in other version control systems, though.
+
+==== Bazaar ====
+
+There is a bzr mirror of the entire subversion repository at <http://svn.twistedmatrix.com/svn/Twisted>.  There is another bzr mirror of trunk only hosted on launchpad, <http://launchpad.net/twisted>.  These are updated via a number of mostly undocumented tools.  One job is to figure out how all of these things interact and write it down, another is to ensure the mirrors remain up-to-date over time.
+
+Assigned to: ''unassigned''
+Until: 
+
+==== Git ====
+
+There is a git mirror at <http://svn.twistedmatrix.com/git/Twisted>.  It does not update anymore.  One job is to fix the tools responsible for updating it, another is to ensure that it remains up-to-date after that.
+
+Assigned to: ''unassigned''
+Until: 
