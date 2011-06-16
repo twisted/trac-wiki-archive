@@ -16,18 +16,18 @@ The Twisted project itself operates several build slaves.  If these go offline f
 
 Unclaimed [http://buildbot.twistedmatrix.com/buildslaves buildslaves]:
  * Assigned to: ''unassigned''
- * Assignment duration: 
+ * Until: 
 
 bot-glyph-2, bot-exarkun-1:
  * Assigned to: jesstess
- * Assignment duration: 3 months
+ * Until: 1 September 2011
 
 ==== Keeping volunteer slaves online ====
 
 Various community members also operate build slaves.  If these go offline, the community member needs to be prodded to bring the slave online again.  This is a monitoring job similar to the previous one, but involves asking the community member to resolve the problem until it is resolved.
 
 Assigned to: ''unassigned''
-Assignment duration: 
+Until: 
 
 === Speed Center ===
 
@@ -38,14 +38,14 @@ Speed Center is a Django application which collects and reports benchmark result
 Speed Center is developed primarily by tobami on github - <https://github.com/tobami/codespeed>.  Since the project is very new, we should try to run an up-to-date version, particularly if there are known bug fixes in newer versions.  This job is about upgrading Speed Center once in a while while preserving our existing collected data.
 
 Assigned to: ''unassigned''
-Assignment duration: 
+Until: 
 
 ==== Reporting bugs upstream ====
 
 If we encounter a problem with Speed Center, these need to be reported and any help given to upstream to ensure they are fixed in a timely manner.  (As of the creation of this wiki page, our Speed Center deployment is somewhat badly broken and needs some attention before it can be useful again.)  This job is about looking over our deployment once in a while and reporting any new issues that are observed, then following up with them with upstream and working with the person maintaining our deployment to deploy fixes.
 
 Assigned to: ''unassigned''
-Assignment duration: 
+Until: 
 
 === Trac ===
 
@@ -56,11 +56,11 @@ Twisted uses Trac for several things.  It is the project's issue tracker and run
 Anyone can register a new account in trac, and spammers take advantage of this from time to time to file new tickets containing spam or comment on old tickets with spam.  This job is for skimming all new tickets and deleting the ones filed by spammers, as well as deleting the spam account.
 
 Assigned to: ''unassigned''
-Assignment duration: 
+Until: 
 
 ==== Privilege Assignment ====
 
 Certain other activities in Trac are only available to privileged accounts (for example, editing the descriptions of existing tickets).  This job is for handing out these privileges via the Trac web admin user interface to users who have demonstrated they can be trusted with them.
 
 Assigned to: ''unassigned''
-Assignment duration: 
+Until: 
