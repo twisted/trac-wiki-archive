@@ -50,7 +50,7 @@ You can use the form on the [WikiStart front page] at anytime to make a donation
 
 If you would prefer to cut a check, you may do this as well. Make the check payable to "Software Freedom Conservancy" and write "Directed Donation for Twisted" in the "memo" field. Checks should be sent to the following address, so that the Conservancy can process them:
 {{{
- Software Freedom Conservancy
- 1995 Broadway Fl 17
- New York, NY 10023-5882
+Software Freedom Conservancy, Inc.
+137 MONTAGUE ST STE 380
+Brooklyn, NY 11201-3548
 }}}
