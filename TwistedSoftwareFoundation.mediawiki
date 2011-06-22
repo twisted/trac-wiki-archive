@@ -1,10 +1,10 @@
 = Twisted Software Foundation =
 
-The name "Twisted Software Foundation" is a reference of convenience to our legal non-profit status through the [http://conservancy.softwarefreedom.org/ Software Freedom Conservancy]. The Conservancy has allowed us to pool organizational resources with other projects, such as Inkscape, Samba, and Wine, in order to reduce the management overhead associated with creating our own, dedicated legal entity.
+The name "Twisted Software Foundation" is a reference of convenience to our legal non-profit status through the [http://sfconservancy.org/ Software Freedom Conservancy]. The Conservancy has allowed us to pool organizational resources with other projects, such as Inkscape, Samba, and Wine, in order to reduce the management overhead associated with creating our own, dedicated legal entity.
 
 == Background ==
 
-At the end of January, 2008, the Twisted project finalized an agreement with the [http://conservancy.softwarefreedom.org/ Software Freedom Conservancy] that granted us non-profit status. For years prior to this, we had explored the options available to us for creating a foundation; due to our lack of resources, time and money, they were all prohibitively expensive. At the urging of individuals and organizations, we again explored other options. This most recent effort was a culmination of hard work over the last year between the Twisted project and the Conservancy, and we are delighted to present the results to the community: "Twisted Software Foundation".
+At the end of January, 2008, the Twisted project finalized an agreement with the [http://sfconservancy.org/ Software Freedom Conservancy] that granted us non-profit status. For years prior to this, we had explored the options available to us for creating a foundation; due to our lack of resources, time and money, they were all prohibitively expensive. At the urging of individuals and organizations, we again explored other options. This most recent effort was a culmination of hard work over the last year between the Twisted project and the Conservancy, and we are delighted to present the results to the community: "Twisted Software Foundation".
 
 == Goals ==
 
