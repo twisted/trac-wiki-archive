@@ -42,7 +42,7 @@ Until:
 
 ==== Reporting bugs upstream ====
 
-If we encounter a problem with Speed Center, these need to be reported and any help given to upstream to ensure they are fixed in a timely manner.  (As of the creation of this wiki page, our Speed Center deployment is somewhat badly broken and needs some attention before it can be useful again.)  This job is about looking over our deployment once in a while and reporting any new issues that are observed, then following up with them with upstream and working with the person maintaining our deployment to deploy fixes.
+If we encounter a problem with Speed Center, these need to be reported and any help given to upstream to ensure they are fixed in a timely manner.  This job is about looking over our deployment once in a while and reporting any new issues that are observed, then following up with them with upstream and working with the person maintaining our deployment to deploy fixes.
 
 Assigned to: ''unassigned''
 Until: 
