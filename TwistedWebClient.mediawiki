@@ -43,7 +43,7 @@
   1. [ticket:3987 Implement a high-level API with minimal additional functionality]
     1. [ticket:4017 Provide a file-based message body producer]
     1. Redirect following (perhaps multiple policies, dealing with POST/PUT/etc redirects)
-  1. Allow binding to a particular local interface
+  1. Allow binding to a particular local interface (handled in #3450)
   1. Make requests over IPv6 when necessary/appropriate
   1. [ticket:1774 Support HTTP proxies]
   1. Implement other HTTP protocol and high-level features
@@ -57,4 +57,5 @@
       1. [ticket:4223 low-level protocol support for controlling whether the connection is re-used or not]
     1. Support pipelined requests in the high-level API
     1. ''100 Continue'' support
+    1. [ticket:5157 Redirect support]
   1. Implement HTTP header parsing to provide access to structured header values (based on `twisted.web2.http_headers`)
