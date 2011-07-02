@@ -8,6 +8,10 @@ Here's a list (incomplete - please contribute) of things we use tools for in our
    * Mail notification of subscribed tickets
    * Ability to delete comments (spam)
  * Web site
+   * Must be presented via twistedmatrix.com, with a custom style sheet.
+   * Browser analytics like [http://www.sitemeter.com/?a=stats&s=sm7twistedmatrix&r=19 this] (not strictly a requirement, but very, very nice to have)
+   * An equivalent to http://twistedmatrix.com/highscores/ or a data-feed that can be used to recreate it.
+   * A wiki for documenting how all these other parts of the workflow integrate.
  * Source browser
    * line number links
  * Revision control
