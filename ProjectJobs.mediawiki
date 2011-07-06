@@ -87,5 +87,5 @@ Until:
 
 There is a git mirror at <http://svn.twistedmatrix.com/git/Twisted>.  It does not update anymore.  One job is to fix the tools responsible for updating it, another is to ensure that it remains up-to-date after that.
 
-Assigned to: ''unassigned''
-Until: 
+Assigned to: ''James Knight''
+Until: forever and ever.
