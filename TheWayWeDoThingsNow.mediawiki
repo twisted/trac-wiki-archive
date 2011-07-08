@@ -2,7 +2,7 @@
 
 === What Do You Mean By 'Now'? ===
 
-The Twisted project has a long history, and we have had several changes in policy throughout the history.  If you try to base your changes off of the surrounding code, 
+The Twisted project has a long history, and we have had several changes in policy throughout the history.  If you try to base your changes off of the surrounding code, you may find that you're doing things in a way we've explicitly decided was the bad, old way.  So please check this page when authoring a patch.
 
 === Why This Page? ===
 
