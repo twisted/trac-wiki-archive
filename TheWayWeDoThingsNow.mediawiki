@@ -1,0 +1,19 @@
+= The Way We Do Things Now =
+
+=== What Do You Mean By 'Now'? ===
+
+The Twisted project has a long history, and we have had several changes in policy throughout the history.  If you try to base your changes off of the surrounding code, 
+
+=== Why This Page? ===
+
+Everything on this page really ought to be in the coding standard, but we don't update that often enough.  One problem is that the coding standard is published with every major version, so it's easy to google and find the wrong version, and another is that the review process maybe isn't the best for coding changes.  If you're updating this page please be aware that you should also eventually be updating the coding standard.
+
+Finally, this page only documents ''changes'' in policy that are easy to become confused about by looking at common bad examples, not every policy that we have in the project.  So even once we've completely caught up the coding standard and fixed all of its problems we may want to leave this in place as a brief checklist.
+
+=== The Rules ===
+
+We should start filling in some rules here.
+
+=== Ideas ===
+
+Here are some rules that we haven't fully decided on yet, but you might want to be aware that we are discussing.
