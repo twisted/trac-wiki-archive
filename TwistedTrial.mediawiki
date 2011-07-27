@@ -1,18 +1,96 @@
 = Trial =
 
-Trial is Twisted's unit testing framework, an extension of Python's unittest.
+Trial is Twisted's unit testing system, an extension of [http://docs.python.org/library/unittest.html Python's `unittest` module].
 
-One of Trial's unique features is the ability to return a Deferred from a test-case method - the test case will not complete until the Deferred has fired.  If it fires successfully, the test passes.  If it fires with an error, the test fails.  This makes it possible to easily unit-test asynchronous event-driven code.  Trial also includes automatic (customizable) test discovery, customizable reporting, and enhanced test cleanup features.
+Trial is two things.  The first is a command-line test ''runner'', which can be run on plain Python unit tests.  It's very simple to use.  For example, the fastest way to get going with Trial is to write a plain Python unit test like this:
+
+{{{
+#!py
+# test_sample.py
+import unittest
+class DemoTest(unittest.TestCase):
+    def test_passes(self):
+        pass
+    def test_fails(self):
+        self.fail("I failed.")
+}}}
+and then run it, like this:
+{{{
+#!html
+<pre class="wiki">
+$ trial test_sample.py 
+test_sample
+  DemoTest
+    test_fails ...                                                       <span style="color: red; font-weight: bold">[FAIL]</span>
+    test_passes ...                                                        <span style="color: green; font-weight: bold">[OK]</span>
+
+===============================================================================
+[FAIL]
+Traceback (most recent call last):
+  File "unittest/case.py", line 318, in run
+    testMethod()
+  File "test_sample.py", line 9, in test_fails
+    self.fail("I failed.")
+  File "unittest/case.py", line 393, in fail
+    raise self.failureException(msg)
+exceptions.AssertionError: I failed.
+
+test_sample.DemoTest.test_fails
+-------------------------------------------------------------------------------
+Ran 2 tests in 0.316s
+
+<span style="color: red; font-weight: bold">FAILED</span> (failures=1, successes=1)
+</pre>
+}}}
+
+Trial's test runner can do automated unit-test discovery across files, modules, or even arbitrarily nested packages.  For example, you can run Twisted's own tests with it by just typing `trial twisted` in a shell.
+
+Trial's test runner will also automatically catch errors that are logged but not [http://twistedmatrix.com/documents/11.0.0/api/twisted.trial.unittest.TestCase.html#flushLoggedErrors explicitly handled].  For example, this test will fail:
+
+{{{
+#!py
+from twisted.python import log
+import unittest
+class DemoTest(unittest.TestCase):
+    def test_failWithLog(self):
+        try:
+            1 / 0
+        except:
+            log.err()
+}}}
+
+Trial will also catch certain types of global state manipulations, like leaving stale sockets around in the global Twisted reactor, and fail tests as a result.
+
+For a more complete list of the test runner's features, `trial --help` will provide options.  A selection of features which can be enabled with these options include:
+
+  - Colored output: red for failure, green for success (even on Windows!)
+  - support for the [https://launchpad.net/subunit subunit] test-result protocol
+  - command-line control over the garbage collector (optionally collect between each test, or disable it)
+  - test-order randomization, based on a random seed so the same order can be repeated
+  - run your tests in a loop until they fail
+  - produce coverage reports
+  - real-time error reporting and traceback logging - useful for when your tests hang!
+  - run your tests under PDB and automatically break into the debugger on failure
+
+Trial also provides a [http://twistedmatrix.com/documents/current/api/twisted.trial.itrial.IReporter.html plug-in interface] for customizing and recording the output of test runs.  You can type `trial --help-reporters` for more information about the plugins that are available on your system.
+
+In addition to the test runner, Trial also includes a test ''library'', derived from Python's `unittest.TestCase`.  You can use this library by subclassing [http://twistedmatrix.com/documents/current/api/twisted.trial.unittest.TestCase.html twisted.trial.unittest.TestCase] rather than Python's built-in `unittest.TestCase`.
+
+The main unique feature of this testing class is the ability to return a [http://twistedmatrix.com/documents/current/api/twisted.internet.defer.Deferred.html Deferred] from a test-case method.  A test method which returns a Deferred will not complete until that Deferred has fired; the reactor will be automatically set up and run for you, along with a timeout to make sure that tests don't run forever.  If the Deferred fires successfully, the test passes.  If it fires with an error, the test fails.  This makes it possible to easily unit-test asynchronous event-driven code, or to use Twisted APIs that return Deferreds in order to write automated functional tests that communicate with a live running service.
+
+Trial's `TestCase` also includes several [http://twistedmatrix.com/documents/current/api/twisted.trial.unittest.TestCase.html#patch convenience features] which we find useful for testing Twisted itself; if you're writing Twisted code, it's likely you'll find them useful too.
 
 = Download =
 
 Trial is a core component of Twisted. As such, there is no need to download it separately. If you have downloaded the Twisted tarball, you'll find the Trial source code in the
-`TwistedCore-2.5.0/twisted/trial` directory (your Twisted version number may be different). If you have Twisted checked out from `svn`, you'll find the source in `trunk/twisted/trial`.
+`twisted/trial` directory.
 
 = Documentation =
 
+(A tutorial for using trial will be officially available as part of the next release, but until then, [http://twistedmatrix.com/trac/export/32374/trunk/doc/core/howto/trial.xhtml you can access a draft copy here].)
+
 You can find Trial API documentation [http://twistedmatrix.com/documents/current/api/twisted.trial.html here]. If you run `trial --help` from the command line, you'll see
-a list of possible invocation arguments (the `trial` command can be found in `TwistedCore-2.5.0/bin` in the tarball and `trunk/bin/trial` in `svn`). Beyond, seeing as much of Twisted
+a list of possible invocation arguments (the `trial` command can be found in `bin` in the tarball). Beyond, seeing as much of Twisted
 itself is of course tested with Trial, you can examine the
 `test` directories of the various Twisted projects to see examples of Trial use. And as ever, having a look through the source code is also instructive.
 
