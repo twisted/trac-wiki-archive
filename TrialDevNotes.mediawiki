@@ -93,7 +93,6 @@ I assume that if a test leaves sockets etc around after it is completed, then an
 
  * Make failUnlessRaises re-raise !KeyboardInterrupt
  * Make !TestCase._wait actually call result.stop()
- * Somehow separate regular !TestCase from !TestCaseWithTearDownClass in some clean way
  * Make the setup, method and teardown call/errbacks public
  * Make sure cleanup calls re-raise !KeyboardInterrupt
  * Make makeTodo accept None correctly (see !TestCase.getTodo)
