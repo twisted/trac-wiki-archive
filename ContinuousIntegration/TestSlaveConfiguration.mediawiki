@@ -24,6 +24,7 @@ As well as all (or as many as possible) of the libraries Twisted depends on:
   * SOAPpy (Debian package python-soappy)
   * pygtk (depends on gtk2) (Debian package python-gtk2)
   * [https://launchpad.net/subunit subunit] (Debian package python-subunit)
+    * Depends on [http://pypi.python.org/pypi/testtools testtools]
 
 A build slave needs authentication credentials in order to be allowed to connect to the build master.  Credentials can be obtained by emailing twisted dash python at twisted matrix dot com and expressing interest in running a slave.
 
