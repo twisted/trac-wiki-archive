@@ -80,8 +80,8 @@ Twisted continues to be hosted primarily in subversion.  There is interest in (r
 
 There is a bzr mirror of the entire subversion repository at <http://svn.twistedmatrix.com/svn/Twisted>.  There is another bzr mirror of trunk only hosted on launchpad, <http://launchpad.net/twisted>.  These are updated via a number of mostly undocumented tools.  One job is to figure out how all of these things interact and write it down, another is to ensure the mirrors remain up-to-date over time.
 
-Assigned to: ''unassigned''
-Until: 
+Assigned to: Adi Roiban
+Until: 1 November 2011
 
 ==== Git ====
 
