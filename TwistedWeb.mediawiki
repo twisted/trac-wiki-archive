@@ -19,7 +19,7 @@ To run a WSGI application, it's just as simple:
 {{{
 twistd web --wsgi my.application.name --port 8080
 }}}
-Because Twisted Web is also a Python library with a documented API, you can also configure your server entirely using Python.  For example, let's say you have a bunch of directories with names corresponding to each domain you want to serve from your web server.  Here's the configuration file which creates a virtual host configuration serving static content for each domain out of the directory matching its name:
+Because Twisted Web is also a Python library with a documented API, you can configure your server entirely using Python.  For example, let's say you have a bunch of directories with names corresponding to each domain you want to serve from your web server.  Here's the configuration file which creates a virtual host configuration serving static content for each domain out of the directory matching its name:
 {{{
 #!py
 # virtual.rpy
@@ -44,11 +44,11 @@ Twisted Web is a web ''server'', and a framework for doing things with the web -
 
 See the [wiki:Downloads] page.
 
-Twisted Web is available under [http://twistedmatrix.com/trac/export/32445/trunk/LICENSE the MIT Free Software licence].
+Twisted Web is available under [source:trunk/LICENSE the MIT Free Software licence].
 
 = Documentation =
 
-[http://twistedmatrix.com/projects/web/documentation/ Documentation] is available for Twisted Web. An [http://twistedmatrix.com/documents/current/api/ API reference] of Twisted and all subprojects is also available.
+[http://twistedmatrix.com/documents/current/web Documentation] is available for Twisted Web. An [http://twistedmatrix.com/documents/current/api/ API reference] of Twisted and all subprojects is also available.
 
 = Contact = 
 
