@@ -2,15 +2,49 @@
 
 = Twisted Web =
 
-Twisted Web includes an HTTP server and an HTTP client and additional libraries often useful in conjunction with these.
+Twisted Web is:
 
-[wiki:WebDevelopmentWithTwisted If you're here to learn about web development with Twisted, please read this page first!]
+ - [http://twistedmatrix.com/documents/current/web/howto/using-twistedweb.html an HTTP server], that can be used as [http://twistedmatrix.com/documents/current/api/twisted.web.html a library] or run as a stand-alone server
+ - [http://twistedmatrix.com/documents/current/web/howto/twisted-templates.html an HTML templating engine]
+ - [http://twistedmatrix.com/documents/current/api/twisted.web.client.Agent.html an HTTP client library]
 
-Twisted Web is available under the MIT Free Software licence.
+Twisted Web supports numerous standards; for example, it can serve as a WSGI and CGI container, or [http://twistedmatrix.com/documents/current/api/twisted.web.xmlrpc.html an XMLRPC server].  It can also serve static content.  Twisted Web provides built-in support for name-based virtual hosts, reverse proxying, XML parsing, and more.
+
+== Advantages ==
+Twisted Web is a very simple to set up stand-alone server.  For example, to run a server that serves static content out of the current directory, you can just run this short command line:
+{{{
+twistd web --path . --port 8080
+}}}
+To run a WSGI application, it's just as simple:
+{{{
+twistd web --wsgi my.application.name --port 8080
+}}}
+Because Twisted Web is also a Python library with a documented API, you can also configure your server entirely using Python.  For example, let's say you have a bunch of directories with names corresponding to each domain you want to serve from your web server.  Here's the configuration file which creates a virtual host configuration serving static content for each domain out of the directory matching its name:
+{{{
+#!py
+# virtual.rpy
+from twisted.python.filepath import FilePath
+from twisted.web.static import File
+from twisted.web.vhost import NameVirtualHost
+resource = NameVirtualHost()
+for p in FilePath(".").children():
+    resource.addHost(p.basename(), File(p.path))
+}}}
+This configuration can be run with:
+{{{
+twistd web --resource-script=virtual.rpy --port 8080
+}}}
+Unlike some other simple-to-run Python web servers, Twisted Web is an production-grade server that can be used to deploy real applications.  Among other sites, this web site (twistedmatrix.com) is run entirely via Twisted Web.  Because it's programmable, you can customize your deployment as much or as little as you like, including having your web server run [http://twistedmatrix.com/documents/current/api/twisted.internet.task.LoopingCall.html periodic tasks].  Because it's self-contained and requires no configuration, it's ideal for developing web applications because your production environment can mirror your deployment environment very closely with little effort.
+
+== What It's Not ==
+
+Twisted Web is a web ''server'', and a framework for doing things with the web - although it shares some components in common with frameworks like [http://djangoproject.org/ Django], it's not a "web framework" in the same sense.  The Twisted ecosystem includes many different web-related tools.  [wiki:WebDevelopmentWithTwisted Learn which one is right for you.]
 
 = Download =
 
 See the [wiki:Downloads] page.
+
+Twisted Web is available under [http://twistedmatrix.com/trac/export/32445/trunk/LICENSE the MIT Free Software licence].
 
 = Documentation =
 
