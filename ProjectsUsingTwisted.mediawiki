@@ -35,6 +35,7 @@ Twisted is used by many open-source, academic and commercial projects.
  * [https://launchpad.net/txcobalt txCobalt] - An async, Twisted-based Python library for Bluetooth communications.
  * [https://launchpad.net/txcomputegrid txcomputegrid] - Twisted based compute grid.
  * [https://launchpad.net/txcumulus txCumulus] - The goal of txCumulus is to provide an abstraction layer on top of other Twisted-based (Python) async cloud APIs such as txAWS and txRackspace (and possibly txComputeGrid).
+ * [https://github.com/jcollie/txdnspython txdnspython] - txdnspython is a way to use dnspython to create and manipulate DNS messages and then send those messages over the network using Twisted's asynchronous networking.
  * [https://launchpad.net/txevolver txEvolver] - txEvolver is a Twisted-based set of libraries for performing calculations of genetic algorithms as well as genetic programs in an asynchronous, distributed manner.
  * [https://launchpad.net/txfigleaftrial txFigleafTrial] - Allows you to use figleaf to generate code coverage reports with twisted.trial.
  * [https://launchpad.net/txfluiddb txFluidDB] - Bindings for the [http://fluidinfo.com FluidDB] HTTP interface.
