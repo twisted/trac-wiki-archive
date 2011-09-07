@@ -35,8 +35,7 @@ OS X users may want to install Twisted from the source tarball to a different lo
 
 == FreeBSD ==
 
-Packages of Twisted are available in FreeBSD ports as 'devel/py-twisted'. You can choose what component of Twisted you install
-using command 'make config'.
+Though Twisted is not fully functional or officially supported on FreeBSD ([http://buildbot.twistedmatrix.com/builders/freebsd-8.1-amd64 but you can help!]), packages of Twisted are available in FreeBSD ports as 'devel/py-twisted'.  You can choose what component of Twisted you install using command 'make config'.
 
  * [http://www.freshports.org/devel/py-twisted/ Twisted for FreeBSD]
 
