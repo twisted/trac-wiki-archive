@@ -33,6 +33,13 @@ Twisted is no longer making a .dmg which creates a system installation for OS X 
 
 OS X users may want to install Twisted from the source tarball to a different location.
 
+== FreeBSD ==
+
+Packages of Twisted are available in FreeBSD ports as 'devel/py-twisted'. You can choose what component of Twisted you install
+using command 'make config'.
+
+ * [http://www.freshports.org/devel/py-twisted/ Twisted for FreeBSD]
+
 == Source Tarball ==
 
  * [http://twistedmatrix.com/Releases/Twisted/11.0/Twisted-11.0.0.tar.bz2 Twisted 11.0.0 tarball]
