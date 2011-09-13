@@ -152,7 +152,7 @@ jml
        1. The installers built from windows7-64-py2.7-msi will counter-intuitively have names that end in winxp32-py2.7.exe and winxp32-py2.7.msi. This is because of "distutils weirdness and other things".
  1. Sign the tarballs and Windows installers
     1. e.g. `md5sum Tw* | gpg -a --clearsign > twisted-$RELEASE-md5sums.txt`
-    1. e.g. `scp twisted-$RELEASE-md5sums.txt cube.twistedmatrix.com:/srv/www-data/twisted/Releases/`
+    1. e.g. `scp twisted-$RELEASE-md5sums.txt cube.twistedmatrix.com:/srv/www-data/twisted/Releases/` (XXX This will automatically adjust the links on the [wiki:Downloads] page, even though the release files are not yet in place.  Consider moving this step to a later part of the process.)
     1. [http://tmrc.mit.edu/mirror/twisted/twisted-10.1.0-md5sums.txt example of the result]
 
 == Distribute ==
@@ -233,11 +233,12 @@ xml.parsers.expat.ExpatError: junk after document element: line 25, column 0
 == Announce ==
 
  1. Update [wiki:Downloads] pages
-    1. Change text references to the old version to refer to the new version
-    1. Update the link to the NEWS file to point to the new version
-    1. Update links and text to MSIs
-    1. Update links and text to the main tarball
-    1. Update links and text to sub tarballs, including links to news files
+    1. The following steps are automatic, due to the use of the `ProjectVersion` wiki macro throughout most of the [wiki:Downloads] page
+      1. Change text references to the old version to refer to the new version
+      1. Update the link to the NEWS file to point to the new version
+      1. Update links and text to MSIs
+      1. Update links and text to the main tarball
+      1. Update links and text to sub tarballs, including links to news files
     1. Add a new md5sum link
     1. Save the page, check all links
  1. Update PyPI records & upload files
