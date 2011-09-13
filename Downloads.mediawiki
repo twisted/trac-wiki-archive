@@ -2,7 +2,7 @@
 
 For more information about Twisted, please see the [wiki:TwistedProject Twisted project page]. You can get older releases from our [http://twistedmatrix.com/Releases/ download site].
 
-The current release is Twisted 11.0.0: [http://twistedmatrix.com/trac/browser/tags/releases/twisted-11.0.0/NEWS?format=raw Release notes]
+The current release is Twisted [[ProjectVersion]]: [[ProjectVersion(source:/tags/releases/twisted-%(base)s/NEWS?format=raw Release notes)]]
 
 == Ubuntu and Debian ==
 
@@ -17,9 +17,9 @@ An Ubuntu PPA was setup on Launchpad to obtain more recent packages:
 
 == Windows ==
 
- * Twisted 11.0.0 for Python 2.5 ([http://twistedmatrix.com/Releases/Twisted/11.0/Twisted-11.0.0.winxp32-py2.5.msi msi] | [http://twistedmatrix.com/Releases/Twisted/11.0/Twisted-11.0.0.winxp32-py2.5.exe exe])
- * Twisted 11.0.0 for Python 2.6 ([http://twistedmatrix.com/Releases/Twisted/11.0/Twisted-11.0.0.winxp32-py2.6.msi msi] | [http://twistedmatrix.com/Releases/Twisted/11.0/Twisted-11.0.0.winxp32-py2.6.exe exe])
- * Twisted 11.0.0 for Python 2.7 ([http://twistedmatrix.com/Releases/Twisted/11.0/Twisted-11.0.0.winxp32-py2.7.msi msi] | [http://twistedmatrix.com/Releases/Twisted/11.0/Twisted-11.0.0.winxp32-py2.7.exe exe])
+ * Twisted [[ProjectVersion]] for Python 2.5 ([[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.winxp32-py2.5.msi msi)]] | [[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.winxp32-py2.5.exe exe)]])
+ * Twisted [[ProjectVersion]] for Python 2.6 ([[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.winxp32-py2.6.msi msi)]] | [[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.winxp32-py2.6.exe exe)]])
+ * Twisted [[ProjectVersion]] for Python 2.7 ([[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.winxp32-py2.7.msi msi)]] | [[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.winxp32-py2.7.exe exe)]])
  * [http://pypi.python.org/pypi/zope.interface#download Zope.Interface] (required)
  * [http://twistedmatrix.com/Releases/Dependencies/Win/pycrypto-2.0.1.win32-py2.5.exe PyCrypto 2.0.1 for Python 2.5] (needed for Conch)
  * [http://pypi.python.org/pypi/pyOpenSSL PyOpenSSL] (needed for SSL)
@@ -41,7 +41,7 @@ Though Twisted is not fully functional or officially supported on FreeBSD ([http
 
 == Source Tarball ==
 
- * [http://twistedmatrix.com/Releases/Twisted/11.0/Twisted-11.0.0.tar.bz2 Twisted 11.0.0 tarball]
+ * Twisted [[ProjectVersion]] [[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.tar.bz2 tarball)]]
 
 == View on the Web ==
 
@@ -58,16 +58,16 @@ To checkout code from the repository, use:
 
 You probably don't want these unless you have special considerations:
 
- * [http://twistedmatrix.com/Releases/Core/11.0/TwistedCore-11.0.0.tar.bz2 Twisted Core] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/Conch/11.0/TwistedConch-11.0.0.tar.bz2 Twisted Conch] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/conch/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/Web/11.0/TwistedWeb-11.0.0.tar.bz2 Twisted Web] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/web/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/Mail/11.0/TwistedMail-11.0.0.tar.bz2 Twisted Mail] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/mail/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/Names/11.0/TwistedNames-11.0.0.tar.bz2 Twisted Names] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/names/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/News/11.0/TwistedNews-11.0.0.tar.bz2 Twisted News] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/news/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/Pair/11.0/TwistedPair-11.0.0.tar.bz2 Twisted Pair] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/pair/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/Words/11.0/TwistedWords-11.0.0.tar.bz2 Twisted Words] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/words/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/Lore/11.0/TwistedLore-11.0.0.tar.bz2 Twisted Lore] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/lore/topfiles/NEWS Release notes])
- * [http://twistedmatrix.com/Releases/Runner/11.0/TwistedRunner-11.0.0.tar.bz2 Twisted Runner] - 11.0.0 ([source:/tags/releases/twisted-11.0.0/twisted/runner/topfiles/NEWS Release notes])
+ * [[ProjectVersion(http://twistedmatrix.com/Releases/Core/%(major)s.%(minor)s/TwistedCore-%(base)s.tar.bz2 Twisted Core)]] - [[ProjectVersion]] ([[ProjectVersion(source:/tags/releases/twisted-%(base)s/twisted/topfiles/NEWS Release Notes)]])
+ * [[ProjectVersion(http://twistedmatrix.com/Releases/Conch/%(major)s.%(minor)s/TwistedConch-%(base)s.tar.bz2 Twisted Conch)]] - [[ProjectVersion]] ([[ProjectVersion(source:/tags/releases/twisted-%(base)s/twisted/conch/topfiles/NEWS Release Notes)]])
+ * [[ProjectVersion(http://twistedmatrix.com/Releases/Web/%(major)s.%(minor)s/TwistedWeb-%(base)s.tar.bz2 Twisted Web)]] - [[ProjectVersion]] ([[ProjectVersion(source:/tags/releases/twisted-%(base)s/twisted/web/topfiles/NEWS Release Notes)]])
+ * [[ProjectVersion(http://twistedmatrix.com/Releases/Mail/%(major)s.%(minor)s/TwistedMail-%(base)s.tar.bz2 Twisted Mail)]] - [[ProjectVersion]] ([[ProjectVersion(source:/tags/releases/twisted-%(base)s/twisted/mail/topfiles/NEWS Release Notes)]])
+ * [[ProjectVersion(http://twistedmatrix.com/Releases/Names/%(major)s.%(minor)s/TwistedNames-%(base)s.tar.bz2 Twisted Names)]] - [[ProjectVersion]] ([[ProjectVersion(source:/tags/releases/twisted-%(base)s/twisted/names/topfiles/NEWS Release Notes)]])
+ * [[ProjectVersion(http://twistedmatrix.com/Releases/News/%(major)s.%(minor)s/TwistedNews-%(base)s.tar.bz2 Twisted News)]] - [[ProjectVersion]] ([[ProjectVersion(source:/tags/releases/twisted-%(base)s/twisted/news/topfiles/NEWS Release Notes)]])
+ * [[ProjectVersion(http://twistedmatrix.com/Releases/Pair/%(major)s.%(minor)s/TwistedPair-%(base)s.tar.bz2 Twisted Pair)]] - [[ProjectVersion]] ([[ProjectVersion(source:/tags/releases/twisted-%(base)s/twisted/pair/topfiles/NEWS Release Notes)]])
+ * [[ProjectVersion(http://twistedmatrix.com/Releases/Words/%(major)s.%(minor)s/TwistedWords-%(base)s.tar.bz2 Twisted Words)]] - [[ProjectVersion]] ([[ProjectVersion(source:/tags/releases/twisted-%(base)s/twisted/words/topfiles/NEWS Release Notes)]])
+ * [[ProjectVersion(http://twistedmatrix.com/Releases/Lore/%(major)s.%(minor)s/TwistedLore-%(base)s.tar.bz2 Twisted Lore)]] - [[ProjectVersion]] ([[ProjectVersion(source:/tags/releases/twisted-%(base)s/twisted/lore/topfiles/NEWS Release Notes)]])
+ * [[ProjectVersion(http://twistedmatrix.com/Releases/Runner/%(major)s.%(minor)s/TwistedRunner-%(base)s.tar.bz2 Twisted Runner)]] - [[ProjectVersion]] ([[ProjectVersion(source:/tags/releases/twisted-%(base)s/twisted/runner/topfiles/NEWS Release Notes)]])
 
 == Signed MD5 Sums ==
 
