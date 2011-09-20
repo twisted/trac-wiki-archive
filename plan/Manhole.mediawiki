@@ -8,8 +8,9 @@ Here's an IRC log related to manhole development:
 18:50 < djfroofy> some times i want to extend from RecvLine in stuff i'm writing and then think "oh crap", but ConsoleManhole extends from 
                   ColoredManhole ...
 18:51 < exarkun> Are you familiar with anything in twisted.conch.insults.window?
-19:02 < exarkun> djfroofy: I think the approach demonstrated in http://twistedmatrix.com/trac/browser/sandbox/exarkun/invective/trunk/invective/w
-idgets.py is probably more likely to result in re-usable and extensible APIs
+19:02 < exarkun> djfroofy: I think the approach demonstrated in 
+                 http://twistedmatrix.com/trac/browser/sandbox/exarkun/invective/trunk/invective/widgets.py is probably more likely to result 
+                 in re-usable and extensible APIs
 19:02 < exarkun> djfroofy: I'm certainly not rejecting changes to twisted.conch.manhole, but all things equal, it seems like it would be better 
                  to spend time on the more flexible widget-based approach.
 19:40 < djfroofy> exarkun: sorry got pulled away to a meeting. i'm not too familiar with twisted.conch.insults.window
@@ -48,3 +49,6 @@ idgets.py is probably more likely to result in re-usable and extensible APIs
 19:53 < djfroofy> * besides
 19:53 < exarkun> code.launchpad.net/divmod.org
 }}}
+
+Separately, things like C-a mapping to home should be configuration, not code.  It's probably equally easy to implement this in the existing
+system or some new system.
