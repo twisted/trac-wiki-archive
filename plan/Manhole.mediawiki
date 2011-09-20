@@ -1,0 +1,47 @@
+Here's an IRC log related to manhole development:
+
+{{{
+18:48 < exarkun> djfroofy: Where do you see twisted.conch.manhole ending up?
+18:49 < djfroofy> off a cliff?
+18:49 < djfroofy> no, i mean, i think the inheirtance pattern is a little messy, personally.
+18:50 < exarkun> Oh, good.
+18:50 < djfroofy> some times i want to extend from RecvLine in stuff i'm writing and then think "oh crap", but ConsoleManhole extends from Colore
+dManhole ...
+18:51 < exarkun> Are you familiar with anything in twisted.conch.insults.window?
+19:02 < exarkun> djfroofy: I think the approach demonstrated in http://twistedmatrix.com/trac/browser/sandbox/exarkun/invective/trunk/invective/w
+idgets.py is probably more likely to result in re-usable and extensible APIs
+19:02 < exarkun> djfroofy: I'm certainly not rejecting changes to twisted.conch.manhole, but all things equal, it seems like it would be better t
+o spend time on the more flexible widget-based approach.
+19:40 < djfroofy> exarkun: sorry got pulled away to a meeting. i'm not too familiar with twisted.conch.insults.window
+19:41 < exarkun> djfroofy: np
+19:41 < exarkun> djfroofy: twisted.conch.insults.window is basically a layer of abstraction to let multiple objects play with a terminal
+19:41 < djfroofy> exarkun: so what is invactive?
+19:41 < djfroofy> * invective
+19:42 < exarkun> an irc client
+19:42 < exarkun> or 3% of an irc client
+19:42 < exarkun> but the parts of it that basically work are text input and output
+19:43 < exarkun> LineInputWidget _only_ handles input
+19:43 < exarkun> OutputWidget _only_ handles output
+19:43 < djfroofy> ah
+19:43 < exarkun> And they're based on twisted.conch.insults.window, so you can combine them on a single terminal
+19:43 < exarkun> but they don't know anything about each other
+19:43 < djfroofy> how does this tie in with manhole? or does it?
+19:43 < exarkun> it doesn't
+19:44 < exarkun> manhole came first, and then twisted.conch.insults.window came later when it became clear that doing something naive like RecvLine wouldn't be very extensible
+19:44 < exarkun> but manhole never got reimplemented on top of twisted.conch.insults.window
+19:44 < djfroofy> is the idea to deprecate manhole eventually and just build on top on twisted.conch.insults.window?
+19:45 < exarkun> djfroofy: if there's interest in making manhole really featureful and nice, I think that's the only plan that makes sense
+19:45 < exarkun> djfroofy: I'm trying to remember how mantissa's manhole works now though
+19:46 < djfroofy> exarkun: "the plan" == build something on twisted.conch.insults.window instead of manhole? how does that make manhole featureful and nice? 
+19:46 < exarkun> I think it uses twisted.conch.insults.window to make a fake terminal and then runs ColoredManhole inside the fake terminal
+19:49 < exarkun> djfroofy: Rebuild the functionality of twisted.conch.manhole on top of twisted.conch.insults.window instead of directly on top of twisted.conch.insults.insults
+19:50 < exarkun> djfroofy: I would say "in place" but it would probably be difficult to retain compatibility
+19:51 < djfroofy> exarkun: manhole2.0?
+19:51 < exarkun> djfroofy: it'll be 3 at this point
+19:51 < djfroofy> manhole5 to be extra buzzy?
+19:51 < exarkun> twisted.manhole came first :)
+19:52 < djfroofy> what was twisted.manhole a sequel to though?
+19:53 < djfroofy> where does the code for Mantissa live these days? bedise on content spam farms: http://nullege.com/codes/show/src%40m%40a%40Mantissa-0.7.0%40xmantissa%40terminal.py/27/twisted.conch.insults.window.VBox/python
+19:53 < djfroofy> * besides
+19:53 < exarkun> code.launchpad.net/divmod.org
+}}}
