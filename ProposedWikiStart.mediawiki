@@ -56,6 +56,31 @@ reactor.run()
 
 <p>Learn more about <a href="/documents/current/core/howto/servers.html">writing servers</a>, <a href="/documents/current/core/howto/clients.html">writing clients</a> and the <a href="/documents/current/core/howto/index.html">core networking libraries</a> (SSL, scheduled events, unit testing, and more).</p>
 
+<h2 id="Web">Scalable Web Applications</h2>
+
+<p>Twisted includes scalable, event-driven HTTP support. Here's a sample web application:</p>
+
+<pre>
+from twisted.web import server, resource
+from twisted.internet import reactor
+
+class HelloResource(resource.Resource):
+    def render_GET(self, request):
+        request.setHeader("content-type", "text/plain")
+        return "Hello, world!"
+
+reactor.listenTCP(8080, server.Site(HelloResource()))
+reactor.run()
+</pre>
+
+<p>Learn more about <a href="/documents/current/web/howto/web-in-60/index.html">web application development</a> and Twisted's <a href="/documents/current/web/howto/client.html">HTTP client</a>.</p>
+
+
+<h2 id="More">And More!</h2>
+
+...
+
+
 <h2 id="QuickLinks">Quick Links</h2>
 
 <p>
