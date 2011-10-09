@@ -1,0 +1,139 @@
+{{{
+#!html
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top" width="273">
+  <div id="download_top" class="download-left">
+   
+  </div>
+  <div id="download" style="color: white" class="download-left">
+
+    Source:<br />
+    <a class="ext-link" href="http://pypi.python.org/packages/source/T/Twisted/Twisted-11.0.0.tar.bz2#md5=d7f94a1609a1b8f3b8c8d0146d4cfe54">Twisted 11.0.0 tar</a><br />
+    Win32:<br />
+    <a class="ext-link" href="http://pypi.python.org/packages/2.5/T/Twisted/Twisted-11.0.0.winxp32-py2.5.msi#md5=bef10a63f64301539658c48fe52b37e8">Twisted 11.0.0 for Python 2.5</a><br />
+    <a class="ext-link" href="http://pypi.python.org/packages/2.6/T/Twisted/Twisted-11.0.0.winxp32-py2.6.msi#md5=b3f1f194c9256c5e9ce362d0cf2a6036">Twisted 11.0.0 for Python 2.6</a><br />
+    <a class="ext-link" href="http://pypi.python.org/packages/2.7/T/Twisted/Twisted-11.0.0.winxp32-py2.7.msi#md5=edc63d41222fdb9ef4545ee33931eca0">Twisted 11.0.0 for Python 2.7</a><br />
+
+    And More:<br />
+    <a class="wiki" href="/trac/wiki/Downloads">Other Downloads</a><br />
+    Dependencies:<br />
+    <a href="http://pypi.python.org/pypi/zope.interface#download">Zope.Interface</a>
+  </div>
+  <div id="download_bottom" class="download-left">
+   
+  </div>
+
+    <h2>The Twisted Book</h2>
+<a href="http://www.amazon.com/gp/product/0596100329?ie=UTF8&amp;tag=jpcalsjou-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0596100329"><img align="center" src="http://oreilly.com/catalog/covers/twistedadn.s.gif" /></a>
+    </td>
+    <td valign="top" class="centercol" style="padding-left: 10px; padding-right: 15px">
+<h1 id="WhatisTwisted">What is Twisted?</h1>
+<p>
+<a class="wiki" href="/trac/wiki/TwistedProject">Twisted</a> is an event-driven networking engine written in Python and licensed under the <a class="ext-link" href="http://www.opensource.org/licenses/mit-license.php"><span class="icon">MIT license</span></a>.
+</p>
+
+<p>
+See <a class="wiki" href="/trac/wiki/FrequentlyAskedQuestions">the FAQ</a> for commonly asked questions about Twisted.
+</p>
+If you want to get started with Twisted, the first thing you should do is read the <a href="/documents/current/core/howto/index.html"><b>Twisted Core Documentation</b></a>.
+<p>
+<a class="wiki" href="/trac/wiki/TwistedProjects">Twisted projects</a> variously support TCP, UDP, SSL/TLS, multicast, Unix sockets, a large number of protocols (including HTTP, NNTP, IMAP, SSH, IRC, FTP, and others), and <a class="wiki" href="/trac/wiki/TwistedProjects">much more</a>.
+</p>
+<h2 id="QuickLinks">Quick Links</h2>
+
+<p>
+General Information:
+</p>
+<ul><li><a class="wiki" href="/trac/wiki/Downloads">Downloads</a> - Get it!
+</li><li><a class="wiki" href="/trac/wiki/Documentation">Documentation</a> - Everything you need to know to get started
+</li><li>List Info - Access the <a href="/cgi-bin/mailman/listinfo/twisted-python">twisted-python</a> and <a href="/cgi-bin/mailman/listinfo/twisted-web">twisted-web</a> mailing lists
+</li><li><a class="ext-link" href="http://labs.twistedmatrix.com/"><span class="icon">News</span></a> - Read the latest news about Twisted
+
+</li><li><a href="/trac/report">Tracker</a> - <a href="/trac/newticket?type=defect">Report a bug</a> or <a href="/trac/newticket?type=enhancement">request a feature</a> (<a href="/trac/register">Registration</a> is required)
+</li></ul><p>
+More Useful Pointers:
+</p>
+<ul><li><a class="wiki" href="/trac/wiki/TwistedCommunity">The Twisted Community</a> - Get in touch with other Twisted users and developers
+
+</li><li><a class="wiki" href="/trac/wiki/ContributingToTwistedLabs">Contributing</a> to Twisted
+</li><li><a class="wiki" href="/trac/wiki/TwistedDevelopment">Our Development Process</a>
+</li><li><a class="wiki" href="/trac/wiki/SuccessStories">Success Stories</a> - Read about people who have been successful with Twisted
+</li><li><a class="wiki" href="/trac/wiki/TheTwistedShow">The Twisted Show</a> - Interviews and podcasts with businesses and projects that use Twisted
+</li><li><a class="wiki" href="/trac/wiki/ProjectsUsingTwisted">Software that uses Twisted</a> - Learn what other projects are using Twisted
+</li><li><a class="wiki" href="/trac/wiki/TwistedMatrixLaboratories">The Labs</a> - What is <i>Twisted Matrix Laboratories</i>?
+
+</li><li><a class="wiki" href="/trac/wiki/TwistedSponsors">Sponsors</a> - Individuals and organisations aid development with donations of hardware, software, hosting, and so on
+</li><li><a class="wiki" href="/trac/wiki/Windows">Windows</a> - We're especially seeking resources to help improve Twisted on Windows
+</li></ul>
+<br />
+<br />
+<br />
+    </td>
+    <td valign="top" width="200">
+  <div>
+    <h3>Twisted Sponsors</h3>
+
+    <h4><a href="/trac/wiki/TwistedSoftwareFoundation">Become a 2011 Sponsor Today!</a></h4>
+<div>
+Donations are <a href="/trac/wiki/TwistedSoftwareFoundation#Background">tax-deductible</a>.
+<form action="https://checkout.google.com/cws/v2/Donations/622836985124940/checkoutForm" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm">
+    <input name="item_name_1" type="hidden" value="Twisted Project (via Software Freedom Conservancy)" />
+    <input name="item_description_1" type="hidden" value="A directed, ear-marked donation for the Twisted Project, via the Software Freedom Conservancy." />
+    <input name="item_quantity_1" type="hidden" value="1" />
+    <input name="item_currency_1" type="hidden" value="USD" />
+    <input name="item_is_modifiable_1" type="hidden" value="true" />
+
+    <input name="item_min_price_1" type="hidden" value="5.0" />
+    <input name="item_max_price_1" type="hidden" value="25000.0" />
+    <input name="_charset_" type="hidden" value="utf-8" />
+    <table cellpadding="5" cellspacing="0" width="1%">
+        <tr>
+            <td align="right" nowrap="nowrap" width="1%">
+            $
+            <input id="item_price_1" name="item_price_1" size="11" style="color:grey" type="text" value="25" />
+            </td>
+
+            <td align="left" width="1%">
+                <input alt="Donate" src="https://checkout.google.com/buttons/donateNow.gif?merchant_id=622836985124940&amp;w=115&amp;h=50&amp;style=white&amp;variant=text&amp;loc=en_US" type="image" />
+            </td>
+        </tr>
+    </table>
+</form>
+    <table cellpadding="5" cellspacing="0" width="100%">
+        <tr>
+            <td align="right" nowrap="nowrap" width="1%">
+
+            PayPal
+            </td>
+            <td align="left" width="1%">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+              <input type="hidden" name="cmd" value="_s-xclick" />
+              <input type="hidden" name="hosted_button_id" value="ZB3NXPUZHQUKS" />
+              <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+              <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+              </form>
+
+            </td>
+        </tr>
+    </table>
+</div>
+    <h4>Your Logo Here</h4>
+You can use the form above for both personal donations and corporate sponsorships; for any donation above <a href="/trac/wiki/TwistedSoftwareFoundation#SponsorshipLevels">the Bronze level</a>, we will display your logo here on the front page.
+    <h4>Gold</h4>
+<a href="http://code.google.com/opensource/"><img align="center" src="/trac/attachment/wiki/TSF/SponsorLogos/google.png?format=raw" /></a><br />
+    <h4>Silver</h4>
+
+<a href="http://www.appropriatesolutions.com/"><img align="center" src="/trac/attachment/wiki/TSF/SponsorLogos/Appropriate-Solutions-Inc.gif?format=raw" /></a>
+<a href="http://www.zenoss.org/"><img align="center" src="/trac/attachment/wiki/TSF/SponsorLogos/zenoss.2.png?format=raw" /></a>
+<a href="https://www.securitymetrics.com/"><img align="center" src="/trac/attachment/wiki/TSF/SponsorLogos/securitymetrics.png?format=raw" /></a>
+<a href="http://fluidinfo.com/"><img align="center" src="/trac/attachment/wiki/TSF/SponsorLogos/fluidinfo-logo-160x80.png?format=raw" /></a>
+<a href="http://getpantheon.com/"><img align="center" src="/trac/attachment/wiki/TSF/SponsorLogos/pantheon-logo-white-160x37.png?format=raw" /></a>
+    <h4>Bronze</h4>
+<a href="http://www.seomoves.org/"><img align="center" src="/trac/attachment/wiki/TSF/SponsorLogos/seomoves.png?format=raw" /></a>
+<a href="http://hydralabs.com"><img src="/trac/attachment/wiki/TSF/SponsorLogos/hydra.png?format=raw" /></a><br />
+  </div>
+    </td>
+  </tr>
+</table>
+}}}
