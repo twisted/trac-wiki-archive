@@ -41,7 +41,7 @@ Twisted is an event-driven networking engine written in Python and licensed unde
 
 <p>Twisted makes it easy to implement servers. Here's a TCP server that echoes back everything that's written to it:</p>
 
-<pre>
+<blockquote><pre>
 from twisted.internet import protocol, reactor
 
 class Echo(protocol.Protocol):
@@ -54,7 +54,7 @@ class EchoFactory(protocol.Factory):
 
 reactor.listenTCP(1234, EchoFactory())
 reactor.run()
-</pre>
+</pre></blockquote>
 
 <p>Learn more about <a href="/documents/current/core/howto/servers.html">writing servers</a>, <a href="/documents/current/core/howto/clients.html">writing clients</a> and the <a href="/documents/current/core/howto/index.html">core networking libraries</a>, including support for SSL, UDP, scheduled events, unit testing infrastructure, and much more.</p>
 
@@ -65,7 +65,7 @@ reactor.run()
 
 <p>Twisted includes scalable, event-driven HTTP support. Here's a sample web application:</p>
 
-<pre>
+<blockquote><pre>
 from twisted.web import server, resource
 from twisted.internet import reactor
 
@@ -76,7 +76,7 @@ class HelloResource(resource.Resource):
 
 reactor.listenTCP(8080, server.Site(HelloResource()))
 reactor.run()
-</pre>
+</pre></blockquote>
 
 <p>Learn more about <a href="/documents/current/web/howto/web-in-60/index.html">web application development</a> and Twisted's <a href="/documents/current/web/howto/client.html">HTTP client</a>.</p>
 
