@@ -63,7 +63,7 @@ reactor.run()
 
 <h2 id="Web">Event-Driven Web Applications</h2>
 
-<p>Twisted includes a scalable, event-driven web server. Here's a sample web application:</p>
+<p>Twisted includes an event-driven web server. Here's a sample web application:</p>
 
 <div class="code"><pre>
 from twisted.web import server, resource
