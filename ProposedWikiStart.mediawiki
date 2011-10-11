@@ -32,12 +32,12 @@
     <td valign="top" class="centercol" style="padding-left: 10px; padding-right: 15px">
 <h1 id="WhatisTwisted">What is Twisted?</h1>
 <p>
-Twisted is an event-driven networking engine written in Python and licensed under the <a class="ext-link" href="http://www.opensource.org/licenses/mit-license.php"><span class="icon">MIT license</span></a>.
+Twisted is an event-driven networking engine written in Python and licensed under the open source <a class="ext-link" href="http://www.opensource.org/licenses/mit-license.php"><span class="icon">MIT license</span></a>.
 </p>
 
 <br />
 
-<h2 id="Servers">Easily Implement Custom Servers and Clients</h2>
+<h2 id="Servers">Easy Custom Servers and Clients</h2>
 
 <p>Twisted makes it easy to implement custom network applications, both servers and clients. Here's a TCP server that echoes back everything that's written to it:</p>
 
@@ -61,15 +61,16 @@ reactor.run()
 <br />
 
 
-<h2 id="Web">Scalable Web Applications</h2>
+<h2 id="Web">Event-Driven Web Applications</h2>
 
-<p>Twisted includes scalable, event-driven HTTP support. Here's a sample web application:</p>
+<p>Twisted includes a scalable, event-driven web server. Here's a sample web application:</p>
 
 <blockquote><pre>
 from twisted.web import server, resource
 from twisted.internet import reactor
 
 class HelloResource(resource.Resource):
+    isLeaf = True
     def render_GET(self, request):
         request.setHeader("content-type", "text/plain")
         return "Hello, world!"
@@ -82,14 +83,14 @@ reactor.run()
 
 <br />
 
-<h2 id="More">And More!</h2>
+<h2 id="More">And Other Protocols</h2>
 
 <p>Twisted also supports many common network protocols, including SMTP, POP3, IMAP, SSHv2, and DNS. Fore more information see our <a href="/trac/wiki/Documentation">documentation</a> and <a href="http://twistedmatrix.com/documents/current/api/">API reference</a>.</p>
 
 <br />
 
 
-<h2 id="QuickLinks">Quick Links</h2>
+<h2 id="QuickLinks">More Information</h2>
 
 <p>
 General Information:
