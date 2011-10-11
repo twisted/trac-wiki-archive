@@ -41,7 +41,7 @@ Twisted is an event-driven networking engine written in Python and licensed unde
 
 <p>Twisted makes it easy to implement custom network applications, both servers and clients. Here's a TCP server that echoes back everything that's written to it:</p>
 
-<blockquote><pre>
+<!--
 from twisted.internet import protocol, reactor
 
 class Echo(protocol.Protocol):
@@ -54,7 +54,22 @@ class EchoFactory(protocol.Factory):
 
 reactor.listenTCP(1234, EchoFactory())
 reactor.run()
-</pre></blockquote>
+--><div class="code"><pre><span class="k">from</span> <span class="nn">twisted.internet</span> <span class="k">import</span> protocol<span class="p">,</span> reactor
+
+<span class="k">class</span> <span class="nc">Echo</span><span class="p">(</span>protocol<span class="o">.</span>Protocol<span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">dataReceived</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> data<span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span>transport<span class="o">.</span>write<span class="p">(</span>data<span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">EchoFactory</span><span class="p">(</span>protocol<span class="o">.</span>Factory<span class="p">):</span>
+    <span class="k">def</span> <span class="nf">buildProtocol</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> addr<span class="p">):</span>
+
+        <span class="k">return</span> Echo<span class="p">()</span>
+
+reactor<span class="o">.</span>listenTCP<span class="p">(</span><span class="mf">1234</span><span class="p">,</span> EchoFactory<span class="p">())</span>
+
+reactor<span class="o">.</span>run<span class="p">()</span>
+</pre></div>
 
 <p>Learn more about <a href="/documents/current/core/howto/servers.html">writing servers</a>, <a href="/documents/current/core/howto/clients.html">writing clients</a> and the <a href="/documents/current/core/howto/index.html">core networking libraries</a>, including support for SSL, UDP, scheduled events, unit testing infrastructure, and much more.</p>
 
@@ -65,7 +80,7 @@ reactor.run()
 
 <p>Twisted includes a scalable, event-driven web server. Here's a sample web application:</p>
 
-<blockquote><pre>
+<!--
 from twisted.web import server, resource
 from twisted.internet import reactor
 
@@ -77,7 +92,22 @@ class HelloResource(resource.Resource):
 
 reactor.listenTCP(8080, server.Site(HelloResource()))
 reactor.run()
-</pre></blockquote>
+-->
+<div class="code"><pre><span class="k">from</span> <span class="nn">twisted.web</span> <span class="k">import</span> server<span class="p">,</span> resource
+<span class="k">from</span> <span class="nn">twisted.internet</span> <span class="k">import</span> reactor
+
+
+<span class="k">class</span> <span class="nc">HelloResource</span><span class="p">(</span>resource<span class="o">.</span>Resource<span class="p">):</span>
+    isLeaf <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">def</span> <span class="nf">render_GET</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> request<span class="p">):</span>
+
+        request<span class="o">.</span>setHeader<span class="p">(</span><span class="s">"content-type"</span><span class="p">,</span> <span class="s">"text/plain"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s">"Hello, world!"</span>
+
+reactor<span class="o">.</span>listenTCP<span class="p">(</span><span class="mf">8080</span><span class="p">,</span> server<span class="o">.</span>Site<span class="p">(</span>HelloResource<span class="p">()))</span>
+reactor<span class="o">.</span>run<span class="p">()</span>
+
+</pre></div>
 
 <p>Learn more about <a href="/documents/current/web/howto/web-in-60/index.html">web application development</a> and Twisted's <a href="/documents/current/web/howto/client.html">HTTP client</a>.</p>
 
@@ -85,7 +115,7 @@ reactor.run()
 
 <h2 id="More">And Other Protocols</h2>
 
-<p>Twisted also supports many common network protocols, including SMTP, POP3, IMAP, SSHv2, and DNS. Fore more information see our <a href="/trac/wiki/Documentation">documentation</a> and <a href="http://twistedmatrix.com/documents/current/api/">API reference</a>.</p>
+<p>Twisted also supports many common network protocols, including SMTP, POP3, IMAP, SSHv2, and DNS. For more information see our <a href="/trac/wiki/Documentation">documentation</a> and <a href="http://twistedmatrix.com/documents/current/api/">API reference</a>.</p>
 
 <br />
 
