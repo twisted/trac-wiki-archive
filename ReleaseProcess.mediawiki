@@ -206,10 +206,9 @@ xml.parsers.expat.ExpatError: junk after document element: line 25, column 0
     * e.g. `ssh cube.twistedmatrix.com mkdir -m 2775 ~www-data/distributable/documentation/$RELEASE`
  1. Upload the documents to cube
     * e.g. `scp -r doc/* cube.twistedmatrix.com:~www-data/distributable/documentation/$RELEASE`
- 1. Create and run the unofficial build-api script to build the API docs
-    1. Create a {{{build-api.py}}} containing the code from ReleaseProcess#BuildAPIdocsforwebsite. Be sure to replace the instances of `$RELEASE` in that script.
-    1. `python build-api.py`
-    1. Documentation will be generated in a directory called `api`
+ 1. Create and run the build-apidocs script to build the API docs (in an export of the release tag) and then upload them (See also [wiki:APIDocs] and #2891)
+    1. `./bin/admin/build-apidocs . ./api`
+    1. Documentation will be generated in a directory called `./api`
     1. `tar -cjf apidocs.tar.bz2 api`
     1. `scp apidocs.tar.bz2 cube.twistedmatrix.com:.`
     1. On cube, `tar -xjf apidocs.tar.bz2`
@@ -330,22 +329,6 @@ If you choose the third option, then you should:
 
 
 = Examples =
-
-== Build API docs for website ==
-
-See also [wiki:APIDocs]. See #2891.
-
-{{{
-#!python
-from twisted.python._release import APIBuilder
-from twisted.python.filepath import FilePath
-
-APIBuilder().build(
-    'Twisted', 'http://twistedmatrix.com/',
-    'http://twistedmatrix.com/trac/browser/tags/releases/twisted-$RELEASE',
-    FilePath('twisted'),
-    FilePath('api'))
-}}}
 
 == Build howto documents for website ==
 
