@@ -1,8 +1,8 @@
 This is a list of things that developers with commit access to the Twisted source repository should know:
 
-  1. SVN access is via svn+ssh scheme
+  1. SVN access is via `svn+ssh` scheme
   1. You can convert a read-only checkout to a read-write checkout
-    1. svn switch --relocate svn://svn.twistedmatrix.com/svn/Twisted/trunk svn+ssh://svn.twistedmatrix.com/svn/Twisted/trunk
+    1. `svn switch --relocate svn://svn.twistedmatrix.com/svn/Twisted/trunk svn+ssh://svn.twistedmatrix.com/svn/Twisted/trunk`
   1. All development is done in branches
     1. Branch names must follow the naming convention so that various pieces of automation can work.
     1. Branches must be copied from trunk with no changes in the initial revision so that they can be merged properly.  Use server-side copies.  Or use Combinator.
@@ -11,15 +11,15 @@ This is a list of things that developers with commit access to the Twisted sourc
       1. Make sure you got the ticket number right
       1. trac is buggy
         1. Log on to the svn.twistedmatrix.com shell
-        1. Look at the end of ~/.post-commit.log for a line like "+ /svn/Twisted/hooks/trac-post-commit-pb-client ..." which corresponds to your trunk commit
+        1. Look at the end of `~/.post-commit.log` for a line like "+ /svn/Twisted/hooks/trac-post-commit-pb-client ..." which corresponds to your trunk commit
         1. Cross your fingers
         1. Re-run that command with all the same arguments
         1. With sufficient delays to allow trac to catch up, try again one or two more times if it still doesn't work.
         1. If it still doesn't work, find someone in the IRC channel to help
     1. If you check in something that breaks [http://buildbot.twistedmatrix.com/boxes-supported?branch=trunk&num_builds=20 trunk], revert it
       1. If the bad revision was 12345,
-        1. cd ~/Projects/Twisted/trunk
-        1. svn merge -c -12345 .
+        1. `cd ~/Projects/Twisted/trunk`
+        1. `svn merge -c -12345 .`
       1. Use "Reopens #NNNN" in the commit message to re-open the corresponding ticket
       1. Explain what broke and how and perhaps on which platform in the commit message
   1. If you are merging a branch into trunk, you must commit exactly the merge.  You may not make extra changes in the trunk working copy after the merge.
