@@ -126,7 +126,7 @@ More Useful Pointers:
   <div>
     <h3>Twisted Sponsors</h3>
 
-    <h4><a href="/trac/wiki/TwistedSoftwareFoundation">Become a 2011 Sponsor Today!</a></h4>
+    <h4><a href="/trac/wiki/TwistedSoftwareFoundation">Become a 2012 Sponsor Today!</a></h4>
 <div>
 Donations are <a href="/trac/wiki/TwistedSoftwareFoundation#Background">tax-deductible</a>.
 <form action="https://checkout.google.com/cws/v2/Donations/622836985124940/checkoutForm" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm">
