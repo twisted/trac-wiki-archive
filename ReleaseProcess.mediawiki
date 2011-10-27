@@ -174,7 +174,7 @@ jml
 == Update documentation ==
 
  1. Get the dependencies
-    * Pydoctor (use [https://code.launchpad.net/~exarkun/pydoctor/twisted-template-changes lp:~exarkun/pydoctor/twisted-template-changes] to get google analytics templates)
+    * Pydoctor (use [https://code.launchpad.net/~twisted-dev/pydoctor/twisted-templates-2 lp:~twisted-dev/pydoctor/twisted-templates-2] to get google analytics templates)
     * Nevow
     * Epytext
     * netpbm (graphics conversion tools used by the book-builder)
