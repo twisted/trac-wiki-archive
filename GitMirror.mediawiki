@@ -25,6 +25,7 @@ Issues with this command that need to be researched/addressed:
  * Apparently revision 2 creates a branch called "Glyph", which I can't find in the SVN browser in Trac. Not quite sure what's going on there.
  * My vague recollection is that there's some old, closed branches which cause problems for `git svn` because their names contain odd punctuation which gets doubly-URL-escaped somewhere... specifically, there's one branch that got created a number of different times because SVN couldn't really handle it either. Since they're old and closed, they can probably be ignored with the `--ignore-paths=<regex>` option.
  * We may want to supply a file that maps SVN usernames (`glyph`, `exarkun`) to the Git standard of real names and email addresses.
+ * Twisted does not completely follow the standard SVN repository layout. In particular, there is a  "branches/releases" directory that contains more branches (as opposed to being a branch) and a "tags/releases" directory that contains more tags (as opposed to being a tag).
 
 Once the new mirror has completed construction, you can keep it up-to-date with `git svn fetch`.
 
