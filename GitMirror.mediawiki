@@ -16,6 +16,8 @@ Since you've cloned an ordinary Git mirror, you'll need to keep it up to date wi
 
 '''Note 2:''' This command hasn't yet been run for long enough to see whether it produces a properly-configured, working `git svn` clone. However, it's our best guess so far.
 
+'''Note 3:''' If you add `-rHEAD` to this commandline, it'll take a few seconds and you'll wind up with a repository containing the current trunk revision but no history. If such a repository gracefully handles the addition of new branches, this would probably be the variant we recommend to Git-using potential contributors.
+
 {{{
 git svn clone --stdlayout --prefix="svn/" svn+ssh://svn.twistedmatrix.com/svn/Twisted
 }}}
