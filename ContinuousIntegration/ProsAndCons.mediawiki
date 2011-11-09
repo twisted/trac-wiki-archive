@@ -30,4 +30,4 @@ This page is dedicated to a summary of the things BuildBot does well and the are
 ==== Functionality ====
 
   1. There is no concept of a group of builds of a particular version of the source.  This notion is heavily relied upon by the Twisted development process, since we build branches on BuildBot before merging them into trunk.  The result of the builds across all of the supported builders has to be synthesized by a developer reading a web page.
-  1. 
+  1. There are no reports, or reporting functionality, such as tracking or graphing of statistics, such as "number of failed builds per week" or "average test-run time".  The difficulty of accessing the build history as structured data (due to the aforementioned massive-pile-of-pickles problem) makes it difficult to implement any custom reporting.
