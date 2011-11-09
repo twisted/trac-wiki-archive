@@ -1,0 +1,33 @@
+=== Pros and Cons of BuildBot ===
+
+This page is dedicated to a summary of the things BuildBot does well and the areas in which it is lacking.  The goal of this page is to provide information to future maintainers of Twisted's continuous integration system.
+
+=== Pros ===
+
+=== Cons ===
+
+==== Reliability ====
+
+  1. The connection between BuildBot slaves and the master is somewhat unreliable.
+    1. Slaves with low-bandwidth connections or slaves with many builders configured tend to lose their connection and not re-establish it without manual intervention (typically in the form of a slave restart).  The cause of this is unclear.
+    1. Busy slaves tend to spuriously time out while uploading large build artifacts.  It seems most likely that this is caused by the ping/timeout mechanism misbehaving, with ping responses getting stuck behind large transfers that take longer than the timeout.
+  1. The master itself is often non-responsive, losing its IRC connection and taking many minutes to respond to web status requests.
+    1. The web status is rendered from a significant quantity of data stored in pickles on disk.  The entire rendering process is expensive and no results are ever cached.
+    1. Certain web status views require searching backwards through all available history due to the lack of an indexing mechanism on relevant fields (such as branch name) of build data.  As time goes on, this cost increases.
+  1. Tricky Windows file access issues are not handled gracefully.
+    1. Access to files is often denied (apparently spuriously) on Windows, causing source checkouts to fail, test runs to fail, individual test methods to fail, etc.  The consequences range in severity from a failed build which is never retried to a build with a failed test which is irrelevant noise.
+
+==== Upgradeability ====
+
+  1. Slaves are provided to Twisted by a number of parties.  It is often difficult to get these parties to upgrade software on the slave.
+  1. New master functionality often requires a slave upgrade, due to the implementation approach of putting Python code into the slave package to implement certain operations (eg source checkout behaviors).
+
+==== Performance ====
+
+  1. The master's web status views are slow to the point of interfering with reliability (see above).
+  1. Older slaves have profligate network usage due to miniscule message size for log monitoring (see the problem of upgrading slaves).  Apart from wasting bandwidth, this taxes limited CPU resources on the master.
+
+==== Functionality ====
+
+  1. There is no concept of a group of builds of a particular version of the source.  This notion is heavily relied upon by the Twisted development process, since we build branches on BuildBot before merging them into trunk.  The result of the builds across all of the supported builders has to be synthesized by a developer reading a web page.
+  1. 
