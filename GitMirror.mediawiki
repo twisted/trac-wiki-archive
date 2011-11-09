@@ -47,11 +47,13 @@ See [http://www.kernel.org/pub/software/scm/git/docs/gitignore.html the Git docu
 
 == Configuring git to produce SVN-style patches ==
 
-A patch file contains a section for each affected file, describing the changes to that file. The header for that section includes the name of the file, and by default the header for a change to `path/to/file` looks like this: {{{
+A patch file contains a section for each affected file, describing the changes to that file. The header for that section includes the name of the file, and by default the header for a change to `path/to/file` looks like this:
+{{{
 diff --git a/path/to/file b/path/to/file
 }}}
 
-The "a/" and "b/" prefixes are added by git, but SVN doesn't do that, and many Twisted developers have tools that only handle SVN-style patches. To make Git produce SVN style patches just for the Twisted repository, run the following command from inside the repository: {{{
+The "a/" and "b/" prefixes are added by git, but SVN doesn't do that, and many Twisted developers have tools that only handle SVN-style patches. To make Git produce SVN style patches just for the Twisted repository, run the following command from inside the repository:
+{{{
 git config --bool --add diff.noprefix true
 }}}
 
