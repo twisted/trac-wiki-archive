@@ -1,14 +1,37 @@
 A Git mirror of the entire Twisted repository is available.
 
-= Checking out =
+= Checking out the official mirror =
 
 {{{
 git clone http://svn.twistedmatrix.com/git/Twisted/.git
 }}}
 
-Note that even if you have Twisted commit access, you can't create or merge branches this way — you must use SVN directly, make your own Git mirror with `git svn`, or obtain a copy (not a clone) of such a Git mirror. If you do choose to make your own Git mirror with `git svn`, it takes about a week to import the entire Twisted commit history as of early 2010.
+Note that even if you have Twisted commit access, you can't create or merge branches this way — you must create your own `git svn` clone (see below).
 
-= Git isn't ignoring .pyc files! =
+Since you've cloned an ordinary Git mirror, you'll need to keep it up to date with `git fetch`.
+
+= Creating a mirror =
+
+'''Note 1:''' Do not do this unless you are a Twisted developer and have asked permission. As of early 2010, this procedure takes about a week (YES, A WEEK) to run.
+
+'''Note 2:''' This command hasn't yet been run for long enough to see whether it produces a properly-configured, working `git svn` clone. However, it's our best guess so far.
+
+{{{
+git svn clone --stdlayout --prefix="svn/" svn+ssh://svn.twistedmatrix.com/svn/Twisted
+}}}
+
+Issues with this command that need to be researched/addressed:
+
+ * Apparently revision 2 creates a branch called "Glyph", which I can't find in the SVN browser in Trac. Not quite sure what's going on there.
+ * My vague recollection is that there's some old, closed branches which cause problems for `git svn` because their names contain odd punctuation which gets doubly-URL-escaped somewhere... specifically, there's one branch that got created a number of different times because SVN couldn't really handle it either. Since they're old and closed, they can probably be ignored with the `--ignore-paths=<regex>` option.
+
+Once the new mirror has completed construction, you can keep it up-to-date with `git svn fetch`.
+
+= Configuring your Git repository =
+
+Once you have a proper Git repository of the Twisted source, you'll need to configure it a little.
+
+== Git isn't ignoring .pyc files! ==
 
 There is no `.gitignore` in the repository.  This is intentional — there's [http://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html#auto25 no svn:ignore properties in the official SVN repository either] — on the grounds that different people might want to ignore different things. Instead, you can tell Git to ignore things by adding rules to the `.git/info/exclude` file. Here's an example:
 {{{
@@ -21,6 +44,16 @@ dropin.cache
 *.la
 }}}
 See [http://www.kernel.org/pub/software/scm/git/docs/gitignore.html the Git documentation on .gitignore], particularly ''core.excludesfile'', for more information.
+
+== Configuring git to produce SVN-style patches ==
+
+A patch file contains a section for each affected file, describing the changes to that file. The header for that section includes the name of the file, and by default the header for a change to `path/to/file` looks like this: {{{
+diff --git a/path/to/file b/path/to/file
+}}}
+
+The "a/" and "b/" prefixes are added by git, but SVN doesn't do that, and many Twisted developers have tools that only handle SVN-style patches. To make Git produce SVN style patches just for the Twisted repository, run the following command from inside the repository: {{{
+git config --bool --add diff.noprefix true
+}}}
 
 = git svn operations seem to take forever =
 
