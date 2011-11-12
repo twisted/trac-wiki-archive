@@ -338,12 +338,17 @@ See #2380.
 #!python
 from twisted.python import _release as r
 from twisted.python.filepath import FilePath
+
+# Make sure to replace the instances of $RELEASE with the version
+# number (eg. '11.0.0') in this script
+
 done = {}
 for p in FilePath('doc').walk():
     if p.basename() == 'man':
         print 'processing manual pages:', p.path
         done[p] = True
         r.ManBuilder().build(p)
+
 for p in FilePath('doc').walk():
     if p.basename().endswith('.xhtml'):
         if p.parent() not in done:
