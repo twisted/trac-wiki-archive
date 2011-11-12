@@ -1,6 +1,6 @@
 === Software ===
 
-Twisted's continuous integration solution is BuildBot.  BuildBot runs the Twisted test suite (as well as a couple other tasks) each time a checkin is made to Twisted trunk (and can be asked to do the same for a branch checkin).  This provides developers with immediate feedback about their change across a wide array of platforms and Python versions.  If a test suite failure is ever reported on any ''supported'' platform by BuildBot, the checkin which introduced it is backed out until the failure can be fixed.
+Twisted's continuous integration solution is [http://buildbot.net BuildBot].  BuildBot runs the Twisted test suite (as well as a couple other tasks) each time a checkin is made to Twisted trunk (and can be asked to do the same for a branch checkin).  This provides developers with immediate feedback about their change across a wide array of platforms and Python versions.  If a test suite failure is ever reported on any ''supported'' platform by BuildBot, the checkin which introduced it is backed out until the failure can be fixed.
 
 ==== Build Slaves ====
 
