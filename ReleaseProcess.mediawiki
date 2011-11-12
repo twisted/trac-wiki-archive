@@ -31,7 +31,7 @@ To release Twisted, you will need:
 
 = Version numbers =
 
-Twisted releases use a time-based numbering scheme. Releases versions like YY.MM.mm, where YY is the last two digits of the year of the release, MM is the number of the release in the year, and mm is the number of the patch release.
+Twisted releases use a time-based numbering scheme. Releases versions like `YY.MM.mm`, where `YY` is the last two digits of the year of the release, `MM` is the number of the release in the year, and `mm` is the number of the patch release.
 
 For example:
  * The first release of 2010 is 10.0.0
@@ -88,7 +88,7 @@ To release Twisted, we
     1. Get someone else to look over the announcement before doing it
  1. Announce the pre-release on
     1. the twisted-python [wiki:TwistedCommunity#MailLists mailing list]
-    1. on IRC in the #twisted topic
+    1. on IRC in the `#twisted` topic
     1. in a blog post, ideally `labs.twistedmatrix.com`
 
 == Pre-release announcment ==
@@ -183,9 +183,9 @@ jml
  1. Create and run the unofficial build-docs script in an export of the release tag
     1. `cd twisted-$RELEASE`
     1. Create a {{{build-docs.py}}} containing the code from ReleaseProcess#Buildhowtodocumentsforwebsite. Be sure to replace the instances of `$RELEASE` in that script.
-    1. Edit `doc/core/howto/template.tpl` adding the Google Analytics JavaScript (which can be found in the source of any trac page).
+    1. Edit `doc/core/howto/website-template.tpl` adding the Google Analytics JavaScript which can be found in the source of any twistedmatrix trac page (#5380).
       * '''XXX:''' The script below builds the docs into the current directory, mixing them up with the source files
-      * If you get a traceback like below, the Analytics JavaScript may been in an inappropriate place in {{{template.tpl}}}:
+      * If you get a traceback like below, the Analytics JavaScript may been in an inappropriate place in {{{website-template.tpl}}}:
 {{{
 ...
   File "/usr/lib/python2.6/xml/dom/minidom.py", line 1918, in parse
@@ -206,7 +206,7 @@ xml.parsers.expat.ExpatError: junk after document element: line 25, column 0
     * e.g. `ssh cube.twistedmatrix.com mkdir -m 2775 ~www-data/distributable/documentation/$RELEASE`
  1. Upload the documents to cube
     * e.g. `scp -r doc/* cube.twistedmatrix.com:~www-data/distributable/documentation/$RELEASE`
- 1. Run the build-apidocs script to build the API docs (in an export of the release tag) and then upload them (See also [wiki:APIDocs] and #2891)
+ 1. Run the `build-apidocs` script to build the API docs (in an export of the release tag) and then upload them (See also [wiki:APIDocs] and #2891)
     1. `./bin/admin/build-apidocs . ./api`
     1. Documentation will be generated in a directory called `./api`
     1. `tar -cjf apidocs.tar.bz2 api`
@@ -223,7 +223,7 @@ xml.parsers.expat.ExpatError: junk after document element: line 25, column 0
  1. Test the generated docs
     1. Browse to `http://twistedmatrix.com/documents/$RELEASE/`
     1. Make sure that there is content in each of the directories and that it looks good
-    1. Follow each link on http://twistedmatrix.com/trac/wiki/Documentation, replace `current` with $RELEASE (e.g. 10.0.0) and look for any obvious breakage
+    1. Follow each link on http://twistedmatrix.com/trac/wiki/Documentation, replace `current` with $RELEASE (e.g. `10.0.0`) and look for any obvious breakage
  1. Change the "current" symlink
     1. On cube `cd ~www-data/distributable/documentation`
     1. On cube, `rm current`
@@ -260,7 +260,7 @@ xml.parsers.expat.ExpatError: junk after document element: line 25, column 0
  1. Update ReleaseRevisions with the revision of this release
    * The final revision of the release is the revision in which the release branch was made. The starting revision is the one immediately after the final revision of the previous release.
  1. Announce the release
-    1. Send a text version of the announcement to: twisted-python@twistedmatrix.com, python-announce-list@python.org, python-list@python.org, twisted-web@twistedmatrix.com, twisted-jabber@ik.nu
+    1. Send a text version of the announcement to: `twisted-python@twistedmatrix.com, python-announce-list@python.org, python-list@python.org, twisted-web@twistedmatrix.com, twisted-jabber@ik.nu`
     1. Launchpad;
       * https://launchpad.net/twisted/main/+addrelease
         * Include a text version of the announcement and the new entries of the NEWS file
@@ -356,7 +356,7 @@ for p in FilePath('doc').walk():
             done[p.parent()] = True
             r.DocBuilder().build(
                 '$RELEASE', FilePath('doc/core/howto'), p.parent(),
-                FilePath('doc/core/howto/template.tpl'),
+                FilePath('doc/core/howto/website-template.tpl'),
                 'http://twistedmatrix.com/documents/$RELEASE/api/%s.html',
                 False)
 
