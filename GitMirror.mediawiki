@@ -1,22 +1,71 @@
-A Git mirror of the entire Twisted repository is available.
+= For Twisted contributors =
 
-= Checking out the official mirror =
+If you want to develop a patch for Twisted (as described in the BasicGuideToContributingCode) but prefer to use Git rather than SVN, this is the section for you.
 
+== Creating a Git clone ==
+
+Twisted's SVN repository is very old, and has a lot of history, so trying to clone the whole thing would take days. Since you don't need the complete history to create a new patch, you can just clone the latest revision then update it occasionally.
+
+ 1. Find the SVN Revision number of the latest trunk commit:
 {{{
-git clone http://svn.twistedmatrix.com/git/Twisted/.git
+svn info svn://svn.twistedmatrix.com/svn/Twisted/trunk | grep "Rev:"
+}}}
+    This should produce output like this:
+{{{
+Last Changed Rev: 33142
+}}}
+ 1. Create a Git clone of the repository by running this command, replacing `REVNO` with the revision number output by the previous command:
+{{{
+git svn clone --stdlayout -rREVNO --prefix="svn/" svn://svn.twistedmatrix.com/svn/Twisted
+}}}
+    This should create a subdirectory named `Twisted` containing the latest trunk revision of the code.
+ 1. Create an ignore file that will prevent git from accidentally scooping up generated files like `*.pyc` or `_trial_temp` and including them in any patches you might submit:
+{{{
+cat >> Twisted/.git/info/exclude << EOF
+*.py[co]
+_trial_temp
+dropin.cache
+*.o
+*.lo
+*.la
+EOF
+}}}
+    See [http://www.kernel.org/pub/software/scm/git/docs/gitignore.html the Git documentation on .gitignore], particularly `core.excludesfile`, for more information.
+ 1. Since Twisted is normally developed in SVN, Twisted developers are used to processing SVN-style patch files, not Git's patch format. You can change the behaviour of `git diff` to match SVN just for this single repository with the following commands:
+{{{
+git config --file Twisted/.git/config --bool --add diff.noprefix true
 }}}
 
-Note that even if you have Twisted commit access, you can't create or merge branches this way — you must create your own `git svn` clone (see below).
+== Updating your Git clone ==
 
-Since you've cloned an ordinary Git mirror, you'll need to keep it up to date with `git fetch`.
+If more commits have been made to the SVN trunk, or a Twisted developer has created a new branch for your patch to live on, you'll want to update your clone with those changes so that you can produce new patches based on those changes. Just `cd` into the repository and run:
 
-= Creating a mirror =
+{{{
+git checkout master
+git svn rebase
+}}}
+
+= Troubleshooting =
+
+Here are some solutions to common problems with `git svn` clones.
+
+== git svn operations seem to take forever ==
+
+If you have your own `git svn` clone, and svn-based operations seem to take forever, try running:
+{{{
+git svn info
+}}}
+If that takes longer than 30 seconds to run, and eventually prints an error message, this is a clue that `git svn` has gotten confused about how your current branch connects to the imported SVN history. Either `git checkout` a git branch that's based on an SVN branch or (if you're already on such a branch, and it's broken) use `git reset some-remote-branch-name` to make sure your local branch is pointing exactly at a commit that was imported from SVN.
+
+= For Twisted developers =
+
+If you are a Twisted developer and want to try developing Twisted via `git svn`, you are Very Brave and will need all the help you can get. Here are some chicken-scratches left on the poorly-lit cavern walls by previous explorers.
+
+== Creating a complete mirror ==
 
 '''Note 1:''' Do not do this unless you are a Twisted developer and have asked permission. As of early 2010, this procedure takes about a week (YES, A WEEK) to run.
 
 '''Note 2:''' This command hasn't yet been run for long enough to see whether it produces a properly-configured, working `git svn` clone. However, it's our best guess so far.
-
-'''Note 3:''' If you add `-rHEAD` to this commandline, it'll take a few seconds and you'll wind up with a repository containing the current trunk revision but no history. If such a repository gracefully handles the addition of new branches, this would probably be the variant we recommend to Git-using potential contributors.
 
 {{{
 git svn clone --stdlayout --prefix="svn/" svn+ssh://svn.twistedmatrix.com/svn/Twisted
@@ -29,47 +78,9 @@ Issues with this command that need to be researched/addressed:
  * We may want to supply a file that maps SVN usernames (`glyph`, `exarkun`) to the Git standard of real names and email addresses.
  * Twisted does not completely follow the standard SVN repository layout. In particular, there is a  "branches/releases" directory that contains more branches (as opposed to being a branch) and a "tags/releases" directory that contains more tags (as opposed to being a tag).
 
-Once the new mirror has completed construction, you can keep it up-to-date with `git svn fetch`.
+After creating this clone, you'll want to make the same configuration changes listed for contributors above.
 
-= Configuring your Git repository =
-
-Once you have a proper Git repository of the Twisted source, you'll need to configure it a little.
-
-== Git isn't ignoring .pyc files! ==
-
-There is no `.gitignore` in the repository.  This is intentional — there's [http://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html#auto25 no svn:ignore properties in the official SVN repository either] — on the grounds that different people might want to ignore different things. Instead, you can tell Git to ignore things by adding rules to the `.git/info/exclude` file. Here's an example:
-{{{
-*~
-*.py[co]
-_trial_temp
-dropin.cache
-*.o
-*.lo
-*.la
-}}}
-See [http://www.kernel.org/pub/software/scm/git/docs/gitignore.html the Git documentation on .gitignore], particularly ''core.excludesfile'', for more information.
-
-== Configuring git to produce SVN-style patches ==
-
-A patch file contains a section for each affected file, describing the changes to that file. The header for that section includes the name of the file, and by default the header for a change to `path/to/file` looks like this:
-{{{
-diff --git a/path/to/file b/path/to/file
-}}}
-
-The "a/" and "b/" prefixes are added by git, but SVN doesn't do that, and many Twisted developers have tools that only handle SVN-style patches. To make Git produce SVN style patches just for the Twisted repository, run the following command from inside the repository:
-{{{
-git config --bool --add diff.noprefix true
-}}}
-
-= git svn operations seem to take forever =
-
-If you have your own `git svn` clone, and svn-based operations seem to take forever, try running:
-{{{
-git svn info
-}}}
-If that takes longer than 30 seconds to run, and eventually prints an error message, this is a clue that `git svn` has gotten confused about how your current branch connects to the imported SVN history. Either `git checkout` a git branch that's based on an SVN branch or (if you're already on such a branch, and it's broken) use `git reset some-remote-branch-name` to make sure your local branch is pointing exactly at a commit that was imported from SVN.
-
-= git svn branching =
+== git svn branching ==
 
 Follow the [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html#auto6 standard Twisted branch-name conventions] when creating branches with Git. In the following example, `$BRANCH_NAME` means the name of the branch you're trying to create. 
 
@@ -81,7 +92,7 @@ git svn branch $BRANCH_NAME
 git checkout -b $BRANCH_NAME remotes/$BRANCH_NAME
 }}}
 
-= git svn committing =
+== git svn committing ==
 
 No special rules apply about making Git commits, you can make as many commits as you like, then rebase them into a nice patch series as normal (although the Twisted review process generally reviews the diff of an entire branch, not individual commits, since rebasing isn't possible in SVN).
 
@@ -89,11 +100,11 @@ However, once you send your patches to the central SVN server with `git svn dcom
 
 Likewise, if you merge from trunk to branch, then `dcommit` the merge, it will become an ordinary commit that doesn't remember its ancestry, and merging it back onto the trunk later is likely to cause grief. So don't do that.
 
-= git svn merging forward =
+== git svn merging forward ==
 
 I haven't done this yet, but it probably needs special handling for the reasons mentioned in the previous section. Look at [http://divmod.org/trac/wiki/MergedForward the official how-to-merge-forward] docs for inspiration.
 
-= git svn branch merging =
+== git svn branch merging ==
 
 In the following example, `$BRANCH_NAME` means the name of the branch you're trying to merge to trunk.
 
