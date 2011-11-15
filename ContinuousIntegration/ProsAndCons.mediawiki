@@ -13,6 +13,7 @@ This page is dedicated to a summary of the things BuildBot does well and the are
   1. It can parse the output of `trial` and provide summary reports that enumerate the problems with a build.
   1. "High Watermark" failure reporting allows us to make progress on long-term issues like "number of warnings" and "number of pydoctor errors".
   1. Builders can be segregated into "supported" and "unsupported", allowing us to have at-a-glance views of both the builders that should be green and the ones we hope will be green eventually.
+  1. Slaves can check source directly out of version control
 
 ==== Ease of Use ====
 
@@ -45,3 +46,4 @@ This page is dedicated to a summary of the things BuildBot does well and the are
 
   1. There is no concept of a group of builds of a particular version of the source.  This notion is heavily relied upon by the Twisted development process, since we build branches on BuildBot before merging them into trunk.  The result of the builds across all of the supported builders has to be synthesized by a developer reading a web page.
   1. There are no reports, or reporting functionality, such as tracking or graphing of statistics, such as "number of failed builds per week" or "average test-run time".  The difficulty of accessing the build history as structured data (due to the aforementioned massive-pile-of-pickles problem) makes it difficult to implement any custom reporting.
+  1. Support for on-demand slaves is incomplete.  Cloud machines or on-demand VMs on our own hardware would help (particularly during sprints), but BuildBot has poor support for EC2 (tending to leave VMs running indefinitely) and little or no support for other virtualization systems.
