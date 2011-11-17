@@ -148,8 +148,9 @@ jml
     1. http://buildbot.twistedmatrix.com/builders/winxp32-py2.6-msi/
     1. http://buildbot.twistedmatrix.com/builders/windows7-64-py2.7-msi
     1. For "Branch" specify the tag, e.g. "tags/releases/twisted-$RELEASE"
+       1. The builders use the bzr export, which doesn't mirror tags/ or branches/releases/. You may need to copy the branch elsewhere.
     1. Download the latest `.msi` and `.exe` files from from http://buildbot.twistedmatrix.com/builds/twisted-packages/ and save them in the staging directory
-       1. The installers built from windows7-64-py2.7-msi will counter-intuitively have names that end in winxp32-py2.7.exe and winxp32-py2.7.msi. This is because of "distutils weirdness and other things".
+       1. ~~ The installers built from windows7-64-py2.7-msi will counter-intuitively have names that end in winxp32-py2.7.exe and winxp32-py2.7.msi. This is because of "distutils weirdness and other things".~~
  1. Sign the tarballs and Windows installers
     1. e.g. `md5sum Tw* | gpg -a --clearsign > twisted-$RELEASE-md5sums.txt`
     1. e.g. `scp twisted-$RELEASE-md5sums.txt cube.twistedmatrix.com:/srv/www-data/twisted/Releases/` (XXX This will automatically adjust the links on the [wiki:Downloads] page, even though the release files are not yet in place.  Consider moving this step to a later part of the process.)
@@ -177,6 +178,7 @@ jml
     * Pydoctor (use [https://code.launchpad.net/~twisted-dev/pydoctor/twisted-templates-2 lp:~twisted-dev/pydoctor/twisted-templates-2] to get google analytics templates)
     * Nevow
     * Epytext
+    * Some version of Latex, if you didn't use the Debian package of python-epydoc or ignored the recommended packages
     * netpbm (graphics conversion tools used by the book-builder)
  1. Export the version of Twisted being released
     * e.g. `svn export svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-$RELEASE`
