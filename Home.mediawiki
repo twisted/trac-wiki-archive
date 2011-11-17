@@ -14,7 +14,7 @@
     Win32:<br />
     <a class="ext-link" href="http://pypi.python.org/packages/2.5/T/Twisted/Twisted-11.1.0.win32-py2.5.msi#md5=b568b504524fda2440c62aa1616b3fe5">Twisted 11.1.0 for Python 2.5</a><br />
     <a class="ext-link" href="http://pypi.python.org/packages/2.6/T/Twisted/Twisted-11.1.0.win32-py2.6.msi#md5=c4b4ce07d5f9f29e36e3c65b7f59a273">Twisted 11.1.0 for Python 2.6</a><br />
-    <a class="ext-link" href="http://pypi.python.org/packages/2.7/T/Twisted/Twisted-11.1.0.win-amd64-py2.7.msi#md5=066556609476f6e3e0e98ff6e499f8c6">Twisted 11.1.0 for Python 2.7</a><br />
+<!--    <a class="ext-link" href="http://pypi.python.org/packages/2.7/T/Twisted/Twisted-11.1.0.win-amd64-py2.7.msi#md5=066556609476f6e3e0e98ff6e499f8c6">Twisted 11.1.0 for Python 2.7</a><br /> -->
 
     And More:<br />
     <a class="wiki" href="/trac/wiki/Downloads">Other Downloads</a><br />
