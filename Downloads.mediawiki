@@ -19,7 +19,8 @@ An Ubuntu PPA was setup on Launchpad to obtain more recent packages:
 
  * Twisted [[ProjectVersion]] for Python 2.5 ([[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win32-py2.5.msi msi)]] | [[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win32-py2.5.exe exe)]])
  * Twisted [[ProjectVersion]] for Python 2.6 ([[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win32-py2.6.msi msi)]] | [[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win32-py2.6.exe exe)]])
- * Twisted [[ProjectVersion]] for Python 2.7 ([[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win-amd64-py2.7.msi msi)]] | [[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win-amd64-py2.7.exe exe)]])
+ * Twisted [[ProjectVersion]] for Python 2.7 ([[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win32-py2.7.msi msi)]] | [[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win32-py2.7.exe exe)]])
+ * Twisted [[ProjectVersion]] for Python 2.7 64 bits([[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win-amd64-py2.7.msi msi)]] | [[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win-amd64-py2.7.exe exe)]])
  * [http://pypi.python.org/pypi/zope.interface#download Zope.Interface] (required)
  * [http://twistedmatrix.com/Releases/Dependencies/Win/pycrypto-2.0.1.win32-py2.5.exe PyCrypto 2.0.1 for Python 2.5] (needed for Conch)
  * [http://pypi.python.org/pypi/pyOpenSSL PyOpenSSL] (needed for SSL)
