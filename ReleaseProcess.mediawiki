@@ -168,9 +168,9 @@ jml
     1. For all new files, `chmod 664 $FILE`
     1. For all new files and directories, `chgrp www-data $FILE_OR_DIR`
     1. e.g. On cube, `find /srv/www-data/twisted/Releases -name '*$RELEASE*' | xargs chmod g+w`
- 1. Wait for the tarballs to be mirrored to http://tmrc.mit.edu/mirror/twisted/Twisted/
-   * They are mirrored 15 minutes after every hour
-   * You can ask foom on #twisted to force the mirror
+ 1. ~~Wait for the tarballs to be mirrored to http://tmrc.mit.edu/mirror/twisted/Twisted/~~
+   * ~~They are mirrored 15 minutes after every hour~~
+   * ~~You can ask foom on #twisted to force the mirror~~
 
 == Update documentation ==
 
@@ -187,6 +187,7 @@ jml
     1. Create a {{{build-docs.py}}} containing the code from ReleaseProcess#Buildhowtodocumentsforwebsite. Be sure to replace the instances of `$RELEASE` in that script.
     1. Edit `doc/core/howto/website-template.tpl` adding the Google Analytics JavaScript which can be found in the source of any twistedmatrix trac page (#5380).
       * '''XXX:''' The script below builds the docs into the current directory, mixing them up with the source files
+      * Until #5380, you need to fix manually the index and version footers
       * If you get a traceback like below, the Analytics JavaScript may been in an inappropriate place in {{{website-template.tpl}}}:
 {{{
 ...
