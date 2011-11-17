@@ -36,7 +36,7 @@
 Twisted is an event-driven networking engine written in Python and licensed under the open source <a class="ext-link" href="http://www.opensource.org/licenses/mit-license.php"><span class="icon">MIT license</span></a>.
 </p>
 
-<p><b>Nov 4, 2011:</b> Twisted 11.1 rc2 <a href="http://twistedmatrix.com/pipermail/twisted-python/2011-November/024788.html">has been released</a>.
+<p><b>Nov 17, 2011:</b> Twisted 11.1 <a href="http://twistedmatrix.com/pipermail/twisted-python/2011-November/024916.html">has been released</a>.
 <br />
 
 <h2 id="Servers">Easy Custom Servers and Clients</h2>
