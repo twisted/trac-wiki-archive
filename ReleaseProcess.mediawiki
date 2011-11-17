@@ -198,6 +198,7 @@ jml
     parser.Parse(buffer, 0)
 xml.parsers.expat.ExpatError: junk after document element: line 25, column 0
 }}}
+      * If you have latex errors when trying to build the book and retry, don't forget to clean tmp directories which may be leftover in doc/core/how.
     1. `python build-docs.py`
     1. `cp -R doc /tmp/twisted-release/`
     1. `cd /tmp/twisted-release/doc`
