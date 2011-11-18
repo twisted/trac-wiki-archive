@@ -204,7 +204,7 @@ xml.parsers.expat.ExpatError: junk after document element: line 25, column 0
     1. `python build-docs.py`
     1. `cp -R doc /tmp/twisted-release/`
     1. `cd /tmp/twisted-release/doc`
- 1. Fix the Google Analytics javascript (due to #4544 and #4545)
+ 1. Fix the Google Analytics javascript (due to #5380, #4544 and #4545)
     1. `find /tmp/twisted-release/doc -name '*.html' | xargs sed -i 's/&quot;UA-99018-6&quot;/"UA-99018-6"/'`
     1. `find . -name '*.html' | xargs sed -i 's/\(urchin\.js.*\)javascript"\/>/\1javascript"><\/script>/'`
  1. Make the documentation directory on cube
