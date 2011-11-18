@@ -276,6 +276,7 @@ xml.parsers.expat.ExpatError: junk after document element: line 25, column 0
     1. Twitter, if you feel like it
     1. #twisted topic on IRC (you'll need ops)
  1. Merge the release branch into trunk, closing the release ticket at the same time.
+    * For now you need to add a .misc NEWS fragment to merge the branch.
 
 == Release announcement ==
 
