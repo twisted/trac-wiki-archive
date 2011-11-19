@@ -7,7 +7,7 @@ This process has only been tested on Linux, so we recommend that you do the rele
 = Outcomes =
 
 By the end of a Twisted release we'll have:
- * Tarballs for Twisted as a whole, and for each of its subprojects
+ * Tarballs for Twisted as a whole, and for each of its sub-projects
  * Windows installers for the whole Twisted project
  * Updated documentation (API, howtos & book) on the twistedmatrix.com site
  * Updated download links on the twistedmatrix.com site
@@ -39,7 +39,7 @@ For example:
  * If 10.1.0 has some critical defects, then a patch release would be numbered 10.1.1
  * The first pre-release of 10.0.0 is 10.0.0pre1, the second is 10.0.0pre2
 
-Every release of Twisted includes the whole project, the core and all subprojects. Each of these has the same number.
+Every release of Twisted includes the whole project, the core and all sub-projects. Each of these has the same number.
 
 Throughout this document, we'll refer to the version number of the release as '''$RELEASE'''. Examples of $RELEASE include 10.0.0, 10.1.0, 10.1.1 etc.
 
@@ -49,7 +49,7 @@ We'll refer to the first two components of the release as '''$API''', since all 
 
 To release Twisted, we
  1. Prepare for a release
- 1. Release N prereleases
+ 1. Release N pre-releases
  1. Release the final release
 
 = Prepare for a release =
@@ -91,11 +91,11 @@ To release Twisted, we
     1. on IRC in the `#twisted` topic
     1. in a blog post, ideally `labs.twistedmatrix.com`
 
-== Pre-release announcment ==
+== Pre-release announcement ==
 
 The pre-release announcement should mention the important changes since the last release, and exhort readers to test this pre-release.
 
-Here's what the $RELEASEpre1 release annoucement might look like:
+Here's what the $RELEASEpre1 release announcement might look like:
 
 {{{
 Live from PyCon Atlanta, I'm pleased to herald the approaching
@@ -179,34 +179,17 @@ jml
     * Pydoctor (use [https://code.launchpad.net/~twisted-dev/pydoctor/twisted-templates-2 lp:~twisted-dev/pydoctor/twisted-templates-2] to get google analytics templates)
     * Nevow
     * Epytext
-    * Some version of Latex, if you didn't use the Debian package of python-epydoc or ignored the recommended packages
+    * Some version of Latex, if you didn't use the Debian package of `python-epydoc` or ignored the recommended packages
     * netpbm (graphics conversion tools used by the book-builder)
  1. Export the version of Twisted being released
     * e.g. `svn export svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-$RELEASE`
- 1. Create and run the unofficial build-docs script in an export of the release tag
+ 1. Create and run the unofficial `build-docs` script in an export of the release tag
     1. `cd twisted-$RELEASE`
     1. Create a {{{build-docs.py}}} containing the code from ReleaseProcess#Buildhowtodocumentsforwebsite. Be sure to replace the instances of `$RELEASE` in that script.
-    1. Edit `doc/core/howto/website-template.tpl` adding the Google Analytics JavaScript which can be found in the source of any twistedmatrix trac page (#5380).
-      * '''XXX:''' The script below builds the docs into the current directory, mixing them up with the source files
-      * Until #5380, you need to fix manually the index and version footers
-      * If you get a traceback like below, the Analytics JavaScript may been in an inappropriate place in {{{website-template.tpl}}}:
-{{{
-...
-  File "/usr/lib/python2.6/xml/dom/minidom.py", line 1918, in parse
-    return expatbuilder.parse(file)
-  File "/usr/lib/python2.6/xml/dom/expatbuilder.py", line 928, in parse
-    result = builder.parseFile(file)
-  File "/usr/lib/python2.6/xml/dom/expatbuilder.py", line 207, in parseFile
-    parser.Parse(buffer, 0)
-xml.parsers.expat.ExpatError: junk after document element: line 25, column 0
-}}}
-      * If you have latex errors when trying to build the book and retry, don't forget to clean tmp directories which may be leftover in doc/core/how.
     1. `python build-docs.py`
+      * If you have latex errors when trying to build the book and retry, don't forget to clean tmp directories which may be leftover in `doc/core/howto`.
     1. `cp -R doc /tmp/twisted-release/`
     1. `cd /tmp/twisted-release/doc`
- 1. Fix the Google Analytics javascript (due to #5380, #4544 and #4545)
-    1. `find /tmp/twisted-release/doc -name '*.html' | xargs sed -i 's/&quot;UA-99018-6&quot;/"UA-99018-6"/'`
-    1. `find . -name '*.html' | xargs sed -i 's/\(urchin\.js.*\)javascript"\/>/\1javascript"><\/script>/'`
  1. Make the documentation directory on cube
     * e.g. `ssh cube.twistedmatrix.com mkdir -m 2775 ~www-data/distributable/documentation/$RELEASE`
  1. Upload the documents to cube
