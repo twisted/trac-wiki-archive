@@ -186,6 +186,7 @@ jml
  1. Create and run the unofficial `build-docs` script in an export of the release tag
     1. `cd twisted-$RELEASE`
     1. Create a {{{build-docs.py}}} containing the code from ReleaseProcess#Buildhowtodocumentsforwebsite. Be sure to replace the instances of `$RELEASE` in that script.
+      * '''XXX:''' The script builds the docs into the current directory, mixing them up with the source files 
     1. `python build-docs.py`
       * If you have latex errors when trying to build the book and retry, don't forget to clean tmp directories which may be leftover in `doc/core/howto`.
     1. `cp -R doc /tmp/twisted-release/`
