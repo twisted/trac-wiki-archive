@@ -92,6 +92,14 @@ Any change which is ''not'' specifically described as "compatible" must be made 
 
 When an application wants to be upgraded to a new version of Twisted, it can do so immediately.  However, if the application wants to get the same "for free" behavior for the next upgrade, the application's tests should be run treating warnings as errors, and fixed.
 
+== Supporting and de-supporting Python versions ==
+
+Twisted does not have a formal policy around supporting new versions of Python or de-supporting old versions of Python. We strive to support Twisted on any version of Python that is the default Python for a vendor-supported release from a major platform, namely Debian, Ubuntu, the latest release of Windows, or the latest release of OS X.
+
+A distribution release + Python version is only considered supported when a [http://buildbot.twistedmatrix.com/ buildslave] exists for it.
+
+Removing support for a Python version will be announced at least 1 release prior to the removal.
+
 == Open Issues ==
 
 === Warnings Currently in Twisted ===
