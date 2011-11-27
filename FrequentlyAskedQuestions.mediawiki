@@ -68,7 +68,7 @@ Twisted requires a 32-bit version of Python for Windows. Using a 64-bit version 
 
 === Can I install Twisted using easy_install or pip? ===
 
-Installation of Twisted using easy_install with a local .tar.bz2 file [http://buildbot.twistedmatrix.com/builders/debian-easy-py2.5-epoll is supported].  In the past there have been problems using these tools to upgrade an existing version of Twisted, and these problems likely still exist.  Similarly, there are often problems when Twisted is declared as a dependency by another project using the setuptools distutils extensions.  You should probably not rely on this functionality.  Instead, install a platform-supplied package, or install Twisted by downloading a tarball, unpacking it, and running `setup.py`.
+Installation of Twisted using easy_install with a local source directory [http://buildbot.twistedmatrix.com/builders/debian-easy-py2.5-epoll is supported].  In the past there have been problems using these tools to upgrade an existing version of Twisted, and these problems likely still exist.  Similarly, there are often problems when Twisted is declared as a dependency by another project using the setuptools distutils extensions.  You should probably not rely on this functionality.  Instead, install a platform-supplied package, or install Twisted by downloading a tarball, unpacking it, and running `setup.py`.
 
 == Core Twisted ==
 
