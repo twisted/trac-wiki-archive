@@ -12,14 +12,14 @@
 
 == Source ==
 
- * [http://pypi.python.org/packages/source/T/Twisted/Twisted-11.0.0.tar.bz2#md5=d7f94a1609a1b8f3b8c8d0146d4cfe54 Twisted 11.0.0 (tar.bz2)]
+ * [http://pypi.python.org/packages/source/T/Twisted/Twisted-11.1.0.tar.bz2#md5=972f3497e6e19318c741bf2900ffe31c Twisted 11.1.0 (tar.bz2)]
 
 
 == Windows (32-bit) ==
 
- * [http://pypi.python.org/packages/2.7/T/Twisted/Twisted-11.0.0.winxp32-py2.7.msi#md5=edc63d41222fdb9ef4545ee33931eca0 Twisted 11.0.0 for Python 2.7]
- * [http://pypi.python.org/packages/2.6/T/Twisted/Twisted-11.0.0.winxp32-py2.6.msi#md5=b3f1f194c9256c5e9ce362d0cf2a6036 Twisted 11.0.0 for Python 2.6]
- * [http://pypi.python.org/packages/2.5/T/Twisted/Twisted-11.0.0.winxp32-py2.5.msi#md5=bef10a63f64301539658c48fe52b37e8 Twisted 11.0.0 for Python 2.5]
+ * [http://pypi.python.org/packages/2.7/T/Twisted/Twisted-11.1.0.win32-py2.7.msi#md5=97aec12375dfa1e492c0a4cab6a57f4b Twisted 11.1.0 for Python 2.7]
+ * [http://pypi.python.org/packages/2.6/T/Twisted/Twisted-11.1.0.win32-py2.6.msi#md5=c4b4ce07d5f9f29e36e3c65b7f59a273 Twisted 11.1.0 for Python 2.6]
+ * [http://pypi.python.org/packages/2.5/T/Twisted/Twisted-11.1.0.win32-py2.5.msi#md5=b568b504524fda2440c62aa1616b3fe5 Twisted 11.1.0 for Python 2.5]
 
 
 == Other ==
