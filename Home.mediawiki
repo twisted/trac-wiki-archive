@@ -6,7 +6,7 @@
 #!div class="leftcolcol"
 {{{
 #!div id="download"
-[[Image(https://dl.dropbox.com/u/4030134/Twisted/Twisted_files/download_icon.png, id=download_icon, title=Downloads, link=wiki:Downloads)]]
+[[Image(/chrome/common/download_icon.png, id=download_icon, title=Downloads, link=wiki:Downloads, alt="", title="")]]
 
 = Downloads =
 
