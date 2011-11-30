@@ -124,8 +124,6 @@ You can use the form above for both personal donations and corporate sponsorship
 
 = What is Twisted? =
 
-[[Image(http://oreilly.com/catalog/covers/twistedadn.s.gif, title=The Twisted Book, align=right, link=http://www.amazon.com/gp/product/0596100329?ie=UTF8&tag=jpcalsjou-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596100329)]]
-
 Twisted is an event-driven networking engine written in Python and licensed under the open source [http://www.opensource.org/licenses/mit-license.php MIT license].
 
 
@@ -180,6 +178,8 @@ Twisted also supports many common network protocols, including SMTP, POP3, IMAP,
 
 
 == More Information ==
+
+[[Image(http://oreilly.com/catalog/covers/twistedadn.s.gif, title=The Twisted Book, align=right, link=http://www.amazon.com/gp/product/0596100329?ie=UTF8&tag=jpcalsjou-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596100329)]]
 
 General Information:
 
