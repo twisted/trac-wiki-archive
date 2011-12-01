@@ -1,0 +1,7 @@
+= Twisted Matrix Labs Website Credits =
+
+Design by [http://about.me/jonathanj Jonathan Jacobs].
+
+----
+
+Please report website bugs to the [https://bugs.launchpad.net/twisted-website twisted-website project] on Launchpad.
