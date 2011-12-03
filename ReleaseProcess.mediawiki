@@ -154,7 +154,7 @@ jml
        1. ~~ The installers built from windows7-64-py2.7-msi will counter-intuitively have names that end in winxp32-py2.7.exe and winxp32-py2.7.msi. This is because of "distutils weirdness and other things".~~
  1. Sign the tarballs and Windows installers
     1. e.g. `md5sum Tw* | gpg -a --clearsign > twisted-$RELEASE-md5sums.txt`
-    1. e.g. `scp twisted-$RELEASE-md5sums.txt cube.twistedmatrix.com:/srv/www-data/twisted/Releases/` (XXX This will automatically adjust the links on the [wiki:Downloads] page, even though the release files are not yet in place.  Consider moving this step to a later part of the process.)
+    1. e.g. `scp twisted-$RELEASE-md5sums.txt cube.twistedmatrix.com:/srv/www-data/twisted/Releases/` (XXX This will automatically adjust the links on the [wiki:WikiStart] and [wiki:Downloads] pages, even though the release files are not yet in place.  Consider moving this step to a later part of the process.)
     1. [http://tmrc.mit.edu/mirror/twisted/twisted-10.1.0-md5sums.txt example of the result]
 
 == Distribute ==
@@ -244,7 +244,7 @@ jml
     * http://pypi.python.org/pypi/Twisted%20Runner/
     * http://pypi.python.org/pypi/Twisted%20Web/
     * http://pypi.python.org/pypi/Twisted%20Words/
- 1. Update WikiStart
+ 1. ~~Update WikiStart~~
  1. Write the release announcement (see below)
  1. Update ReleaseRevisions with the revision of this release
    * The final revision of the release is the revision in which the release branch was made. The starting revision is the one immediately after the final revision of the previous release.
