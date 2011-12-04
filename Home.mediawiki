@@ -63,7 +63,7 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
         <input name="item_max_price_1" value="25000.0" type="hidden">
         <div style="text-align: left">
             <label for="item_price_1">US $</label>
-            <input id="item_price_1" name="item_price_1" value="25" type="text" style="text-align: right">
+            <input id="item_price_1" name="item_price_1" value="25" type="text" size="6" style="text-align: right">
         </div>
         <input name="_charset_" value="utf-8" type="hidden">
         <input onclick="return setDonationAmount(this.form, 'item_price_1')" alt="Google Checkout" src="https://checkout.google.com/buttons/donateNow.gif?merchant_id=622836985124940&w=115&h=50&style=trans&variant=text&loc=en_US" type="image">
