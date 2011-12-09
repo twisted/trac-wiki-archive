@@ -25,7 +25,7 @@ Our goals are simple: we want to be able to continue improving Twisted -- everyt
  * Logos on the front page will only be there for the year that a sponsor has donated. Each year starts fresh again, with an opportunity to get your logo at the top by early sponsorship!
  * You can see [wiki:TSF/FoundingSponsors the logos of the founding sponsors here].
 
-=== Requirements ===
+=== Logo Requirements ===
  * Logos must be 160 pixels wide and 80 pixels tall (same as !PyCon sponsor logos).
 
 
