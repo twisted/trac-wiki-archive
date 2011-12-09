@@ -1,19 +1,19 @@
 = Documentation =
+'''[http://twistedmatrix.com/documents/current/core/howto/index.html Start here]''', the developer guides for Twisted's core networking libraries. See also our many [http://twistedmatrix.com/documents/current/core/examples/ examples] and the current [http://twistedmatrix.com/documents/current/api/ API reference].
+
+[http://twistedmatrix.com/documents/current/web/howto/ Web Servers and Clients howtos] and [http://twistedmatrix.com/documents/current/web/examples/ examples]. Want to use Twisted for '''web development'''? Please read [wiki:WebDevelopmentWithTwisted this page] first!
+
 
  * Read our [wiki:FrequentlyAskedQuestions FAQ].
- * Want to use Twisted for '''web development'''? Please read [wiki:WebDevelopmentWithTwisted this page] first!
- * [http://twistedmatrix.com/documents/current/core/howto/index.html Core Documentation] ([http://twistedmatrix.com/documents/current/core/howto/book.pdf view as PDF]) - the code developer guide for Twisted Core, with the famous "Finger" tutorial, details on how to use deferreds, etc.
+ * Documentation for other Twisted components:
+   * SSH Servers and Clients - [http://twistedmatrix.com/documents/current/conch/howto/ howtos] and [http://twistedmatrix.com/documents/current/conch/examples/ examples]   
+   * Email protocols: SMTP, IMAP, POP3 - [http://twistedmatrix.com/documents/current/mail/tutorial/smtpclient/smtpclient.html  SMTP client tutorial] and [http://twistedmatrix.com/documents/current/mail/examples/ examples]
+   * DNS - [http://twistedmatrix.com/documents/current/names/howto/ howtos] and [http://twistedmatrix.com/documents/current/names/examples/ examples]
+   * Instant messaging and  IRC - [http://twistedmatrix.com/documents/current/words/howto/ howtos] and [http://twistedmatrix.com/documents/current/words/examples/ examples]
+   * Twisted's documentation system - [http://twistedmatrix.com/documents/current/lore/howto/ howtos] and [http://twistedmatrix.com/documents/current/lore/examples/ examples]
  * Twisted Core [http://twistedmatrix.com/documents/current/core/man/ man pages].
- * Twisted Core [http://twistedmatrix.com/documents/current/core/examples/ examples].
- * View the current [http://twistedmatrix.com/documents/current/api/ API reference].
- * The [wiki:TwistedProjects project] pages have documentation links that are pertinent to each Twisted project. For convenience, we offer some of these links below:
-   * '''conch''' (SSH protocol) - [http://twistedmatrix.com/documents/current/conch/howto/ howtos] and [http://twistedmatrix.com/documents/current/conch/examples/ examples]
-   * '''lore''' (documentation) - [http://twistedmatrix.com/documents/current/lore/howto/ howtos] and [http://twistedmatrix.com/documents/current/lore/examples/ examples]
-   * '''mail''' (SMTP protocol) - [http://twistedmatrix.com/documents/current/mail/tutorial/smtpclient/smtpclient.html client tutorial] and [http://twistedmatrix.com/documents/current/mail/examples/ examples]
-   * '''names''' (DNS protocol) - [http://twistedmatrix.com/documents/current/names/howto/ howtos] and [http://twistedmatrix.com/documents/current/names/examples/ examples]
-   * '''trial''' (testing framework) - [wiki:TwistedTrial docs]
-   * '''web''' (HTTP protocol) - [http://twistedmatrix.com/documents/current/web/howto/ howtos] and [http://twistedmatrix.com/documents/current/web/examples/ examples]
-   * '''words''' (instant messaging) - [http://twistedmatrix.com/documents/current/words/howto/ howtos] and [http://twistedmatrix.com/documents/current/words/examples/ examples]
+ * The complete developer guide in [http://twistedmatrix.com/documents/current/core/howto/book.pdf PDF format].
+
 
 == Third Party Documentation ==
 
