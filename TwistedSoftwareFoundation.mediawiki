@@ -19,12 +19,14 @@ Our goals are simple: we want to be able to continue improving Twisted -- everyt
  * We have '''intense''' Google Juice; being linked to from our site is really good for you.
  * Contributions are tax-deductible.
 
-Notes about logos:
+== Logos ==
  * Placement on the front page of http://twistedmatrix.com will be for donations that equal or are more than the Bronze level.
  * Logo placement is time-based, per category: the first to donate is at the top, with subsequent sponsors' logos placed in the order they donated.
  * Logos on the front page will only be there for the year that a sponsor has donated. Each year starts fresh again, with an opportunity to get your logo at the top by early sponsorship!
- * Founding sponsors will have their logos placed permanently on a Founding Sponsors page, in honor of helping get the TSF started.
- * Logos must be 160 pixels wide and no higher than 80 pixels (same as !PyCon sponsor logos).
+ * You can see [wiki:TSF/FoundingSponsors the logos of the founding sponsors here].
+
+=== Requirements ===
+ * Logos must be 160 pixels wide and 80 pixels tall (same as !PyCon sponsor logos).
 
 
 == Sponsorship Levels ==
