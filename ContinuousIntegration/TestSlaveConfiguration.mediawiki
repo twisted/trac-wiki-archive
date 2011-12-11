@@ -3,7 +3,7 @@ A build slave which is to run the Twisted test suite on a particular platform or
   * [http://python.org/ Python]
     * On Debian, the `python-profiler` package should also be installed.
     * On platforms where the Python headers are separated from the main Python package, these should also be installed (usually `python-dev` or `python-devel`).
-  * A C compiler which can build Python extension modules (On POSIX, this usually means gcc; on Windows, some version of Visual Studio, depending on which version of Python is installed)
+  * A C compiler which can build Python extension modules (On POSIX, this usually means gcc; on Windows, some version of Visual Studio, depending on which version of Python is installed; most likely [http://www.microsoft.com/visualstudio/en-us/products/2008-editions/express VS2008 aka VS9])
   * [http://pypi.python.org/pypi/zope.interface zope.interface] (Debian package python-zope.interface)
   * On Windows, [http://sourceforge.net/projects/pywin32/files/pywin32/ pywin32]
   * [http://twistedmatrix.com/ Twisted] - required by buildbot
