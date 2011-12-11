@@ -8,12 +8,7 @@ A build slave which is to run the Twisted test suite on a particular platform or
   * On Windows, [http://sourceforge.net/projects/pywin32/files/pywin32/ pywin32]
   * [http://twistedmatrix.com/ Twisted] - required by buildbot
   * [http://buildbot.net/ BuildBot] - only buildbot-slave is necessary
-  * [http://subversion.tigris.org/ subversion]
-  * If possible, some bzr tools which reduce latency and network overhead of builds (this is strongly preferred):
-      * [http://bazaar.canonical.com/en/ bazaar] - sometimes packaged as bazaar-ng
-      * [http://wiki.bazaar.canonical.com/ForeignBranches/Subversion?action=show&redirect=BzrForeignBranches/Subversion bzr-svn]
-      * [http://samba.org/~jelmer/subvertpy/ subvertpy]
-      * [http://tdb.samba.org/ python-tdb]
+  * [http://bazaar.canonical.com/en/ bazaar] - sometimes packaged as bazaar-ng
 
 As well as all (or as many as possible) of the libraries Twisted depends on:
 
