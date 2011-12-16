@@ -48,6 +48,7 @@ Currently Trial uses an abomination to make sure Deferred-returning tests finish
 The implementation might look like:
 
 {{{
+#!python
 class AsyncTest(unittest.TestCase):
     def run(self):
         from twisted.internet import reactor
@@ -106,6 +107,7 @@ Trial has a multiplicity of assertion methods.  It's ugly, and there is often re
 === Assertion objects ===
 
 {{{
+#!python
 class Equal(object):
     def __init__(self, a, b):
         self.a, self.b = a, b
