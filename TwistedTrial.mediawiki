@@ -87,7 +87,7 @@ Trial is a core component of Twisted. As such, there is no need to download it s
 
 = Documentation =
 
-(A tutorial for using trial will be officially available as part of Twisted 11.1, but until then, [http://twistedmatrix.com/trac/export/32374/trunk/doc/core/howto/trial.xhtml you can access a draft copy here].)
+You can find [http://twistedmatrix.com/documents/current/core/howto/trial.html a thorough tutorial on how to use Trial to do test-driven development with Twisted here].
 
 You can find Trial API documentation [http://twistedmatrix.com/documents/current/api/twisted.trial.html here]. If you run `trial --help` from the command line, you'll see
 a list of possible invocation arguments (the `trial` command can be found in `bin` in the tarball). Beyond, seeing as much of Twisted
