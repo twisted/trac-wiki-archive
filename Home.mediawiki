@@ -86,7 +86,7 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 
 = Twisted Sponsors =
 
-[wiki:TwistedSoftwareFoundation Become a 2011 sponsor today]!
+[wiki:TwistedSoftwareFoundation Become a 2012 sponsor today]!
 
 === Your Logo Here ===
 
@@ -95,22 +95,13 @@ You can use the form above for both personal donations and corporate sponsorship
 {{{
 #!div class="twisted-sponsors"
 
-=== Gold ===
-
-[[Image(TSF/SponsorLogos:google.png, title=Google, link=http://code.google.com/opensource/)]]
-
 === Silver ===
 
 [[Image(TSF/SponsorLogos:Appropriate-Solutions-Inc.gif, title=Appropriate Solutions Inc, link=http://www.appropriatesolutions.com/)]]
-[[Image(TSF/SponsorLogos:zenoss.2.png, title=Zenoss, link=http://www.zenoss.org/)]]
-[[Image(TSF/SponsorLogos:securitymetrics.png, title=Security Metrics, link=http://www.securitymetrics.com/)]]
-[[Image(TSF/SponsorLogos:fluidinfo-logo-160x80.png, title=Fluidinfo, link=http://fluidinfo.com/)]]
-[[Image(TSF/SponsorLogos:pantheon-logo-white-160x37.png, title=Pantheon, link=http://getpantheon.com/)]]
 
 === Bronze ===
 
-[[Image(TSF/SponsorLogos:seomoves.gif, title=SEO Moves, link=http://seomoves.org/)]]
-[[Image(TSF/SponsorLogos:hydra.png, title=Hydra Labs, link=http://hydralabs.com/)]]
+[[Image(TSF/SponsorLogos:dyn-logo.png, title=Dynamic Network Services Inc, link=http://www.dyn.com/)]]
 }}}
 
 }}}
