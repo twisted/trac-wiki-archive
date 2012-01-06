@@ -32,6 +32,7 @@ This page is dedicated to a summary of the things BuildBot does well and the are
     1. Certain web status views require searching backwards through all available history due to the lack of an indexing mechanism on relevant fields (such as branch name) of build data.  As time goes on, this cost increases.
   1. Tricky Windows file access issues are not handled gracefully.
     1. Access to files is often denied (apparently spuriously) on Windows, causing source checkouts to fail, test runs to fail, individual test methods to fail, etc.  The consequences range in severity from a failed build which is never retried to a build with a failed test which is irrelevant noise.
+  1. Build logs are lost intermittently for reasons unknown.
 
 ==== Upgradeability ====
 
