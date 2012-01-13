@@ -5,6 +5,14 @@
 
 See also [wiki:TSF/FoundingSponsors Founding Sponsors].
 
+== 2012 ==
+
+=== Hosting ===
+
+[http://www.tummy.com Tummy Inc.] and [http://dreamhost.com?q=twisted DreamHost] provide hosting for several Twisted servers, including our website and Subversion repository.
+
+== 200? ==
+
 We would like the thank the following individuals and organizations for their sponsorship of Twisted's development via donations of money, hardware, software licenses, server hosting, and so on. We would also, of course, like to thank the developers who put time and effort into developing it and the many users who submit bugs and feature requests.
 
 === Hosting ===
