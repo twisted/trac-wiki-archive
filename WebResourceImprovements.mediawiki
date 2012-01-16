@@ -7,7 +7,7 @@ The problems:
 
 The solution is a new resource model, re-using the existing HTTP server. Old resources will be able to be children of new resources. A series of tickets will do the following:
 
-  1. Minimal new resource traversal API (#5379). Traversal will not have access to body.
+  1. Minimal new resource traversal API (#5379). Traversal will not have access to body. The current proposal is a (hopefully) improved version of the `locateChild` API used in nevow and web2.
   1. Add support for streaming bodies.
 
 At that point a whole bunch of improvements can be done in parallel:
