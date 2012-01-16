@@ -13,6 +13,8 @@ The solution is a new resource model, re-using the existing HTTP server. Old res
 At that point a whole bunch of improvements can be done in parallel:
 
   * render_GET etc. dispatch, maybe OPTIONS as well.
-  * Parsing POSTed forms, including file uploads.
-  * Documentation.
+  * Parsing POSTed forms, including file uploads. Web2 has a bunch of code we can hopefully re-use for this.
+  * Update the documentation.
   * Compatibility with old resource model.
+
+The hope is that having smaller tickets will allow ongoing reviews feature by feature.
