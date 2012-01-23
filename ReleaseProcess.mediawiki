@@ -185,8 +185,8 @@ jml
     * e.g. `svn export svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-$RELEASE`
  1. Create and run the unofficial `build-docs` script in an export of the release tag
     1. `cd twisted-$RELEASE`
-    1. Create a {{{build-docs.py}}} containing the code from ReleaseProcess#Buildhowtodocumentsforwebsite. Be sure to replace the instances of `$RELEASE` in that script.
-      * '''XXX:''' The script builds the docs into the current directory, mixing them up with the source files 
+    1. Create a {{{build-docs.py}}} containing the code from ReleaseProcess#Buildhowtodocumentsforwebsite. Be sure to read the notes at the top of that script.
+      * '''XXX:''' The script builds the docs into the current directory, mixing them up with the source files.
     1. `python build-docs.py`
       * If you have latex errors when trying to build the book and retry, don't forget to clean tmp directories which may be leftover in `doc/core/howto`.
     1. `cp -R doc /tmp/twisted-release/`
@@ -330,8 +330,10 @@ See #2380.
 from twisted.python import _release as r
 from twisted.python.filepath import FilePath
 
-# Make sure to replace the instances of $RELEASE with the version
-# number (eg. '11.0.0') in this script
+# Make sure to replace the following in this script:
+# - the instances of $RELEASE with the version number (eg. `11.0.0`)
+# - download http://bazaar.launchpad.net/~twisted-dev/twisted-website/trunk/view/head:/docs/website-template.tpl
+#   somewhere and update the instance of '/path/to/website-template.tpl' accordingly
 
 done = {}
 for p in FilePath('doc').walk():
@@ -347,7 +349,7 @@ for p in FilePath('doc').walk():
             done[p.parent()] = True
             r.DocBuilder().build(
                 '$RELEASE', FilePath('doc/core/howto'), p.parent(),
-                FilePath('doc/core/howto/website-template.tpl'),
+                FilePath('/path/to/website-template.tpl'),
                 'http://twistedmatrix.com/documents/$RELEASE/api/%s.html',
                 False)
 
