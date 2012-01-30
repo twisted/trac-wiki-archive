@@ -99,6 +99,7 @@ You can use the form above for both personal donations and corporate sponsorship
 
 [[Image(TSF/SponsorLogos:Appropriate-Solutions-Inc.gif, title=Appropriate Solutions Inc, link=http://www.appropriatesolutions.com/)]]
 [[Image(TSF/SponsorLogos:dreamhost.gif, title=DreamHost, link=http://dreamhost.com/?q=twisted)]]
+[[Image(TSF/SponsorLogos:simb.png, title=SIMB, link=http://www.simb.com.br/)]]
 
 === Bronze ===
 
