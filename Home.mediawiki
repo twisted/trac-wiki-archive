@@ -86,11 +86,7 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 
 = Twisted Sponsors =
 
-[wiki:TwistedSoftwareFoundation Become a 2012 sponsor today]!
-
-=== Your Logo Here ===
-
-You can use the form above for both personal donations and corporate sponsorships; for any donation above [wiki:TwistedSoftwareFoundation#SponsorshipLevels the bronze level], we will display your logo here on the front page.
+[wiki:TwistedSoftwareFoundation Become a 2012 sponsor today]! For any donation above [wiki:TwistedSoftwareFoundation#SponsorshipLevels the bronze level], we will display your logo here on the front page.
 
 {{{
 #!div class="twisted-sponsors"
