@@ -167,27 +167,14 @@ Learn more about [http://twistedmatrix.com/documents/current/web/howto/web-in-60
 Twisted also supports many common network protocols, including SMTP, POP3, IMAP, SSHv2, and DNS. For more information see our [wiki:Documentation documentation] and [http://twistedmatrix.com/documents/current/api/ API reference].
 
 
-== More Information ==
+== Community ==
 
 [[Image(http://oreilly.com/catalog/covers/twistedadn.s.gif, title=The Twisted Book, align=right, link=http://www.amazon.com/gp/product/0596100329?ie=UTF8&tag=jpcalsjou-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596100329)]]
 
-General Information:
-
-    * [wiki:Downloads Downloads] - Get it!
-    * [wiki:Documentation Documentation] - Everything you need to know to get started
-    * List Info - Access the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted-python] and [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-web twisted-web] mailing lists
-    * [http://labs.twistedmatrix.com/ News] - Read the latest news about Twisted
-    * [/report Tracker] - [/newticket?type=defect Report a bug] or [/newticket?type=enhancement request a feature] ([/register Registration is required]) 
-
-More Useful Pointers:
-
-    * [wiki:TwistedCommunity The Twisted Community] - Get in touch with other Twisted users and developers
-    * [wiki:ContributingToTwistedLabs Contributing] to Twisted
-    * [wiki:TwistedDevelopment Our Development Process]
-    * [wiki:SuccessStories Success Stories] - Read about people who have been successful with Twisted
-    * [wiki:TheTwistedShow The Twisted Show] - Interviews and podcasts with businesses and projects that use Twisted
-    * [wiki:ProjectsUsingTwisted Software that uses Twisted] - Learn what other projects are using Twisted
-    * [wiki:TwistedMatrixLaboratories The Labs] - What is Twisted Matrix Laboratories?
-    * [wiki:TwistedSponsors Sponsors] - Individuals and organisations aid development with donations of hardware, software, hosting, and so on
-    * [wiki:Windows Windows] - We're especially seeking resources to help improve Twisted on Windows 
+ * Get in touch with the [wiki:TwistedCommunity Twisted community] through [wiki:TwistedCommunity#MailLists email], [http://stackoverflow.com/questions/tagged/twisted Stack Overflow] or [wiki:TwistedCommunity#IRC IRC];
+ * Learn about the Twisted [wiki:TwistedDevelopment development process] and how to [wiki:ContributingToTwistedLabs contribute];
+ * Read about [wiki:ProjectsUsingTwisted software using] Twisted and their [wiki:SuccessStories success stories];
+ * Find out what [wiki:TwistedMatrixLaboratories Twisted Matrix Laboratories] is;
+ * Learn about the [wiki:TwistedSponsors individuals and organisations] that Twisted aid with donations of hardware, software, hosting and other things;
+ * Help improve Twisted on [wiki:Windows Windows]!
 }}}
