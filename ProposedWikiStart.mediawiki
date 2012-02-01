@@ -175,6 +175,6 @@ Twisted also supports many common network protocols, including SMTP, POP3, IMAP,
  * Learn about the Twisted [wiki:TwistedDevelopment development process] and how to [wiki:ContributingToTwistedLabs contribute];
  * Read about [wiki:ProjectsUsingTwisted software using] Twisted and their [wiki:SuccessStories success stories];
  * Find out what [wiki:TwistedMatrixLaboratories Twisted Matrix Laboratories] is;
- * Learn about the [wiki:TwistedSponsors individuals and organisations] that Twisted aid with donations of hardware, software, hosting and other things;
+ * Learn about the [wiki:TwistedSponsors individuals and organisations] that aid Twisted with donations of hardware, software, hosting and other things;
  * Help improve Twisted on [wiki:Windows Windows]!
 }}}
