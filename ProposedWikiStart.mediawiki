@@ -84,7 +84,7 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 }}}
 
 
-= Twisted Sponsors =
+= [wiki:TwistedSponsors Twisted Sponsors] =
 
 [wiki:TwistedSoftwareFoundation Become a 2012 sponsor today]! For any donation above [wiki:TwistedSoftwareFoundation#SponsorshipLevels the bronze level], we will display your logo here on the front page.
 
@@ -159,10 +159,10 @@ reactor.listenTCP(8080, server.Site(HelloResource()))
 reactor.run()
 }}}
 
-Learn more about [http://twistedmatrix.com/documents/current/web/howto/web-in-60/index.html web application development] and Twisted's [http://twistedmatrix.com/documents/current/web/howto/client.html HTTP client].
+Learn more about [http://twistedmatrix.com/documents/current/web/howto/web-in-60/index.html web application development], [http://twistedmatrix.com/documents/current/web/howto/twisted-templates.html templates] and Twisted's [http://twistedmatrix.com/documents/current/web/howto/client.html HTTP client].
 
 
-== And Other Protocols ==
+== More Protocols ==
 
 Twisted also supports many common network protocols, including SMTP, POP3, IMAP, SSHv2, and DNS. For more information see our [wiki:Documentation documentation] and [http://twistedmatrix.com/documents/current/api/ API reference].
 
