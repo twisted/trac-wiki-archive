@@ -214,6 +214,8 @@ Twisted TCP, UDP, and SSL transports don't buffer data before sending it.  When 
   * Twisted can only send data after you give up control of execution to the reactor.  For example, if you have an infinite loop writing data to a transport, the data will never actually be sent since control will never leave your code and return to the reactor.
   * Twisted APIs are largely not threadsafe.  If you call `transport.write` from a thread other than the reactor thread, the behavior is undefined.  This may manifest as very long delivery times, or deliveries that don't succeed until another unrelated event occurs in the system.  To use Twisted APIs from a non-reactor thread, see the documentation for `reactor.callFromThread`.
 
+If your program appears to send messages as expected, it might be possible that the sending program is working as expected but the receiving program is buffering the messages. Eg: your messages are buffered by a web browser, and you don't close your message. Use telnet instead. Especially as a beginner, never forget that you can only see messages indirectly through the eyes of another program. Check your receiving program!
+
 === My exceptions and tracebacks aren't getting printed! ===
 
 See previous question.
