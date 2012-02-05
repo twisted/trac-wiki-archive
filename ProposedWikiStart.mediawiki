@@ -114,6 +114,21 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 Twisted is an event-driven networking engine written in Python and licensed under the open source [http://www.opensource.org/licenses/mit-license.php MIT license].
 
 
+== Examples ==
+
+{{{
+#!html
+<ul id="frontpage-tabs" class="nav nav-tabs">
+    <li class="active"><a href="#customprotocol">Custom protocol</a></li>
+    <li><a href="#webserver">Web server</a></li>
+</ul>
+}}}
+
+{{{
+#!div class="tab-content"
+
+{{{
+#!div class="tab-pane active" id="customprotocol"
 == Easy Custom Servers and Clients ==
 
 Twisted makes it easy to implement custom network applications, both servers and clients. Here's a TCP server that echoes back everything that's written to it:
@@ -135,8 +150,11 @@ reactor.run()
 }}}
 
 Learn more about [http://twistedmatrix.com/documents/current/core/howto/servers.html writing servers], [http://twistedmatrix.com/documents/current/core/howto/clients.html writing clients] and the [http://twistedmatrix.com/documents/current/core/howto/index.html core networking libraries ], including support for SSL, UDP, scheduled events, unit testing infrastructure, and much more.
+}}}
 
 
+{{{
+#!div class="tab-pane" id="webserver"
 == Event-Driven Web Applications ==
 
 Twisted includes an event-driven web server. Here's a sample web application:
@@ -160,6 +178,9 @@ reactor.run()
 }}}
 
 Learn more about [http://twistedmatrix.com/documents/current/web/howto/web-in-60/index.html web application development], [http://twistedmatrix.com/documents/current/web/howto/twisted-templates.html templates] and Twisted's [http://twistedmatrix.com/documents/current/web/howto/client.html HTTP client].
+}}}
+
+}}}
 
 
 == More Protocols ==
