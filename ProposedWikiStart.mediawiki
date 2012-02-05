@@ -121,6 +121,7 @@ Twisted is an event-driven networking engine written in Python and licensed unde
 <ul id="frontpage-tabs" class="nav nav-tabs">
     <li class="active"><a href="#echoserver">TCP Echo Server</a></li>
     <li><a href="#webserver">Web server</a></li>
+    <li><a href="#chatserver">Chat server</a></li>
 </ul>
 }}}
 
@@ -176,6 +177,50 @@ reactor.run()
 
 Learn more about [http://twistedmatrix.com/documents/current/web/howto/web-in-60/index.html web application development], [http://twistedmatrix.com/documents/current/web/howto/twisted-templates.html templates] and Twisted's [http://twistedmatrix.com/documents/current/web/howto/client.html HTTP client].
 }}}
+
+{{{
+#!div class="tab-pane" id="chatserver"
+Here's what a simple chat server might look like:
+
+{{{
+#!python
+from twisted.internet import reactor, protocol
+from twisted.protocols import basic
+
+class ChatProtocol(basic.LineReceiver):
+    delimiter = "\n"
+
+    def __init__(self, factory):
+        self.factory = factory
+
+    def connectionMade(self):
+        self.factory.clients.add(self)
+
+    def connectionLost(self, reason):
+        self.factory.clients.remove(self)
+
+    def lineReceived(self, line):
+        message = "<%s> %s\n" % (self.transport.getHost(), line)
+        for c in self.factory.clients:
+            if c != self:
+                c.transport.write(message)
+
+
+class ChatFactory(protocol.Factory):
+    def __init__(self):
+        self.clients = set()
+
+    def buildProtocol(self, addr):
+        return ChatProtocol(self)
+
+
+if __name__ == '__main__':
+    reactor.listenTCP(1025, ChatFactory())
+    reactor.run()
+}}}
+
+}}}
+
 
 }}}
 
