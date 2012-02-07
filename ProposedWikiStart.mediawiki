@@ -119,7 +119,7 @@ Twisted is an event-driven networking engine written in Python and licensed unde
 {{{
 #!html
 <ul id="frontpage-tabs" class="nav nav-tabs">
-    <li class="active"><a href="#echoserver">TCP Echo Server</a></li>
+    <li class="active"><a href="#echoserver">Echo Server</a></li>
     <li><a href="#webserver">Web server</a></li>
     <li><a href="#chatserver">Chat server</a></li>
 </ul>
