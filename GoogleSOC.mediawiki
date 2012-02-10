@@ -1,0 +1,5 @@
+Some project areas students might work on:
+
+  1. IPv6: We are still missing client TCP, UDP and SSL IPv6 support.
+  1. Documentation: Can probably come up with some specific projects here.
+  1. ...
