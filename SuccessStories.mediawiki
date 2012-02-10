@@ -120,6 +120,30 @@ My team is developing a modular application to integrate CAD/CAE/CAM tools and d
 
 -- Stephen C. Waterbury, NASA
 
+= [http://www.sharedsolar.org/ Shared Solar] =
+
+[http://www.sharedsolar.org/ Shared Solar] is a rural electrification
+project providing over 3000 people with electricity in sub-Saharan
+Africa (Mali and Uganda) with proposed deployments in Kenya and Haiti.
+Due to the nature of the physical environments, and the model of
+distributed generation, we need to have local intelligence at our
+sites for the distribution of prepaid electricity and management of
+the deployed infrastructure.
+
+This distributed/local intelligence is built using Twisted. Twisted
+has helped me prototype and deploy rapidly, learn and react quickly to
+on-the-ground issues as they arise, and adapt the service to
+configurations using different hardware and protocols. Without the
+services built around Twisted, I'm certain the project would not be as
+successful - it has helped us turn otherwise static infrastructure
+into something much more in very short time.
+
+Huge thanks to the Twisted community for their great work and making
+this possible. I'd also like to acknowledge the wonderful support by
+the folks on irc:#twisted.
+
+-- Rajesh Menon, Software Engineer, SharedSolar
+
 = [http://www.hybrid-cluster.com/ HybridLogic] =
 
 [http://www.hybrid-cluster.com/ Hybrid Web Cluster] is a load-balanced and redundant web cluster built in Twisted which supports all standard LAMP websites.
