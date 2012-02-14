@@ -154,7 +154,7 @@ jml
        1. ~~ The installers built from windows7-64-py2.7-msi will counter-intuitively have names that end in winxp32-py2.7.exe and winxp32-py2.7.msi. This is because of "distutils weirdness and other things".~~
  1. Sign the tarballs and Windows installers
     1. e.g. `md5sum Tw* | gpg -a --clearsign > twisted-$RELEASE-md5sums.txt`
-
+    1. Compare this to an [http://tmrc.mit.edu/mirror/twisted/twisted-10.1.0-md5sums.txt example of twisted-$RELEASE-md5sums.txt]
 
 == Distribute ==
 
@@ -220,8 +220,8 @@ jml
 
 == Synchronize Trac ==
 
-    1. `scp twisted-$RELEASE-md5sums.txt cube.twistedmatrix.com:/srv/www-data/twisted/Releases/` (This will automatically adjust the links on the [wiki:WikiStart] and [wiki:Downloads] pages.)
-    1. [http://tmrc.mit.edu/mirror/twisted/twisted-10.1.0-md5sums.txt example of the result]
+ 1. The site uses the [WikiMacros#AvailableMacros ProjectVersion] macro to automatically adjust the links on the wiki pages, including [wiki:WikiStart] and [wiki:Downloads], by parsing the latest `twisted-$RELEASE-md5sums.txt`:
+    1. `scp twisted-$RELEASE-md5sums.txt cube.twistedmatrix.com:/srv/www-data/twisted/Releases/`
 
 
 == Announce ==
