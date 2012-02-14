@@ -1,0 +1,6 @@
+This page is a list of documentation that people have asked for (on the mailing list, in the irc channel, etc) and which it ''may'' be a good idea to add (no consideration is given to whether the request makes sense, all items are added here).
+
+  * [http://twistedmatrix.com/pipermail/twisted-python/2011-October/024632.html How to run a Twisted application as a Windows service]
+  * [http://twistedmatrix.com/pipermail/twisted-python/2011-December/024981.html How to have multiple log files]
+  * (Whiney complaints on IRC) How to write a custom DNS server
+  * 
