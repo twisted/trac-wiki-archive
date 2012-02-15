@@ -201,7 +201,7 @@ You should be using {{{reactor.spawnProcess}}} (see [http://twistedmatrix.com/do
 
 [http://twistedmatrix.com/documents/current/api/twisted.internet.interfaces.IReactorProcess.spawnProcess.html spawnProcess] defaults to clearing the environment of child processes as a security feature. You can either provide a dictionary with exactly the name-value pairs you want the child to use, or you can simply pass in {{{os.environ}}} to inherit the complete environment.
 
-=== My Deferred or !DeferredList never fires, so my program just mysteriously hangs! What's wrong? ===
+=== My exceptions and tracebacks aren't getting printed!  Or My Deferred or !DeferredList never fires, so my program just mysteriously hangs! What's wrong? ===
 
 It really depends on what your program is doing, but the most common cause is this: it is firing -- but it's an error, not a success, and you have forgotten to add an [http://twistedmatrix.com/documents/current/core/howto/glossary.html#errback errback], so nothing happens. Always add errbacks!
 
@@ -215,10 +215,6 @@ Twisted TCP, UDP, and SSL transports don't buffer data before sending it.  When 
   * Twisted APIs are largely not threadsafe.  If you call `transport.write` from a thread other than the reactor thread, the behavior is undefined.  This may manifest as very long delivery times, or deliveries that don't succeed until another unrelated event occurs in the system.  To use Twisted APIs from a non-reactor thread, see the documentation for `reactor.callFromThread`.
 
 If your program appears to send messages as expected, it might be possible that the sending program is working as expected but the receiving program is buffering the messages. Eg: your messages are buffered by a web browser, and you don't close your message. Use telnet instead. Especially as a beginner, never forget that you can only see messages indirectly through the eyes of another program. Check your receiving program!
-
-=== My exceptions and tracebacks aren't getting printed! ===
-
-See previous question.
 
 === How do I use Deferreds to make my blocking code non-blocking? ===
 
