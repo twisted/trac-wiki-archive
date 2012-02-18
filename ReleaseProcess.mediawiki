@@ -267,6 +267,7 @@ jml
     1. #twisted topic on IRC (you'll need ops)
  1. Merge the release branch into trunk, closing the release ticket at the same time.
     * For now you need to add a .misc NEWS fragment to merge the branch.
+ 1. Close the release milestone (which should have no tickets in it).
 
 == Release announcement ==
 
