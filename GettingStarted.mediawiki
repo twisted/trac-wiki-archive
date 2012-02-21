@@ -4,15 +4,15 @@ So you're already [wiki:WhyShouldICare excited about about Twisted], but you don
 
 The first thing you need to learn about if you're thinking about using Twisted is Deferreds.  This is the way Twisted does concurrency allowing your program to handle multiple users while using a single process and thread.
 
- * [http://twistedmatrix.com/projects/core/documentation/howto/defer.html Using Deferreds]
- * [http://twistedmatrix.com/projects/core/documentation/howto/gendefer.html Generating Deferreds]
+ * [http://twistedmatrix.com/documents/current/core/howto/defer.html Using Deferreds]
+ * [http://twistedmatrix.com/documents/current/core/howto/gendefer.html Generating Deferreds]
 
 = Do Something With Twisted =
 
 Now that you understand the base idea that drives Twisted, let's build a somewhat useful application.
 
  * [http://twistedmatrix.com/trac/wiki/Downloads Install Twisted]
- * [http://twistedmatrix.com/projects/core/documentation/howto/tutorial/index.html Moshe's Finger Tutorial]
+ * [http://twistedmatrix.com/documents/current/core/howto/tutorial/index.html Moshe's Finger Tutorial]
 
 = Learn More About Twisted =
 
