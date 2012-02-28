@@ -28,3 +28,6 @@ These are just ideas, we're open to other ideas as well.
   * Coverage: For a particular subproject, go for 100% API documentation and unit test code coverage.
   * Test suite cleanup: overall test suite cleanup,  remove deprecations, fix deprecation warnings, get to the bottom of and fix our various recurring Windows errors, fix Windows compiler warnings, fix non-deterministic tests.
 
+=== For people who like helping the world at large ===
+
+  * Fix Twisted in non-US locales. As a first step you'd want to create a custom locale for Linux that was malicious about everything (e.g. lowercasing returns random unexpected bytes, dates are funky, etc.). This would be used to find places where Twisted is making US-centric assumptions, but would actually be a useful project for the Linux community in general. Then, fix resulting bugs in Twisted. Some relevant background material: http://www.moserware.com/2008/02/does-your-code-pass-turkey-test.html
