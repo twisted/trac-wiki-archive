@@ -1,5 +1,8 @@
 = Google Summer of Code 2012 =
 
+== Getting in Touch ==
+If you're interested in participating, please email '''itamar at itamarst dot org'''. (If you don't get a timely response, try the mailing list, my spam filter can be aggressive sometimes).
+
 == Project Ideas ==
 These are just ideas, we're open to other ideas as well.
 
