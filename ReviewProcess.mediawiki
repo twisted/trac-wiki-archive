@@ -55,7 +55,7 @@ Long description (as long as you wish)
 
 === News files ===
 
-It is now up to the authors of individual changes to write high-level descriptions for their changes. These descriptions will be aggregated into the release notes distributed with Twisted releases. If we just let each author add to the NEWS files on every commit, though, we would run into lots of spurious conflicts. To avoid this, we have come up with a scheme involving separate files for each change.
+It is now up to the authors of individual changes to write high-level descriptions for their changes. These descriptions will be aggregated into the release notes distributed with Twisted releases. If we just let each author add to the [source:trunk/twisted/topfiles/NEWS NEWS] files on every commit, though, we would run into lots of spurious conflicts. To avoid this, we have come up with a scheme involving separate files for each change.
 
 Changes must be accompanied by an entry in at least one `topfiles` directory. There are `topfiles` directories for each subproject (eg. [[source:trunk/twisted/names/topfiles]], [[source:trunk/twisted/words/topfiles]]), and one root directory ([[source:trunk/twisted/topfiles]]) for core Twisted changes. If a change affects multiple areas of Twisted, then each affected area can have a topfiles entry to detail the relevant changes.  An entry must be a file named `<ticket number>.<change type>`. You should replace `<ticket number>` with the ticket number which is being resolved by the change (if multiple tickets are resolved, multiple files with the same contents should be added).  `<change type>` is replaced by one of the following literal strings:
  * `feature` - for tickets which are adding a new feature.
