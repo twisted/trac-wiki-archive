@@ -26,7 +26,7 @@ The lifetime of a task in UQDS in practice (using [http://subversion.tigris.org/
 dev@strange$ mkbranch Divmod sprocket-123
 }}}
 
-    * Note that {{{mkbranch}}} is a command provided by [https://launchpad.net/divmod.org Divmod Combinator], a tool we use to simplify the management of revision control system branches.
+    * Note that {{{mkbranch}}} is a command provided by [wiki:Combinator], a tool we use to simplify the management of revision control system branches.
   * Development occurs to implement the feature or resolve the defect in the branch.
   * When the code is deemed ready by the developer, the developer checks in their changes '''on the branch''' (not the trunk).
   * The branch is then assigned to another developer for review. The ticket should be given the keyword "review", assigned to the reviewer and the priority set to "highest".
@@ -39,7 +39,7 @@ rev@charm$ cd Divmod/trunk
 rev@charm$ svn diff | less
 }}}
     * (If the patch does not merge cleanly, the reviewer may reassign to the developer to [wiki:MergedForward merge forward] for review.  Branches and patches must always be sufficiently recent that they will apply cleanly to trunk in order to be considered for review).
-    * Note here that the {{{unbranch}}} command (also part of [https://launchpad.net/divmod.org Divmod Combinator]) merges your current branch ({{{sprocket-123}}}) into your local {{{trunk}}} in {{{Divmod/trunk}}}. Your trunk should be up to date - otherwise you will not be able to use {{{svn diff}}} to see just the new differences, and you will not be able to easily {{{svn revert}}} the merge.
+    * Note here that the {{{unbranch}}} command (also part of [wiki:Combinator]) merges your current branch ({{{sprocket-123}}}) into your local {{{trunk}}} in {{{Divmod/trunk}}}. Your trunk should be up to date - otherwise you will not be able to use {{{svn diff}}} to see just the new differences, and you will not be able to easily {{{svn revert}}} the merge.
   * The reviewer runs all automated tests.
 {{{
 #!sh
