@@ -79,13 +79,11 @@ Any change specifically described as "compatible" above may be made at any time,
 Any change which is ''not'' specifically described as "compatible" must be made in 3 phases.  If a change is made in release R, the timeline is:
 
   1. Release R:
-    * New functionality is introduced.
-    * Old functionality is deprecated with a {{{PendingDeprecationWarning}}} which mentions release R+2 as the release it is slated for completion, and explains the location of the new functionality.
-  2. Release R+1:
+    * New functionality is added.
     * Old functionality is deprecated with a {{{DeprecationWarning}}}.
-  3. Release R+2:
+  1. Release R+1 (in circumstances when the API is particularly well-used):
     * Old functionality will raise a new exception type {{{DeprecationError}}}.  This allows application authors to upgrade and provide an ugly work-around to silence this error in this particular place, to keep their code working for one more version.
-  4. Release R+3:
+  1. Release R+2:
     * Old functionality is completely removed.
 
 == Application Developer Upgrade Procedure ==
