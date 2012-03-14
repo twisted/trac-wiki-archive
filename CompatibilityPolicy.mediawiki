@@ -81,7 +81,7 @@ Any change which is ''not'' specifically described as "compatible" must be made 
   1. Release R:
     * New functionality is added.
     * Old functionality is deprecated with a {{{DeprecationWarning}}}.
-  1. Release R+1 (in circumstances when the API is particularly well-used):
+  1. Release R+1:
     * Old functionality will raise a new exception type {{{DeprecationError}}}.  This allows application authors to upgrade and provide an ugly work-around to silence this error in this particular place, to keep their code working for one more version.
   1. Release R+2:
     * Old functionality is completely removed.
