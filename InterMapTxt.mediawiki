@@ -47,4 +47,6 @@ WhoIs            http://www.whois.sc/
 Why              http://clublet.com/c/c/why?
 Wiki             http://c2.com/cgi/wiki?
 WikiPedia        http://en.wikipedia.org/wiki/
+
+lp               http://bugs.launchpad.net/bugs/ # Launchpad.net
 }}}
