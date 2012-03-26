@@ -4,6 +4,6 @@ Twisted main loop can be integrated with the QT main loop in the same process.
 Due to licensing concerns (Twisted is MIT, PyQT is GPL), the code to do this cannot be included in Twisted itself. See #3977 for a plan to re-integrate the reactor using !PySide (LGPL).
 
 = Downloads =
- * [http://code.tarbox.org/qtreactor site and Git repo] for the Qt4 reactor. Docs in README
+ * [https://github.com/ghtdak/qtreactor github page for the Qt4 reactor]. Docs in README
  * [http://twistedmatrix.com/users/pahan/qt_files/qtreactor.tar.gz module and plugin] for the Qt3 reactor. Unpack this into `PYTHONPATH` somewhere. Import as "qtreactor" or pass "-r qt3" to twistd.
  * [http://twistedmatrix.com/users/pahan/qt_files/qtdemo.py QT reactor demo]
