@@ -121,7 +121,7 @@ Twisted is an event-driven networking engine written in Python and licensed unde
 <ul id="frontpage-tabs" class="nav nav-tabs">
     <li class="active"><a href="#echoserver">Echo Server</a></li>
     <li><a href="#webserver">Web server</a></li>
-    <li><a href="#chatserver">Chat server</a></li>
+    <li><a href="#pubsubserver">Publish/subscribe</a></li>
 </ul>
 }}}
 
@@ -179,15 +179,15 @@ Learn more about [http://twistedmatrix.com/documents/current/web/howto/web-in-60
 }}}
 
 {{{
-#!div class="tab-pane" id="chatserver"
-Here's what a simple chat server might look like:
+#!div class="tab-pane" id="pubsubserver"
+Here's a simple publish/subscribe server, where clients see all messages posted by other clients:
 
 {{{
 #!python
 from twisted.internet import reactor, protocol
 from twisted.protocols import basic
 
-class ChatProtocol(basic.LineReceiver):
+class PubProtocol(basic.LineReceiver):
     delimiter = "\n"
 
     def __init__(self, factory):
@@ -206,16 +206,16 @@ class ChatProtocol(basic.LineReceiver):
                 c.transport.write(message)
 
 
-class ChatFactory(protocol.Factory):
+class PubFactory(protocol.Factory):
     def __init__(self):
         self.clients = set()
 
     def buildProtocol(self, addr):
-        return ChatProtocol(self)
+        return PubProtocol(self)
 
 
 if __name__ == '__main__':
-    reactor.listenTCP(1025, ChatFactory())
+    reactor.listenTCP(1025, PubFactory())
     reactor.run()
 }}}
 
