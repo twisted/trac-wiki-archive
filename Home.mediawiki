@@ -114,9 +114,24 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 Twisted is an event-driven networking engine written in Python and licensed under the open source [http://www.opensource.org/licenses/mit-license.php MIT license].
 
 
-== Easy Custom Servers and Clients ==
+== Code Examples ==
 
-Twisted makes it easy to implement custom network applications, both servers and clients. Here's a TCP server that echoes back everything that's written to it:
+{{{
+#!html
+<ul id="frontpage-tabs" class="nav nav-tabs">
+    <li class="active"><a href="#echoserver">Echo Server</a></li>
+    <li><a href="#webserver">Web server</a></li>
+    <li><a href="#pubsubserver">Publish/subscribe</a></li>
+</ul>
+}}}
+
+{{{
+#!div class="tab-content"
+
+{{{
+#!div class="tab-pane active" id="echoserver"
+
+Twisted makes it easy to implement custom network applications. Here's a TCP server that echoes back everything that's written to it:
 
 {{{
 #!python
@@ -135,11 +150,12 @@ reactor.run()
 }}}
 
 Learn more about [http://twistedmatrix.com/documents/current/core/howto/servers.html writing servers], [http://twistedmatrix.com/documents/current/core/howto/clients.html writing clients] and the [http://twistedmatrix.com/documents/current/core/howto/index.html core networking libraries ], including support for SSL, UDP, scheduled events, unit testing infrastructure, and much more.
+}}}
 
 
-== Event-Driven Web Applications ==
-
-Twisted includes an event-driven web server. Here's a sample web application:
+{{{
+#!div class="tab-pane" id="webserver"
+Twisted includes an event-driven web server. Here's a sample web application; notice how the resource object persists in memory, rather than being recreated on each request:
 
 {{{
 #!python
@@ -160,6 +176,53 @@ reactor.run()
 }}}
 
 Learn more about [http://twistedmatrix.com/documents/current/web/howto/web-in-60/index.html web application development], [http://twistedmatrix.com/documents/current/web/howto/twisted-templates.html templates] and Twisted's [http://twistedmatrix.com/documents/current/web/howto/client.html HTTP client].
+}}}
+
+{{{
+#!div class="tab-pane" id="pubsubserver"
+Here's a simple publish/subscribe server, where clients see all messages posted by other clients:
+
+{{{
+#!python
+from twisted.internet import reactor, protocol
+from twisted.protocols import basic
+
+class PubProtocol(basic.LineReceiver):
+    delimiter = "\n"
+
+    def __init__(self, factory):
+        self.factory = factory
+
+    def connectionMade(self):
+        self.factory.clients.add(self)
+
+    def connectionLost(self, reason):
+        self.factory.clients.remove(self)
+
+    def lineReceived(self, line):
+        message = "<%s> %s\n" % (self.transport.getHost(), line)
+        for c in self.factory.clients:
+            if c != self:
+                c.transport.write(message)
+
+
+class PubFactory(protocol.Factory):
+    def __init__(self):
+        self.clients = set()
+
+    def buildProtocol(self, addr):
+        return PubProtocol(self)
+
+
+if __name__ == '__main__':
+    reactor.listenTCP(1025, PubFactory())
+    reactor.run()
+}}}
+
+}}}
+
+
+}}}
 
 
 == More Protocols ==
