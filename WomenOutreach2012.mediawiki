@@ -2,6 +2,15 @@ Welcome Outreach Program for Women applicants! Below is a description of the Twi
 
 This internship is appropriate for any level of open source experience. If you have worked on an open source project before, great! If not, we'll help you learn the development and communication tools we use as part of the internship. Some Python experience is a prerequisite.
 
+{{{
+#!html
+<div class="images">
+        <img src="http://mit.edu/~jesstess/www/twisted_echo.png" height="200">
+        <img src="http://mit.edu/~jesstess/www/pycon_twisted.jpg" height="200">
+        <img src="http://mit.edu/~jesstess/www/twistedmatrix_highscores.png" height="200">
+</div>
+}}}
+
 === What is Twisted? ===
 
 Twisted is an event-driven networking engine written in Python. If you love networking, Twisted is the project for you! This is a great opportunity to learn more about what goes on under the hood when you browse the web, send mail, or use an instant messaging service, as Twisted supports all of these networking protocols.
