@@ -48,8 +48,7 @@ Fixes: #&lt;ticket number&gt;
 Long description (as long as you wish)
 </pre>
 }}}
- * After the change is merged and the buildbots have completed running, delete the branch.
-
+ * After the change is merged wait for the buildbots to finish running, if there is a regression on a supported builder you should [#Revertingachange revert your merge].
 
 == Details ==
 
