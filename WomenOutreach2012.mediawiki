@@ -52,10 +52,9 @@ Twisted is broken into several subprojects. For this internship, you'll have an 
 
 === How to apply ===
 
-This is the application in brief .
 Please note that all applications must be received by 11:59pm GMT on April 6, 2012.
 
- 1. Send an e-mail to [mailto:jesstess@twistedmatrix.com project mentor Jessica McKellar] saying you are interested. Together you'll pick a small Twisted contribution to work on. You '''must''' do this step before submitting an application.
+ 1. Send an e-mail to [mailto:jesstess@twistedmatrix.com project mentor Jessica McKellar] saying you are interested in working with Twisted through the Women Outreach program. Together you'll pick a small Twisted contribution to work on. You '''must''' do this step before submitting an application.
  1. Complete your pre-application contribution. This is a great time to meet people in the community and get a feel for the Twisted workflow, and you'll have lots of support as you do this.
  1. Please fill out the answers to the following questions and e-mail them to [mailto:jesstess@twistedmatrix.com jesstess@twistedmatrix.com] with a subject line of "[APPLICATION] Your Name". You may optionally attach your resume or include any other information that is relevant to your application. All applications must be received by 11:59pm GMT on April 6, 2012.
 
@@ -84,7 +83,7 @@ Please describe your experience with any other free software projects as a user 
 
 Please describe any relevant projects that you have worked on previously and what knowledge you gained from working on them:
 
-Please describe the details and the timeline of the work you plan to accomplish on the project, including which Twisted sub-project you want to focus on (discuss this first with the mentor of the project):
+Please describe the details and the timeline of the work you plan to accomplish on the project, including which Twisted subproject you want to focus on (discuss this first with the mentor of the project):
 
 Will you have any other time commitments, such as school work, another job, planned vacation, etc., between May 21 and August 20?
 }}}
