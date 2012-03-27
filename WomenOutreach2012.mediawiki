@@ -56,7 +56,7 @@ Please note that all applications must be received by 11:59pm GMT on April 6, 20
 
  1. Send an e-mail to the [mailto:women-outreach@sfconservancy.org Twisted project mentors list] saying you are interested in working with Twisted through the Women Outreach program. Together you'll pick a small Twisted contribution to work on. You '''must''' do this step before submitting an application.
  1. Complete your pre-application contribution. This is a great time to meet people in the community and get a feel for the Twisted workflow, and you'll have lots of support as you do this.
- 1. Please fill out the answers to the following questions and e-mail them to [mailto:women-outreach@sfconservancy.org women-outreach at sfconservancy.org] with a subject line of "[APPLICATION] Your Name". You may optionally attach your resume or include any other information that is relevant to your application. All applications must be received by 11:59pm GMT on April 6, 2012.
+ 1. Please fill out the answers to the following questions and e-mail them to [mailto:women-outreach@sfconservancy.org <women-outreach at sfconservancy.org>] with a subject line of "[APPLICATION] Your Name". You may optionally attach your resume or include any other information that is relevant to your application. All applications must be received by 11:59pm GMT on April 6, 2012.
 
 Please don't send in the application form until you have completed the initial contribution, unless it's less than a week to the application deadline and you are already working on your contribution. Once you have completed the initial contribution, send in your application right away, so that we have more time to follow up with you in case we need additional information. Please feel free to work on more contributions after that as your time allows. If you need to update your application, just send in an updated version to <women-outreach at sfconservancy.org> with the same subject line.
 
@@ -93,4 +93,4 @@ Will you have any other time commitments, such as school work, another job, plan
  * [http://twistedmatrix.com/trac/wiki/TwistedCommunity#MailLists Check out the discussions on our mailing lists]
  * [http://twistedmatrix.com/trac/wiki/ContributingToTwistedLabs Read about contributing to Twisted]
 
-If you have questions about this project or Women Outreach 2012, please get in touch with us at [mailto:women-outreach@sfconservancy.org women-outreach at sfconservancy.org].
+If you have questions about this project or Women Outreach 2012, please get in touch with us at [mailto:women-outreach@sfconservancy.org <women-outreach at sfconservancy.org>].
