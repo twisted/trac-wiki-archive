@@ -53,4 +53,4 @@ Twisted is broken into several subprojects. For this internship, you'll have an 
  * [http://twistedmatrix.com/trac/wiki/TwistedCommunity#MailLists Check out the discussions on our mailing lists]
  * [http://twistedmatrix.com/trac/wiki/ContributingToTwistedLabs Read about contributing to Twisted]
 
-If you have questions about this project or Women Outreach 2012, please get in touch with [mailto:jesstess@mit.edu Jessica, the project mentor].
+If you have questions about this project or Women Outreach 2012, please get in touch with [mailto:jesstess@mit.edu project mentor Jessica McKellar].
