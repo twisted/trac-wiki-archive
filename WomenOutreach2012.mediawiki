@@ -47,3 +47,10 @@ Twisted is broken into several subprojects. For this internship, you'll have an 
  * We have a lot of tickets that just need tests, documentation, or one more round of work based on review feedback to land. Help bring some of these tickets across the finish line!
 '''Goal #5: Work on features for your subproject'''
  * There are some great open feature tickets looking for a champion. With your experience in Goals 1-4 you are an expert on this subproject and well-equipped to work on them.
+
+=== Join us! ===
+ * [http://twistedmatrix.com/trac/wiki/TwistedCommunity#IRC Say hello on IRC]
+ * [http://twistedmatrix.com/trac/wiki/TwistedCommunity#MailLists Check out the discussions on our mailing lists]
+ * [http://twistedmatrix.com/trac/wiki/ContributingToTwistedLabs Read about contributing to Twisted]
+
+If you have questions about this project or Women Outreach 2012, please send mail to [mailto:jesstess@mit.edu Jessica, the project mentor].
