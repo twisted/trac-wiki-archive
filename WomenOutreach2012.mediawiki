@@ -1,4 +1,9 @@
-Welcome Outreach Program for Women applicants! Below is a description of the Twisted project open for applications. This project will be mentored by [http://jesstess.com Jessica McKellar].
+{{{
+#!html
+<div>
+<font size="+1">Welcome Outreach Program for Women applicants! Below is a description of the Twisted project open for applications. This project will be mentored by <a href="http://jesstess.com">Jessica McKellar</a>.</font>
+</div>
+}}}
 
 This internship is appropriate for any level of open source experience. If you have worked on an open source project before, great! If not, we'll help you learn the development and communication tools we use as part of the internship. Some Python experience is a prerequisite.
 
