@@ -14,7 +14,7 @@ The [http://live.gnome.org/GnomeWomen/OutreachProgram2012 Outreach Program for W
 <div class="images">
         <img src="http://mit.edu/~jesstess/www/twisted_echo.png" alt="Superior technology" height="200">
         <img src="http://mit.edu/~jesstess/www/pycon_twisted.jpg" alt="PyCon 2012 sprint" height="200">
-        <img src="http://mit.edu/~jesstess/www/twistedmatrix_highscores.png" alt="Superior metrics" height="200">
+        <img src="http://mit.edu/~jesstess/www/twistedmatrix_highscores.png" alt="Entertaining metrics" height="200">
 </div>
 }}}
 
