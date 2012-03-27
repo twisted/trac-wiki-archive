@@ -30,7 +30,7 @@ Twisted is a great open source internship project for many reasons:
 
 === Outreach Program for Women internship project description ===
 
-Twisted is broken into several subprojects. For this internship, you'll have an opportunity to become an expert in a subproject that interests you by working on everything from documentation and example programs to ticket triage, bug fixes, and new features.
+Twisted is broken into several subprojects. For this internship, you'll have an opportunity to become an expert in a subproject that interests you by working on everything from documentation and example programs to ticket triage, bug fixes, and new features. You can move between the goals below as quickly as you want based on your comfort level: if you want to dive right into bug fixes, awesome!
 
 '''Goal !#1: Review and improve documentation'''
  * Audit the examples, and make sure they have a high-level description and specify how they are run.
@@ -50,9 +50,48 @@ Twisted is broken into several subprojects. For this internship, you'll have an 
 '''Goal #5: Work on features for your subproject'''
  * There are some great open feature tickets looking for a champion. With your experience in Goals 1-4 you are an expert on this subproject and well-equipped to work on them.
 
+=== How to apply ===
+
+This is the application in brief .
+Please note that all applications must be received by 11:59pm GMT on April 6, 2012.
+
+ 1. Send an e-mail to [mailto:jesstess@twistedmatrix.com project mentor Jessica McKellar] saying you are interested. Together you'll pick a small Twisted contribution to work on. You '''must''' do this step before submitting an application.
+ 1. Complete your pre-application contribution. This is a great time to meet people in the community and get a feel for the Twisted workflow, and you'll have lots of support as you do this.
+ 1. Please fill out the answers to the following questions and e-mail them to [mailto:jesstess@twistedmatrix.com jesstess@twistedmatrix.com] with a subject line of "[APPLICATION] Your Name". You may optionally attach your resume or include any other information that is relevant to your application. All applications must be received by 11:59pm GMT on April 6, 2012.
+
+Please don't send in the application form until you have completed the initial contribution, unless it's less than a week to the application deadline and you are already working on your contribution. Once you have completed the initial contribution, send in your application right away, so that we have more time to follow up with you in case we need additional information. Please feel free to work on more contributions after that as your time allows. If you need to update your application, just send in an updated version to jesstess@twistedmatrix.com with the same subject line.
+
+{{{
+Name:
+
+E-mail address:
+
+IRC Nickname:
+
+Web Page / Blog / Microblog:
+
+Location:
+
+Education completed or in progress (i.e., university, major/concentration, degree level, and graduation year):
+
+How did you hear about this program?
+
+Are you planning to apply for Google Summer of Code?
+
+Please describe your experience with Twisted as a user and as a contributor (include the information about the pre-application contribution you made to the project here):
+
+Please describe your experience with any other free software projects as a user and as a contributor:
+
+Please describe any relevant projects that you have worked on previously and what knowledge you gained from working on them:
+
+Please describe the details and the timeline of the work you plan to accomplish on the project, including which Twisted sub-project you want to focus on (discuss this first with the mentor of the project):
+
+Will you have any other time commitments, such as school work, another job, planned vacation, etc., between May 21 and August 20?
+}}}
+
 === Join us! ===
  * [http://twistedmatrix.com/trac/wiki/TwistedCommunity#IRC Say hello on IRC]
  * [http://twistedmatrix.com/trac/wiki/TwistedCommunity#MailLists Check out the discussions on our mailing lists]
  * [http://twistedmatrix.com/trac/wiki/ContributingToTwistedLabs Read about contributing to Twisted]
 
-If you have questions about this project or Women Outreach 2012, please get in touch with [mailto:jesstess@mit.edu project mentor Jessica McKellar].
+If you have questions about this project or Women Outreach 2012, please get in touch with [mailto:jesstess@twistedmatrix.com project mentor Jessica McKellar].
