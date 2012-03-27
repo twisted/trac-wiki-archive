@@ -33,6 +33,19 @@ Here's a quick step-by-step guide to getting from an idea for an improvement to 
   1. At this point, you need to wait for feedback.  If your patch is very good, very simple, and obviously correct, we may just apply it, but it is ''very unlikely'' that the first draft of a patch will be accepted as-is.  When a Twisted developer reviews your patch, they will re-assign the ticket to you; you can [http://twistedmatrix.com/trac/report/7 see the list of tickets assigned to you by clicking here].  Unfortunately, the time it takes us to deal with a ticket submitted for review is highly variable, and depends on how many other tickets are waiting review, the amount of free time that the Twisted core development team has, and how many resources we have available for [http://labs.twistedmatrix.com/ sponsored development].
   1. When you do receive a review comment, attach a new patch (again un-assigning the ticket and adding the "review" keyword to it) which addresses that feedback.
 
+
+=== Tools For Development ===
+
+There are a few useful tools for developing Twisted.  Some of them are included with Twisted, some are third-party dependencies.
+
+To run the tests, simply run `./path/to/Twisted-checkout/bin/trial twisted`.
+
+To generate the narrative documentation, `cd ./path/to/Twisted-checkout/doc; ../bin/lore --config template=core/howto/template.tpl`. ([ticket:5571 This should be simpler.]) Then open `index.html` (not `index.xhtml`) in your web browser.
+
+Many ancillary tools related to Twisted are in Bazaar repositories.  You may find it useful to [http://bazaar.canonical.com/en/ install the Bazaar version control system for your platform] so that you can easily get access to these.
+
+To generate the API documentation, you will need [https://launchpad.net/pydoctor pydoctor].  It depends on [http://epydoc.sourceforge.net/ epydoc], which you can install with `pip install epydoc`.  You can retrieve pydoctor itself with `bzr branch lp:pydoctor`.  Once you've got it, `cd ./path/to/Twisted-checkout/; pydoctor --add-package twisted --make-html` and look in the generated `apidocs` directory.
+
 === Getting Your Patch Accepted ===
 
 If you are interested in contributing to Twisted for the first time, consider working on an existing ticket rather than contributing a new feature.  Fixes for existing problems or implementations of already-requested features will generally take priority over new ideas.
