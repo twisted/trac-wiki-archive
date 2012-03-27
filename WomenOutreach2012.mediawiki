@@ -16,7 +16,7 @@ Twisted is a great open source internship project for many reasons:
 
 Twisted is broken into several subprojects. For this internship, you'll have an opportunity to become an expert in a subproject that interests you by working on everything from documentation and example programs to ticket triage, bug fixes, and new features.
 
-'''Goal #1: Review and improve documentation'''
+'''Goal !#1: Review and improve documentation'''
  * Audit the examples, and make sure they have a high-level description and specify how they are run.
  * Audit the HOWTOs for use of deprecated APIs, coding standard violations, broken links, etc. and then update them. A newcomer's perspective is *tremendously* valuable here.
  * Identify missing examples and HOWTOs based on IRC, mailing list, and stack overflow feedback, and add them.
