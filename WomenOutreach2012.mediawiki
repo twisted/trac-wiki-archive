@@ -30,7 +30,7 @@ Twisted is a great open source internship project for many reasons:
 
 === Outreach Program for Women internship project description ===
 
-Twisted is broken into several subprojects. For this internship, you'll have an opportunity to become an expert in a subproject that interests you by working on everything from documentation and example programs to ticket triage, bug fixes, and new features. You can move between the goals below as quickly as you want based on your comfort level: if you want to dive right into bug fixes, awesome!
+Twisted is broken into several subprojects: core networking, web, email, instant messaging, etc.. For this internship, you'll have an opportunity to become an expert in a subproject that interests you by working on everything from documentation and example programs to ticket triage, bug fixes, and new features. You can move between the goals below as quickly as you want based on your comfort level: if you want to dive right into bug fixes, awesome!
 
 '''Goal !#1: Review and improve documentation'''
  * Audit the examples, and make sure they have a high-level description and specify how they are run.
