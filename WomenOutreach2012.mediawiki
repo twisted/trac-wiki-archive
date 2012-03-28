@@ -7,7 +7,7 @@
 
 This internship is appropriate for any level of open source experience. If you have worked on an open source project before, great! If not, we'll help you learn the development and communication tools we use as part of the internship. Some Python experience is a prerequisite.
 
-The [http://live.gnome.org/GnomeWomen/OutreachProgram2012 Outreach Program for Women] is open to both students and non-students. Students, you can also work with Twisted [http://twistedmatrix.com/trac/wiki/GoogleSOC through Google Summer of Code]. [http://live.gnome.org/GnomeWomen/OutreachProgram2012#line-42 This page] compares the two programs.
+The [http://live.gnome.org/GnomeWomen/OutreachProgram2012 Outreach Program for Women] is open to both students and non-students. Students, you might also be able to work with Twisted [http://twistedmatrix.com/trac/wiki/GoogleSOC through Google Summer of Code] (details pending). [http://live.gnome.org/GnomeWomen/OutreachProgram2012#line-42 This page] compares the two programs.
 
 {{{
 #!html
