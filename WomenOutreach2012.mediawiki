@@ -24,8 +24,9 @@ Twisted is an event-driven networking engine written in Python. If you love netw
 
 Twisted is a great open source internship project for many reasons:
  * The community is full of smart, friendly people who are committed to making Twisted and the open source community in general welcoming to newcomers of all backgrounds.
- * Our coding, documentation, and testing standards instill excellent discipline that carries over into work and other open source projects.
- * You get to improve software used by millions of people all over the world. Twisted is used everywhere from Google and Lucasfilm to Justin.TV and the Launchpad software collaboration platform.
+ * Our coding, documentation, and testing standards instil excellent discipline that carries over into work and other open source projects.
+ * We provide in-depth coding reviews to help improve your skills.
+ * You get to improve software used by millions of people all over the world. Twisted is used everywhere from Google and Lucasfilm to Justin.TV and the Launchpad software collaboration platform - read about some of our SuccessStories.
  * You'll be part of an entire Twisted release cycle and see code you wrote released to the world during the internship!
 
 === Outreach Program for Women internship project description ===
@@ -52,7 +53,7 @@ Twisted is broken into several subprojects: core networking, web, email, instant
 
 === How to apply ===
 
-Please note that all applications must be received by 11:59pm GMT on April 6, 2012.
+Please note that all applications must be received by 11:59pm GMT on April 13, 2012 (note that this is a week later than the Google Summer of Code and Gnome deadlines).
 
  1. Send an e-mail to <women-outreach at sfconservancy.org> saying you are interested in working with Twisted through the Women Outreach program. Together you'll pick a small Twisted contribution to work on. You '''must''' do this step before submitting an application.
  1. Complete your pre-application contribution. This is a great time to meet people in the community and get a feel for the Twisted workflow, and you'll have lots of support as you do this.
