@@ -53,7 +53,7 @@ Twisted is broken into several subprojects: core networking, web, email, instant
 
 === How to apply ===
 
-Please note that all applications must be received by 11:59pm GMT on April 13, 2012 (note that this is a week later than the Google Summer of Code and Gnome deadlines).
+Please note that all applications must be received by 11:59pm GMT on April 13, 2012 (note that this is a week later than the Google Summer of Code and GNOME deadlines).
 
  1. Send an e-mail to <women-outreach at sfconservancy.org> saying you are interested in working with Twisted through the Women Outreach program. Together you'll pick a small Twisted contribution to work on. You '''must''' do this step before submitting an application.
  1. Complete your pre-application contribution. This is a great time to meet people in the community and get a feel for the Twisted workflow, and you'll have lots of support as you do this.
