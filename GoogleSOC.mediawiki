@@ -12,7 +12,7 @@ These are just ideas, we're open to other ideas as well.
 
 === For people who want to focus on a single programming task ===
 
-  * [wiki:IPv6]: We are still missing SSL, UDP, and client TCP IPv6 support. Add IPv6 support for these transports with a full API and test coverage for these additions. Add relevant examples and documentation.
+  * [wiki:IPv6]: We are still missing SSL, UDP, and multicast IPv6 support. Add IPv6 support for these transports with a full API and test coverage for these additions. Add relevant examples and documentation.
   * Debugging user interface for the networking layer - implement a web-based replacement for gladereactor. The  idea is to have a debugging user interface for running a Twisted  process that shows existing listening ports and open connections, and  allows you to view bytes flowing over the transports. gladereactor is a gtk-based half-finished implementation of this.
   * Python 3: Begin working towards Python 3 support. For a start, fix all the bugs in the [milestone:Python-3.x] milestone and run with no `-3` warnings. Then, see how far you can get with actual port.
   * PyPy: Have [http://pypy.org PyPy] be a fully supported platform, with all tests passing.
