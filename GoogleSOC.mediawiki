@@ -4,30 +4,44 @@
 If you're interested in participating, please email '''itamar at itamarst dot org'''. (If you don't get a timely response, try the mailing list, my spam filter can be aggressive sometimes).
 
 == Project Ideas ==
+
 These are just ideas, we're open to other ideas as well.
 
-=== For people who like variety ===
 
-  * Finish half-written code, documentation, bug fixes, etc.: We  have >200 tickets that at some point had code written and received at least one code review, but for various reasons never made it in. This is a great way to learn because  you don't have to start from scratch, and there's a variety of tasks  (from minor fixes to documentation to new features) most of which have code reviews as a starting point. See http://twistedmatrix.com/trac/report/16 for a list.
+=== IPv6 ===
 
-=== For people who want to focus on a single programming task ===
+[wiki:IPv6]: We are still missing SSL, UDP, and multicast IPv6 support, not to mention IPv6 DNS lookups. Add IPv6 support for these transports with a full API and test coverage for these additions. Add relevant examples and documentation.
 
-  * [wiki:IPv6]: We are still missing SSL, UDP, and multicast IPv6 support. Add IPv6 support for these transports with a full API and test coverage for these additions. Add relevant examples and documentation.
-  * Debugging user interface for the networking layer - implement a web-based replacement for gladereactor. The  idea is to have a debugging user interface for running a Twisted  process that shows existing listening ports and open connections, and  allows you to view bytes flowing over the transports. gladereactor is a gtk-based half-finished implementation of this.
-  * Python 3: Begin working towards Python 3 support. For a start, fix all the bugs in the [milestone:Python-3.x] milestone and run with no `-3` warnings. Then, see how far you can get with actual port.
-  * PyPy: Have [http://pypy.org PyPy] be a fully supported platform, with all tests passing.
+Requirements: In addition to Python, a decent understanding of networking and socket APIs.
 
-=== For people who want to work on documentation ===
+
+=== Debugging UI ===
+
+Build a user interface (a GUI, or maybe even Web-based) The  idea is to have a debugging user interface for running a Twisted  process that shows existing listening ports and open connections, and allows you to view bytes flowing over the transports. (Twisted currently includes a half-broken "gladereactor" that is a gtk-based half-finished implementation of this). You'll learn about Twisted's internals, and get to build an interesting user interface and present information in a useful way.
+
+Requirements: In addition to Python, some knowledge of either GUI programming or Web programming.
+
+
+=== Sphinx documentation ===
+
+Finish converting our documentation from a custom format and set of tools that we maintain (Lore) to the community standard - RestructuredText (ReST) as used by Sphinx. In particular, resolve all tickets in the [milestone:"Lore to Sphinx"] milestone and then help transition the release process and twistedmatrix.com to Sphinx by participating in a release. You'll learn about releasing software, documentation tools, and maybe some data transformation (from HTML to RestructuredText).
+
+Requirements: In addition to knowledge of Python, knowledge of HTML and perhaps ReST would be useful.
+
+
+=== Don't break in other locales ===
+
+Twisted currently has some bugs when used in certain non-English-configured operating systems (this is known as a "locale", e.g. French). For example, date formatting might be wrong, or uppercase/lowercase conversion might work unexpectedly. As a first step you'd want to create a custom locale for Linux that was malicious about everything (e.g. lower-casing returns random unexpected bytes, dates are funky, etc.). This would be used to find places where Twisted is making US-centric assumptions, but would actually be a useful project for the Linux community in general. Then, fix resulting bugs in Twisted. Some relevant background material: http://www.moserware.com/2008/02/does-your-code-pass-turkey-test.html
+
+Requirements: This is probably easier to do on Linux than on Windows, so some basic familiarity with Linux, and a computer configured to use it, in addition to knowledge of Python.
+
+
+=== Tasks Google may not like ===
 
   * Finish half-done documentation: Merge existing documentation from elsewhere, e.g. [ticket:5474 Conch in 60 seconds], or half-finished documentation that is in the tracker (there's the start of an IMAP howto, for example.)
-  * lore2sphinx: finish converting our documentation from a custom format (Lore) to the community standard - RestructuredText as used by Sphinx. In particular, resolve all tickets in the [milestone:"Lore to Sphinx"] milestone and then help transition the release process and twistedmatrix.com to Sphinx by participating in a release.
   * For a particular subproject, review and improve existing examples and howtos and add missing documentation. Every example needs a description, e.g. http://twistedmatrix.com/documents/current/web/examples/index.html has descriptions but http://twistedmatrix.com/documents/current/names/examples/index.html doesn't. Every example should document its purpose, how it is run, and what it should do. Examples should use current coding and documentation standards and shouldn't use deprecated code. Documentation should use current coding and documentation standards in code snippets, and should use the preferred APIs. Some subprojects have very little documentation or examples and simply need more. Audit and update relevant man pages.
-
-=== For the detailed-oriented person ===
-
   * Coverage: For a particular subproject, go for 100% API documentation and unit test code coverage.
   * Test suite cleanup: overall test suite cleanup, remove deprecations, fix deprecation warnings, get to the bottom of and fix our various recurring Windows errors, fix Windows compiler warnings, fix non-deterministic tests.
-
-=== For people who like helping the world at large ===
-
-  * Fix Twisted in non-US locales. As a first step you'd want to create a custom locale for Linux that was malicious about everything (e.g. lower-casing returns random unexpected bytes, dates are funky, etc.). This would be used to find places where Twisted is making US-centric assumptions, but would actually be a useful project for the Linux community in general. Then, fix resulting bugs in Twisted. Some relevant background material: http://www.moserware.com/2008/02/does-your-code-pass-turkey-test.html
+  * Finish half-written code, documentation, bug fixes, etc.: We  have >200 tickets that at some point had code written and received at least one code review, but for various reasons never made it in. This is a great way to learn because  you don't have to start from scratch, and there's a variety of tasks  (from minor fixes to documentation to new features) most of which have code reviews as a starting point. See http://twistedmatrix.com/trac/report/16 for a list.
+  * Python 3: Begin working towards Python 3 support. For a start, fix all the bugs in the [milestone:Python-3.x] milestone and run with no `-3` warnings. Then, see how far you can get with actual port.
+  * PyPy: Have [http://pypy.org PyPy] be a fully supported platform, with all tests passing.
