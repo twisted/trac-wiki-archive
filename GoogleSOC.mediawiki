@@ -4,9 +4,8 @@
 {{{
 #!html
 <div class="images">
-        <img src="http://mit.edu/~jesstess/www/twisted_echo.png" title="Superior technology" alt="Superior technology" height="200">
         <img src="http://mit.edu/~jesstess/www/pycon_twisted.jpg" title="PyCon 2012 sprint" alt="PyCon 2012 sprint" height="200">
-        <img src="http://mit.edu/~jesstess/www/twistedmatrix_highscores.png" title="Entertaining metrics" alt="Entertaining metrics" height="200">
+        <img src="http://mit.edu/~jesstess/www/twistedmatrix_highscores.png" title="Entertaining metrics" alt="Entertaining metrics" height="200">
         <img src="http://twistedmatrix.com/trac/raw-attachment/wiki/Photos/pycon2011_small.jpg" title="PyCon 2011 sprint" alt="PyCon 2011 sprint" height="200">
 </div>
 }}}
