@@ -10,28 +10,28 @@ These are just ideas, we're open to other ideas as well.
 
 === IPv6 ===
 
-[wiki:IPv6]: We are still missing SSL, UDP, and multicast IPv6 support, not to mention IPv6 DNS lookups. Add IPv6 support for these transports with a full API and test coverage for these additions. Add relevant examples and documentation.
+[wiki:IPv6]: IPv6 is the new networking standard for the Internet; World IPv6 Day is happening soon (http://www.worldipv6day.org/). We are still missing SSL, UDP, and multicast IPv6 support, not to mention IPv6 DNS lookups. Add IPv6 support for these transports with a full API and test coverage for these additions. Add relevant examples and documentation.
 
 Requirements: In addition to Python, a decent understanding of networking and socket APIs.
 
 
 === Debugging UI ===
 
-Build a user interface (a GUI, or maybe even Web-based) The  idea is to have a debugging user interface for running a Twisted  process that shows existing listening ports and open connections, and allows you to view bytes flowing over the transports. (Twisted currently includes a half-broken "gladereactor" that is a gtk-based half-finished implementation of this). You'll learn about Twisted's internals, and get to build an interesting user interface and present information in a useful way.
+Build a user interface (a GUI, or maybe even Web-based). The  idea is to have a debugging user interface for running a Twisted process that shows existing listening ports and open connections, and allows you to view bytes flowing over the transports. This would look you look at a running Twisted program and see what was going on inside and what data was flowing through it. (Twisted currently includes a half-broken "gladereactor" that is a gtk-based half-finished implementation of this). You'll learn about Twisted's internals, and get to build an interesting user interface and present information in a useful way.
 
 Requirements: In addition to Python, some knowledge of either GUI programming or Web programming.
 
 
 === Sphinx documentation ===
 
-Finish converting our documentation from a custom format and set of tools that we maintain (Lore) to the community standard - RestructuredText (ReST) as used by Sphinx. In particular, resolve all tickets in the [milestone:"Lore to Sphinx"] milestone and then help transition the release process and twistedmatrix.com to Sphinx by participating in a release. You'll learn about releasing software, documentation tools, and maybe some data transformation (from HTML to RestructuredText).
+Finish converting our documentation from a custom format and set of tools that we maintain (Lore) to the Python community standard - RestructuredText (ReST) as used by http://sphinx.pocoo.org/. In particular, resolve all tickets in the [milestone:"Lore to Sphinx"] milestone and then help transition the release process and twistedmatrix.com to Sphinx by participating in a release. You'll learn about releasing software, documentation tools, and maybe some data transformation (from HTML to RestructuredText).
 
 Requirements: In addition to knowledge of Python, knowledge of HTML and perhaps ReST would be useful.
 
 
 === Don't break in other locales ===
 
-Twisted currently has some bugs when used in certain non-English-configured operating systems (this is known as a "locale", e.g. French). For example, date formatting might be wrong, or uppercase/lowercase conversion might work unexpectedly. As a first step you'd want to create a custom locale for Linux that was malicious about everything (e.g. lower-casing returns random unexpected bytes, dates are funky, etc.). This would be used to find places where Twisted is making US-centric assumptions, but would actually be a useful project for the Linux community in general. Then, fix resulting bugs in Twisted. Some relevant background material: http://www.moserware.com/2008/02/does-your-code-pass-turkey-test.html
+Twisted currently has some bugs when used in certain non-English-configuration ("locales"), e.g. French. For example, date formatting might be wrong, or uppercase/lowercase conversion might work unexpectedly. As a first step you'd want to create a custom locale for Linux that was malicious about everything (e.g. lower-casing returns random unexpected bytes, dates are funky, etc.). This would be used to find places where Twisted is making US-centric assumptions, but would actually be a useful project for the Linux community in general. Then, fix resulting bugs in Twisted. Some relevant background material: http://www.moserware.com/2008/02/does-your-code-pass-turkey-test.html
 
 Requirements: This is probably easier to do on Linux than on Windows, so some basic familiarity with Linux, and a computer configured to use it, in addition to knowledge of Python.
 
