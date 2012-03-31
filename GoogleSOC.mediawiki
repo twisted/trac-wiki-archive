@@ -46,12 +46,11 @@ Twisted currently has some bugs when used in certain non-English-configuration (
 Requirements: This is probably easier to do on Linux than on Windows, so some basic familiarity with Linux, and a computer configured to use it, in addition to knowledge of Python.
 
 
-=== Tasks Google may not like ===
+=== Other Tasks, Some of which Google may not like, but some of which may be workable ===
 
   * Finish half-done documentation: Merge existing documentation from elsewhere, e.g. [ticket:5474 Conch in 60 seconds], or half-finished documentation that is in the tracker (there's the start of an IMAP howto, for example.)
   * For a particular subproject, review and improve existing examples and howtos and add missing documentation. Every example needs a description, e.g. http://twistedmatrix.com/documents/current/web/examples/index.html has descriptions but http://twistedmatrix.com/documents/current/names/examples/index.html doesn't. Every example should document its purpose, how it is run, and what it should do. Examples should use current coding and documentation standards and shouldn't use deprecated code. Documentation should use current coding and documentation standards in code snippets, and should use the preferred APIs. Some subprojects have very little documentation or examples and simply need more. Audit and update relevant man pages.
   * Coverage: For a particular subproject, go for 100% API documentation and unit test code coverage.
   * Test suite cleanup: overall test suite cleanup, remove deprecations, fix deprecation warnings, get to the bottom of and fix our various recurring Windows errors, fix Windows compiler warnings, fix non-deterministic tests.
   * Finish half-written code, documentation, bug fixes, etc.: We  have >200 tickets that at some point had code written and received at least one code review, but for various reasons never made it in. This is a great way to learn because  you don't have to start from scratch, and there's a variety of tasks  (from minor fixes to documentation to new features) most of which have code reviews as a starting point. See http://twistedmatrix.com/trac/report/16 for a list.
-  * Python 3: Begin working towards Python 3 support. For a start, fix all the bugs in the [milestone:Python-3.x] milestone and run with no `-3` warnings. Then, see how far you can get with actual port.
   * PyPy: Have [http://pypy.org PyPy] be a fully supported platform, with all tests passing.
