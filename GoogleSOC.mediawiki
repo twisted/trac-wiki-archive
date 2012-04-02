@@ -72,6 +72,22 @@ For this project, add a lot of new endpoint implementations to Twisted, starting
 
 Requirements: General Python knowledge, some networking knowledge would be helpful but that may be acquired over the course of the project.
 
+=== Python 3 Preparation === 
+
+In preparation for Python 3 support, there is a lot of cleanup work that needs to be done:
+
+  * Remove use of old APIs that have more modern equivalents.
+  * Add support code for features Python 3 is missing (execfile).
+  * Get rid of deprecated code that is no longer supported.
+
+A partial list can be found here: http://twistedmatrix.com/trac/query?status=assigned&status=new&status=reopened&group=status&milestone=Python-3.x
+
+There's also additional development to be done, e.g. the FilePath path management library should probably get Unicode support in Python 2, so that it's easier to write code that works in both Python 2 and 3.
+
+The goal is *not* to port Twisted to Python 3, but rather to make it easier to support Twisted on Python 3 later on.
+
+Requirements: Good knowledge of Python 2, and ideally the differences with Python 3.
+
 === Other Tasks, Some of which Google may not like, but some of which may be workable ===
 
   * Finish half-done documentation: Merge existing documentation from elsewhere, e.g. [ticket:5474 Conch in 60 seconds], or half-finished documentation that is in the tracker (there's the start of an IMAP howto, for example.)
