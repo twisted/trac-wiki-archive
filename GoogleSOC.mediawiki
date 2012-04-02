@@ -62,6 +62,15 @@ Twisted applies certain naming and style standards to all contributed code.  The
 
 Requirements: Little Twisted-specific knowledge is necessary, but general Python knowledge, perhaps with prior parsing experience (or a willingness to learn about parsing).
 
+=== Expanded Endpoints Support ===
+
+Twisted recently added two new related high-level APIs, one for specifying what address servers should listen for connections on, the other for specifying  what address a client should connect to.  These APIs are known as "endpoints", mostly implemented in [http://twistedmatrix.com/documents/current/api/twisted.internet.endpoints.html twisted.internet.endpoints].  Only a few of the many kinds of addresses that Twisted supports have had endpoint support added to them so far.  Additionally, there are some kinds of connections which it was very awkward to set up before the invention of the endpoints APIs, so there is no convenient way to set them up at all.
+
+Some endpoints Twisted does have are for TCP (eg, when using the string syntax to create a TCP server, "tcp:port=80:interface=192.168.1.1"), SSL, and UNIX domain sockets.  Some endpoints it doesn't have are for serial ports, standard I/O, child processes, SOCKS proxies, HTTP proxies, and SSH connections.  Many more are possible.
+
+For this project, add a lot of new endpoint implementations to Twisted.  Some endpoint implementations will be simple wrappers around existing APIs.  Others will involve some network programming, where there was no convenient existing API to provide the functionality at all.
+
+Requirements: General Python knowledge, some networking knowledge would be helpful but that may be acquired over the course of the project.
 
 === Other Tasks, Some of which Google may not like, but some of which may be workable ===
 
