@@ -15,6 +15,13 @@ If you're interested in participating, please email '''itamar at itamarst dot or
 
 If applicable, you may also be interested in http://twistedmatrix.com/trac/wiki/WomenOutreach2012
 
+The basic process:
+
+  1. You get in touch, start getting familiar with the Twisted development process (see below).
+  1. We create a project proposal.
+  1. You apply on the Google Summer of Code web page (https://www.google-melange.com/gsoc/homepage/google/gsoc2012) for the Python Software Foundation group, with the project proposal we created.
+  1. Your project is (hopefully) approved - not all students will be accepted, unfortunately, depending on how many slots Google gives the project and how many applicants there are.
+
 == Project Ideas ==
 
 These are just ideas, we're open to other ideas as well.
