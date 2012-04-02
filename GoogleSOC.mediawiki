@@ -54,6 +54,12 @@ Twisted currently has some bugs when used in certain non-English-configuration (
 
 Requirements: This is probably easier to do on Linux than on Windows, so some basic familiarity with Linux, and a computer configured to use it, in addition to knowledge of Python.
 
+=== Automatic Coding Standard Enforcement ===
+
+Twisted applies certain naming and style standards to all contributed code.  These are things like giving all classes and functions docstrings, documenting all parameters and instances attributes, having the correct amount of whitespace between definitions, etc.  Currently, a human reviewer needs to check all of these things and point out violations to contributors.  The development process would be sped up by a tool which can automatically make these simple, mechanical checks, freeing up human reviewer time to focus on more important aspects of proposed changes.  Integration with the issue tracker, to automatically generate this feedback before a ticket is submitted for review, would also be a big win.  For background about the Twisted development process, see [wiki:ReviewProcess].
+
+Requirements: Little Twisted-specific knowledge is necessary, but general Python knowledge, perhaps with prior parsing experience (or a willingness to learn about parsing).
+
 
 === Other Tasks, Some of which Google may not like, but some of which may be workable ===
 
