@@ -36,6 +36,15 @@ These are just ideas, we're open to other ideas as well.
 Requirements: In addition to Python, a decent understanding of networking and socket APIs.
 
 
+=== Reactor Metrics and Monitoring Interface ===
+
+The reactor runs lots of events; connectionMade, dataReceived, connectionLost, timed calls, and queued calls from callFromThread.  But currently there's no tools to discover how long those events took, or what resources they consumed, so when one event makes your reactor get "stuck" you might not know which one it is without some manual instrumentation.
+
+You could build a reporting protocol which would report timings and potentially other relevant status information on the reactor's activities to a client connected on an appropriate socket.  For example: the longest, shortest, mean and median event times over a particular interval, and which objects and code were involved in the longest and shortest.  (This would not necessarily involve a user interface, just the internal infrastructure necessary to extract and report this information to other tools which could make sense of it.)
+
+Requirements: an understanding of event-driven programming, and some experience with monitoring or performance tools.
+
+
 === Debugging UI ===
 
 Build a user interface (a GUI, or maybe even Web-based). The  idea is to have a debugging user interface for running a Twisted process that shows existing listening ports and open connections, and allows you to view bytes flowing over the transports. This would look you look at a running Twisted program and see what was going on inside and what data was flowing through it. (Twisted currently includes a half-broken "gladereactor" that is a gtk-based half-finished implementation of this). You'll learn about Twisted's internals, and get to build an interesting user interface and present information in a useful way.
