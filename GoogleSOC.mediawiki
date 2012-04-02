@@ -54,3 +54,39 @@ Requirements: This is probably easier to do on Linux than on Windows, so some ba
   * Test suite cleanup: overall test suite cleanup, remove deprecations, fix deprecation warnings, get to the bottom of and fix our various recurring Windows errors, fix Windows compiler warnings, fix non-deterministic tests.
   * Finish half-written code, documentation, bug fixes, etc.: We  have >200 tickets that at some point had code written and received at least one code review, but for various reasons never made it in. This is a great way to learn because  you don't have to start from scratch, and there's a variety of tasks  (from minor fixes to documentation to new features) most of which have code reviews as a starting point. See http://twistedmatrix.com/trac/report/16 for a list.
   * PyPy: Have [http://pypy.org PyPy] be a fully supported platform, with all tests passing.
+
+
+== Getting Started with Twisted Development ==
+Here are some of the tools we use:
+
+  1. IRC
+  2. the Trac issue tracker
+  3. the svn revision control system
+  4. the diff and patch utilities
+
+If you have not used IRC before, please go through this short tutorial on installing and using an IRC client:
+https://openhatch.org/wiki/Open_Source_Comes_to_Campus/UMD/Laptop_setup#Goal_.233:_install_an_IRC_client
+
+Please familiarize yourself with how Twisted uses Trac by exploring the reports from this link:
+http://twistedmatrix.com/trac/report
+
+With sufficient exploration you should be able to answer the following questions (you don't have to tell me the answers, just make sure you know how to find them):
+  1. What is the oldest open Twisted ticket?
+  2. How many tickets are currently waiting on review? How do we denote tickets waiting on a review (hint: look at the keyword)
+  3. Using the custom query page at http://twistedmatrix.com/trac/query, find out how many open tickets we have that have the "documentation" keyword.
+
+If you have not used svn before, please go through the svn training mission at:
+http://openhatch.org/missions/svn
+
+If you have not used diff and patch before, please go through the diff and patch training mission at:
+http://openhatch.org/missions/diffpatch
+
+If you have any questions while going through this material, don't hesitate to get in touch. You can email me, and you can also find me as itamar on the Freenode IRC network; jesstess on Freenode can also be of help if I'm not around.
+
+Once you've gone through this material, the next steps will be to:
+  1. Meet up on IRC (stop by the #twisted channel)
+  2. Check out and explore the Twisted source code
+  3. Read a few parts of the Twisted core documentation and run some example Twisted scripts
+  4. Run the Twisted test suite - cd into the checkout folder and run "bin/trial twisted".
+
+And then you'll be in great shape to start working on your first Twisted ticket. We'll suggest a first ticket when you get in touch over email; you'd want to fix it in your Twisted svn checkout, run `svn diff`, upload the resulting patch to the ticket and then add the "review" keyword to the ticket. This process is described in detail here: http://twistedmatrix.com/trac/wiki/TwistedDevelopment#SubmittingaPatch
