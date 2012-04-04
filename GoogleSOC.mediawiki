@@ -87,7 +87,7 @@ In preparation for Python 3 support, there is a lot of cleanup work that needs t
 
   * Remove use of old APIs that have more modern equivalents.
   * Add support code for features Python 3 is missing (execfile).
-  * Get rid of deprecated code that is no longer supported.
+  * Get rid of deprecated code (eligible only; see CompatibilityPolicy) that cannot easily be ported.
 
 A partial list can be found here: http://twistedmatrix.com/trac/query?status=assigned&status=new&status=reopened&group=status&milestone=Python-3.x
 
