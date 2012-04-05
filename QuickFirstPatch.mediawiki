@@ -1,7 +1,7 @@
 You want to contribute to Twisted.  You've read [wiki:ContributingToTwistedLabs Contributing To Twisted Labs].  But where do you start?
 
  1. Have a look at the list of outstanding [http://bit.ly/easy-twisted-tickets easy tickets]
- 1. If you cannot find a ticket, you can always file and fix a documentation syntax bug.  These types of bugs are ideal because they give you experience with the contribution process, and they don't require unit tests or additional documentation.
+ 1. If you cannot find a ticket, you can always file and fix a documentation syntax bug.  (Twisted uses [http://epydoc.sourceforge.net/manual-epytext.html the epytext format] for docstrings.) These types of bugs are ideal because they give you experience with the contribution process, and they don't require unit tests or additional documentation.
    1. Go to [http://buildbot.twistedmatrix.com/boxes-supported?branch=trunk&num_builds=5 the latest trunk builds on buildbot]
    1. Select the latest documentation build.  That is, click on the topmost number (e.g. "16166") in the leftmost green box next to the word "documentation"
    1. Under "Steps and Logfiles", under "api-documentation", click on the link to "pydoctor errors" (or just search the page for "pydoctor errors".  That should give you a list of errors along with file names and line numbers.  ([http://bit.ly/twisted-pydoctor-errors Here is a link to the latest pydoctor errors as of 04 April 2012 22:56 -0800])
