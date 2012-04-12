@@ -188,8 +188,6 @@ from twisted.internet import reactor, protocol
 from twisted.protocols import basic
 
 class PubProtocol(basic.LineReceiver):
-    delimiter = "\n"
-
     def __init__(self, factory):
         self.factory = factory
 
@@ -200,11 +198,8 @@ class PubProtocol(basic.LineReceiver):
         self.factory.clients.remove(self)
 
     def lineReceived(self, line):
-        message = "<%s> %s\n" % (self.transport.getHost(), line)
         for c in self.factory.clients:
-            if c != self:
-                c.transport.write(message)
-
+            c.sendLine("<{}> {}".format(self.transport.getHost(), line))
 
 class PubFactory(protocol.Factory):
     def __init__(self):
@@ -213,11 +208,12 @@ class PubFactory(protocol.Factory):
     def buildProtocol(self, addr):
         return PubProtocol(self)
 
-
 if __name__ == '__main__':
     reactor.listenTCP(1025, PubFactory())
     reactor.run()
 }}}
+
+You can test this out by opening two terminals and doing 'telnet localhost 1025' in each, then typing things.
 
 }}}
 
