@@ -208,12 +208,11 @@ class PubFactory(protocol.Factory):
     def buildProtocol(self, addr):
         return PubProtocol(self)
 
-if __name__ == '__main__':
-    reactor.listenTCP(1025, PubFactory())
-    reactor.run()
+reactor.listenTCP(1025, PubFactory())
+reactor.run()
 }}}
 
-You can test this out by opening two terminals and doing 'telnet localhost 1025' in each, then typing things.
+You can test this out by opening two terminals and doing `telnet localhost 1025` in each, then typing things.
 
 }}}
 
