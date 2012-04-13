@@ -62,11 +62,13 @@ Changes must be accompanied by an entry in at least one `topfiles` directory. Th
 ||'''bugfix'''||Tickets which are fixing a bug||
 ||'''doc'''||Tickets primarily about fixing or improving documentation (any variety)||
 ||'''removal'''||Tickets which are deprecating something or removing something which was already deprecated||
-||'''misc'''||tickets which are very minor and not worth summarizing outside of the svn changelog.  These should be empty (their contents will be ignored)||
+||'''misc'''||Tickets which are very minor and not worth summarizing outside of the svn changelog.  These should be empty (their contents will be ignored)||
 
 To get a sense of how the text in these files is presented to users, take a look at [source:trunk/NEWS the real overall news file] and [source:trunk/twisted/web/topfiles/NEWS one of the subproject news files].  The goal when writing the content for one of these files is to produce text that will fit well into the overall news files.
 
-The entry should contain a high-level description of the change suitable for end users. Generally, the grammatical subject of the sentence should be a Python object, and the verb should be something that the object does, prefixed with "now". Here's are some examples:
+The entry should contain a high-level description of the change suitable for end users. Generally, the grammatical subject of the sentence should be a Python object, and the verb should be something that the object does, prefixed with "now".
+
+Here are some examples:
 
 Features:
 {{{
