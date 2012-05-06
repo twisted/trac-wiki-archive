@@ -1,4 +1,4 @@
-An attempt to understand the piece of EDNS0 and the changes necessary to have Twisted Names support it:
+An attempt to understand the pieces of EDNS0 and the changes necessary to have Twisted Names support it:
 
  - EDNS0
   - OPT record
