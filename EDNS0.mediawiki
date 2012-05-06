@@ -1,0 +1,25 @@
+An attempt to understand the piece of EDNS0 and the changes necessary to have Twisted Names support it:
+
+ - EDNS0
+  - OPT record
+   - Explicit OPT record class/type
+     - Teach cache about it - MUST NOT BE CACHED
+     - Teach recursive resolver about it - MUST NOT BE FORWARDED
+     - Teach loaders about - MUST NOT BE LOADED FROM MASTER FILE
+   - ~~Extended label ("0" "1" type) parsing~~ (REJECTED BY 2671bis)
+   - Maximum UDP datagram size field
+   - Arbitrary extension support (attribute/value pairs in RDATA section)
+  - Extended Message object with additional EDNS0 items
+   - Subclass of Message?
+   - maxSize (Message has it already, can we re-use it?)
+   - Extended RCODE - partly defined by RCODE field in OPT record
+  - Accept max UDP size as configuration?  determine it from system automatically?
+   - Server and client need this
+  - Client
+   - Automatically send EDNS0 queries
+   - Fall back to DNS queries when detecting server does not support EDNS0?
+  - Server
+   - Send EDNS0 responses to EDNS0 queries
+   - (Do not send EDNS0 responses to DNS queries)
+ - DNSSEC
+  - ??????
