@@ -9,7 +9,7 @@ An attempt to understand the pieces of EDNS0 and the changes necessary to have T
    - ~~Extended label ("0" "1" type) parsing~~ (REJECTED BY 2671bis)
    - Maximum UDP datagram size field
    - Arbitrary extension support (attribute/value pairs in RDATA section)
-  - Extended Message object with additional EDNS0 items
+  - [ticket:5669 Extended Message object with additional EDNS0 items]
    - Subclass of Message?
    - maxSize (Message has it already, can we re-use it?)
    - Extended RCODE - partly defined by RCODE field in OPT record
