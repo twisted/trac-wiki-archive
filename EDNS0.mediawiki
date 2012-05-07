@@ -9,16 +9,16 @@ An attempt to understand the pieces of EDNS0 and the changes necessary to have T
    - ~~Extended label ("0" "1" type) parsing~~ (REJECTED BY 2671bis)
    - Maximum UDP datagram size field
    - Arbitrary extension support (attribute/value pairs in RDATA section)
-  - [ticket:5669 Extended Message object with additional EDNS0 items]
+  - Extended Message object with additional EDNS0 items
    - Subclass of Message?
    - maxSize (Message has it already, can we re-use it?)
    - Extended RCODE - partly defined by RCODE field in OPT record
   - Accept max UDP size as configuration?  determine it from system automatically?
    - Server and client need this
-  - Client
+  - [ticket:5670 Client]
    - Automatically send EDNS0 queries
    - Fall back to DNS queries when detecting server does not support EDNS0?
-  - Server
+  - [ticket:5669 Server]
    - Send EDNS0 responses to EDNS0 queries
    - (Do not send EDNS0 responses to DNS queries)
  - DNSSEC
