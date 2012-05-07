@@ -21,5 +21,7 @@ An attempt to understand the pieces of EDNS0 and the changes necessary to have T
   - [ticket:5669 Server]
    - Send EDNS0 responses to EDNS0 queries
    - (Do not send EDNS0 responses to DNS queries)
- - DNSSEC
-  - ??????
+ - DNSSEC ??????
+  - #5450
+  - #5453
+  - #5454
