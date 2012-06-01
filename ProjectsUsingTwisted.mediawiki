@@ -64,17 +64,13 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://www.gridspy.co.nz/ Gridspy] - live power monitoring and analysis
  * [http://allmydata.org Tahoe-LAFS] - a secure, decentralized, fault-tolerant filesystem.
  * [http://www.dohop.com dohop.com] - a flight planning web site which searches many other flight databases.
- * [http://www.bittorrent.com BitTorrent] - a peer-to-peer file sharing program.
  * [http://home.jongsma.org/software/downpour/ Downpour] - a web-based !BitTorrent client.
- * [http://www.osafoundation.org/ Chandler] - a desktop PIM.
- * [http://www.zope.org/DevHome/Zope3 Zope3] - next-generation of the Zope application server and content management system.
  * [http://www.hellanzb.com/trac/ hellanzb] - an application designed for *nix environments that retrieves and processes Usenet nzb files.
  * [http://www.flumotion.net/ Flumotion] - a streaming media server.
  * [http://divmod.org/trac/wiki/DivmodQuotient Quotient] - multi-protocol messaging server with tools for information management and retrieval, including a mail server (SMTP/POP3/IMAP/webmail) and much more.
  * [http://divmod.org/trac/wiki/ShtoomProject Shtoom] - a RTP/SIP VoIP phone.
  * [http://www.fettig.net/projects/hep Hep] - Message routing super-server.
  * [http://sourceforge.net/projects/khashmir Khashmir] - distributed hash table.
- * [http://itamarst.org/software/bannerfish/ Bannerfish] - banner ad server.
  * [http://apt-proxy.sourceforge.net apt-proxy2] - caching proxy for Debian apt-get clients.
  * [http://twistedmatrix.com/users/acapnotic/wares/code/CVSToys/ CVSToys] - CVS change notification via email, IRC and HTTP.
  * [http://www.infrae.com/download/DocmaServer DocmaServer] - batch processing server that does Word <-> XML conversion.
