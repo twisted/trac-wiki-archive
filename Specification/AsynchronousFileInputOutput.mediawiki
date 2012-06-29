@@ -1,5 +1,7 @@
 THIS SPECIFICATION IS IN PROGRESS DO NOT READ IT.
 
+(This needs to be updated to take [ticket:1956 the new proposed tubes package] into account.)
+
 {{wrongtitle|title=Asynchronous File I/O}}
 
 === Problem ===
