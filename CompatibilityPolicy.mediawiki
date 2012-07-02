@@ -81,10 +81,10 @@ Any change which is ''not'' specifically described as "compatible" must be made 
   1. Release R:
     * New functionality is added.
     * Old functionality is deprecated with a {{{DeprecationWarning}}}.
-  1. Release R+1:
-    * Old functionality will raise a new exception type {{{DeprecationError}}}.  This allows application authors to upgrade and provide an ugly work-around to silence this error in this particular place, to keep their code working for one more version.
-  1. Release R+2:
+  1. ''At the earliest'', release R+2 and one year after release R, but often ''much later'':
     * Old functionality is completely removed.
+
+Removal should happen once the deprecated API becomes an additional maintenance burden.  For example, if it makes implementation of a new feature more difficult, if it makes documentation of non-deprecated APIs more confusing, or if its unit tests become an undue burden on the continuous integration system.  Removal should not be undertaken just to follow a timeline.  Twisted should strive, as much as practical, not to break applications relying on it.
 
 == Application Developer Upgrade Procedure ==
 
