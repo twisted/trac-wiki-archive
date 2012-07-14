@@ -2,7 +2,7 @@
 
 Always run [http://buildbot.twistedmatrix.com buildbot] against a branch before merging it it trunk. 
 
- 1. Get the `force-builds.py` script out of exarkun's [http://twistedmatrix.com/trac/browser/sandbox/exarkun sandbox].
+ 1. Get the [http://bazaar.launchpad.net/~twisted-dev/twisted-trac-integration/trunk/view/head:/tools/force-builds.py force-builds.py].
  1. Run the script on your branch with `python force-builds.py /branches/<branch name> '<Comment>'`
     * Note the forward slash before 'branches' and the lack of a forward slash after the branch name
  1. Look at the results at the URL `http://buildbot.twistedmatrix.com/boxes-supported?branch=/branches/<branch name>`
