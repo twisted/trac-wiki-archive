@@ -201,11 +201,13 @@ You should be using {{{reactor.spawnProcess}}} (see [http://twistedmatrix.com/do
 
 [http://twistedmatrix.com/documents/current/api/twisted.internet.interfaces.IReactorProcess.spawnProcess.html spawnProcess] defaults to clearing the environment of child processes as a security feature. You can either provide a dictionary with exactly the name-value pairs you want the child to use, or you can simply pass in {{{os.environ}}} to inherit the complete environment.
 
-=== My exceptions and tracebacks aren't getting printed!  Or My Deferred or !DeferredList never fires, so my program just mysteriously hangs! What's wrong? ===
+=== My exceptions and tracebacks aren't getting printed!  Or My Deferred or !DeferredList seems like it never fires, so my program just mysteriously hangs! What's wrong? ===
 
-It really depends on what your program is doing, but the most common cause is this: it is firing -- but it's an error, not a success, and you have forgotten to add an [http://twistedmatrix.com/documents/current/core/howto/glossary.html#errback errback], so nothing happens. Always add errbacks!
+It really depends on what your program is doing, but the most common cause is this: it is firing -- but it's an error, not a success, and you have forgotten to add an [http://twistedmatrix.com/documents/current/core/howto/glossary.html#errback errback], so it looks like nothing happens. Always add errbacks!
 
-The reason {{{Deferred}}} can't automatically show your errors is because a {{{Deferred}}} can still have callbacks and errbacks added to it even after a result is available -- so we have no reasonable place to put a logging call that wouldn't result in spurious tracebacks that are handled later on. There is a facility for printing tracebacks when the Deferreds are garbage collected -- call {{{defer.setDebugging(True)}}} to enable it.
+The reason {{{Deferred}}} can't automatically show your errors is because a {{{Deferred}}} can still have callbacks and errbacks added to it even after a result is available -- so we have no reasonable place to put a logging call that wouldn't result in spurious tracebacks that are handled later on.  When a deferred is garbage collected with a Failure, a traceback is automatically printed.  However, if you keep a reference to your Deferred and it is never garbage collected, it's possible no traceback will be printed.  But in that case, you also have a memory leak.
+
+For even more verbose debugging information to be printed in Failure tracebacks, set {{{defer.setDebugging(True)}}}.
 
 === Why does it take a long time for data I send with `transport.write` to arrive at the other side of the connection? ===
 
