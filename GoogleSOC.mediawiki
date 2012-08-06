@@ -132,7 +132,7 @@ http://openhatch.org/missions/svn
 If you have not used diff and patch before, please go through the diff and patch training mission at:
 http://openhatch.org/missions/diffpatch
 
-If you have any questions while going through this material, don't hesitate to get in touch. You can email me, and you can also find me as itamar on the Freenode IRC network; jesstess on Freenode can also be of help if I'm not around.
+If you have any questions while going through this material, don't hesitate to ask for help in #twisted on IRC or on the [http://twistedmatrix.com/trac/wiki/TwistedCommunity#MailLists twisted-python mailing list].
 
 Once you've gone through this material, the next steps will be to:
   1. Meet up on IRC (stop by the #twisted channel)
