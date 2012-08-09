@@ -17,8 +17,8 @@ All other standard Twisted development practices apply.
       1. Refactor the implementation to separate the reactor and non-reactor parts into separate source files
       1. Add more tests for uncovered functionality
       1. Get the non-reactor parts passing their own tests on Python 3.3 (alpha, until 3.3 is actually released)
-  1. Test-driven port of the dependencies of the reactor features of trial
-  1. Test-driven port of the reactor features of trial
+    1. Test-driven port of the dependencies of the reactor features of trial
+    1. Test-driven port of the reactor features of trial
   1. Test-driven port of the following modules (some of which may be dependencies of above steps):
     * twisted.cred
     * twisted.internet.defer
