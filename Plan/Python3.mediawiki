@@ -19,6 +19,7 @@ All other standard Twisted development practices apply.
       1. Get the non-reactor parts passing their own tests on Python 3.3 (alpha, until 3.3 is actually released)
     1. Test-driven port of the dependencies of the reactor features of trial
     1. Test-driven port of the reactor features of trial
+  1. setup.py should only install ported modules on Python 3.
   1. Test-driven port of the following modules (some of which may be dependencies of above steps):
     * twisted.cred
     * twisted.internet.defer
@@ -51,6 +52,7 @@ All other standard Twisted development practices apply.
     * twisted.application
       * internet
       * service
+  1. Build-slave for Python 3.3 should only run ported test modules.
 
   * Strings
     * Python 2 largely conflates text and bytes in the `str` type, but offers `unicode` for unambiguous text usage.
