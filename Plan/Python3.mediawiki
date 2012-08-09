@@ -14,7 +14,7 @@ All other standard Twisted development practices apply.
 
   1. Bootstrap the testing system
     1. Port the non-reactor parts of trial necessary to run the tests for the non-reactor parts of trial
-      1. Refactor the implementation to separate the reactor and non-reactor parts into separate source files
+      1. [ticket:5853 Refactor the implementation to separate the reactor and non-reactor parts into separate source files]
       1. Add more tests for uncovered functionality
       1. Get the non-reactor parts passing their own tests on Python 3.3 (alpha, until 3.3 is actually released)
     1. Test-driven port of the dependencies of the reactor features of trial
