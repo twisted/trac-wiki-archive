@@ -1,0 +1,53 @@
+== Objective ==
+
+To have Twisted available on Python 3.3 and newer, with the same functionality as is currently available on Python 2.x.
+
+== Strategy ==
+
+  * Single source - The result will be a version of Twisted that is source-compatible with Python 2.6, Python 2.7, and Python 3.3.
+  * Test-driven - Following the standard Twisted development process, all changed code will be fully automatically unit tested.
+  * Opportunistic - Where module dependencies (within Twisted) need to be ported to support porting of the high-priority modules, modules may be split so that only some of their contents need to be ported.
+
+All other standard Twisted development practices apply.
+
+== Details ==
+
+  1. Bootstrap the testing system
+    1. Port the non-reactor parts of trial necessary to run the tests for the non-reactor parts of trial
+      1. Refactor the implementation to separate the reactor and non-reactor parts into separate source files
+      1. Add more tests for uncovered functionality
+      1. Get the non-reactor parts passing their own tests on Python 3.3 (alpha, until 3.3 is actually released)
+  1. Test-driven port of the dependencies of the reactor features of trial
+  1. Test-driven port of the reactor features of trial
+  1. Test-driven port of the following modules (some of which may be dependencies of above steps):
+    * twisted.cred
+    * twisted.internet.defer
+    * twisted.trial
+    * twisted.internet.gireactor
+    * twisted.internet.selectreactor
+    * twisted.internet.pollreactor
+    * twisted.internet.ssl
+    * twisted.protocols.basic
+    * twisted.web
+      * client
+      * http
+      * resource
+      * server
+      * http_headers
+    * twisted.internet
+      * abstract
+      * reactor
+      * endpoints
+      * protocol
+      * interfaces
+      * error
+      * task
+    * twisted.python
+      * failure
+      * log
+      * util
+      * procutils
+    * twisted.names
+    * twisted.application
+      * internet
+      * service
