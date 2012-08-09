@@ -51,3 +51,8 @@ All other standard Twisted development practices apply.
     * twisted.application
       * internet
       * service
+
+  * Strings
+    * Python 2 largely conflates text and bytes in the `str` type, but offers `unicode` for unambiguous text usage.
+    * Python 3 reduces the functionality of the `str` type and renames it to `bytes`, reflecting the intent that it be used for bytes only.  It renames the `unicode` type to `str`.
+    * There is a third kind of string, used to represent Python identifiers.  These are bytes in Python 2 and text in Python 3.
