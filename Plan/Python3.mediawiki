@@ -112,3 +112,4 @@ twisted._version
     * `twisted.python.deprecate` - we will not be porting deprecated code, presumably, so hopefully we can omit the module.
     * `twisted.python.win32` - windows is not a target platform for the initial release.
     * `twisted.persisted.sob` and `twisted.persisted.styles` - this is all useless and/or terrible.
+    * No doubt some others we can get away with only porting part of the module.
