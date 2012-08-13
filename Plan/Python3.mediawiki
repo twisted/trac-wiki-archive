@@ -106,4 +106,9 @@ twisted.trial.runner
 twisted.trial.unittest
 twisted._version
 }}}
-  Ideally we could omit a number of them.
+  Ideally we could omit a number of them:
+    * `twisted.python.hook (#5860)
+    * `twisted.python._initgroups` (#5861)
+    * `twisted.python.deprecate` - we will not be porting deprecated code, presumably, so hopefully we can omit the module.
+    * `twisted.python.win32` - windows is not a target platform for the initial release.
+    * `twisted.persisted.sob` and `twisted.persisted.styles` - this is all useless and/or terrible.
