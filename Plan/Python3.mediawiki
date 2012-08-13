@@ -58,3 +58,52 @@ All other standard Twisted development practices apply.
     * Python 2 largely conflates text and bytes in the `str` type, but offers `unicode` for unambiguous text usage.
     * Python 3 reduces the functionality of the `str` type and renames it to `bytes`, reflecting the intent that it be used for bytes only.  It renames the `unicode` type to `str`.
     * There is a third kind of string, used to represent Python identifiers and docstrings.  These are bytes in Python 2 and text in Python 3.
+
+  * Running `trial --version` requires the following modules:
+{{{
+twisted
+twisted.application
+twisted.application.app
+twisted.application.reactors
+twisted.application.service
+twisted.copyright
+twisted.internet
+twisted.internet.defer
+twisted.internet.protocol
+twisted.internet.utils
+twisted.persisted
+twisted.persisted.sob
+twisted.persisted.styles
+twisted.plugin
+twisted.python
+twisted.python.compat
+twisted.python.components
+twisted.python.context
+twisted.python.deprecate
+twisted.python.failure
+twisted.python.filepath
+twisted.python.hashlib
+twisted.python.hook
+twisted.python._initgroups
+twisted.python.lockfile
+twisted.python.log
+twisted.python.logfile
+twisted.python.modules
+twisted.python.monkey
+twisted.python.runtime
+twisted.python.text
+twisted.python.threadable
+twisted.python.usage
+twisted.python.util
+twisted.python.versions
+twisted.python.win32
+twisted.python.zippath
+twisted.scripts.trial
+twisted.trial
+twisted.trial.itrial
+twisted.trial.reporter
+twisted.trial.runner
+twisted.trial.unittest
+twisted._version
+}}}
+  Ideally we could omit a number of them.
