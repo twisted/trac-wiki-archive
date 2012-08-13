@@ -10,6 +10,8 @@ To have Twisted available on Python 3.3 and newer, with the same functionality a
 
 All other standard Twisted development practices apply.
 
+An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3%20Minimal) is being funded by Canonical and implemented by Future Foundries LLC (i.e. Itamar and Jean-Paul), with the aim of getting a basic subset of Twisted working, sufficient to run a specific Canonical project. If that is done and any time is left over in the contract, it will be spent doing more porting, so help by other developers will hopefully result in more of Twisted being ported.
+
 == Details ==
 
   1. Bootstrap the testing system
@@ -108,7 +110,7 @@ twisted._version
 }}}
   Ideally we could omit a number of them:
     * `twisted.python.hook (#5860)
-    * `twisted.python._initgroups` (#5861)
+    * `twisted.python._initgroups` (#4920)
     * `twisted.python.deprecate` - we will not be porting deprecated code, presumably, so hopefully we can omit the module.
     * `twisted.python.win32` - windows is not a target platform for the initial release.
     * `twisted.persisted.sob` and `twisted.persisted.styles` - this is all useless and/or terrible.
