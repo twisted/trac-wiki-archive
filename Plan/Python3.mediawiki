@@ -12,6 +12,16 @@ All other standard Twisted development practices apply.
 
 An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3%20Minimal) is being funded by Canonical and implemented by Future Foundries LLC (i.e. Itamar and Jean-Paul), with the aim of getting a basic subset of Twisted working, sufficient to run a specific Canonical project. If that is done and any time is left over in the contract, it will be spent doing more porting, so help by other developers will hopefully result in more of Twisted being ported.
 
+== Reviewer check list ==
+
+  1. Tests pass under 3.3.
+  1. Ported modules were added to list of ported modules (location TBD).
+  1. No warnings when running using -3 mode under Python 2.7.
+  1. All non-docstring strings are clearly marked as one of the various string categories (bytes/unicode/identifier/version-dependent).
+  1. No use of 'str'.
+  1. `from __future__ import division` was added to the module.
+  1. Verify dictionary methods were ported correctly.
+
 == Details ==
 
   1. Bootstrap the testing system
