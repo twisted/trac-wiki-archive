@@ -102,7 +102,7 @@ Likewise, if you merge from trunk to branch, then `dcommit` the merge, it will b
 
 == git svn merging forward ==
 
-I haven't done this yet, but it probably needs special handling for the reasons mentioned in the previous section. Look at [http://divmod.org/trac/wiki/MergedForward the official how-to-merge-forward] docs for inspiration.
+I haven't done this yet, but it probably needs special handling for the reasons mentioned in the previous section. Look at [http://twistedmatrix.com/trac/wiki/TwistedWithCombinator#MergingForward this wiki] for inspiration.
 
 == git svn branch merging ==
 
