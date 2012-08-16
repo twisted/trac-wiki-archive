@@ -18,9 +18,10 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
   1. Ported modules were added to list of ported modules (location TBD).
   1. No warnings when running using -3 mode under Python 2.7.
   1. All non-docstring strings are clearly marked as one of the various string categories (bytes/unicode/identifier/version-dependent).
-  1. No use of 'str'.
+  1. No use of 'str' except for things that really can differ across versions of Python.
   1. `from __future__ import division` was added to the module.
   1. Verify dictionary methods were ported correctly.
+  1. All calls to `open()` files should be in binary mode.
 
 == Details ==
 
