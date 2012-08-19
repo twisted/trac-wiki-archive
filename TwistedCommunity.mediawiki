@@ -15,7 +15,7 @@ Stack Overflow is a programming Q & A site.  You can find Twisted-related questi
 
   * http://stackoverflow.com/questions/tagged/twisted
 
-== IRC ==
+== Real-Time Chat ==
 
 Server: {{{irc.freenode.net}}} (more about [http://freenode.net the Freenode IRC network])
 
