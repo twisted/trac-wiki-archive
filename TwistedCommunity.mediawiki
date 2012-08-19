@@ -19,7 +19,15 @@ Stack Overflow is a programming Q & A site.  You can find Twisted-related questi
 
 Server: {{{irc.freenode.net}}} (more about [http://freenode.net the Freenode IRC network])
 
-Channels: [irc://irc.freenode.net/twisted #twisted], [irc://irc.freenode.net/twisted.web #twisted.web]
+For support, you can join one of several channels:
+
+  - [irc://irc.freenode.net/twisted #twisted] - support for all Twisted packages except Twisted Web
+  - [irc://irc.freenode.net/twisted.web #twisted.web] - support for Twisted Web; both for development with it and deploying it
+  - [irc://irc.freenode.net/divmod #divmod] - support for and development of [https://launchpad.net/divmod.org technologies related to Twisted] such as the Nevow templating system.
+
+If you're working on Twisted, you should join the development channel.
+
+  - [irc://irc.freenode.net/twisted-dev #twisted-dev] - for development of Twisted
 
 == Blogs ==
 
