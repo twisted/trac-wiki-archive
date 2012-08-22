@@ -19,7 +19,8 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
   1. No warnings when running using -3 mode under Python 2.7.
   1. All non-docstring strings are clearly marked as one of the various string categories (bytes/unicode/identifier/version-dependent).
   1. No use of 'str' except for things that really can differ across versions of Python.
-  1. `from __future__ import division` was added to the module.
+  1. `from __future__ import division, absolute_import` was added to the module.
+    1. And any code changes necessary to work with the resulting changed semantics were made.
   1. Verify dictionary methods were ported correctly.
   1. All calls to `open()` files should be in binary mode.
 
@@ -68,9 +69,14 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
   1. Build-slave for Python 3.3 should only run ported test modules.
 
   * Strings
-    * Python 2 largely conflates text and bytes in the `str` type, but offers `unicode` for unambiguous text usage.
-    * Python 3 reduces the functionality of the `str` type and renames it to `bytes`, reflecting the intent that it be used for bytes only.  It renames the `unicode` type to `str`.
-    * There is a third kind of string, used to represent Python identifiers and docstrings.  These are bytes in Python 2 and text in Python 3.
+    * Types
+      * Python 2 largely conflates text and bytes in the `str` type, but offers `unicode` for unambiguous text usage.
+      * Python 3 reduces the functionality of the `str` type and renames it to `bytes`, reflecting the intent that it be used for bytes only.  It renames the `unicode` type to `str`.
+      * There is a third kind of string, used to represent Python identifiers and docstrings.  These are bytes in Python 2 and text in Python 3.
+    * Plan
+      * Python 2.x native (byte) strings will be changed to Python 3.x native (text) strings except where some particular consideration dictates something else.  For example, strings which belong to APIs primarily related to network traffic (ie, strings that come out of or go into sockets) will remain as byte strings.
+      * As a consequence, APIs which previously only supported Python 2.x native (byte) strings will be changed on Python 3.x to accept native (text) strings.  Where there does not introduce a new requirement to choose an encoding, arbitrary text will be supported.  Where it does and the choice of encoding is trivially obvious (for example, dealing with a protocol which mandates UTF-8 in an RFC), arbitrary text will be supported.  Where the choice if encoding is not trivially obvious, only ASCII text will be supported.
+      * A later porting pass will revisit these ASCII only sites and expand support to include arbitrary text.
 
   * Running `trial --version` requires the following modules:
 {{{
