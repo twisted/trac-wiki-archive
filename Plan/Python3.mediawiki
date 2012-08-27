@@ -122,7 +122,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
    * twisted.trial.reporter
    * twisted.trial.runner
    * twisted.trial.unittest
-   * ticket:5886 twisted._version]
+   * [ticket:5886 twisted._version]
 
   Ideally we could omit a number of them:
     * `twisted.python.hook (#5860)
