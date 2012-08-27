@@ -79,52 +79,51 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * A later porting pass will revisit these ASCII only sites and expand support to include arbitrary text.
 
   * Running `trial --version` requires the following modules:
-{{{
-twisted
-twisted.application
-twisted.application.app
-twisted.application.reactors
-twisted.application.service
-twisted.copyright
-twisted.internet
-twisted.internet.defer
-twisted.internet.protocol
-twisted.internet.utils
-twisted.persisted
-twisted.persisted.sob
-twisted.persisted.styles
-twisted.plugin
-twisted.python
-[ticket:5877 twisted.python.compat]
-twisted.python.components
-twisted.python.context
-[ticket:5916 twisted.python.deprecate]
-twisted.python.failure
-[ticket:5903 twisted.python.filepath]
-twisted.python.hashlib
-twisted.python.hook
-[ticket:4920 twisted.python._initgroups]
-twisted.python.lockfile
-twisted.python.log
-twisted.python.logfile
-twisted.python.modules
-[ticket:5896 twisted.python.monkey]
-[ticket:5997 twisted.python.runtime]
-twisted.python.text
-twisted.python.threadable
-twisted.python.usage
-twisted.python.util
-[ticket:5917 twisted.python.versions]
-twisted.python.win32
-twisted.python.zippath
-twisted.scripts.trial
-twisted.trial
-twisted.trial.itrial
-twisted.trial.reporter
-twisted.trial.runner
-twisted.trial.unittest
-[ticket:5886 twisted._version]
-}}}
+   * twisted
+   * twisted.application
+   * twisted.application.app
+   * twisted.application.reactors
+   * twisted.application.service
+   * twisted.copyright
+   * twisted.internet
+   * twisted.internet.defer
+   * twisted.internet.protocol
+   * twisted.internet.utils
+   * twisted.persisted
+   * twisted.persisted.sob
+   * twisted.persisted.styles
+   * twisted.plugin
+   * twisted.python
+   * [ticket:5877 twisted.python.compat]
+   * twisted.python.components
+   * twisted.python.context
+   * [ticket:5916 twisted.python.deprecate]
+   * twisted.python.failure
+   * [ticket:5903 twisted.python.filepath]
+   * twisted.python.hashlib
+   * twisted.python.hook
+   * [ticket:4920 twisted.python._initgroups]
+   * twisted.python.lockfile
+   * twisted.python.log
+   * twisted.python.logfile
+   * twisted.python.modules
+   * [ticket:5896 twisted.python.monkey]
+   * [ticket:5997 twisted.python.runtime]
+   * twisted.python.text
+   * twisted.python.threadable
+   * twisted.python.usage
+   * twisted.python.util
+   * [ticket:5917 twisted.python.versions]
+   * twisted.python.win32
+   * twisted.python.zippath
+   * twisted.scripts.trial
+   * twisted.trial
+   * twisted.trial.itrial
+   * twisted.trial.reporter
+   * twisted.trial.runner
+   * twisted.trial.unittest
+   * ticket:5886 twisted._version]
+
   Ideally we could omit a number of them:
     * `twisted.python.hook (#5860)
     * `twisted.python._initgroups` (#4920)
