@@ -95,26 +95,26 @@ twisted.persisted.sob
 twisted.persisted.styles
 twisted.plugin
 twisted.python
-twisted.python.compat
+[ticket:5877 twisted.python.compat]
 twisted.python.components
 twisted.python.context
-twisted.python.deprecate
+[ticket:5916 twisted.python.deprecate]
 twisted.python.failure
-twisted.python.filepath
+[ticket:5903 twisted.python.filepath]
 twisted.python.hashlib
 twisted.python.hook
-twisted.python._initgroups
+[ticket:4920 twisted.python._initgroups]
 twisted.python.lockfile
 twisted.python.log
 twisted.python.logfile
 twisted.python.modules
-twisted.python.monkey
-twisted.python.runtime
+[ticket:5896 twisted.python.monkey]
+[ticket:5997 twisted.python.runtime]
 twisted.python.text
 twisted.python.threadable
 twisted.python.usage
 twisted.python.util
-twisted.python.versions
+[ticket:5917 twisted.python.versions]
 twisted.python.win32
 twisted.python.zippath
 twisted.scripts.trial
@@ -123,7 +123,7 @@ twisted.trial.itrial
 twisted.trial.reporter
 twisted.trial.runner
 twisted.trial.unittest
-twisted._version
+[ticket:5886 twisted._version]
 }}}
   Ideally we could omit a number of them:
     * `twisted.python.hook (#5860)
