@@ -21,8 +21,6 @@ As well as all (or as many as possible) of the libraries Twisted depends on:
   * [https://launchpad.net/subunit subunit] (Debian package python-subunit)
     * Depends on [http://pypi.python.org/pypi/testtools testtools]
 
-A build slave needs authentication credentials in order to be allowed to connect to the build master.  Credentials can be obtained by emailing twisted dash python at twisted matrix dot com and expressing interest in running a slave.
-
 Unfortunately a few tests in Twisted's test suite will fail if certain guarantees are not made by the environment.  For example, the multicast tests try to use the actual network stack to send multicast packets.  Here are some things that are known about this:
 
   * For the multicast tests to pass, multicast packets must be routable over localhost.
@@ -41,3 +39,22 @@ bzr checkout svn://svn.twistedmatrix.com/svn/Twisted/trunk Twisted
 }}}
 
 with a working directory of `/path/to/slave-root/builder-name/`.  The correct directory should have `Twisted` and `.bzr` directories in it already.  Re-running the failed command in that directory will resume the checkout and eventually succeed (perhaps after quite a long time - dozens of minutes, at least - this is expected).
+
+If you wish to provide a buildslave for twisted, send the follwoing information to buildbot at twisted matrix dot com:
+
+1. Desired slave name.
+   This will show up on http://buildbot.twistedmatrix.com/buildslaves
+   Something like <name>-<machine-description>
+
+2. Password
+   This is sent cleartext.
+
+3. Email address
+   This is used to send mail messages when the slave disappears. It
+   isn't visible.
+
+4. What builders you want set up.
+   - what reactors are available/should be tested
+   - path to the python executable, if it isn't the default python on the path.
+
+5. How many parallel builds you want allowed to run.
