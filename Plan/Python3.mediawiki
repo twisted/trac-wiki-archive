@@ -68,6 +68,26 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * service
   1. Build-slave for Python 3.3 should only run ported test modules.
 
+== Tips ==
+
+  1. Select a module that needs to be ported (make sure there is a ticket, no one else has started it, etc).
+  1. Add the module and its test module(s) to admin/_twistedpython3.py
+  1. Run admin/run-python3-tests
+  1. Fix syntax errors in the test module
+    1. If only some of the APIs in the module are being ported, split the test module into two.  Move the tests for the APIs being ported into a new module, `test_foopy3.py`.  For the remaining steps, just fix the `test_foopy3.py` module.
+  1. If there are syntax errors in modules depended on by the test module:
+    1. See if the depended-on module has been split into a `foo` and `_foopy3` module and if the APIs needed from it are already in the `_foopy3` module. 
+      1. If so, switch the test module to using the `_foopy3` module directly.
+      1. If not, go back to the beginning using the depended-on module as the thing to port.
+    1. See if the APIs are really needed.  For example, if the dependency is trial (and trial is not yet ported), perhaps the test module could use (temporarily) the stdlib unittest module instead.
+      1. If the APIs are not needed, switch them to something that has been ported or remove their use.
+      1. If they are, go back to the beginning using the depended-on module as the thing to port.
+  1. Make the tests pass on Python 2.6 and Python 2.7.
+  1. Make the tests pass on Python 3.3.
+    1. If only some of the APIs in the module are being ported, split the implementation module into two.  Move the implementation of the APIs being ported into a new file, `_foopy3.py`.  Import these names into the original module to preserve the API.  Import the APIs directly from this new private module in the test module, so the implementation of the APIs not being ported don't get in the way of running the tests.
+  1. Verify the tests still pass on all 3 versions of Python.
+  1. Submit for review
+
   * Strings
     * Types
       * Python 2 largely conflates text and bytes in the `str` type, but offers `unicode` for unambiguous text usage.
