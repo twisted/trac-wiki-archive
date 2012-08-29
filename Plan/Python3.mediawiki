@@ -127,7 +127,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
   Ideally we could omit a number of them:
     * `twisted.python.hook (#5860)
     * `twisted.python._initgroups` (#4920)
-    * ~`twisted.python.deprecate` - we will not be porting deprecated code, presumably, so hopefully we can omit the module.~ (trial depends on this, porting it is easier than selectively cutting out all the bits in trial and throughout the test suite that rely on the functionality)
+    * ~~`twisted.python.deprecate` - we will not be porting deprecated code, presumably, so hopefully we can omit the module.~~ (trial depends on this, porting it is easier than selectively cutting out all the bits in trial and throughout the test suite that rely on the functionality)
     * `twisted.python.win32` - windows is not a target platform for the initial release.
     * `twisted.persisted.sob` and `twisted.persisted.styles` - this is all useless and/or terrible.
     * No doubt some others we can get away with only porting part of the module.
