@@ -18,7 +18,6 @@
 
  * [[ProjectVersion(http://pypi.python.org/packages/2.7/T/Twisted/Twisted-%(base)s.win32-py2.7.msi Twisted %(base)s for Python 2.7)]]
  * [[ProjectVersion(http://pypi.python.org/packages/2.6/T/Twisted/Twisted-%(base)s.win32-py2.6.msi Twisted %(base)s for Python 2.6)]]
- * [[ProjectVersion(http://pypi.python.org/packages/2.5/T/Twisted/Twisted-%(base)s.win32-py2.5.msi Twisted %(base)s for Python 2.5)]]
 
 == Other ==
 
