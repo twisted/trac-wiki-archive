@@ -269,6 +269,7 @@ jml
  1. Merge the release branch into trunk, closing the release ticket at the same time.
     * For now you need to add a .misc NEWS fragment to merge the branch.
  1. Close the release milestone (which should have no tickets in it).
+ 1. Open a milestone for the next release.
 
 == Release announcement ==
 
