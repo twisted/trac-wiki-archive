@@ -68,7 +68,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
     * twisted.application
       * internet
       * service
-  1. Build-slave for Python 3.3 should only run ported test modules.
+  1. [http://buildbot.twistedmatrix.com/builders/python-3.3-tests Build-slave for Python 3.3 should only run ported test modules.]
 
 == Tips ==
 
