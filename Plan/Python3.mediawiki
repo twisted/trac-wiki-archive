@@ -23,6 +23,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
     1. And any code changes necessary to work with the resulting changed semantics were made.
   1. Verify dictionary methods were ported correctly.
   1. All calls to `open()` files should be in binary mode.
+  1. Unavoidable incompatibilities between Twisted APIs on Python 3 and the original behavior on Python 2 are documented in `doc/core/howto/python3.xhtml` (incompatibilities in the Python 2 behavior are not allowed).
 
 == Details ==
 
