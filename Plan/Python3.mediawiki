@@ -132,7 +132,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
    * [ticket:5896 twisted.python.monkey]
    * [ticket:5997 twisted.python.runtime]
    * twisted.python.text
-   * [ticket:5960 twisted.python.threadable]
+   * [ticket:5860 twisted.python.threadable]
    * twisted.python.usage
    * twisted.python.util
    * [ticket:5917 twisted.python.versions]
