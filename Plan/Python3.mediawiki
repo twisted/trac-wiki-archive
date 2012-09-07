@@ -60,8 +60,8 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * error
       * task
     * twisted.python
-      * failure
-      * log
+      * [ticket:5931 failure] (#5948)
+      * [ticket:5932 log]
       * util
       * procutils
     * twisted.names
