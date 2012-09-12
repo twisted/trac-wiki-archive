@@ -15,7 +15,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
 == Reviewer check list ==
 
   1. Tests pass under 3.3.
-  1. Ported modules were added to list of ported modules - `admin/_twistedpython3.py`
+  1. Ported modules were added to list of ported modules - [source:trunk/admin/_twistedpython3.py admin/_twistedpython3.py]
   1. No warnings when running using -3 mode under Python 2.7.
   1. All non-docstring strings are clearly marked as one of the various string categories (bytes/unicode/identifier/version-dependent).
   1. No use of 'str' except for things that really can differ across versions of Python.
@@ -23,7 +23,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
     1. And any code changes necessary to work with the resulting changed semantics were made.
   1. Verify dictionary methods were ported correctly.
   1. All calls to `open()` files should be in binary mode.
-  1. Unavoidable incompatibilities between Twisted APIs on Python 3 and the original behavior on Python 2 are documented in `doc/core/howto/python3.xhtml` (incompatibilities in the Python 2 behavior are not allowed).
+  1. Unavoidable incompatibilities between Twisted APIs on Python 3 and the original behavior on Python 2 are documented in [source:trunk/doc/core/howto/python3.xhtml doc/core/howto/python3.xhtml] (incompatibilities in the Python 2 behavior are not allowed).
 
 == Details ==
 
@@ -74,8 +74,8 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
 == Tips ==
 
   1. Select a module that needs to be ported (make sure there is a ticket, no one else has started it, etc).
-  1. Add the module and its test module(s) to admin/_twistedpython3.py
-  1. Run admin/run-python3-tests
+  1. Add the module and its test module(s) to [source:trunk/admin/_twistedpython3.py admin/_twistedpython3.py]
+  1. Run [source:trunk/admin/run-python3-tests admin/run-python3-tests]
   1. Fix syntax errors in the test module
     1. If only some of the APIs in the module are being ported, split the test module into two.  Move the tests for the APIs being ported into a new module, `test_foopy3.py`.  For the remaining steps, just fix the `test_foopy3.py` module.
   1. If there are syntax errors in modules depended on by the test module:
@@ -148,7 +148,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
    * [ticket:5886 twisted._version]
 
   Ideally we could omit a number of them:
-    * `twisted.python.hook (#5860)
+    * `twisted.python.hook` (#5860)
     * `twisted.python._initgroups` (#4920)
     * ~~`twisted.python.deprecate` - we will not be porting deprecated code, presumably, so hopefully we can omit the module.~~ (trial depends on this, porting it is easier than selectively cutting out all the bits in trial and throughout the test suite that rely on the functionality)
     * `twisted.python.win32` - windows is not a target platform for the initial release.
