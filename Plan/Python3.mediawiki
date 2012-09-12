@@ -139,11 +139,11 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
    * [ticket:5917 twisted.python.versions]
    * twisted.python.win32
    * twisted.python.zippath
-   * twisted.scripts.trial
+   * [ticket:5966 twisted.scripts.trial]
    * twisted.trial
    * twisted.trial.itrial
-   * twisted.trial.reporter
-   * twisted.trial.runner
+   * [ticket:5964 twisted.trial.reporter]
+   * [ticket:5965 twisted.trial.runner]
    * twisted.trial.unittest (#5874)
    * [ticket:5886 twisted._version]
 
