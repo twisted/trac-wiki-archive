@@ -1,0 +1,13 @@
+Sometimes things go wrong on a build slave.  This might be a network problem, or the disk might fill up, Twisted might even add a new dependency that's not available.  Any one of a million, billion things could happen that prevent the slave from completing the builds assigned to it.  For slaves running supported builders, this is a major problem.  Supported builders need to be running their builds all the time.
+
+If a slave running a supported builder stops being able to complete the builds assigned to it:
+
+  1. Contact the slave operator and request that the problem be addressed.
+    1. If there is a problem that the slave operator cannot address, raise it with the community at large for assistance.
+  1. Otherwise, if the problem is not resolved after one week, follow up with the slave operator about the problem.
+  1. If no solution is forthcoming within two days, contact the community at large to seek a replacement for the slave.
+  1. If there is no replacement offered within one week, remind the community about the request.
+  1. If there is no replacement offered within one further week, announce the de-support of the platform represented by the slave.
+    1. Adjust the buildbot configuration to drop the slave.
+    1. File a ticket, added to the milestone for the next release, for announcing the de-support of the platform with the pre-release.
+  1. If the pre-release announcement with its warning brings a replacement slave, add it to the build slave and announce the ongoing support of the platform if the slave can be made green without delaying the release.
