@@ -16,7 +16,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
 
   1. Tests pass under 3.3.
   1. Ported modules were added to list of ported modules - [source:trunk/admin/_twistedpython3.py admin/_twistedpython3.py]
-  1. No warnings when running using -3 mode under Python 2.7.
+  1. No warnings when running using `-3` mode under Python 2.7.
   1. All non-docstring strings are clearly marked as one of the various string categories (bytes/unicode/identifier/version-dependent).
   1. No use of 'str' except for things that really can differ across versions of Python.
   1. `from __future__ import division, absolute_import` was added to the module.
@@ -48,7 +48,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * server
       * http_headers
     * twisted.internet
-      * defer
+      * [ticket:5947 defer]
       * gireactor
       * selectreactor
       * pollreactor
@@ -58,7 +58,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * endpoints
       * protocol
       * [ticket:5942 interfaces]
-      * error
+      * [ticket:5972 error]
       * task
     * twisted.python
       * [ticket:5931 failure] (#5948)
@@ -109,7 +109,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
    * twisted.application.service
    * twisted.copyright
    * twisted.internet
-   * twisted.internet.defer
+   * [ticket:5947 twisted.internet.defer]
    * twisted.internet.protocol
    * twisted.internet.utils
    * twisted.persisted
@@ -124,7 +124,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
    * [ticket:5931 twisted.python.failure]
    * [ticket:5903 twisted.python.filepath]
    * twisted.python.hashlib
-   * ~~twisted.python.hook~~
+   * [ticket:5860 twisted.python.hook]
    * [ticket:4920 twisted.python._initgroups]
    * twisted.python.lockfile
    * [ticket:5932 twisted.python.log]
@@ -132,10 +132,11 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
    * twisted.python.modules
    * [ticket:5896 twisted.python.monkey]
    * [ticket:5997 twisted.python.runtime]
+   * twisted.python.reflect (#5906, #5913, #5914)
    * twisted.python.text
    * [ticket:5860 twisted.python.threadable]
    * twisted.python.usage
-   * twisted.python.util
+   * twisted.python.util (#5933)
    * [ticket:5917 twisted.python.versions]
    * twisted.python.win32
    * twisted.python.zippath
