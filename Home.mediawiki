@@ -245,6 +245,7 @@ def main(reactor, username="alice", password="secret",
         print "IMAP4 client interaction failed"
         failure.Failure().printTraceback()
 
+# This API requires Twisted 12.3 or later, or a trunk checkout:
 task.react(main, sys.argv[1:])
 }}}
 
