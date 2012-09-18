@@ -40,7 +40,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
     * twisted.trial
     * twisted.protocols
       * basic
-      * tls
+      * tls (#5979)
     * twisted.web
       * client
       * http
@@ -48,19 +48,22 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * server
       * http_headers
     * twisted.internet
+      * abstract (#5980)
+      * [ticket:5985 address]
       * [ticket:5947 defer]
-      * gireactor
-      * selectreactor
-      * pollreactor
-      * ssl
-      * abstract
-      * reactor
       * endpoints
-      * protocol
-      * [ticket:5942 interfaces]
       * [ticket:5972 error]
-      * task
+      * [ticket:5974 fdesc]
+      * gireactor
+      * [ticket:5942 interfaces]
+      * pollreactor (#5979)
+      * protocol
+      * reactor
+      * selectreactor (#5979)
+      * ssl
+      * task (#5979)
     * twisted.python
+      * [ticket:5983 components]
       * [ticket:5931 failure] (#5948)
       * [ticket:5932 log]
       * util
