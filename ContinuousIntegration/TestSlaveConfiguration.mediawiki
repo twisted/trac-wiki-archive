@@ -9,6 +9,8 @@ A build slave which is to run the Twisted test suite on a particular platform or
   * [http://twistedmatrix.com/ Twisted] - required by buildbot
   * [http://buildbot.net/ BuildBot] - only buildbot-slave is necessary
   * [http://bazaar.canonical.com/en/ bazaar] - sometimes packaged as bazaar-ng
+    * [http://wiki.bazaar.canonical.com/ForeignBranches/Subversion?action=show&redirect=BzrForeignBranches/Subversion bzr-svn] (preferred)
+    * [http://samba.org/~jelmer/subvertpy/ subvertpy] (dependency of bzr-svn)
 
 As well as all (or as many as possible) of the libraries Twisted depends on:
 
