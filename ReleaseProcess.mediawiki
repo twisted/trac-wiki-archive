@@ -81,7 +81,7 @@ To release Twisted, we
  1. Delete the NEWS turds (see #4315)
  1. Bump copyright dates in `LICENSE`, `twisted/copyright.py`, and `README`
  1. Make a temporary directory for the tarballs to live in (e.g. `mkdir /tmp/twisted-release`)
- 1. Run `./bin/admin/build-tarballs . /tmp/twisted-release/`
+ 1. Run `./bin/admin/build-tarballs . /tmp/twisted-release/`.  ''Note'': `build-tarballs` does not produce exactly the same output when run multiple times, even when nothing else has changed.  If a problem is encountered that requires `build-tarballs` to be re-run (either during the pre-release or later during the release), care must be taken to avoid releasing two or more '''different''' versions of the tarball.
  1. Upload the tarballs to a public website (see #4353)
  1. Write the pre-release announcement
     1. Read through the `NEWS` file and summarize the interesting changes for the release
