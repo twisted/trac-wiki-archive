@@ -24,6 +24,10 @@ Did you check the [wiki:Documentation HOWTO collection]? There are so many docum
 
 As of version 2.0, Twisted was split up into many subprojects, because it was getting too much to handle in a monolithic release, and we believe breaking the project into smaller chunks will help people understand the things they need to understand (There used to be a FAQ entry here asking Why is Twisted so big?). More information is available in the [http://twistedmatrix.com/documents/current/core/upgrades/2.0/split.html Split FAQ].
 
+=== How big is Twisted? ===
+
+As of Twisted 12.2, the source release archive of Twisted is 2.8MB.  This is about the same as the size of Twisted when installed as a zipfile.  Installed normally, uncompressed, Twisted is a bit larger - about 12MB.
+
 === Why did the version number go from 2.5 to 8.x? ===
 
 Twisted has moved to a date based version number scheme.  The major version number now indicates the year the release was made in.  So all releases made in 2008 are 8.x, all releases in 2009 will be 9.x and so on.
