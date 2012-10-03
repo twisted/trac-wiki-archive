@@ -31,10 +31,10 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
     1. Port the non-reactor parts of trial necessary to run the tests for the non-reactor parts of trial
       1. [ticket:5853 Refactor the implementation to separate the reactor and non-reactor parts into separate source files]
       1. Add more tests for uncovered functionality
-      1. Get the non-reactor parts passing their own tests on Python 3.3 (until 3.3 is actually [http://www.python.org/download/releases/3.3.0/ released])
+      1. Get the non-reactor parts passing their own tests on [http://www.python.org/download/releases/3.3.0/ Python 3.3]
     1. Test-driven port of the dependencies of the reactor features of trial
     1. Test-driven port of the reactor features of trial
-  1. `setup.py` should only install ported modules on Python 3.
+  1. `setup.py` should only install ported modules on Python 3 (#6040).
   1. Test-driven port of the following modules (some of which may be dependencies of above steps):
     * twisted.cred
     * twisted.trial
@@ -124,7 +124,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
    * [ticket:5877 twisted.python.compat]
    * twisted.python.components
    * [ticket:5934 twisted.python.context]
-   * [ticket:5916 twisted.python.deprecate]
+   * twisted.python.deprecate (#5916, #6036)
    * [ticket:5931 twisted.python.failure]
    * [ticket:5903 twisted.python.filepath]
    * twisted.python.hashlib
@@ -142,14 +142,14 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
    * twisted.python.usage
    * twisted.python.util (#5933)
    * [ticket:5917 twisted.python.versions]
-   * twisted.python.win32
+   * [ticket:6039 twisted.python.win32]
    * twisted.python.zippath
    * [ticket:5966 twisted.scripts.trial]
    * twisted.trial
    * twisted.trial.itrial
    * [ticket:5964 twisted.trial.reporter]
    * [ticket:5965 twisted.trial.runner]
-   * twisted.trial.unittest (#5874, #5963)
+   * twisted.trial.unittest (#5874, #5963, #6033)
    * [ticket:5886 twisted._version]
 
   Ideally we could omit a number of them:
