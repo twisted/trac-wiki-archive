@@ -71,7 +71,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * reactor
       * selectreactor (#5979)
       * ssl
-      * task (#5979)
+      * task (#5979, #6052)
       * udp (#6003, #6023)
     * twisted.python
       * [ticket:5983 components]
