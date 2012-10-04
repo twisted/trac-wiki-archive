@@ -64,7 +64,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * endpoints
       * [ticket:5972 error]
       * [ticket:5974 fdesc]
-      * gireactor
+      * [ticket:6055 gireactor]
       * [ticket:5942 interfaces]
       * pollreactor (#5979)
       * protocol
