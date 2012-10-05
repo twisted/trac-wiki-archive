@@ -81,6 +81,10 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * util
       * procutils
     * twisted.names
+      * [ticket:6058 error]
+      * [ticket:6059 common]
+      * [ticket:6057 dns]
+      * [ticket:6056 client]
     * twisted.application
       * internet
       * service
