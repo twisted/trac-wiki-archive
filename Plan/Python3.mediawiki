@@ -179,3 +179,9 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
     * `twisted.python.win32` - windows is not a target platform for the initial release.
     * `twisted.persisted.sob` and `twisted.persisted.styles` - this is all useless and/or terrible.
     * No doubt some others we can get away with only porting part of the module.
+
+== Lessons Learned ==
+
+These are things that won't necessarily have any bearing on the Twisted porting project.  However, they may inform future porting efforts, either of Twisted-using applications or any other Python applications.
+
+  * Initial porting effort was estimated by looking at what modules would be needed.  This overlooked some modules because they are only imported inside functions.
