@@ -43,7 +43,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       1. Get the non-reactor parts passing their own tests on [http://www.python.org/download/releases/3.3.0/ Python 3.3]
     1. Test-driven port of the dependencies of the reactor features of trial
     1. Test-driven port of the reactor features of trial
-  1. `setup.py` should only install ported modules on Python 3 (#6040).
+  1. `setup.py` should only install ported modules on Python 3 (#6040, #6096).
   1. Test-driven port of the following modules (some of which may be dependencies of above steps):
     * twisted.cred
       * checkers (#5808)
@@ -56,18 +56,19 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * http
       * resource (#6078)
       * server (#6079)
-      * http_headers (#6080)
+      * http_headers (#6080, #6082)
     * twisted.internet
       * abstract (#5980)
       * [ticket:5985 address]
       * [ticket:6065 base]
       * [ticket:5947 defer]
-      * endpoints
+      * [ticket:6088 endpoints]
       * [ticket:5972 error]
       * [ticket:5974 fdesc]
       * [ticket:6055 gireactor]
       * [ticket:5942 interfaces]
       * pollreactor (#5979)
+      * [ticket:6103 posixbase]
       * [ticket:6060 protocol]
       * reactor
       * selectreactor (#5979)
@@ -83,11 +84,15 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * util (#6054)
       * procutils
       * [ticket:6061 randbytes]
+    * twisted.protocols
+      * [ticket:6097 policies]
     * twisted.names
-      * [ticket:6058 error]
+      * [ticket:6093 cache]
+      * [ticket:6056 client]
       * [ticket:6059 common]
       * [ticket:6057 dns]
-      * [ticket:6056 client]
+      * [ticket:6058 error]
+      * [ticket:6092 hosts]
     * twisted.application
       * internet
       * service
@@ -139,7 +144,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
    * twisted.persisted.styles
    * twisted.plugin
    * twisted.python
-   * [ticket:5877 twisted.python.compat]
+   * [ticket:5877 twisted.python.compat] (#6099)
    * twisted.python.components
    * [ticket:5934 twisted.python.context]
    * twisted.python.deprecate (#5916, #6036)
@@ -155,7 +160,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
    * [ticket:5896 twisted.python.monkey]
    * [ticket:6061 twisted.python.randbytes]
    * [ticket:5997 twisted.python.runtime]
-   * twisted.python.reflect (#5906, #5913, #5914)
+   * twisted.python.reflect (#5906, #5913, #5914, #6100)
    * twisted.python.text
    * [ticket:5860 twisted.python.threadable]
    * twisted.python.usage
