@@ -53,7 +53,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * tls (#5979)
     * twisted.web
       * client (#6077)
-      * http
+      * http (#6110)
       * resource (#6078)
       * server (#6079)
       * http_headers (#6080, #6082)
@@ -64,17 +64,19 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * [ticket:5947 defer]
       * [ticket:6088 endpoints]
       * [ticket:5972 error]
+      * epollreactor (#6068)
       * [ticket:5974 fdesc]
       * [ticket:6055 gireactor]
       * [ticket:5942 interfaces]
-      * pollreactor (#5979)
+      * pollreactor (#5979, #6068)
       * [ticket:6103 posixbase]
       * [ticket:6060 protocol]
       * reactor
-      * selectreactor (#5979)
+      * selectreactor (#5979, #6068)
       * ssl
       * task (#5979, #6052)
       * [ticket:6067 threads]
+      * tcp (#6002, #6069)
       * udp (#6003, #6023)
     * twisted.python
       * [ticket:5983 components]
@@ -85,6 +87,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * procutils
       * [ticket:6061 randbytes]
     * twisted.protocols
+      * [ticket:6109 loopback]
       * [ticket:6097 policies]
     * twisted.names
       * [ticket:6093 cache]
@@ -159,7 +162,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
    * twisted.python.modules (#6041)
    * [ticket:5896 twisted.python.monkey]
    * [ticket:6061 twisted.python.randbytes]
-   * [ticket:5997 twisted.python.runtime]
+   * [ticket:5897 twisted.python.runtime]
    * twisted.python.reflect (#5906, #5913, #5914, #6100)
    * twisted.python.text
    * [ticket:5860 twisted.python.threadable]
