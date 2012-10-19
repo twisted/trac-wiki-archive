@@ -44,7 +44,7 @@
 {{{
 #!div class="side-panel donations"
 
-== Donate to Twisted ==
+== [WhyDonate Donate to Twisted] ==
 
 Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 
