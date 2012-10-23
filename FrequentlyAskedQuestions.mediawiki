@@ -96,7 +96,7 @@ Try [http://twistedmatrix.com/documents/current/core/howto/servers.html Writing 
 
 Twisted already does this.  If you want to connect to multiple servers, call `connectTCP` (or similar) multiple times, and each call will result in a single outgoing connection.  `listenTCP` will result in your factory (and therefore your protocol) being invoked for each incoming connection.
 
-Sometimes people ask this question when they write a function that calls `connectTCP`, then `reactor.run()`.  You don't usually need to call `reactor.run()` yourself; let `twistd` do it.  If you do need to call it yourself, call it ''just once'' after your initial setup.  When `reactor.run()` exits, your program should too.
+Sometimes people ask this question when they write a function that calls `connectTCP`, then `reactor.run()`.  You don't usually need to call `reactor.run()` yourself; let [http://twistedmatrix.com/documents/current/core/howto/basics.html#auto1 `twistd`] do it.  If you do need to call it yourself, call it ''just once'' after your initial setup.  When `reactor.run()` exits, your program should too.
 
 === How do I make input on one connection result in output on another? ===
 
