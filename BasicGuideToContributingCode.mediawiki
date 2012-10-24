@@ -7,31 +7,51 @@ First, a few recommendations:
   * Search trac for tickets with the [/query?status=new&status=assigned&status=reopened&keywords=%7Eeasy&order=priority 'Easy' keyword]. These are low-hanging fruit and are good for first-time contributors.
 
 What you'll need:
-  * [http://subversion.apache.org/ Subversion (SVN)] client
+  * [http://subversion.apache.org/ Subversion (SVN)] client[[BR]][[BR]]
+  '''What about Git/Bazaar/Mercurial?'''[[BR]]
+  Twisted development takes place in a Subversion repository, but you're welcome to use another VCS for local development.[[BR]]
+  You'll still need to be able to checkout from the svn repository and keep your local development in-sync with Twisted trunk.[[BR]][[BR]]
+  See [wiki:VcsWorkflows DVCS Workflows] for tips on using your favorite DVCS and keeping up-to-date with trunk.
+
   * [/trac/register Register] with the site and create an account
+
   * A decent grasp of Twisted and what you intend to accomplish
 
-== Just the Basics ==
 
+== Just the Basics ==
 This assumes you will be working on an existing open [/trac/report/ ticket].
 
-  * Checkout a fresh copy of Twisted trunk. This is going to be your development branch.[[BR]]
-    e.g. {{{svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk MyTwistedTrunk}}}
 
-  * Make your changes
-    * You will '''need''' tests for your code
-    * You will '''need''' docstrings
-  * Run the '''''full''''' Twisted test suite and make sure your new tests pass along with entire suite: {{{trial twisted}}}
-  * Create a patch:[[BR]]
-  {{{svn diff -u > my-twisted-patch.patch}}}
+=== Checkout Source ===
+Checkout a fresh copy of Twisted trunk. This is going to be your development branch.[[BR]]
+{{{
+svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk twisted-trunk
+}}}
 
-  * Submit the patch and and attach it to the trac ticket.
-  * Begin the [wiki:ReviewProcess Review process]. A core developer will review your changes and give you feedback. You respond to the feedback using the ticket, attaching further patches as necessary.
-  * Once your patch is in good shape and approved, it will be accepted.
-  * A core developer will create a new branch for your ticket: {{{description-1234}}}, where ''description'' is a summary and ''1234'' is the ticket #
-  * The new branch will be merged to trunk and your contribution will be forever remembered.
+=== Hack and Test ===
+  1. Tests are '''required'''
+  1. Docstrings are '''required'''
+
+Hack away and then run the '''''full''''' Twisted test suite and make sure your new tests pass along with entire suite:[[BR]]
+{{{
+trial twisted
+}}}
+
+=== Submit a Patch ===
+Create a patch and attach it to the trac ticket:[[BR]]
+{{{
+svn diff -u > my-twisted-patch.patch
+}}}
+
+
+
+=== Review Process ===
+  1. Begin the [wiki:ReviewProcess Review process]. A core developer will review your changes and give you feedback.
+  1. You respond to the feedback using the ticket, attaching further patches as necessary.
+  1. Once your patch is in good shape and approved, it will be accepted.
+  1. A core developer will create a new branch for your ticket: {{{description-1234}}}, where ''description'' is a summary and ''1234'' is the ticket #
+  1. The new branch will be merged to trunk and your contribution will be forever remembered.
 
 == Next Steps ==
 
 Twisted has a rigorous development process. Now that you have a basic idea of the overall process, you can continue reading about [wiki:ContributingToTwistedLabs#Prepare Contributing to Twisted]
-
