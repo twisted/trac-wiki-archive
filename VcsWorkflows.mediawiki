@@ -1,0 +1,38 @@
+= DVCS Workflows =
+
+Twisted is developed in a Subversion repository, but there is no reason you can't take advantage of your favorite DVCS toolchain to contribute and submit patches.
+
+Keep in mind that unless you are a core committer, your interaction with svn basically boils down to:
+
+{{{
+#!sh
+# Checkout trunk
+svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk twisted-trunk
+
+# Create patches
+svn diff > mypatch.patch
+
+# Keeping up-to-date with trunk:
+svn up
+}}}
+
+How you choose to manage your local repository is up to you, but here are a few workflows to help:
+
+== Bazaar ==
+[[Image()]]
+The Twisted codebase is mirrored into a set of Bazaar branches, making it easy to work on trunk or any existing branches.
+
+See: [wiki:BazaarMirror Bazaar Workflow]
+
+
+== Git ==
+[[Image()]]
+Work is underway to maintain an official Git mirror, but it is always possible to create your own local mirror using git-svn.
+
+See: [wiki:GitMirror Git Workflow]
+
+== Mercurial ==
+[[Image()]]
+There are no official Mercurial mirrors. One recommended method is to use the Mercurial MQ extension.
+
+See: [wiki:HgContributor Mercurial Workflow]
