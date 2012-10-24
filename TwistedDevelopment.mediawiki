@@ -10,8 +10,12 @@ You can get Twisted's source code here:
 svn://svn.twistedmatrix.com/svn/Twisted/trunk
 }}}
 
+==== What about Git/Bazaar/Mercurial? ====
 
-(See also BazaarMirror and GitMirror if you prefer not to use svn)
+Sure! If you prefer not to use {{{svn}}}, you can use a number of other version control systems to produce patches for review.
+
+See [wiki:VcsWorkflows DVCS Workflows] for help using Git, Bazaar, and Mercurial to manage local development.
+
 
 === Submitting a Patch ===
 
