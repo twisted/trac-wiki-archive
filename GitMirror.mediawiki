@@ -2,6 +2,8 @@
 
 If you want to develop a patch for Twisted (as described in the BasicGuideToContributingCode) but prefer to use Git rather than SVN, this is the section for you.
 
+For other version control systems, see [wiki:VcsWorkflows DVCS Workflows].
+
 == Creating a Git clone ==
 
 Twisted's SVN repository is very old, and has a lot of history, so trying to clone the whole thing would take days. Since you don't need the complete history to create a new patch, you can just clone the latest revision then update it occasionally.
@@ -57,7 +59,9 @@ git svn info
 }}}
 If that takes longer than 30 seconds to run, and eventually prints an error message, this is a clue that `git svn` has gotten confused about how your current branch connects to the imported SVN history. Either `git checkout` a git branch that's based on an SVN branch or (if you're already on such a branch, and it's broken) use `git reset some-remote-branch-name` to make sure your local branch is pointing exactly at a commit that was imported from SVN.
 
-= For Twisted developers =
+----
+
+= For Twisted core developers =
 
 If you are a Twisted developer and want to try developing Twisted via `git svn`, you are Very Brave and will need all the help you can get. Here are some chicken-scratches left on the poorly-lit cavern walls by previous explorers.
 
@@ -82,7 +86,7 @@ After creating this clone, you'll want to make the same configuration changes li
 
 == git svn branching ==
 
-Follow the [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html#auto6 standard Twisted branch-name conventions] when creating branches with Git. In the following example, `$BRANCH_NAME` means the name of the branch you're trying to create. 
+Follow the [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html#auto6 standard Twisted branch-name conventions] when creating branches with Git. In the following example, `$BRANCH_NAME` means the name of the branch you're trying to create.
 
 {{{
 # Create "branches/$BRANCH_NAME" in the central SVN repository.
