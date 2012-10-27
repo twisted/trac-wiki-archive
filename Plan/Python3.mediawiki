@@ -58,11 +58,13 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * server (#6079)
       * http_headers (#6080, #6082)
     * twisted.internet
-      * abstract (#5980)
+      * [ticket:6140 _newtls]
+      * [ticket:6141 _sslverify]
+      * abstract (#5980, #6163)
       * [ticket:5985 address]
       * [ticket:6065 base]
       * [ticket:5947 defer]
-      * [ticket:6088 endpoints]
+      * endpoints (#6088, #6157)
       * [ticket:5972 error]
       * epollreactor (#6068)
       * [ticket:5974 fdesc]
@@ -73,7 +75,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * [ticket:6060 protocol]
       * reactor
       * selectreactor (#5979, #6068)
-      * ssl
+      * [ticket:6142 ssl]
       * task (#5979, #6052)
       * [ticket:6067 threads]
       * tcp (#6002, #6069)
@@ -83,12 +85,13 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * [ticket:6036 deprecate]
       * [ticket:5931 failure] (#5948)
       * [ticket:5932 log]
-      * util (#6054)
+      * util (#6054, #6158)
       * procutils
       * [ticket:6061 randbytes]
     * twisted.protocols
       * [ticket:6109 loopback]
       * [ticket:6097 policies]
+      * [ticket:6139 tls]
     * twisted.names
       * [ticket:6093 cache]
       * [ticket:6056 client]
