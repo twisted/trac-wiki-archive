@@ -266,10 +266,9 @@ See the TwistedMail documentation for more information.
 
 Twisted also supports many common network protocols, including SMTP, POP3, IMAP, SSHv2, and DNS. For more information see our [wiki:Documentation documentation] and [http://twistedmatrix.com/documents/current/api/ API reference].
 
-
 == Community ==
 
-[[Image(http://oreilly.com/catalog/covers/twistedadn.s.gif, title=The Twisted Book, align=right, link=http://www.amazon.com/gp/product/0596100329?ie=UTF8&tag=jpcalsjou-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596100329)]]
+[[Image(http://oreilly.com/catalog/covers/twistedadn.s.gif, link=http://www.amazon.com/gp/product/1449326110/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449326110&linkCode=as2&tag=twisted-sfconservancy-20, right)]]
 
  * Get in touch with the [wiki:TwistedCommunity Twisted community] through [wiki:TwistedCommunity#MailLists email], [http://stackoverflow.com/questions/tagged/twisted Stack Overflow] or [wiki:TwistedCommunity#IRC IRC];
  * Learn about the Twisted [wiki:TwistedDevelopment development process] and how to [wiki:ContributingToTwistedLabs contribute];
