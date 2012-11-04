@@ -23,6 +23,7 @@ Here's a quick step-by-step guide to getting from an idea for an improvement to 
 
   1. Check out the source code, via the URL above, like this: `svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk MyTwistedTrunk`.
   1. Edit the code in the `MyTwistedTrunk` directory that you just checked out, making your awesome change to Twisted.
+  1. Now is a good time to make sure that your patch fulfills all of the requirements of the [http://twistedmatrix.com/trac/wiki/ReviewProcess review process], so you don't need to submit your patch many repeated times. Pay special attention to the section about [http://twistedmatrix.com/trac/wiki/ReviewProcess#Newsfiles news files]!
   1. Generate a patch file by capturing the output of 'svn diff' at the ''root'' of your checkout - in this case, `MyTwistedTrunk`; the folder with "twisted", "bin", "doc", etc. in it.  On Linux or MacOS, the command to create this file would be "`cd MyTwistedTrunk; svn diff > my-twisted-patch.patch`".
   1. If you haven't already, [http://twistedmatrix.com/trac/register register for an account on this website].  If you have, make sure you are logged in.
   1. Search for an existing ticket which describes your change, using both the "search" field above, and Google.
