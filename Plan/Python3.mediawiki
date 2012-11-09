@@ -45,18 +45,16 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
     1. Test-driven port of the reactor features of trial
   1. `setup.py` should only install ported modules on Python 3 (#6040, #6096).
   1. Test-driven port of the following modules (some of which may be dependencies of above steps):
+    * twisted.application
+      * internet
+      * service
     * twisted.cred
       * checkers (#5808)
+      * credentials (#6176)
     * twisted.trial
     * twisted.protocols
       * basic (#6025)
       * tls (#5979)
-    * twisted.web
-      * client (#6077)
-      * http (#6110)
-      * resource (#6078)
-      * server (#6079)
-      * http_headers (#6080, #6082)
     * twisted.internet
       * [ticket:6140 _newtls]
       * [ticket:6141 _sslverify]
@@ -99,9 +97,15 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * [ticket:6057 dns]
       * [ticket:6058 error]
       * [ticket:6092 hosts]
-    * twisted.application
-      * internet
-      * service
+    * twisted.web
+      * client (#6077)
+      * http (#6110)
+      * http_headers (#6080, #6082)
+      * resource (#6078)
+      * static (#6177)
+      * server (#6079)
+      * util (#6178)
+
   1. [http://buildbot.twistedmatrix.com/builders/python-3.3-tests Build-slave for Python 3.3 should only run ported test modules.]
 
 == Tips ==
@@ -143,7 +147,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
    * [ticket:6040 twisted.copyright]
    * twisted.internet
    * [ticket:5947 twisted.internet.defer]
-   * twisted.internet.protocol
+   * [ticket:6060 twisted.internet.protocol]
    * twisted.internet.utils
    * twisted.persisted
    * twisted.persisted.sob
