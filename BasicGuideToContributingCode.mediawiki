@@ -19,7 +19,7 @@ What you'll need:
 
 
 == Just the Basics ==
-This assumes you will be working on an existing open [/trac/report/ ticket].
+This assumes you will be working on an existing open [/report/ ticket].
 
 
 === Checkout Source ===
