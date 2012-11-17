@@ -13,7 +13,7 @@ What you'll need:
   You'll still need to be able to checkout from the svn repository and keep your local development in-sync with Twisted trunk.[[BR]][[BR]]
   See [wiki:VcsWorkflows DVCS Workflows] for tips on using your favorite DVCS and keeping up-to-date with trunk.
 
-  * [/trac/register Register] with the site and create an account
+  * [/register Register] with the site and create an account
 
   * A decent grasp of Twisted and what you intend to accomplish
 
