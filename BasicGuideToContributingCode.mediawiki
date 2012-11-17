@@ -4,7 +4,7 @@ First, a few recommendations:
   * Hang out on IRC and ask questions
     * [irc://irc.freenode.net/twisted #twisted]
     * [irc://irc.freenode.net/twisted.web #twisted.web]
-  * Search trac for tickets with the [/query?status=new&status=assigned&status=reopened&keywords=%7Eeasy&order=priority 'Easy' keyword]. These are low-hanging fruit and are good for first-time contributors.
+  * Search trac for tickets with the [/query?status=new&status=assigned&status=reopened&keywords=%7Eeasy&order=priority 'Easy' keyword]. These are low-hanging fruit and are good for first-time contributors (avoid easy tickets with the "review" keyword!  another developer has already started working on these).
 
 What you'll need:
   * [http://subversion.apache.org/ Subversion (SVN)] client[[BR]][[BR]]
