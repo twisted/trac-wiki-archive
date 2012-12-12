@@ -1,0 +1,8 @@
+In general, we want the word mark "Twisted" and the Twisted logos to be used with minimal restriction to refer to the Twisted project.
+
+We do not want these trademarks to be used:
+
+  * to refer to any other Python library
+  * in a way that is misleading or that may imply endorsement by the Twisted project of unrelated modules, tools, documentation, or other resources
+
+If you have any questions about trademark usage, please contact [mailto:trademarks@twistedmatrix.com trademarks@twistedmatrix.com].
