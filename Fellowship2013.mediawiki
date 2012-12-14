@@ -54,5 +54,5 @@ Ideally the Maintainer will also:
  * Have familiarity with the infrastructure of the Twisted project (including trac and buildbot).
  * Work to provide education or outreach on Twisted in other forums such as workshops, conferences, and user groups.
 
-Conservancy and Twisted are excited to announce the Maintainer Fellowship for Twisted. Candidates for the Twisted Maintainer Fellowship should submit their proposal (including their CV and financial terms) to [mailto:twistedfellowship@sfconservancy.org].  The
+Conservancy and Twisted are excited to announce the Maintainer Fellowship for Twisted. Candidates for the Twisted Maintainer Fellowship should submit their proposal (including their CV and financial terms) to [mailto:twistedfellowship@sfconservancy.org twistedfellowship@sfconservancy.org].  The
 deadline for this initial round of proposals is December 31, 2012.  
