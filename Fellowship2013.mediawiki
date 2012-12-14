@@ -58,5 +58,6 @@ Conservancy and Twisted are excited to announce the Maintainer Fellowship for Tw
 {{{
 !html
 twistedfellowship@sfconservancy.org
-}}}.  The
+}}}
+.  The
 deadline for this initial round of proposals is December 31, 2012.  
