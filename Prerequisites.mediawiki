@@ -1,0 +1,5 @@
+Here are all of the things that you need to know in order to use Twisted:
+
+  - Python
+  - what is a network
+  - XXX to do add actual things
