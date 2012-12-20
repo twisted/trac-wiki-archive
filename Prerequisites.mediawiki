@@ -2,4 +2,9 @@ Here are some of the things that you may need to know in order to use Twisted:
 
   - Python
   - what is a network
+    - what is TCP
+    - what is UDP
+  - what is a protocol
+  - what is a `$PROTOCOL` server (web, mail, ssh, dns)
+  - what is a `$PROTOCOL` client
   - XXX to do add actual things
