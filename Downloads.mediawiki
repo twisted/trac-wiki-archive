@@ -18,7 +18,6 @@ The "Technical details about this PPA" and "Read about installing" links on that
 
 == Windows ==
 
- * Twisted [[ProjectVersion]] for Python 2.6 ([[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win32-py2.6.msi msi)]] | [[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win32-py2.6.exe exe)]])
  * Twisted [[ProjectVersion]] for Python 2.7 ([[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win32-py2.7.msi msi)]] | [[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win32-py2.7.exe exe)]])
  * Twisted [[ProjectVersion]] for Python 2.7 64 bits([[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win-amd64-py2.7.msi msi)]] | [[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win-amd64-py2.7.exe exe)]])
  * [http://pypi.python.org/pypi/zope.interface#download Zope.Interface] (required)
@@ -71,6 +70,8 @@ You probably don't want these unless you have special considerations:
  * [[ProjectVersion(http://twistedmatrix.com/Releases/Runner/%(major)s.%(minor)s/TwistedRunner-%(base)s.tar.bz2 Twisted Runner)]] - [[ProjectVersion]] ([[ProjectVersion(source:/tags/releases/twisted-%(base)s/twisted/runner/topfiles/NEWS Release Notes)]])
 
 == Signed MD5 Sums ==
+
+md5 sums of the 12.3.0 release are [http://twistedmatrix.com/Releases/twisted-12.3.0-md5sums.txt here].
 
 md5 sums of the 12.2.0 release are [http://twistedmatrix.com/Releases/twisted-12.2.0-md5sums.txt here].
 
