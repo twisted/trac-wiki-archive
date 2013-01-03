@@ -201,3 +201,7 @@ These are things that won't necessarily have any bearing on the Twisted porting 
 
   * Initial porting effort was estimated by looking at what modules would be needed.  This overlooked some modules because they are only imported inside functions.
   * Splitting up modules into two separate implementation modules, one for ported code and one for unported code, is disruptive (#6183).  Particularly, it's a great source of huge merge conflicts for development not related to the Python 3 port.
+
+== Other ==
+
+Some further ideas to consider: https://wiki.ubuntu.com/Python/3
