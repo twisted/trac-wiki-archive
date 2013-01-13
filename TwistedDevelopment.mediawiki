@@ -53,7 +53,7 @@ To generate the API documentation, you will need [https://launchpad.net/pydoctor
 
 === Getting Your Patch Accepted ===
 
-If you are interested in contributing to Twisted for the first time, consider working on an existing ticket rather than contributing a new feature.  Fixes for existing problems or implementations of already-requested features will generally take priority over new ideas.
+If you are interested in contributing to Twisted for the first time, consider working on an existing ticket rather than contributing a new feature.  Fixes for existing problems or implementations of already-requested features will generally take priority over new ideas.  Consider discussing the work you want to do with [wiki:TwistedCommunity other Twisted developers first].
 
 Make sure that you have written unit tests and docstrings for all code which has changed in your patch.  It works best if you use test-driven development to write your patch initially, and write your tests before your code.  (Believe me, if you write your tests after you write your code, we ''will'' know.  It's more obvious than you think.) See the [http://twistedmatrix.com/documents/current/core/development/policy/test-standard.html Twisted Unit Tests standard] for more on how to write and format your unit tests.
 
