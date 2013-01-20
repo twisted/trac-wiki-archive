@@ -45,7 +45,7 @@ There are a few useful tools for developing Twisted.  Some of them are included 
 
 To run the tests, simply run `./path/to/Twisted-checkout/bin/trial twisted`.
 
-To generate the narrative documentation, `cd ./path/to/Twisted-checkout/doc; ../bin/lore --config template=core/howto/template.tpl`. ([ticket:5571 This should be simpler.]) Then open `index.html` (not `index.xhtml`) in your web browser.
+To generate the narrative documentation, `cd ./path/to/Twisted-checkout/doc; ../bin/lore/lore --config template=core/howto/template.tpl`. ([ticket:5571 This should be simpler.]) Then open `index.html` (not `index.xhtml`) in your web browser.
 
 Many ancillary tools related to Twisted are in Bazaar repositories.  You may find it useful to [http://bazaar.canonical.com/en/ install the Bazaar version control system for your platform] so that you can easily get access to these.
 
