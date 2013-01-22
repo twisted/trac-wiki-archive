@@ -205,3 +205,9 @@ These are things that won't necessarily have any bearing on the Twisted porting 
 == Other ==
 
 Some further ideas to consider: https://wiki.ubuntu.com/Python/3
+
+=== Documentation ===
+
+Documentation potentially requires porting as well.  An individual example (ie, one of the runnable .py files in a ''doc/<project>/examples/'' directory) can be treated much as a module for the purposes of the porting workflow.  One difference, however, is that the example is not added to the list of ported modules in `admin/_twistedpython3.py`.
+
+As with the rest of Twisted, the goal for porting documentation should be a version which is compatible with all supported versions of Python (eg, at this time, Python 2.6, Python 2.7, and Python 3.3).
