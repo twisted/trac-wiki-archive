@@ -6,7 +6,7 @@ To have Twisted available on Python 3.3 and newer, with the same functionality a
 
   * Single source - The result will be a version of Twisted that is source-compatible with Python 2.6, Python 2.7, and Python 3.3.
   * Test-driven - Following the standard Twisted development process, all changed code will be fully automatically unit tested.
-  * Opportunistic - Where module dependencies (within Twisted) need to be ported to support porting of the high-priority modules, modules may be split so that only some of their contents need to be ported.
+  * Opportunistic - Where module dependencies (within Twisted) need to be ported to support porting of the high-priority modules, subsets of the module may be ported to provide specific functionality (but less than the full module).
 
 All other standard Twisted development practices apply.
 
