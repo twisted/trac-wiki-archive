@@ -4,6 +4,13 @@ All commits to Twisted's trunk must follow this review process. The only excepti
 
 Both authors and reviewers should be intimately familiar with all requirements on this page.
 
+== Authors: Before you get started ==
+
+For the most part, we'd love for you to jump right in and start writing code!  The code review process should catch any serious problems with your contribution, and the continuous integration system should catch most tricky cross-platform issues.  It's easy to get too caught up in trying to do everything perfectly the first time and never get any code written, so you should usually err on the side of just trying something out rather than waiting for someone to tell you if it's OK.  That being said, there are a few things that you should really be aware of before you write your first line of code:
+
+  * Make sure you have a ''clear idea of what work needs doing''.  Write down your idea first; [https://twistedmatrix.com/trac/newticket file a ticket] before you write a patch.  A really good ticket will give a precise description of what needs to change and why it needs changing; it avoids giving precise details of exactly ''how'' the code needs to change, because the patch should supply those details.  A really ''bad'' ticket will say "here is a patch I wrote, apply it".  If you're just getting started with contributing to Twisted, it would be good to find an existing ticket rather than come up with something yourself, so you have an idea how to go through the process before you start making difficult changes.  You'll need to have a good description of your work for other parts of the process as well (the NEWS file, the commit message) which is another reason thinking about what you're trying to do helps.
+  * Try '''not''' to ''write too much code at once''.  A good change really needs to be be under 1000 lines of diff for a reviewer to be able to deal with it before getting fatigued and missing things.  Really, you should be aiming for things in the neighborhood of 200 lines.  This is for your benefit as well as the reviewer's; we don't want you to spend weeks on a 10,000-line monster of a feature, only to have it rejected because we're not interested in having such a feature at all.
+
 == Authors: Things your branch or patch must contain ==
 
  * Code which follows the [http://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html coding standard].
