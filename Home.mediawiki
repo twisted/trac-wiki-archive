@@ -102,7 +102,7 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 === Bronze ===
 
 [[Image(TSF/SponsorLogos:dyn-logo.png, title=Dynamic Network Services Inc, link=http://www.dyn.com/)]]
-[[Image(TSF/SponsorLogos:flowroute-logo.png, title=flowroute, link=http://www.flowroute.com/)]]
+[[Image(TSF/SponsorLogos:flowroute-logo.gif, title=flowroute, link=http://www.flowroute.com/)]]
 }}}
 
 }}}
