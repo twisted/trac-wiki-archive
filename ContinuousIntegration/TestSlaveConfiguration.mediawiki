@@ -83,4 +83,4 @@ check with us first.
 
 == Creating a Slave ==
 
-A build slave is created with the `buildbot create-slave` command.  This takes the master address, slave name, and slave password as arguments.  The master address is `buildbot.twistedmatrix.com:9987`.  Several other optional arguments are allowed.  It is a good idea to specify a value of around 10 for `--log-count` to avoid unbounded log file growth.  If there are special networking considerations, it may also be useful to specify a value for `--keepalive`.  Other options generally aren't needed.
+A build slave is created with the `buildslave create-slave` command.  This takes the master address, slave name, and slave password as arguments.  The master address is `buildbot.twistedmatrix.com:9987`.  Several other optional arguments are allowed.  It is a good idea to specify a value of around 10 for `--log-count` to avoid unbounded log file growth.  If there are special networking considerations, it may also be useful to specify a value for `--keepalive`.  Other options generally aren't needed.
