@@ -1,3 +1,5 @@
+= Dependencies =
+
 A build slave which is to run the Twisted test suite on a particular platform or in a particular configuration needs the following software:
 
   * [http://python.org/ Python]
@@ -23,6 +25,8 @@ As well as all (or as many as possible) of the libraries Twisted depends on:
   * [https://launchpad.net/subunit subunit] (Debian package python-subunit)
     * Depends on [http://pypi.python.org/pypi/testtools testtools]
 
+== OS Configuration ==
+
 Unfortunately a few tests in Twisted's test suite will fail if certain guarantees are not made by the environment.  For example, the multicast tests try to use the actual network stack to send multicast packets.  Here are some things that are known about this:
 
   * For the multicast tests to pass, multicast packets must be routable over localhost.
@@ -32,15 +36,15 @@ Unfortunately a few tests in Twisted's test suite will fail if certain guarantee
 -A INPUT --dest 224.0.0.0/4 -j ACCEPT
 }}}
 
-A build slave is created with the `buildbot create-slave` command.  This takes the master address, slave name, and slave password as arguments.  The master address is `buildbot.twistedmatrix.com:9987`.  Several other optional arguments are allowed.  It is a good idea to specify a value of around 10 for `--log-count` to avoid unbounded log file growth.  If there are special networking considerations, it may also be useful to specify a value for `--keepalive`.  Other options generally aren't needed.
+= Donating a Slave =
 
-If bzr is being used then on the very first build by a new slave a lengthy bzr initialization step is required.  This usually needs to be completed manually after buildbot times out the operation for taking too long.  The command which will fail on buildbot is:
+What Buildslaves Do You Want?
 
-{{{
-bzr checkout svn://svn.twistedmatrix.com/svn/Twisted/trunk Twisted
-}}}
+Adding a buildslave is the first step to improving support on a new platform.
 
-with a working directory of `/path/to/slave-root/builder-name/`.  The correct directory should have `Twisted` and `.bzr` directories in it already.  Re-running the failed command in that directory will resume the checkout and eventually succeed (perhaps after quite a long time - dozens of minutes, at least - this is expected).
+You are welcome to provide buildslaves for your favorite platforms. They will initially go in to the "unsupported" buildslave category. The only official requirement is that they maintain a high degree of uptime (see [ContinuousIntegration/FixYourDamnBuildSlave]). 
+
+== Procedure ==
 
 If you wish to provide a buildslave for twisted, send the follwoing information to buildbot at twisted matrix dot com:
 
@@ -60,3 +64,20 @@ If you wish to provide a buildslave for twisted, send the follwoing information 
    - path to the python executable, if it isn't the default python on the path.
 
 5. How many parallel builds you want allowed to run.
+
+== Upgrading Buildslaves ==
+
+Build slaves should in general _not_ be upgraded; the point of having a CI
+system is to keep things working not to get more better stuff :).  Now, if we
+hit an issue where a builder upgrade would be helpful, and the platform would
+have a feature we'd like to test, we will surely let you know, and _then_ might
+be a good time to upgrade.  
+
+If you *are* going to be upgrading, you should send out a notification with
+each upgrade; shooting an email saying that there are new versions, and noting
+if there's a resulting build failure (and filing appropriate tickets), would be
+useful.
+
+== Creating a Slave ==
+
+A build slave is created with the `buildbot create-slave` command.  This takes the master address, slave name, and slave password as arguments.  The master address is `buildbot.twistedmatrix.com:9987`.  Several other optional arguments are allowed.  It is a good idea to specify a value of around 10 for `--log-count` to avoid unbounded log file growth.  If there are special networking considerations, it may also be useful to specify a value for `--keepalive`.  Other options generally aren't needed.
