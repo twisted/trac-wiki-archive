@@ -88,7 +88,7 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 
 = [wiki:TwistedSponsors Twisted Sponsors] =
 
-[wiki:TwistedSoftwareFoundation Become a 2012 sponsor today]! For any donation above [wiki:TwistedSoftwareFoundation#SponsorshipLevels the bronze level], we will display your logo here on the front page.
+[wiki:TwistedSoftwareFoundation Become a 2013 sponsor today]! For any donation above [wiki:TwistedSoftwareFoundation#SponsorshipLevels the bronze level], we will display your logo here on the front page.
 
 {{{
 #!div class="twisted-sponsors"
@@ -102,6 +102,7 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 === Bronze ===
 
 [[Image(TSF/SponsorLogos:dyn-logo.png, title=Dynamic Network Services Inc, link=http://www.dyn.com/)]]
+[[Image(TSF/SponsorLogos:flowroute-logo.png, title=flowroute, link=http://www.flowroute.com/)]]
 }}}
 
 }}}
