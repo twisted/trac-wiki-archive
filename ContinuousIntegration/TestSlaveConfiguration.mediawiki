@@ -67,16 +67,19 @@ If you wish to provide a buildslave for twisted, send the follwoing information 
 
 == Upgrading Buildslaves ==
 
-Build slaves should in general _not_ be upgraded; the point of having a CI
-system is to keep things working not to get more better stuff :).  Now, if we
+The OS running the build slave should in general *not* be upgraded; the point of having a CI
+system is to keep things working not to get new, better stuff. :)  Now, if we
 hit an issue where a builder upgrade would be helpful, and the platform would
-have a feature we'd like to test, we will surely let you know, and _then_ might
+has a feature we'd like to test, we will surely let you know, and *then* might
 be a good time to upgrade.  
 
 If you *are* going to be upgrading, you should send out a notification with
 each upgrade; shooting an email saying that there are new versions, and noting
 if there's a resulting build failure (and filing appropriate tickets), would be
 useful.
+
+Upgrading the BuildBot slave software itself is usually fine, but it's always a good idea to
+check with us first.
 
 == Creating a Slave ==
 
