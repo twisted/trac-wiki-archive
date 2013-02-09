@@ -45,6 +45,8 @@ Throughout this document, we'll refer to the version number of the release as ''
 
 We'll refer to the first two components of the release as '''$API''', since all releases that share those numbers are mutually API compatible. e.g. for 10.0.0, $API is 10.0; for 10.1.0 and 10.1.1, $API is 10.1.
 
+The change-versions script automatically picks the right number for you. Please retrieve it after you run it.
+
 = Overview =
 
 To release Twisted, we
@@ -74,7 +76,7 @@ To release Twisted, we
 
  1. Check [http://buildbot.twistedmatrix.com/boxes-supported buildbot] to make sure all supported platforms are green (wait for pending builds if necessary).
  1. If a previously supported platform does not currently have a buildbot, move from supported platforms to "expected to work" in `INSTALL`. (Pending #1305)
- 1. Run `./bin/admin/change-versions XX.YY.ZZpreN`
+ 1. Run `./bin/admin/change-versions --prerelease`
  1. Commit the changes made by `change-versions`
  1. Run `./bin/admin/build-news .`
  1. Commit the changes made by `build-news`
@@ -131,7 +133,7 @@ jml
 == Prepare the branch ==
 
  1. Have the release branch, previously used to generate a pre-release, checked out
- 1. Run `./bin/admin/change-versions $RELEASE`
+ 1. Run `./bin/admin/change-versions`
  1. Add the quote of the release to the README
  1. Make a new quote file for the next version: `svn cp doc/fun/Twisted.Quotes doc/historic/Quotes/Twisted-$RELEASE; echo '' > doc/fun/Twisted.Quotes`.
  1. Commit the version and README changes.
