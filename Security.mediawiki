@@ -4,7 +4,7 @@ We take security very seriously.  Your input and feedback on our security is alw
 
 === Reporting Security Issues ===
 
-Send urgent or sensitive reports directly to security at twistedmatrix dot com. Use our public key (below) to keep your message safe and please provide us with a secure way to respond. We'll get back to you as soon as we can; please bear in mind that Twisted is an all volunteer project and there may be some delay before we can respond.  But please feel free to follow up if you think an unreasonable amount of time has elapsed without a response!
+Send urgent or sensitive reports directly to ~security at twistedmatrix dot com~ (this address is temporarily out of service; we apologize for the inconvenience, please check back soon for updates). Use our public key (below) to keep your message safe and please provide us with a secure way to respond. We'll get back to you as soon as we can; please bear in mind that Twisted is an all volunteer project and there may be some delay before we can respond.  But please feel free to follow up if you think an unreasonable amount of time has elapsed without a response!
 
 === Security Procedure for Developers ===
 
