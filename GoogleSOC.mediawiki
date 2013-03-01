@@ -65,38 +65,6 @@ Twisted currently has some bugs when used in certain non-English-configuration (
 
 Requirements: This is probably easier to do on Linux than on Windows, so some basic familiarity with Linux, and a computer configured to use it, in addition to knowledge of Python.
 
-=== Automatic Coding Standard Enforcement ===
-
-Twisted applies certain naming and style standards to all contributed code.  These are things like giving all classes and functions docstrings, documenting all parameters and instances attributes, having the correct amount of whitespace between definitions, etc.  Currently, a human reviewer needs to check all of these things and point out violations to contributors.  The development process would be sped up by a tool which can automatically make these simple, mechanical checks, freeing up human reviewer time to focus on more important aspects of proposed changes.  Integration with the issue tracker, to automatically generate this feedback before a ticket is submitted for review, would also be a big win.  For background about the Twisted development process, see [wiki:ReviewProcess].
-
-Requirements: Little Twisted-specific knowledge is necessary, but general Python knowledge, perhaps with prior parsing experience (or a willingness to learn about parsing).
-
-=== Expanded Endpoints Support ===
-
-Twisted recently added two new related high-level APIs, one for specifying what address servers should listen for connections on, the other for specifying  what address a client should connect to.  These APIs are known as "endpoints", mostly implemented in [http://twistedmatrix.com/documents/current/api/twisted.internet.endpoints.html twisted.internet.endpoints].  Only a few of the many kinds of addresses that Twisted supports have had endpoint support added to them so far.  Additionally, there are some kinds of connections which it was very awkward to set up before the invention of the endpoints APIs, so there is no convenient way to set them up at all.
-
-Some endpoints Twisted does have are for TCP (eg, when using the string syntax to create a TCP server, "tcp:port=80:interface=192.168.1.1"), SSL, and UNIX domain sockets.  Some endpoints it doesn't have, and could be easily implemented by wrapping existing code: serial ports, standard I/O. A bit more difficult, but still mostly using existing code, would be endpoints for child processes and SSH connections. SOCKS proxies would require writing additional (but fairly simple) network code. Rather trickier would be support HTTPS proxies.  Many more are possible.
-
-For this project, add a lot of new endpoint implementations to Twisted, starting the easiest and moving on the more difficult ones. Some endpoint implementations will be simple wrappers around existing APIs. Others will involve some network programming, where there was no convenient existing API to provide the functionality at all.
-
-Requirements: General Python knowledge, some networking knowledge would be helpful but that may be acquired over the course of the project.
-
-=== Python 3 Preparation === 
-
-In preparation for Python 3 support, there is a lot of cleanup work that needs to be done:
-
-  * Remove use of old APIs that have more modern equivalents.
-  * Add support code for features Python 3 is missing (execfile).
-  * Get rid of deprecated code (eligible only; see CompatibilityPolicy) that cannot easily be ported.
-
-A partial list can be found here: http://twistedmatrix.com/trac/query?status=assigned&status=new&status=reopened&group=status&milestone=Python-3.x
-
-There's also additional development to be done, e.g. the FilePath path management library should probably get Unicode support in Python 2, so that it's easier to write code that works in both Python 2 and 3.
-
-The goal is *not* to port Twisted to Python 3, but rather to make it easier to support Twisted on Python 3 later on.
-
-Requirements: Good knowledge of Python 2, and ideally the differences with Python 3.
-
 === Other Tasks, Some of which Google may not like, but some of which may be workable ===
 
   * Finish half-done documentation: Merge existing documentation from elsewhere, e.g. [ticket:5474 Conch in 60 seconds], or half-finished documentation that is in the tracker (there's the start of an IMAP howto, for example.)
