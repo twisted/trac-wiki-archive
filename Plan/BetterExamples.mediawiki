@@ -8,9 +8,11 @@ testing of Twisted example code.
 The following ideas came from the comments in #84 and from some
 discussions in #twisted-dev.
 
-Once the ideas have been reviewed, they will be moved to separate
-tickets where more detailed discussion can take place and #84 can be
-closed. Tickets to be raised in one of:
+Once these ideas have been reviewed, they will be moved to separate
+tickets where more detailed discussion can take place and then #84 can be
+closed.
+
+Tickets to be raised in one of:
  * twistedmatrix.com/trac
  * https://launchpad.net/twisted-buildbot-configuration
  * https://launchpad.net/twisted-trac-integration
@@ -18,7 +20,88 @@ closed. Tickets to be raised in one of:
  * https://launchpad.net/twisted-website
 
 
+== Review and update writing and coding standards for example scripts ==
+
+=== [https://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html#auto8 The example writing standard] ===
+
+This document has good guidance, but it also raises some questions for
+consideration:
+
+ 1. "example code should be a complete working example suitable for
+    copying and pasting and running by the reader"
+    * Should it also be cross platform? Or should there be platform
+      specic examples? eg can an example refer to /etc/hosts
+ 2. "example code should be short"
+    * How short? In terms of lines? Or in terms of the number of top
+      level fuctions and classes? Perhaps an example of a too long
+      example.
+ 3. "example code should be commented very extensively"
+    * Does this include docstrings?
+    * Does this include epytext style API docs in docstrings?
+    * Can too many comments be distracting in a simple example?
+ 4. "example code should conform to the coding standard"
+    * Yes. Although having three lines between top level items makes
+      the examples longer (in terms of line count).
+ 5. "example code should exhibit 'best practice'"
+    * Should we identify and remove examples which refer to old
+      deprecated APIs?
+    * What is best practice? I guess most Twisted core devs will agree
+      on most things, but are there any controversial practices eg
+      inlineCallbacks?
+    * Can examples ever use, or suggest using external libraries? Eg
+      treq, Nevow, ampoule, tx??? etc. If those external libraries are
+      considered best practice? I *think* its quite common for people
+      to be directed to better external alternatives eg treq vs Agent
+      or wokel?? vs twisted.words??
+    * Should we refer / link to good external examples which
+      demonstrate best practice?
+
+
+=== [https://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html#auto13 The example coding standard] ===
+
+Re examples, this document currently only refers to the requirement
+for #!/usr/bin/env python
+
+Depending on the answers to questions above, it may need expanding. eg
+
+ 1. Do examples need full epytext documentation?
+    * No. The example API is not going to be published
+    * No. The epytext markup is a distraction from the example code.
+    * Yes. It demonstrates Twisted best practice to new users.
+
+
+This ticket can be closed when the writing and coding standards have
+been reviewed, and if necessary modified to clearly define how
+examples should be written in future.
+
+
+== Find / create tickets for fixing broken or bad examples ==
+
+Create a wiki checklist of all the Twisted example scripts.
+
+Review each of the examples and decide whether to maintain or remove
+it.
+
+Look for examples which:
+ * don't work
+ * demonstrate deprecated APIs.
+ * are redundant eg doc/web/examples/getpage.py seems to overlap doc/web/examples/dlpage.py
+ * contain errors
+ * do not adhere to coding standards
+ * do not follow best practice
+
+Then:
+ 1. Create a ticket for the example
+ 2. Summarise the state of the example in the ticket.
+ 3. Choose its fate: "maintain" or "delete".
+ 4. Enter the ticket number and action against the example in the
+    example checklist in wiki:Plan/BetterExamples
+
+
 == Pyflakes builder should check example code ==
+
+In the comments for #84, jml and spiv have both suggested that we
+should run a linter on the examples.
 
 [https://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html#auto8 The writing standard]
 suggests that "example code should conform to
@@ -31,8 +114,9 @@ Python files within.
  * https://buildbot.twistedmatrix.com/builders/pyflakes/builds/76/steps/pyflakes/logs/stdio
  * pyflakes twisted
 
-We should alter the current pyflakes builder to scan everything. This
-would also catch problems with the setuptools files.
+So we should alter the current pyflakes builder to scan everything.
+
+This would also catch problems with the setuptools files.
 
 There are 116 pyflakes errors in the existing documentation examples
 and in the setup.py files.
@@ -50,6 +134,11 @@ doc/historic/2003/pycon/deferex/deferex-listing0.py:8: invalid syntax
 116
 }}}
 
+But the pyflakes builder is a "ratchet" test, so these errors will
+only show up as "new errors" in initial builds, after which, the
+errors can be fixed incrementally in future tickets.
+
+Raise tickets for fixing the pyflakes errors in each example.
 
 == Twistedchecker should check example code ==
 [https://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html#auto8 The writing standard]
@@ -71,6 +160,16 @@ everything. This would also catch problems with the setuptools files.
 
 3150
 }}}
+
+But the twistedchecker builder is a "ratchet" test, so these errors
+will only show up as "new errors" in initial builds, after which, the
+errors can be fixed incrementally in future tickets.
+
+Some of the twistedchecker errors will be due to bugs in
+twistedchecker.
+
+Raise tickets for fixing the twistedchecker errors in each
+example.
 
 
 == ExampleTestBase for unit testing example code ==
@@ -100,9 +199,110 @@ I've added some further tests in:
 provoke some discussion.
 
 
-== Update developer documentation for writing examples ==
-   * TODO
-
 
 == A mechanism for running functional tests on example code ==
-   * TODO
+
+Tom Prince (and others) suggest that there should be functional tests
+for the examples.
+
+twistedchecker already has functional tests so we can build something
+inspired by or based on that system:
+ * https://code.launchpad.net/~zomux/twistedchecker/trunk/twistedchecker/test/test_runner.py
+
+{{{
+#!python
+    def test_functions(self):
+        """
+        This will automatically test some functional test files
+        controlled by C{RunnerTestCase.configFunctionalTest}.
+        """
+        print >> sys.stderr, "\n\t----------------"
+        testmodules = self.listAllTestModules()
+        for pathTestFile, modulename in testmodules:
+            pathResultFile = pathTestFile.replace(".py", ".result")
+            self.assertTrue(os.path.exists(pathTestFile),
+                       msg="could not find testfile:\n%s" % pathTestFile)
+            self.assertTrue(os.path.exists(pathResultFile),
+                       msg="could not find resultfile:\n%s" % pathResultFile)
+            self.clearOutputStream()
+            runner = Runner()
+            runner.allowOptions = False
+            runner.setOutput(self.outputStream)
+            # set the reporter to C{twistedchecker.reporters.test.TestReporter}
+            runner.setReporter(TestReporter())
+            self._limitMessages(pathTestFile, runner)
+            # enable pep8 checking
+            pep8Checker = self._getChecker(runner, "pep8")
+            if pep8Checker:
+                pep8Checker.pep8Enabled = True
+            runner.run([modulename])
+            # check the results
+            if self.debug:
+                print >> sys.stderr, self.outputStream.getvalue()
+            predictResult = self._removeSpaces(open(pathResultFile).read())
+            outputResult = self._removeSpaces(self.outputStream.getvalue())
+            self.assertEqual(outputResult, predictResult,
+                 "Incorrect result of %s, should be:\n---\n%s\n---" % \
+                 (modulename, predictResult))
+            print >> sys.stderr, "\t%s\n" % modulename
+        print >> sys.stderr, "\t----------------\n"
+}}}
+
+Rather than duplicate that code, perhaps we should take the opportunity to
+create a general FunctionalTestBase class which can then be re-used by
+twistedchecker.
+
+Put it in eg in:
+ * source:trunk/twisted/test/testutils.py
+
+Example command line arguments and sample output would be placed in
+files located near the examples.
+
+Perhaps in a test directory prefixed with an underscore so that they
+don't interfere with command line completion of the actual example eg
+
+ * docs/names/examples/dns-service.py
+ * docs/names/examples/_test_dns-service
+ * docs/names/examples/_test_dns-service/gmail_com.arguments
+{{{
+xmpp-client tcp gmail.com
+}}}
+
+ * docs/names/examples/_test_dns-service/gmail_com.stdout
+{{{
+_xmpp-client._tcp.gmail.com IN
+ <SRV priority=20 weight=0 target=alt2.xmpp.l.google.com port=5222 ttl=897>
+ <SRV priority=20 weight=0 target=alt1.xmpp.l.google.com port=5222 ttl=897>
+ <SRV priority=20 weight=0 target=alt3.xmpp.l.google.com port=5222 ttl=897>
+ <SRV priority=20 weight=0 target=alt4.xmpp.l.google.com port=5222 ttl=897>
+ <SRV priority=5 weight=0 target=xmpp.l.google.com port=5222 ttl=897>
+}}}
+
+ * docs/names/examples/_test_dns-service/non_existent_subdomain_example_com.arguments
+{{{
+xmpp-client tcp non.existent.subdomain.example.com
+}}}
+
+ * docs/names/examples/test_dns-service/non_existent_subdomain_example_com.stderr
+{{{
+ERROR: domain name not found '_xmpp-client._tcp.non.existent.subdomain.example.com'
+}}}
+
+
+=== Should the functional tests use the network or access real files? ===
+
+ 1. No. It will make the tests non-deterministic.
+
+ 2. No. It will make the functional tests slow.
+
+ 3. Yes. It will give some assurance that the example will work for
+    the enduser when it's called with the arguments suggested in our
+    docs.
+
+    eg. The DNS example scripts each contain - in their
+    {{{__main__.__doc__}}} - an example of how to call
+    the script using a real world domain name.
+
+    By testing with real network, we will be alerted if that domain
+    name ever changes or if the returned DNS records ever change. At
+    which point we can update the example or the test.
