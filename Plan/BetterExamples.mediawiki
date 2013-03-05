@@ -1,0 +1,108 @@
+= Better Examples =
+
+This plan is written as part of ticket:84.
+
+It contains ideas for improving the quality, maintainability and
+testing of Twisted example code.
+
+The following ideas came from the comments in #84 and from some
+discussions in #twisted-dev.
+
+Once the ideas have been reviewed, they will be moved to separate
+tickets where more detailed discussion can take place and #84 can be
+closed. Tickets to be raised in one of:
+ * twistedmatrix.com/trac
+ * https://launchpad.net/twisted-buildbot-configuration
+ * https://launchpad.net/twisted-trac-integration
+ * https://launchpad.net/twistedchecker
+ * https://launchpad.net/twisted-website
+
+
+== Pyflakes builder should check example code ==
+
+[https://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html#auto8 The writing standard]
+suggests that "example code should conform to
+the coding standard" which implies that examples should be tested in
+the same way as the main twisted code. That includes pyflakes.
+
+The pyflakes builder does not currently scan the doc folder and the
+Python files within.
+
+ * https://buildbot.twistedmatrix.com/builders/pyflakes/builds/76/steps/pyflakes/logs/stdio
+ * pyflakes twisted
+
+We should alter the current pyflakes builder to scan everything. This
+would also catch problems with the setuptools files.
+
+There are 116 pyflakes errors in the existing documentation examples
+and in the setup.py files.
+
+{{{
+
+[richard@zorin testable-examples-84]$ pyflakes doc setup* | wc -l
+
+doc/historic/2003/pycon/deferex/deferex-bad-adding.py:6: invalid
+syntax ...  ^ doc/historic/2003/pycon/deferex/deferex-listing2.py:6:
+invalid syntax ...  ^
+doc/historic/2003/pycon/deferex/deferex-listing0.py:8: invalid syntax
+...  ^
+
+116
+}}}
+
+
+== Twistedchecker should check example code ==
+[https://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html#auto8 The writing standard]
+suggests that "example code should conform to
+the coding standard" which implies that examples should be tested in
+the same way as the main twisted code. That includes twistedchecker.
+
+The twistedchecker builder does not currently scan the doc folder and
+the Python files within.
+
+ * https://buildbot.twistedmatrix.com/builders/twistedchecker/builds/300/steps/run-twistedchecker/logs/stdio
+ * twistedchecker twisted
+
+We should alter the current twistedchecker builder to scan
+everything. This would also catch problems with the setuptools files.
+
+{{{
+[richard@zorin testable-examples-84]$ find doc -type f -name '*.py' | xargs twistedchecker | wc -l
+
+3150
+}}}
+
+
+== ExampleTestBase for unit testing example code ==
+
+[https://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html#auto8 The writing standard]
+suggests that "example code should conform to
+the coding standard" which implies that examples should be unit tested
+just like the main twisted code.
+
+One suggestion is to add something like Divmod ExampleTestBase, which
+imports the example scripts so that their components can be unit
+tested.
+ * https://bazaar.launchpad.net/~glyph/divmod.org/trunk/view/head:/Nevow/nevow/test/test_howtolistings.py
+
+This has already been added to some of the twisted.names examples
+tests.
+ * source:trunk/twisted/names/test/test_examples.py
+
+But it should be moved somewhere central like
+source:trunk/twisted/test/proto_helpers.py or
+source:trunk/twisted/test/testutils.py where it can be used by tests
+for all Twisted examples.
+
+I've added some further tests in:
+ * source:branches/testable-examples-84/twisted/names/test/test_examples.py
+...to demonstrate how ExampleTestBase can be used and hopefully
+provoke some discussion.
+
+
+== Update developer documentation for writing examples ==
+   * TODO
+
+
+== A mechanism for running functional tests on example code ==
+   * TODO
