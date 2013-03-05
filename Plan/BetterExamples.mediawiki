@@ -1,5 +1,7 @@
 = Better Examples =
 
+[[PageOutline(2)]]
+
 This plan is written as part of ticket:84.
 
 It contains ideas for improving the quality, maintainability and
