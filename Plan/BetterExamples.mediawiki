@@ -106,33 +106,9 @@ Then:
 == Twistedchecker should check example code ==
  * https://bugs.launchpad.net/twisted-buildbot-configuration/+bug/1152535
 
-== ExampleTestBase for unit testing example code ==
+== ExampleTestBase class for unit testing example code ==
 
-[https://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html#auto8 The writing standard]
-suggests that "example code should conform to
-the coding standard" which implies that examples should be unit tested
-just like the main twisted code.
-
-One suggestion is to add something like Divmod ExampleTestBase, which
-imports the example scripts so that their components can be unit
-tested.
- * https://bazaar.launchpad.net/~glyph/divmod.org/trunk/view/head:/Nevow/nevow/test/test_howtolistings.py
-
-This has already been added to some of the twisted.names examples
-tests.
- * source:trunk/twisted/names/test/test_examples.py
-
-But it should be moved somewhere central like
-source:trunk/twisted/test/proto_helpers.py or
-source:trunk/twisted/test/testutils.py where it can be used by tests
-for all Twisted examples.
-
-I've added some further tests in:
- * source:branches/testable-examples-84/twisted/names/test/test_examples.py
-...to demonstrate how ExampleTestBase can be used and hopefully
-provoke some discussion.
-
-
+ * ticket:6362
 
 == A mechanism for running functional tests on example code ==
 
