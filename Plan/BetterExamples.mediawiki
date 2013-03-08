@@ -104,36 +104,7 @@ Then:
  * See https://bugs.launchpad.net/twisted-buildbot-configuration/+bug/1152533
 
 == Twistedchecker should check example code ==
-[https://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html#auto8 The writing standard]
-suggests that "example code should conform to
-the coding standard" which implies that examples should be tested in
-the same way as the main twisted code. That includes twistedchecker.
-
-The twistedchecker builder does not currently scan the doc folder and
-the Python files within.
-
- * https://buildbot.twistedmatrix.com/builders/twistedchecker/builds/300/steps/run-twistedchecker/logs/stdio
- * twistedchecker twisted
-
-We should alter the current twistedchecker builder to scan
-everything. This would also catch problems with the setuptools files.
-
-{{{
-[richard@zorin testable-examples-84]$ find doc -type f -name '*.py' | xargs twistedchecker | wc -l
-
-3150
-}}}
-
-But the twistedchecker builder is a "ratchet" test, so these errors
-will only show up as "new errors" in initial builds, after which, the
-errors can be fixed incrementally in future tickets.
-
-Some of the twistedchecker errors will be due to bugs in
-twistedchecker.
-
-Raise tickets for fixing the twistedchecker errors in each
-example.
-
+ * https://bugs.launchpad.net/twisted-buildbot-configuration/+bug/1152535
 
 == ExampleTestBase for unit testing example code ==
 
