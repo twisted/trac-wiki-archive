@@ -101,46 +101,7 @@ Then:
 
 
 == Pyflakes builder should check example code ==
-
-In the comments for #84, jml and spiv have both suggested that we
-should run a linter on the examples.
-
-[https://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html#auto8 The writing standard]
-suggests that "example code should conform to
-the coding standard" which implies that examples should be tested in
-the same way as the main twisted code. That includes pyflakes.
-
-The pyflakes builder does not currently scan the doc folder and the
-Python files within.
-
- * https://buildbot.twistedmatrix.com/builders/pyflakes/builds/76/steps/pyflakes/logs/stdio
- * pyflakes twisted
-
-So we should alter the current pyflakes builder to scan everything.
-
-This would also catch problems with the setuptools files.
-
-There are 116 pyflakes errors in the existing documentation examples
-and in the setup.py files.
-
-{{{
-
-[richard@zorin testable-examples-84]$ pyflakes doc setup* | wc -l
-
-doc/historic/2003/pycon/deferex/deferex-bad-adding.py:6: invalid
-syntax ...  ^ doc/historic/2003/pycon/deferex/deferex-listing2.py:6:
-invalid syntax ...  ^
-doc/historic/2003/pycon/deferex/deferex-listing0.py:8: invalid syntax
-...  ^
-
-116
-}}}
-
-But the pyflakes builder is a "ratchet" test, so these errors will
-only show up as "new errors" in initial builds, after which, the
-errors can be fixed incrementally in future tickets.
-
-Raise tickets for fixing the pyflakes errors in each example.
+ * See https://bugs.launchpad.net/twisted-buildbot-configuration/+bug/1152533
 
 == Twistedchecker should check example code ==
 [https://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html#auto8 The writing standard]
