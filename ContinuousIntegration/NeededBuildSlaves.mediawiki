@@ -1,13 +1,6 @@
-= Buildslaves We're Asking For =
- * Windows 7 64-bit
- * Ubuntu Hardy 32-bit
- * Ubuntu Hardy 64-bit
- * Ubuntu Lucid 32-bit
- * Ubuntu Lucid 64-bit
-
-VMs are strongly preferred, as they are easier to manage.
-
 = What Buildslaves Do ''You'' Want? =
 Adding a buildslave is the first step to improving support on a new platform.
 
 You are welcome to provide buildslaves for your favorite platforms. They will initially go in to the "unsupported" buildslave category. The only official requirement is that they maintain a high degree of uptime.
+
+VMs are strongly preferred, as they are easier to manage
