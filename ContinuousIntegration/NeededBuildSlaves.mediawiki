@@ -1,6 +1,6 @@
 = What Buildslaves Do ''You'' Want? =
 Adding a buildslave is the first step to improving support on a new platform.
 
-You are welcome to provide buildslaves for your favorite platforms. They will initially go in to the "unsupported" buildslave category. The only official requirement is that they maintain a high degree of uptime.
+You are welcome to provide buildslaves for your favorite platforms. They will initially go in to the [https://buildbot.twistedmatrix.com/boxes-unsupported?branch=trunk&num_builds=10 unsupported] buildslave category. The only official requirement is that they maintain a high degree of uptime.
 
 VMs are strongly preferred, as they are easier to manage
