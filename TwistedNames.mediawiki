@@ -4,7 +4,44 @@
 
 Twisted Names is both a domain name server as well as a client resolver library. Twisted Names comes with an "out of the box" nameserver which can read most BIND-syntax zone files as well as a simple Python-based configuration format. Twisted Names can act as an authoritative server, perform zone transfers from a master to act as a secondary, act as a caching nameserver, or any combination of these. Twisted Names' client resolver library provides functions to query for all commonly used record types as well as a replacement for the blocking gethostbyname() function provided by the Python stdlib socket module.
 
-Twisted Names is available under the MIT Free Software licence. 
+= Examples =
+
+Running a caching DNS server is as easy as running `twistd`. See `twistd dns --help` for more details
+
+{{{
+$ twistd -n dns --port 5354 --recursive --cache
+}}}
+
+This is how you can do some name resolution with Twisted Names.
+
+{{{
+#!py
+$ python -m twisted.conch.stdio
+>>> from twisted.names import client
+>>> client.getHostByName('twistedmatrix.com')
+<Deferred at 0x9dcfbac current result: '66.35.39.65'>
+>>> client.lookupMailExchange('twistedmatrix.com')
+<Deferred at 0x90eb0ec current result: ([<RR name=twistedmatrix.com type=MX class=IN ttl=86303s auth=False>], [], [<RR name=mail.twistedmatrix.com type=A class=IN ttl=86304s auth=False>])>
+}}}
+
+Twisted has pluggable resolvers, the default resolver reads ''/etc/resolv.conf'' (Or ''C:\windows\system\hosts.txt'' on windows), /etc/hosts and has a cache. You can create an alternate resolver to resolve names. Such as in the following example.
+
+{{{
+#!py
+$ python -m twisted.conch.stdio
+>>> from twisted.names import client
+>>> resolver = client.createResolver(servers=['8.8.8.8', '8.8.4.4'], hosts='alternate_hosts_file')
+>>> resolver.getHostByName('twistedmatrix.com')
+<Deferred at 0x9dcfbac current result: '1.2.3.4'>
+}}}
+
+You can affect all future name resolution in the reactor and from the `twisted.names.client` by installing a custom resolver into the reactor.
+
+{{{
+from twisted.internet import reactor
+from twisted.names import client
+reactor.installResolver(client.createResolver(servers=['8.8.8.8', '8.8.4.4'], hosts='alternate_hosts_file'))
+}}}
 
 = Download =
 
