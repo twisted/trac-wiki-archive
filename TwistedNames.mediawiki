@@ -38,6 +38,7 @@ $ python -m twisted.conch.stdio
 You can affect all future name resolution in the reactor and from the `twisted.names.client` by installing a custom resolver into the reactor.
 
 {{{
+#!py
 from twisted.internet import reactor
 from twisted.names import client
 reactor.installResolver(client.createResolver(servers=['8.8.8.8', '8.8.4.4'], hosts='alternate_hosts_file'))
