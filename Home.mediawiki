@@ -12,11 +12,11 @@
 
 == Source ==
 
- * [[ProjectVersion(http://pypi.python.org/packages/source/T/Twisted/Twisted-%(base)s.tar.bz2#md5=%(md5)s Twisted %(base)s tar.bz2)]]
+ * [[ProjectVersion(https://pypi.python.org/packages/source/T/Twisted/Twisted-%(base)s.tar.bz2#md5=%(md5)s Twisted %(base)s tar.bz2)]]
 
 == Windows (32-bit) ==
 
- * [[ProjectVersion(http://pypi.python.org/packages/2.7/T/Twisted/Twisted-%(base)s.win32-py2.7.msi Twisted %(base)s for Python 2.7)]]
+ * [[ProjectVersion(https://pypi.python.org/packages/2.7/T/Twisted/Twisted-%(base)s.win32-py2.7.msi Twisted %(base)s for Python 2.7)]]
 
 == Other ==
 
@@ -25,7 +25,7 @@
 
 == Dependencies ==
 
- * [http://pypi.python.org/pypi/zope.interface#download zope.interface]
+ * [https://pypi.python.org/pypi/zope.interface#download zope.interface]
 }}}
 
 {{{
