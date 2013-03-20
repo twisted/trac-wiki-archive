@@ -94,7 +94,7 @@ This series of documents is designed for people who wish to contribute to the Tw
 
 == Buildbot ==
 
-After every commit to Twisted, the buildbot runs all the unit tests and reports [http://buildbot.twistedmatrix.com/ test results on several platforms].  Here is a page showing only the [http://buildbot.twistedmatrix.com/supported test results on supported platforms]. All tests on supported platforms always pass. Watch the buildbot. Because sometimes, the buildbot watches back.
+After every commit to Twisted, the buildbot runs all the unit tests and reports [http://buildbot.twistedmatrix.com/ test results on several platforms].  Here is a page showing only the [http://buildbot.twistedmatrix.com/boxes-supported test results on supported platforms]. All tests on supported platforms always pass. Watch the buildbot. Because sometimes, the buildbot watches back.
 
 == Win32 development ==
 
