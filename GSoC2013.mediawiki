@@ -4,9 +4,9 @@
 {{{
 #!html
 <div class="images">
-        <img src="http://mit.edu/~jesstess/www/pycon_twisted.jpg" title="PyCon 2012 sprint" alt="PyCon 2012 sprint" height="200">
-        <img src="http://mit.edu/~jesstess/www/twistedmatrix_highscores.png" title="Entertaining metrics" alt="Entertaining metrics" height="200">
-        <img src="http://twistedmatrix.com/trac/raw-attachment/wiki/Photos/pycon2011_small.jpg" title="PyCon 2011 sprint" alt="PyCon 2011 sprint" height="200">
+        <img src="http://mit.edu/~jesstess/www/pycon_twisted.jpg" title="PyCon 2012 sprint" alt="PyCon 2012 sprint" height="150">
+        <img src="http://mit.edu/~jesstess/www/twistedmatrix_highscores.png" title="Entertaining metrics" alt="Entertaining metrics" height="150">
+        <img src="http://twistedmatrix.com/trac/raw-attachment/wiki/Photos/pycon2011_small.jpg" title="PyCon 2011 sprint" alt="PyCon 2011 sprint" height="150">
 </div>
 }}}
 
@@ -14,13 +14,13 @@
 
 == Getting in Touch ==
 
-Thanks for your interest in working on Twisted this summer! Here's an overview of the application process:
+Thanks for your interest in working on Twisted this summer through Google Summer of Code! Here's an overview of the application process:
 
   1. Get in touch and let us know that you're interested, by sending an e-mail to twisted-gsoc@twistedmatrix.com
   1. Get familiar with the Twisted development process (see below).
   1. Submit at least 1 patch to Twisted (don't worry, we're here to help if you need it!)
-  1. Create a project proposal with a Twisted mentor (see http://www.google-melange.com/gsoc/document/show/gsoc_program/google/gsoc2012/faqs#student_application_looks)
-  1. Apply on the Google Summer of Code web page (https://www.google-melange.com/gsoc/homepage/google/gsoc2012) for the Python Software Foundation group, with the project proposal we created.
+  1. Create a [https://www.google-melange.com/gsoc/document/show/gsoc_program/google/gsoc2013/help_page#5._What_should_a_student_proposal_look project proposal] with a Twisted mentor
+  1. Apply on the [https://www.google-melange.com/gsoc/homepage/google/gsoc2013 Google Summer of Code web page] for the Python Software Foundation group, with the project proposal we created.
 
 == Project Ideas ==
 
@@ -38,8 +38,7 @@ Here are some of the tools we use:
   3. the svn revision control system
   4. the diff and patch utilities
 
-If you have not used IRC before, please go through this short tutorial on installing and using an IRC client:
-https://openhatch.org/wiki/Open_Source_Comes_to_Campus/UMD/Laptop_setup#Goal_.233:_install_an_IRC_client
+If you have not used IRC before, please go through [https://openhatch.org/wiki/Open_Source_Comes_to_Campus/UMD/Laptop_setup#Goal_.233:_install_an_IRC_client this short tutorial] on installing and using an IRC client:
 
 Please familiarize yourself with how Twisted uses Trac by exploring the reports from this link:
 http://twistedmatrix.com/trac/report
@@ -58,7 +57,7 @@ http://openhatch.org/missions/diffpatch
 If you have any questions while going through this material, don't hesitate to ask for help in #twisted on IRC or on the [http://twistedmatrix.com/trac/wiki/TwistedCommunity#MailLists twisted-python mailing list].
 
 Once you've gone through this material, the next steps will be to:
-  1. Meet up on IRC (stop by the #twisted channel)
+  1. Meet up on IRC (stop by the `#twisted` channel on Freenode)
   2. Check out and explore the Twisted source code
   3. Read a few parts of the Twisted core documentation and run some example Twisted scripts
   4. Run the Twisted test suite - cd into the checkout folder and run "bin/trial twisted".
