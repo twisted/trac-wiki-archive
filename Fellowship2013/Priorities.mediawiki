@@ -1,14 +1,3 @@
-  1. Tickets already in review before
-    * Many tickets have had some work done on them but have not yet been completed.  These tickets represent a large amount of invested effort that has yet not yielded any benefits.
-    * As such, completing them may result in proportionally more return for effort.
-    * Some judgement needs to be applied in selecting tickets from this category.  Just because effort has been invested does not necessarily mean the tickets are particularly valuable to resolve.
-    * Some tickets are stalled or abandoned because they are really, really hard (and so probably require lots and lots more effort)
-    * A trac report will produce a list of tickets in this category - https://twistedmatrix.com/trac/report/16
-  1. Deferred cancellation
-    * Ultimately the vast majority of Twisted-provided APIs that return a `Deferred` should implement cancellation logic rather than relying on the fallback behavior provided by `Deferred` itself.
-    * This is a very large number of ''mostly'' small, self-contained tasks.
-    * Potentially a GSoC project or OPW project instead of a Fellowship project (lends itself well to beginners)
-    * Most tickets for this work have not yet been created
   1. Deploy to new tummy machine (ASAP)
     * Cube (hosting most current infrastructure) will be desupported in the immediate future.
     * New-Cube is up, has more modern OS, faster hardware.
@@ -21,6 +10,17 @@
        * trac
        * user accounts
        * dns
+  1. Tickets already in review before
+    * Many tickets have had some work done on them but have not yet been completed.  These tickets represent a large amount of invested effort that has yet not yielded any benefits.
+    * As such, completing them may result in proportionally more return for effort.
+    * Some judgement needs to be applied in selecting tickets from this category.  Just because effort has been invested does not necessarily mean the tickets are particularly valuable to resolve.
+    * Some tickets are stalled or abandoned because they are really, really hard (and so probably require lots and lots more effort)
+    * A trac report will produce a list of tickets in this category - https://twistedmatrix.com/trac/report/16
+  1. Deferred cancellation
+    * Ultimately the vast majority of Twisted-provided APIs that return a `Deferred` should implement cancellation logic rather than relying on the fallback behavior provided by `Deferred` itself.
+    * This is a very large number of ''mostly'' small, self-contained tasks.
+    * Potentially a GSoC project or OPW project instead of a Fellowship project (lends itself well to beginners)
+    * Most tickets for this work have not yet been created
   1. Attempt trac upgrade in a way that allows switching back to current version
     * Basically, set up a testing deployment/environment where trac changes can be tested before going live
   1. Support for non-OpenSSL SSL libraries
