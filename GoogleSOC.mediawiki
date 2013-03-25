@@ -1,4 +1,21 @@
-= Google Summer of Code 2012 =
+= NOTE =
+'''Please visit http://twistedmatrix.com/trac/wiki/GSoC2013 for Google Summer of Code 2013.'''
+
+{{{
+#!html
+<hr />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+}}}
+
+= Historical Info: Google Summer of Code 2012 =
 
 
 {{{
