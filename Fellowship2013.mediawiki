@@ -40,6 +40,7 @@ Serve as architect for the development and implementation of new features.
 
 The Maintainer will provide a forthnightly written report of their progress to the Conservancy and the Twisted community.
 
+There are also some more specific [wiki:Fellowship2013/Priorities priorities].
 
 == Fellowship Candidate ==
 
