@@ -16,7 +16,7 @@
 
 Thanks for your interest in working on Twisted this summer through Google Summer of Code! Here's an overview of the application process:
 
-  1. Get in touch and let us know that you're interested, by sending an e-mail to twisted-gsoc@twistedmatrix.com
+  1. Get in touch and let us know that you're interested, by sending an e-mail to `twisted-gsoc@twistedmatrix.com`
   1. Get familiar with the Twisted development process (see below).
   1. Submit at least 1 patch to Twisted (don't worry, we're here to help if you need it!)
   1. Create a [https://www.google-melange.com/gsoc/document/show/gsoc_program/google/gsoc2013/help_page#5._What_should_a_student_proposal_look project proposal] with a Twisted mentor
