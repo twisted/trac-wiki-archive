@@ -24,7 +24,11 @@ Thanks for your interest in working on Twisted this summer through Google Summer
 
 == Project Ideas ==
 
-Coming soon!
+More coming soon.
+
+=== Deferred Cancellation ===
+
+Deferreds are Twisted's abstraction for an eventual result of a task. They are thus a good place to have a hook for cancelling the task, and they provide a cancellation API. However, many Twisted APIs that return Deferreds don't provide cancellation support. The project would involve adding cancellation support to as many APIs as possible (e.g. various protocol clients like HTTP, POP3, SMTP, etc. that are missing it), starting with easy cases and moving on to more difficult ones.
 
 
 == Getting Started with Twisted Development ==
