@@ -103,7 +103,7 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 
 [[Image(TSF/SponsorLogos:dyn-logo.png, title=Dynamic Network Services Inc, link=http://www.dyn.com/)]]
 [[Image(TSF/SponsorLogos:flowroute-logo.gif, title=flowroute, link=http://www.flowroute.com/)]]
-[[Image(TSF/SponsorLogos:found.png, title=FoundIT, link=http://www.found.no/)]]
+[[Image(TSF/SponsorLogos:found_160x80.png, title=FoundIT, link=http://www.found.no/)]]
 }}}
 
 }}}
