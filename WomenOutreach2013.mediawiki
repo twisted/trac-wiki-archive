@@ -60,4 +60,4 @@ Twisted is broken into several subprojects: core networking, web, email, instant
  * [TwistedCommunity#MailLists Check out the discussions on our mailing lists]
  * [ContributingToTwistedLabs Read about contributing to Twisted]
 
-If you have questions about this project or Women Outreach 2013, please get in touch with us at <tt>twisted-gsoc@twistedmatrix.com</tt> (we're sharing a mailing list with Google Summer of Code since we're running them in parallel).
+If you have questions about this project or Women Outreach 2013, please get in touch with us at `twisted-gsoc@twistedmatrix.com` (we're sharing a mailing list with Google Summer of Code since we're running them in parallel).
