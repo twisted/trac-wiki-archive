@@ -1,7 +1,7 @@
 {{{
 #!html
 <div>
-<font size="+1">Welcome <a href="http://live.gnome.org/GnomeWomen/OutreachProgram2012">Outreach Program for Women</a> applicants! Below is a description of the Twisted project open for applications. This project will be mentored by <a href="http://jesstess.com">Jessica McKellar</a>.</font>
+<font size="+1">Welcome <a href="http://live.gnome.org/GnomeWomen/OutreachProgram2012">Outreach Program for Women</a> applicants! Below is a description of the Twisted project open for applications.</font>
 </div>
 }}}
 
