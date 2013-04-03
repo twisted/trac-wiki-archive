@@ -1,0 +1,63 @@
+{{{
+#!html
+<div>
+<font size="+1">Welcome <a href="http://live.gnome.org/GnomeWomen/OutreachProgram2012">Outreach Program for Women</a> applicants! Below is a description of the Twisted project open for applications. This project will be mentored by <a href="http://jesstess.com">Jessica McKellar</a>.</font>
+</div>
+}}}
+
+This internship is appropriate for any level of open source experience. If you have worked on an open source project before, great! If not, we'll help you learn the development and communication tools we use as part of the internship. Some Python experience is a prerequisite.
+
+The [https://live.gnome.org/OutreachProgramForWomen Outreach Program for Women] is open to both students and non-students. Students, you might also be able to work with Twisted [wiki:GSoC2013 through Google Summer of Code]. [https://live.gnome.org/OutreachProgramForWomen#Is_Google_Summer_of_Code_right_for_you.3F This page] compares the two programs.
+
+{{{
+#!html
+<div class="images">
+        <img src="http://mit.edu/~jesstess/www/twisted_echo.png" title="Superior technology" alt="Superior technology" height="200">
+        <img src="http://mit.edu/~jesstess/www/pycon_twisted.jpg" title="PyCon 2012 sprint" alt="PyCon 2012 sprint" height="200">
+        <img src="http://mit.edu/~jesstess/www/twistedmatrix_highscores.png" title="Entertaining metrics" alt="Entertaining metrics" height="200">
+</div>
+}}}
+
+=== What is Twisted? ===
+
+Twisted is an event-driven networking engine written in Python. If you love networking, Twisted is the project for you! This is a great opportunity to learn more about what goes on under the hood when you browse the web, send mail, or use an instant messaging service, as Twisted supports all of these networking protocols.
+
+Twisted is a great open source internship project for many reasons:
+ * The community is full of smart, friendly people who are committed to making Twisted and the open source community in general welcoming to newcomers of all backgrounds.
+ * Our coding, documentation, and testing standards instil excellent discipline that carries over into work and other open source projects.
+ * We provide in-depth coding reviews to help improve your skills.
+ * You get to improve software used by millions of people all over the world. Twisted is used everywhere from Google and Lucasfilm to Justin.TV and the Launchpad software collaboration platform - read about some of our SuccessStories.
+ * You'll be part of an entire Twisted release cycle and see code you wrote released to the world during the internship!
+
+=== Outreach Program for Women internship project description ===
+
+Twisted is broken into several subprojects: core networking, web, email, instant messaging, etc.. For this internship, you'll have an opportunity to become an expert in a subproject that interests you by working on everything from documentation and example programs to ticket triage, bug fixes, and new features. You can move between the goals below as quickly as you want based on your comfort level: if you want to dive right into bug fixes, awesome!
+
+'''Goal !#1: Review and improve documentation'''
+ * Audit the examples, and make sure they have a high-level description and specify how they are run.
+ * Audit the HOWTOs for use of deprecated APIs, coding standard violations, broken links, etc. and then update them. A newcomer's perspective is *tremendously* valuable here.
+ * Identify missing examples and HOWTOs based on IRC, mailing list, and stack overflow feedback, and add them.
+ * This is an excellent way to get a feel for the Twisted code base and the networking protocols of your subproject.
+'''Goal #2: Test suite cleanup'''
+ * Help us clean up the code base by removing deprecations and fixing deprecation warnings.
+ * Debug and fix some of our recurring sporadic test failures.
+ * Clean up test suite documentation and bring the tests in line with current coding standards
+ * You'll have a fleet of BuildBot machines at your disposal to test changes!
+ * This is a great way to get a feel for how to write unit tests in Twisted, and to develop a solid test-driven development and coding standards discipline -- qualities future employers and co-workers will love!
+'''Goal #3: Improve API documentation and test coverage'''
+ * Everything that gets us to closer to 100% API documentation and test coverage is making Twisted more accessible and regression-proof.
+'''Goal #4: Make progress on stalled subproject tickets'''
+ * We have a lot of tickets that just need tests, documentation, or one more round of work based on review feedback to land. Help bring some of these tickets across the finish line!
+'''Goal #5: Work on features for your subproject'''
+ * There are some great open feature tickets looking for a champion. With your experience in Goals 1-4 you are an expert on this subproject and well-equipped to work on them.
+
+=== How to apply ===
+
+[https://live.gnome.org/OutreachProgramForWomen#Application_Process This page] explains the application process.
+
+=== Join us! ===
+ * [TwistedCommunity#IRC Say hello on IRC]
+ * [TwistedCommunity#MailLists Check out the discussions on our mailing lists]
+ * [ContributingToTwistedLabs Read about contributing to Twisted]
+
+If you have questions about this project or Women Outreach 2013, please get in touch with us at <twisted-gsoc@twistedmatrix.com> (we're sharing a mailing list with Google Summer of Code since we're running them in parallel).
