@@ -154,7 +154,7 @@ jml
     1. http://buildbot.twistedmatrix.com/builders/windows7-64-py2.7-msi
     1. For "Branch" specify the release branch, e.g. "branches/releases/release-$RELEASE-4290"
        1. ~~The builders use the bzr export, which doesn't mirror tags/ or branches/releases/. You may need to copy the branch elsewhere.~~
-    1. Download the latest `.msi` and `.exe` files from from http://buildbot.twistedmatrix.com/builds/twisted-packages/ and save them in the staging directory
+    1. Download the latest `.msi`, `.exe` and `.whl` files from from http://buildbot.twistedmatrix.com/builds/twisted-packages/ and save them in the staging directory
        1. ~~ The installers built from windows7-64-py2.7-msi will counter-intuitively have names that end in winxp32-py2.7.exe and winxp32-py2.7.msi. This is because of "distutils weirdness and other things".~~
  1. Sign the tarballs and Windows installers
     1. e.g. `md5sum Tw* | gpg -a --clearsign > twisted-$RELEASE-md5sums.txt`
@@ -166,7 +166,7 @@ jml
     1. e.g. `ssh cube.twistedmatrix.com mkdir -m 2775 /srv/www-data/twisted/Releases/{Twisted,Core,Conch,Lore,Mail,Names,News,Pair,Runner,Web,Words}/$API`
     1. e.g. `scp /tmp/twisted-release/Twisted-$RELEASE.tar.bz2 cube.twistedmatrix.com:/srv/www-data/twisted/Releases/Twisted/$API/`
     1. For all subprojects, upload the tarballs to `cube.twistedmatrix.com:/srv/www-data/twisted/Releases/$SUBPROJECT/$API/`
-    1. Windows installers (msi and exe) go in the `Twisted` project
+    1. Windows installers (msi, exe and whl) go in the `Twisted` project
  1. Update the permissions on `cube`
     1. For all new directories, `chmod 2775 $DIRECTORY`
     1. For all new files, `chmod 664 $FILE`
@@ -242,7 +242,7 @@ jml
  1. Update PyPI records & upload files
     * http://pypi.python.org/pypi/Twisted/
       * Edit the version
-      * Upload tarball and MSIs
+      * Upload tarball, MSIs and wheels
  1. Update PyPI records, editing the version  
     * http://pypi.python.org/pypi/Twisted%20Pair/
     * http://pypi.python.org/pypi/Twisted%20Conch/
