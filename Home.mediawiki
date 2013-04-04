@@ -117,6 +117,7 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 
 Twisted is an event-driven networking engine written in Python and licensed under the open source [http://www.opensource.org/licenses/mit-license.php MIT license].
 
+Twisted is participating in the [wiki:WomenOutreach2013 GNOME Outreach Program for Women] and [wiki:GSoC2013 Google Summer of Code] again this year; the deadline is May 1, 2013.
 
 == Code Examples ==
 
