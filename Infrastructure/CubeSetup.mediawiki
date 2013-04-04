@@ -1,0 +1,137 @@
+I've (tom.prince) compiled a list of all the services that are currently running on cube,
+and some notes on the how they are currently deployed.
+
+Some general points on the custom services:
+ * Have a ~/Run directory that holds twistd.pid and twistd.log, and similiar. Some of the services also have configuration there, but I think that should change.
+ * Most services are unmonitored, currently. I'm tempted to use procmon, from twisted-runner to do this. On the other hand, they do seem reliable enough that we don't need to worry about this.
+
+Other thoughts:
+ * My inclination is to use fabric, to configure most things. Except the mail setup and postgres, none of the service need anything setup as root other than the user they run as. Not all the configuration lives in version control, but I'd like to move everything to be under version control.
+ * Do we want to setup some kind of monitoring/alerting? We currently have munin setup on wolfwood, but having looked at, it doesn't seem organized well enough to provide much useful information. I'm inclined to see if froztbyte is willing to help with this.
+ * I'd like to setup a location on wolfwood to host non-public infrastructure related repositories.
+ * Unless somebody objects, or has other suggetions, I've decided to name the new machine octahedron. (My impression is that the machine that predates cube was called pyramid). I've added that name to dns, and if people don't have objections, I'll contact tummy, to get reverse dns updated as well.
+ * I'm not sure how to go about migrating users, or user data.
+
+== Services ==
+
+ * Mail
+   * exim
+   * greylistd
+   * Mailman
+ * Website
+   * www-data
+   * www-monitoring
+   * codespeed
+ * trac
+   * trac
+   * commit-bot
+   * postgres
+   * diffresource
+   * highscores
+   * frack?
+ * buildbot
+   * bb-slave
+ * t-names
+ * t-words?
+
+=== exim ===
+
+This looks like a generic system-package install. There are a bunch of aliases in /etc/aliases. The following files (and it seems the config stanzas referencing them) seem to be custom:
+ * local_recipient_blacklist
+ * expired_accounts
+ * reject-helo
+
+There is also some greylistd config created by greylistd-setup-exim4.
+
+I don't think there is any live data that needs to be migrated, just queues that need to be flushed. My understanding is that the server just forwards email, so we can just leave it running until DNS has refreshed. (Do we want to consider selfhosting with twisted-mail at some point?)
+
+=== Greylistd ===
+
+It appears this is an entirely stock system inastall (with the exim setup mentioned above. There is state in /var/lib/greylistd that we may want to preserve.
+
+=== Mailman ===
+
+http://www.debian-administration.org/articles/567
+Thiis appears to be a system-install, with a little bit of configuration in /etc/mailmain/mm_cfg.py (DEFAULT_{EMAIL,URL}_HOST) and live data in /var/lib/mailman/{archives,data,lists} (and maybe qfiles)
+
+It appears that mailman integrates transparently with exim.
+
+ 1. apt-get install mailman
+ 2. copy data
+ 3. /etc/init.d/mailman start
+
+=== www-data ===
+
+The configuration for this lives in lp:twisted-website. In addtion, ~/twsited/Releases and ~/distributable contain non-version controlled resources (they should perhaps be under a single directory).
+
+This just requires twisted, and is controlled by a @reboot cron.
+
+=== www-monitoring ===
+
+This doesn't currently seem to be in version control anywhere. I'm not sure the results are currently of any use. If we redeploy this, we should put it in version control, and provide access to the results somehow.
+
+This just requires twisted, and is controlled by a @reboot cron.
+
+=== codespeed ===
+
+There is an unversioned .tac file in ~/Run and the data in an sqlite database in ~/Database. The script should be versioned. Perhaps, (if we have a system-wide postgres install) we should migrate to postgres? I'm not sure what be involved, or if there is a benefit to doing that.
+
+This requires twisted, django and codespeed (all as user install, currently), and is controlled by a @reboot cron.
+
+=== trac ===
+
+https://twistedmatrix.com/trac/wiki/MovingTrac
+
+This depends on trac, twisted, static trac content (hosted by the frontend in lp:twisted-website).
+
+ 1) Create trac user.
+ 2) install trac-source (currently https://code.launchpad.net/~exarkun/+junk/trac)
+ 3) Setup postgres: create-user+createdb ; import dump
+ 4) Install config: trac-config (currently in ~/Run/trac), twisted-trac-integration,
+ 5) configure rsync-repo on wolfwood (does this need bootstraping? probably not)
+
+This is controlled by a @reboot cron, and also has a monitor script setup from a second @reboot. There is cleanup script and weekly email script in cron, as well.
+
+=== commit-bot ===
+
+This depends on twisted and lp:twisted-trac-integration. Currently the config lives in a branch. It'd be nicer to have config exteranlized somehow. This is controle by a @reboot cron.
+
+=== diffresource ===
+
+This depends on twisted, divmod (for combinator). The currently running branch talks to frack, but we don't need to use that one (but the resouce script is certainly worth keeping, at least) This is controle by a @reboot cron.
+
+(I'm actually curious as to how this is working, as frack doesn't appear to be currently working.)
+
+=== highscore ===
+
+This depends on twisted, and access to trac's postgress db. It is started by a @reboot cron, and is currently configured to restart on push. This later behavior can probably be removed.
+
+=== frack ===
+
+There is a tac file not in version control. This depends on twisted, access to trac's postgres db. This is started by a @reboot cron. It isn't currently running, and is being rewritten by magmatt.
+
+=== postgres ===
+
+There is currently an installation in ~trac-migrations/Database, but we probably want to go with a system-wide installation. It appears that we just have a default installtion, other than the location. The only configuration is setting up users and dbs.
+
+=== buildbot ===
+
+ 1. create user
+ 2. clone config to ~/Buildbot
+ 3. clone buildbot to ~/Buildbot/buildbot-source
+ 4. clone private config to ...
+ 5. Create virtualenv (perhaps this could user-local install instead)
+    - buildbot source
+    - pycrypto
+ 6. populate ~/Buildbot/master/dependencies
+    - This is for the cpython and pypy interpreter builders, the list of required dependencies can be found there.
+ 7. install @reboot
+
+For production
+ 8. copy state.sqlite and build directories from old master
+
+Started by @reboot cron, has a periodic cleanup cron job as well.
+
+=== t-names ===
+
+Config in ~/Zones currently. This depends on twisted and is started by a @reboot cron.
