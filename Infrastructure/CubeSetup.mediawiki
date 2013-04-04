@@ -84,11 +84,11 @@ https://twistedmatrix.com/trac/wiki/MovingTrac
 
 This depends on trac, twisted, static trac content (hosted by the frontend in lp:twisted-website).
 
- 1) Create trac user.
- 2) install trac-source (currently https://code.launchpad.net/~exarkun/+junk/trac)
- 3) Setup postgres: create-user+createdb ; import dump
- 4) Install config: trac-config (currently in ~/Run/trac), twisted-trac-integration,
- 5) configure rsync-repo on wolfwood (does this need bootstraping? probably not)
+ 1. Create trac user.
+ 2. install trac-source (currently https://code.launchpad.net/~exarkun/+junk/trac)
+ 3. Setup postgres: create-user+createdb ; import dump
+ 4. Install config: trac-config (currently in ~/Run/trac), twisted-trac-integration,
+ 5. configure rsync-repo on wolfwood (does this need bootstraping? probably not)
 
 This is controlled by a @reboot cron, and also has a monitor script setup from a second @reboot. There is cleanup script and weekly email script in cron, as well.
 
