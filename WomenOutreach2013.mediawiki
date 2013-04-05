@@ -31,6 +31,20 @@ Twisted is a great open source internship project for many reasons:
 
 === Outreach Program for Women internship project description ===
 
+'''Deferred Cancellation'''
+
+Deferreds are Twisted's abstraction for an eventual result of a task. They are thus a good place to have a hook for cancelling the task, and they provide a cancellation API. However, many Twisted APIs that return Deferreds don't provide cancellation support. The project would involve adding cancellation support to as many APIs as possible (e.g. various protocol clients like HTTP, POP3, SMTP, etc. that are missing it), starting with easy cases and moving on to more difficult ones.
+
+What you'll learn: a good knowledge of event-driven programming, and a little bit about lots of different parts of Twisted.
+
+'''Rewrite twisted.web.client.getPage using Agent'''
+
+Twisted has two HTTP client APIs; the new one is Agent, the old one getPage based on a much less featureful HTTP implementation. Rewriting getPage to use Agent would allow old code to benefit from the features added in Agent (e.g. chunked encoding), while preserving backwards compatibility.
+
+What you'll learn: how HTTP works, and the high-level APIs users expect. 
+
+'''Maintain a subproject'''
+
 Twisted is broken into several subprojects: core networking, web, email, instant messaging, etc.. For this internship, you'll have an opportunity to become an expert in a subproject that interests you by working on everything from documentation and example programs to ticket triage, bug fixes, and new features. You can move between the goals below as quickly as you want based on your comfort level: if you want to dive right into bug fixes, awesome!
 
 '''Goal !#1: Review and improve documentation'''
