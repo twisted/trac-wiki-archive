@@ -1,7 +1,7 @@
 {{{
 #!html
 <div>
-<font size="+1">Welcome <a href="http://live.gnome.org/GnomeWomen/OutreachProgram2012">Outreach Program for Women</a> applicants! Below is a description of the Twisted project open for applications.</font>
+<font size="+1">Welcome <a href="https://live.gnome.org/OutreachProgramForWomen">Outreach Program for Women</a> applicants! Below is a description of the Twisted project open for applications.</font>
 </div>
 }}}
 
