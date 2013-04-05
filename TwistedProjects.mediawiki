@@ -2,73 +2,42 @@
 
   '''[wiki:TwistedProject Twisted]'''::
   Full-featured, integrated suite of asynchronous clients and servers: this project contains everything below.[[BR]]
-  Lead developer: Glyph "Glyph" Lefkowitz <glyph@twistedmatrix.com>
 
   '''[wiki:TwistedCore Twisted Core]'''::
-  Asynchronous event loop.[[BR]]
-  Maintainer: Glyph "Glyph" Lefkowitz <glyph@twistedmatrix.com>
+  Asynchronous event loop and networking framework.[[BR]]
 
   '''[wiki:TwistedConch Twisted Conch]'''::
   An SSH and SFTP protocol implementation together with clients and servers.[[BR]]
-  Maintainer: Paul "z3p" Swartz <z3p@twistedmatrix.com>
 
   '''[wiki:TwistedWeb Twisted Web]'''::
   An HTTP protocol implementation together with clients and servers.[[BR]]
-  Maintainer: James "foom" Knight <foom@fuhm.net>
 
   '''[wiki:TwistedMail Twisted Mail]'''::
   An SMTP, IMAP and POP protocol implementation together with clients and servers.[[BR]]
-  Maintainer: Jp "exarkun" Calderone <exarkun@divmod.com>
 
   '''[wiki:TwistedNames Twisted Names]'''::
   A DNS protocol implementation with client and server.[[BR]]
-  Maintainer: Jp "exarkun" Calderone <exarkun@divmod.com>
 
   '''[wiki:TwistedNews Twisted News]'''::
   An NNTP protocol implementation with client and server.[[BR]]
-  Maintainer: Jp "exarkun" Calderone <exarkun@divmod.com>
 
   '''[wiki:TwistedWords Twisted Words]'''::
   Chat and Instant Messaging.[[BR]]
-  Maintainer: Jp "exarkun" Calderone <exarkun@divmod.com>
 
   '''[wiki:TwistedTrial Twisted Trial]'''::
   Unittest-compatible automated testing.[[BR]]
-  Maintainer: Jonathan "jml" Lange <jml@twistedmatrix.com>
 
   '''[wiki:TwistedLore Twisted Lore]'''::
   Documentation generator with HTML and LaTeX support.[[BR]]
-  Maintainer: Andrew "spiv" Bennetts <spiv@twistedmatrix.com>
 
   '''[wiki:TwistedRunner Twisted Runner]'''::
   Process management, including an inetd server.[[BR]]
-  Maintainer: Andrew "spiv" Bennetts <spiv@twistedmatrix.com>
+
 
 == Unmaintained Projects ==
 
   '''[wiki:TwistedPair Twisted Pair]'''::
   Low-level networking transports and utilities.[[BR]]
-  Former maintainer: Tommi "Tv" Virtanen <tv@twistedmatrix.com>
 
   '''[http://allmydata.org/trac/EIO EIO]'''::
   High-level {{{java.nio}}} wrapper networking framework
-
-== Projects for Other Languages ==
-
-  '''[http://itamarst.org/software/twistedjava/ PB for Java]'''::
-  Perspective Broker remote object protocol implementation in Java
-
-  '''[http://itamarst.org/software/ Fusion]'''::
-  Implement Twisted protocols using C++ instead of Python
-
-== Other maintainers ==
-
-  '''Release management'''::
-  Maintainer: Christopher "Radix" Armstrong <radix@twistedmatrix.com>
-
-  '''Documentation'''::
-  Maintainer: Ed "edsuom" Suominen <ed@eepatents.com>
-
-  '''Web site'''::
-  Maintainer: Duncan "oubiwann" !McGreggor <oubiwann@adytum.us>[[BR]]
-  Co-maintainer: Nicola "tekNico" Larosa <nico@tekNico.net>
