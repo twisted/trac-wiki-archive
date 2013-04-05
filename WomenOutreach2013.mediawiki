@@ -31,6 +31,8 @@ Twisted is a great open source internship project for many reasons:
 
 === Outreach Program for Women internship project description ===
 
+Here are some project ideas you might work on; we are open to discussing other ideas, and are working on coming up with more.
+
 '''Deferred Cancellation'''
 
 Deferreds are Twisted's abstraction for an eventual result of a task. They are thus a good place to have a hook for cancelling the task, and they provide a cancellation API. However, many Twisted APIs that return Deferreds don't provide cancellation support. The project would involve adding cancellation support to as many APIs as possible (e.g. various protocol clients like HTTP, POP3, SMTP, etc. that are missing it), starting with easy cases and moving on to more difficult ones.
@@ -47,22 +49,22 @@ What you'll learn: how HTTP works, and the high-level APIs users expect.
 
 Twisted is broken into several subprojects: core networking, web, email, instant messaging, etc.. For this internship, you'll have an opportunity to become an expert in a subproject that interests you by working on everything from documentation and example programs to ticket triage, bug fixes, and new features. You can move between the goals below as quickly as you want based on your comfort level: if you want to dive right into bug fixes, awesome!
 
-'''Goal !#1: Review and improve documentation'''
+Goal !#1: Review and improve documentation
  * Audit the examples, and make sure they have a high-level description and specify how they are run.
  * Audit the HOWTOs for use of deprecated APIs, coding standard violations, broken links, etc. and then update them. A newcomer's perspective is *tremendously* valuable here.
  * Identify missing examples and HOWTOs based on IRC, mailing list, and stack overflow feedback, and add them.
  * This is an excellent way to get a feel for the Twisted code base and the networking protocols of your subproject.
-'''Goal #2: Test suite cleanup'''
+Goal #2: Test suite cleanup
  * Help us clean up the code base by removing deprecations and fixing deprecation warnings.
  * Debug and fix some of our recurring sporadic test failures.
  * Clean up test suite documentation and bring the tests in line with current coding standards
  * You'll have a fleet of BuildBot machines at your disposal to test changes!
  * This is a great way to get a feel for how to write unit tests in Twisted, and to develop a solid test-driven development and coding standards discipline -- qualities future employers and co-workers will love!
-'''Goal #3: Improve API documentation and test coverage'''
+Goal #3: Improve API documentation and test coverage
  * Everything that gets us to closer to 100% API documentation and test coverage is making Twisted more accessible and regression-proof.
-'''Goal #4: Make progress on stalled subproject tickets'''
+Goal #4: Make progress on stalled subproject tickets
  * We have a lot of tickets that just need tests, documentation, or one more round of work based on review feedback to land. Help bring some of these tickets across the finish line!
-'''Goal #5: Work on features for your subproject'''
+Goal #5: Work on features for your subproject
  * There are some great open feature tickets looking for a champion. With your experience in Goals 1-4 you are an expert on this subproject and well-equipped to work on them.
 
 === How to apply ===
