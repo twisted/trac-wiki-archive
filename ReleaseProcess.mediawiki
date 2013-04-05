@@ -159,6 +159,7 @@ jml
  1. Sign the tarballs and Windows installers
     1. e.g. `md5sum Tw* | gpg -a --clearsign > twisted-$RELEASE-md5sums.txt`
     1. Compare this to an [http://tmrc.mit.edu/mirror/twisted/twisted-10.1.0-md5sums.txt example of twisted-$RELEASE-md5sums.txt]
+    1. Do the SHA version as well: `shasum -a 512 Tw* | gpg -a --clearsign > twisted-$RELEASE-shasums.txt`
 
 == Distribute ==
 
@@ -226,6 +227,7 @@ jml
 
  1. The site uses the [WikiMacros#AvailableMacros ProjectVersion] macro to automatically adjust the links on the wiki pages, including [wiki:WikiStart] and [wiki:Downloads], by parsing the latest `twisted-$RELEASE-md5sums.txt`:
     1. `scp twisted-$RELEASE-md5sums.txt cube.twistedmatrix.com:/srv/www-data/twisted/Releases/`
+    1. `scp twisted-$RELEASE-shasums.txt cube.twistedmatrix.com:/srv/www-data/twisted/Releases/`
 
 
 == Announce ==
@@ -238,6 +240,7 @@ jml
       1. Update links and text to the main tarball
       1. Update links and text to sub tarballs, including links to news files
     1. Add a new md5sum link
+    1. Add a new shasum link
     1. Save the page, check all links
  1. Update PyPI records & upload files
     * http://pypi.python.org/pypi/Twisted/
