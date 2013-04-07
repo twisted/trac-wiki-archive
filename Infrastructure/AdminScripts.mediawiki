@@ -40,7 +40,7 @@ Available commands:
     ...
 }}}
 
-== Configuration ==
+== Client configuration ==
 
 Before being able to run any task, we need to configure the tool to work with Twisted's infrastructure and your login user. All configuration directives are contained in the `config.py` file. The base installation ships with a sample configuration file in `config.py.sample`. Copy it over and start editing it:
 
@@ -54,7 +54,7 @@ The two main directives to change are the `HOSTS` and `USER` ones. The first con
 
 Note: your user has to be at least in the `service-admin` group on the servers you want to manage in order to be able to start/stop/restart and update services. If you want to be able to install new services or give permissions to other users to manage them, your user has to be able to gain root access as well.
 
-== Configuration conventions ==
+== Server configuration conventions ==
 
 === Directory structure ===
 
