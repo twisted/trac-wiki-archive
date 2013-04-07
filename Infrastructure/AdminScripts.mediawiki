@@ -72,3 +72,5 @@ Note: your user has to be at least in the `service-admin` group on the servers y
 
 === How to give service administration privileges to another user ===
 
+=== How to setup a new server from scratch ===
+
