@@ -5,7 +5,7 @@
 
 = Fabric administration scripts =
 
-This page describes how to use the Fabric-based administration scripts to manage services running on twistedmatrix.com.
+This page describes how to use the Fabric-based administration scripts to manage services running on twistedmatrix.com. The temporary location for the administration scripts is at: https://github.com/GaretJax/twisted-setup-temp
 
 == Getting the tools ==
 
@@ -15,7 +15,7 @@ The first step is to install the needed libraries and tools. I'm using virtualen
 mkvirtualenv env_name
 workon env_name
 pip install fabric
-git clone <address not known yet> tmadmin # May be svn or bzr as well
+git clone git://github.com/GaretJax/twisted-setup-temp.git tmadmin  # May be svn or bzr as well, location is temporary
 cd tmadmin
 }}}
 
