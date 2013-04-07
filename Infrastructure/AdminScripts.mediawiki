@@ -99,11 +99,50 @@ This script is a complete System V compatible init script to run `twistd` from a
 
 === How to start/stop/restart services ===
 
+Each service has its own Fabric namespace. Actions are available as part of each namespace. For example, the `dns` service can be started, stopped,  and restarted as follows:
+
+{{{
+#!sh
+fab dns.start
+}}}
+{{{
+#!sh
+fab dns.stop
+}}}
+{{{
+#!sh
+fab dns.restart
+}}}
+
 === How to update existing services ===
+
+Similarly as done for managing the running states, an `update` task lives in each service namespace. It can be run as follows:
+
+{{{
+#!sh
+fab dns.update
+}}}
+
+Note that a restart is still needed after updating a service.
 
 === How to install new services ===
 
+A service which was just added to the fabfile can be installed by running its `install` task:
+
+{{{
+#!sh
+fab dns.install
+}}}
+
+Note, however, that while the previous actions did not require root privileges (being member of the `service-admin` group was sufficient), installing a new service requires to be able to `sudo` to `root`. This is needed to create the necessary users, install additional packages and create the base environment.
+
 === How to give service administration privileges to another user ===
+
+An existing user which does not currently have service administration tasks can be added to the `service-admin` group by executing the `make_service_admin` task and supplying a username:
+{{{
+#!sh
+fab make_service_admin:<username>
+}}}
 
 === How to setup a new server from scratch ===
 
