@@ -74,3 +74,4 @@ Note: your user has to be at least in the `service-admin` group on the servers y
 
 === How to setup a new server from scratch ===
 
+== Adding additional tools or modifying existing ones ==
