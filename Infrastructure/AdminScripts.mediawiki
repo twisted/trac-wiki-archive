@@ -58,15 +58,17 @@ Note: your user has to be at least in the `service-admin` group on the servers y
 
 === Directory structure ===
 
-Each service has its own directory under `/srv`. The structure of the service specific directory reflects the Filesystem Hierarchy Standard (e.g. pid files in `/var/run/<service>.pid`, log files in `/var/log/<service>.log`,...).
+Each service has its own directory under `/srv`. The structure of the service specific directory reflects the Filesystem Hierarchy Standard (e.g. pid files in `/srv/<service>/var/run/<service>.pid`, log files in `/srv/<service>/var/log/<service>.log`,...).
 
 === Users, groups and privileges ===
 
 Each service runs as its own system user and owns his root directory (i.e. `/srv/<service>`). Each service user has to be part of the `service` group. To operate on a service (start/stop, update,...) a given user has to be part of the `service-admin` group. Each user in this group has permissions to `sudo` to every user in the `service` group.
 
+As the service user is a system user, login for this user is disabled.
+
 === Init scripts ===
 
-For each service, a System V style init script is provided in `/srv/<service>/etc/init.d/<service>`. This script is owned by the service user and has mode `0755`. A symlink is provided in `/etc/init.d`, this allows the script to be managed by init and allows updates to be applied to the service directory by a non-root user.
+For each service, a System V style init script is provided in `/srv/<service>/etc/init.d/<service>`. This script is owned by the service user and has mode `0755`. A symlink is provided in `/etc/init.d`, this allows the script to be managed by `init(8)` and allows updates to be applied to the service directory by a service administrator user.
 
 For convenience, a runner which simplifies the creation of new init scripts is available at `/usr/bin/twistd-service`. A minimal example of an init script for an hypothetical DNS service is shown below:
 {{{
@@ -91,7 +93,7 @@ ARGS='dns'
 
 }}}
 
-This script is a complete System V compatible init script to run `twistd` from a specific virtualenv with the correct pid and logfile arguments under the correct user. It provides the `start`, `stop`, `restart`, `status` and `zap` commands. It can be run by the root user, the service user or any user in the `service-admin` group and it is started with the correct user.
+This script is a complete System V compatible init script to run `twistd` from a specific virtualenv with the correct pid and logfile arguments under the correct user. It provides the `start`, `stop`, `restart`, `status` and `zap` commands. It can be run by the root user, the service specific user or any user in the `service-admin` group and it is started with the correct user.
 
 == Available tools ==
 
