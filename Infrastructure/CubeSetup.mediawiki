@@ -135,8 +135,3 @@ Started by @reboot cron, has a periodic cleanup cron job as well.
 === t-names ===
 
 Config in ~/Zones currently. This depends on twisted and is started by a @reboot cron.
-
-== Related resources ==
-
- * https://launchpad.net/twisted-website
- * https://launchpad.net/twisted-trac-integration
