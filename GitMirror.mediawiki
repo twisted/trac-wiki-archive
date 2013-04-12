@@ -6,21 +6,14 @@ For other version control systems, see [wiki:VcsWorkflows DVCS Workflows].
 
 == Creating a Git clone ==
 
-Twisted's SVN repository is very old, and has a lot of history, so trying to clone the whole thing would take days. Since you don't need the complete history to create a new patch, you can just clone the latest revision then update it occasionally.
+Twisted has an up-to-date [https://github.com/twisted/twisted mirror] on github. 
 
- 1. Find the SVN Revision number of the latest trunk commit:
-{{{
-svn info svn://svn.twistedmatrix.com/svn/Twisted/trunk | grep "Rev:"
-}}}
-    This should produce output like this:
-{{{
-Last Changed Rev: 33142
-}}}
  1. Create a Git clone of the repository by running this command, replacing `REVNO` with the revision number output by the previous command:
 {{{
-git svn clone --stdlayout -rREVNO --prefix="svn/" svn://svn.twistedmatrix.com/svn/Twisted
+git clone https://github.com/twisted/twisted Twisted
 }}}
     This should create a subdirectory named `Twisted` containing the latest trunk revision of the code.
+
  1. Create an ignore file that will prevent git from accidentally scooping up generated files like `*.pyc` or `_trial_temp` and including them in any patches you might submit:
 {{{
 cat >> Twisted/.git/info/exclude << EOF
@@ -33,6 +26,7 @@ dropin.cache
 EOF
 }}}
     See [http://www.kernel.org/pub/software/scm/git/docs/gitignore.html the Git documentation on .gitignore], particularly `core.excludesfile`, for more information.
+
  1. Since Twisted is normally developed in SVN, Twisted developers are used to processing SVN-style patch files, not Git's patch format. You can change the behaviour of `git diff` to match SVN just for this single repository with the following commands:
 {{{
 git config --file Twisted/.git/config --bool --add diff.noprefix true
@@ -43,21 +37,10 @@ git config --file Twisted/.git/config --bool --add diff.noprefix true
 If more commits have been made to the SVN trunk, or a Twisted developer has created a new branch for your patch to live on, you'll want to update your clone with those changes so that you can produce new patches based on those changes. Just `cd` into the repository and run:
 
 {{{
+git fetch
 git checkout master
-git svn rebase
+git rebase origin/trunk
 }}}
-
-= Troubleshooting =
-
-Here are some solutions to common problems with `git svn` clones.
-
-== git svn operations seem to take forever ==
-
-If you have your own `git svn` clone, and svn-based operations seem to take forever, try running:
-{{{
-git svn info
-}}}
-If that takes longer than 30 seconds to run, and eventually prints an error message, this is a clue that `git svn` has gotten confused about how your current branch connects to the imported SVN history. Either `git checkout` a git branch that's based on an SVN branch or (if you're already on such a branch, and it's broken) use `git reset some-remote-branch-name` to make sure your local branch is pointing exactly at a commit that was imported from SVN.
 
 ----
 
@@ -66,34 +49,63 @@ If that takes longer than 30 seconds to run, and eventually prints an error mess
 If you are a Twisted developer and want to try developing Twisted via `git svn`, you are Very Brave and will need all the help you can get. Here are some chicken-scratches left on the poorly-lit cavern walls by previous explorers.
 
 == Creating a complete mirror ==
-
-'''Note 1:''' Do not do this unless you are a Twisted developer and have asked permission. As of early 2010, this procedure takes about a week (YES, A WEEK) to run.
-
-'''Note 2:''' This command hasn't yet been run for long enough to see whether it produces a properly-configured, working `git svn` clone. However, it's our best guess so far.
+To be able to interact with svn, the following commands need to be run in the repository created above.
 
 {{{
-git svn clone --stdlayout --prefix="svn/" svn+ssh://svn.twistedmatrix.com/svn/Twisted
+git svn init --stdlayout --tags tags/releases --prefix origin/  svn://svn.twistedmatrix.com/svn/Twisted/
+git config --add svn-remote.svn.pushurl svn+ssh://svn.twistedmatrix.com/svn/Twisted/
 }}}
 
-Issues with this command that need to be researched/addressed:
+Twisted does not completely follow the standard SVN repository layout. In particular, there is a  "branches/releases" directory that contains more branches (as opposed to being a branch) and a "tags/releases" directory that contains more tags (as opposed to being a tag). Thus, git cannot be used to commit to release branches.   
 
- * Apparently revision 2 creates a branch called "Glyph", which I can't find in the SVN browser in Trac. Not quite sure what's going on there.
- * My vague recollection is that there's some old, closed branches which cause problems for `git svn` because their names contain odd punctuation which gets doubly-URL-escaped somewhere... specifically, there's one branch that got created a number of different times because SVN couldn't really handle it either. Since they're old and closed, they can probably be ignored with the `--ignore-paths=<regex>` option.
- * We may want to supply a file that maps SVN usernames (`glyph`, `exarkun`) to the Git standard of real names and email addresses.
- * Twisted does not completely follow the standard SVN repository layout. In particular, there is a  "branches/releases" directory that contains more branches (as opposed to being a branch) and a "tags/releases" directory that contains more tags (as opposed to being a tag).
-
-After creating this clone, you'll want to make the same configuration changes listed for contributors above.
 
 == git svn branching ==
 
-Follow the [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html#auto6 standard Twisted branch-name conventions] when creating branches with Git. In the following example, `$BRANCH_NAME` means the name of the branch you're trying to create.
+Follow the [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html#auto6 standard Twisted branch-name conventions] when creating branches with Git.
 
+I (tom.prince) currently use the following `mkbranch` script to create branches.
+{{{
+#!/usr/bin/python
+
+import sys
+import subprocess
+from twisted.python import usage
+
+class Options(usage.Options):
+    def parseArgs(self, branch):
+        self.branch = branch
+
+if __name__ == '__main__':
+    options = Options()
+    try:
+        options.parseOptions()
+    except usage.UsageError as errortext:
+        print '%s: %s' % (sys.argv[0], errortext)
+        print '%s: Try --help for usage details.' % (sys.argv[0])
+        sys.exit(1)
+
+    subprocess.check_call([
+        'svn', 'cp',
+        'svn+ssh://svn.twistedmatrix.com/svn/Twisted/trunk',
+        'svn+ssh://svn.twistedmatrix.com/svn/Twisted/branches/%s' % (options.branch,),
+        '-m', 'Branching to %s.' % (options.branch),
+        ])
+}}}
+I call it as follows
+{{{
+mkbranch $BRANCH_NAME
+git fetch
+git checkout $BRANCH_NAME
+}}}
+
+An older version of this document had the following, which I haven't tested.
+In the following example, `$BRANCH_NAME` means the name of the branch you're trying to create.
 {{{
 # Create "branches/$BRANCH_NAME" in the central SVN repository.
 git svn branch $BRANCH_NAME
 
 # Create and checkout local branch "$BRANCH_NAME" that tracks "remotes/$BRANCH_NAME"
-git checkout -b $BRANCH_NAME remotes/$BRANCH_NAME
+git checkout $BRANCH_NAME
 }}}
 
 == git svn committing ==
@@ -106,7 +118,11 @@ Likewise, if you merge from trunk to branch, then `dcommit` the merge, it will b
 
 == git svn merging forward ==
 
-I haven't done this yet, but it probably needs special handling for the reasons mentioned in the previous section. Look at [http://twistedmatrix.com/trac/wiki/TwistedWithCombinator#MergingForward this wiki] for inspiration.
+{{{
+mkbranch $BRANCH_NAME-2
+git merge --squash origin/$BRANCH_NAME
+git commit -m'Merging forward'
+git svn dcommit
 
 == git svn branch merging ==
 
@@ -114,11 +130,10 @@ In the following example, `$BRANCH_NAME` means the name of the branch you're try
 
 {{{
 # Check out the trunk (what git calls 'master'), make sure it's up-to-date.
-git checkout master
-git svn fetch && git svn rebase
+git checkout origin/trunk
 
 # Apply all the changes on the branch to the trunk as one change set.
-git merge --squash remotes/$BRANCH_NAME
+git merge --squash origin/$BRANCH_NAME
 
 # Commit the change set. Remember to use the Canonical Merge Commit Message Format!
 git commit
