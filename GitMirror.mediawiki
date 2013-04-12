@@ -8,7 +8,7 @@ For other version control systems, see [wiki:VcsWorkflows DVCS Workflows].
 
 Twisted has an up-to-date [https://github.com/twisted/twisted mirror] on github. 
 
- 1. Create a Git clone of the repository by running this command, replacing `REVNO` with the revision number output by the previous command:
+ 1. Create a Git clone of the repository by running this command:
 {{{
 git clone https://github.com/twisted/twisted Twisted
 }}}
@@ -45,8 +45,6 @@ git rebase origin/trunk
 ----
 
 = For Twisted core developers =
-
-If you are a Twisted developer and want to try developing Twisted via `git svn`, you are Very Brave and will need all the help you can get. Here are some chicken-scratches left on the poorly-lit cavern walls by previous explorers.
 
 == Creating a complete mirror ==
 To be able to interact with svn, the following commands need to be run in the repository created above.
