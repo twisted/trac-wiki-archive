@@ -119,6 +119,16 @@ git checkout $BRANCH_NAME
 
 == git svn committing ==
 
+`git commit` only makes local commits. To get commits into svn, 
+{{{
+git svn dcommit --dry
+}}}
+will (update git-svn's metadata cache and) show where git will try to commit, and the list of commits it will push. 
+{{{
+git svn dcommit
+}}}
+will actually push the changes to svn.
+
 No special rules apply about making Git commits, you can make as many commits as you like, then rebase them into a nice patch series as normal (although the Twisted review process generally reviews the diff of an entire branch, not individual commits, since rebasing isn't possible in SVN).
 
 However, once you send your patches to the central SVN server with `git svn dcommit`, be very careful about messing with them. Don't rebase any further back than the last push, or else the next `dcommit` is likely to go awry.
@@ -132,6 +142,7 @@ mkbranch $BRANCH_NAME-2
 git merge --squash origin/$BRANCH_NAME
 git commit -m'Merging forward'
 git svn dcommit
+}}}
 
 == git svn branch merging ==
 
