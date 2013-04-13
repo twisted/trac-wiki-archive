@@ -40,6 +40,19 @@ git checkout master
 git rebase origin/trunk
 }}}
 
+== Generating patches ===
+
+While on the branch for which you want to generate a diff
+
+{{{
+git diff origin... > destroy-the-sun.patch
+}}}
+or, if there is already a branch in svn,
+{{{
+git fetch
+git diff origin/destroy-the-sun-5000.. > destroy-the-sun-v666.patch
+}}}
+and then attach the patch to the appropriate ticket.
 ----
 
 = For Twisted core developers =
