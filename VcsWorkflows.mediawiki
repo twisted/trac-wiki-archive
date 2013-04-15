@@ -27,7 +27,7 @@ See: [wiki:BazaarMirror Bazaar Workflow]
 
 == Git ==
 [[Image()]]
-Work is underway to maintain an official Git mirror, but it is always possible to create your own local mirror using git-svn.
+There is an official Git mirror.
 
 See: [wiki:GitMirror Git Workflow]
 
