@@ -1,11 +1,11 @@
 {{{
 #!html
-<div style="background: #ffff99; padding: 10px; border: 1px solid #ffcc88">Note: this page is still under construction!</div>
+<div style="background: #ffff99; padding: 10px; border: 1px solid #ffcc88">Note: this page is still under construction and is out of date!</div>
 }}}
 
 = Fabric administration scripts =
 
-This page describes how to use the Fabric-based administration scripts to manage services running on twistedmatrix.com. The temporary location for the administration scripts is at: https://github.com/GaretJax/twisted-setup-temp
+This page describes how to use the Fabric-based administration scripts to manage services running on twistedmatrix.com. The temporary location for the administration scripts is at: https://github.com/twisted-infra/braid
 
 == Getting the tools ==
 
