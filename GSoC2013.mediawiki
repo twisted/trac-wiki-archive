@@ -24,11 +24,21 @@ Thanks for your interest in working on Twisted this summer through Google Summer
 
 == Project Ideas ==
 
-(More coming soon).
+'''Switching to Formal Parsers'''
+
+Twisted has lots of code for parsing protocols: turning a stream of bytes (e.g. an HTTP request) into Python structures and function calls. Unfortunately all of this parsing is ad-hoc, and manually written. This project would involve using the Parsley parsing framework (https://pypi.python.org/pypi/Parsley) to parse network protocols, replacing Twisted's code. Because Parsley is a work in progress, this would involve some amount of experimentation, and building proof-of-concepts.
+
+What you would learn: Network protocols' structure, text parsing.
+
+'''Coding Standard Enforcement'''
+
+Every patch submitted to Twisted must go through code review. Part of this is test coverage, correctness and API design, but part is just mechanical: are lines formatted correctly, methods named correctly, etc.. Last summer one of the GSoC projects implemented a checker for Twisted's coding standard (http://launchpad.net/twistedchecker), which is now being run as part of Twisted's continuous integration (https://buildbot.twistedmatrix.com/builders/twistedchecker). There are still improvements and bug fixes to be made however.
+
+What you'll learn: Text parsing, Python parsing and language edge cases, software development infrastructure.
 
 '''Deferred Cancellation'''
 
-Deferreds are Twisted's abstraction for an eventual result of a task. They are thus a good place to have a hook for cancelling the task, and they provide a cancellation API. However, many Twisted APIs that return Deferreds don't provide cancellation support. The project would involve adding cancellation support to as many APIs as possible (e.g. various protocol clients like HTTP, POP3, SMTP, etc. that are missing it), starting with easy cases and moving on to more difficult ones.
+Deferreds are Twisted's abstraction for an eventual result of a task. They are thus a good place to have a hook for cancelling the task, and they provide a cancellation API. However, many Twisted APIs that return Deferreds don't provide cancellation support. The project would involve adding cancellation support to as many APIs as possible (e.g. various protocol clients like HTTP, POP3, SMTP, etc. that are missing it), starting with easy cases and moving on to more difficult ones. You can read more about Deferred cancellation [http://blog.futurefoundries.com/2012/11/cancelling-deferreds.html here] and [http://blog.futurefoundries.com/2012/11/cancelling-deferreds-part-2.html here].
 
 What you'll learn: a good knowledge of event-driven programming, and a little bit about lots of different parts of Twisted.
 
