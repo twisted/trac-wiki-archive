@@ -40,7 +40,7 @@ git checkout master
 git rebase origin/trunk
 }}}
 
-== Generating patches ===
+== Generating patches ==
 
 While on the branch for which you want to generate a diff
 
