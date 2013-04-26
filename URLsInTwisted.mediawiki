@@ -1,20 +1,23 @@
 = URLs in Twisted =
 
-Tickets related to, or could benefit from, an object that represents a URL in Twisted:
+URLs are an important part of many protocols, parsing or manipulating them in the correct way is a difficult and error-prone task that is all too often substituted for naive string manipulations. A single standards-compliant object would not only mean a single place to maintain such functionality but also means it would be more feasible for internal and third-party code to rely on these objects as a data structure (for example, supporting flattening URLs in `twisted.web.template`.) #5388 is the beginning of such an object but there are a number of existing comments and tickets about URL-related functionality in and around Twisted, that may provide use cases to aid in the design of a URL object.
 
-  * #2235
-  * #1569
-  * #5175
-  * #4229
-  * #4023
-  * #5388
-  * #5374
-  * #5379
-  * #1109
-  * #2093
-  * #6238
-  * #2625
-  * #2094
-  * #1779
-  * #5462
-  * #2934
+Tickets or comments related to, or could benefit from, an object that represents a URL in Twisted:
+
+  * #1109: twisted.web.proxy doesn't reverse-map redirects like ProxyPassReverse
+  * #1569: IRequest should have a uri object for accessing and mangling the requested uri
+  * #1779: Use URLPath everywhere we deal with URLs
+  * #2093: URLPath should parse netloc more thoroughly.
+  * #2094: URLPath should provide an API for manipulating query arguments
+  * #2235: WebDAV copy fails if the name of the destination folder contains whitespace
+  * #2625: urlpath doesn't do any quoting
+  * #2934: t.web's Request.prePathURL does not rebuild the URL correctly
+  * #4023: Support HTTPS URIs in `twisted.web.client.Agent`
+  * #4229: twisted.web does not handle urls over 16384
+  * #5175: CookieAgent fails when it encounters "secure" cookies
+  * #5374: TLS Server Name Indication Support (Client)
+  * #5379: Create new Resource traversal model
+  * #5388: IRI implementation
+  * #5462: support relative URI references in Location header in Agent
+  * #6238: t.w._flatten._flattenElement should support t.p.urlpath.URLPath
+
