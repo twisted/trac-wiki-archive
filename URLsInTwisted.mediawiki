@@ -1,0 +1,20 @@
+= URLs in Twisted =
+
+Open tickets related to, or could benefit from, an object that represents a URL in Twisted:
+
+  * #2235
+  * #1569
+  * #5175
+  * #4229
+  * #4023
+  * #5388
+  * #5374
+  * #5379
+  * #1109
+  * #2093
+  * #6238
+  * #2625
+  * #2094
+  * #1779
+  * #5462
+  * #2934
