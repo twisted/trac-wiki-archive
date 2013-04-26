@@ -1,6 +1,6 @@
 = URLs in Twisted =
 
-Open tickets related to, or could benefit from, an object that represents a URL in Twisted:
+Tickets related to, or could benefit from, an object that represents a URL in Twisted:
 
   * #2235
   * #1569
