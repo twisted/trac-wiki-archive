@@ -1,0 +1,7 @@
+We have some security-related code in Twisted.  I think all of the core developers basically have some great ideas for making things secure (we generally know our way around crypto abstractions, if not crypto math; we are aware of common issues; we know about tools like capability-based design for cooperation without trust) but our implementation doesn't live up to that fact.  For example, `twisted.internet.ssl` is still woefully incomplete, `twisted.cred` lacks features (like the ability to identify useful attributes of other users, or create and modify accounts).  Most of all we need docs for how to use these things effectively to produce secure software that uses twisted.
+
+We should come up with some plans to really finish, polish, and document some of these systems.
+
+Here is a thought to get us started:
+
+http://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/
