@@ -1,0 +1,5 @@
+If you have to add some testing logic, like something that makes a custom assertion, or something that sets up some state for use by more than one test case, try to avoid adding methods to test cases.  Doing this increases coupling and makes it harder to use those tools over time.
+
+For example, if you put a bunch of useful utility assertion methods and a useful `setUp` into the same class, then it's difficult to use the assertion methods in a test method which doesn't want to do all the same set up (for example, a test for one of the tasks performed in the test setup).
+
+-glyph
