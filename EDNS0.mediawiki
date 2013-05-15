@@ -10,7 +10,7 @@ An attempt to understand the pieces of EDNS0 and the changes necessary to have T
    - Maximum UDP datagram size field
    - Arbitrary extension support (attribute/value pairs in RDATA section)
   - [ticket:5675 Extended Message object with additional EDNS0 items]
-   - Subclass of Message?
+   - Subclass of Message? (no! subclassing is bad!)
    - maxSize (Message has it already, can we re-use it?)
    - Extended RCODE - partly defined by RCODE field in OPT record
   - Accept max UDP size as configuration?  determine it from system automatically?
