@@ -1,0 +1,70 @@
+= Ways in which you can help =
+
+== Donate == 
+
+  Text from [http://twistedmatrix.com/trac/wiki/ContributingToTwistedLabs#ContributingToTwisted Donate]
+
+
+== Report bugs/file tickets ==
+
+  1. [http://twistedmatrix.com/trac/search Search the bugtracker] for any existing tickets that are similar to the ones you are planning to file. 
+    * You can also use [https://www.google.com/ Google] with your search query followed by the `site:http://twistedmatrix.com/trac/ticket` parameter.
+
+  2. If you didn't find an existing ticket, discuss it with the [http://twistedmatrix.com/trac/wiki/TwistedCommunity#TwistedCommunity Twisted Community].
+      
+  3. Now, follow these steps to file a ticket:
+    * [/register Register] on this site.
+    * [http://twistedmatrix.com/trac/wiki/TwistedDevelopment#FilingTickets file a ticket].
+
+
+
+== Submit Patches ==
+
+  * [http://twistedmatrix.com/trac/wiki/ContributingToTwistedLabs#ExploreandContribute Pick a ticket]
+
+  * Basic instructions [http://twistedmatrix.com/trac/wiki/ReviewProcess#Authors:Beforeyougetstarted before you start].
+
+  * [http://twistedmatrix.com/trac/wiki/ReviewProcess#Authors:Thingsyourbranchorpatchmustcontain Things your patch should contain].
+
+  * [http://twistedmatrix.com/trac/wiki/ContributingToTwistedLabs#Prepare Prepare].  (Links to other development process related documentation - redundancy)
+
+  * [http://twistedmatrix.com/trac/wiki/TwistedDevelopment#SourceAccess Source Access] (links to [http://twistedmatrix.com/trac/wiki/VcsWorkflows DVCS workflows] or [http://twistedmatrix.com/trac/wiki/BasicGuideToContributingCode#CheckoutSource checkout source])
+
+  * [http://twistedmatrix.com/trac/wiki/TwistedDevelopment#SubmittingaPatch Steps to submit a patch]
+    * Also, possibly [http://twistedmatrix.com/trac/wiki/BasicGuideToContributingCode#SubmitaPatch tl;dr submit a patch]
+
+  * [http://twistedmatrix.com/trac/wiki/TwistedDevelopment#GettingYourPatchAccepted How to write a good acceptable patch]
+
+  * [http://twistedmatrix.com/trac/wiki/TwistedDevelopment#DevelopmentProcess Understand the development process]. (Links to [http://twistedmatrix.com/trac/wiki/UltimateQualityDevelopmentSystem UQDS] and [http://twistedmatrix.com/trac/wiki/ReviewProcess Review Process])
+    * Also, possibly [http://twistedmatrix.com/trac/wiki/BasicGuideToContributingCode#ReviewProcess tl;dr review process]
+
+  * [http://twistedmatrix.com/trac/wiki/ReviewProcess#Newsfiles News files!] (already linked from the links above - repeating for emphasis0
+
+  * [http://twistedmatrix.com/trac/wiki/ReviewProcess#Authors:Howtogetyourchangereviewed Submit for review] (May contain redundant steps)
+
+
+=== If you have commit access: ===
+
+  * Read [http://twistedmatrix.com/trac/wiki/CommitterCheckList CommitterChecklist].
+ 
+  * [http://twistedmatrix.com/trac/wiki/Combinator About Combinator].
+
+  * [http://twistedmatrix.com/trac/wiki/TwistedWithCombinator Setting up and working with Combinator].
+
+  * [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html Twisted and SVN] (howto). 
+
+
+ 
+== Review a Ticket ==
+
+  * [http://twistedmatrix.com/trac/wiki/CodeReview Code Review] (i.e. Divmod's description of what a code review is).
+  
+  * [http://twistedmatrix.com/trac/wiki/UltimateQualityDevelopmentSystem UQDS].
+  
+  * [http://twistedmatrix.com/trac/wiki/ReviewProcess Review Process] explained in detail.
+
+
+
+== Other ways to contribute ==
+
+  Text from [http://twistedmatrix.com/trac/wiki/ContributingToTwistedLabs#OtherWaystoContribute "OtherWaystoContribute"]
