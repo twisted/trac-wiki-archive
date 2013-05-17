@@ -16,6 +16,7 @@ Twisted is used by many open-source, academic and commercial projects.
  * [https://launchpad.net/paisley Paisley] - Paisley is a CouchDB client written in Python to be used within a Twisted application.
  * [http://pyamf.org PyAMF] - Python support for the [http://en.wikipedia.org/wiki/Action_Message_Format AMF] format, used for RPC communication with Adobe's Flash Player
  * [http://ichi2.net/pyosd/ PyOSD] - module for displaying text on your X display, much like the "On Screen Displays" used on TVs and some monitors.
+ * [https://github.com/wichert/pyrad/ pyrad] - A RADIUS client/server implementation with a Twisted wrapper. 
  * [https://launchpad.net/python-tvi955 python-tvi955] - Python-TVI955 is a partial implementation of the TVI955 terminal. It includes a parser for the computer to terminal ("server to client") protocol and an in-memory terminal emulator.
  * [https://launchpad.net/qt4reactor Qt4 Reactor] - Integration of Twisted and Qt4
  * [http://pypi.python.org/pypi/sAsync/0.7 sAsync] - __S__QLAlchemy done __Async__hronously.
@@ -57,7 +58,6 @@ Twisted is used by many open-source, academic and commercial projects.
  * [https://launchpad.net/txuls txULS] - Twisted Python experiments and prototyping for ultra large-scale systems.
  * [https://launchpad.net/txxcp txXCP] - This project is focused on developing an open source, Twisted-based version of Jabber XCP.
  * [https://launchpad.net/wokkel Wokkel] - Wokkel is collection of enhancements on top of the Twisted networking framework, written in Python. It mostly provides a testing ground for enhancements to the Jabber/XMPP protocol implementation as found in Twisted Words, that are meant to eventually move there.
- * [https://github.com/wichert/pyrad/ pyrad] - A RADIUS client/server implementation with a Twisted wrapper. 
 
 = Applications =
  * [https://launchpad.net/txopenid txOpenID] - A Twisted OpenID server. txOpenID is an implementation of the OpenID Identity Provider specification, written using Twisted Web and Divmod's Nevow.
