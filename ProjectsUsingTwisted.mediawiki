@@ -16,7 +16,6 @@ Twisted is used by many open-source, academic and commercial projects.
  * [https://launchpad.net/paisley Paisley] - Paisley is a CouchDB client written in Python to be used within a Twisted application.
  * [http://pyamf.org PyAMF] - Python support for the [http://en.wikipedia.org/wiki/Action_Message_Format AMF] format, used for RPC communication with Adobe's Flash Player
  * [http://ichi2.net/pyosd/ PyOSD] - module for displaying text on your X display, much like the "On Screen Displays" used on TVs and some monitors.
- * [http://www.wiggy.net/code/pyrad/ PyRAD] -  a RADIUS client and server.
  * [https://launchpad.net/python-tvi955 python-tvi955] - Python-TVI955 is a partial implementation of the TVI955 terminal. It includes a parser for the computer to terminal ("server to client") protocol and an in-memory terminal emulator.
  * [https://launchpad.net/qt4reactor Qt4 Reactor] - Integration of Twisted and Qt4
  * [http://pypi.python.org/pypi/sAsync/0.7 sAsync] - __S__QLAlchemy done __Async__hronously.
