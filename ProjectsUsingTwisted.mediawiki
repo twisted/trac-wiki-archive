@@ -57,6 +57,7 @@ Twisted is used by many open-source, academic and commercial projects.
  * [https://launchpad.net/txuls txULS] - Twisted Python experiments and prototyping for ultra large-scale systems.
  * [https://launchpad.net/txxcp txXCP] - This project is focused on developing an open source, Twisted-based version of Jabber XCP.
  * [https://launchpad.net/wokkel Wokkel] - Wokkel is collection of enhancements on top of the Twisted networking framework, written in Python. It mostly provides a testing ground for enhancements to the Jabber/XMPP protocol implementation as found in Twisted Words, that are meant to eventually move there.
+ * [https://github.com/wichert/pyrad/ pyrad] - A RADIUS client/server implementation with a Twisted wrapper. 
 
 = Applications =
  * [https://launchpad.net/txopenid txOpenID] - A Twisted OpenID server. txOpenID is an implementation of the OpenID Identity Provider specification, written using Twisted Web and Divmod's Nevow.
