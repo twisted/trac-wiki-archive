@@ -1,6 +1,10 @@
+
+
 === Notes for an API to retrieve the result of a Deferred synchronously ===
 
 `resultNow` is a function which accepts a `Deferred` and returns the result of the `Deferred`.  It is an error if the `Deferred` does not have a result yet.  It is intended to simplify unit tests for cases where a `Deferred` is required to have a result at a particular time.
+
+We now have a way of doing this, that is accessible on `TestCase`.
 
 Use cases:
 
@@ -26,10 +30,10 @@ The latter half of
         self.assertIdentical(results[1], result)
 }}}
 
-could be rewritten more simply:
+can be rewritten more simply:
 
 {{{
-        self.assertIdentical(resultNow(first), None)
-        self.assertIdentical(resultNow(second), result)
+        self.assertIdentical(self.successResultNow(first), None)
+        self.assertIdentical(self.succeesResultNow(second), result)
 }}}
 
