@@ -1,4 +1,7 @@
-
+{{{
+#!html
+<div style="background: #ffff99; padding: 10px; border: 1px solid #ffcc88">Note: this page is of historical interest only.</div>
+}}}
 
 === Notes for an API to retrieve the result of a Deferred synchronously ===
 
