@@ -1,0 +1,15 @@
+
+We would eventually like twistedmatrix.com mail to be self hosting with twisted.mail.
+
+The requirements we have
+ 1. Mailing list hosting using mailman.
+ 2. Delivery of local mail. This is primarily for trac.
+ 3. Forwarding of mail for aliases on twistedmatrix.com.
+ 4. Delivery of outgoing mail for authorized users. This would be a prerequesite for doing things like setting SPF.
+ 
+There is currently some (untested) code to interact with mailman and greylistd at 
+[https://github.com/twisted-infra/t-mail].
+
+Other implementations:
+ * [https://github.com/oubiwann/txMailServer txMailServer]
+ * [https://bazaar.launchpad.net/~divmod-dev/divmod.org/trunk/view/head:/Quotient/README.txt Quotient] (particularly [https://bazaar.launchpad.net/~divmod-dev/divmod.org/trunk/view/head:/Quotient/xquotient/mail.py xquotient.mail] I think)
