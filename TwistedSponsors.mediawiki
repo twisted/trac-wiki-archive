@@ -1,43 +1,60 @@
-{{{
-#!html
-<h1 style="color: red">Twisted Project Sponsors</h1>
-}}}
 
-See also [wiki:TSF/FoundingSponsors Founding Sponsors].
+= The Twisted Project Sponsorship Program =
 
-== 2012 ==
+We want to continue to invest in and improve Twisted -- for the benefit of our users, and the public at large.   We can't do this without the support of our sponsors and, as a project, we want to publicly acknowledge certain donations through our revamped Twisted Project Sponsorship Program.  [[BR]]
 
-=== Hosting ===
+== Benefits of Sponsorship ==
 
-[http://www.tummy.com Tummy Inc.] and [http://dreamhost.com?q=twisted DreamHost] provide hosting for several Twisted servers, including our website and Subversion repository.
+ * You (or your company) are contributing to an extraordinary open source project.
 
-== 200? ==
+ * If you a Silver or higher-level sponsor, your name and/or logo will be placed on the front page of Twisted's site for twelve months from the time of donation. 
 
-We would like the thank the following individuals and organizations for their sponsorship of Twisted's development via donations of money, hardware, software licenses, server hosting, and so on. We would also, of course, like to thank the developers who put time and effort into developing it and the many users who submit bugs and feature requests.
+ * All sponsors will have their name and/or logo placed on Twisted's Sponsors page for twelve months from the time of donation.  
 
-=== Hosting ===
+ * Community consciousness of your company (and its use of Twisted) will be increased in the minds of the wider Twisted community.
+   
+ * Contributions are tax-deductible.   
 
-[http://www.tummy.com Tummy Inc.] expertly provides hosting for several Twisted servers, including our website and Subversion repository.
+== Logos ==
+
+Logos on the front page will only be there for the year that a sponsor has donated. Each year starts fresh again, with an opportunity to get your logo at the top by early sponsorship!
+
+== Logo Requirements ==
+
+Logos must be 160 pixels wide and 80 pixels tall.
+
+== Sponsorship Levels ==
+
+Below are the names and amounts associated with levels of sponsorship:
+
+ * Diamondback: $20,000
+
+ * Platinum Python: $10,000
+
+ * Golden Tree Snake: $5,000
+
+ * Silver Sidewinder: $2,000
+
+ * Copperhead: $1,000
+
+ * Aluminum Adder:  $100
+
+== Non-Monetary Donations == 
+
+The Twisted Project will consider the value of non-monetary donations to the project - for example, donations of hardware, software licenses, or hosting - on a case-by-case basis.  But, as a general rule, $5 worth of services will correspond to $1 of cash for sponsorship purposes.  We note that non-monetary donations may not be tax-deductible; to confirm, you should seek the counsel of a qualified tax professional. In general, we suggest cash donations, as that process is much simpler.
+
+== How to Donate ==
 
 
-=== Buildbot slave machines: ===
+All donations to Twisted are collected by [http://sfconservancy.org Software Freedom Conservancy], a tax-exempt 501(c)(3) organization and the corporate home of the Twisted Project.  Conservancy maintains a restricted account for the Twisted Project's use.  
 
- * [http://www.apple.com/ Apple] contributed a Mac OS X buildslave, which is currently hosted and operated by [http://divmod.org/ Divmod].
+To donate, you can use the form on the front page at any time to make donations via PayPal or Google. 
 
- * '''Michael Schneider''' provides several Windows and Linux buildslaves.
+If you would prefer to cut a check, you may do this as well.  Make the check payable to "Software Freedom Conservancy" and write "Directed Donation for Twisted" in the "memo" field. Checks should be sent to the following address:
 
-=== Other hardware and hosting: ===
+Software Freedom Conservancy, Inc.[[BR]]
+137 MONTAGUE ST STE 380[[BR]]
+Brooklyn, NY 11201-3548
 
- * '''Vitorio Miliano''' provides software licenses as well as hosting for a Windows XP development machine.
+If you would prefer to make other arrangements (e.g., your corporation requires the use of a purchase order, even when donating to a charity), contact us at sponsorship@twistedmatrix.com.  
 
-=== Money: ===
-
- * '''Bryan D. Thomas''' graciously donated a sum of money to help our Windows efforts. Thanks Bryan!
-
- * '''Richard Smith''' donated money for the Windows buildslave. Thanks Richard!
-
- * '''David Reid''' donated money for the Windows buildslave. Thanks David!
-
- * '''Dan Heidebrecht''' donated money for the Windows buildslave. Thanks Dan!
-
- * '''Terry Jones''' donated money for the Windows buildslave. Thanks Terry!
