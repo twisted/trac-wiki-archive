@@ -107,16 +107,6 @@ git fetch
 git checkout $BRANCH_NAME
 }}}
 
-An older version of this document had the following, which I haven't tested.
-In the following example, `$BRANCH_NAME` means the name of the branch you're trying to create.
-{{{
-# Create "branches/$BRANCH_NAME" in the central SVN repository.
-git svn branch $BRANCH_NAME
-
-# Create and checkout local branch "$BRANCH_NAME" that tracks "remotes/$BRANCH_NAME"
-git checkout $BRANCH_NAME
-}}}
-
 == git svn committing ==
 
 `git commit` only makes local commits. To get commits into svn, 
