@@ -1,5 +1,7 @@
 This page collects links to useful pages describing the infrastructure behind twistedmatrix.com.
 
+ * #twisted-admin of freenode.
+
  * [wiki:Infrastructure/CubeSetup] - Description of setup of old server
  * [wiki:Infrastructure/Mail] - Plans for self-hosting of mail
  * [ContinuousIntegration/TestSlaveConfiguration Buildslave setup]
