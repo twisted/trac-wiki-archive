@@ -1,13 +1,13 @@
 This page collects links to useful pages describing the infrastructure behind twistedmatrix.com.
 
- * #twisted-admin of freenode.
+ * #twisted-admin on freenode.
 
  * [wiki:Infrastructure/CubeSetup] - Description of setup of old server
  * [wiki:Infrastructure/Mail] - Plans for self-hosting of mail
  * [ContinuousIntegration/TestSlaveConfiguration Buildslave setup]
- * [https://github.com/twisted-infra/braid braid] - fabric scripts
+ * [https://github.com/twisted-infra/braid braid] - Fabric scripts
  * [https://github.com/twisted-infra twisted-infra] 
  * [wiki:MovingTrac]
- * [wiki:Infrastructure/UpgraingTrac] - some results of trying upgrading trac on a test system.
+ * [wiki:Infrastructure/UpgradingTrac] - some results of trying upgrading Trac on a test system.
  * [wiki:SwitchToBazaar]
  * [wiki:EmailMigrationToCube]
