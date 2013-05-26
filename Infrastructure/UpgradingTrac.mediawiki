@@ -1,0 +1,33 @@
+Some notes on what whill be required to upgrade trac:
+
+{{{
+#!sh
+trac-admin config/trac-env/ upgrade
+trac-admin config/trac-env/ wiki upgrade
+
+# I'm not sure where, or how much of the generated stuff we need.
+# Some of this probably needs to be put in t-web/trac-files
+trac-admin config/trac-env/ deploy ????
+
+# I haven't tried this, since the server I tested on doesn't have a copy of the appropriate svn repo.
+trac-admin /path/to/projenv repository resync '*'
+}}}
+
+ 1. `/trac/reports` - The new formatting has lots of junk.
+ 2. Our custom template in `t-web/trac-files/templates/site.html` is incompatible.
+    * The ticket page won't display.
+    * The `WikiStart` page has an annoying `wiki:WikiStart` in the upper left hand corner. (and every other page)
+      This is probably just that the appropriate css classes changed?
+ 3. Reports my need updating to reflect microsecond timestamps ([http://trac.edgewall.org/wiki/TracUpgrade#Microsecondtimestamps see the upgrade guide])
+ 4. Possibly remove prermission:
+{{{
+#!sh
+for perm in BROWSER_VIEW CHANGESET_VIEW FILE_VIEW LOG_VIEW; do
+    trac-admin config/trac-env permission remove $perm
+done
+}}}
+    ([http://trac.edgewall.org/wiki/TracUpgrade#Authzpermissionchecking reference])
+ 5. Updates post-commit hook. See [http://trac.edgewall.org/wiki/TracRepositoryAdmin#Synchronization here] and [http://trac.edgewall.org/wiki/TracWorkflow#Howtocombinethetracopt.ticket.commit_updaterwiththetestingworkflow here].
+
+
+ [1] http://trac.edgewall.org/wiki/TracUpgrade
