@@ -8,6 +8,6 @@ This page collects links to useful pages describing the infrastructure behind tw
  * [https://github.com/twisted-infra/braid braid] - fabric scripts
  * [https://github.com/twisted-infra twisted-infra] 
  * [wiki:MovingTrac]
- * [wiki:SiteMaintenance]
+ * [wiki:Infrastructure/UpgraingTrac] - some results of trying upgrading trac on a test system.
  * [wiki:SwitchToBazaar]
  * [wiki:EmailMigrationToCube]
