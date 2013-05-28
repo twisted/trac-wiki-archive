@@ -18,6 +18,7 @@ trac-admin /path/to/projenv repository resync '*'
     * The ticket page won't display.
     * The `WikiStart` page has an annoying `wiki:WikiStart` in the upper left hand corner. (and every other page)
       This is probably just that the appropriate css classes changed?
+    * jonathanj did some work a while back which now lives at [https://github.com/twisted-infra/trac/tree/trac-0.12 here]
  3. Reports my need updating to reflect microsecond timestamps ([http://trac.edgewall.org/wiki/TracUpgrade#Microsecondtimestamps see the upgrade guide])
  4. Possibly remove prermission:
 {{{
@@ -30,4 +31,5 @@ done
  5. Updates post-commit hook. See [http://trac.edgewall.org/wiki/TracRepositoryAdmin#Synchronization here] and [http://trac.edgewall.org/wiki/TracWorkflow#Howtocombinethetracopt.ticket.commit_updaterwiththetestingworkflow here].
 
 
- [1] http://trac.edgewall.org/wiki/TracUpgrade
+== Links ==
+http://trac.edgewall.org/wiki/TracUpgrade
