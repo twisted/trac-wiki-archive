@@ -1,0 +1,50 @@
+{{{
+#!html
+<div style="background: #ffff99; padding: 10px; border: 1px solid #ffcc88">
+This information is about the old deployment on cube, but is left here, since some of the details are still relevant haven't been documented properly elsewhere.
+</div>
+}}}
+
+Trac is currently deployed on twistedmatrix.com using a custom build of postgres on an old version of Ubuntu on some old hardware.
+
+We have a new, better piece of hardware donated by Dreamhost, and we may get newer, better hardware donated in the future.  So we'd like to move it around.
+
+Moving trac is possible - we even have new hardware - but the enterprising administrator who would like to help us with this needs to be aware of a few issues.
+
+Trac, along with postgres, is installed into ~trac-migration on cube.  Postgres is compiled into `~/.local/` and the database cluster is in `~/Database/`.  This was done because we are running Ubuntu 8.04 LTS, and the most recent packaged version of Postgres for that platform is 8.3, and we were told by some trac developers that upgrading to 8.4 would help. 
+
+The newer hosting is running on Debian, which is still kind of old, but ''does'' have a system packaged install of postgresql-8.4.  So when Trac is moved we should use the system installed database instead, since this will get automatic security updates.
+
+The other thing that needs to be updated is the SVN repository mirror, which is replicated to be local to Trac so that the source browser works.  Our production version control system is on wolfwood.twistedmatrix.com, and each revision is pushed over to cube.twistedmatrix.com by a post-commit hook.
+
+An SVN post-commit hook also pushes SVN changes to trac along a second channel using a PB server deployed with trac.  The post-commit hook needs the correct address for that PB server, which will need to move along with the trac server.
+
+trac and kenaan (an IRC commit/notification bot) also interact.  trac uses programs from lp:twisted-trac-integration to send messages to kenaan.  For this, trac needs to be configured with the correct address at which kenaan is listening.  If kenaan is not moved at the same time as trac, the configuration probably needs to change from pointing at localhost to pointing across a network.  If kenaan is moved, other things pointing at it need to be updated.  The location of kenaan is configured inside lp:twisted-trac-integration.
+
+Once the database moves, the high scores daemon needs to be moved as well, since it talks to the same database.
+
+Trac also sends emails when tickets are done, so the local mail server needs to be able to send mail on behalf of Twisted.
+
+DiffResource (currently deployed in ~diffresource on cube) needs to know the public URL of trac, but otherwise doesn't need to be nearby the trac deployment (alternatively, it can be pointed at a Frack deployment).
+
+Finally there is the web server, but its configuration is fairly centralized in ~www-data.
+
+So, a handy brief list of dependencies for Trac to work on a new host is:
+
+  - web server
+  - postgres
+  - highscores server
+  - svn mirror
+  - svn post-commit config update
+  - private trac pb server for accepting commit notification
+  - lp:twisted-trac-integration, with updated configuration to point at kenaan
+
+And the list of things that need to be updated but not ''necessarily'' re-deployed onto the new host with trac:
+
+  - diffresource
+
+Other questions:
+
+  - mailman (hosted beneath the main web server)?
+  - exim4 (twistedmatrix.com mx)?
+  - HTTP latency measurements (currently all measuring over localhost, should stay that way)?
