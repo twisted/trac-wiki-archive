@@ -1,0 +1,60 @@
+{{{
+#!html
+<div style="background: #ffff99; padding: 10px; border: 1px solid #ffcc88">
+Note: These are old notes about a previous migration. They might be useful to somebody.
+</div>
+}}}
+
+== Tasks to be Completed ==
+
+=== Phase 1: Basic local mail on cube [DONE!] ===
+ 1. Create bug #2451 and wiki pages. [DONE]
+ 1. Set up a trivial postfix instance on cube.twistedmatrix.com. [Already installed previously - DONE]
+ 1. Test that cube postfix can receive and route email to local accounts, and from local accounts out (mutt). [DONE]
+    * cube seems to have a global alias to forward email to pyramid already in place...
+      * /etc/mailname was wrong. [FIXED]
+ 1. Set up forwards from cube to pyramid. [DONE]
+    * Done, did these things:
+      1. Appended /etc/aliases@pyr into /etc/aliases@cube
+      1. Copied all home directories on pyr to a line like "username: username@pyramid.twistedmatrix.com" in /etc/aliases@cube
+    * Still need to make mail to twisted-bugs list from trac user work [DONE]
+      1. Added twisted-bugs@pyramid.tm.com alias to /etc/aliases@cube.  This was necessary because those emails originate on cube, and cube thinks it's handling twistedmatrix.com.
+ 1. Test that email sent to a local account on cube gets forwarded to an appropriate local account on pyramid. [DONE]
+ 1. Notify twisted-admin list about bug, wiki pages, and status. [DONE]
+
+
+=== Phase 2: Prepare for Mailman migration ===
+ 1. Through mailman, set up a fake mailing list on pyramid
+ 1. Copy the necessary aliases as forwards on cube
+ 1. Send an email to the list address @twistedmatrix.com (which is pyramid -- MX hasn't changed yet)
+ 1. Send an email to the list address @cube.twistedmatrix.com to test postfix forwards to pyramid
+ 1. Compare the source of the two emails.  Email should be received with the same headers, except the SMTP server hostname.
+ 1. Install mailman on cube, copying config from pyramid (but not data).
+    * Currently '''blocked'''--installation requires libapr0, which conflicts with custom subversion deb installed.
+ 1. Test mailman on cube:
+    1. Temporarily disable the cube->pyramid forwards for mailman aliases 
+    1. Connect directly to SMTP on cube and send an email formatted as if cube is twistedmatrix.com
+    1. Verify that mailman sends the email to the list users correctly
+ 1. Clean up mailman test data on cube.
+ 1. Restore the cube->pyramid mailman aliases.
+ 1. Notify the admins list of status.
+
+=== Phase 3: POP and IMAP mail ===
+ 1. Install necessary POP and IMAP services on cube.
+ 1. Remove the forward on my account and test IMAP and POP access to cube, including authentication methods currently supported [list here..]
+ 1. Status update to admin list - at this point we are not committed to anything
+
+=== Phase 4: Live on cube with Aliases ===
+ 1. Change MX record to point to cube.
+ 1. (Wait for MX TTL to expire?)
+ 1. For each local account on twistedmatrix.com:
+    1. copy entire /home/account to cube
+    1. disable the forward to pyramid, for that account.
+    1. send that account an email, letting them know that their email is now being stored on cube, and they should archive or otherwise disregard any email files they have on pyramid.
+    1. On pyramid, set up a pyramid->cube alias (the reverse direction) for that account, to respect DNS lag.
+ 1. Migrate mailman data to cube with rsync.  Turn off cube->pyramid aliases for mailman.
+ 1. On pyramid, set up a pyramid->cube alias (the reverse direction) for mailman aliases.
+ 1. Notify twisted-admin list about status.
+
+=== Misc ===
+ 1. (Optional) Adapt some kind of simple spam-filtering ruleset to postfix and apply it.
