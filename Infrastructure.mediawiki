@@ -12,4 +12,4 @@ This page collects links to useful pages describing the infrastructure behind tw
 Historical Notes:
  * [wiki:Infrastructure/MovingTrac] - Some notes on setup of trac on cube (some of this hasn't been changed and isn't otherwise documented
  * [wiki:Infrastructure/CubeSetup] - Description of setup of old server
- * [wiki:EmailMigrationToCube]
+ * [wiki:Infrastructure/EmailMigrationToCube] - Hypothetical notes from an old migration
