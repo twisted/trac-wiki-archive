@@ -17,3 +17,5 @@ We should start filling in some rules here.
 === Ideas ===
 
 Here are some rules that we haven't fully decided on yet, but you might want to be aware that we are discussing.
+
+[[TicketQuery(keywords~=policy, format=list, status!=closed)]]
