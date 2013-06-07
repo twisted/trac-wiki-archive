@@ -88,20 +88,16 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 
 = [wiki:TwistedSponsors Twisted Sponsors] =
 
-[wiki:TwistedSoftwareFoundation Become a 2013 sponsor today]! For any donation above [wiki:TwistedSoftwareFoundation#SponsorshipLevels the bronze level], we will display your logo here on the front page.
+[wiki:TwistedSoftwareFoundation Become a 2013 sponsor today]! For any donation above [wiki:TwistedSoftwareFoundation#SponsorshipLevels the bronze level], we will display your logo here on the front page for one year.  
 
 {{{
 #!div class="twisted-sponsors"
 
-=== Silver ===
-
-[[Image(TSF/SponsorLogos:Appropriate-Solutions-Inc.gif, title=Appropriate Solutions Inc, link=http://www.appropriatesolutions.com/)]]
+=== Silver Sidewinder ===
 [[Image(TSF/SponsorLogos:dreamhost.gif, title=DreamHost, link=http://dreamhost.com/?q=twisted)]]
-[[Image(TSF/SponsorLogos:simb.png, title=SIMB, link=http://www.simb.com.br/)]]
 
-=== Bronze ===
+=== Aluminum Adder ===
 
-[[Image(TSF/SponsorLogos:dyn-logo.png, title=Dynamic Network Services Inc, link=http://www.dyn.com/)]]
 [[Image(TSF/SponsorLogos:flowroute-logo.gif, title=flowroute, link=http://www.flowroute.com/)]]
 [[Image(TSF/SponsorLogos:found_160x80.png, title=FoundIT, link=http://www.found.no/)]]
 }}}
