@@ -3,58 +3,13 @@
 
 We want to continue to invest in and improve Twisted -- for the benefit of our users, and the public at large.   We can't do this without the support of our sponsors and, as a project, we want to publicly acknowledge certain donations through our revamped Twisted Project Sponsorship Program.  [[BR]]
 
-== Benefits of Sponsorship ==
-
- * You (or your company) are contributing to an extraordinary open source project.
-
- * If you are a Silver Sidewinder or higher-level sponsor, your name and/or logo will be placed on the front page of Twisted's site for twelve months from the time of donation. 
-
- * All sponsors will have their name and/or logo placed on Twisted's Sponsors page for twelve months from the time of donation.  
-
- * Community consciousness of your company (and its use of Twisted) will be increased in the minds of the wider Twisted community.
-   
- * Contributions are tax-deductible.   
-
-== Logos ==
-
-Logos on the front page will only be there for the year that a sponsor has donated. Each year starts fresh again, with an opportunity to get your logo at the top by early sponsorship!
-
-== Logo Requirements ==
-
-Logos must be 160 pixels wide and 80 pixels tall.
-
-== Sponsorship Levels ==
-
-Below are the names and amounts associated with levels of sponsorship:
-
- * Diamondback: $20,000
-
- * Platinum Python: $10,000
-
- * Golden Tree Snake: $5,000
-
- * Silver Sidewinder: $2,000
-
- * Copperhead: $1,000
-
- * Aluminum Adder:  $100
-
-== Non-Monetary Donations == 
-
-The Twisted Project will consider the value of non-monetary donations to the project - for example, donations of hardware, software licenses, or hosting - on a case-by-case basis.  But, as a general rule, $5 worth of services will correspond to $1 of cash for sponsorship purposes.  We note that non-monetary donations may not be tax-deductible; to confirm, you should seek the counsel of a qualified tax professional. In general, we suggest cash donations, as that process is much simpler.
-
-== How to Donate ==
+For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship here].
 
 
-All donations to Twisted are collected by [http://sfconservancy.org Software Freedom Conservancy], a tax-exempt 501(c)(3) organization and the corporate home of the Twisted Project.  Conservancy maintains a restricted account for the Twisted Project's use.  
+== Silver Sidewinder ==
+[[Image(TSF/SponsorLogos:dreamhost.gif, title=DreamHost, link=http://dreamhost.com/?q=twisted)]] 
 
-To donate, you can use the form on the front page at any time to make donations via PayPal or Google. 
+== Aluminum Adder ==
+[[Image(TSF/SponsorLogos:flowroute-logo.gif, title=flowroute, link=http://www.flowroute.com/)]] 
 
-If you would prefer to cut a check, you may do this as well.  Make the check payable to "Software Freedom Conservancy" and write "Directed Donation for Twisted" in the "memo" field. Checks should be sent to the following address:
-
-Software Freedom Conservancy, Inc.[[BR]]
-137 MONTAGUE ST STE 380[[BR]]
-Brooklyn, NY 11201-3548
-
-If you would prefer to make other arrangements (e.g., your corporation requires the use of a purchase order, even when donating to a charity), contact us at sponsorship@twistedmatrix.com.  
-
+[[Image(TSF/SponsorLogos:found_160x80.png, title=FoundIT, link=http://www.found.no/)]] 
