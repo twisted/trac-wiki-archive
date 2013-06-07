@@ -95,10 +95,6 @@ Participate in the (newly-revamped) [wiki:TwistedSoftwareFoundation#BenefitsofSp
 
 === Silver Sidewinder ===
 [[Image(TSF/SponsorLogos:dreamhost.gif, title=DreamHost, link=http://dreamhost.com/?q=twisted)]]
-
-=== Aluminum Adder ===
-[[Image(TSF/SponsorLogos:flowroute-logo.gif, title=flowroute, link=http://www.flowroute.com/)]]
-[[Image(TSF/SponsorLogos:found_160x80.png, title=FoundIT, link=http://www.found.no/)]]
 }}}
 
 }}}
