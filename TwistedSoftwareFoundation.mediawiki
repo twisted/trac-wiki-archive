@@ -39,8 +39,8 @@ Logos must be 160 pixels wide and 80 pixels tall.
 == Sponsorship Levels ==
 
 Below are the names and amounts associated with levels of sponsorship:
-
- * Diamondback: $20,000
+ 
+ * Diamondback: $20,000 and up
 
  * Platinum Python: $10,000
 
