@@ -1,8 +1,8 @@
-= Twisted Software Foundation =
+= Founding Sponsors =
 
 We'd like to acknowledge those companies and individuals who made critical contributions to Twisted during our infancy.  Thanks for helping us get on our feet.  
 
-== Founding Sponsors: Companies ==
+== Companies ==
 
 {{{
 #!html
@@ -63,7 +63,7 @@ We'd like to acknowledge those companies and individuals who made critical contr
 <img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/adytum.png?format=raw" /><br/>
 }}}
 
-== Founding Sponsors: Individuals ==
+== Individuals ==
 
  * Glenn Tarbox
  * Drew Perttula
