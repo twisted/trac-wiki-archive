@@ -1,15 +1,72 @@
 = Twisted Software Foundation =
 
-The name "Twisted Software Foundation" is a reference of convenience to our sponsorship by the [http://sfconservancy.org/ Software Freedom Conservancy], a 501(c)3 non-profit organization. The Conservancy has allowed us to pool organizational resources with other projects, such as Inkscape, Samba, and Wine, in order to reduce the management overhead associated with creating our own, dedicated legal entity.
+The name "Twisted Software Foundation" is a reference of convenience to our sponsorship by [http://sfconservancy.org/ Software Freedom Conservancy], a 501(c)3 non-profit organization. The Conservancy has allowed us to pool organizational resources with other projects, such as Inkscape, Samba, and Wine, in order to reduce the management overhead associated with creating our own, dedicated legal entity.
 
 == Background ==
 
-At the end of January, 2008, the Twisted project finalized a sponsorship agreement with the [http://sfconservancy.org/ Software Freedom Conservancy]. For years prior to this, we had explored the options available to us for creating a foundation; due to our lack of resources, time and money, they were all prohibitively expensive. At the urging of individuals and organizations, we again explored other options. This most recent effort was a culmination of hard work over the last year between the Twisted project and the Conservancy, and we are delighted to present the results to the community: "Twisted Software Foundation".
+At the end of January, 2008, the Twisted project finalized a sponsorship agreement with [http://sfconservancy.org/ Software Freedom Conservancy]. For years prior to this, we had explored the options available to us for creating a foundation; due to our lack of resources, time and money, they were all prohibitively expensive. At the urging of individuals and organizations, we again explored other options. This most recent effort was a culmination of hard work over the last year between the Twisted project and the Conservancy, and we are delighted to present the results to the community: "Twisted Software Foundation".
 
 == Goals ==
 
 Our goals are simple: we want to be able to continue improving Twisted -- everything from code reviews to specialized bug fixes to paying hosting bills -- for the benefit of the community, the users of Twisted. We want sponsors to be able to make tax-deductible donations, and we want to provide a dedicated forum (initially, a sponsors-only mail list) where our sponsors can give voice to their own vision of how Twisted can be better.
 
-== Sponsorship ==
+== Sponsors ==
 
-For more information on the Twisted Project Sponsorship Program, visit [wiki:TwistedSponsors our sponsorship page]. 
+For a list of our current sponsors, visit here [wiki:TwistedSponsors our sponsorship page]. 
+
+== Benefits of Sponsorship ==
+
+You (or your company) can become a Twisted Sponsor!  Here are some of the benefits: 
+
+ * You (or your company) are contributing to an extraordinary open source project.
+
+ * If you are a Silver Sidewinder or higher-level sponsor, your name and/or logo will be placed on the front page of Twisted's site for twelve months from the time of donation. 
+
+ * All sponsors will have their name and/or logo placed on Twisted's Sponsors page for twelve months from the time of donation.  
+
+ * Community consciousness of your company (and its use of Twisted) will be increased in the minds of the wider Twisted community.
+   
+ * Contributions are tax-deductible.   
+
+== Logos ==
+
+Logos on the front page will only be there for the year that a sponsor has donated. Each year starts fresh again, with an opportunity to get your logo at the top by early sponsorship!
+
+== Logo Requirements ==
+
+Logos must be 160 pixels wide and 80 pixels tall.
+
+== Sponsorship Levels ==
+
+Below are the names and amounts associated with levels of sponsorship:
+
+ * Diamondback: $20,000
+
+ * Platinum Python: $10,000
+
+ * Golden Tree Snake: $5,000
+
+ * Silver Sidewinder: $2,000
+
+ * Copperhead: $1,000
+
+ * Aluminum Adder:  $100
+
+== Non-Monetary Donations == 
+
+The Twisted Project will consider the value of non-monetary donations to the project - for example, donations of hardware, software licenses, or hosting - on a case-by-case basis.  But, as a general rule, $5 worth of services will correspond to $1 of cash for sponsorship purposes.  We note that non-monetary donations may not be tax-deductible; to confirm, you should seek the counsel of a qualified tax professional. In general, we suggest cash donations, as that process is much simpler.
+
+== How to Donate ==
+
+
+All donations to Twisted are collected by [http://sfconservancy.org Software Freedom Conservancy], a tax-exempt 501(c)(3) organization and the corporate home of the Twisted Project.  Conservancy maintains a restricted account for the Twisted Project's use.  
+
+To donate, you can use the form on the front page at any time to make donations via PayPal or Google. 
+
+If you would prefer to cut a check, you may do this as well.  Make the check payable to "Software Freedom Conservancy" and write "Directed Donation for Twisted" in the "memo" field. Checks should be sent to the following address:
+
+Software Freedom Conservancy, Inc.[[BR]]
+137 MONTAGUE ST STE 380[[BR]]
+Brooklyn, NY 11201-3548
+
+If you would prefer to make other arrangements (e.g., your corporation requires the use of a purchase order, even when donating to a charity), contact us at sponsorship@twistedmatrix.com.  
