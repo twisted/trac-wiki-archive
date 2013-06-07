@@ -13,3 +13,5 @@ For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwa
 [[Image(TSF/SponsorLogos:flowroute-logo.gif, title=flowroute, link=http://www.flowroute.com/)]] 
 
 [[Image(TSF/SponsorLogos:found_160x80.png, title=FoundIT, link=http://www.found.no/)]] 
+
+For information on Twisted's founding sponsors, click [wiki:TSF/FoundingSponsors here].
