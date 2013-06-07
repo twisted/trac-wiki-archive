@@ -88,7 +88,7 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 
 = [wiki:TwistedSponsors Twisted Sponsors] =
 
-[wiki:TwistedSoftwareFoundation Become a 2013 sponsor today]! For any donation above [wiki:TwistedSoftwareFoundation#SponsorshipLevels the bronze level], we will display your logo here on the front page for one year.  
+[wiki:TwistedSoftwareFoundation Become a 2013 sponsor today]! For any donation above [wiki:TwistedSoftwareFoundation#SponsorshipLevels the Copperhead level], we will display your logo here on the front page for one year.  
 
 {{{
 #!div class="twisted-sponsors"
