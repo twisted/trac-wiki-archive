@@ -7,7 +7,7 @@ We want to continue to invest in and improve Twisted -- for the benefit of our u
 
  * You (or your company) are contributing to an extraordinary open source project.
 
- * If you a Silver Sidewinder or higher-level sponsor, your name and/or logo will be placed on the front page of Twisted's site for twelve months from the time of donation. 
+ * If you are a Silver Sidewinder or higher-level sponsor, your name and/or logo will be placed on the front page of Twisted's site for twelve months from the time of donation. 
 
  * All sponsors will have their name and/or logo placed on Twisted's Sponsors page for twelve months from the time of donation.  
 
