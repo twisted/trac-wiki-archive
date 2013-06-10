@@ -14,4 +14,6 @@ For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwa
 
 [[Image(TSF/SponsorLogos:found_160x80.png, title=FoundIT, link=http://www.found.no/)]] 
 
+Note: Flowroute and Found were Bronze sponsors under Twisted's previous sponsorship policy.  
+
 For information on Twisted's founding sponsors, click [wiki:TSF/FoundingSponsors here].
