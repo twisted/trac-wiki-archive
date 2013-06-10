@@ -38,7 +38,7 @@ Logos must be 160 pixels wide and 80 pixels tall.
 
 == Sponsorship Levels ==
 
-Below are the names and amounts associated with levels of sponsorship:
+Below are the names and amounts associated with levels of sponsorship (as of May 1, 2013):
  
  * Diamondback: $20,000 and up
 
@@ -51,6 +51,8 @@ Below are the names and amounts associated with levels of sponsorship:
  * Copperhead: $1,000
 
  * Aluminum Adder:  $100
+
+Donations received before May 1, 2013 will be acknowledged according to the terms of the old sponsorship program. 
 
 == Non-Monetary Donations == 
 
