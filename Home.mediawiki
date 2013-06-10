@@ -88,7 +88,7 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 
 = [wiki:TwistedSponsors Twisted Sponsors] =
 
-Participate in the (newly-revamped) [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship Twisted Project Sponsorship Program]! For any donation above [wiki:TwistedSoftwareFoundation#SponsorshipLevels the Copperhead level], we will display your logo here on the front page for one year.  
+Participate in the (newly-revamped) [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship Twisted Project Sponsorship Program]! For [wiki:TwistedSoftwareFoundation#SponsorshipLevels Silver Sidewinder and higher-level] sponsors, we will display your logo here on the front page for one year.  
 
 {{{
 #!div class="twisted-sponsors"
@@ -96,8 +96,9 @@ Participate in the (newly-revamped) [wiki:TwistedSoftwareFoundation#BenefitsofSp
 === Silver Sidewinder ===
 [[Image(TSF/SponsorLogos:dreamhost.gif, title=DreamHost, link=http://dreamhost.com/?q=twisted)]]
 }}}
-=== Sponsors Under Previous Program ===
-==== Bronze ====
+=== Bronze Sponsors (under previous program) ===
+
+[[Image(TSF/SponsorLogos:flowroute-logo.gif, title=flowroute, link=http://www.flowroute.com/)]]
 [[Image(TSF/SponsorLogos:found_160x80.png, title=FoundIT, link=http://www.found.no/)]] 
 }}}
 }}}
