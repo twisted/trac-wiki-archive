@@ -36,7 +36,7 @@ If more commits have been made to the SVN trunk, or a Twisted developer has crea
 
 {{{
 git fetch
-git checkout master
+git checkout trunk
 git rebase origin/trunk
 }}}
 
