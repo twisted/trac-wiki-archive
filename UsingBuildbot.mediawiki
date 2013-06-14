@@ -2,10 +2,11 @@
 
 Always run [http://buildbot.twistedmatrix.com buildbot] against a branch before merging it it trunk. 
 
- 1. Get [http://bazaar.launchpad.net/~twisted-dev/twisted-trac-integration/trunk/view/head:/tools/force-builds.py force-builds.py].
-    * `bzr branch lp:twisted-trac-integration` to get the repository
- 1. Run the script on your branch with `python force-builds.py /branches/<branch name> '<Comment>'`
-    * Note the forward slash before 'branches' and the lack of a forward slash after the branch name
- 1. Look at the results at the URL `http://buildbot.twistedmatrix.com/boxes-supported?branch=/branches/<branch name>`
+ 1. Get `force-build`.
+    * `pip install twisted-dev-tools` to get
+ 2. Run the script on your branch with `force-build [-b <branch name>] [-t <tests>] [--comment '<Comment>']`
+    * The current branch will be used by default, if you are using a [wiki:GitMirror]
+    * Otherwise, `/branches/` will be added automically, if it is not present.
+ 3. Look at the results at the URL `http://buildbot.twistedmatrix.com/boxes-supported?branch=/branches/<branch name>`
+    * This link is printed by `force-build`
     * The latest trunk build can been viewed at `http://buildbot.twistedmatrix.com/boxes-supported?branch=/trunk`
- 1. For complicated patches or ones that are likely to tickle cross-platform problems, it's useful to link to buildbot results in the ticket to show that the patch doesn't break any builds.
