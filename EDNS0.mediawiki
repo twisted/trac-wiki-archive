@@ -1,30 +1,340 @@
+= EDNS Plan =
+
 An attempt to understand the pieces of EDNS0 and the changes necessary to have Twisted Names support it:
 
- - EDNS0
-  - [ticket:5668 OPT record]
-   - Explicit OPT record class/type
-     - Teach cache about it - MUST NOT BE CACHED
-     - Teach recursive resolver about it - MUST NOT BE FORWARDED
-     - Teach loaders about - MUST NOT BE LOADED FROM MASTER FILE
-   - ~~Extended label ("0" "1" type) parsing~~ (REJECTED BY 2671bis)
-   - Maximum UDP datagram size field
-   - Arbitrary extension support (attribute/value pairs in RDATA section)
-  - [ticket:5675 Extended Message object with additional EDNS0 items]
-   - Subclass of Message? (no! subclassing is bad!)
-   - maxSize (Message has it already, can we re-use it?)
-   - Extended RCODE - partly defined by RCODE field in OPT record
-  - Accept max UDP size as configuration?  determine it from system automatically?
-   - Server and client need this
-  - [ticket:5670 Client]
-   - Automatically send EDNS0 queries
-   - Fall back to DNS queries when detecting server does not support EDNS0?
-  - [ticket:5669 Server]
-   - Send EDNS0 responses to EDNS0 queries
-   - (Do not send EDNS0 responses to DNS queries)
- - DNSSEC ??????
-  - #5450
-  - #5453
-  - #5454
+[[PageOutline(2-4)]]
 
- - RFCs
-  - [http://tools.ietf.org/html/rfc6891 6891: Extension Mechanisms for DNS (EDNS(0))]
+
+== EDNS0 ==
+
+=== [ticket:5668 OPT record] ===
+      - Explicit OPT record class/type
+        - Teach cache about it - MUST NOT BE CACHED
+          - EDNSMessage will remove OPT records during decoding so they
+            may never be seen by cache or clients if EDNSMessage
+            becomes the standard message factory for DNSDatagramProtocol.
+        - Teach recursive resolver about it - MUST NOT BE FORWARDED
+        - Teach loaders about - MUST NOT BE LOADED FROM MASTER FILE
+      - ~~Extended label ("0" "1" type) parsing~~ (REJECTED BY 2671bis)
+      - Maximum UDP datagram size field
+      - Arbitrary extension support (attribute/value pairs in RDATA section)
+
+=== [ticket:5675 Extended Message object with additional EDNS0 items] ===
+      - Subclass of Message? (no! subclassing is bad!)
+      - maxSize (Message has it already, can we re-use it?)
+      - Extended RCODE - partly defined by RCODE field in OPT record
+
+=== Configure Max payload size ===
+
+Accept max UDP size as configuration?
+
+Determine it from system automatically?
+      - Server and client need this
+
+=== [ticket:5670 Client] ===
+      - Automatically send EDNS0 queries
+      - Fall back to DNS queries when detecting server does not support EDNS0?
+
+=== [ticket:5669 Server] ===
+      - Send EDNS0 responses to EDNS0 queries
+      - (Do not send EDNS0 responses to DNS queries)
+
+
+== DNSSEC ==
+
+    Much of this work (including tests) has already been implemented by
+    BobNovas in two large patches attached to original
+    tickets: #5450, #5453, #5454. Look there before implementing
+    anything from scratch.
+
+=== New DNSSEC Records and Lookup Methods ===
+
+       DNSSEC introduces six new resource record types. Each new record
+       type will require a new dns.Record subclass and a new
+       lookupMethod added to t.i.interfaces.IResolver,
+       t.n.common.ResolverBase and a corresponding free function in
+       t.n.client.
+
+       For ease of review, this work can be split into six tickets.
+
+       These new records can be implemented independently of EDNS and
+       independently of DNSSEC validation and new DNSSEC related message
+       headers.
+
+       Initially, this will allow twisted.names clients to explicitly
+       request these DNSSEC related records.
+
+       lookupZone will return DNSSEC related records when transferring
+       from DNSSEC authoritative servers.
+
+       t.n.secondary.SecondaryAuthority will download DNSSEC records and
+       serve them when queries specifically ask for them by type.
+
+       t.n.authority.FileAuthority will load DNSSEC records and serve
+       them when queries specifically ask for them by type.
+
+       * DNSKey
+         https://tools.ietf.org/html/rfc4034#section-2
+       * RRSIG
+         https://tools.ietf.org/html/rfc4034#section-3
+       * NSEC
+         https://tools.ietf.org/html/rfc4034#section-4
+       * DS
+         https://tools.ietf.org/html/rfc4034#section-5
+       * NSEC3
+         https://tools.ietf.org/html/rfc5155#section-3
+       * NSEC3Param
+         https://tools.ietf.org/html/rfc5155#section-4
+
+
+=== RRSET improvements ===
+
+       DNSSEC seems to rely on stable RRSETs. eg for signatures, for
+       predictable caching of records and signatures, for predictable
+       truncation of large DNSSEC responses.
+
+       There appear to be various problems with twisted.names current
+       handling of RRSETs.
+
+==== Canonical Form and Order of Resource Records ====
+
+          https://tools.ietf.org/html/rfc4034#section-6
+
+          RRSETs must be arranged in canonical order before their signatures are
+          calculated / verified.
+
+          This ticket will introduce an algorithm for sorting records
+          according to the rules described in
+          https://tools.ietf.org/html/rfc4034#section-6.
+
+          Sorting appears to be the responsibility of the verifying client
+          not the server.
+
+          The fact that Bind has config options for changing the order of
+          RRSETS on the server side and the client side suggests that the
+          canonical ordering of records should be done only for the purpose
+          of DNSSEC validation. It should probably not change the order of
+          records returned by various IResolver methods.
+
+          * http://www.zytrax.com/books/dns/ch7/queries.html#rrset-order
+
+==== Serving RRSETs ====
+
+          twisted.names.dns.Message should follow the guidance in RFC2181
+          regarding the handling of TTLs for records in the same
+          RRSET. Alternatively consider handling this higher up in
+          t.n.authority.FileAuthority, t.n.cache, t.n.resolver etc.
+
+          * https://tools.ietf.org/html/rfc2181#section-5
+          * https://tools.ietf.org/html/rfc2181#section-5.2
+          * "the use of differing TTLs in an RRSet is hereby deprecated,
+            the TTLs of all RRs in an RRSet must be the same"
+          * "In no case may a server send an RRSet with TTLs not all
+            equal."
+          * https://tools.ietf.org/html/rfc2181#section-5.5
+          * "A Resource Record Set should only be included once in any DNS
+            reply.  It may occur in any of the Answer, Authority, or
+            Additional Information sections, as required.  However it
+            should not be repeated in the same, or any other, section,
+            except where explicitly required by a specification."
+
+==== Receiving RRSETs ====
+
+          twisted.names.client should somehow signal an error if it
+          receives RRSETs whose RRs have different TTLs.
+
+          twisted.names.resolver,root should discard RRSETs whose RRs
+          have diffent TTLs.
+
+          * https://tools.ietf.org/html/rfc2181#section-5.2
+          * "Should a client receive a response containing RRs from an
+            RRSet with differing TTLs, it should treat this as an error.
+            If the RRSet concerned is from a non-authoritative source for
+            this data, the client should simply ignore the RRSet,"
+
+==== Caching RRSETs ====
+
+          twisted.names.cache should follow the RRSET ranking guidance
+          when serving and replacing items in its cache.
+
+          * https://tools.ietf.org/html/rfc2181#section-5.4
+          * "Servers must never merge RRs from a response with RRs in their
+            cache to form an RRSet.  If a response contains data that would
+            form an RRSet with data in a server's cache the server must
+            either ignore the RRs in the response, or discard the entire
+            RRSet currently in the cache, as appropriate."
+          * https://tools.ietf.org/html/rfc2181#section-5.4.1
+          * "When considering whether to accept an RRSet in a reply, or
+            retain an RRSet already in its cache instead, a server should
+            consider the relative likely trustworthiness of the various
+            data"
+
+==== Selective truncate ====
+
+          twisted.names.dns.Message currently truncates messages based on
+          the combined length of the answer, auth, and additional
+          sections. Instead it (or something higher up) should look at
+          the length of the answers and only set the truncate flag if the
+          entire answers RRSET is greater than the
+          maxPayloadSize. If there is room, the auth and additional
+          records can also be included, but entire RRSETs must be
+          included or none.
+
+          * https://tools.ietf.org/html/rfc2181#section-9
+          * "The TC bit should be set in responses only when an RRSet is
+            required as a part of the response, but could not be included
+            in its entirety."
+
+==== Security-aware Non-validating Client ====
+
+       A twisted.names.client will be able to generate EDNS queries with
+       one or both the DO bit and the AD bit set.
+
+       It will examine the state of the AD bit in the response to
+       determine whether the upstream resolver claims to have validated
+       the records in the response.
+
+       If the DO bit was set, it will expect to receive DNSSEC related
+       records in the response.
+
+       https://tools.ietf.org/html/rfc4035#section-4.9
+
+==== Validating Client ====
+
+       A twisted.names.client which sends DO + CD flagged queries and
+       performs its own validation of the returned DNSSEC signatures.
+
+       TODO: needs more thought.
+
+==== Validating Recursive / Forwarding Server ====
+
+       This can use the Validating client API above, but may need to do
+       some processing of answers based on the query flags.
+
+       TODO: needs more thought.
+
+==== DNSSEC Aware Authoritative Server ====
+
+       A twisted.names.authority API which knows where and when to
+       include RRSIG, DNSKEY, NSEC, NSEC3 records etc with responses.
+
+       The actual generation of the DNSSEC records can be performed
+       using external tools such as
+       [http://linux.die.net/man/8/dnssec-signzone dnssec-signzone]
+
+       TODO: needs more thought.
+
+== RFCs ==
+
+   General:
+    - [https://tools.ietf.org/html/rfc1034 1034:DOMAIN NAMES - CONCEPTS AND FACILITIES]
+    - [https://tools.ietf.org/html/rfc1035 1035: DOMAIN NAMES - IMPLEMENTATION AND SPECIFICATION]
+    - [https://tools.ietf.org/html/rfc2181 2181: Clarifications to the DNS Specification]
+    - [https://tools.ietf.org/html/rfc4697 4697: Observed DNS Resolution Misbehavior]
+    - [https://tools.ietf.org/html/rfc5625 5625: DNS Proxy Implementation Guidelines]
+
+   EDNS:
+    - [http://tools.ietf.org/html/rfc6891 6891: Extension Mechanisms for DNS (EDNS(0))]
+
+   DNSSEC:
+    - [https://tools.ietf.org/html/rfc4033 4033: DNS Security Introduction and Requirements]
+    - [https://tools.ietf.org/html/rfc4034 4034: Resource Records for the DNS Security Extensions]
+    - [https://tools.ietf.org/html/rfc4035 4035: Protocol Modifications for the DNS Security Extensions]
+    - [https://tools.ietf.org/html/rfc5155 5155: DNS Security (DNSSEC) Hashed Authenticated Denial of Existence]
+    - [https://tools.ietf.org/html/rfc6781 6781: DNSSEC Operational Practices, Version 2]
+    - [https://tools.ietf.org/html/rfc6840 6840: Clarifications and Implementation Notes for DNS Security (DNSSEC)]
+    - [https://tools.ietf.org/html/rfc3833 3833: Threat Analysis of the Domain Name System (DNS)]
+
+== MISC / TODO / Notes ==
+    1. "If a query message with more than one OPT RR is received, a
+       FORMERR (RCODE=1) MUST be returned."
+       [https://tools.ietf.org/html/rfc6891#section-6.1.1 RFC6891 6.1.1]
+
+       * Multiple OPT RR will be detected in EDNSMessage.decode
+       * If multiple OPT RR are detected, set EDNSMessage.decodingErrors.append(EFORMAT)
+       * DNSServerFactory.messageReceived checks message.decodingErrors
+       * If not empty, it sets message.rCode =
+         message.decodingErrors.pop(0) before sending the message back
+         to client without further processing.
+       * If DNSServerFactory.verbose logging is enabled, all message.decodingErrors will
+         be logged.
+       * I tested Google DNS and Bind Authoritative DNS responses to
+         multi OPT queries.
+         * Google seems to ignore all but the first OPT RR and responds
+           without error.
+         * Bind responds with RCODE=1
+         * https://bazaar.launchpad.net/~ubuntu-branches/ubuntu/saucy/bind9/saucy/view/head:/lib/dns/message.c#L1274
+           {{{
+                  } else if (rdtype == dns_rdatatype_opt) {
+                          /*
+           * The name of an OPT record must be ".", it
+           * must be in the additional data section, and
+           * it must be the first OPT we've seen.
+                           */
+                          if (!dns_name_equal(dns_rootname, name) ||
+                              msg->opt != NULL)
+                                  DO_FORMERR;
+                          skip_name_search = ISC_TRUE;
+                          skip_type_search = ISC_TRUE;
+            }}}
+         * PowerDNS appears to ignore all but the first OPT RR (untested)
+           https://github.com/PowerDNS/pdns/blob/master/pdns/dnsrecords.cc#L375
+           {{{
+
+           bool getEDNSOpts(const MOADNSParser& mdp, EDNSOpts* eo)
+           {
+             if(mdp.d_header.arcount && !mdp.d_answers.empty()) {
+               BOOST_FOREACH(const MOADNSParser::answers_t::value_type& val, mdp.d_answers) {
+                 if(val.first.d_place == DNSRecord::Additional && val.first.d_type == QType::OPT) {
+                   eo->d_packetsize=val.first.d_class;
+
+                   EDNS0Record stuff;
+                   uint32_t ttl=ntohl(val.first.d_ttl);
+                   memcpy(&stuff, &ttl, sizeof(stuff));
+
+                   eo->d_extRCode=stuff.extRCode;
+                   eo->d_version=stuff.version;
+                   eo->d_Z = ntohs(stuff.Z);
+                   OPTRecordContent* orc =
+                     dynamic_cast<OPTRecordContent*>(val.first.d_content.get());
+                   if(!orc)
+                     return false;
+                   orc->getData(eo->d_options);
+                   return true;
+                 }
+               }
+             }
+             return false;
+           }
+
+           }}}
+
+    2. "EXTENDED-RCODE Forms the upper 8 bits of extended 12-bit RCODE"
+       [https://tools.ietf.org/html/rfc6891#section-6.1.3 RFC6891 6.1.3]
+
+       * Decode: EDNSMessage.decode will merge the RCODE and
+         OPTHeader.extendedRCODE setting the  rCode attribute.
+
+       * Encode: If rCode is > 15, EDNSMessage.encode will set the lower
+         4 bits as RCODE and set the upper 8 bits on a new or existing
+         OPTHeader which will be added to the additional section.
+
+    3. "VERSION Indicates the implementation level of the setter"
+       [https://tools.ietf.org/html/rfc6891#section-6.1.3 RFC6891 6.1.3]
+
+       * "If a responder does not implement the VERSION level of the
+         request, then it MUST respond with RCODE=BADVERS"
+
+         * Decode: in EDNSMessage.decode, if version > 0, EDNSMessage.decodingErrors.append(EBADVERS)
+
+       * "This document assigns EDNS Extended RCODE 16 to "BADVERS" in
+         the DNS RCODES registry" https://tools.ietf.org/html/rfc6891#section-9
+
+         * Create dns.EBADVERS = 16
+
+    4. "DO DNSSEC OK bit as defined by [RFC3225]." https://tools.ietf.org/html/rfc6891#section-6.1.4
+
+       * Set EDNSMessage.dnssecOK during decode using value from
+         OPTHeader.dnssecOK.
+
+       * Add or update an existing OPTHeader instance during encode.
