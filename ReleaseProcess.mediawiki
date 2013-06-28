@@ -157,25 +157,9 @@ jml
     1. Download the latest `.msi`, `.exe` and `.whl` files from from http://buildbot.twistedmatrix.com/builds/twisted-packages/ and save them in the staging directory
        1. ~~ The installers built from windows7-64-py2.7-msi will counter-intuitively have names that end in winxp32-py2.7.exe and winxp32-py2.7.msi. This is because of "distutils weirdness and other things".~~
  1. Sign the tarballs and Windows installers
-    1. e.g. `md5sum Tw* | gpg -a --clearsign > twisted-$RELEASE-md5sums.txt`
+    1. e.g. `md5sum Tw* | gpg -a --clearsign > /tmp/twisted-release/twisted-$RELEASE-md5sums.txt`
     1. Compare this to an [http://tmrc.mit.edu/mirror/twisted/twisted-10.1.0-md5sums.txt example of twisted-$RELEASE-md5sums.txt]
-    1. Do the SHA version as well: `shasum -a 512 Tw* | gpg -a --clearsign > twisted-$RELEASE-shasums.txt`
-
-== Distribute ==
-
- 1. Upload to the official upload locations (see #2888)
-    1. e.g. `ssh cube.twistedmatrix.com mkdir -m 2775 /srv/www-data/twisted/Releases/{Twisted,Core,Conch,Lore,Mail,Names,News,Pair,Runner,Web,Words}/$API`
-    1. e.g. `scp /tmp/twisted-release/Twisted-$RELEASE.tar.bz2 cube.twistedmatrix.com:/srv/www-data/twisted/Releases/Twisted/$API/`
-    1. For all subprojects, upload the tarballs to `cube.twistedmatrix.com:/srv/www-data/twisted/Releases/$SUBPROJECT/$API/`
-    1. Windows installers (msi, exe and whl) go in the `Twisted` project
- 1. Update the permissions on `cube`
-    1. For all new directories, `chmod 2775 $DIRECTORY`
-    1. For all new files, `chmod 664 $FILE`
-    1. For all new files and directories, `chgrp www-data $FILE_OR_DIR`
-    1. e.g. On cube, `find /srv/www-data/twisted/Releases -name '*$RELEASE*' | xargs chmod g+w`
- 1. ~~Wait for the tarballs to be mirrored to http://tmrc.mit.edu/mirror/twisted/Twisted/~~
-   * ~~They are mirrored 15 minutes after every hour~~
-   * ~~You can ask foom on #twisted to force the mirror~~
+    1. Do the SHA version as well: `shasum -a 512 Tw* | gpg -a --clearsign > /tmp/twisted-release/twisted-$RELEASE-shasums.txt`
 
 == Update documentation ==
 
@@ -194,40 +178,25 @@ jml
     1. `python build-docs.py`
       * If you have latex errors when trying to build the book and retry, don't forget to clean tmp directories which may be leftover in `doc/core/howto`.
     1. `cp -R doc /tmp/twisted-release/`
-    1. `cd /tmp/twisted-release/doc`
- 1. Make the documentation directory on cube
-    * e.g. `ssh cube.twistedmatrix.com mkdir -m 2775 ~www-data/distributable/documentation/$RELEASE`
- 1. Upload the documents to cube
-    * e.g. `scp -r doc/* cube.twistedmatrix.com:~www-data/distributable/documentation/$RELEASE`
  1. Run the `build-apidocs` script to build the API docs (in an export of the release tag) and then upload them (See also [wiki:APIDocs] and #2891)
-    1. `./bin/admin/build-apidocs . ./api`
-    1. Documentation will be generated in a directory called `./api`
-    1. `tar -cjf apidocs.tar.bz2 api`
-    1. `scp apidocs.tar.bz2 cube.twistedmatrix.com:.`
-    1. On cube, `tar -xjf apidocs.tar.bz2`
-    1. On cube, `mv apidocs ~www-data/distributable/documentation/$RELEASE/api`
- 1. Copy the book
-    * e.g. `scp book.pdf cube.twistedmatrix.com:~www-data/distributable/documentation/$RELEASE/core/howto`
- 1. Update the permissions on cube
-    1. `cd ~www-data/distributable/documentation/$RELEASE`
-    1. `find . -type d | xargs chmod 2775`
-    1. `find . -type f | xargs chmod 664`
-    1. `chgrp -R www-data .`
+    1. `./bin/admin/build-apidocs . /tmp/twisted-release/api`
+    1. Documentation will be generated in a directory called `/tmp/twisted-release/api`
+
+== Distribute ==
+
+ 1. Upload to the official upload locations (see #2888)
+    1. Create a tarball with the contents of the release directory: `tar -cvjf release.tar.bz2 -C /tmp/test-release .`
+    2. Install [https://github.com/twisted-infra/braid braid].
+    3. Upload release: `fab config.production t-web.uploadRelease:$RELEASE,release.tar.bz2`
  1. Test the generated docs
     1. Browse to `http://twistedmatrix.com/documents/$RELEASE/`
     1. Make sure that there is content in each of the directories and that it looks good
     1. Follow each link on http://twistedmatrix.com/trac/wiki/Documentation, replace `current` with $RELEASE (e.g. `10.0.0`) and look for any obvious breakage
  1. Change the "current" symlink
-    1. On cube `cd ~www-data/distributable/documentation`
-    1. On cube, `rm current`
-    1. On cube, `ln -s $RELEASE current`
-
-
-== Synchronize Trac ==
-
- 1. The site uses the [WikiMacros#AvailableMacros ProjectVersion] macro to automatically adjust the links on the wiki pages, including [wiki:WikiStart] and [wiki:Downloads], by parsing the latest `twisted-$RELEASE-md5sums.txt`:
-    1. `scp twisted-$RELEASE-md5sums.txt cube.twistedmatrix.com:/srv/www-data/twisted/Releases/`
-    1. `scp twisted-$RELEASE-shasums.txt cube.twistedmatrix.com:/srv/www-data/twisted/Releases/`
+    3. Upload release: `fab config.production t-web.updateCurrentDocumentation:$RELEASE`
+ 1. ~~Wait for the tarballs to be mirrored to http://tmrc.mit.edu/mirror/twisted/Twisted/~~
+   * ~~They are mirrored 15 minutes after every hour~~
+   * ~~You can ask foom on #twisted to force the mirror~~
 
 
 == Announce ==
