@@ -71,6 +71,8 @@ You probably don't want these unless you have special considerations:
 
 == Signed MD5 Sums ==
 
+md5 sums of the 13.1.0 release are [http://twistedmatrix.com/Releases/twisted-13.1.0-md5sums.txt here].
+
 md5 sums of the 13.0.0 release are [http://twistedmatrix.com/Releases/twisted-13.0.0-md5sums.txt here].
 
 md5 sums of the 12.3.0 release are [http://twistedmatrix.com/Releases/twisted-12.3.0-md5sums.txt here].
