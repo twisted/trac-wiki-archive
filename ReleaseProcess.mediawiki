@@ -185,8 +185,13 @@ jml
 == Distribute ==
 
  1. Upload to the official upload locations (see #2888)
-    1. Create a tarball with the contents of the release directory: `tar -cvjf release.tar.bz2 -C /tmp/test-release .`
-    2. Install [https://github.com/twisted-infra/braid braid].
+    1. Create a tarball with the contents of the release directory:
+       `cd /tmp/twisted-release; tar -cvjf ../release.tar.bz2 *`
+    2. Install [https://github.com/twisted-infra/braid braid]. (You'll need fabric too):
+       `git clone https://github.com/twisted-infra/braid`
+       `cd braid; git submodule update --init`
+       `virtualenv ~/dev/braid; source ~/dev/braid/bin/activate; cd ~/braid; python setup.py develop;`
+       `fab config.production t-web.uploadRelease:$13.1.0,~/release.tar.bz2`
     3. Upload release: `fab config.production t-web.uploadRelease:$RELEASE,release.tar.bz2`
  1. Test the generated docs
     1. Browse to `http://twistedmatrix.com/documents/$RELEASE/`
