@@ -190,7 +190,7 @@ jml
        `git clone https://github.com/twisted-infra/braid`
        `cd braid; git submodule update --init`
        `virtualenv ~/dev/braid; source ~/dev/braid/bin/activate; cd ~/braid; python setup.py develop;`
-       `fab config.production t-web.uploadRelease:$13.1.0,~/release.tar.bz2`
+       `fab config.production t-web.uploadRelease:$RELEASE,~/release.tar.bz2`
     3. Upload release: `fab config.production t-web.uploadRelease:$RELEASE,release.tar.bz2`
  1. Test the generated docs
     1. Browse to `http://twistedmatrix.com/documents/$RELEASE/`
