@@ -316,7 +316,7 @@ from twisted.python.filepath import FilePath
 
 # Make sure to replace the following in this script:
 # - the instances of $RELEASE with the version number (eg. `11.0.0`)
-# - download http://bazaar.launchpad.net/~twisted-dev/twisted-website/trunk/view/head:/docs/website-template.tpl
+# - download https://github.com/twisted-infra/t-web/blob/master/docs/website-template.tpl
 #   somewhere and update the instance of '/path/to/website-template.tpl' accordingly
 
 done = {}
