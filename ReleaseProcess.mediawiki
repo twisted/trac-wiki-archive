@@ -206,7 +206,7 @@ jml
 == Announce ==
 
  1. Update [wiki:Downloads] pages
-    1. The following updates are automatic, due to the use of the [http://bazaar.launchpad.net/~exarkun/twisted-trac-integration/trunk/view/head:/trac-plugins/twisted_release_macro.py ProjectVersion] [WikiMacros wiki macro] throughout most of the [wiki:Downloads] page.
+    1. The following updates are automatic, due to the use of the [https://raw.github.com/twisted-infra/twisted-trac-plugins/master/twisted_trac_plugins/release_macro.py ProjectVersion] [WikiMacros wiki macro] throughout most of the [wiki:Downloads] page.
       1. Text references to the old version to refer to the new version
       1. The link to the `NEWS` file to point to the new version
       1. Links and text to MSIs
