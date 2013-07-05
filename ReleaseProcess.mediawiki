@@ -21,10 +21,10 @@ To release Twisted, you will need:
  * Commit privileges to Twisted
  * Shell access to cube.twistedmatrix.com
    * '''XXX:''' Possibly this ought to be permission to log in as `www-data`
- * Write permissions to /srv/www-data/twisted on cube (normally, www-data membership)
- * Write permissions to /srv/www-data/website/vhosts/twistedmatrix.com/documents
+ * Write permissions to `/srv/www-data/twisted` on cube (normally, `www-data` membership)
+ * Write permissions to `/srv/www-data/website/vhosts/twistedmatrix.com/documents`
  * Permissions to edit WikiStart
- * Channel operator permissions for #twisted
+ * Channel operator permissions for `#twisted`
  * Admin privileges for Twisted's PyPI packages
  * Membership of https://launchpad.net/~twisted-dev
  * Contributor status for http://labs.twistedmatrix.com
@@ -34,16 +34,16 @@ To release Twisted, you will need:
 Twisted releases use a time-based numbering scheme. Releases versions like `YY.MM.mm`, where `YY` is the last two digits of the year of the release, `MM` is the number of the release in the year, and `mm` is the number of the patch release.
 
 For example:
- * The first release of 2010 is 10.0.0
- * The second release of 2010 is 10.1.0
- * If 10.1.0 has some critical defects, then a patch release would be numbered 10.1.1
- * The first pre-release of 10.0.0 is 10.0.0pre1, the second is 10.0.0pre2
+ * The first release of 2010 is `10.0.0`
+ * The second release of 2010 is `10.1.0`
+ * If 10.1.0 has some critical defects, then a patch release would be numbered `10.1.1`
+ * The first pre-release of `10.0.0` is `10.0.0pre1`, the second is `10.0.0pre2`
 
 Every release of Twisted includes the whole project, the core and all sub-projects. Each of these has the same number.
 
-Throughout this document, we'll refer to the version number of the release as '''$RELEASE'''. Examples of $RELEASE include 10.0.0, 10.1.0, 10.1.1 etc.
+Throughout this document, we'll refer to the version number of the release as '''$RELEASE'''. Examples of $RELEASE include `10.0.0`, `10.1.0`, `10.1.1` etc.
 
-We'll refer to the first two components of the release as '''$API''', since all releases that share those numbers are mutually API compatible. e.g. for 10.0.0, $API is 10.0; for 10.1.0 and 10.1.1, $API is 10.1.
+We'll refer to the first two components of the release as '''$API''', since all releases that share those numbers are mutually API compatible. e.g. for `10.0.0`, `$API` is `10.0`; for `10.1.0` and `10.1.1`, `$API` is `10.1`.
 
 The change-versions script automatically picks the right number for you. Please retrieve it after you run it.
 
@@ -98,7 +98,7 @@ To release Twisted, we
 
 The pre-release announcement should mention the important changes since the last release, and exhort readers to test this pre-release.
 
-Here's what the $RELEASEpre1 release announcement might look like:
+Here's what the `$RELEASEpre1` release announcement might look like:
 
 {{{
 Live from PyCon Atlanta, I'm pleased to herald the approaching
@@ -206,12 +206,12 @@ jml
 == Announce ==
 
  1. Update [wiki:Downloads] pages
-    1. The following steps are automatic, due to the use of the [http://bazaar.launchpad.net/~exarkun/twisted-trac-integration/trunk/view/head:/trac-plugins/twisted_release_macro.py ProjectVersion] [WikiMacros wiki macro] throughout most of the [wiki:Downloads] page
-      1. Change text references to the old version to refer to the new version
-      1. Update the link to the NEWS file to point to the new version
-      1. Update links and text to MSIs
-      1. Update links and text to the main tarball
-      1. Update links and text to sub tarballs, including links to news files
+    1. The following updates are automatic, due to the use of the [http://bazaar.launchpad.net/~exarkun/twisted-trac-integration/trunk/view/head:/trac-plugins/twisted_release_macro.py ProjectVersion] [WikiMacros wiki macro] throughout most of the [wiki:Downloads] page.
+      1. Text references to the old version to refer to the new version
+      1. The link to the `NEWS` file to point to the new version
+      1. Links and text to MSIs
+      1. Links and text to the main tarball
+      1. Links and text to sub tarballs, including links to news files
     1. Add a new md5sum link
     1. Add a new shasum link
     1. Save the page, check all links
@@ -236,7 +236,7 @@ jml
    * The final revision of the release is the revision in which the release branch was made. The starting revision is the one immediately after the final revision of the previous release.
  1. Announce the release
     1. Send a text version of the announcement to: `twisted-python@twistedmatrix.com, python-announce-list@python.org, python-list@python.org, twisted-web@twistedmatrix.com, twisted-jabber@ik.nu`
-      * Note: you need to be subscribed to some of those lists to be able to send, like twisted-jabber@ik.nu.
+      * Note: you need to be subscribed to some of those lists to be able to send, like `twisted-jabber@ik.nu`.
     1. Launchpad;
       * https://launchpad.net/twisted/main/+addrelease
         * Include a text version of the announcement and the new entries of the NEWS file
