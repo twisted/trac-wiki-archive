@@ -262,7 +262,7 @@ Twisted also supports many common network protocols, including SMTP, POP3, IMAP,
 
 == Community ==
 
-[[Image(http://oreilly.com/catalog/covers/twistedadn.s.gif, link=http://www.amazon.com/gp/product/1449326110/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449326110&linkCode=as2&tag=twisted-sfconservancy-20, right)]]
+[[Image(http://ecx.images-amazon.com/images/I/51OzJwW8fQL._SX260.jpg, link=https://www.amazon.com/gp/product/1449326110/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449326110&linkCode=as2&tag=twisted-sfconservancy-20, right)]]
 
  * Get in touch with the [wiki:TwistedCommunity Twisted community] through [wiki:TwistedCommunity#MailLists email], [http://stackoverflow.com/questions/tagged/twisted Stack Overflow] or [wiki:TwistedCommunity#IRC IRC];
  * Learn about the Twisted [wiki:TwistedDevelopment development process] and how to [wiki:ContributingToTwistedLabs contribute];
