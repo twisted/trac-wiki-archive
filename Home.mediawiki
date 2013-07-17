@@ -147,7 +147,7 @@ reactor.listenTCP(1234, EchoFactory())
 reactor.run()
 }}}
 
-Learn more about [http://twistedmatrix.com/documents/current/core/howto/servers.html writing servers], [http://twistedmatrix.com/documents/current/core/howto/clients.html writing clients] and the [http://twistedmatrix.com/documents/current/core/howto/index.html core networking libraries ], including support for SSL, UDP, scheduled events, unit testing infrastructure, and much more.
+Learn more about [https://twistedmatrix.com/documents/current/core/howto/servers.html writing servers], [https://twistedmatrix.com/documents/current/core/howto/clients.html writing clients] and the [https://twistedmatrix.com/documents/current/core/howto/index.html core networking libraries ], including support for SSL, UDP, scheduled events, unit testing infrastructure, and much more.
 }}}
 
 
@@ -173,7 +173,7 @@ reactor.listenTCP(8080, server.Site(HelloResource()))
 reactor.run()
 }}}
 
-Learn more about [http://twistedmatrix.com/documents/current/web/howto/web-in-60/index.html web application development], [http://twistedmatrix.com/documents/current/web/howto/twisted-templates.html templates] and Twisted's [http://twistedmatrix.com/documents/current/web/howto/client.html HTTP client].
+Learn more about [https://twistedmatrix.com/documents/current/web/howto/web-in-60/index.html web application development], [https://twistedmatrix.com/documents/current/web/howto/twisted-templates.html templates] and Twisted's [https://twistedmatrix.com/documents/current/web/howto/client.html HTTP client].
 }}}
 
 {{{
@@ -247,7 +247,7 @@ def main(reactor, username="alice", password="secret",
 task.react(main, sys.argv[1:])
 }}}
 
-Give this a try, supplying your IMAP4 username, password, and [http://twistedmatrix.com/documents/current/core/howto/endpoints.html#auto7 client endpoint description] for your IMAP4 server.  You'll see the subject of the first message in your mailbox printed.
+Give this a try, supplying your IMAP4 username, password, and [https://twistedmatrix.com/documents/current/core/howto/endpoints.html#auto7 client endpoint description] for your IMAP4 server.  You'll see the subject of the first message in your mailbox printed.
 
 See the TwistedMail documentation for more information.
 
@@ -258,11 +258,11 @@ See the TwistedMail documentation for more information.
 
 == More Protocols ==
 
-Twisted also supports many common network protocols, including SMTP, POP3, IMAP, SSHv2, and DNS. For more information see our [wiki:Documentation documentation] and [http://twistedmatrix.com/documents/current/api/ API reference].
+Twisted also supports many common network protocols, including SMTP, POP3, IMAP, SSHv2, and DNS. For more information see our [wiki:Documentation documentation] and [https://twistedmatrix.com/documents/current/api/ API reference].
 
 == Community ==
 
-[[Image(//twistedmatrix.com/trac/raw-attachment/wiki/AttachmentBucket/oreilly_book_cover.jpg, link=https://www.amazon.com/gp/product/1449326110/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449326110&linkCode=as2&tag=twisted-sfconservancy-20, right)]]
+[[Image(https://twistedmatrix.com/trac/raw-attachment/wiki/AttachmentBucket/oreilly_book_cover.jpg, link=https://www.amazon.com/gp/product/1449326110/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449326110&linkCode=as2&tag=twisted-sfconservancy-20, right)]]
 
  * Get in touch with the [wiki:TwistedCommunity Twisted community] through [wiki:TwistedCommunity#MailLists email], [http://stackoverflow.com/questions/tagged/twisted Stack Overflow] or [wiki:TwistedCommunity#IRC IRC];
  * Learn about the Twisted [wiki:TwistedDevelopment development process] and how to [wiki:ContributingToTwistedLabs contribute];
