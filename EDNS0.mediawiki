@@ -10,7 +10,7 @@ Twisted.names includes widely used public APIs that have existed for
 over twelve years (r440).
 
 However many of these existing APIs are inelegant and too broad. eg
- * [/documents/current/api/twisted.names.dns.Message.html]
+ * [http://twistedmatrix.com/documents/current/api/twisted.names.dns.Message.html]
 So we will introduce new EDNS related classes with carefully designed,
 minimal public APIs. New APIs will be designed for maximum usability
 but as narrow as possible, to minimise future backwards compatibility
