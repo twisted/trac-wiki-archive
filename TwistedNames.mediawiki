@@ -30,9 +30,9 @@ Twisted has pluggable resolvers, the default resolver reads ''/etc/resolv.conf''
 #!py
 $ python -m twisted.conch.stdio
 >>> from twisted.names import client
->>> resolver = client.createResolver(servers=['8.8.8.8', '8.8.4.4'], hosts='alternate_hosts_file')
->>> resolver.getHostByName('twistedmatrix.com')
-<Deferred at 0x9dcfbac current result: '1.2.3.4'>
+>>> resolver = client.createResolver(servers=[('8.8.8.8', 53), ('8.8.4.4', 53)], hosts='alternate_hosts_file')
+>>> resolver.getHostByName('example.com')
+<Deferred at 0x9dcfbac current result: '93.184.216.119'>
 }}}
 
 You can affect all future name resolution in the reactor and from the `twisted.names.client` by installing a custom resolver into the reactor.
@@ -41,7 +41,7 @@ You can affect all future name resolution in the reactor and from the `twisted.n
 #!py
 from twisted.internet import reactor
 from twisted.names import client
-reactor.installResolver(client.createResolver(servers=['8.8.8.8', '8.8.4.4'], hosts='alternate_hosts_file'))
+reactor.installResolver(client.createResolver(servers=[('8.8.8.8', 53), ('8.8.4.4', 53)], hosts='alternate_hosts_file'))
 }}}
 
 = Download =
