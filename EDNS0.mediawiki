@@ -220,9 +220,9 @@ from scratch.
     type will require a new dns.Record subclass and a new lookupMethod
     added to t.i.interfaces.IResolver, t.n.common.ResolverBase and a
     corresponding free function in t.n.client.
-    1. DNSKey
+    1. #6664 DNSKey
        https://tools.ietf.org/html/rfc4034#section-2
-    2. RRSIG
+    2. #6665 RRSIG
        https://tools.ietf.org/html/rfc4034#section-3
     3. NSEC
        https://tools.ietf.org/html/rfc4034#section-4
