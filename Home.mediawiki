@@ -95,6 +95,7 @@ Participate in the (newly-revamped) [wiki:TwistedSoftwareFoundation#BenefitsofSp
 
 === Silver Sidewinder ===
 [[Image(TSF/SponsorLogos:dreamhost.gif, title=DreamHost, link=http://dreamhost.com/?q=twisted)]]
+[[Image(TSF/SponsorLogos:Dyn_160x80.png, title=Dyn, link=http://dyn.com/)]] 
 }}}
 === Bronze Sponsors (under previous program) ===
 
