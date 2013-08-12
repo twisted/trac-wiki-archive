@@ -9,6 +9,8 @@ For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwa
 == Silver Sidewinder ==
 [[Image(TSF/SponsorLogos:dreamhost.gif, title=DreamHost, link=http://dreamhost.com/?q=twisted)]] 
 
+[[Image(TSF/SponsorLogos:Dyn_160x80.png, title=DNS, link=http://dyn.com/)]] 
+
 == Copperhead ==
 [[Image(TSF/SponsorLogos:SendGrid.png, title=SendGrid, link=http://http://sendgrid.com/)]]
 
