@@ -63,14 +63,15 @@ To generate API docs you need to have installed:
  * [http://epydoc.sourceforge.net/ Epydoc] - an API documentation tool on which pydoctor depends
  * [http://www.divmod.org/trac/wiki/DivmodNevow nevow] - pydoctor's HTML generation side uses Nevow templates
 
-Once everything is installed, generate the docs with a command like:[[BR]]
-`pydoctor --quiet --make-html --system-class pydoctor.twistedmodel.TwistedSystem --add-package /path/to/my-code-dir/Twisted/trunk/twisted`
+Once everything is installed, generate the docs with the build-apidocs admin script like so:
 
-This produces a folder called `apidocs` in your current working directory. You can then browse from the entry points to the docs in a web browser via the URL
+`bin/admin/build-apidocs /path/to/my-code-dir/Twisted/trunk apidocs`
+
+The above produces a folder called `apidocs` in your current working directory. You can then browse from the entry points to the docs in a web browser via the URL
 
 `file:///path/to/apidocs/index.html`
 
-If everything looks good, submit a patch as described [wiki:TwistedDevelopment#SubmittingaPatch here]
+If everything looks good, submit a patch as described [wiki:TwistedDevelopment#SubmittingaPatch here].
 
 === Editing man pages ===
 
