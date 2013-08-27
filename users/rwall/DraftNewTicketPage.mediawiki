@@ -9,20 +9,22 @@ Please read this first:
 
  1. '''Please don't report [wiki:Security] issues here! Contact
     security(at)twistedmatrix(dot)com instead.'''
- 2. [wiki:FrequentlyAskedQuestions Check the FAQ] for common issues.
- 3. Don't use the ticket system for [wiki:TwistedCommunity help with support questions].
- 4. Search for an existing tickets using
+ 2. '''Don't report operation issues here'''. Visit
+    [https://github.com/twisted-infra/ Twisted Infra on Github] instead.
+ 3. [wiki:FrequentlyAskedQuestions Check the FAQ] for common issues.
+ 4. Don't use the ticket system for [wiki:TwistedCommunity help with support questions].
+ 5. Search for an existing tickets using
     [/trac/search?q=&noquickjump=1&ticket=on trac freetext search],
     [query:?status=!closed&order=id&desc=0&description=&summary=&component= trac ticket query] or
     [https://www.google.co.uk/search?q=site:twistedmatrix.com/trac/ticket Google].
- 5. Follow our [TwistedDevelopment#FilingTickets bug reporting guidelines] and our
+ 6. Follow our [TwistedDevelopment#FilingTickets bug reporting guidelines] and our
     [wiki:TwistedDevelopment#SubmittingaPatch patch submission guidelines] for the best response.
- 6. Use the "Preview" button to check your
+ 7. Use the "Preview" button to check your
     [wiki:WikiFormatting formatting].
 
 ----
 
-= Patch Upload =
+= Attachment / Patch Upload =
 
 This is a proposed checklist for inclusion on the
 [/trac/attachment/ticket/1/?action=new ticket attachment upload page].
@@ -63,3 +65,4 @@ the purpose of your attachment.
  * wiki:Contribute
  * https://code.djangoproject.com/newticket
  * http://trac.edgewall.org/wiki/NewTicket
+ * https://bugs.launchpad.net/twisted-website/+bug/1140776
