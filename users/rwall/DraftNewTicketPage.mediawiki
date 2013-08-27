@@ -9,7 +9,7 @@ Please read this first:
 
  1. '''Please don't report [wiki:Security] issues here! Contact
     security(at)twistedmatrix(dot)com instead.'''
- 2. '''Don't report operation issues here'''. Visit
+ 2. '''Don't report operational issues here'''. Visit
     [https://github.com/twisted-infra/ Twisted Infra on Github] instead.
  3. [wiki:FrequentlyAskedQuestions Check the FAQ] for common issues.
  4. Don't use the ticket system for [wiki:TwistedCommunity help with support questions].
