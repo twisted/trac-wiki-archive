@@ -14,9 +14,9 @@ Please read this first:
  3. [wiki:FrequentlyAskedQuestions Check the FAQ] for common issues.
  4. Don't use the ticket system for [wiki:TwistedCommunity help with support questions].
  5. Search for an existing tickets using
-    [/trac/search?q=&noquickjump=1&ticket=on trac freetext search],
+    [https://www.google.co.uk/search?q=site:twistedmatrix.com/trac/ticket Google],
     [query:?status=!closed&order=id&desc=0&description=&summary=&component= trac ticket query] or
-    [https://www.google.co.uk/search?q=site:twistedmatrix.com/trac/ticket Google].
+    [/trac/search?q=&noquickjump=1&ticket=on trac freetext search].
  6. Follow our [TwistedDevelopment#FilingTickets bug reporting guidelines] and our
     [wiki:TwistedDevelopment#SubmittingaPatch patch submission guidelines] for the best response.
  7. Use the "Preview" button to check your
