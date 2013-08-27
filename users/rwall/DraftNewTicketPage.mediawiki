@@ -1,7 +1,7 @@
 = New Ticket =
 
 This is a proposed checklist for inclusion at the top of the
-newticket page.
+[/trac/newticket newticket page].
 
 ----
 
@@ -24,8 +24,8 @@ Please read this first:
 
 = Patch Upload =
 
-This is a proposed checklist for inclusion on the ticket attachment
-upload page.
+This is a proposed checklist for inclusion on the
+[/trac/attachment/ticket/1/?action=new ticket attachment upload page].
 
 ----
 
@@ -56,6 +56,10 @@ the purpose of your attachment.
 ----
 
 = Links and References =
- * https://twistedmatrix.com/trac/wiki/ContributionIdeas
+ * wiki:ContributionIdeas
+ * wiki:TwistedDevelopment#FilingTickets
+ * wiki:CommitterCheckList
+ * wiki:ContributingToTwistedLabs
+ * wiki:Contribute
  * https://code.djangoproject.com/newticket
  * http://trac.edgewall.org/wiki/NewTicket
