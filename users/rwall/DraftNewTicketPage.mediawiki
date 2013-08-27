@@ -1,0 +1,30 @@
+= New Ticket =
+
+This is a proposed checklist for inclusion at the top of the
+newticket page.
+
+----
+
+Please read this first:
+ 1. Please don't report [wiki:Security] issues here! Contact
+    security(at)twistedmatrix(dot)com instead.
+ 2. Check the [wiki:FrequentlyAskedQuestions FAQ] for common issues.
+ 3. Don't use the ticket system for [wiki:TwistedCommunity help with support questions].
+ 5. Follow our bug reporting guidelines and our
+    [wiki:TwistedDevelopment#SubmittingaPatch patch submission guidelines] for the best response.
+ 6. Use the "Preview" button to check your
+    [wiki:WikiFormatting formatting].
+
+----
+
+References:
+ * https://code.djangoproject.com/newticket
+ * http://trac.edgewall.org/wiki/NewTicket
+
+
+= Patch Upload =
+TODO
+
+
+= Other Links and References =
+ * https://twistedmatrix.com/trac/wiki/ContributionIdeas
