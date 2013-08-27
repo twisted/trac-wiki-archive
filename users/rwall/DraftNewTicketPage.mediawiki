@@ -68,3 +68,5 @@ the purpose of your attachment.
  * https://code.djangoproject.com/newticket
  * http://trac.edgewall.org/wiki/NewTicket
  * https://bugs.launchpad.net/twisted-website/+bug/1140776
+ * https://github.com/twisted-infra/trac-config/issues/1
+ * https://github.com/twisted-infra/trac-config/pull/2
