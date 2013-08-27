@@ -63,33 +63,9 @@ directly to the [wiki:TwistedSoftwareFoundation Twisted Software Foundation].
      '''Choose a unique password. Do not use the same
      password that you use for accessing other websites.'''
 
-  4. '''Create a ticket''': There are three types of ticket described
-     in [wiki:TwistedDevelopment#FilingTickets the FilingTickets section of the TwistedDevelopment guide].
-
-     They are duplicated here for convenience:
-
-       '''Enhancements''':: are used for feature additions. These
-       typically take the form of a new API or an expansion of an
-       existing API. Enhancement tickets should clearly describe the
-       desired feature. The more well specified a feature is, the more
-       likely it is to be implemented (and importantly, the more likely
-       it is that what is implemented will actually be what the reporter
-       wanted!) and the easier it is to implement. Remember that the
-       ticket is possibly the only persistent record of the feature
-       request. If it is not self-contained and sufficiently detailed,
-       then it will likely fail to communicate the reporter's idea,
-       diminishing its value (possibly all the way down to zero).
-
-       '''Defects''':: are used to track bugs in existing APIs. Defect
-       tickets are easier to specify than enhancements. A defect should
-       briefly describe the problem, but the bulk of the ticket should
-       be a runnable program (ideally in the form of a unit test) which
-       demonstrates the bug.
-
-       '''Regressions''':: are similar to defects, but are for bugs
-       which are introduced into APIs in newer releases of Twisted. Like
-       defect tickets, regression tickets should have a runnable program
-       attached to demonstrate the problem.
+  4. '''Create a ticket''': Read
+     [wiki:TwistedDevelopment#FilingTickets the FilingTickets section of the TwistedDevelopment guide] for details of the different
+     ticket types and then visit the [/newticket New Ticket page].
 
 
 == Submit Patches ==
