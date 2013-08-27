@@ -22,11 +22,6 @@ Please read this first:
 
 ----
 
-References:
- * https://code.djangoproject.com/newticket
- * http://trac.edgewall.org/wiki/NewTicket
-
-
 = Patch Upload =
 
 This is a proposed checklist for inclusion on the ticket attachment
@@ -58,7 +53,9 @@ And always '''add an explanatory comment to the ticket''', summarising
 the purpose of your attachment.
 
 
----
+----
 
-= Other Links and References =
+= Links and References =
  * https://twistedmatrix.com/trac/wiki/ContributionIdeas
+ * https://code.djangoproject.com/newticket
+ * http://trac.edgewall.org/wiki/NewTicket
