@@ -6,26 +6,68 @@ This is a one page summary of the ways that you or your organization can contrib
 
 This is a draft document which is intended to eventually replace wiki:ContributingToTwistedLabs.
 
-== Donate == 
+== Donate ==
 
 There are many ways individuals and organizations can make contributions to Twisted.
 
 Many open source projects are perpetually crunched for volunteer labor. Twisted is no different in this respect — we could always use more help from the community.  However, we are lucky to have something that most projects don't; the ability to convert dollars directly into maintenance that benefits the project.
 
 When you contribute money to the Twisted project, you are directly contributing to get bugs fixed, features implemented, and tickets reviewed.
-Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible] and can be made via [//twistedmatrix.com/ "Google Checkout or Paypal"] or directly to the [wiki:TwistedSoftwareFoundation Twisted Software Foundation].
+Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible] and can be made via [/ "Google Checkout or Paypal"] or directly to the [wiki:TwistedSoftwareFoundation Twisted Software Foundation].
 
-== Report bugs/file tickets ==
 
-  1. [http://twistedmatrix.com/trac/search Search the bugtracker] for any existing tickets that are similar to the ones you are planning to file. 
-    * You can also use [https://www.google.com/ Google] with your search query followed by the `site:http://twistedmatrix.com/trac/ticket` parameter.
+== Report Bugs / Suggest Enhancements ==
 
-  2. If you didn't find an existing ticket, discuss it with the [http://twistedmatrix.com/trac/wiki/TwistedCommunity#TwistedCommunity Twisted Community].
-      
-  3. Now, follow these steps to file a ticket:
-    * [/register Register] on this site.
-    * [http://twistedmatrix.com/trac/wiki/TwistedDevelopment#FilingTickets file a ticket].
+  1. '''Search for an existing ticket''': Search the bugtracker for any existing tickets that are similar
+     to the ones you are planning to file.
+     * [https://www.google.co.uk/search?q=site:twistedmatrix.com/trac/ticket Search for tickets using Google]
+     * [query:?status=!closed&order=id&desc=0&description=&summary=&component= Use the Trac ticket reporting tool]
+     * [/trac/search?q=&noquickjump=1&ticket=on Use the Trac freetext search tool].
 
+  2. '''Introduce yourself''': If you didn't find an existing ticket, introduce yourself on the
+     mailing list or in IRC and discuss your proposed bug or
+     enhancement with the Twisted Developers. They may be able to
+     point you to an existing related ticket or help you structure
+     your proposed enhancement so that it can be quickly and
+     efficiently integrated into Twisted.
+
+     See the [wiki:TwistedCommunity#TwistedCommunity Twisted Community]
+     page for the various ways to contact Twisted Developers.
+
+  3. '''Register''': Before you can create a new ticket you will have
+     to create an account in the Twisted Trac system. Visit the
+     [/register registration page] and choose a username and password.
+
+     '''Choose a unique password. Do not use the same
+     password that you use for accessing other websites.'''
+
+  4. '''Create a ticket''': There are three types of ticket described
+     in [wiki:TwistedDevelopment#FilingTickets the FilingTickets section of the TwistedDevelopment guide].
+
+     They are duplicated here for convenience:
+
+     '''Enhancements''':: are used for feature additions. These
+     typically take the form of a new API or an expansion of an
+     existing API. Enhancement tickets should clearly describe the
+     desired feature. The more well specified a feature is, the more
+     likely it is to be implemented (and importantly, the more likely
+     it is that what is implemented will actually be what the reporter
+     wanted!) and the easier it is to implement. Remember that the
+     ticket is possibly the only persistent record of the feature
+     request. If it is not self-contained and sufficiently detailed,
+     then it will likely fail to communicate the reporter's idea,
+     diminishing its value (possibly all the way down to zero).
+
+     '''Defects''':: are used to track bugs in existing APIs. Defect
+     tickets are easier to specify than enhancements. A defect should
+     briefly describe the problem, but the bulk of the ticket should
+     be a runnable program (ideally in the form of a unit test) which
+     demonstrates the bug.
+
+     '''Regressions''':: are similar to defects, but are for bugs
+     which are introduced into APIs in newer releases of Twisted. Like
+     defect tickets, regression tickets should have a runnable program
+     attached to demonstrate the problem.
 
 
 == Submit Patches ==
@@ -56,21 +98,21 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible] and can
 === If you have commit access: ===
 
   * Read [http://twistedmatrix.com/trac/wiki/CommitterCheckList CommitterChecklist].
- 
+
   * [http://twistedmatrix.com/trac/wiki/Combinator About Combinator].
 
   * [http://twistedmatrix.com/trac/wiki/TwistedWithCombinator Setting up and working with Combinator].
 
-  * [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html Twisted and SVN] (howto). 
+  * [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html Twisted and SVN] (howto).
 
 
- 
+
 == Review a Ticket ==
 
   * [http://twistedmatrix.com/trac/wiki/CodeReview Code Review] (i.e. Divmod's description of what a code review is).
-  
+
   * [http://twistedmatrix.com/trac/wiki/UltimateQualityDevelopmentSystem UQDS].
-  
+
   * [http://twistedmatrix.com/trac/wiki/ReviewProcess Review Process] explained in detail.
 
 
