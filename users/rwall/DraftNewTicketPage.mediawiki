@@ -6,6 +6,7 @@ newticket page.
 ----
 
 Please read this first:
+
  1. '''Please don't report [wiki:Security] issues here! Contact
     security(at)twistedmatrix(dot)com instead.'''
  2. [wiki:FrequentlyAskedQuestions Check the FAQ] for common issues.
@@ -14,7 +15,7 @@ Please read this first:
     [/trac/search?q=&noquickjump=1&ticket=on trac freetext search],
     [query:?status=!closed&order=id&desc=0&description=&summary=&component= trac ticket query] or
     [https://www.google.co.uk/search?q=site:twistedmatrix.com/trac/ticket Google].
- 5. Follow our bug reporting guidelines and our
+ 5. Follow our [TwistedDevelopment#FilingTickets bug reporting guidelines] and our
     [wiki:TwistedDevelopment#SubmittingaPatch patch submission guidelines] for the best response.
  6. Use the "Preview" button to check your
     [wiki:WikiFormatting formatting].
@@ -27,8 +28,37 @@ References:
 
 
 = Patch Upload =
-TODO
 
+This is a proposed checklist for inclusion on the ticket attachment
+upload page.
+
+----
+
+Please read this first:
+
+ 1. If you are submitting a patch:
+    1. Read the [wiki:TwistedDevelopment#SubmittingaPatch patch guidelines].
+    2. '''Keep patches as small as possible (<800 lines).''' This will make
+       it easy for your change to be reviewed. For larger changes
+       please contact Twisted developers first to discuss how your
+       contribution can be broken into a series of tickets and small
+       patches.
+    3. '''Use a standard patch filename'''. All lowercase, no spaces,
+       include ticket number, include a patch version number, .patch
+       or .diff extension eg agent-howto-spelling-1234-1.patch
+    4. Add the "review" keyword to the ticket after uploading your
+       patch. This will add the ticket and your patch to the
+       [report:15 review queue].
+ 2. If you are submitting an example or demonstration:
+    1. Make it a [http://sscce.org/ Short, Self Contained, Correct Example]
+    2. Include instructions showing how to run the example and the
+       expected output.
+
+And always add a follow up comment to the ticket, explaining the
+purpose of your attachment.
+
+
+---
 
 = Other Links and References =
  * https://twistedmatrix.com/trac/wiki/ContributionIdeas
