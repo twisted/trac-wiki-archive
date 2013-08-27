@@ -6,9 +6,9 @@ newticket page.
 ----
 
 Please read this first:
- 1. Please don't report [wiki:Security] issues here! Contact
-    security(at)twistedmatrix(dot)com instead.
- 2. Check the [wiki:FrequentlyAskedQuestions FAQ] for common issues.
+ 1. '''Please don't report [wiki:Security] issues here! Contact
+    security(at)twistedmatrix(dot)com instead.'''
+ 2. [wiki:FrequentlyAskedQuestions Check the FAQ] for common issues.
  3. Don't use the ticket system for [wiki:TwistedCommunity help with support questions].
  4. Search for an existing tickets using
     [/trac/search?q=&noquickjump=1&ticket=on trac freetext search],
