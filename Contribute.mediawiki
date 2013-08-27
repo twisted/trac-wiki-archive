@@ -39,7 +39,7 @@ directly to the [wiki:TwistedSoftwareFoundation Twisted Software Foundation].
        You can use this tool to narrow your search to open tickets
        and tickets within a particular Twisted component eg web,
        names, etc.
-     * [search?q=&noquickjump=1&ticket=on Use the Trac freetext search tool].
+     * [/search?q=&noquickjump=1&ticket=on Use the Trac freetext search tool].
        This tool also allows you to search for related commit messages and
        wiki pages but it the results will not be as relevant as
        Google and it also returns references to closed tickets.
