@@ -1,15 +1,19 @@
 = Contributing To Twisted (DRAFT) =
 
+[[PageOutline(2-4)]]
+
 This is a one page summary of the ways that you or your organization can contribute to Twisted.
 
 This is a draft document which is intended to eventually replace wiki:ContributingToTwistedLabs.
 
-[[PageOutline(2-4)]]
-
 == Donate == 
 
-  Text from [http://twistedmatrix.com/trac/wiki/ContributingToTwistedLabs#ContributingToTwisted Donate]
+There are many ways individuals and organizations can make contributions to Twisted.
 
+Many open source projects are perpetually crunched for volunteer labor. Twisted is no different in this respect — we could always use more help from the community.  However, we are lucky to have something that most projects don't; the ability to convert dollars directly into maintenance that benefits the project.
+
+When you contribute money to the Twisted project, you are directly contributing to get bugs fixed, features implemented, and tickets reviewed.
+Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible] and can be made via [//twistedmatrix.com/ "Google Checkout or Paypal"] or directly to the [wiki:TwistedSoftwareFoundation Twisted Software Foundation].
 
 == Report bugs/file tickets ==
 
