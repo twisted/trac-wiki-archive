@@ -37,7 +37,7 @@ upload page.
 Please read this first:
 
  1. If you are submitting a patch:
-    1. Read the [wiki:TwistedDevelopment#SubmittingaPatch patch guidelines].
+    1. '''Read the [wiki:TwistedDevelopment#SubmittingaPatch patch guidelines].'''
     2. '''Keep patches as small as possible (<800 lines).''' This will make
        it easy for your change to be reviewed. For larger changes
        please contact Twisted developers first to discuss how your
@@ -46,16 +46,16 @@ Please read this first:
     3. '''Use a standard patch filename'''. All lowercase, no spaces,
        include ticket number, include a patch version number, .patch
        or .diff extension eg agent-howto-spelling-1234-1.patch
-    4. Add the "review" keyword to the ticket after uploading your
+    4. '''Add the "review" keyword''' to the ticket after uploading your
        patch. This will add the ticket and your patch to the
        [report:15 review queue].
  2. If you are submitting an example or demonstration:
-    1. Make it a [http://sscce.org/ Short, Self Contained, Correct Example]
-    2. Include instructions showing how to run the example and the
+    1. Make it a '''[http://sscce.org/ Short, Self Contained, Correct Example]'''
+    2. '''Include instructions''' showing how to run the example and the
        expected output.
 
-And always add a follow up comment to the ticket, explaining the
-purpose of your attachment.
+And always '''add an explanatory comment to the ticket''', summarising
+the purpose of your attachment.
 
 
 ---
