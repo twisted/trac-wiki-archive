@@ -2,6 +2,7 @@
 #!html
 <div style="background: #ffff99; padding: 10px; border: 1px solid #ffcc88">
 This information is about the old deployment on cube, but is left here, since some of the details are still relevant haven't been documented properly elsewhere.
+If you're interested in contributing to Twisted's infrastructure, please see the <a href="https://github.com/twisted-infra/">twisted-infra organization on github</a>.
 </div>
 }}}
 
