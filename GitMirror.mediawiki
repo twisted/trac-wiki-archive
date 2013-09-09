@@ -13,18 +13,6 @@ Twisted has an up-to-date [https://github.com/twisted/twisted mirror] on github.
 git clone https://github.com/twisted/twisted Twisted
 }}}
     This should create a subdirectory named `Twisted` containing the latest trunk revision of the code.
- 1. Create an ignore file that will prevent git from accidentally scooping up generated files like `*.pyc` or `_trial_temp` and including them in any patches you might submit:
-{{{
-cat >> Twisted/.git/info/exclude << EOF
-*.py[co]
-_trial_temp
-dropin.cache
-*.o
-*.lo
-*.la
-EOF
-}}}
-    See [http://www.kernel.org/pub/software/scm/git/docs/gitignore.html the Git documentation on .gitignore], particularly `core.excludesfile`, for more information.
  1. Since Twisted is normally developed in SVN, Twisted developers are used to processing SVN-style patch files, not Git's patch format. You can change the behaviour of `git diff` to match SVN just for this single repository with the following commands:
 {{{
 git config --file Twisted/.git/config --bool --add diff.noprefix true
