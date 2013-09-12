@@ -2,6 +2,8 @@
 
 NB: This is a work in progress.
 
+[[PageOutline(2-4)]]
+
 == Motivation ==
 
 The Twisted project has a small development team, and we cannot afford to provide anything but critical bug-fix support for multiple version branches of Twisted.  However, we all want Twisted to provide a positive experience during development, deployment, and usage.  Therefore we need to provide the most trouble-free upgrade process possible, so that Twisted application developers will not shy away from upgrades that include necessary bugfixes and feature enhancements.
