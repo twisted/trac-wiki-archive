@@ -220,9 +220,9 @@ To deprecate an entire module, `twisted.python.deprecate.deprecatedModuleAttribu
 
 Like all changes in Twisted, deprecations must be unit tested.  There are several options for this.  In order of decreasing preference:
 
-    * `twisted.trial.unittest.TestCase.flushWarnings`
-    * `twisted.trial.unittest.TestCase.assertWarns`
-    * `twisted.trial.unittest.TestCase.callDeprecated`
+    * [//documents/current/api/twisted.trial.unittest.SynchronousTestCase.html#flushWarnings `twisted.trial.unittest.TestCase.flushWarnings`]
+    * [//documents/current/api/twisted.trial._synctest._Assertions.html#assertWarns `twisted.trial.unittest.TestCase.assertWarns`]
+    * [//documents/current/api/twisted.trial.unittest.SynchronousTestCase.html#callDeprecated `twisted.trial.unittest.TestCase.callDeprecated`]
 
 === Weaknesses of the Warnings System ===
 
