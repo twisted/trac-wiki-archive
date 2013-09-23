@@ -59,9 +59,9 @@ The API docs are generated from the doc strings in the code by [http://codespeak
 4. Preview your changes
 
 To generate API docs you need to have installed: 
- * [http://codespeak.net/~mwh/pydoctor/ pydoctor] - API documentation tool for Python written to be used with Twisted
+ * [https://launchpad.net/pydoctor pydoctor] - API documentation tool for Python written to be used with Twisted
  * [http://epydoc.sourceforge.net/ Epydoc] - an API documentation tool on which pydoctor depends
- * [http://www.divmod.org/trac/wiki/DivmodNevow nevow] - pydoctor's HTML generation side uses Nevow templates
+ * [https://launchpad.net/divmod.org nevow] - pydoctor's HTML generation side uses Nevow templates
 
 Once everything is installed, generate the docs with the build-apidocs admin script like so:
 
