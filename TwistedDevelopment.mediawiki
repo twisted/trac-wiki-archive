@@ -50,7 +50,7 @@ To generate the narrative documentation, `cd ./path/to/Twisted-checkout/doc; ../
 
 Many ancillary tools related to Twisted are in Bazaar repositories.  You may find it useful to [http://bazaar.canonical.com/en/ install the Bazaar version control system for your platform] so that you can easily get access to these.
 
-To generate the API documentation, you will need [https://launchpad.net/pydoctor pydoctor].  It depends on [http://epydoc.sourceforge.net/ epydoc] and [https://launchpad.net/nevow nevow].  Once you've got it, `cd ./path/to/Twisted-checkout/; pydoctor --add-package twisted --make-html` and look in the generated `apidocs` directory.
+To generate the API documentation, you will need [https://launchpad.net/pydoctor pydoctor].  It depends on [http://epydoc.sourceforge.net/ epydoc] and [https://launchpad.net/divmod.org nevow].  Once you've got it, `cd ./path/to/Twisted-checkout/; pydoctor --add-package twisted --make-html` and look in the generated `apidocs` directory.
 
 === Getting Your Patch Accepted ===
 
