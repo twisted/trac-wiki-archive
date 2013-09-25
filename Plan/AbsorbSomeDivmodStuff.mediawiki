@@ -1,4 +1,4 @@
-There are some things over at divmod.org which I'm pretty sure should be part of Twisted.
+There are some things over at [https://launchpad.net/divmod.org divmod.org] which I'm pretty sure should be part of Twisted.
 
 The templating system from Nevow - the newest one, without the context, without any deprecated junk, should be imported.  Twisted wants to generate HTML in a few places - error pages, the directory listing - and right now it either gets it wrong or the implementation is a disaster or both.  We should replace them with something based on this templating code.  It should also be generating HTML in a few ''more'' places; like, perhaps an admin UI to allow an admin to instantiate new resources, and I'm pretty sure we are avoiding at least a couple of useful bits of functionality on the basis of how incredibly nasty and difficult it is to generate some simple HTML without adding a mountain of new dependencies (which, of course, wouldn't support Deferreds).
 
