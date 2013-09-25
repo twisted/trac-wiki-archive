@@ -165,7 +165,7 @@ jml
 
  1. Get the dependencies
     * Pydoctor (use [https://code.launchpad.net/~twisted-dev/pydoctor/twisted-templates-2 lp:~twisted-dev/pydoctor/twisted-templates-2] to get google analytics templates)
-    * Nevow
+    * [https://launchpad.net/divmod.org Nevow]
     * Epydoc (`python-epydoc` in Debian)
     * Some version of Latex if you didn't use the Epydoc Debian/Ubuntu package or ignored the recommended packages
     * netpbm (graphics conversion tools used by the book-builder)
