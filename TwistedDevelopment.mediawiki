@@ -99,7 +99,7 @@ After every commit to Twisted, the buildbot runs all the unit tests and reports 
 
 == Win32 development ==
 
-If you want to hack Twisted or just use Twisted SVN on Win32, see Ying Li's [http://cyli.livejournal.com/22274.html short tutorial on setting up a Twisted win32 development environment] (and a [http://cyli.livejournal.com/22921.html small addendum on paths]).
+If you want to hack Twisted or just use Twisted SVN on Win32, see Ying Li's [http://blog.ying.li/2012/03/twisted-development-on-windows-v2.html short tutorial on setting up a Twisted win32 development environment].
 
 == Twisted Maintenance ==
 
