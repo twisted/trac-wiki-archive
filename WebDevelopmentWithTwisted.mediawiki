@@ -3,8 +3,8 @@
 There are a number of packages in and around Twisted that do things with the web:
 
  * [http://twistedmatrix.com/documents/current/web/ Twisted Web] provides a simple, stable HTTP server, suitable for all types of web apps and web services. It provides a flexible resource publishing API, and implements HTTP 1.0 with some 1.1 features.  '''Twisted Web is extremely stable.'''
- * [https://launchpad.net/nevow Divmod Nevow] is a templating toolkit that provides its own resource model and simple application server API.  It requires Twisted, is fully integrated with the Twisted reactor, provides mechanisms for asynchronous page rendering, and an event-driven [http://en.wikipedia.org/wiki/COMET_(programming) COMET]/AJAX implementation called [http://divmod.readthedocs.org/en/latest/products/nevow/athena/index.html "Nevow Athena"].  Nevow uses Twisted Web, but provides its own request objects and resource model on top of it.
- * [https://launchpad.net/mantissa Divmod Mantissa] is a full-featured multi-protocol application server, with a built-in object database, authentication model based on Twisted Cred, a capability-based security model, and many more features.  It integrates Nevow (and therefore Twisted Web) and a number of other Twisted-related technologies to provide a full-featured system.
+ * [https://launchpad.net/divmod.org Divmod Nevow] is a templating toolkit that provides its own resource model and simple application server API.  It requires Twisted, is fully integrated with the Twisted reactor, provides mechanisms for asynchronous page rendering, and an event-driven [http://en.wikipedia.org/wiki/COMET_(programming) COMET]/AJAX implementation called [http://divmod.readthedocs.org/en/latest/products/nevow/athena/index.html "Nevow Athena"].  Nevow uses Twisted Web, but provides its own request objects and resource model on top of it.
+ * [https://launchpad.net/divmod.org Divmod Mantissa] is a full-featured multi-protocol application server, with a built-in object database, authentication model based on Twisted Cred, a capability-based security model, and many more features.  It integrates Nevow (and therefore Twisted Web) and a number of other Twisted-related technologies to provide a full-featured system.
 
 == So You Want To Be A Web Developer ==
 
@@ -37,4 +37,4 @@ AKA
 
 The short version is that this is more complicated in Twisted than in other tools at the moment.  Sadly, you aren't going to find a straight-up competitor  with the sort of polished web presence and easy instant integration with your SQL database and existing environment that the aforementioned products offer.
 
-[https://launchpad.net/mantissa Divmod Mantissa] is a full-featured Twisted-powered application server and will likely appeal to you if you want an integrated database and other high-level framework support.
+[https://launchpad.net/divmod.org Divmod Mantissa] is a full-featured Twisted-powered application server and will likely appeal to you if you want an integrated database and other high-level framework support.
