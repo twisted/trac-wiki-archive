@@ -36,6 +36,9 @@ integrate.
  * http://trac.secdev.org/scapy/ticket/84
  * http://doc.powerdns.com/html/recursor-design-and-engineering.html#idp9245952
  * https://bazaar.launchpad.net/~ubuntu-branches/ubuntu/saucy/bind9/saucy/view/head:/lib/dns/message.c
+ * https://github.com/aetrion/dnstest
+ * https://github.com/aetrion/erl-dns
+ * https://github.com/habnabit/spiral
 
 Use of an existing Python DNS library (or a C library with Python
 bindings) will be considered if it is well written, actively
