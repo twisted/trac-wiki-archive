@@ -5,6 +5,8 @@ We want to continue to invest in and improve Twisted -- for the benefit of our u
 
 For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship here].
 
+=== Golden Tree Snake ===
+[[Image(TSF/SponsorLogos:critsend_logo.png, title=CritSend, link=http://www.critsend.com/)]]
 
 == Silver Sidewinder ==
 [[Image(TSF/SponsorLogos:dreamhost.gif, title=DreamHost, link=http://dreamhost.com/?q=twisted)]] 
