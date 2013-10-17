@@ -100,53 +100,6 @@ A distribution release + Python version is only considered supported when a [htt
 
 Removing support for a Python version will be announced at least 1 release prior to the removal.
 
-== Open Issues ==
-
-=== Warnings Currently in Twisted ===
-
-Taken from a recent test run:
-
-{{{
-/usr/lib/pymodules/python2.6/gtk-2.0/gtk/__init__.py:57: GtkWarning: could not open display
-/usr/lib/python2.6/dist-packages/nevow/guard.py:15: DeprecationWarning: the md5 module is deprecated; use hashlib instead
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:580: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:581: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:584: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:587: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:592: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:593: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:596: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:597: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/test/test_application.py:528: DeprecationWarning: twisted.application.internet.UDPClient was deprecated in Twisted 13.1.0: It relies upon IReactorUDP.connectUDP which was removed in Twisted 10. Use twisted.application.internet.UDPServer instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/web/test/test_http.py:1171: DeprecationWarning: twisted.web.http.Request.headers was deprecated in Twisted 13.2.0: Please use twisted.web.http.Request.responseHeaders instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/web/test/test_http.py:1171: DeprecationWarning: twisted.web.http.Request.received_headers was deprecated in Twisted 13.2.0: Please use twisted.web.http.Request.requestHeaders instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:576: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:577: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_text.py:146: DeprecationWarning: twisted.conch.insults.text.flatten was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_text.py:154: DeprecationWarning: twisted.conch.insults.text.flatten was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
-/usr/lib/python2.6/dist-packages/formless/annotate.py:730: DeprecationWarning: object.__new__() takes no parameters
-/usr/lib/python2.6/dist-packages/nevow/testutil.py:7: DeprecationWarning: The popen2 module is deprecated.  Use the subprocess module.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/test/test_application.py:523: DeprecationWarning: twisted.application.internet.UDPClient was deprecated in Twisted 13.1.0: It relies upon IReactorUDP.connectUDP which was removed in Twisted 10. Use twisted.application.internet.UDPServer instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/test/test_application.py:524: DeprecationWarning: twisted.application.internet.UDPClient was deprecated in Twisted 13.1.0: It relies upon IReactorUDP.connectUDP which was removed in Twisted 10. Use twisted.application.internet.UDPServer instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/test/test_application.py:540: DeprecationWarning: twisted.application.internet.UDPClient was deprecated in Twisted 13.1.0: It relies upon IReactorUDP.connectUDP which was removed in Twisted 10. Use twisted.application.internet.UDPServer instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/test/test_ftp.py:942: DeprecationWarning: BaseException.message has been deprecated as of Python 2.6
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/test/test_ftp.py:942: DeprecationWarning: BaseException.message has been deprecated as of Python 2.6
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/test/test_log.py:604: UserWarning: hello!
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/test/test_strports.py:24: DeprecationWarning: twisted.application.strports.parse was deprecated in Twisted 10.2.0: in favor of twisted.internet.endpoints.serverFromString
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/scripts/trial.py:360: RuntimeWarning: Module 'smtplib' already imported, disabling anyway.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/scripts/trial.py:360: RuntimeWarning: Module 'smtplib' already imported, disabling anyway.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/web/test/test_http.py:1165: DeprecationWarning: twisted.web.http.Request.headers was deprecated in Twisted 13.2.0: Please use twisted.web.http.Request.responseHeaders instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/web/test/test_http.py:1166: DeprecationWarning: twisted.web.http.Request.headers was deprecated in Twisted 13.2.0: Please use twisted.web.http.Request.responseHeaders instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/web/test/test_http.py:1165: DeprecationWarning: twisted.web.http.Request.received_headers was deprecated in Twisted 13.2.0: Please use twisted.web.http.Request.requestHeaders instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/web/test/test_http.py:1166: DeprecationWarning: twisted.web.http.Request.received_headers was deprecated in Twisted 13.2.0: Please use twisted.web.http.Request.requestHeaders instead.
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/web/test/test_tap.py:144: DeprecationWarning: twisted.application.strports.parse was deprecated in Twisted 10.2.0: in favor of twisted.internet.endpoints.serverFromString
-/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/web/test/test_tap.py:160: DeprecationWarning: twisted.application.strports.parse was deprecated in Twisted 10.2.0: in favor of twisted.internet.endpoints.serverFromString
-/usr/lib/python2.6/dist-packages/zope/interface/verify.py:57: DeprecationWarning: twisted.web.http.Request.received_headers was deprecated in Twisted 13.2.0: Please use twisted.web.http.Request.requestHeaders instead.
-/usr/lib/python2.6/dist-packages/zope/interface/verify.py:57: DeprecationWarning: twisted.web.http.Request.headers was deprecated in Twisted 13.2.0: Please use twisted.web.http.Request.responseHeaders instead.
-}}}
-
-That's [https://buildbot.twistedmatrix.com/builders/natty64-py2.6-epoll/builds/3458/steps/epoll/logs/warnings 36 warnings on Python 2.6, with the epoll reactor], arguably our best-supported test configuration.  These warnings need to be eliminated so that application developers can treat warnings as errors.
-
 === Implied New APIs ===
 
 {{{DeprecationError}}} does not currently exist and would need to be introduced.
@@ -196,3 +149,51 @@ Like all changes in Twisted, deprecations must be unit tested.  There are severa
 === Weaknesses of the Warnings System ===
 
 ~~Warnings are, for a variety of unfortunate reasons, often displayed to end-users before they are displayed to developers.  There should be some mechanism for specifying what warnings one wants to see and how they should be reported.  For example, if Twisted continues to have some warnings against a particular version of Python, a Twisted application developer doesn't necessarily care.  They should be able to declare that they are a developer for particular packages and see warnings only for those packages.~~ ''(as of Python 2.7, `DeprecationWarning` will not be emitted by default)''
+
+== Open Issues ==
+
+=== Warnings Currently in Twisted ===
+
+Taken from a recent test run:
+
+{{{
+/usr/lib/pymodules/python2.6/gtk-2.0/gtk/__init__.py:57: GtkWarning: could not open display
+/usr/lib/python2.6/dist-packages/nevow/guard.py:15: DeprecationWarning: the md5 module is deprecated; use hashlib instead
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:580: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:581: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:584: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:587: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:592: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:593: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:596: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:597: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/test/test_application.py:528: DeprecationWarning: twisted.application.internet.UDPClient was deprecated in Twisted 13.1.0: It relies upon IReactorUDP.connectUDP which was removed in Twisted 10. Use twisted.application.internet.UDPServer instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/web/test/test_http.py:1171: DeprecationWarning: twisted.web.http.Request.headers was deprecated in Twisted 13.2.0: Please use twisted.web.http.Request.responseHeaders instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/web/test/test_http.py:1171: DeprecationWarning: twisted.web.http.Request.received_headers was deprecated in Twisted 13.2.0: Please use twisted.web.http.Request.requestHeaders instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:576: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_helper.py:577: DeprecationWarning: twisted.conch.insults.helper.CharacterAttribute was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_text.py:146: DeprecationWarning: twisted.conch.insults.text.flatten was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/conch/test/test_text.py:154: DeprecationWarning: twisted.conch.insults.text.flatten was deprecated in Twisted 13.1.0: Use twisted.conch.insults.text.assembleFormattedText instead.
+/usr/lib/python2.6/dist-packages/formless/annotate.py:730: DeprecationWarning: object.__new__() takes no parameters
+/usr/lib/python2.6/dist-packages/nevow/testutil.py:7: DeprecationWarning: The popen2 module is deprecated.  Use the subprocess module.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/test/test_application.py:523: DeprecationWarning: twisted.application.internet.UDPClient was deprecated in Twisted 13.1.0: It relies upon IReactorUDP.connectUDP which was removed in Twisted 10. Use twisted.application.internet.UDPServer instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/test/test_application.py:524: DeprecationWarning: twisted.application.internet.UDPClient was deprecated in Twisted 13.1.0: It relies upon IReactorUDP.connectUDP which was removed in Twisted 10. Use twisted.application.internet.UDPServer instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/test/test_application.py:540: DeprecationWarning: twisted.application.internet.UDPClient was deprecated in Twisted 13.1.0: It relies upon IReactorUDP.connectUDP which was removed in Twisted 10. Use twisted.application.internet.UDPServer instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/test/test_ftp.py:942: DeprecationWarning: BaseException.message has been deprecated as of Python 2.6
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/test/test_ftp.py:942: DeprecationWarning: BaseException.message has been deprecated as of Python 2.6
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/test/test_log.py:604: UserWarning: hello!
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/test/test_strports.py:24: DeprecationWarning: twisted.application.strports.parse was deprecated in Twisted 10.2.0: in favor of twisted.internet.endpoints.serverFromString
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/scripts/trial.py:360: RuntimeWarning: Module 'smtplib' already imported, disabling anyway.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/scripts/trial.py:360: RuntimeWarning: Module 'smtplib' already imported, disabling anyway.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/web/test/test_http.py:1165: DeprecationWarning: twisted.web.http.Request.headers was deprecated in Twisted 13.2.0: Please use twisted.web.http.Request.responseHeaders instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/web/test/test_http.py:1166: DeprecationWarning: twisted.web.http.Request.headers was deprecated in Twisted 13.2.0: Please use twisted.web.http.Request.responseHeaders instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/web/test/test_http.py:1165: DeprecationWarning: twisted.web.http.Request.received_headers was deprecated in Twisted 13.2.0: Please use twisted.web.http.Request.requestHeaders instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/web/test/test_http.py:1166: DeprecationWarning: twisted.web.http.Request.received_headers was deprecated in Twisted 13.2.0: Please use twisted.web.http.Request.requestHeaders instead.
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/web/test/test_tap.py:144: DeprecationWarning: twisted.application.strports.parse was deprecated in Twisted 10.2.0: in favor of twisted.internet.endpoints.serverFromString
+/var/lib/buildbot/bot-glyph-1/ubuntu64-py2.6-epoll/Twisted/twisted/web/test/test_tap.py:160: DeprecationWarning: twisted.application.strports.parse was deprecated in Twisted 10.2.0: in favor of twisted.internet.endpoints.serverFromString
+/usr/lib/python2.6/dist-packages/zope/interface/verify.py:57: DeprecationWarning: twisted.web.http.Request.received_headers was deprecated in Twisted 13.2.0: Please use twisted.web.http.Request.requestHeaders instead.
+/usr/lib/python2.6/dist-packages/zope/interface/verify.py:57: DeprecationWarning: twisted.web.http.Request.headers was deprecated in Twisted 13.2.0: Please use twisted.web.http.Request.responseHeaders instead.
+}}}
+
+That's [https://buildbot.twistedmatrix.com/builders/natty64-py2.6-epoll/builds/3458/steps/epoll/logs/warnings 36 warnings on Python 2.6, with the epoll reactor], arguably our best-supported test configuration.  These warnings need to be eliminated so that application developers can treat warnings as errors.
+
