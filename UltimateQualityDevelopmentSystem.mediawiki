@@ -38,7 +38,7 @@ rev@charm$ unbranch Divmod
 rev@charm$ cd Divmod/trunk
 rev@charm$ svn diff | less
 }}}
-    * (If the patch does not merge cleanly, the reviewer may reassign to the developer to [wiki:MergedForward merge forward] for review.  Branches and patches must always be sufficiently recent that they will apply cleanly to trunk in order to be considered for review).
+    * (If the patch does not merge cleanly, the reviewer may reassign to the developer to [wiki:TwistedWithCombinator merge forward] for review.  Branches and patches must always be sufficiently recent that they will apply cleanly to trunk in order to be considered for review).
     * Note here that the {{{unbranch}}} command (also part of [wiki:Combinator]) merges your current branch ({{{sprocket-123}}}) into your local {{{trunk}}} in {{{Divmod/trunk}}}. Your trunk should be up to date - otherwise you will not be able to use {{{svn diff}}} to see just the new differences, and you will not be able to easily {{{svn revert}}} the merge.
   * The reviewer runs all automated tests.
 {{{
