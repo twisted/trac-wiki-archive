@@ -1,0 +1,47 @@
+= ﻿Help Twisted Make our Maintainer Fellowship a Full-Time Position in 2014! =
+== Introduction ==
+The Twisted Project needs your help in raising the funds needed to make our '''Maintainer Fellowship''' a full-time position in 2014.  
+
+Twisted hired Tom Prince to serve as the Maintainer in a part-time capacity in February 2013.  We're excited about the progress Twisted has been able to make over the past several months, thanks to Tom's efforts, and we'd like to now raise sufficient funds to hire a full-time Maintainer through December 31, 2014.   
+
+Donation Target:  $140,000 USD 
+
+== Background ==
+Twisted is a leading Python library used in commercial and scientific production environments alike, including NASA, Lucasfilm, and Justin.TV; and as a component in other Open Source and Free Software projects, such as the Launchpad software collaboration platform. Twisted is also an excellent learning platform to help student developers go from learning the basics of network programming to being active contributors to Free Software projects.  Server implementations in Twisted are the core of numerous other open source applications, including BuildBot, Convergence, Calendar and Contacts Server (one of the earliest implementations of the CalDAV standard), and Tahoe-LAFS. 
+
+Twisted has long-been a staging ground for new ideas that have made their way into the Python language or influenced the design of servers and networking libraries across many programming languages; as an example, the design of Twisted has substantially influenced the design of Tulip, an asynchronous I/O module slated for inclusion in a future version of Python 3.  Moreover, the Deferreds abstraction, which has been adopted by many Javascript libraries, was originally developed in Twisted.
+
+The Twisted community has also sought out opportunities to mentor the next generation of FLOSS developers.  In particular, Twisted has partnered with the GNOME Outreach Program for Women and Google Summer of Code to encourage wider participation in Twisted development. 
+
+Twisted's developers make all Twisted software available to the public without charge under the MIT license.  Use of the MIT license ensures that Twisted is equally available to everyone freely on terms that allow both non-commercial and commercial activity. 
+
+== The Progress We've Made ==
+Since February 2013, Tom Prince has been able to make significant contributions in his capacity as a part-time Maintainer.  Tom managed a heavily-stocked queue of bug reports and other tickets, and addressed at least 240 tickets – including closing over 75 tickets, and unblocking over 120 additional tickets so that other developers can work on them.  Tom also developed and released twisted-dev-tools, a collection of python scripts specifically designed for developers working on Twisted.  Tom helped automate and improve Twisted's project software infrastructure as well, and set up Git mirrors to increase collaboration. 
+
+== A Full-Time Maintainer Can Do Even More ==
+Twisted is thankful for Tom's contributions in a part-time capacity.  Now that Tom has completed this initial phase of work, we're excited to begin taking the next step:  funding a full-time Maintainer to help Twisted grow as a project and to enable Twisted's developer community to increase their output of innovative code for the public's benefit. 
+
+While a part-time Maintainer can add value, Twisted needs the bandwidth of a full-time maintainer to manage the volume of code reviews a project our size generates.  Additional bandwidth will reduce the latency for contributors to get their code review back - which, in turn, will give developers and users more confidence in Twisted, improve retention of new contributors, and encourage greater overall adoption. 
+
+A full-time Maintainer will also be able to take on strategic code development projects, including larger projects that are harder for Twisted's volunteers to work on in their spare time.  And, a full-time Maintainer will have more time to devote to providing leadership and guidance on Twisted's active mailing lists and IRC channels, where developers share information about bugs and address design and implementation questions.  
+
+== Work Plan ==
+
+We propose to reuse the Maintainer work plan from the 2012-2013 Fellowship program, scaled to fill a full 40-hour work week:
+ * Code review (55% - 22 hrs/week): Review code, apply patches, and set and enforce standards for code quality. Improve documentation and code test coverage. 
+ * (Mailing list and IRC participation (10% - 4 hrs/week): Encourage and participate in discussions on Twisted's mailing lists and IRC channels. 
+ * Bug report triage (5% - 2 hrs/week): Prioritize newly-filed tickets to ensure that they are addressed, and respond to any new tickets that are unclear or could benefit from additional information.
+ * New feature development (30% - 12 hrs/week): Serve as implementor for the development and implementation of new features. 
+
+The Maintainer will provide a written report of his/her progress to Conservancy and the Twisted community every two weeks. 
+
+== How You Can Support ==
+
+Please show your support by donating to Twisted, c/o Software Freedom Conservancy.  Conservancy is a US-based 501(c)(3) public charity, and all donations are tax deductible in the United States.  
+To donate, you can use the form on the [wiki:WikiStart front page] at any time to make donations via PayPal.
+
+f you would prefer to cut a check, you may do this as well. Make the check payable to "Software Freedom Conservancy" and write "Directed Donation for Twisted" in the "memo" field. Checks should be sent to the following address: 
+
+Software Freedom Conservancy, Inc.[[BR]]137 MONTAGUE ST STE 380[[BR]]Brooklyn, NY 11201-3548 
+
+If you have a large donation to make, you can actually become part of the official Twisted Sponsorship Program.  Details can be found [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship here].  As always, we're ready to send an invoice, or cooperate with your companies purchase order process.  Contact us at twistedsponsor@sfconservancy.org.
