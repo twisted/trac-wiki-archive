@@ -4,7 +4,7 @@ The Twisted Project needs your help in raising the funds needed to make our '''M
 
 Twisted hired Tom Prince to serve as the Maintainer in a part-time capacity in February 2013.  We're excited about the progress Twisted has been able to make over the past several months, thanks to Tom's efforts, and we'd like to now raise sufficient funds to hire a full-time Maintainer through December 31, 2014.   
 
-Donation Target:  $140,000 USD 
+'''Donation Target:  $140,000 USD '''
 
 == Background ==
 Twisted is a leading Python library used in commercial and scientific production environments alike, including NASA, Lucasfilm, and Justin.TV; and as a component in other Open Source and Free Software projects, such as the Launchpad software collaboration platform. Twisted is also an excellent learning platform to help student developers go from learning the basics of network programming to being active contributors to Free Software projects.  Server implementations in Twisted are the core of numerous other open source applications, including BuildBot, Convergence, Calendar and Contacts Server (one of the earliest implementations of the CalDAV standard), and Tahoe-LAFS. 
