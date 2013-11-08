@@ -69,9 +69,13 @@ You probably don't want these unless you have special considerations:
  * [[ProjectVersion(http://twistedmatrix.com/Releases/Lore/%(major)s.%(minor)s/TwistedLore-%(base)s.tar.bz2 Twisted Lore)]] - [[ProjectVersion]] ([[ProjectVersion(source:/tags/releases/twisted-%(base)s/twisted/lore/topfiles/NEWS Release Notes)]])
  * [[ProjectVersion(http://twistedmatrix.com/Releases/Runner/%(major)s.%(minor)s/TwistedRunner-%(base)s.tar.bz2 Twisted Runner)]] - [[ProjectVersion]] ([[ProjectVersion(source:/tags/releases/twisted-%(base)s/twisted/runner/topfiles/NEWS Release Notes)]])
 
-== Signed MD5 Sums ==
+== Signed MD5 & SHA1 Sums ==
+
+md5 sums of the 13.2.0 release are [http://twistedmatrix.com/Releases/twisted-13.2.0-md5sums.txt here].
+sha1 sums of the 13.2.0 release are [http://twistedmatrix.com/Releases/twisted-13.2.0-shasums.txt here].
 
 md5 sums of the 13.1.0 release are [http://twistedmatrix.com/Releases/twisted-13.1.0-md5sums.txt here].
+sha1 sums of the 13.1.0 release are [http://twistedmatrix.com/Releases/twisted-13.1.0-shasums.txt here].
 
 md5 sums of the 13.0.0 release are [http://twistedmatrix.com/Releases/twisted-13.0.0-md5sums.txt here].
 
