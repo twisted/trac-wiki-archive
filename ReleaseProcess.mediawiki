@@ -29,7 +29,7 @@ By the end of a Twisted release we'll have:
 To release Twisted, you will need:
  * Commit privileges to Twisted
  * Access to dornkirk.twistedmatrix.com as t-web
- * Permissions to edit WikiStart
+ * Permissions to edit the Downloads wiki page
  * Channel operator permissions for `#twisted`
  * Admin privileges for Twisted's PyPI packages
  * Membership of https://launchpad.net/~twisted-dev
@@ -192,11 +192,11 @@ jml
     1. `cd services/t-web/; git checkout release-process; cd ../../`
     1. `virtualenv ~/dev/braid; source ~/dev/braid/bin/activate; cd ~/braid; python setup.py develop;`
     1. `cd ~/braid; fab config.production t-web.uploadRelease:$RELEASE,/tmp/release.tar.bz2`
-1. Test the generated docs
+ 1. Test the generated docs
     1. Browse to http://twistedmatrix.com/documents/$RELEASE/
     1. Make sure that there is content in each of the directories and that it looks good
     1. Follow each link on  http://twistedmatrix.com/trac/wiki/Documentation, replace current with $RELEASE (e.g. 10.0.0) and look for any obvious breakage 
-1. Change the "current" symlink
+ 1. Change the "current" symlink
     1. Upload release: `fab config.production t-web.updateCurrentDocumentation:$RELEASE`
 
 == Announce ==
