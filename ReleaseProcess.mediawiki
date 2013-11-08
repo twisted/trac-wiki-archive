@@ -238,7 +238,7 @@ jml
 
 The final release announcement should:
  * Mention the version number
- * Include links to the release tarballs & Windows installers (both msi & exe)
+ * Include links to where the release can be downloaded
  * Summarize the significant changes in the release
  * Consider including the quote of the release
  * Thank the contributors to the release
@@ -246,36 +246,44 @@ The final release announcement should:
 Here's an example:
 
 {{{
-On behalf of Twisted Matrix Laboratories, I am honored to announce the
-release of Twisted $RELEASE.
+On behalf of Twisted Matrix Laboratories, I am honoured to announce
+the release of Twisted 13.2!
 
-Highlights include:
+The highlights of this release are:
 
- * Improved documentation, including "Twisted Web in 60 seconds"
+ * Twisted now includes a HostnameEndpoint implementation which uses
+IPv4 and IPv6 in parallel, speeding up the connection by using
+whichever connects first (the 'Happy Eyeballs'/RFC 6555 algorithm).
+(#4859)
 
- * Faster Perspective Broker applications
+ * Improved support for Cancellable Deferreds by kaizhang, our GSoC
+student. (#4320, #6532, #6572, #6639)
 
- * A new Windows installer that ships without zope.interface
+ * Improved Twisted.Mail documentation by shira, our Outreach Program
+for Women intern. (#6649, #6652)
 
- * Twisted no longer supports Python 2.3
+ * twistd now waits for the application to start successfully before
+exiting after daemonization. (#823)
 
- * Over one hundred closed tickets
+ * SSL server endpoint string descriptions now support the
+specification of chain certificates. (#6499)
 
-For more information, see the NEWS file.
+ * Over 70 closed tickets since 13.1.0.
 
-It's stable, backwards compatible, well tested and in every way an
-improvement. Download it now from:
+For more information, check the NEWS file (link provided below).
 
- http://tmrc.mit.edu/mirror/twisted/Twisted/$API/Twisted-$RELEASE.tar.bz2 or
- http://tmrc.mit.edu/mirror/twisted/Twisted/$API/Twisted-$RELEASE.win32-py2.5.msi or
- http://tmrc.mit.edu/mirror/twisted/Twisted/$API/Twisted-$RELEASE.win32-py2.6.msi
+You can find the downloads at <https://pypi.python.org/pypi/Twisted>
+(or alternatively <http://twistedmatrix.com/trac/wiki/Downloads>) .
+The NEWS file is also available at
+<http://twistedmatrix.com/Releases/Twisted/13.2/NEWS.txt>.
 
-Many thanks to Jean-Paul Calderone and Chris Armstrong, whose work on
-release automation tools and answers to numerous questions made this
-possible. Thanks also to the supporters of the Twisted Software
-Foundation and to the many contributors for this release.
+Many thanks to everyone who had a part in this release - the
+supporters of the Twisted Software Foundation, the developers who
+contributed code as well as documentation, and all the people building
+great things with Twisted!
 
-jml
+Twisted Regards,
+HawkOwl
 }}}
 
 
