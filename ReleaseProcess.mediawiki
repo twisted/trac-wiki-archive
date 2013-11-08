@@ -213,7 +213,7 @@ jml
     1. Save the page, check all links
  1. Update PyPI records & upload files
     * http://pypi.python.org/pypi/Twisted/
-      * Edit the version
+      * Edit the version. *Make sure you do this first.*
       * Upload tarball, MSIs and wheels
  1. Write the release announcement (see below)
  1. Update ReleaseRevisions with the revision of this release
