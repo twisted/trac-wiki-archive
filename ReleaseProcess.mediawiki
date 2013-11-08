@@ -2,6 +2,15 @@ This document describes the Twisted release process. Although it is still incomp
 
 This process has only been tested on Linux, so we recommend that you do the release on Linux.
 
+{{{
+#!html
+<b style="color: red">
+Thinking about editing this document?  DON'T.  The only time changes to this document are allowed is during a release.  The only changes that may be made are changes that are tested by the release engineer and found to actually work.
+</b>
+}}}
+
+If you want to make other changes to the release process, follow the normal Twisted development process (contribute release automation software that has documentation and unit tests demonstrating that it works).
+
 [[PageOutline]]
 
 = Outcomes =
