@@ -28,10 +28,7 @@ By the end of a Twisted release we'll have:
 
 To release Twisted, you will need:
  * Commit privileges to Twisted
- * Shell access to cube.twistedmatrix.com
-   * '''XXX:''' Possibly this ought to be permission to log in as `www-data`
- * Write permissions to `/srv/www-data/twisted` on cube (normally, `www-data` membership)
- * Write permissions to `/srv/www-data/website/vhosts/twistedmatrix.com/documents`
+ * Access to dornkirk.twistedmatrix.com as t-web
  * Permissions to edit WikiStart
  * Channel operator permissions for `#twisted`
  * Admin privileges for Twisted's PyPI packages
@@ -156,50 +153,42 @@ jml
  1. Create a new staging area for the release (e.g. `mkdir /tmp/twisted-release`)
  1. Using a checkout of the release branch or the release tag (with no local changes!), run `./bin/admin/build-tarballs . /tmp/twisted-release/`
  1. Build windows installers
-    1. ~~http://buildbot.twistedmatrix.com/builders/winxp32-py2.5-msi/~~
-    1. ~~http://buildbot.twistedmatrix.com/builders/winxp32-py2.6-msi/~~
     1. http://buildbot.twistedmatrix.com/builders/winxp32-py2.7-msi/
     1. http://buildbot.twistedmatrix.com/builders/windows7-64-py2.7-msi
     1. For "Branch" specify the release branch, e.g. "branches/releases/release-$RELEASE-4290"
-       1. ~~The builders use the bzr export, which doesn't mirror tags/ or branches/releases/. You may need to copy the branch elsewhere.~~
     1. Download the latest `.msi`, `.exe` and `.whl` files from from http://buildbot.twistedmatrix.com/builds/twisted-packages/ and save them in the staging directory
-       1. ~~ The installers built from windows7-64-py2.7-msi will counter-intuitively have names that end in winxp32-py2.7.exe and winxp32-py2.7.msi. This is because of "distutils weirdness and other things".~~
- 1. Sign the tarballs and Windows installers
-    1. e.g. `md5sum Tw* | gpg -a --clearsign > /tmp/twisted-release/twisted-$RELEASE-md5sums.txt`
-    1. Compare this to an [http://tmrc.mit.edu/mirror/twisted/twisted-10.1.0-md5sums.txt example of twisted-$RELEASE-md5sums.txt]
-    1. Do the SHA version as well: `shasum -a 512 Tw* | gpg -a --clearsign > /tmp/twisted-release/twisted-$RELEASE-shasums.txt`
+ 1. Sign the tarballs and Windows installers. (You will need a PGP key for this - use something like Seahorse to generate one, if you don't have one.)
+    1. MD5: `md5sum Tw* | gpg -a --clearsign > /tmp/twisted-release/twisted-$RELEASE-md5sums.txt`
+    1. SHA512: `shasum -a 512 Tw* | gpg -a --clearsign > /tmp/twisted-release/twisted-$RELEASE-shasums.txt`
+    1. Compare these to an [http://tmrc.mit.edu/mirror/twisted/twisted-10.1.0-md5sums.txt example of twisted-$RELEASE-md5sums.txt] - they should look the same.
 
 == Update documentation ==
 
  1. Get the dependencies
-    * Pydoctor (use [https://code.launchpad.net/~twisted-dev/pydoctor/twisted-templates-2 lp:~twisted-dev/pydoctor/twisted-templates-2] to get google analytics templates)
+    * Pydoctor (use the version from [https://code.launchpad.net/~twisted-dev/pydoctor/twisted-templates-2 lp:~twisted-dev/pydoctor/twisted-templates-2])
     * [https://launchpad.net/divmod.org Nevow]
     * Epydoc (`python-epydoc` in Debian)
     * Some version of Latex if you didn't use the Epydoc Debian/Ubuntu package or ignored the recommended packages
     * netpbm (graphics conversion tools used by the book-builder)
- 1. Export the version of Twisted being released
+ 1. In another directory, export the version of Twisted being released
     * e.g. `svn export svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-$RELEASE`
  1. Build the documentation
-    1. Retrieve the template file (eg. wget https://raw.github.com/twisted-infra/t-web/master/docs/website-template.tpl)
     1. `cd twisted-$RELEASE`
-    1. `./bin/admin/build-docs . /path/to/website-template.tpl`
+    1. Retrieve the template file (eg. `wget https://raw.github.com/twisted-infra/t-web/master/docs/website-template.tpl`)
+    1. `./bin/admin/build-docs . ./website-template.tpl`
       * If you have latex errors when trying to build the book and retry, don't forget to clean tmp directories which may be leftover in `doc/core/howto`.
     1. `cp -R doc /tmp/twisted-release/`
- 1. Run the `build-apidocs` script to build the API docs (in an export of the release tag) and then upload them (See also [wiki:APIDocs] and #2891)
+ 1. Run the `build-apidocs` script to build the API docs (in an export of the release tag) and then upload them (See also [wiki:APIDocs] and #2891).
+    1. Copy the `pydoctor` and `www` directories from `twisted-templates-2` into your export.
     1. `./bin/admin/build-apidocs . /tmp/twisted-release/api`
     1. Documentation will be generated in a directory called `/tmp/twisted-release/api`
 
 == Distribute ==
 
  1. Upload to the official upload locations (see #2888)
-    1. Create a tarball with the contents of the release directory:
-       `cd /tmp/twisted-release; tar -cvjf ../release.tar.bz2 *`
-    2. Install [https://github.com/twisted-infra/braid braid]. (You'll need fabric too):
-      * `git clone https://github.com/twisted-infra/braid`  
-      * `cd braid; git submodule update --init`  
-      * `virtualenv ~/dev/braid; source ~/dev/braid/bin/activate; cd ~/braid; python setup.py develop;`  
-      * `cd ~/braid; fab config.production t-web.uploadRelease:$RELEASE,~/release.tar.bz2`  
-    3. Upload release: `fab config.production t-web.uploadRelease:$RELEASE,release.tar.bz2`
+    1. `ssh t-web@dornkirk.twistedmatrix.com mkdir -m 2775 /srv/t-web/data/releases/{Twisted,Core,Conch,Lore,Mail,Names,News,Pair,Runner,Web,Words}/$API`
+    1. Copy each of the tarballs for the various subprojects (excluding Twisted-$RELEASE.tar.bz2) to `/srv/t-web/data/releases/$SUBPROJECT/$API` on Dornkirk
+    1. Copy the Twisted tarball, plus all of the Windows release wheels, msis and exes to `/srv/t-web/data/releases/Twisted/$API` on Dornkirk
  1. Test the generated docs
     1. Browse to `http://twistedmatrix.com/documents/$RELEASE/`
     1. Make sure that there is content in each of the directories and that it looks good
