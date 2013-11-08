@@ -185,20 +185,19 @@ jml
 
 == Distribute ==
 
+ 1. Create a tarball with the contents of the release directory: `cd /tmp/twisted-release; tar -cvjf ../release.tar.bz2 *`
  1. Upload to the official upload locations (see #2888)
-    1. `ssh t-web@dornkirk.twistedmatrix.com mkdir -m 2775 /srv/t-web/data/releases/{Twisted,Core,Conch,Lore,Mail,Names,News,Pair,Runner,Web,Words}/$API`
-    1. Copy each of the tarballs for the various subprojects (excluding Twisted-$RELEASE.tar.bz2) to `/srv/t-web/data/releases/$SUBPROJECT/$API` on Dornkirk
-    1. Copy the Twisted tarball, plus all of the Windows release wheels, msis and exes to `/srv/t-web/data/releases/Twisted/$API` on Dornkirk
- 1. Test the generated docs
-    1. Browse to `http://twistedmatrix.com/documents/$RELEASE/`
+    1. `cd ~; git clone https://github.com/twisted-infra/braid`
+    1. `cd braid; git submodule update --init`
+    1. `cd services/t-web/; git checkout release-process; cd ../../`
+    1. `virtualenv ~/dev/braid; source ~/dev/braid/bin/activate; cd ~/braid; python setup.py develop;`
+    1. `cd ~/braid; fab config.production t-web.uploadRelease:$RELEASE,/tmp/release.tar.bz2`
+1. Test the generated docs
+    1. Browse to http://twistedmatrix.com/documents/$RELEASE/
     1. Make sure that there is content in each of the directories and that it looks good
-    1. Follow each link on http://twistedmatrix.com/trac/wiki/Documentation, replace `current` with $RELEASE (e.g. `10.0.0`) and look for any obvious breakage
- 1. Change the "current" symlink
-    3. Upload release: `fab config.production t-web.updateCurrentDocumentation:$RELEASE`
- 1. ~~Wait for the tarballs to be mirrored to http://tmrc.mit.edu/mirror/twisted/Twisted/~~
-   * ~~They are mirrored 15 minutes after every hour~~
-   * ~~You can ask foom on #twisted to force the mirror~~
-
+    1. Follow each link on  http://twistedmatrix.com/trac/wiki/Documentation, replace current with $RELEASE (e.g. 10.0.0) and look for any obvious breakage 
+1. Change the "current" symlink
+    1. Upload release: `fab config.production t-web.updateCurrentDocumentation:$RELEASE`
 
 == Announce ==
 
