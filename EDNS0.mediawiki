@@ -12,10 +12,6 @@ known as twisted Names.
 This is a plan for the development of EDNS(0) and DNSSEC support in Twisted
 Names.
 
-
-
-== High level goals ==
-
  * New public APIs will be as narrow as possible, to minimise future backwards
    compatibility complications.
 
@@ -77,7 +73,7 @@ Deprecate the original non-EDNS aware versions of these.
 
 Here are the steps:
 
-==== [ticket:#6680 Add Authentic Data (AD) and Checking Disabled (CD) flags] ====
+==== [ticket:6680 Add Authentic Data (AD) and Checking Disabled (CD) flags] ====
 
 Add two new fields to the existing dns.Message class
  * https://tools.ietf.org/html/rfc2535#section-6.1
@@ -233,7 +229,7 @@ Discussion:
 
 
 
-=== [ticket:5669 server.EDNSServerFactory] ===
+==== [ticket:5669 server.EDNSServerFactory] ====
 
 server.DNSServerFactory is responsible for coordinating datagram and stream
 listening ports and their protocols.
@@ -327,7 +323,9 @@ truncation of large DNSSEC responses.
 There appear to be various problems with twisted.names current
 handling of RRSETs.
 
-=== Canonical Form and Order of Resource Records ===
+
+
+==== Canonical Form and Order of Resource Records ====
 
 https://tools.ietf.org/html/rfc4034#section-6
 
@@ -349,7 +347,9 @@ records returned by various IResolver methods.
 
  * http://www.zytrax.com/books/dns/ch7/queries.html#rrset-order
 
-=== Serving RRSETs ===
+
+
+==== Serving RRSETs ====
 
 twisted.names.dns.Message should follow the guidance in RFC2181
 regarding the handling of TTLs for records in the same
@@ -369,7 +369,9 @@ t.n.authority.FileAuthority, t.n.cache, t.n.resolver etc.
    should not be repeated in the same, or any other, section,
    except where explicitly required by a specification."
 
-=== Receiving RRSETs ===
+
+
+==== Receiving RRSETs ====
 
 twisted.names.client should somehow signal an error if it receives
 RRSETs whose RRs have different TTLs.
@@ -383,7 +385,9 @@ diffent TTLs.
    If the RRSet concerned is from a non-authoritative source for
    this data, the client should simply ignore the RRSet,"
 
-=== Caching RRSETs ===
+
+
+==== Caching RRSETs ====
 
 twisted.names.cache should follow the RRSET ranking guidance when
 serving and replacing items in its cache.
@@ -400,7 +404,9 @@ serving and replacing items in its cache.
    consider the relative likely trustworthiness of the various
    data"
 
-=== Selective truncate ===
+
+
+==== Selective truncate ====
 
 twisted.names.dns.Message currently truncates messages based on the
 combined length of the answer, auth, and additional sections. Instead
@@ -415,14 +421,18 @@ none.
    required as a part of the response, but could not be included
    in its entirety."
 
-== DNSSEC ==
+
+
+=== DNSSEC ===
 
 Much of this work (including tests) has already been implemented by
 BobNovas in two large patches attached to original
 tickets: #5450, #5453, #5454. Look there before implementing anything
 from scratch.
 
-=== New DNSSEC Records and Lookup Methods ===
+
+
+==== New DNSSEC Records and Lookup Methods ====
  1. DNSSEC introduces six new resource record types. Each new record
     type will require a new dns.Record subclass and a new lookupMethod
     added to t.i.interfaces.IResolver, t.n.common.ResolverBase and a
@@ -453,7 +463,8 @@ from scratch.
     them when queries specifically ask for them by type.
 
 
-=== Security-aware Non-validating Client ===
+
+==== Security-aware Non-validating Client ====
 
 A twisted.names.client will be able to generate EDNS queries with one
 or both the DO bit and the AD bit set.
@@ -468,21 +479,26 @@ records in the response.
 https://tools.ietf.org/html/rfc4035#section-4.9
 
 
-=== Validating Client ===
+
+==== Validating Client ====
 
 A twisted.names.client which sends DO + CD flagged queries and
 performs its own validation of the returned DNSSEC signatures.
 
 TODO: needs more thought.
 
-=== Validating Recursive / Forwarding Server ===
+
+
+==== Validating Recursive / Forwarding Server ====
 
 This can use the Validating client API above, but may need to do some
 processing of answers based on the query flags.
 
 TODO: needs more thought.
 
-=== DNSSEC Aware Authoritative Server ===
+
+
+==== DNSSEC Aware Authoritative Server ====
 
 A twisted.names.authority API which knows where and when to include
 RRSIG, DNSKEY, NSEC, NSEC3 records etc with responses.
@@ -492,6 +508,8 @@ external tools such as
 [http://linux.die.net/man/8/dnssec-signzone dnssec-signzone]
 
 TODO: needs more thought.
+
+
 
 == RFCs ==
 
@@ -513,91 +531,3 @@ TODO: needs more thought.
  5. [https://tools.ietf.org/html/rfc6781 6781: DNSSEC Operational Practices, Version 2]
  6. [https://tools.ietf.org/html/rfc6840 6840: Clarifications and Implementation Notes for DNS Security (DNSSEC)]
  7. [https://tools.ietf.org/html/rfc3833 3833: Threat Analysis of the Domain Name System (DNS)]
-
-== MISC / TODO / Notes ==
- 1. "If a query message with more than one OPT RR is received, a
-    FORMERR (RCODE=1) MUST be returned."
-    [https://tools.ietf.org/html/rfc6891#section-6.1.1 RFC6891 6.1.1]
-    1. Multiple OPT RR will be detected in EDNSMessage.decode
-    2. If multiple OPT RR are detected, set EDNSMessage.decodingErrors.append(EFORMAT)
-    3. DNSServerFactory.messageReceived checks message.decodingErrors
-    4. If not empty, it sets message.rCode =
-       message.decodingErrors.pop(0) before sending the message back
-       to client without further processing.
-    5. If DNSServerFactory.verbose logging is enabled, all message.decodingErrors will
-       be logged.
-    6. I tested Google DNS and Bind Authoritative DNS responses to
-       multi OPT queries.
-       1. Google seems to ignore all but the first OPT RR and responds
-          without error.
-       2. Bind responds with RCODE=1
-       3. https://bazaar.launchpad.net/~ubuntu-branches/ubuntu/saucy/bind9/saucy/view/head:/lib/dns/message.c#L1274
-          {{{
-
-          } else if (rdtype == dns_rdatatype_opt) {
-                  /*
-          * The name of an OPT record must be ".", it
-          * must be in the additional data section, and
-          * it must be the first OPT we've seen.
-                   */
-                  if (!dns_name_equal(dns_rootname, name) ||
-                      msg->opt != NULL)
-                          DO_FORMERR;
-                  skip_name_search = ISC_TRUE;
-                  skip_type_search = ISC_TRUE;
-
-          }}}
-       4. PowerDNS appears to ignore all but the first OPT RR (untested)
-          https://github.com/PowerDNS/pdns/blob/master/pdns/dnsrecords.cc#L375
-          {{{
-
-          bool getEDNSOpts(const MOADNSParser& mdp, EDNSOpts* eo)
-          {
-            if(mdp.d_header.arcount && !mdp.d_answers.empty()) {
-              BOOST_FOREACH(const MOADNSParser::answers_t::value_type& val, mdp.d_answers) {
-                if(val.first.d_place == DNSRecord::Additional && val.first.d_type == QType::OPT) {
-                  eo->d_packetsize=val.first.d_class;
-
-                  EDNS0Record stuff;
-                  uint32_t ttl=ntohl(val.first.d_ttl);
-                  memcpy(&stuff, &ttl, sizeof(stuff));
-
-                  eo->d_extRCode=stuff.extRCode;
-                  eo->d_version=stuff.version;
-                  eo->d_Z = ntohs(stuff.Z);
-                  OPTRecordContent* orc =
-                    dynamic_cast<OPTRecordContent*>(val.first.d_content.get());
-                  if(!orc)
-                    return false;
-                  orc->getData(eo->d_options);
-                  return true;
-                }
-              }
-            }
-            return false;
-          }
-
-          }}}
-
- 2. "EXTENDED-RCODE Forms the upper 8 bits of extended 12-bit RCODE"
-    [https://tools.ietf.org/html/rfc6891#section-6.1.3 RFC6891 6.1.3]
-    1. Decode: EDNSMessage.decode will merge the RCODE and
-       OPTHeader.extendedRCODE setting the  rCode attribute.
-    2. Encode: If rCode is > 15, EDNSMessage.encode will set the lower
-       4 bits as RCODE and set the upper 8 bits on a new or existing
-       OPTHeader which will be added to the additional section.
-
- 3. "VERSION Indicates the implementation level of the setter"
-    [https://tools.ietf.org/html/rfc6891#section-6.1.3 RFC6891 6.1.3]
-    1. "If a responder does not implement the VERSION level of the
-       request, then it MUST respond with RCODE=BADVERS"
-       1. Decode: in EDNSMessage.decode, if version > 0, EDNSMessage.decodingErrors.append(EBADVERS)
-
-    2. "This document assigns EDNS Extended RCODE 16 to "BADVERS" in
-       the DNS RCODES registry" https://tools.ietf.org/html/rfc6891#section-9
-       1. Create dns.EBADVERS = 16
-
- 4. "DO DNSSEC OK bit as defined by [RFC3225]." https://tools.ietf.org/html/rfc6891#section-6.1.4
-    1. Set EDNSMessage.dnssecOK during decode using value from
-       OPTHeader.dnssecOK.
-    2. Add or update an existing OPTHeader instance during encode.
