@@ -1,120 +1,324 @@
 = EDNS Plan =
 
-An attempt to understand the pieces of EDNS0 and DNSSEC and the
-changes necessary to have Twisted Names support it:
-
 [[PageOutline(2-4)]]
 
+
 == Overview ==
-Twisted.names includes widely used public APIs that have existed for
-over twelve years (r440).
 
-However many of these existing APIs are inelegant and too broad. eg
- * [http://twistedmatrix.com/documents/current/api/twisted.names.dns.Message.html]
-So we will introduce new EDNS related classes with carefully designed,
-minimal public APIs. New APIs will be designed for maximum usability
-but as narrow as possible, to minimise future backwards compatibility
-complications.
+Twisted includes a comprehensive set of DNS components, collectively
+known as twisted Names.
+  * wiki:TwistedNames
 
-Twisted has a strict wiki:CompatibilityPolicy. So we will aim for zero
-changes to existing public APIs.
+This is a plan for the development of EDNS(0) and DNSSEC support in Twisted
+Names.
 
-Existing classes will be wrapped where appropriate and in other cases,
-shared functionality will be re-factored for reuse in new classes.
- * #6382
- * wiki:TheWayWeDoThingsNow
- * http://pyvideo.org/video/1684/the-end-of-object-inheritance-the-beginning-of
 
-With the introduction of the new EDNS APIs, old sub-optimal APIs can
-then be deprecated and eventually removed in future releases.
- * #1216
 
-Before designing and implementing new APIs, we will examine existing
-open source DNS projects for APIs and code that we can reuse /
-integrate.
+== High level goals ==
+
+ * New public APIs will be as narrow as possible, to minimise future backwards
+   compatibility complications.
+
+ * Zero changes to existing public APIs. (if possible)
+
+ * Existing classes will be wrapped where appropriate and in other cases, shared
+   functionality will be extracted and re-factored for reuse in new classes.
+
+ * Composition, not inheritance
+   * http://pyvideo.org/video/1684/the-end-of-object-inheritance-the-beginning-of
+   * #6382
+
+ * Old sub-optimal APIs will be deprecated and eventually removed after the
+   introduction new EDNS and DNSSEC APIs.
+   * #1216
+
+
+
+== Existing Implementations ==
+
+Re-use of existing Python DNS libraries (or C libraries with Python bindings)
+will be considered according to the following criteria:
+ 1. MIT compatible licence
+ 2. Actively maintained
+ 3. Full test coverage
+
+However the potential time savings from reusing an existing library will be
+weighed against the overhead of introducing an additional Twisted install
+dependency.
+
+Examples of existing libraries / implementations:
+ * http://www.dnspython.org/
  * https://www.nlnetlabs.nl/projects/ldns/index.html
  * http://trac.secdev.org/scapy/ticket/84
- * http://doc.powerdns.com/html/recursor-design-and-engineering.html#idp9245952
- * https://bazaar.launchpad.net/~ubuntu-branches/ubuntu/saucy/bind9/saucy/view/head:/lib/dns/message.c
+
+Other sources:
  * https://github.com/aetrion/dnstest
  * https://github.com/aetrion/erl-dns
  * https://github.com/habnabit/spiral
+ * https://bazaar.launchpad.net/~ubuntu-branches/ubuntu/saucy/bind9/saucy/view/head:/lib/dns/message.c
+ * http://doc.powerdns.com/html/recursor-design-and-engineering.html#idp9245952
 
-Use of an existing Python DNS library (or a C library with Python
-bindings) will be considered if it is well written, actively
-maintained, well tested and has a compatible licence. However the
-potential time savings from reusing an existing library will be
-weighed against the overhead of introducing an additional Twisted
-install dependency. eg
- * http://www.dnspython.org/
 
-Below are some specific examples of new APIs that we plan to
-introduce.
 
-== EDNS0 ==
+== Milestones ==
 
-=== [ticket:5668 OPT record] ===
- 1. Explicit OPT record class/type
-    1. wrap the existing RRHeader class - to minimise code duplication
-       and maintenance overhead by only requiring a single
-       implementation of RRHeader byte string parser.
-    2. extracts OPT specific header fields from the equivalent RRHeader
-       fields.
-    3. Maximum UDP datagram size field
-    4. Arbitrary extension support (attribute/value pairs in RDATA section)
-    5. OPTHeader will encode and decode OPT variable options in an
-       underlying UnknownRecord payload class.
- 2. Discussion
-    1. Teach cache about it - MUST NOT BE CACHED
-    2. Teach recursive resolver about it - MUST NOT BE FORWARDED
-    3. EDNSMessage will remove OPT records during decoding so they may
-       never be seen by cache or clients if EDNSMessage becomes the
-       standard message factory for DNSDatagramProtocol.
-    4. Teach loaders about - MUST NOT BE LOADED FROM MASTER FILE
-    5. ~~Extended label ("0" "1" type) parsing~~ (REJECTED BY 2671bis)
+Before we can fully support DNSSEC, we need to first implement EDNS(0) support.
 
-=== [ticket:5675 Extended Message object with additional EDNS0 items] ===
- 1. Write a new EDNSMessage class.
-    1. It will wrap the existing dns.Message class.
-    2. Its decode method will extract an OPT record from the additional
-       section and merge its attributes with those of the underlying
-       non-EDNS Message.
-    3. Its encode method will check for EDNS specific attributes (eg
-       RCODE > 15) and add an OPT record to the additional records of
-       its underlying Message class before encoding.
- 2. Discussion
-    1. maxSize (Message has it already, can we re-use it?)
+Some DNSSEC APIS (lookup methods, record types) can be implemented in parallel
+and will be immediately use-able.
 
-=== [ticket:5670 Client] ===
- 1. A new EDNSAgent client API
-    1. Automatically send EDNS0 queries
-    2. Fall back to DNS queries when detecting server does not support EDNS0?
-    3. It will be modelled on twisted.web.client.Agent which was
-       introduced to replace the old twisted.web.client APIs.
-    4. Agents can be chainable / composable.
-    5. Eg An EDNSAgent will be introduced with a fixed maxUdpPayloadSize parameter.
-    6. Another AutoMTUDiscoveryAgent can wrap EDNSAgent and will reissue
-       queries with successively lower advertised UDP payload size until
-       a response is received.
-    7. A future DNSSECValidatingAgent can validate responses by issuing
-       queries for the DS and DNSKEY records from the root down.
- 2. Discussion
-    1. How to choose max UDP size?
-       1. Accept max UDP size as configuration?
-       2. Determine it from system automatically?
-       3. Server and client need this
 
-=== [ticket:5669 Server] ===
- 1. A new EDNS server API
-    1. Send EDNS0 responses to EDNS0 queries
-    2. (Do not send EDNS0 responses to DNS queries)
-    3. Ensures the EDNS requests are responded to using the advertised
-       UDP payload size.
-    4. Limits additional RRSETs so that responses fit the client max UDP
-       payload size or marks response Messages truncated.
-    5. Sets EDNS RCODEs in response to malformed EDNS requests.
+=== EDNS(0) ===
 
-== RRSET improvements ==
+Implement EDNS specific record, message, protocol, client and server APIs and
+switch the twistd dns server plugin to use them.
+
+Deprecate the original non-EDNS aware versions of these.
+
+Here are the steps:
+
+==== [ticket:#6680 Add Authentic Data (AD) and Checking Disabled (CD) flags] ====
+
+Add two new fields to the existing dns.Message class
+ * https://tools.ietf.org/html/rfc2535#section-6.1
+
+Requirements:
+ 1. Set / get AD and CD field
+ 2. Byte encode / decode AD and CD field
+
+
+
+==== [ticket:5668 dns.OPTHeader] ====
+
+Parse and construct OPT Pseudo-RR
+ * http://tools.ietf.org/html/rfc6891#section-6
+
+Requirements:
+ 1. Get / set fixed OPT record fields.
+ 2. Byte encode / decode EDNS OPT records.
+ 3. Convert to / from dns.RRHeader (the existing non-EDNS record header class)
+ 4. Get / set variable OPT record fields.
+ 5. Byte encode / decode variable OPT record fields.
+ 6. Convert to / from dns.UnknownRecord (the existing non-EDNS record payload
+    class for the unknown record payload types.)
+
+
+
+==== [ticket:5675 dns.EDNSMessage] ====
+
+Parse and construct EDNS messages
+ * http://tools.ietf.org/html/rfc6891#section-4
+
+Requirements:
+ 1. Get / set all non-EDNS message fields
+    * https://tools.ietf.org/html/rfc1035#section-4
+ 2. Get / set all new EDNS(0) message fields
+ 3. Byte encoding / decoding
+    1. During encoding, EDNS specific fields will be used to generate a
+       dns.OPTHeader instance which will be added to the end of the additional
+       records list.
+    2. During decoding, an OPT pseudo record found in the additional section
+       will be extracted, parsed and its fields will be used to populate the
+       EDNS specific attributes of the EDNSMessage instance.
+ 4. Get / set extended RCODE
+ 5. A mechanism for getting protocol errors encountered during parsing. eg
+    * "If a query message with more than one OPT RR is received, a FORMERR
+      (RCODE=1) MUST be returned"
+    * http://tools.ietf.org/html/rfc6891#section-6.1.1
+ 6. Convert to / from dns.Message (the existing non-EDNS message class)
+
+Exclusions:
+ 1. We will not implement an API for manipulating OPT variable fields at this
+    stage. See "Variable EDNS0 Option Codes" below.
+
+
+
+==== dns.EDNSStreamProtocol and dns.EDNSDatagramProtcol or Message override options ====
+
+The existing dns.DNSDatagramProtocol and DNSProtocol (TCP) are hardcoded to use
+dns.Message for decoding and encoding wire messages.
+
+The simplest solution would be to add a new "messageFactory" constructor
+argument which allows us to supply a curried dns.EDNSMessage instance whose EDNS
+specific constructor arguments have been preassigned.
+
+Alternatively it might be better to introduce new narrower EDNS Protocol APIs
+which wrap DNSProtocol, and DNSDatagramProtocol and hide many of their ugly
+implementation details.
+
+The wrappers can override the "writeMessage" method of the original protocols as
+demonstrated here:
+ * https://twistedmatrix.com/trac/browser/branches/edns-message-5675-4/twisted/names/edns.py?rev=39745
+
+Requirements:
+ 1. DNS datagram and stream protocol implementations which can use
+    dns.EDNSMessage for decoding and encoding wire messages.
+ 2. Get / set EDNS specific options which will be passed to the construct the
+    EDNSMessage instance responsible for encoding and decoding.
+
+
+
+==== client.Resolver protocol override options ====
+
+client.Resolver is currently hard coded to use dns.DNSDatagramProtocol and
+dns.DNSProtocol (TCP) via client.DNSClientFactory.
+
+Allow the caller to supply alternative protocol factories.
+
+Requirements:
+ 1. client.Resolver constructor will accept a "datagramProtocolFactory" and
+    "streamProtocolFactory" arguments, which will default to existing factories
+    but which will allow dns.EDNSDatagramProtocol to be supplied instead.
+
+
+
+==== [ticket:5670 client.EDNSResolver Fixed UDP Payload Size] ====
+
+Start with a basic EDNSResolver with a fixed UDP payload size and which only
+does TCP fallback.
+ * http://tools.ietf.org/html/rfc6891#section-6.2.2
+
+Prerequisites:
+ 1. client.Resolver constructor will accept a "protocolFactory" argument, which
+    will default to dns.Message but which will allow dns.EDNSMessage (or a
+    factory function) to be supplied instead (break out into separate ticket)
+
+Requirements:
+ 1. An implementation of t.i.interfaces.IResolver which sends EDNS(0) queries by
+    default.
+    * Wraps client.Resolver
+    * Supplies an EDNSMessage factory to allow setting EDNS specific fields for
+      all queries.
+ 2. Get / set AD, CD
+ 3. Get / set DO field. Default to "unset"
+ 4. Get / set VERSION. Default to 0.
+ 5. Get / set maximum UDP payload size.
+    * Default to 4096
+    * http://tools.ietf.org/html/rfc6891#section-6.2.5
+ 6. Detect servers which do not support EDNS(0) and fall back.
+    1. ONLY fallback if DO is "unset"
+    2. non-EDNS UDP query
+    3. TCP query
+
+Exclusions:
+ 1. We will not implement an API for manipulating OPT variable fields at this
+    stage. See "Variable EDNS0 Option Codes" below.
+
+
+
+==== client.EDNSResolver with Automatic Payload Size Selection and Detection  ====
+
+Extend client.EDNSResolver to detect timeouts and fragmentation caused by UDP
+payload size limits of the server and intermediate devices. Automatically
+re-issue with successively smaller advertised payload sizes, possibly starting
+with the server advertised payload size found in the first reply.
+
+Consider postponing this. It's probably not required for basic DNSSEC client
+support.
+
+"A requestor MAY choose to implement a fallback to smaller advertised sizes to
+work around firewall or other network limitations."
+ * http://tools.ietf.org/html/rfc6891#section-6.2.5
+
+Requirements:
+ 1. Issue parallel queries with a small delay between each and with successively
+    smaller advertised UDP payload sizes.
+ 2. Cache and re-use the detected maximum payload size for each server.
+ 3. Fallback to TCP query.
+
+Discussion:
+ 1. "Due to transaction overhead, it is not recommended to advertise an
+    architectural limit as a maximum UDP payload size"
+ 2. "Values of less than 512 bytes MUST be treated as equal to 512 bytes."
+
+
+
+=== [ticket:5669 server.EDNSServerFactory] ===
+
+server.DNSServerFactory is responsible for coordinating datagram and stream
+listening ports and their protocols.
+
+The protocols dispatch their received queries to DNSServerFactory and it in turn
+dispatches the queries to one or more authoritative, caching or recursive
+IResolver instances.
+
+It then constructs a response message, populates the answers, authority and
+additional lists and supplies it to the write method of the appropriate protocol
+instance.
+
+DNSServerFactory is also responsible for enforcing policy, such as checking the
+origin of queries or notify messages.
+
+One problem with the existing implementation is that it uses the incoming
+message and modifies it in place before sending it back to the client. This
+results in various request fields being returned to the client as if they are
+the server's chosen response fields.
+
+This is completely wrong for the EDNS payload size and the new AD and CD fields.
+
+A related problem is that it also includes the client's original OPT record in
+error responses #6645
+
+So here we will implement an EDNSServerFactory somehow overrides the
+"messageReceived" method in order to enforce correct server max UDP payload
+size.
+
+Instead of re-using the incoming message instance, we will instead construct a
+new instance and carefully choose the field values based on the servers
+configuration.
+
+ * http://tools.ietf.org/html/rfc6891#section-7
+
+Requirements:
+ 1. Get / set maximum UDP payload size.
+ 2. Send EDNS0 responses to EDNS0 queries
+ 3. Do not send EDNS0 responses to standard DNS queries.
+ 4. Respond clients using their advertised UDP payload size. (up to the server
+    maximum).
+ 5. Limit additional RRSETs so that responses fit the client max UDP payload
+    size or mark response Messages truncated.
+ 6. Set extended EDNS RCODEs in responses where appropriate.
+
+
+
+==== twistd dns plugin - EDNS(0) by default ====
+
+At this point we should have enough infrastructure to allow the twistd dns
+plugin to correctly respond to EDNS(0) queries.
+
+If configured as a forwarding resolver, it will be able to issue EDNS(0) queries
+to the upstream servers.
+
+For compatibility we may choose to make it respond to clients with non-DNS
+messages, but using the new EDNSMessage API.
+
+Then at a later date we can add an --edns flag to allow the EDNS features to be
+turned on or off. Or we could do it all in this ticket.
+
+This isn't strictly needed for the goal of having a DNSSEC validating client,
+but it will be a nice way in which Twisted users can quickly benefit from the
+new EDNS APIs.
+
+
+
+==== Variable EDNS0 Option Codes (OPT) ====
+
+An OPT record payload can contain one or more variable fields. The list of
+defined fields is here:
+ * https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-11
+
+One example is the EDNS(0) owner option which allows a DNS proxy (recursive or
+forwarding resolver) to include information about the origin of the client query
+(the client subnet), when it queries an authoritative server. An authoritative
+server can use this information to do DNS based global load balancing.
+ * http://tools.ietf.org/html/draft-cheshire-edns0-owner-option-00
+
+Each of these variable fields would need it's own API so we need to give thought
+to how the EDNSResolver can be made extensible enough to support these.
+
+
+
+=== RRSET improvements ===
 
 DNSSEC seems to rely on stable RRSETs. eg for signatures, for
 predictable caching of records and signatures, for predictable
