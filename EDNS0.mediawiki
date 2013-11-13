@@ -1,9 +1,6 @@
 = EDNS Plan =
 
-[[PageOutline(2-4)]]
-
-
-== Overview ==
+[[PageOutline(1-4)]]
 
 Twisted includes a comprehensive set of DNS components, collectively
 known as twisted Names.
@@ -30,7 +27,7 @@ Names.
 
 
 
-== Existing Implementations ==
+= Existing Implementations =
 
 Re-use of existing Python DNS libraries (or C libraries with Python bindings)
 will be considered according to the following criteria:
@@ -56,7 +53,7 @@ Other sources:
 
 
 
-== Milestones ==
+= Milestones =
 
 Before we can fully support DNSSEC, we need to first implement EDNS(0) support.
 
@@ -64,7 +61,7 @@ Some DNSSEC APIS (lookup methods, record types) can be implemented in parallel
 and will be immediately use-able.
 
 
-=== EDNS(0) ===
+== EDNS(0) ==
 
 Implement EDNS specific record, message, protocol, client and server APIs and
 switch the twistd dns server plugin to use them.
@@ -73,7 +70,7 @@ Deprecate the original non-EDNS aware versions of these.
 
 Here are the steps:
 
-==== [ticket:6680 Add Authentic Data (AD) and Checking Disabled (CD) flags] ====
+=== #6680 Add Authentic Data (AD) and Checking Disabled (CD) flags ===
 
 Add two new fields to the existing dns.Message class
  * https://tools.ietf.org/html/rfc2535#section-6.1
@@ -84,7 +81,7 @@ Requirements:
 
 
 
-==== [ticket:5668 dns.OPTHeader] ====
+=== #5668 dns.OPTHeader ===
 
 Parse and construct OPT Pseudo-RR
  * http://tools.ietf.org/html/rfc6891#section-6
@@ -100,7 +97,7 @@ Requirements:
 
 
 
-==== [ticket:5675 dns.EDNSMessage] ====
+=== #5675 dns.EDNSMessage ===
 
 Parse and construct EDNS messages
  * http://tools.ietf.org/html/rfc6891#section-4
@@ -129,7 +126,7 @@ Exclusions:
 
 
 
-==== dns.EDNSStreamProtocol and dns.EDNSDatagramProtcol or Message override options ====
+=== dns.EDNSStreamProtocol and dns.EDNSDatagramProtcol or Message override options ===
 
 The existing dns.DNSDatagramProtocol and DNSProtocol (TCP) are hardcoded to use
 dns.Message for decoding and encoding wire messages.
@@ -154,7 +151,7 @@ Requirements:
 
 
 
-==== client.Resolver protocol override options ====
+=== client.Resolver protocol override options ===
 
 client.Resolver is currently hard coded to use dns.DNSDatagramProtocol and
 dns.DNSProtocol (TCP) via client.DNSClientFactory.
@@ -168,7 +165,7 @@ Requirements:
 
 
 
-==== [ticket:5670 client.EDNSResolver Fixed UDP Payload Size] ====
+=== #5670 client.EDNSResolver Fixed UDP Payload Size ===
 
 Start with a basic EDNSResolver with a fixed UDP payload size and which only
 does TCP fallback.
@@ -202,7 +199,7 @@ Exclusions:
 
 
 
-==== client.EDNSResolver with Automatic Payload Size Selection and Detection  ====
+=== client.EDNSResolver with Automatic Payload Size Selection and Detection  ===
 
 Extend client.EDNSResolver to detect timeouts and fragmentation caused by UDP
 payload size limits of the server and intermediate devices. Automatically
@@ -229,7 +226,7 @@ Discussion:
 
 
 
-==== [ticket:5669 server.EDNSServerFactory] ====
+=== #5669 server.EDNSServerFactory ===
 
 server.DNSServerFactory is responsible for coordinating datagram and stream
 listening ports and their protocols.
@@ -277,7 +274,7 @@ Requirements:
 
 
 
-==== twistd dns plugin - EDNS(0) by default ====
+=== twistd dns plugin - EDNS(0) by default ===
 
 At this point we should have enough infrastructure to allow the twistd dns
 plugin to correctly respond to EDNS(0) queries.
@@ -297,7 +294,7 @@ new EDNS APIs.
 
 
 
-==== Variable EDNS0 Option Codes (OPT) ====
+=== Variable EDNS0 Option Codes (OPT) ===
 
 An OPT record payload can contain one or more variable fields. The list of
 defined fields is here:
@@ -314,7 +311,7 @@ to how the EDNSResolver can be made extensible enough to support these.
 
 
 
-=== RRSET improvements ===
+== RRSET improvements ==
 
 DNSSEC seems to rely on stable RRSETs. eg for signatures, for
 predictable caching of records and signatures, for predictable
@@ -325,7 +322,7 @@ handling of RRSETs.
 
 
 
-==== Canonical Form and Order of Resource Records ====
+=== Canonical Form and Order of Resource Records ===
 
 https://tools.ietf.org/html/rfc4034#section-6
 
@@ -349,7 +346,7 @@ records returned by various IResolver methods.
 
 
 
-==== Serving RRSETs ====
+=== Serving RRSETs ===
 
 twisted.names.dns.Message should follow the guidance in RFC2181
 regarding the handling of TTLs for records in the same
@@ -371,7 +368,7 @@ t.n.authority.FileAuthority, t.n.cache, t.n.resolver etc.
 
 
 
-==== Receiving RRSETs ====
+=== Receiving RRSETs ===
 
 twisted.names.client should somehow signal an error if it receives
 RRSETs whose RRs have different TTLs.
@@ -387,7 +384,7 @@ diffent TTLs.
 
 
 
-==== Caching RRSETs ====
+=== Caching RRSETs ===
 
 twisted.names.cache should follow the RRSET ranking guidance when
 serving and replacing items in its cache.
@@ -406,7 +403,7 @@ serving and replacing items in its cache.
 
 
 
-==== Selective truncate ====
+=== Selective truncate ===
 
 twisted.names.dns.Message currently truncates messages based on the
 combined length of the answer, auth, and additional sections. Instead
@@ -423,7 +420,7 @@ none.
 
 
 
-=== DNSSEC ===
+== DNSSEC ==
 
 Much of this work (including tests) has already been implemented by
 BobNovas in two large patches attached to original
@@ -432,7 +429,7 @@ from scratch.
 
 
 
-==== New DNSSEC Records and Lookup Methods ====
+=== New DNSSEC Records and Lookup Methods ===
  1. DNSSEC introduces six new resource record types. Each new record
     type will require a new dns.Record subclass and a new lookupMethod
     added to t.i.interfaces.IResolver, t.n.common.ResolverBase and a
@@ -464,7 +461,7 @@ from scratch.
 
 
 
-==== Security-aware Non-validating Client ====
+=== Security-aware Non-validating Client ===
 
 A twisted.names.client will be able to generate EDNS queries with one
 or both the DO bit and the AD bit set.
@@ -480,7 +477,7 @@ https://tools.ietf.org/html/rfc4035#section-4.9
 
 
 
-==== Validating Client ====
+=== Validating Client ===
 
 A twisted.names.client which sends DO + CD flagged queries and
 performs its own validation of the returned DNSSEC signatures.
@@ -489,7 +486,7 @@ TODO: needs more thought.
 
 
 
-==== Validating Recursive / Forwarding Server ====
+=== Validating Recursive / Forwarding Server ===
 
 This can use the Validating client API above, but may need to do some
 processing of answers based on the query flags.
@@ -498,7 +495,7 @@ TODO: needs more thought.
 
 
 
-==== DNSSEC Aware Authoritative Server ====
+=== DNSSEC Aware Authoritative Server ===
 
 A twisted.names.authority API which knows where and when to include
 RRSIG, DNSKEY, NSEC, NSEC3 records etc with responses.
@@ -511,19 +508,19 @@ TODO: needs more thought.
 
 
 
-== RFCs ==
+= RFCs =
 
-=== General ===
+== General ==
  1. [https://tools.ietf.org/html/rfc1034 1034:DOMAIN NAMES - CONCEPTS AND FACILITIES]
  2. [https://tools.ietf.org/html/rfc1035 1035: DOMAIN NAMES - IMPLEMENTATION AND SPECIFICATION]
  3. [https://tools.ietf.org/html/rfc2181 2181: Clarifications to the DNS Specification]
  4. [https://tools.ietf.org/html/rfc4697 4697: Observed DNS Resolution Misbehavior]
  5. [https://tools.ietf.org/html/rfc5625 5625: DNS Proxy Implementation Guidelines]
 
-=== EDNS ===
+== EDNS ==
  1. [http://tools.ietf.org/html/rfc6891 6891: Extension Mechanisms for DNS (EDNS(0))]
 
-=== DNSSEC ===
+== DNSSEC ==
  1. [https://tools.ietf.org/html/rfc4033 4033: DNS Security Introduction and Requirements]
  2. [https://tools.ietf.org/html/rfc4034 4034: Resource Records for the DNS Security Extensions]
  3. [https://tools.ietf.org/html/rfc4035 4035: Protocol Modifications for the DNS Security Extensions]
