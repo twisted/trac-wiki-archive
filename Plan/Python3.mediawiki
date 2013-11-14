@@ -87,6 +87,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * procutils
       * [ticket:6061 randbytes]
     * twisted.protocols
+      * [ticket:6833 amp]
       * [ticket:6109 loopback]
       * [ticket:6097 policies]
       * [ticket:6139 tls]
