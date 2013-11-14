@@ -117,7 +117,7 @@ Exclusions:
 
 
 
-=== dns.EDNSStreamProtocol and dns.EDNSDatagramProtcol or Message override options ===
+=== #6839 dns.EDNSStreamProtocol and dns.EDNSDatagramProtcol or Message override options ===
 
 The existing dns.DNSDatagramProtocol and DNSProtocol (TCP) are hardcoded to use
 dns.Message for decoding and encoding wire messages.
@@ -142,7 +142,7 @@ Requirements:
 
 
 
-=== client.Resolver protocol override options ===
+=== #6840 client.Resolver protocol override options ===
 
 client.Resolver is currently hard coded to use dns.DNSDatagramProtocol and
 dns.DNSProtocol (TCP) via client.DNSClientFactory.
@@ -161,11 +161,6 @@ Requirements:
 Start with a basic EDNSResolver with a fixed UDP payload size and which only
 does TCP fallback.
  * http://tools.ietf.org/html/rfc6891#section-6.2.2
-
-Prerequisites:
- 1. client.Resolver constructor will accept a "protocolFactory" argument, which
-    will default to dns.Message but which will allow dns.EDNSMessage (or a
-    factory function) to be supplied instead (break out into separate ticket)
 
 Requirements:
  1. An implementation of t.i.interfaces.IResolver which sends EDNS(0) queries by
