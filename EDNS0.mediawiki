@@ -489,34 +489,60 @@ implementing anything from scratch.
 
 
 === New DNSSEC Records and Lookup Methods ===
- 1. DNSSEC introduces six new resource record types. Each new record
-    type will require a new dns.Record subclass and a new lookupMethod
-    added to t.i.interfaces.IResolver, t.n.common.ResolverBase and a
-    corresponding free function in t.n.client.
-    1. #6664 DNSKey
-       https://tools.ietf.org/html/rfc4034#section-2
-    2. #6665 RRSIG
-       https://tools.ietf.org/html/rfc4034#section-3
-    3. NSEC
-       https://tools.ietf.org/html/rfc4034#section-4
-    4. DS
-       https://tools.ietf.org/html/rfc4034#section-5
-    5. NSEC3
-       https://tools.ietf.org/html/rfc5155#section-3
-    6. NSEC3Param
-       https://tools.ietf.org/html/rfc5155#section-4
- 2. For ease of review, this work can be split into six tickets.
- 3. These new records can be implemented independently of EDNS and
-    independently of DNSSEC validation and new DNSSEC related message
-    headers.
- 4. Initially, this will allow twisted.names clients to explicitly
-    request these DNSSEC related records.
- 5. lookupZone will return DNSSEC related records when transferring
-    from DNSSEC authoritative servers.
- 6. t.n.secondary.SecondaryAuthority will download DNSSEC records and
-    serve them when queries specifically ask for them by type.
- 7. t.n.authority.FileAuthority will load DNSSEC records and serve
-    them when queries specifically ask for them by type.
+
+DNSSEC introduces six new resource record types. Each new record type will
+require a new dns.Record subclass and a new lookupMethod added to
+t.i.interfaces.IResolver, t.n.common.ResolverBase and a corresponding free
+function in t.n.client.
+
+ * For ease of review, this work can be split into six tickets.
+
+ * These new records can be implemented independently of EDNS and independently
+   of DNSSEC validation and new DNSSEC related message headers.
+
+ * Initially, this will allow twisted.names clients to explicitly request these
+   DNSSEC related records.
+
+ * lookupZone will return DNSSEC related records when transferring from DNSSEC
+   authoritative servers.
+
+ * t.n.secondary.SecondaryAuthority will download DNSSEC records and serve them
+   when queries specifically ask for them by type.
+
+ * t.n.authority.FileAuthority will load DNSSEC records and serve them when
+   queries specifically ask for them by type.
+
+
+==== #6664 DNSKey ====
+ * https://tools.ietf.org/html/rfc4034#section-2
+
+
+
+==== #6665 RRSIG ====
+ * https://tools.ietf.org/html/rfc4034#section-3
+
+
+
+==== NSEC ====
+ * https://tools.ietf.org/html/rfc4034#section-4
+
+
+
+==== DS ====
+ * https://tools.ietf.org/html/rfc4034#section-5
+
+
+
+
+==== NSEC3 ====
+ * https://tools.ietf.org/html/rfc5155#section-3
+
+
+
+==== NSEC3Param ====
+ * https://tools.ietf.org/html/rfc5155#section-4
+
+
 
 
 
