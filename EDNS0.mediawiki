@@ -9,6 +9,18 @@ known as twisted Names.
 This is a plan for the development of EDNS(0) and DNSSEC support in Twisted
 Names.
 
+ * Contributions will be submitted as MIT licensed patches to the Twisted
+   project.
+
+ * All new code will be accompanied by full API documentation and new public
+   APIs must also have accompanying narrative documentation.
+    * https://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html#auto9
+    * https://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html
+
+ * All code must have unit tests and there must be 100% statement and branch
+   coverage as measured by the python-coverage tool.
+   * https://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html#auto1
+
  * New public APIs will be as narrow as possible, to minimise future backwards
    compatibility complications.
 
@@ -27,38 +39,13 @@ Names.
 
 
 
-= Existing Implementations =
-
-Re-use of existing Python DNS libraries (or C libraries with Python bindings)
-will be considered according to the following criteria:
- 1. MIT compatible licence
- 2. Actively maintained
- 3. Full test coverage
-
-However the potential time savings from reusing an existing library will be
-weighed against the overhead of introducing an additional Twisted install
-dependency.
-
-Examples of existing libraries / implementations:
- * http://www.dnspython.org/
- * https://www.nlnetlabs.nl/projects/ldns/index.html
- * http://trac.secdev.org/scapy/ticket/84
-
-Other sources:
- * https://github.com/aetrion/dnstest
- * https://github.com/aetrion/erl-dns
- * https://github.com/habnabit/spiral
- * https://bazaar.launchpad.net/~ubuntu-branches/ubuntu/saucy/bind9/saucy/view/head:/lib/dns/message.c
- * http://doc.powerdns.com/html/recursor-design-and-engineering.html#idp9245952
-
-
-
 = Milestones =
 
 Before we can fully support DNSSEC, we need to first implement EDNS(0) support.
 
 Some DNSSEC APIS (lookup methods, record types) can be implemented in parallel
 and will be immediately use-able.
+
 
 
 == EDNS(0) ==
@@ -69,6 +56,8 @@ switch the twistd dns server plugin to use them.
 Deprecate the original non-EDNS aware versions of these.
 
 Here are the steps:
+
+
 
 === #6680 Add Authentic Data (AD) and Checking Disabled (CD) flags ===
 
@@ -313,45 +302,165 @@ to how the EDNSResolver can be made extensible enough to support these.
 
 == RRSET improvements ==
 
-DNSSEC seems to rely on stable RRSETs. eg for signatures, for
-predictable caching of records and signatures, for predictable
-truncation of large DNSSEC responses.
-
-There appear to be various problems with twisted.names current
-handling of RRSETs.
-
-
-
-=== Canonical Form and Order of Resource Records ===
-
-https://tools.ietf.org/html/rfc4034#section-6
+DNSSEC relies on stable RRSETs. eg for signatures, for predictable caching of
+records and signatures and for predictable truncation of large DNSSEC responses.
 
 RRSETs must be arranged in canonical order before their signatures are
 calculated / verified.
 
-This ticket will introduce an algorithm for sorting records
-according to the rules described in
-https://tools.ietf.org/html/rfc4034#section-6.
+These tickets will introduce algorithms for sorting records according to the
+rules described in https://tools.ietf.org/html/rfc4034#section-6.
 
-Sorting appears to be the responsibility of the verifying client
-not the server.
+Sorting appears to be the responsibility of the verifying client not the server.
 
-The fact that Bind has config options for changing the order of
-RRSETS on the server side and the client side suggests that the
-canonical ordering of records should be done only for the purpose
-of DNSSEC validation. It should probably not change the order of
-records returned by various IResolver methods.
-
+The fact that Bind has config options for changing the order of RRSETS on the
+server side and the client side suggests that the canonical ordering of records
+should be done only for the purpose of DNSSEC validation. It should probably not
+change the order of records returned by various IResolver methods.
  * http://www.zytrax.com/books/dns/ch7/queries.html#rrset-order
+
+
+
+=== dns.Name.canonical - Canonical form and order of DNS names ===
+
+Requirements:
+ 1. A "canonical" property will be added to dns.Name which will return the name
+    in RFC4034 canonical form as bytes.
+    + https://tools.ietf.org/html/rfc4034#section-6.1
+ 2. Names can be sorted canonically by passing the "canonical" attribute name as
+    the "key" to sorted
+
+
+
+=== dns.IRecord.canonical - Canonical Form and Order of Resource Records ===
+
+Requirements:
+ 1. All IRecord implementations will be given a "canonical" method which returns
+    bytes representing the RR in canonical wire format.
+    * https://tools.ietf.org/html/rfc4034#section-6.2
+ 2. A "canonical" method will be added to dns.IRecord
+ 3. Records can be sorted canonically by passing the "canonical" attribute name
+    as the "key" to sorted
+
+
+=== dns.RRSet ===
+
+"An RRset is not allowed to contain duplicate records (multiple RRs with the
+same owner name, class, type, and RDATA).  Therefore, if an implementation
+detects duplicate RRs when putting the RRset in canonical form, it MUST treat
+this as a protocol error.  If the implementation chooses to handle this protocol
+error in the spirit of the robustness principle (being liberal in what it
+accepts), it MUST remove all but one of the duplicate RR(s) for the purposes of
+calculating the canonical form of the RRset."
+ * https://tools.ietf.org/html/rfc4034#section-6.3
+
+Requirements:
+ 1. Implement the "set" interface.
+ 2. Get / set the RRSet ttl. Default to "unset"
+ 3. Add new dns.IRecords to the RRSet. Hash based on canonical byte format.
+    * Duplicate records will be silently dropped.
+    * If RRSET TTL is None, it will be set to that of the record with the
+      lowest TTL.
+    * A flag to force an raise an exception if subsequent records have a
+      different TTL.
+    * Or perhaps better to return error codes as FlagConstants - so that the
+      caller doesn't *have* to handle the exception if they're not
+      interested. See "Receiving RRSETs below.
+    * Mark the RRSet as "inconsistent"
+ 4. dns.RRSet will implement dns.IEncodable.encode
+ 5. "encode" will overwrite the TTLs of all records before they are encoded and
+    return the encoded bytes.
+
+
+
+=== dns.RRContainer for managing records as RRSETs in dns.EDNSMessage.answers/authority/additional ===
+
+Instead of lists, dns.EDNSMessage.answers will be a special container which can
+be queried for records by name, or by name and type and consolidates records
+having the same name and type before returning RRSet instances.
+
+Requirements:
+ * Access records from one of the EDNSMessage sections (answers, authority, and
+   additional) as RRSet objects.
+
+ * RRSet objects have a flag indicating the consistency of their record TTLs
+
+ * Add single records or lists of records to a specific section of an
+   EDNSMessage.
+
+
+
+=== dns.EDNSMessage Selective truncate during encoding ===
+
+ "The TC bit should be set in responses only when an RRSet is required as a part
+ of the response, but could not be included in its entirety."
+ * https://tools.ietf.org/html/rfc2181#section-9
+
+dns.Message currently truncates messages based on the combined length of the
+answer, auth, and additional sections. Instead it (or something higher up)
+should look at the length of the answers and only set the truncate flag if the
+entire answers RRSET is greater than the maxPayloadSize. If there is room, the
+auth and additional records can also be included, but entire RRSETs must be
+included or none.
+
+Requirements:
+ * During encoding, set the trunc bit if wire message containing only answers
+   would exceed the chosen max UDP payload size.
+ * Add as many full RRSets to authority and additional sections as possible
+   without exceeding the max UDP payload size.
+
+
+
+=== client.EDNSResolver RRSet handling ===
+
+ "Should a client receive a response containing RRs from an RRSet with differing
+ TTLs, it should treat this as an error.  If the RRSet concerned is from a
+ non-authoritative source for this data, the client should simply ignore the
+ RRSet, and if the values were required, seek to acquire them from an
+ authoritative source.  Clients that are configured to send all queries to one,
+ or more, particular servers should treat those servers as authoritative for
+ this purpose.  Should an authoritative source send such a malformed RRSet, the
+ client should treat the RRs for all purposes as if all TTLs in the RRSet had
+ been set to the value of the lowest TTL in the RRSet.  In no case may a server
+ send an RRSet with TTLs not all equal."
+ * https://tools.ietf.org/html/rfc2181#section-5.2
+
+Requirements:
+ * Drop all records and try a different server if a *recursive* query yields
+   RRSets containing inconsistent TTLs.
+
+ * Accept and return a consistent RRSet if a *authoritative* query yields
+   inconsistent RRSets.
+
+
+
+=== Caching RRSETs ===
+
+twisted.names.cache should follow the RRSET ranking guidance when serving and
+replacing items in its cache.
+
+ * https://tools.ietf.org/html/rfc2181#section-5.4
+ * "Servers must never merge RRs from a response with RRs in their
+   cache to form an RRSet.  If a response contains data that would
+   form an RRSet with data in a server's cache the server must
+   either ignore the RRs in the response, or discard the entire
+   RRSet currently in the cache, as appropriate."
+ * https://tools.ietf.org/html/rfc2181#section-5.4.1
+ * "When considering whether to accept an RRSet in a reply, or
+   retain an RRSet already in its cache instead, a server should
+   consider the relative likely trustworthiness of the various
+   data"
+
+Requirements:
+ * TODO
 
 
 
 === Serving RRSETs ===
 
-twisted.names.dns.Message should follow the guidance in RFC2181
-regarding the handling of TTLs for records in the same
-RRSET. Alternatively consider handling this higher up in
-t.n.authority.FileAuthority, t.n.cache, t.n.resolver etc.
+twisted.names.dns.Message should follow the guidance in RFC2181 regarding the
+handling of TTLs for records in the same RRSET. Alternatively consider handling
+this higher up in t.n.authority.FileAuthority, t.n.cache, t.n.resolver etc.
 
  * https://tools.ietf.org/html/rfc2181#section-5
  * https://tools.ietf.org/html/rfc2181#section-5.2
@@ -366,66 +475,16 @@ t.n.authority.FileAuthority, t.n.cache, t.n.resolver etc.
    should not be repeated in the same, or any other, section,
    except where explicitly required by a specification."
 
-
-
-=== Receiving RRSETs ===
-
-twisted.names.client should somehow signal an error if it receives
-RRSETs whose RRs have different TTLs.
-
-twisted.names.resolver,root should discard RRSETs whose RRs have
-diffent TTLs.
-
- * https://tools.ietf.org/html/rfc2181#section-5.2
- * "Should a client receive a response containing RRs from an
-   RRSet with differing TTLs, it should treat this as an error.
-   If the RRSet concerned is from a non-authoritative source for
-   this data, the client should simply ignore the RRSet,"
-
-
-
-=== Caching RRSETs ===
-
-twisted.names.cache should follow the RRSET ranking guidance when
-serving and replacing items in its cache.
-
- * https://tools.ietf.org/html/rfc2181#section-5.4
- * "Servers must never merge RRs from a response with RRs in their
-   cache to form an RRSet.  If a response contains data that would
-   form an RRSet with data in a server's cache the server must
-   either ignore the RRs in the response, or discard the entire
-   RRSet currently in the cache, as appropriate."
- * https://tools.ietf.org/html/rfc2181#section-5.4.1
- * "When considering whether to accept an RRSet in a reply, or
-   retain an RRSet already in its cache instead, a server should
-   consider the relative likely trustworthiness of the various
-   data"
-
-
-
-=== Selective truncate ===
-
-twisted.names.dns.Message currently truncates messages based on the
-combined length of the answer, auth, and additional sections. Instead
-it (or something higher up) should look at the length of the answers
-and only set the truncate flag if the entire answers RRSET is greater
-than the maxPayloadSize. If there is room, the auth and additional
-records can also be included, but entire RRSETs must be included or
-none.
-
- * https://tools.ietf.org/html/rfc2181#section-9
- * "The TC bit should be set in responses only when an RRSet is
-   required as a part of the response, but could not be included
-   in its entirety."
+Requirements:
+ * TODO
 
 
 
 == DNSSEC ==
 
-Much of this work (including tests) has already been implemented by
-BobNovas in two large patches attached to original
-tickets: #5450, #5453, #5454. Look there before implementing anything
-from scratch.
+Some of this work has already been implemented by BobNovas in two large patches
+attached to original tickets: #5450, #5453, #5454. Look there before
+implementing anything from scratch.
 
 
 
@@ -474,6 +533,7 @@ If the DO bit was set, it will expect to receive DNSSEC related
 records in the response.
 
 https://tools.ietf.org/html/rfc4035#section-4.9
+
 
 
 
@@ -528,3 +588,188 @@ TODO: needs more thought.
  5. [https://tools.ietf.org/html/rfc6781 6781: DNSSEC Operational Practices, Version 2]
  6. [https://tools.ietf.org/html/rfc6840 6840: Clarifications and Implementation Notes for DNS Security (DNSSEC)]
  7. [https://tools.ietf.org/html/rfc3833 3833: Threat Analysis of the Domain Name System (DNS)]
+
+
+
+= Existing Implementations =
+
+Re-use of existing Python DNS libraries (or C libraries with Python bindings)
+will be considered according to the following criteria:
+ 1. MIT compatible licence
+ 2. Actively maintained
+ 3. Full test coverage
+
+However the potential time savings from reusing an existing library will be
+weighed against the overhead of introducing an additional Twisted install
+dependency.
+
+Examples of existing libraries / implementations:
+ * http://www.dnspython.org/
+ * https://www.nlnetlabs.nl/projects/ldns/index.html
+ * http://trac.secdev.org/scapy/ticket/84
+
+Other sources:
+ * https://github.com/aetrion/dnstest
+ * https://github.com/aetrion/erl-dns
+ * https://github.com/habnabit/spiral
+ * https://bazaar.launchpad.net/~ubuntu-branches/ubuntu/saucy/bind9/saucy/view/head:/lib/dns/message.c
+ * http://doc.powerdns.com/html/recursor-design-and-engineering.html#idp9245952
+
+
+
+= Dissemination Efforts =
+
+ 1. Conference talk "Twisted Names" at EuroPython June/July 2014:
+    http://europython.eu
+
+ 2. Fortnightly progress reports via blog syndicated to
+    http://planet.twistedmatrix.com/ and http://planet.python.org/
+
+ 3. Submit "Introduction to Twisted Names" article on CircleID:
+    http://www.circleid.com/ or another DNS industry news site.
+
+ 4. Attend development sprints to continue the development, and to introduce new
+    contributors to the capabilities of Twisted Names DNSSEC support.
+
+
+
+= People and roles =
+
+ * Richard Wall: will be coordinating the project
+ * Tom Prince will provide code reviews.
+ * The project will be building on a series of patches originally contributed by
+   Bob Novas and Phil Mayers. Bob and Phil have been invited to help with design
+   reviews, code reviews and development.
+
+
+
+= Risks =
+
+ 1. Review delays - Finding knowledgeable reviewers willing to do prompt paid
+    reviews.
+
+ 2. Unexpected groundwork - Twisted Names has not been particularly well
+    maintained and there are a number of known bugs. I have included some of
+    these in the milestones, but there may be other unforeseen problems that
+    need to be fixed before continuing with the EDNS / DNSSEC work.
+
+ 3. Blocked by dependencies - Twisted currently depends on PyOpenSSL and
+    PyCrypto. I need to find out whether these expose all the necessary APIs
+    required for DNSSEC implementation. PyOpenSSL is currently maintained by
+    one of the core Twisted developers so it shouldn't be a problem to add any
+    missing parts.
+
+ 4. Changes in personal circumstances - new jobs, etc.
+
+ 5. Backwards compatibility - difficulties combining the new EDNS and DNSSEC
+    APIs with existing APIs without breaking backwards compatibility.
+
+ 6. Lack of uptake - DNSSEC is still not widely adopted and not widely
+    understood, so it may take some time to convince maintainers to depend on
+    it.
+
+
+
+= Mission and Aim =
+
+To implement a client DNSSEC verification API in Twisted.
+
+This project will lay foundations that will eventually allow
+end-to-end DNSSEC verification in all the core Twisted networking
+components, including Twisted Conch (SSH), Mail (SMTP, POP3),
+Perspective Broker (RPC), Web (HTTP, XML-RPC, SOAP), Words (XMPP,
+IRC).
+
+This foundation work will encourage the development of
+end-to-end DNSSEC verification in many of the Open Source and commercial
+projects built on top of Twisted.
+
+For example, Twisted is used in the following important open source
+projects:
+
+ 1. Apple Calendar Server: a standards-compliant calendar and
+    contacts server implementing the CalDAV and CardDAV protocols.
+    http://trac.calendarserver.org/browser/CalendarServer/trunk/HACKING
+
+ 2. Buildbot: a continuous integration framework for automating
+    software build, test, and release processes.
+    http://docs.buildbot.net/latest/manual/installation.html#requirements
+
+ 3. Convergence: a secure, distributed replacement for the
+    Certificate Authority System.
+    https://github.com/moxie0/Convergence/blob/master/server/INSTALL
+
+ 4. Tahoe-LAFS: a decentralized cloud storage system with
+    provider-independent security.
+    https://tahoe-lafs.org/source/tahoe-lafs/deps/tahoe-deps/
+
+ 5. Tor OONI: Open Observatory of Network Interference - a tool for
+    performing internet censorship measurements.
+    https://gitweb.torproject.org/ooni-probe.git/blob_plain/HEAD:/requirements.txt
+
+ 6. Zenoss: a network management platform for monitoring
+    availability, inventory/configuration, performance, and events.
+    http://dev.zenoss.org/trac/browser/trunk/inst/externallibs
+
+There are hundreds of other open source projects which either extend
+Twisted or which allow Twisted to be integrated with third party
+software and services.
+ * https://twistedmatrix.com/trac/wiki/ProjectsUsingTwisted
+
+Twisted is a core component in various Unix operating systems eg
+Debian, Ubuntu, Fedora and is packaged for others too.
+ * https://twistedmatrix.com/trac/wiki/Packages
+ * http://ftp.debian.org/debian/pool/main/t/twisted/
+ * http://archive.ubuntu.com/ubuntu/pool/main/t/twisted/
+
+Twisted is used in the services and software of various high profile
+companies such as Apple, Google and Rackspace.
+ * https://twistedmatrix.com/trac/wiki/SuccessStories
+ * https://twistedmatrix.com/trac/wiki/TSF/FoundingSponsors
+
+The most compelling reason for adding DNSSEC support to Twisted, is that it will
+make end-to-end DNSSEC verification available to hundreds of other projects that
+are built on top of Twisted.
+
+By integrating the proposed DNSSEC verification API with Twisted's existing
+client endpoint APIs it should be straight forward for application developers to
+make DNSSEC verification available in their software.
+
+It is also worth noting that the proposed DNSSEC verification mechanism will be
+fully supported on all Twisted's target platforms, including Microsoft
+Windows. Which means that Windows based Twisted applications will also be able
+to benefit from end-to-end DNSSEC verification.
+
+Finally it is worth noting that Twisted Names is written entirely in Python. Its
+simple / readable code makes Twisted Names ideal for DNS prototyping and
+experimentation. And with the addition of EDNS(0) and DNSSEC Twisted Names will
+be an even more flexible platform with which to implement robust prototypes of
+new DNS standards.
+
+
+
+= Continuations =
+
+We anticipate a number of interesting future projects which will be made
+possible by the foundation work described in this proposal:
+
+ 1. Integration of DNSSEC into Twisted's new "Happy Eyeballs" hostname client
+    endpoint, allowing secure transparent client connections from a dual-stack
+    IPv4 / IPv6 host.
+
+ 2. Add TLSA / DANE support to Twisted Web Agent, allowing Twisted HTTP clients
+    to additionally validate certificates using signed DNS records.
+
+ 3. Add SSHFP support to Twisted Conch, allowing Twisted SSH clients to validate
+    the public keys of a remote SSH server using signed DNS records.
+
+ 4. Add S/MIME and / or SMTP/TLSA support to Twisted Mail, allowing Twisted SMTP
+    clients to validate remote server certificates using signed DNS records.
+
+ 5. A Twisted DNS stub resolver which communicates securely with a Twisted
+    DNSSEC validating server via an SSL/TLS or SSH transport. For situations
+    where a Twisted client can't do DNSSEC verification its self.
+
+ 6. A Twisted DNSSEC management server with an integrated SSH / HTTPS REST API
+    for receiving and signing DS keys from the servers for delegated child
+    zones.
