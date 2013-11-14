@@ -50,6 +50,8 @@ and will be immediately use-able.
 
 == EDNS(0) ==
 
+ * milestone:EDNS0
+
 Implement EDNS specific record, message, protocol, client and server APIs and
 switch the twistd dns server plugin to use them.
 
@@ -481,6 +483,8 @@ Requirements:
 
 
 == DNSSEC ==
+
+ * milestone:DNSSEC_Client
 
 Some of this work has already been implemented by BobNovas in two large patches
 attached to original tickets: #5450, #5453, #5454. Look there before
