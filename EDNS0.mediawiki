@@ -590,8 +590,9 @@ TODO: needs more thought.
  7. [https://tools.ietf.org/html/rfc3833 3833: Threat Analysis of the Domain Name System (DNS)]
 
 
+= Appendices =
 
-= Existing Implementations =
+== Existing Implementations ==
 
 Re-use of existing Python DNS libraries (or C libraries with Python bindings)
 will be considered according to the following criteria:
@@ -617,7 +618,7 @@ Other sources:
 
 
 
-= Dissemination Efforts =
+== Dissemination Efforts ==
 
  1. Conference talk "Twisted Names" at EuroPython June/July 2014:
     http://europython.eu
@@ -633,7 +634,7 @@ Other sources:
 
 
 
-= People and roles =
+== People and Roles ==
 
  * Richard Wall: will be coordinating the project
  * Tom Prince will provide code reviews.
@@ -643,7 +644,7 @@ Other sources:
 
 
 
-= Risks =
+== Risks ==
 
  1. Review delays - Finding knowledgeable reviewers willing to do prompt paid
     reviews.
@@ -670,7 +671,7 @@ Other sources:
 
 
 
-= Mission and Aim =
+== Mission and Aim ==
 
 To implement a client DNSSEC verification API in Twisted.
 
@@ -748,7 +749,7 @@ new DNS standards.
 
 
 
-= Continuations =
+== Continuations ==
 
 We anticipate a number of interesting future projects which will be made
 possible by the foundation work described in this proposal:
