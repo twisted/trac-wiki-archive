@@ -517,6 +517,7 @@ function in t.n.client.
    queries specifically ask for them by type.
 
 
+
 ==== #6664 DNSKey ====
  * https://tools.ietf.org/html/rfc4034#section-2
 
@@ -527,25 +528,23 @@ function in t.n.client.
 
 
 
-==== NSEC ====
+==== #6835 NSEC ====
  * https://tools.ietf.org/html/rfc4034#section-4
 
 
 
-==== DS ====
+==== #6836 DS ====
  * https://tools.ietf.org/html/rfc4034#section-5
 
 
 
-
-==== NSEC3 ====
+==== #6837 NSEC3 ====
  * https://tools.ietf.org/html/rfc5155#section-3
 
 
 
-==== NSEC3Param ====
+==== #6838 NSEC3Param ====
  * https://tools.ietf.org/html/rfc5155#section-4
-
 
 
 
