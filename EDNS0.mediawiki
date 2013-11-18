@@ -14,12 +14,12 @@ Names.
 
  * All new code will be accompanied by full API documentation and new public
    APIs must also have accompanying narrative documentation.
-    * https://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html#auto9
-    * https://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html
+    * [https://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html#auto9 Coding Standard - Docstrings]
+    * [https://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html Writing Standard]
 
  * All code must have unit tests and there must be 100% statement and branch
    coverage as measured by the python-coverage tool.
-   * https://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html#auto1
+   * [https://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html#auto1 Coding Standard - Testing]
 
  * New public APIs will be as narrow as possible, to minimise future backwards
    compatibility complications.
