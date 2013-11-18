@@ -53,7 +53,7 @@ Names.
 = Milestones =
 
 
-== [milestone:EDNS0 EDNS(0)] 80h ==
+== [milestone:EDNS0 EDNS(0)] ==
 
 Goals:
  * A twistd dns server capable of responding to EDNS(0) clients and issuing
