@@ -634,7 +634,7 @@ TODO: needs more thought.
 
 
 
-== DANE: ==
+== DANE ==
 
 High level goals:
  * A twistd dns authoritative server capable of loading and serving TLSA
@@ -646,6 +646,26 @@ High level goals:
  * A TLSA Record class for encoding and decoding TLSA bytes.
  * A TLSA lookup method which accepts port, protocol and hostname and constructs
    a suitable TLSA domain name.
+
+
+
+=== TLSA Record ===
+TODO
+
+
+
+=== TLSA lookup method ===
+TODO
+
+
+
+=== TLSA Hostname Endpoint ===
+TODO
+
+
+
+=== TLSA Web Agent ===
+TODO
 
 
 
