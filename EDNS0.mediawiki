@@ -59,16 +59,14 @@ and will be immediately use-able.
 
 
 
-== EDNS(0) ==
+== [milestone:EDNS0 EDNS(0)] ==
 
- * milestone:EDNS0
-
-Implement EDNS specific record, message, protocol, client and server APIs and
-switch the twistd dns server plugin to use them.
-
-Deprecate the original non-EDNS aware versions of these.
-
-Here are the steps:
+High level goals:
+ * A twistd dns server capable of responding to EDNS(0) clients and issuing
+   EDNS(0) requests to upstream DNS servers.
+ * A client API for issuing EDNS(0) requests with a fixed max UDP payload size.
+ * A message parsing API capable of encoding and decoding DNS messages
+   containing EDNS(0) specific fields and pseudo records.
 
 
 
