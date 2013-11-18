@@ -52,16 +52,10 @@ Names.
 
 = Milestones =
 
-Before we can fully support DNSSEC, we need to first implement EDNS(0) support.
 
-Some DNSSEC APIS (lookup methods, record types) can be implemented in parallel
-and will be immediately use-able.
+== [milestone:EDNS0 EDNS(0)] 80h ==
 
-
-
-== [milestone:EDNS0 EDNS(0)] ==
-
-High level goals:
+Goals:
  * A twistd dns server capable of responding to EDNS(0) clients and issuing
    EDNS(0) requests to upstream DNS servers.
  * A client API for issuing EDNS(0) requests with a fixed max UDP payload size.
@@ -70,7 +64,7 @@ High level goals:
 
 
 
-=== #6680 Add Authentic Data (AD) and Checking Disabled (CD) flags ===
+=== [ticket:6680 #6680 Add Authentic Data and Checking Disabled flags] ===
 
 Add two new fields to the existing dns.Message class
  * https://tools.ietf.org/html/rfc2535#section-6.1
@@ -81,7 +75,7 @@ Requirements:
 
 
 
-=== #5668 dns.OPTHeader ===
+=== [ticket:5668 #5668 dns.OPTHeader] ===
 
 Parse and construct OPT Pseudo-RR
  * http://tools.ietf.org/html/rfc6891#section-6
@@ -97,7 +91,7 @@ Requirements:
 
 
 
-=== #5675 dns.EDNSMessage ===
+=== [ticket:5675 #5675 dns.EDNSMessage] ===
 
 Parse and construct EDNS messages
  * http://tools.ietf.org/html/rfc6891#section-4
@@ -126,7 +120,7 @@ Exclusions:
 
 
 
-=== #6839 dns.EDNSStreamProtocol and dns.EDNSDatagramProtcol or Message override options ===
+=== [ticket:6839 #6839 dns.EDNSStreamProtocol and dns.EDNSDatagramProtcol] ===
 
 The existing dns.DNSDatagramProtocol and DNSProtocol (TCP) are hardcoded to use
 dns.Message for decoding and encoding wire messages.
@@ -151,7 +145,7 @@ Requirements:
 
 
 
-=== #6840 client.Resolver protocol override options ===
+=== [ticket:6840 #6840 client.Resolver protocol override options] ===
 
 client.Resolver is currently hard coded to use dns.DNSDatagramProtocol and
 dns.DNSProtocol (TCP) via client.DNSClientFactory.
@@ -165,7 +159,7 @@ Requirements:
 
 
 
-=== #5670 client.EDNSResolver Fixed UDP Payload Size ===
+=== [ticket:5670 #5670 client.EDNSResolver Fixed UDP Payload Size] ===
 
 Start with a basic EDNSResolver with a fixed UDP payload size and which only
 does TCP fallback.
@@ -221,7 +215,7 @@ Discussion:
 
 
 
-=== #5669 server.EDNSServerFactory ===
+=== [ticket:5669 #5669 server.EDNSServerFactory] ===
 
 server.DNSServerFactory is responsible for coordinating datagram and stream
 listening ports and their protocols.
@@ -308,7 +302,7 @@ to how the EDNSResolver can be made extensible enough to support these.
 
 == RRSET improvements ==
 
-High level goals:
+Goals:
  * A client API capable of correctly handling RRSETs; according to the rules
    defined in RFC2181.
  * A server API capable of generating DNS response messages containing the
@@ -502,7 +496,7 @@ Requirements:
 
 == DNSSEC Record Types and Lookup Methods ==
 
-High level goals:
+Goals:
  * A Twisted based version of dig; a command line tool capable of issuing DNSSEC
    queries. This will demonstrate the use of the client APIs below.
  * A twistd authoritative DNS server capable of loading and serving DNSSEC
@@ -544,39 +538,39 @@ function in t.n.client.
 
 
 
-=== #6664 DNSKey ===
+=== [ticket:6664 #6664 DNSKey] ===
  * https://tools.ietf.org/html/rfc4034#section-2
 
 
 
-=== #6665 RRSIG ===
+=== [ticket:6665 #6665 RRSIG] ===
  * https://tools.ietf.org/html/rfc4034#section-3
 
 
 
-=== #6835 NSEC ===
+=== [ticket:6835 #6835 NSEC] ===
  * https://tools.ietf.org/html/rfc4034#section-4
 
 
 
-=== #6836 DS ===
+=== [ticket:6836 #6836 DS] ===
  * https://tools.ietf.org/html/rfc4034#section-5
 
 
 
-=== #6837 NSEC3 ===
+=== [ticket:6837 #6837 NSEC3] ===
  * https://tools.ietf.org/html/rfc5155#section-3
 
 
 
-=== #6838 NSEC3Param ===
+=== [ticket:6838 #6838 NSEC3Param] ===
  * https://tools.ietf.org/html/rfc5155#section-4
 
 
 
 == [milestone:DNSSEC_Client DNSSEC Client] ==
 
-High level goals:
+Goals:
  * A HostnameEndpoint wrapper capable of using a validating or non-validating
    stub resolver and which returns DNS lookup errors in the event of failed DNS
    validation.
@@ -636,13 +630,15 @@ TODO: needs more thought.
 
 == DANE ==
 
-High level goals:
+Goals:
  * A twistd dns authoritative server capable of loading and serving TLSA
    records.
  * A Twisted web client Agent wrapper which performs TLSA lookup and
    verification of a server certificate.
  * A HostnameClientEndpoint which performs TLSA lookup and verification of a
    server certificate.
+ * A command line tool for debugging TLSA records and for verifying a
+   certificate file against a domain name.
  * A TLSA Record class for encoding and decoding TLSA bytes.
  * A TLSA lookup method which accepts port, protocol and hostname and constructs
    a suitable TLSA domain name.
@@ -657,6 +653,10 @@ TODO
 === TLSA lookup method ===
 TODO
 
+
+
+=== TLSA verification tool ===
+ * See https://github.com/pieterlexis/swede
 
 
 === TLSA Hostname Endpoint ===
@@ -722,7 +722,7 @@ Other sources:
  * https://github.com/habnabit/spiral
  * https://bazaar.launchpad.net/~ubuntu-branches/ubuntu/saucy/bind9/saucy/view/head:/lib/dns/message.c
  * http://doc.powerdns.com/html/recursor-design-and-engineering.html#idp9245952
-
+ * https://github.com/pieterlexis/swede
 
 
 == Dissemination Efforts ==
