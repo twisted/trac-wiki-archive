@@ -39,6 +39,17 @@ Names.
 
 
 
+= Acknowledgements =
+
+ * NLnet Foundation: This project was made possible with funding from the DNSSEC
+   fund operated by NLnet foundation (http://nlnet.nl/dnssec). If you think
+   DNSSEC is important, please make a donation to this fund.
+
+ * Bob Novas and Phil Mayers: Who contributed the original EDNS(0) and DNSSEC
+   patches on which this work is based.
+
+
+
 = Milestones =
 
 Before we can fully support DNSSEC, we need to first implement EDNS(0) support.
