@@ -308,6 +308,20 @@ to how the EDNSResolver can be made extensible enough to support these.
 
 == RRSET improvements ==
 
+High level goals:
+ * A client API capable of correctly handling RRSETs; according to the rules
+   defined in RFC2181.
+ * A server API capable of generating DNS response messages containing the
+   correct RRSETs, in the correct sections of the message. And truncating
+   messages correctly based on the rules in RF2181.
+ * A DNS message parsing API capable of handling RRSETs in each of its sections.
+ * An API for encoding and decoding RRSETs; groups of records having the same
+   name and type.
+ * The ability to sort DNS records and names based on the canonical form
+   described in rfc4034.
+
+Notes:
+
 DNSSEC relies on stable RRSETs. eg for signatures, for predictable caching of
 records and signatures and for predictable truncation of large DNSSEC responses.
 
