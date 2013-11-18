@@ -634,6 +634,13 @@ TODO: needs more thought.
 
 
 
+== DANE: ==
+
+High level goals:
+ * TODO
+
+
+
 = RFCs =
 
 == General ==
@@ -654,6 +661,12 @@ TODO: needs more thought.
  5. [https://tools.ietf.org/html/rfc6781 6781: DNSSEC Operational Practices, Version 2]
  6. [https://tools.ietf.org/html/rfc6840 6840: Clarifications and Implementation Notes for DNS Security (DNSSEC)]
  7. [https://tools.ietf.org/html/rfc3833 3833: Threat Analysis of the Domain Name System (DNS)]
+
+== DANE ==
+ 1. https://datatracker.ietf.org/wg/dane/
+ 2. [https://tools.ietf.org/html/rfc6394 6394: Use Cases and Requirements for DNS-Based Authentication of Named Entities (DANE)]
+ 3. [https://tools.ietf.org/html/rfc6698 6698: TLSA - The DNS-Based Authentication of Named Entities (DANE) for Transport Layer Security (TLS) Protocol]
+
 
 
 = Appendices =
