@@ -500,17 +500,25 @@ Requirements:
 
 
 
-== DNSSEC ==
+== DNSSEC Record Types and Lookup Methods ==
 
- * milestone:DNSSEC_Client
+High level goals:
+ * A Twisted based version of dig; a command line tool capable of issuing DNSSEC
+   queries. This will demonstrate the use of the client APIs below.
+ * A twistd authoritative DNS server capable of loading and serving DNSSEC
+   records.
+ * A twistd recursive / forwarding proxy server capable of issuing DNSSEC
+   records on behalf of a client.
+ * Client API capable of issuing requests for DNSSEC records
+ * Client API capable of decoding DNSSEC records.
+ * Record APIs for encoding and decoding DS, DNSKEY, RRSIG, NSEC, NSEC3,
+   NSECPARAM records.
+
+Notes:
 
 Some of this work has already been implemented by BobNovas in two large patches
 attached to original tickets: #5450, #5453, #5454. Look there before
 implementing anything from scratch.
-
-
-
-=== New DNSSEC Records and Lookup Methods ===
 
 DNSSEC introduces six new resource record types. Each new record type will
 require a new dns.Record subclass and a new lookupMethod added to
@@ -536,34 +544,46 @@ function in t.n.client.
 
 
 
-==== #6664 DNSKey ====
+=== #6664 DNSKey ===
  * https://tools.ietf.org/html/rfc4034#section-2
 
 
 
-==== #6665 RRSIG ====
+=== #6665 RRSIG ===
  * https://tools.ietf.org/html/rfc4034#section-3
 
 
 
-==== #6835 NSEC ====
+=== #6835 NSEC ===
  * https://tools.ietf.org/html/rfc4034#section-4
 
 
 
-==== #6836 DS ====
+=== #6836 DS ===
  * https://tools.ietf.org/html/rfc4034#section-5
 
 
 
-==== #6837 NSEC3 ====
+=== #6837 NSEC3 ===
  * https://tools.ietf.org/html/rfc5155#section-3
 
 
 
-==== #6838 NSEC3Param ====
+=== #6838 NSEC3Param ===
  * https://tools.ietf.org/html/rfc5155#section-4
 
+
+
+== [milestone:DNSSEC_Client DNSSEC Client] ==
+
+High level goals:
+ * A HostnameEndpoint wrapper capable of using a validating or non-validating
+   stub resolver and which returns DNS lookup errors in the event of failed DNS
+   validation.
+ * twistd dns will be capable of operating as a validating security-aware
+   recursive resolver which can be used by other non-validating stub resolvers.
+ * A non-validating security-aware stub resolver
+ * A validating security-aware stub resolver
 
 
 
@@ -580,7 +600,6 @@ If the DO bit was set, it will expect to receive DNSSEC related
 records in the response.
 
 https://tools.ietf.org/html/rfc4035#section-4.9
-
 
 
 
