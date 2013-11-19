@@ -50,23 +50,7 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 {{{
 #!html
 <div class="donation-buttons">
-    <div>
-    <form action="https://checkout.google.com/cws/v2/Donations/622836985124940/checkoutForm" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm">
-        <input name="item_name_1" value="Twisted Project (via Software Freedom Conservancy)" type="hidden">
-        <input name="item_description_1" value="A directed, ear-marked donation for the Twisted Project, via the Software Freedom Conservancy." type="hidden">
-        <input name="item_quantity_1" value="1" type="hidden">
-        <input name="item_currency_1" value="USD" type="hidden">
-        <input name="item_is_modifiable_1" value="true" type="hidden">
-        <input name="item_min_price_1" value="5.0" type="hidden">
-        <input name="item_max_price_1" value="25000.0" type="hidden">
-        <div style="text-align: left">
-            <label for="item_price_1">US $</label>
-            <input id="item_price_1" name="item_price_1" value="25" type="text" size="6" style="text-align: right">
-        </div>
-        <input name="_charset_" value="utf-8" type="hidden">
-        <input onclick="return setDonationAmount(this.form, 'item_price_1')" alt="Google Checkout" src="https://checkout.google.com/buttons/donateNow.gif?merchant_id=622836985124940&w=115&h=50&style=trans&variant=text&loc=en_US" type="image">
-    </form>
-    </div>
+   
     <div>
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <input name="cmd" value="_s-xclick" type="hidden">
