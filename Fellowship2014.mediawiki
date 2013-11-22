@@ -44,4 +44,4 @@ f you would prefer to cut a check, you may do this as well. Make the check payab
 
 Software Freedom Conservancy, Inc.[[BR]]137 MONTAGUE ST STE 380[[BR]]Brooklyn, NY 11201-3548 
 
-If you have a large donation to make, you can actually become part of the official Twisted Sponsorship Program.  Details can be found [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship here].  As always, we're ready to send an invoice, or cooperate with your companies purchase order process.  Contact us at twistedsponsor@sfconservancy.org.
+If you have a large donation to make, you can actually become part of the official Twisted Sponsorship Program.  Details can be found [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship here].  As always, we're ready to send an invoice, or cooperate with your companies purchase order process.  Contact us at twistedsponsor @ sfconservancy.org.
