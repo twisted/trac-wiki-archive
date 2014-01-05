@@ -111,4 +111,4 @@ You might be interested in learning about tasks related to [wiki:SiteMaintenance
  * Buildbot: [http://buildbot.twistedmatrix.com/waterfall all platforms] and [http://buildbot.twistedmatrix.com/supported supported platforms]. Watch it.
  * Documentation work is done on the DocumentationAnalysis page.
  * Instructions on how to generate the [wiki:APIDocs API Docs] for the twistedmatrix.com web site.
- * Twisted developers are bent on [http://isometric.sixsided.org/_/twisted_plutonium/ the destruction of the American currency system].
+ * Twisted developers are bent on [http://isometri.cc/strips/twisted_plutonium/ the destruction of the American currency system].
