@@ -7,7 +7,7 @@ We should come up with some plans to really finish, polish, and document some of
 == Short term ==
 
  - #6663: We need to make the cipher suites configurable.
- - #6801: OP_NO_COMPRESSION needs to be set to circumvent Lucky 13, OP_CIPHER_SERVER_PREFERENCE to force our ciphers on clients.
+ - #6801: OP_NO_COMPRESSION needs to be set to circumvent CRIME, OP_CIPHER_SERVER_PREFERENCE to force our ciphers on clients.
  - #6799: We need to support DHE to offer PFS.
  - #4888: twisted.web.client.Agent our new web client API has to learn hostname verification for HTTPS URIs.
  - #5446/#6334: For that we need access to a reliable trust store.
