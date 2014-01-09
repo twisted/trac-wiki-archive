@@ -2,6 +2,21 @@ We have some security-related code in Twisted.  I think all of the core develope
 
 We should come up with some plans to really finish, polish, and document some of these systems.
 
-Here is a thought to get us started:
+= TLS =
 
-http://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/
+== Short term ==
+
+ - #6663: We need to make the cipher suites configurable.
+ - #6801: OP_NO_COMPRESSION needs to be set to circumvent Lucky 13, OP_CIPHER_SERVER_PREFERENCE to force our ciphers on clients.
+ - #6799: We need to support DHE to offer PFS.
+ - #4888: twisted.web.client.Agent our new web client API has to learn hostname verification for HTTPS URIs.
+ - #5446/#6334: For that we need access to a reliable trust store.
+
+== Mid Term ==
+
+ - as soon as PyOpenSSL learns about ECDH, we need to add it too (eg. Windows does no DHE).
+ - #4887: Add SNI (not security-relevant but belongs into a complete TLS framework).
+
+== Long Term ==
+
+ - Use [https://cryptography.io/] directly?
