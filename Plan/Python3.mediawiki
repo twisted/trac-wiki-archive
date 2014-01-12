@@ -12,6 +12,13 @@ All other standard Twisted development practices apply.
 
 An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3%20Minimal) was funded by Canonical and implemented by Future Foundries LLC (i.e. Itamar and Jean-Paul), with the aim of getting a basic subset of Twisted working, sufficient to run a specific Canonical project.  That project has been completed, laying the groundwork for further porting effort by other developers.
 
+== Methodology ==
+
+ 1. Choose a single module.
+ 1. Port the tests carefully; merely importing on Python 3 is insufficient. See the checklist below.
+ 1. Now that tests are importable, update the code carefully to pass all tests. If there is not full test coverage you may need to either write some tests, or sometimes just not include those parts of code in Python 3. The latter is easier if it's a standalone class.
+ 1. Deprecated code need not be ported, so if you notice some code that ought to be deprecated, open another ticket for that.
+
 == Reviewer check list ==
 
   1. Tests pass under 3.3.
