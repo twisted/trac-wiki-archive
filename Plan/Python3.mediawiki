@@ -120,8 +120,9 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
 
   1. Select a module that needs to be ported (make sure there is a ticket, no one else has started it, etc).
   1. Add the module and its test module(s) to [source:trunk/setup3.py setup3.py]
-  1. Run [source:trunk/admin/run-python3-tests admin/run-python3-tests]
+  1. Run [source:trunk/admin/run-python3-tests admin/run-python3-tests], optionally specifying the test modules being ported as additional arguments, if you want to initially run just the new tests.
   1. Fix syntax errors in the test module
+    1.  Note that at this point after the syntax errors have been fixed, `twisted.*.test has no attribute <test module that you know exists>` is often the unittest test runner's way of swallowing `ImportError`s (see http://bugs.python.org/issue7559), which can be confirmed by running the module directly and fixing any tracebacks until the module can be imported without `ImportError`s.
     1. If some of the APIs in the module are not being ported, add a `del` statement at the end of the module, guarded by an `if _PY3` check, to get rid of all unported APIs.
   1. If there are syntax errors in modules depended on by the test module:
     1. See if the depended-on module has been split into a `foo` and `_foopy3` module and if the APIs needed from it are already in the `_foopy3` module. 
