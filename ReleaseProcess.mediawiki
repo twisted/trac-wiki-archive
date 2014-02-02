@@ -65,6 +65,7 @@ To release Twisted, we
  1. Check the milestone for the upcoming release
     1. Get rid of any non-critical bugs
     1. Get any critical bugs fixed
+    1. Check the [https://twistedmatrix.com/trac/wiki/ReleaseManagerNotes release manager notes] in case anyone has left anything which can only be done during the release.
  1. Check for any [http://twistedmatrix.com/trac/query?status=new&status=assigned&status=reopened&type=regression&order=priority regressions]
  1. Read through the `INSTALL` and `README` files to make sure things like the supported Python versions are correct
     1. Check the required Python version.
