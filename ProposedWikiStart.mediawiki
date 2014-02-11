@@ -106,6 +106,7 @@ Twisted is an event-driven networking engine written in Python and licensed unde
     <li><a href="#webserver">Web Server</a></li>
     <li><a href="#pubsubserver">Publish/Subscribe</a></li>
     <li><a href="#imap4client">Mail Client</a></li>
+    <li><a href="#dnsclient">DNS Client</a></li>
 </ul>
 }}}
 
