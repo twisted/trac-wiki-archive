@@ -257,11 +257,7 @@ from twisted.names import client
 def printResult(result):
     answers, authority, additional = result
     if answers:
-        print(','.join('{} IN {}'.format(a.name.name, a.payload) for a in answers))
-
-def printSummary(results):
-    statuses = zip(*results)[0]
-    print('{} responses to {} queries'.format(statuses.count(True), len(statuses)))
+        print(', '.join('{} IN {}'.format(a.name.name, a.payload) for a in answers))
 
 def main(reactor, *ipAddresses):
     pending = []
@@ -270,16 +266,9 @@ def main(reactor, *ipAddresses):
         d = client.lookupPointer(pointerName, timeout=(1,))
         d.addCallback(printResult)
         pending.append(d)
-    return defer.DeferredList(pending, consumeErrors=True).addCallback(printSummary)
+    return defer.DeferredList(pending, consumeErrors=True)
 
 task.react(main, sys.argv[1:])
-}}}
-
-{{{
-$ python reverse-lookup.py 1.2.3.4 2.3.4.5 3.4.5.6 4.5.6.7
-RESULT: [('5.4.3.2.in-addr.arpa', <PTR name=ALyon-651-1-21-5.w2-3.abo.wanadoo.fr ttl=1>)]
-RESULT: [('6.5.4.3.in-addr.arpa', <PTR name=n003-000-000-000.static.ge.com ttl=1>)]
-2 responses to 4 queries
 }}}
 
 See the TwistedNames documentation for more information.
