@@ -12,13 +12,11 @@
 
 == Source ==
 
- * [[ProjectVersion(http://pypi.python.org/packages/source/T/Twisted/Twisted-%(base)s.tar.bz2#md5=%(md5)s Twisted %(base)s tar.bz2)]]
+ * [[ProjectVersion(https://pypi.python.org/packages/source/T/Twisted/Twisted-%(base)s.tar.bz2#md5=%(md5)s Twisted %(base)s tar.bz2)]]
 
 == Windows (32-bit) ==
 
- * [[ProjectVersion(http://pypi.python.org/packages/2.7/T/Twisted/Twisted-%(base)s.win32-py2.7.msi Twisted %(base)s for Python 2.7)]]
- * [[ProjectVersion(http://pypi.python.org/packages/2.6/T/Twisted/Twisted-%(base)s.win32-py2.6.msi Twisted %(base)s for Python 2.6)]]
- * [[ProjectVersion(http://pypi.python.org/packages/2.5/T/Twisted/Twisted-%(base)s.win32-py2.5.msi Twisted %(base)s for Python 2.5)]]
+ * [[ProjectVersion(https://pypi.python.org/packages/2.7/T/Twisted/Twisted-%(base)s.win32-py2.7.msi Twisted %(base)s for Python 2.7)]]
 
 == Other ==
 
@@ -27,7 +25,7 @@
 
 == Dependencies ==
 
- * [http://pypi.python.org/pypi/zope.interface#download zope.interface]
+ * [https://pypi.python.org/pypi/zope.interface#download zope.interface]
 }}}
 
 {{{
@@ -45,30 +43,14 @@
 {{{
 #!div class="side-panel donations"
 
-== Donate to Twisted ==
+== [WhyDonate Donate to Twisted] ==
 
 Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 
 {{{
 #!html
 <div class="donation-buttons">
-    <div>
-    <form action="https://checkout.google.com/cws/v2/Donations/622836985124940/checkoutForm" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm">
-        <input name="item_name_1" value="Twisted Project (via Software Freedom Conservancy)" type="hidden">
-        <input name="item_description_1" value="A directed, ear-marked donation for the Twisted Project, via the Software Freedom Conservancy." type="hidden">
-        <input name="item_quantity_1" value="1" type="hidden">
-        <input name="item_currency_1" value="USD" type="hidden">
-        <input name="item_is_modifiable_1" value="true" type="hidden">
-        <input name="item_min_price_1" value="5.0" type="hidden">
-        <input name="item_max_price_1" value="25000.0" type="hidden">
-        <div style="text-align: left">
-            <label for="item_price_1">US $</label>
-            <input id="item_price_1" name="item_price_1" value="25" type="text" size="6" style="text-align: right">
-        </div>
-        <input name="_charset_" value="utf-8" type="hidden">
-        <input onclick="return setDonationAmount(this.form, 'item_price_1')" alt="Google Checkout" src="https://checkout.google.com/buttons/donateNow.gif?merchant_id=622836985124940&w=115&h=50&style=trans&variant=text&loc=en_US" type="image">
-    </form>
-    </div>
+   
     <div>
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <input name="cmd" value="_s-xclick" type="hidden">
@@ -80,28 +62,30 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>
     </div>
+
+    <a href="https://flattr.com/thing/948720/Twisted-the-premier-networking-library-for-the-Python-language">
+      <img src="https://api.flattr.com/button/flattr-badge-large.png" alt="Flattr us!" title="Flattr us!" border="0" />
+    </a>
 </div>
 }}}
 
 
 = [wiki:TwistedSponsors Twisted Sponsors] =
 
-[wiki:TwistedSoftwareFoundation Become a 2012 sponsor today]! For any donation above [wiki:TwistedSoftwareFoundation#SponsorshipLevels the bronze level], we will display your logo here on the front page.
+Participate in the (newly-revamped) [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship Twisted Project Sponsorship Program]! For [wiki:TwistedSoftwareFoundation#SponsorshipLevels Silver Sidewinder and higher-level] sponsors, we will display your logo here on the front page for one year.  
 
 {{{
 #!div class="twisted-sponsors"
 
-=== Silver ===
-
-[[Image(TSF/SponsorLogos:Appropriate-Solutions-Inc.gif, title=Appropriate Solutions Inc, link=http://www.appropriatesolutions.com/)]]
-[[Image(TSF/SponsorLogos:dreamhost.gif, title=DreamHost, link=http://dreamhost.com/?q=twisted)]]
-[[Image(TSF/SponsorLogos:simb.png, title=SIMB, link=http://www.simb.com.br/)]]
-
-=== Bronze ===
-
-[[Image(TSF/SponsorLogos:dyn-logo.png, title=Dynamic Network Services Inc, link=http://www.dyn.com/)]]
+=== Golden Tree Snake ===
+[[Image(TSF/SponsorLogos:critsend_logo.png, title=CritSend, link=http://www.critsend.com/)]]
+=== Silver Sidewinder ===
+[[Image(TSF/SponsorLogos:Dyn_160x80.png, title=Dyn, link=http://dyn.com/)]] 
 }}}
+=== Bronze Sponsors (under previous program) ===
 
+[[Image(TSF/SponsorLogos:flowroute-logo.gif, title=flowroute, link=http://www.flowroute.com/)]]
+[[Image(TSF/SponsorLogos:found_160x80.png, title=FoundIT, link=http://www.found.no/)]] 
 }}}
 }}}
 }}}
@@ -113,15 +97,15 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 
 Twisted is an event-driven networking engine written in Python and licensed under the open source [http://www.opensource.org/licenses/mit-license.php MIT license].
 
-
 == Code Examples ==
 
 {{{
 #!html
 <ul id="frontpage-tabs" class="nav nav-tabs">
     <li class="active"><a href="#echoserver">Echo Server</a></li>
-    <li><a href="#webserver">Web server</a></li>
-    <li><a href="#pubsubserver">Publish/subscribe</a></li>
+    <li><a href="#webserver">Web Server</a></li>
+    <li><a href="#pubsubserver">Publish/Subscribe</a></li>
+    <li><a href="#imap4client">Mail Client</a></li>
 </ul>
 }}}
 
@@ -149,7 +133,7 @@ reactor.listenTCP(1234, EchoFactory())
 reactor.run()
 }}}
 
-Learn more about [http://twistedmatrix.com/documents/current/core/howto/servers.html writing servers], [http://twistedmatrix.com/documents/current/core/howto/clients.html writing clients] and the [http://twistedmatrix.com/documents/current/core/howto/index.html core networking libraries ], including support for SSL, UDP, scheduled events, unit testing infrastructure, and much more.
+Learn more about [https://twistedmatrix.com/documents/current/core/howto/servers.html writing servers], [https://twistedmatrix.com/documents/current/core/howto/clients.html writing clients] and the [https://twistedmatrix.com/documents/current/core/howto/index.html core networking libraries ], including support for SSL, UDP, scheduled events, unit testing infrastructure, and much more.
 }}}
 
 
@@ -175,7 +159,7 @@ reactor.listenTCP(8080, server.Site(HelloResource()))
 reactor.run()
 }}}
 
-Learn more about [http://twistedmatrix.com/documents/current/web/howto/web-in-60/index.html web application development], [http://twistedmatrix.com/documents/current/web/howto/twisted-templates.html templates] and Twisted's [http://twistedmatrix.com/documents/current/web/howto/client.html HTTP client].
+Learn more about [https://twistedmatrix.com/documents/current/web/howto/web-in-60/index.html web application development], [https://twistedmatrix.com/documents/current/web/howto/twisted-templates.html templates] and Twisted's [https://twistedmatrix.com/documents/current/web/howto/client.html HTTP client].
 }}}
 
 {{{
@@ -188,8 +172,6 @@ from twisted.internet import reactor, protocol
 from twisted.protocols import basic
 
 class PubProtocol(basic.LineReceiver):
-    delimiter = "\n"
-
     def __init__(self, factory):
         self.factory = factory
 
@@ -200,11 +182,8 @@ class PubProtocol(basic.LineReceiver):
         self.factory.clients.remove(self)
 
     def lineReceived(self, line):
-        message = "<%s> %s\n" % (self.transport.getHost(), line)
         for c in self.factory.clients:
-            if c != self:
-                c.transport.write(message)
-
+            c.sendLine("<{}> {}".format(self.transport.getHost(), line))
 
 class PubFactory(protocol.Factory):
     def __init__(self):
@@ -213,26 +192,63 @@ class PubFactory(protocol.Factory):
     def buildProtocol(self, addr):
         return PubProtocol(self)
 
-
-if __name__ == '__main__':
-    reactor.listenTCP(1025, PubFactory())
-    reactor.run()
+reactor.listenTCP(1025, PubFactory())
+reactor.run()
 }}}
 
+You can test this out by opening two terminals and doing `telnet localhost 1025` in each, then typing things.
+
 }}}
 
+{{{
+#!div class="tab-pane" id="imap4client"
+
+Twisted includes a sophisticated IMAP4 client library.
+
+{{{
+#!python
+import sys
+
+from twisted.internet import protocol, defer, endpoints, task
+from twisted.mail import imap4
+from twisted.python import failure
+
+@defer.inlineCallbacks
+def main(reactor, username="alice", password="secret",
+         strport="ssl:host=example.com:port=993"):
+    endpoint = endpoints.clientFromString(reactor, strport)
+    factory = protocol.Factory()
+    factory.protocol = imap4.IMAP4Client
+    try:
+        client = yield endpoint.connect(factory)
+        yield client.login(username, password)
+        yield client.select('INBOX')
+        info = yield client.fetchEnvelope(imap4.MessageSet(1))
+        print 'First message subject:', info[1]['ENVELOPE'][1]
+    except:
+        print "IMAP4 client interaction failed"
+        failure.Failure().printTraceback()
+
+# This API requires Twisted 12.3 or later, or a trunk checkout:
+task.react(main, sys.argv[1:])
+}}}
+
+Give this a try, supplying your IMAP4 username, password, and [https://twistedmatrix.com/documents/current/core/howto/endpoints.html#auto7 client endpoint description] for your IMAP4 server.  You'll see the subject of the first message in your mailbox printed.
+
+See the TwistedMail documentation for more information.
+
+}}}
 
 }}}
 
 
 == More Protocols ==
 
-Twisted also supports many common network protocols, including SMTP, POP3, IMAP, SSHv2, and DNS. For more information see our [wiki:Documentation documentation] and [http://twistedmatrix.com/documents/current/api/ API reference].
-
+Twisted also supports many common network protocols, including SMTP, POP3, IMAP, SSHv2, and DNS. For more information see our [wiki:Documentation documentation] and [https://twistedmatrix.com/documents/current/api/ API reference].
 
 == Community ==
 
-[[Image(http://oreilly.com/catalog/covers/twistedadn.s.gif, title=The Twisted Book, align=right, link=http://www.amazon.com/gp/product/0596100329?ie=UTF8&tag=jpcalsjou-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596100329)]]
+[[Image(https://twistedmatrix.com/trac/raw-attachment/wiki/AttachmentBucket/oreilly_book_cover.jpg, link=https://www.amazon.com/gp/product/1449326110/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449326110&linkCode=as2&tag=twisted-sfconservancy-20, right)]]
 
  * Get in touch with the [wiki:TwistedCommunity Twisted community] through [wiki:TwistedCommunity#MailLists email], [http://stackoverflow.com/questions/tagged/twisted Stack Overflow] or [wiki:TwistedCommunity#IRC IRC];
  * Learn about the Twisted [wiki:TwistedDevelopment development process] and how to [wiki:ContributingToTwistedLabs contribute];
