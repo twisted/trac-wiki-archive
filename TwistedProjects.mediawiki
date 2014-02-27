@@ -33,11 +33,10 @@
   '''[wiki:TwistedRunner Twisted Runner]'''::
   Process management, including an inetd server.[[BR]]
 
-
-== Unmaintained Projects ==
-
   '''[wiki:TwistedPair Twisted Pair]'''::
   Low-level networking transports and utilities.[[BR]]
+
+== Unmaintained Projects ==
 
   '''[http://allmydata.org/trac/EIO EIO]'''::
   High-level {{{java.nio}}} wrapper networking framework
