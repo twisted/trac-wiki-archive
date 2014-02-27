@@ -27,9 +27,6 @@
   '''[wiki:TwistedTrial Twisted Trial]'''::
   Unittest-compatible automated testing.[[BR]]
 
-  '''[wiki:TwistedLore Twisted Lore]'''::
-  Documentation generator with HTML and LaTeX support.[[BR]]
-
   '''[wiki:TwistedRunner Twisted Runner]'''::
   Process management, including an inetd server.[[BR]]
 
@@ -37,6 +34,9 @@
   Low-level networking transports and utilities.[[BR]]
 
 == Unmaintained Projects ==
+
+  '''[wiki:TwistedLore Twisted Lore]'''::
+  Documentation generator with HTML and LaTeX support.[[BR]]
 
   '''[http://allmydata.org/trac/EIO EIO]'''::
   High-level {{{java.nio}}} wrapper networking framework
