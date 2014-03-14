@@ -15,9 +15,9 @@ We should come up with some plans to really finish, polish, and document some of
 
 == Mid Term ==
 
- - as soon as [https://github.com/pyca/pyopenssl/pull/9 PyOpenSSL learns about ECDH], we need to add it too (eg. Windows does no DHE).
+ -  #6586: Add ECDH, we need to add it too (eg. Windows does no DHE). (and make is pretty as soon as [https://github.com/pyca/pyopenssl/pull/57 PyOpenSSL learns about ECDH] #7033)
  - #4887: Add SNI (not security-relevant but belongs into a complete TLS framework).
-- #6802: Add OCSP stapling support
+ - #6802: Add OCSP stapling support
 
 == Long Term ==
 
