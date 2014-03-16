@@ -7,7 +7,7 @@ This page collects links to useful pages describing the infrastructure behind tw
  * [https://github.com/twisted-infra/braid braid] - Fabric scripts
  * [https://github.com/twisted-infra twisted-infra] 
  * [wiki:Infrastructure/UpgradingTrac] - some results of trying upgrading Trac on a test system.
- * [wiki:SwitchToBazaar]
+ * [wiki:Infrastructure/SwitchToGit switching to git] - some of the things we'll need to do to switch to Git.
 
 Historical Notes:
  * [wiki:Infrastructure/MovingTrac] - Some notes on setup of trac on cube (some of this hasn't been changed and isn't otherwise documented
