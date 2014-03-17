@@ -1,5 +1,7 @@
 = DVCS Workflows =
 
+[[PageOutline(2-3, , inline)]]
+
 Twisted is developed in a Subversion repository, but there is no reason you can't take advantage of your favorite DVCS toolchain to contribute and submit patches.
 
 Keep in mind that unless you are a core committer, your interaction with svn basically boils down to:
