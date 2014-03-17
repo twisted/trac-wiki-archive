@@ -1,3 +1,5 @@
+[[PageOutline(1-3, , inline)]]
+
 = For Twisted contributors =
 
 If you want to develop a patch for Twisted (as described in the BasicGuideToContributingCode) but prefer to use Git rather than SVN, this is the section for you.
