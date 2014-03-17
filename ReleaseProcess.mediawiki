@@ -1,4 +1,4 @@
-[wiki:ContributingToTwistedLabs Contribute] > [wiki:TwistedDevelopment Development] > DVCS Workflows
+[wiki:ContributingToTwistedLabs Contribute] > [wiki:TwistedDevelopment Development] > Release Process
 
 [[PageOutline(1-3,, inline)]]
 
