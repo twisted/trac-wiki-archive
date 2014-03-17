@@ -1,6 +1,6 @@
 = To do list for switching the code repository from Subversion to Git =
 
-//This acts more as a reminder of things to do than the actual definitive list. Feel free to update it if things are missing.//
+''This acts more as a reminder of things to do than the actual definitive list. Feel free to update it if things are missing.''
 
 Changing the repository must still meet the [wiki:WorkflowRequirements workflow requirements].
 
