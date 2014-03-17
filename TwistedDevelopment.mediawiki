@@ -1,5 +1,7 @@
+[wiki:ContributingToTwistedLabs Contribute] > Twisted Development
+
 = Twisted Development =
-[[PageOutline(2-4)]]
+[[PageOutline(2-4,, inline)]]
 
 == Contributing ==
 
