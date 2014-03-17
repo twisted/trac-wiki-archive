@@ -10,14 +10,14 @@ Changing the repository must still meet the [wiki:WorkflowRequirements workflow 
      * be able to browse the repository
      * detect ticket references and ticket closures from Git commits messages
 
-     Starting from Trac 1.0, Git is supported out of the box, see http://trac.edgewall.org/wiki/TracGit
+   Starting from Trac 1.0, Git is supported out of the box, see http://trac.edgewall.org/wiki/TracGit
    * See current works on [wiki:Infrastructure/UpgradingTrac upgrading Trac].
  * The CI system already uses Git. Is there any changes to make here?
  * Port the post-commit hooks from Subversion to Git:
    * IRC announcements from Kenaan
    * repository structure enforcement (i.e. no merges to trunk, or, presumably, "master", without a fixed bug and a NEWS file, unless it's a quote file change)
-   * Buildbot kick off
-
-     Is it already done?
+   * Buildbot kick off (Is it already done?)
+ * [ticket:7035 Port the release scripts from Subversion to Git: #7035]
+ * [ticket:7036 Port twisted.python.versions to use Git: #7036]
  * Is there any need to have a Git mirror on the same machine as Trac?
    * we don't want our release repository on the same machine running the website.  (code.twistedmatrix.com has a much smaller attack surface)
