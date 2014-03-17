@@ -1,8 +1,10 @@
+[wiki:ContributingToTwistedLabs Contribute] > [wiki:TwistedDevelopment Development] > Compatibility Policy
+
 = Compatibility Policy =
 
 NB: This is a work in progress.
 
-[[PageOutline(2-4)]]
+[[PageOutline(2-4,, inline)]]
 
 == Motivation ==
 
@@ -206,4 +208,3 @@ Taken from a recent test run:
 }}}
 
 That's [https://buildbot.twistedmatrix.com/builders/natty64-py2.6-epoll/builds/3458/steps/epoll/logs/warnings 36 warnings on Python 2.6, with the epoll reactor], arguably our best-supported test configuration.  These warnings need to be eliminated so that application developers can treat warnings as errors.
-
