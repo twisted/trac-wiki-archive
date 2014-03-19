@@ -169,24 +169,24 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
    * twisted.python.deprecate (#5916, #6036)
    * [ticket:5931 twisted.python.failure]
    * [ticket:5903 twisted.python.filepath]
-   * twisted.python.hashlib
+   * [ticket:6342 twisted.python.hashlib]
    * [ticket:5860 twisted.python.hook]
    * [ticket:4920 twisted.python._initgroups]
    * [ticket:5960 twisted.python.lockfile]
    * [ticket:5932 twisted.python.log]
-   * twisted.python.logfile
-   * twisted.python.modules (#6041)
+   * [ticket:6749 twisted.python.logfile]
+   * [ticket:6041 twisted.python.modules]
    * [ticket:5896 twisted.python.monkey]
    * [ticket:6061 twisted.python.randbytes]
    * [ticket:5897 twisted.python.runtime]
    * twisted.python.reflect (#5906, #5913, #5914, #6100)
    * twisted.python.text
    * [ticket:5860 twisted.python.threadable]
-   * twisted.python.usage
+   * [ticket:7038 twisted.python.usage]
    * twisted.python.util (#5933, #6054)
    * [ticket:5917 twisted.python.versions]
    * [ticket:6039 twisted.python.win32]
-   * twisted.python.zippath
+   * [ticket:6917 twisted.python.zippath]
    * [ticket:5966 twisted.scripts.trial]
    * twisted.trial
    * twisted.trial.itrial
