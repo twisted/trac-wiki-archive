@@ -64,7 +64,7 @@ Twisted does not completely follow the standard SVN repository layout. In partic
 
 Follow the [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html#auto6 standard Twisted branch-name conventions] when creating branches with Git.
 
-Use the `mkbranch` utility, in the pip package `twisted-dev-tools`. Use it as follows:
+Use the `mkbranch` utility from [https://pypi.python.org/pypi/twisted-dev-tools twisted-dev-tools]. Use it as follows:
 
 {{{
 mkbranch $BRANCH_NAME
