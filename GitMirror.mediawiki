@@ -57,42 +57,15 @@ git svn init --stdlayout --tags tags/releases --prefix origin/  svn://svn.twiste
 git config --add svn-remote.svn.pushurl svn+ssh://svn.twistedmatrix.com/svn/Twisted/
 }}}
 
-Twisted does not completely follow the standard SVN repository layout. In particular, there is a  "branches/releases" directory that contains more branches (as opposed to being a branch) and a "tags/releases" directory that contains more tags (as opposed to being a tag). Thus, git cannot be used to commit to release branches.   
+Twisted does not completely follow the standard SVN repository layout. In particular, there is a "branches/releases" directory that contains more branches (as opposed to being a branch) and a "tags/releases" directory that contains more tags (as opposed to being a tag). Thus, git cannot be used to commit to release branches.   
 
 
 == git svn branching ==
 
 Follow the [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html#auto6 standard Twisted branch-name conventions] when creating branches with Git.
 
-I (tom.prince) currently use the following `mkbranch` script to create branches.
-{{{
-#!/usr/bin/python
+Use the `mkbranch` utility, in the pip package `twisted-dev-tools`. Use it as follows:
 
-import sys
-import subprocess
-from twisted.python import usage
-
-class Options(usage.Options):
-    def parseArgs(self, branch):
-        self.branch = branch
-
-if __name__ == '__main__':
-    options = Options()
-    try:
-        options.parseOptions()
-    except usage.UsageError as errortext:
-        print '%s: %s' % (sys.argv[0], errortext)
-        print '%s: Try --help for usage details.' % (sys.argv[0])
-        sys.exit(1)
-
-    subprocess.check_call([
-        'svn', 'cp',
-        'svn+ssh://svn.twistedmatrix.com/svn/Twisted/trunk',
-        'svn+ssh://svn.twistedmatrix.com/svn/Twisted/branches/%s' % (options.branch,),
-        '-m', 'Branching to %s.' % (options.branch),
-        ])
-}}}
-I call it as follows
 {{{
 mkbranch $BRANCH_NAME
 git fetch
