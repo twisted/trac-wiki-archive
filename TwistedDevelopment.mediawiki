@@ -107,6 +107,8 @@ This series of documents is designed for people who wish to contribute to the Tw
 
  * [http://sphinx-doc.org/rest.html ReStructuredText and Sphinx] for narrative documentation.
 
+ * [http://twistedmatrix.com/documents/current/core/development/policy/doc-standard.html Documentation Standard]
+
  * [http://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html Writing Standard]
 
  * [wiki:Security Security]
