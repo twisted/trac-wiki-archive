@@ -13,30 +13,29 @@ Keep in mind that unless you are a core committer, your interaction with svn bas
 # Checkout trunk
 svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk twisted-trunk
 
-# Create patches
-svn diff > mypatch.patch
+# Create patches at the *root* or your checkout (the folder with "twisted", "bin", "doc", etc.)
+cd twisted-trunk; svn diff > mypatch.patch
 
 # Keeping up-to-date with trunk:
 svn up
 }}}
 
-How you choose to manage your local repository is up to you, but here are a few workflows to help:
 
 == Bazaar ==
-[[Image()]]
+
 The Twisted codebase is mirrored into a set of Bazaar branches, making it easy to work on trunk or any existing branches.
 
 See: [wiki:BazaarMirror Bazaar Workflow]
 
 
 == Git ==
-[[Image()]]
+
 There is an official Git mirror.
 
 See: [wiki:GitMirror Git Workflow]
 
 == Mercurial ==
-[[Image()]]
+
 There are no official Mercurial mirrors. One recommended method is to use the Mercurial MQ extension.
 
 See: [wiki:HgContributor Mercurial Workflow]
