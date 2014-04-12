@@ -32,7 +32,11 @@ git checkout trunk
 git rebase origin/trunk
 }}}
 
-== Generating patches ==
+== Submitting Patches ==
+
+Twisted core reviewers ''do not'' watch the GitHub pull request list. However, if you wish, you can submit a pull request to the Twisted project, and link to the pull request in a Twisted ticket when marking it for review.
+
+If you like, you can instead attach a patch directly to the ticket:
 
 While on the branch for which you want to generate a diff
 
