@@ -13,7 +13,13 @@ PyCon 2014, hosted in Montréal, held development sprints from April 14 - 17.
 
 Did you work on some other library or [wiki:ProjectsUsingTwisted project using Twisted] at the sprint?
 
+Itamar:
  * [https://pypi.python.org/pypi/crochet Crochet] released [http://blog.futurefoundries.com/2014/04/crochet-120-now-with-better-api.html version 1.2] with an improved interface for calling into Twisted from threads.
+ * Started work on [https://github.com/itamarst/txtulip txtulip], an experiment in connecting Twisted and asyncio.
+ * A HybridCluster open source project, [https://pypi.python.org/pypi/eliot Eliot] logging library released a preview, and did some work on improving the API; hopefully next release sometime soon.
+
+Jean-Paul:
+ * A HybridCluster open source project, [https://pypi.python.org/pypi/machinist Machinist] finite state machine library released.
 
 == Attendees ==
 
