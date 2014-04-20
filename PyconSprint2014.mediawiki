@@ -1,0 +1,27 @@
+= Sprint Report: PyCon 2014 =
+
+PyCon 2014, hosted in Montréal, held development sprints from April 14 - 17.
+
+
+== Tickets Closed ==
+
+ * #7089, optionsForClientTLS, with accompanying updates to [http://twisted.readthedocs.org/en/latest/core/howto/ssl.html Using TLS (née SSL) in Twisted].
+
+== Works in Progress ==
+
+== Non-Core Projects ==
+
+Did you work on some other library or [wiki:ProjectsUsingTwisted project using Twisted] at the sprint?
+
+ * [https://pypi.python.org/pypi/crochet Crochet] released [http://blog.futurefoundries.com/2014/04/crochet-120-now-with-better-api.html version 1.2] with an improved interface for calling into Twisted from threads.
+
+== Attendees ==
+
+ * ?
+
+
+== Links ==
+
+People have posted elsewhere about their PyCon sprint experience, maybe?
+
+[http://twistedmatrix.com/highscores/?time=2014-04-01 High scores for Twisted, April 2014]
