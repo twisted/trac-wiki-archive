@@ -89,7 +89,7 @@ There are some additional optional dependencies:
  * gmpy makes Conch a lot faster
  * pywin32 is required for process support on Windows
  * pyserial is required for serial ports
- * pygtk is required for the gtk class of reactors (or pygi or pygobject or something)
+ * pygtk (or pygi or pygobject or something) is required for the gtk class of reactors
  * wxpython is required for wxsupport / wxreactor
  * gadfly, sqlite, pypgsql, psycopg, mysqldb, kinterbasdb (at least one) are required for twisted.enterprise.adbapi
  * SOAPpy is required for Twisted Web's SOAP support
