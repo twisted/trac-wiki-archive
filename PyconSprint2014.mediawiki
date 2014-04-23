@@ -5,7 +5,7 @@ PyCon 2014, hosted in Montréal, held development sprints from April 14 - 17.
 
 == Tickets Closed ==
 
- * [https://twistedmatrix.com/trac/ticket/7089 7089] - optionsForClientTLS, with accompanying updates to [http://twisted.readthedocs.org/en/latest/core/howto/ssl.html Using TLS (née SSL) in Twisted].
+ * ticket:7098 - optionsForClientTLS, with accompanying updates to [http://twisted.readthedocs.org/en/latest/core/howto/ssl.html Using TLS (née SSL) in Twisted].
 
 == Works in Progress ==
 
