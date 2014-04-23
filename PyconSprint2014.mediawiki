@@ -30,7 +30,6 @@ Jean-Paul:
 
 People have posted elsewhere about their PyCon sprint experience, maybe?
 
- * [http://hg.python.org/peps/file/tip/pep-0469.txt PEP 469], ''Migration of dict iteration code to Python 3'', acknowledges “Thanks to the folks at the Twisted sprint table at PyCon for a very
-vigorous discussion of this idea (and several other topics).”
+ * [http://hg.python.org/peps/file/tip/pep-0469.txt PEP 469], ''Migration of dict iteration code to Python 3'', acknowledges “Thanks to the folks at the Twisted sprint table at PyCon for a very vigorous discussion of this idea (and several other topics).”
 
 [http://twistedmatrix.com/highscores/?time=2014-04-01 High scores for Twisted, April 2014]
