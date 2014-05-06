@@ -13,6 +13,7 @@ Both authors and reviewers should be intimately familiar with all requirements o
 For the most part, we'd love for you to jump right in and start writing code!  The code review process should catch any serious problems with your contribution, and the continuous integration system should catch most tricky cross-platform issues.  It's easy to get too caught up in trying to do everything perfectly the first time and never get any code written, so you should usually err on the side of just trying something out rather than waiting for someone to tell you if it's OK.  That being said, there are a few things that you should really be aware of before you write your first line of code:
 
   * Make sure you have a ''clear idea of what work needs doing''.  Write down your idea first; [https://twistedmatrix.com/trac/newticket file a ticket] before you write a patch.  A really good ticket will give a precise description of what needs to change and why it needs changing; it avoids giving precise details of exactly ''how'' the code needs to change, because the patch should supply those details.  A really ''bad'' ticket will say "here is a patch I wrote, apply it".  If you're just getting started with contributing to Twisted, it would be good to find an existing ticket rather than come up with something yourself, so you have an idea how to go through the process before you start making difficult changes.  You'll need to have a good description of your work for other parts of the process as well (the NEWS file, the commit message) which is another reason thinking about what you're trying to do helps.
+    * Note: '''if you're filing a bug because you noticed a regression in [wiki:ReleaseProcess a current pre-release], make sure to mark it as a regression, add it to the release milestone, and to post something to the mailing list as well'''.  It's very important for us to spot regressions before they make it into a final release, so redundant communication is better in this case!
   * Try '''not''' to ''write too much code at once''.  A good change really needs to be be under 1000 lines of diff for a reviewer to be able to deal with it before getting fatigued and missing things.  Really, you should be aiming for things in the neighborhood of 200 lines.  This is for your benefit as well as the reviewer's; we don't want you to spend weeks on a 10,000-line monster of a feature, only to have it rejected because we're not interested in having such a feature at all.
 
 == Authors: Things your branch or patch must contain ==
@@ -70,6 +71,12 @@ Long description (as long as you wish)
 </pre>
 }}}
  * After the change is merged wait for the buildbots to finish running, if there is a regression on a supported builder you should [#Revertingachange revert your merge].
+ * '''If this fix has implications for an ongoing [wiki:ReleaseProcess pre-release in progress]''', please announce it on the mailing list so that the release manager will know.  A change definitely has implications for the release process if:
+  - a pre-release has been issued for which there is no final release
+  - this ticket was a known regression and is now closed, so another pre-release should be issued
+  - this ticket was in the release milestone and is now closed, so another pre-release should be issued
+  - as part of the final review, the reviewer noticed that this is fixing something that could be considered a regression.
+  In general, if there's any doubt, communicate to the mailing list.  The mailing list is fairly low traffic, and so a little extra noise about interesting developments is much better than letting an important fix slip through the cracks.  If you're not sure whether something qualifies as a regression or not, let the release manager know so they can decide.
 
 == Details ==
 
