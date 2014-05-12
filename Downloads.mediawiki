@@ -71,6 +71,9 @@ You probably don't want these unless you have special considerations:
 
 == Signed MD5 & SHA1 Sums ==
 
+md5 sums of the 14.0.0 release are [http://twistedmatrix.com/Releases/twisted-14.0.0-md5sums.txt here].
+sha1 sums of the 14.0.0 release are [http://twistedmatrix.com/Releases/twisted-14.0.0-shasums.txt here].
+
 md5 sums of the 13.2.0 release are [http://twistedmatrix.com/Releases/twisted-13.2.0-md5sums.txt here].
 sha1 sums of the 13.2.0 release are [http://twistedmatrix.com/Releases/twisted-13.2.0-shasums.txt here].
 
