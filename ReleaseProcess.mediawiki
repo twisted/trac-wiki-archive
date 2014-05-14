@@ -35,7 +35,6 @@ To release Twisted, you will need:
  * Permissions to edit the Downloads wiki page
  * Channel operator permissions for `#twisted`
  * Admin privileges for Twisted's PyPI packages
- * Membership of https://launchpad.net/~twisted-dev
  * Contributor status for http://labs.twistedmatrix.com
  * Read The Docs access for the Twisted project
 
@@ -230,10 +229,6 @@ jml
  1. Announce the release
     1. Send a text version of the announcement to: `twisted-python@twistedmatrix.com, python-announce-list@python.org, python-list@python.org, twisted-web@twistedmatrix.com, twisted-jabber@ik.nu`
       * Note: you need to be subscribed to some of those lists to be able to send, like `twisted-jabber@ik.nu`.
-    1. Launchpad;
-      * https://launchpad.net/twisted/main/+addrelease
-        * Include a text version of the announcement and the new entries of the NEWS file
-      * https://launchpad.net/twisted/+announcements
     1. http://labs.twistedmatrix.com
       * Post a web version of the announcements, with links instead of literal URLs
     1. Twitter, if you feel like it
