@@ -21,6 +21,7 @@ By the end of a Twisted release we'll have:
  * Tarballs for Twisted as a whole, and for each of its sub-projects
  * Windows installers for the whole Twisted project
  * Updated documentation (API, howtos & book) on the twistedmatrix.com site
+ * Updated documentation on Read The Docs
  * Updated download links on the twistedmatrix.com site
  * Announcement emails sent to major Python lists
  * Announcement post on http://labs.twistedmatrix.com
@@ -36,6 +37,7 @@ To release Twisted, you will need:
  * Admin privileges for Twisted's PyPI packages
  * Membership of https://launchpad.net/~twisted-dev
  * Contributor status for http://labs.twistedmatrix.com
+ * Read The Docs access for the Twisted project
 
 = Version numbers =
 
@@ -182,12 +184,13 @@ jml
     1. `cd twisted-$RELEASE`
     1. Retrieve the template file (eg. `wget https://raw.github.com/twisted-infra/t-web/master/docs/website-template.tpl`)
     1. `./bin/admin/build-docs . ./website-template.tpl`
-      * If you have latex errors when trying to build the book and retry, don't forget to clean tmp directories which may be leftover in `doc/core/howto`.
+      * This doesn't seem to build the book?
     1. `cp -R doc /tmp/twisted-release/`
  1. Run the `build-apidocs` script to build the API docs (in an export of the release tag) and then upload them (See also [wiki:APIDocs] and #2891).
     1. Copy the `pydoctor` and `www` directories from `twisted-templates-2` into your export.
     1. `./bin/admin/build-apidocs . /tmp/twisted-release/api`
     1. Documentation will be generated in a directory called `/tmp/twisted-release/api`
+ 1. Update the Read The Docs default to point to the release branch (via the [dashboard https://readthedocs.org/projects/twisted/]).
 
 == Distribute ==
 
