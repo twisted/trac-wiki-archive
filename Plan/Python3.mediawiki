@@ -22,7 +22,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
 == Reviewer check list ==
 
   1. Tests pass under 3.3.
-  1. Ported modules were added to list of ported modules in [source:trunk/setup3.py setup3.py]
+  1. Ported modules were added to list of ported modules in [source:trunk/twisted/python/dist3.py twisted/python/dist3.py]
   1. No warnings when running using `-3` mode under Python 2.7.
   1. All non-docstring strings are clearly marked as one of the various string categories (bytes/unicode/identifier/version-dependent).
   1. No use of 'str' except for things that really can differ across versions of Python.
@@ -119,7 +119,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
 == Tips ==
 
   1. Select a module that needs to be ported (make sure there is a ticket, no one else has started it, etc).
-  1. Add the module and its test module(s) to [source:trunk/setup3.py setup3.py]
+  1. Add the module and its test module(s) to [source:trunk/twisted/python/dist3.py twisted/python/dist3.py]
   1. Run [source:trunk/admin/run-python3-tests admin/run-python3-tests], optionally specifying the test modules being ported as additional arguments, if you want to initially run just the new tests.
   1. Fix syntax errors in the test module
     1.  Note that at this point after the syntax errors have been fixed, `twisted.*.test has no attribute <test module that you know exists>` is often the unittest test runner's way of swallowing `ImportError`s (see http://bugs.python.org/issue7559), which can be confirmed by running the module directly and fixing any tracebacks until the module can be imported without `ImportError`s.
@@ -217,6 +217,6 @@ Some further ideas to consider: https://wiki.ubuntu.com/Python/3
 
 === Documentation ===
 
-Documentation potentially requires porting as well.  An individual example (ie, one of the runnable .py files in a ''doc/<project>/examples/'' directory) can be treated much as a module for the purposes of the porting workflow.  One difference, however, is that the example is not added to the list of ported modules in `setup3.py`.
+Documentation potentially requires porting as well.  An individual example (ie, one of the runnable .py files in a ''doc/<project>/examples/'' directory) can be treated much as a module for the purposes of the porting workflow.  One difference, however, is that the example is not added to the list of ported modules in `dist3.py`.
 
 As with the rest of Twisted, the goal for porting documentation should be a version which is compatible with all supported versions of Python (eg, at this time, Python 2.6, Python 2.7, and Python 3.3).
