@@ -14,6 +14,8 @@ For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwa
 [[Image(TSF/SponsorLogos:Dyn_160x80.png, title=Dyn, link=http://dyn.com/)]] 
 
 == Copperhead ==
+[[Image(TSF/SponsorLogos:Pantheon-logo--right-size.png, title=Pantheon, link=http://www.getpantheon.com/)]]
+
 [[Image(TSF/SponsorLogos:SendGrid.png, title=SendGrid, link=http://http://sendgrid.com/)]]
 
 == Aluminum Adder ==
