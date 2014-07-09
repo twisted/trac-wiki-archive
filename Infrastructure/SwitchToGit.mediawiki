@@ -5,7 +5,7 @@
 Changing the repository must still meet the [wiki:WorkflowRequirements workflow requirements].
 
  * Changes to the infrastructure should be made against the [https://github.com/twisted-infra/braid braid repository] (or its sub-modules) so that it can be deployed with `fab`
- * Upgrade Trac:
+ * ~~Upgrade Trac:~~ (Done)
    * It's old and needs Git support for:
      * be able to browse the repository
      * detect ticket references and ticket closures from Git commits messages
