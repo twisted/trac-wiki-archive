@@ -1,7 +1,18 @@
 = EuroPython2014 = 
 
 == Twisted Talks ==
- * 
+ * The Sorry State of SSL
+   * https://ep2014.europython.eu/en/schedule/sessions/4/
+   * http://youtu.be/PJ5vUz9FJcw
+
+ * Conversing with people living in poverty
+   * https://ep2014.europython.eu/en/schedule/sessions/79/
+   * http://youtu.be/Vjslvo8atfw
+
+ * Twisted Names: DNS Building Blocks for Python Programmers
+   * https://ep2014.europython.eu/en/schedule/sessions/127/
+   * http://youtu.be/kuSXK4gNYqw
+   * https://wallrj.github.io/twisted-names-talk/twisted-names-talk-europython-2014.html
 
 
 == Sprint ==
