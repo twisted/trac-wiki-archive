@@ -25,6 +25,7 @@
    * https://twistedmatrix.com/trac/wiki/BasicGuideToContributingCode
    * https://twistedmatrix.com/trac/wiki/GitMirror
    * http://blog.ying.li/2012/03/twisted-development-on-windows-v2.html
+   * How to put tickets up for review: https://twistedmatrix.com/trac/wiki/ReviewProcess
 
  * Easy Tickets
    * Suggestions: 
