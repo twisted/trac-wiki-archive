@@ -41,3 +41,6 @@
 
  * Review Queue
    * https://twistedmatrix.com/trac/report/25
+
+= Attendees = 
+ * Matt Jones
