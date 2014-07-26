@@ -45,3 +45,9 @@
 = Attendees = 
  * Matt Jones (windows development documentation)
  * Niko Cankar (twisted ftp server for functional tests)
+ * Dzianis Shpektarau (#7427, #7457)
+
+= Dinner Options =
+ * We'll head for: http://www.timeout.com/travel/features/1277/neukolln-the-best-bits-of-berlins-hippest-hood
+ * try eating at: http://www.yelp.de/biz/al-andalos-berlin
+ * drinks later at: http://www.thrillist.com/venues/privatbrauerei-am-rollberg
