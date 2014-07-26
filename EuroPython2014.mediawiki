@@ -27,11 +27,15 @@
    * http://blog.ying.li/2012/03/twisted-development-on-windows-v2.html
 
  * Easy Tickets
-   * Suggestions: #6607 (partially implemented), #7352 (twisted names example tests)
+   * Suggestions: 
+     * #6607 (partially implemented), 
+     * #7352 (twisted names example tests)
    * https://twistedmatrix.com/trac/query?status=!closed&keywords=~easy&desc=1&order=id
 
  * Documentation Tickets
-   * Suggestions: #7329,
+   * Suggestions: 
+     * #7329,
+     * #7541 (windows development documentation)
    * https://twistedmatrix.com/trac/query?status=!closed&keywords=~documentation&desc=1&order=id
 
  * Review Queue
