@@ -30,7 +30,7 @@
    * https://twistedmatrix.com/trac/query?status=!closed&keywords=~easy&desc=1&order=id
 
  * Documentation Tickets
-   * Suggestions: <add suggested tickets here>
+   * Suggestions: #7329,
    * https://twistedmatrix.com/trac/query?status=!closed&keywords=~documentation&desc=1&order=id
 
  * Review Queue
