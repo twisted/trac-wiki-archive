@@ -26,7 +26,7 @@
    * https://twistedmatrix.com/trac/wiki/GitMirror
 
  * Easy Tickets
-   * Suggestions: <add suggested tickets here>
+   * Suggestions: #6607 (partially implemented),
    * https://twistedmatrix.com/trac/query?status=!closed&keywords=~easy&desc=1&order=id
 
  * Documentation Tickets
