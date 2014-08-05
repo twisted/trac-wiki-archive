@@ -168,7 +168,7 @@ Here's a simple publish/subscribe server, where clients see all messages posted 
 
 {{{
 #!python
-from twisted.internet import reactor, protocol
+from twisted.internet import reactor, protocol, endpoints
 from twisted.protocols import basic
 
 class PubProtocol(basic.LineReceiver):
@@ -192,7 +192,7 @@ class PubFactory(protocol.Factory):
     def buildProtocol(self, addr):
         return PubProtocol(self)
 
-reactor.listenTCP(1025, PubFactory())
+endpoints.serverFromString(reactor, "tcp:1025").listen(PubFactory())
 reactor.run()
 }}}
 
