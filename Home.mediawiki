@@ -119,7 +119,7 @@ Twisted makes it easy to implement custom network applications. Here's a TCP ser
 
 {{{
 #!python
-from twisted.internet import protocol, reactor
+from twisted.internet import protocol, reactor, endpoints
 
 class Echo(protocol.Protocol):
     def dataReceived(self, data):
@@ -129,7 +129,7 @@ class EchoFactory(protocol.Factory):
     def buildProtocol(self, addr):
         return Echo()
 
-reactor.listenTCP(1234, EchoFactory())
+endpoints.serverFromString(reactor, "tcp:1234", EchoFactory())
 reactor.run()
 }}}
 
