@@ -78,14 +78,28 @@ Participate in the (newly-revamped) [wiki:TwistedSoftwareFoundation#BenefitsofSp
 #!div class="twisted-sponsors"
 
 === Golden Tree Snake ===
-[[Image(TSF/SponsorLogos:critsend_logo.png, title=CritSend, link=http://www.critsend.com/)]]
-=== Silver Sidewinder ===
-[[Image(TSF/SponsorLogos:Dyn_160x80.png, title=Dyn, link=http://dyn.com/)]] 
+{{{
+#!html
+<a href="http://www.critsend.com/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/critsend_logo.png"></a>
 }}}
+=== Silver Sidewinder ===
+{{{
+#!html
+<a href="http://dyn.com/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/Dyn_160x80.png"></a>
+}}}
+}}}
+
 === Bronze Sponsors (under previous program) ===
 
-[[Image(TSF/SponsorLogos:flowroute-logo.gif, title=flowroute, link=http://www.flowroute.com/)]]
-[[Image(TSF/SponsorLogos:found_160x80.png, title=FoundIT, link=http://www.found.no/)]] 
+{{{
+#!html
+<a href="http://www.flowroute.com/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/flowroute-logo.gif"></a>
+}}}
+{{{
+#!html
+<a href="http://www.found.no/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/found_160x80.png"></a>
+}}}
+
 }}}
 }}}
 }}}
