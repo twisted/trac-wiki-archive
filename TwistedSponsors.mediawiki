@@ -14,11 +14,6 @@ For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwa
 == Silver Sidewinder ==
 {{{
 #!html
-<p><a href="http://dreamhost.com/?q=twisted" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/dreamhost.gif"></a></p>
-}}}
-
-{{{
-#!html
 <p><a href="http://dyn.com/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/Dyn_160x80.png"></a></p>
 }}}
 
