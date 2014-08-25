@@ -31,6 +31,11 @@ For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwa
 == Aluminum Adder ==
 {{{
 #!html
+<p><a href="http://www.choosi.com.au/life-insurance/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/Choosi.png"></a></p>
+}}}
+
+{{{
+#!html
 <p><a href="http://www.flowroute.com/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/flowroute-logo.gif"></a></p>
 }}}
 
@@ -38,7 +43,6 @@ For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwa
 #!html
 <p><a href="http://www.found.no/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/found_160x80.png"></a></p>
 }}}
-
 
 Note: Flowroute and Found were Bronze sponsors under Twisted's previous sponsorship policy.  
 
