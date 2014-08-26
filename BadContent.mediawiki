@@ -1,21 +1,21 @@
 {{{
-Online forex trading
-Fire Pit
-Patio Heater
-Slim Fast
-Lose Weight
-Losing Weight
-health supplements
-Weight Loss
-Garcinia
-Facial Cream
-Skin Care
-Anti Aging
-Skin Lotion
-Diabetes
-slim fast
-health care
-Lean Body Mass
-Building Muscle
-Liftderma
+(?i)Online forex trading
+(?i)Fire Pit
+(?i)Patio Heater
+(?i)Slim Fast
+(?i)Lose Weight
+(?i)Losing Weight
+(?i)health supplements
+(?i)Weight Loss
+(?i)Garcinia
+(?i)Facial Cream
+(?i)Skin Care
+(?i)Anti Aging
+(?i)Skin Lotion
+(?i)Diabetes
+(?i)slim fast
+(?i)health care
+(?i)Lean Body Mass
+(?i)Building Muscle
+(?i)Liftderma
 }}}
