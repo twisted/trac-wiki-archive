@@ -87,6 +87,11 @@ Participate in the (newly-revamped) [wiki:TwistedSoftwareFoundation#BenefitsofSp
 #!html
 <a href="http://dyn.com/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/Dyn_160x80.png"></a>
 }}}
+
+{{{
+#!html
+<p><a href="http://www.olark.com/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/official-olark-logo.png"></a></p>
+}}}
 }}}
 
 === Bronze Sponsors (under previous program) ===
