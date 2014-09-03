@@ -17,6 +17,11 @@ For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwa
 <p><a href="http://dyn.com/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/Dyn_160x80.png"></a></p>
 }}}
 
+{{{
+#!html
+<p><a href="http://www.olark.com/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/official-olark-logo.png"></a></p>
+}}}
+
 == Copperhead ==
 {{{
 #!html
