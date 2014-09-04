@@ -90,7 +90,7 @@ Participate in the (newly-revamped) [wiki:TwistedSoftwareFoundation#BenefitsofSp
 
 {{{
 #!html
-<p><a href="http://www.olark.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/official-olark-logo.png"></a></p>
+<p><a href="https://www.olark.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/official-olark-logo.png"></a></p>
 }}}
 }}}
 
@@ -98,11 +98,11 @@ Participate in the (newly-revamped) [wiki:TwistedSoftwareFoundation#BenefitsofSp
 
 {{{
 #!html
-<a href="http://www.flowroute.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/flowroute-logo.gif"></a>
+<a href="https://www.flowroute.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/flowroute-logo.gif"></a>
 }}}
 {{{
 #!html
-<a href="http://www.found.no/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/found_160x80.png"></a>
+<a href="https://found.no/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/found_160x80.png"></a>
 }}}
 
 }}}
