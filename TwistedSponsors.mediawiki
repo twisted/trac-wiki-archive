@@ -8,45 +8,45 @@ For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwa
 === Golden Tree Snake ===
 {{{
 #!html
-<a href="http://www.critsend.com/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/critsend_logo.png"></a>
+<a href="http://www.critsend.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/critsend_logo.png"></a>
 }}}
 
 == Silver Sidewinder ==
 {{{
 #!html
-<p><a href="http://dyn.com/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/Dyn_160x80.png"></a></p>
+<p><a href="http://dyn.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/Dyn_160x80.png"></a></p>
 }}}
 
 {{{
 #!html
-<p><a href="http://www.olark.com/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/official-olark-logo.png"></a></p>
+<p><a href="https://www.olark.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/official-olark-logo.png"></a></p>
 }}}
 
 == Copperhead ==
 {{{
 #!html
-<p><a href="http://www.getpantheon.com/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/Pantheon-logo--right-size.png"></a></p>
+<p><a href="https://www.getpantheon.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/Pantheon-logo--right-size.png"></a></p>
 }}}
 
 {{{
 #!html
-<p><a href="http://sendgrid.com/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/SendGrid.png"></a></p>
-}}}
+<p><a href="http://sendgrid.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/SendGrid.png"></a></p>
+}}} 
 
 == Aluminum Adder ==
 {{{
 #!html
-<p><a href="http://www.choosi.com.au/life-insurance/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/Choosi.png"></a></p>
+<p><a href="http://www.choosi.com.au/life-insurance/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/Choosi.png"></a></p>
 }}}
 
 {{{
 #!html
-<p><a href="http://www.flowroute.com/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/flowroute-logo.gif"></a></p>
+<p><a href="https://www.flowroute.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/flowroute-logo.gif"></a></p>
 }}}
 
 {{{
 #!html
-<p><a href="http://www.found.no/" rel="nofollow"><img src="http://twistedmatrix.com/trac/raw-attachment/wiki/TSF/SponsorLogos/found_160x80.png"></a></p>
+<p><a href="https://www.found.no/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/found_160x80.png"></a></p>
 }}}
 
 Note: Flowroute and Found were Bronze sponsors under Twisted's previous sponsorship policy.  
