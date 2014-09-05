@@ -38,7 +38,13 @@ supported by pywin32 CreateProcess) #6470... maybe needed for Python3
 == adiroiban comment ==
 
 
-* Make ProcessProtocol compatible with IProtocol.... create makeConnection, rename stdoutRecevied to dataReceived, rename processEnded to connectionLost
+* Make ProcessProtocol compatible with IProtocol....
+
+  * create makeConnection
+  * rename stdoutRecevied to dataReceived
+  * rename processEnded to connectionLost
+
+  * rename errReceived to errorReceived
 
 * spawnProcess will always return a deferred... for backward compatibility
   we need to decide a name for this new method which returns a deferred.
