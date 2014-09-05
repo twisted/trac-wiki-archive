@@ -1,10 +1,10 @@
 There are some things over at [https://launchpad.net/divmod.org divmod.org] which I'm pretty sure should be part of Twisted.
 
-The templating system from Nevow - the newest one, without the context, without any deprecated junk, should be imported.  Twisted wants to generate HTML in a few places - error pages, the directory listing - and right now it either gets it wrong or the implementation is a disaster or both.  We should replace them with something based on this templating code.  It should also be generating HTML in a few ''more'' places; like, perhaps an admin UI to allow an admin to instantiate new resources, and I'm pretty sure we are avoiding at least a couple of useful bits of functionality on the basis of how incredibly nasty and difficult it is to generate some simple HTML without adding a mountain of new dependencies (which, of course, wouldn't support Deferreds).
+We already imported Nevow's Deferred-capable templating in `twisted.web.template`.  We should replace all HTML generation with `twisted.web.template`, if any still exists.  It should also be generating HTML in a few ''more'' places; like, perhaps an admin UI to allow an admin to instantiate new resources, and I'm pretty sure we are avoiding at least a couple of useful bits of functionality on the basis of how incredibly nasty and difficult it is to generate some simple HTML without adding a mountain of new dependencies (which, of course, wouldn't support Deferreds).
 
 Sadly, Athena in its current form probably shouldn't be part of Twisted, at least, yet.  While I would like to have some basic HTTP push stuff in Twisted, it's not mature enough, and I'd prefer to avoid maintaining a mountain of JavaScript code.  Any version of Athena that ''would'' be suitable for inclusion in Twisted would have to be vastly simplified at the Javascript layer, probably down to a single static JS file, but then we have to revisit the problem of unit testing it again.  So I'll stop thinking about this now.
 
-The resource model from Nevow, which is slightly more advanced version of the one in web2, should be imported.
+The resource model from Nevow should be imported, with modifications. [ticket:288 One of our oldest tickets] explains some of the requirements for that resource model.
 
 `nevow.guard` is basically just a more advanced version of `twisted.web.guard`, and should be imported, probably after the resource model upgrade.
 
