@@ -1,0 +1,61 @@
+
+This page tries to gather problem with current spawnProcess implementation and then discuss what can be done
+
+= Problems =
+
+* Always return a deferred. #2415
+
+* Provide the option to timeout the execution... and on timeout errback with
+  a dedicated failure #2415
+
+* Add childs to the same process group #2415
+
+* allways errback when failing to spawn (rather than raising OSError) and
+  errback with a different failure when failing to spawn the executable #4184
+
+* on Unix provide a method to install SIGCHLD handler, independent of the
+  general reactor.run() signal handlers. ... maybe related to #5710
+
+* Allow passing Unicode environment (at least on Windows) maybe needed
+for Python3 #5968
+
+* Allow passing Unicode command and arguments on Windows (current not
+supported by pywin32 CreateProcess) #6470... maybe needed for Python3
+#5968
+
+* Improve fork/exec for speed and memory usage #5710 .... maybe by creating
+  a auxiliary process which handles forks and child management.
+
+* Execute as a different account in Windows
+
+* Spawn only after reactor starts ? I am ok with forking before.
+
+* Support client endpoint?
+
+
+= Comments =
+
+== adiroiban comment ==
+
+
+* Make ProcessProtocol compatible with IProtocol.... create makeConnection, rename stdoutRecevied to dataReceived, rename processEnded to connectionLost
+
+* spawnProcess will always return a deferred... for backward compatibility
+  we need to decide a name for this new method which returns a deferred.
+  Maybe createProcess or connectProcess
+
+* create spawnUnixProcess which has childFDs uid/gid
+
+* create spawnWindowsProcess which has Windows specific options
+
+* createProcess / connectProcess will call spawnUnixProcess or
+spawnWindowsProcess
+  depending on current OS
+
+------
+
+I think that child management problem, does not affect the public API so I am
+not discussing it here.
+
+Timeouts are handled at protocol level and I see that we have 2 timeout types:
+total execution time and  timeout after last child data was received.
