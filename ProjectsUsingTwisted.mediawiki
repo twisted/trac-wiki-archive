@@ -61,7 +61,7 @@ Twisted is used by many open-source, academic and commercial projects.
  * [https://launchpad.net/wokkel Wokkel] - Wokkel is collection of enhancements on top of the Twisted networking framework, written in Python. It mostly provides a testing ground for enhancements to the Jabber/XMPP protocol implementation as found in Twisted Words, that are meant to eventually move there.
 
 = Applications =
- * [https://launchpad.net/txopenid txOpenID] - A Twisted OpenID server. txOpenID is an implementation of the OpenID Identity Provider specification, written using Twisted Web and Divmod's Nevow.
+ * [https://github.com/philchristensen/txOpenID txOpenID] - A Twisted OpenID server. txOpenID is an implementation of the OpenID Identity Provider specification, written using Twisted Web and Divmod's Nevow.
  * [http://www.gridspy.co.nz/ Gridspy] - live power monitoring and analysis
  * [http://allmydata.org Tahoe-LAFS] - a secure, decentralized, fault-tolerant filesystem.
  * [http://www.dohop.com dohop.com] - a flight planning web site which searches many other flight databases.
