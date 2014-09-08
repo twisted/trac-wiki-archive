@@ -11,7 +11,7 @@ Twisted is used by many open-source, academic and commercial projects.
  * [http://beepy.sourceforge.net BEEPy] - BEEP protocol implementation for Python.
  * [https://launchpad.net/corotwine Corotwine] - Coroutine-based APIs for Twisted. Corotwine lets you use Twisted with a blocking API.
  * [https://launchpad.net/foolscap foolscap] - A Python library that implements object-capability style secure remote objects.
- * [http://www.inoi.fi/open/trac/ldaptor/ Ldaptor] - LDAP protocol implementation and utilities.
+ * [https://github.com/twisted/ldaptor Ldaptor] - LDAP protocol implementation and utilities.
  * [https://launchpad.net/mutant M.U.T.A.N.T.] - A library for doing test-driven GTK user-interfaces for Twisted programs.
  * [https://launchpad.net/paisley Paisley] - Paisley is a CouchDB client written in Python to be used within a Twisted application.
  * [http://pyamf.org PyAMF] - Python support for the [http://en.wikipedia.org/wiki/Action_Message_Format AMF] format, used for RPC communication with Adobe's Flash Player
