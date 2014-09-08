@@ -61,56 +61,57 @@ Twisted is used by many open-source, academic and commercial projects.
  * [https://launchpad.net/wokkel Wokkel] - Wokkel is collection of enhancements on top of the Twisted networking framework, written in Python. It mostly provides a testing ground for enhancements to the Jabber/XMPP protocol implementation as found in Twisted Words, that are meant to eventually move there.
 
 = Applications =
- * [https://github.com/philchristensen/txOpenID txOpenID] - A Twisted OpenID server. txOpenID is an implementation of the OpenID Identity Provider specification, written using Twisted Web and Divmod's Nevow.
- * [http://www.gridspy.co.nz/ Gridspy] - live power monitoring and analysis
- * [http://allmydata.org Tahoe-LAFS] - a secure, decentralized, fault-tolerant filesystem.
+ * [http://apt-proxy.sourceforge.net apt-proxy2] - caching proxy for Debian apt-get clients.
+ * [http://buildbot.sf.net BuildBot] - a distributed building/testing framework.
+ * [http://cia.navi.cx/ CIA Bot] - notification system, used by many projects for source code checkin notification.
+ * [http://crowsnest.sf.net Crow's Nest] - collect log information from various sources and to apply some filter to them in a very modular way.
+ * [http://twistedmatrix.com/users/acapnotic/wares/code/CVSToys/ CVSToys] - CVS change notification via email, IRC and HTTP.
+ * [http://divmod.org/trac/wiki/DivmodQuotient Quotient] - multi-protocol messaging server with tools for information management and retrieval, including a mail server (SMTP/POP3/IMAP/webmail) and much more.
+ * [http://www.infrae.com/download/DocmaServer DocmaServer] - batch processing server that does Word <-> XML conversion.
  * [http://www.dohop.com dohop.com] - a flight planning web site which searches many other flight databases.
  * [http://home.jongsma.org/software/downpour/ Downpour] - a web-based !BitTorrent client.
- * [http://www.hellanzb.com/trac/ hellanzb] - an application designed for *nix environments that retrieves and processes Usenet nzb files.
- * [http://www.flumotion.net/ Flumotion] - a streaming media server.
- * [http://divmod.org/trac/wiki/DivmodQuotient Quotient] - multi-protocol messaging server with tools for information management and retrieval, including a mail server (SMTP/POP3/IMAP/webmail) and much more.
- * [http://divmod.org/trac/wiki/ShtoomProject Shtoom] - a RTP/SIP VoIP phone.
- * [http://www.fettig.net/projects/hep Hep] - Message routing super-server.
- * [http://sourceforge.net/projects/khashmir Khashmir] - distributed hash table.
- * [http://apt-proxy.sourceforge.net apt-proxy2] - caching proxy for Debian apt-get clients.
- * [http://twistedmatrix.com/users/acapnotic/wares/code/CVSToys/ CVSToys] - CVS change notification via email, IRC and HTTP.
- * [http://www.infrae.com/download/DocmaServer DocmaServer] - batch processing server that does Word <-> XML conversion.
- * [http://homepage.hispeed.ch/py430/python/index.html pyvncviewer] - a simple VNC viewer implemented in Python.
- * [https://launchpad.net/poetry Poetry] - Poetry is a collection of simple command line tools for working with XMPP services. It aims to provide a set of tools similar to tools like dig, curl, and man, but for interacting, configuring, and querying XMPP services.
- * [https://launchpad.net/pymon pymon] - pymon is an open source network and process monitoring solution implemented in Twisted. Both the user interface and the software configuration are designed to be easily and rapidly deployed, saving on time and overhead often associated with other monitoring solutions.
- * [https://launchpad.net/pysms PySMS] - This is a Short Message Server written in python. It provides the possibility to take Messages inserted into a Database and send them over a supported protocols (currently only UCP/EMI) to a SMS Provider.
- * [https://launchpad.net/txloadbalancer txLoadBalancer] - This is a fork of Anthony Baxter's !PythonDirector. It removes all threading and asyncore code, replacing the admin UI and the remaining threading loops with the Twisted-based analogs. It also aims to provide a developer API for those who wish to provide load-balancing services from within their Twisted applications.
- * [http://buildbot.sf.net BuildBot] - a distributed building/testing framework.
- * [http://pythondirector.sf.net PythonDirector] - load balancing for web servers.
- * [http://mithrandr.moria.org/code/ Various libraries] - pcap, SNMP integration, RSS to NNTP gateway, and other programs.
- * [http://upstage.org.nz/ Upstage] - a "cyberperformance" chat system.
  * [http://freevo.sourceforge.net/ Freevo] - open-source home theatre and PVR PC platform.
- * [http://cia.navi.cx/ CIA Bot] - notification system, used by many projects for source code checkin notification.
- * [http://cvs.zope.org/Packages/SFTPGateway/ SFTPGateway] - SFTP to FTP gateway, allowing secure access to FTP servers.
- * [http://www.travishartwell.net/blog/static/informant-index Informant] - GNOME Panel applet for event notification.
- * [http://pypi.python.org/pypi/toursst/0.0.3 TouRSSt] - RSS delivery system.
- * [http://sourceforge.net/projects/pynfo/ Pynfo] - extendable multi-function IRC bot.
- * [http://petmail.lothar.com/ PETMail] - permission based anti-spam replacement for SMTP.
- * [http://crowsnest.sf.net Crow's Nest] - collect log information from various sources and to apply some filter to them in a very modular way.
- * [http://theendmusic.org/programming/MaxJax MaxJax] - a solution for real-time web based control of any open sound control enabled sound synthesis engine.
- * [http://www.spring-alpha.org/svs/index.php?content=about svs] - a framework for supporting collaborative projects that combine coding with other media.
- * [http://sourceforge.net/projects/msngateway/ msn-gateway] - an msn messenger gateway for mobile phones using email and web access.
- * [http://solipsisarchive.netofpeers.net/ Solipsis] - a pure peer-to-peer system for a massively shared virtual world.
+ * [http://www.flumotion.net/ Flumotion] - a streaming media server.
+ * [http://www.gridspy.co.nz/ Gridspy] - live power monitoring and analysis
+ * [http://www.hellanzb.com/trac/ hellanzb] - an application designed for *nix environments that retrieves and processes Usenet nzb files.
+ * [http://www.fettig.net/projects/hep Hep] - Message routing super-server.
  * [http://howie.sourceforge.net/ Howie the Chatterbot] - a conversational AI.
- * [http://meta.wikimedia.org/wiki/CVN/Bots#pgkbot Pgkbot] - a bot for monitoring mediawiki changes.
+ * [http://www.travishartwell.net/blog/static/informant-index Informant] - GNOME Panel applet for event notification.
+ * [http://sourceforge.net/projects/itaka/ Itaka] - an on-demand screen capture server
+ * [https://github.com/jookies/jasmin Jasmin] - Open source SMS gateway
+ * [http://sourceforge.net/projects/khashmir Khashmir] - distributed hash table.
+ * [https://launchpad.net/landscape-client Landscape Client]  - the Ubuntu system management agent that communicates with the Canonical Landscape management service.
+ * [https://launchpad.net/launchpad Launchpad] - Cross-project collaboration for the Open Source world
+ * [http://svn.sat.qc.ca/trac/lunch Lunch] - Simple process launcher for complex distributed setup
+ * [http://theendmusic.org/programming/MaxJax MaxJax] - a solution for real-time web based control of any open sound control enabled sound synthesis engine.
+ * [http://sourceforge.net/projects/msngateway/ msn-gateway] - an msn messenger gateway for mobile phones using email and web access.
  * [http://www.cps-project.org/sections/projects/nxlucene NXLucene] - a standalone multi-threaded Lucene-based text indexing server.
  * [http://code.stanziq.com/palaver Palaver] - multi-user chat for Jabber.
- * [http://zenoss.org/ Zenoss] - open source network/systems monitoring and management
- * [http://sourceforge.net/projects/itaka/ Itaka] - an on-demand screen capture server
- * !WinDictator - Dictate in the MS Windows OS, have the text typed in Linux via X faked keystroke events.
- * [https://launchpad.net/launchpad Launchpad] - Cross-project collaboration for the Open Source world
- * [https://launchpad.net/landscape-client Landscape Client]  - the Ubuntu system management agent that communicates with the Canonical Landscape management service.
- * [http://www.rdbhost.com/ RdbHost] - !RdbHost uses Twisted for a streaming web-server.  The streaming server allows users to stream large SQL 'dump' files to and from the database host using a web browser.
- * [http://toonloop.com Toonloop] - Software suite for performing with live frame by frame animation creation
- * [http://svn.sat.qc.ca/trac/lunch Lunch] - Simple process launcher for complex distributed setup
- * [http://svn.sat.qc.ca/trac/scenic Scenic] - Telepresence software for wide bandwidth networks and oriented toward live performances
+ * [http://petmail.lothar.com/ PETMail] - permission based anti-spam replacement for SMTP.
+ * [http://meta.wikimedia.org/wiki/CVN/Bots#pgkbot Pgkbot] - a bot for monitoring mediawiki changes.
+ * [https://launchpad.net/poetry Poetry] - Poetry is a collection of simple command line tools for working with XMPP services. It aims to provide a set of tools similar to tools like dig, curl, and man, but for interacting, configuring, and querying XMPP services.
  * [http://wiki.dataflow.ws/Purity Purity] - Python library for Pure Data dynamic patching to create audio patches.
+ * [https://launchpad.net/pymon pymon] - pymon is an open source network and process monitoring solution implemented in Twisted. Both the user interface and the software configuration are designed to be easily and rapidly deployed, saving on time and overhead often associated with other monitoring solutions.
+ * [http://sourceforge.net/projects/pynfo/ Pynfo] - extendable multi-function IRC bot.
+ * [https://launchpad.net/pysms PySMS] - This is a Short Message Server written in python. It provides the possibility to take Messages inserted into a Database and send them over a supported protocols (currently only UCP/EMI) to a SMS Provider.
+ * [http://pythondirector.sf.net PythonDirector] - load balancing for web servers.
+ * [http://homepage.hispeed.ch/py430/python/index.html pyvncviewer] - a simple VNC viewer implemented in Python.
+ * [http://www.rdbhost.com/ RdbHost] - !RdbHost uses Twisted for a streaming web-server.  The streaming server allows users to stream large SQL 'dump' files to and from the database host using a web browser.
+ * [http://svn.sat.qc.ca/trac/scenic Scenic] - Telepresence software for wide bandwidth networks and oriented toward live performances
+ * [http://cvs.zope.org/Packages/SFTPGateway/ SFTPGateway] - SFTP to FTP gateway, allowing secure access to FTP servers.
+ * [http://divmod.org/trac/wiki/ShtoomProject Shtoom] - a RTP/SIP VoIP phone.
+ * [http://solipsisarchive.netofpeers.net/ Solipsis] - a pure peer-to-peer system for a massively shared virtual world.
+ * [http://www.spring-alpha.org/svs/index.php?content=about svs] - a framework for supporting collaborative projects that combine coding with other media.
+ * [http://allmydata.org Tahoe-LAFS] - a secure, decentralized, fault-tolerant filesystem.
+ * [http://toonloop.com Toonloop] - Software suite for performing with live frame by frame animation creation
+ * [http://pypi.python.org/pypi/toursst/0.0.3 TouRSSt] - RSS delivery system.
  * [https://bitbucket.org/adroll/turtl/overview Turtl] - HTTP proxy whose purpose is to throttle connections to specific hostnames to avoid breaking terms of usage of those API providers (like del.icio.us, technorati and so on).
+ * [https://launchpad.net/txloadbalancer txLoadBalancer] - This is a fork of Anthony Baxter's !PythonDirector. It removes all threading and asyncore code, replacing the admin UI and the remaining threading loops with the Twisted-based analogs. It also aims to provide a developer API for those who wish to provide load-balancing services from within their Twisted applications.
+ * [https://github.com/philchristensen/txOpenID txOpenID] - A Twisted OpenID server. txOpenID is an implementation of the OpenID Identity Provider specification, written using Twisted Web and Divmod's Nevow.
+ * [http://upstage.org.nz/ Upstage] - a "cyberperformance" chat system.
+ * [http://mithrandr.moria.org/code/ Various libraries] - pcap, SNMP integration, RSS to NNTP gateway, and other programs.
+ * !WinDictator - Dictate in the MS Windows OS, have the text typed in Linux via X faked keystroke events.
+ * [http://zenoss.org/ Zenoss] - open source network/systems monitoring and management
 
 = Games =
  * [http://sourceforge.net/projects/originalgamer OGC] - MUD client.
