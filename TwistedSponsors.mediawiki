@@ -34,10 +34,6 @@ For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwa
 }}} 
 
 == Aluminum Adder ==
-{{{
-#!html
-<p><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/Choosi.png"></p>
-}}}
 
 {{{
 #!html
