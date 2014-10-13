@@ -5,13 +5,7 @@
 Changing the repository must still meet the [wiki:WorkflowRequirements workflow requirements].
 
  * Changes to the infrastructure should be made against the [https://github.com/twisted-infra/braid braid repository] (or its sub-modules) so that it can be deployed with `fab`
- * ~~Upgrade Trac:~~ (Done)
-   * It's old and needs Git support for:
-     * be able to browse the repository
-     * detect ticket references and ticket closures from Git commits messages
-
-   Starting from Trac 1.0, Git is supported out of the box, see http://trac.edgewall.org/wiki/TracGit
-   * See current works on [wiki:Infrastructure/UpgradingTrac upgrading Trac].
+ * ~~Upgrade Trac: (Done)~~
  * The CI system already uses Git. Is there any changes to make here?
  * Port the post-commit hooks from Subversion to Git:
    * IRC announcements from Kenaan
