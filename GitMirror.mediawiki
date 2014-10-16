@@ -100,8 +100,12 @@ Likewise, if you merge from trunk to branch, then `dcommit` the merge, it will b
 
 == git svn merging forward ==
 
+"Merging forward" means rebranching trunk and merging your changes in. It has roughly the same effect as merging in trunk in git. Doing it this way works more reliably with svn.
+
 {{{
 mkbranch $BRANCH_NAME-2
+git fetch
+git checkout $BRANCH_NAME-2
 git merge --squash origin/$BRANCH_NAME
 git commit -m'Merging forward'
 git svn dcommit
