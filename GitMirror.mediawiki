@@ -21,6 +21,7 @@ git clone https://github.com/twisted/twisted Twisted
 {{{
 git config --file Twisted/.git/config --bool --add diff.noprefix true
 }}}
+Note: this can make tools like `magit` work in odd ways.
 
 == Updating your Git clone ==
 
