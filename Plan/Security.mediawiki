@@ -4,20 +4,9 @@ We should come up with some plans to really finish, polish, and document some of
 
 = TLS =
 
-== Short term ==
-
- - #6663: We need to make the cipher suites configurable.
- - #6801: OP_NO_COMPRESSION needs to be set to circumvent CRIME, OP_CIPHER_SERVER_PREFERENCE to force our ciphers on clients.
- - #6799: We need to support DHE to offer PFS.
- - #4888: twisted.web.client.Agent our new web client API has to learn hostname verification for HTTPS URIs.
- - #5446/#6334: For that we need access to a reliable trust store.
- - #6924: Expose dhParameters to string endpoints
-
-== Mid Term ==
-
- -  #6586: Add ECDH, we need to add it too (eg. Windows does no DHE). (and make is pretty as soon as [https://github.com/pyca/pyopenssl/pull/57 PyOpenSSL learns about ECDH] #7033)
+ - #6923: Deprecate outdated SSL context factories
  - #4887: Add SNI (not security-relevant but belongs into a complete TLS framework).
- - #6802: Add OCSP stapling support
+ - #6802: Add OCSP stapling support ([https://www.imperialviolet.org/2014/04/19/revchecking.html maybe not the highest priority])
 
 == Long Term ==
 
