@@ -12,7 +12,7 @@
    * Instant messaging and  IRC - [http://twistedmatrix.com/documents/current/words/howto/ howtos] and [http://twistedmatrix.com/documents/current/words/examples/ examples]
    * Twisted's documentation system - [http://twistedmatrix.com/documents/current/lore/howto/ howtos] and [http://twistedmatrix.com/documents/current/lore/examples/ examples]
  * Twisted Core [http://twistedmatrix.com/documents/current/core/man/ man pages].
- * The complete developer guide in [http://twistedmatrix.com/documents/current/core/howto/book.pdf PDF format].
+ * The complete developer guide in [https://media.readthedocs.org/pdf/twisted/latest/twisted.pdf PDF format].
 
 
 == Third Party Documentation ==
