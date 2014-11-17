@@ -1,0 +1,29 @@
+Twisted currently has two categories of contributors.  Those with commit access and those without commit access.  Those without commit access cannot directly make any changes to Twisted (by definition).  Lacking commit access, they also lack a couple other important permissions: they cannot effectively use buildbot to test their changes (buildbot requires changes to be in the svn repository before it will build them) and they cannot contribute reviews for other non-committers (enforced by social convention).
+
+adiroiban> Is there a wiki page describing what are the steps required for a regular contributor to get [...] write access to the repo?
+
+The current procedure for conversion from non-committer to committer is this:
+
+  0. Contribute to Twisted, demonstrating you can follow the development workflow and both write and review code well.
+  1. Ask for commit access.
+  2. Be given commit access.
+
+The entire process is informal (perhaps not even documented anywhere else).  Step 0 in particular leaves a wide range for interpretation and subjective assessment.  This haphazard process produces similarly haphazard results.  It may also leave contributors feeling lost on their progression towards becoming core Twisted contributors (a vague non-category of people who devote significant, high-quality effort to improving Twisted).  It does this in at least two ways.  First, the initial process of converting from non-committer to committer offers minimal structure and inappropriately underemphasizes the importance and responsibilities of committer access.  Then, it prematurely terminates the contributor's advancement process by defining committer access as the furthest achievable advancement point available to Twisted contributors.
+
+glyph> I think that we should have an official process; the way we do it is pretty arbitrary.  An official advancement process can be a motivator for contributors, as well as a way to more clearly establish community norms.  (I have a feeling if we did have an official process for getting commit access we would actually have more active committers.)
+
+The following is a sketch of an idea for a new process to replace this one.
+
+The central idea of the new process is to outline a group of skill areas where contributors can demonstrate their proficiency.  Contributors who are interested in advancing to roles that carry more responsibilities can record evidence of their skills in these areas and eventually request evaluation from a committee of existing contributors.  If the evidence is deemed compelling then the contributor's responsibilities can officially be expanded to match the skills they have demonstrated.
+
+Some examples of skill areas might include use of Deferreds, writing unit tests, writing prose documentation, writing API documentation, writing examples, fixing regressions, designing public APIs, deprecating old APIs, etc.  Skill at reviewing these types of changes suggests another group of areas.  Basic familiarity with the different domains represented by different parts of Twisted (eg "web" for Twisted Web, SSH and terminals for Twisted Conch, etc) might provide a third area from which to draw skill areas.
+
+The workflow of advancement would differ little from the normal contribution workflow.  A contributor who is interested in expanded responsibilities can choose to keep track of the work they do on Twisted.  For many skill areas, this would involve little more than recording a ticket they worked on, in what capacity they worked on it (wrote code or contributed a review, for example), and in which skill areas they think it demonstrates proficiency.  This recording would be done on a standardized "contributor bingo card" which lays out the skills the Twisted project is interested in and what groupings of them allow advancements of different types (XXX "bingo card" may be a bad metaphor since in a real bingo game everyone's card has a different layout; in this system, everyone would work from a card with the same layout).
+
+Due to the wide range covered by Twisted and the general complexity of developing software, allowing incremental advancement and advancement in different directions would be allowed.  If someone is passionate about Twisted's documentation, they should be able to advance to a role of being a core contributor for Twisted's documentation without demonstrating they understand the wire format of the SSH protocol.  These different roles and the skills they comprise will need to be planned out in order to construct the "bingo card".
+
+When a contributor has collected evidence of each skill area for a role, they will present their card to the Twisted project.  Some number of Twisted contributors who already hold the proposed role will evaluate the evidence and vote on the contributor's advancement.  The rules for the voting process will need to be specified.  Given that the voters are chosen from contributors who have already demonstrated their competence in the area being put to a vote, a small number of voters (perhaps no more than three, perhaps fewer) should be sufficient, though.
+
+As an exercise to determine the feasibility of this process, current core contributors should go through this process - all the way through the voting process.  This will not only help work out bumps in the system but should serve to create examples for new contributors to follow.
+
+Finally, and introducing the main disruption to the existing development process, the results of the votes will need to be tracked.  Ideally this would be done in a way that results in automatic changes to permissions granted to different contributors but in practice something simpler (like a wiki page with a table on it) may be a better starting place.
