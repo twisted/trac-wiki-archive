@@ -26,6 +26,7 @@ Here is the list of roles in progress :
 == General abilities ==
 
 ||= Ability =||= Successful tickets =||
+|| Code cleanup || ||
 || Use of deferreds || #234 #2345 ||
 || Reactors || ||
 || Writing unit tests ||  ||
