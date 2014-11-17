@@ -68,6 +68,8 @@ Here is the list of roles in progress :
 == Review abilities ==
 
 
+* Understanding of the review process
+
 Same list as for general abilities:
 
 * use of Deferreds
