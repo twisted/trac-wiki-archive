@@ -16,6 +16,7 @@ By default, only builds on the trunk branch are displayed.  This can be modified
 
 After logging in, the web interface can be used to trigger new builds.  This is useful during development to test changes on the various platforms and under the various configurations which Twisted considers "supported" (and therefore must have a completely passing ("green") test suite).
 
-Credentials to log in to the web interface are available to any Twisted contributor - just ask on the IRC channel or the mailing.  Note that without SVN commit access, though, it's not possible to test new code (because the code must be committed to an SVN branch before BuildBot will execute it).
+Credentials to log in to the web interface are available to any Twisted contributor, username is **twisted** and password is **matrix**.  Note that without SVN commit access, though, it's not possible to test new code (because the code must be committed to an SVN branch before BuildBot will execute it).
 
 After logging in, the "View" form at the top-right of the "Latest Builds" page will gain a "Force" button.  Enter a branch name and click "Force" in order to trigger a build.  Feel free to do this as often as necessary to successfully implement a change.  Try not to do it more often than necessary, particularly when other developers are trying to test out their changes: build resources are limited and everyone needs to share them.
+
