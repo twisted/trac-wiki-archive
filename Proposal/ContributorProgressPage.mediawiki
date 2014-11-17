@@ -1,0 +1,77 @@
+
+= Contributor NAME/Nickname =
+
+A few optional words introducing the contributor.
+
+
+== Roles status ==
+
+
+
+Here is the list of acquired roles with more than 2 approvals from other developers:
+
+||= Role      =||= Date     =||= Approved by =||
+|| ROLE NAME 1 || DD/MM/YYYY || VOTE_FROM_Z, link to meeting, irc log ||
+|| ROLE NAME 2 || DD/MM/YYYY || VOTE_FROM_Z                           ||
+
+
+
+Here is the list of roles in progress :
+
+||= Role      =||= Date     =||= Approved by =||
+|| ROLE NAME 1 || DD/MM/YYYY || VOTE_FROM_Z ||
+|| ROLE NAME 2 || DD/MM/YYYY || ||
+
+
+== General abilities ==
+
+||= Ability =||= Successful tickets =||
+|| Use of deferreds || #234 #2345 ||
+|| Writing unit tests ||  ||
+|| Writing prose documentation and examples ||  ||
+|| Writing API documentation ||  ||
+|| Fixing regressions / bugs ||  ||
+|| Designing public APIs ||  ||
+|| Deprecating APIs ||  ||
+
+
+== Familiar with twisted parts ==
+
+
+* Web
+
+* Conch SSH / SFTP
+
+* Conch Terminals
+
+* SMTP
+
+* DNS
+
+* IRC
+
+* Test framework - trial
+
+
+== Review abilities ==
+
+
+Same list as for general abilities:
+
+* use of Deferreds
+
+* writing unit tests
+
+* writing prose documentation
+
+* writing API documentation
+
+* writing examples
+
+* fixing regressions/bugs
+
+* designing public APIs
+
+* deprecating old APIs
+
+
