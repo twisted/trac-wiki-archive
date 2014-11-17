@@ -36,18 +36,14 @@ For the most part, we'd love for you to jump right in and start writing code!  T
  * If you are a Twisted committer:
   * Make sure your code is in a branch.
   * Make sure the 'branch' field on the ticket corresponds to the branch where the code is checked in.
-  * Force a build of your branch.  Do this by following these steps:
-    * Go to the [http://buildbot.twistedmatrix.com/boxes-supported?branch=trunk&num_builds=10 Latest Builds] page linked from [http://buildbot.twistedmatrix.com/]
-      * (If you know where the `force-builds.py` script is, you can run it instead, but if you know that, chances are you don't need to read this.)
-    * The username is "twisted" and the password is "matrix"; fill out the form in the upper-left-hand of the page, and log in.  (The only "security" here is to stop spammers from overloading the buildbots by submitting every form; the real security of the buildbot is in the fact that only committers can upload code it will run, so don't worry.)
-    * Look in the upper-right-hand corner of the page; you should see a text area that says "branch".  Type the absolute path of your branch, (such as: `/branches/my-feature-7654`) into that field, and click "force".
-    * Copy the URL of the page you are sent to, and paste it into a comment on your ticket linking the text "build results", like this: `[http://buildbot.twistedmatrix.com/boxes-supported?branch=%2Fbranches%2Fmy-feature-4321 Build Results]`
-    * Make sure that it's green!
+  * [wiki:ContinuousIntegration/DeveloperWorkflow Force a build of your branch]. Make sure that it's **green**!
+
 
 == Reviewers: How to review a change ==
 
  * Be familiar with the Twisted codebase, coding standard, and these review requirements.
  * Don't be the author of the change (See [#Whocanreview below]).
+ * Make sure that it's **green**! [wiki:ContinuousIntegration/DeveloperWorkflow Trigger a build if it was not done yet].
  * Assign the ticket to yourself.
  * Review the change, and write a detailed comment about all potential improvements to the branch (See [#Howtobeagoodreviewer below]).
  * Remove the "review" keyword from the ticket.
