@@ -27,6 +27,7 @@ Here is the list of roles in progress :
 
 ||= Ability =||= Successful tickets =||
 || Use of deferreds || #234 #2345 ||
+|| Reactors || ||
 || Writing unit tests ||  ||
 || Writing prose documentation and examples ||  ||
 || Writing API documentation ||  ||
@@ -44,14 +45,25 @@ Here is the list of roles in progress :
 
 * Conch Terminals
 
+* Use of SSL/TLS
+
+* DB integration
+
+* AMP
+
+* Perspective broker
+
 * SMTP
 
 * DNS
 
 * IRC
 
+* Tunnels And Network Taps
+
 * Test framework - trial
 
+* Twisted Application Framework
 
 == Review abilities ==
 
