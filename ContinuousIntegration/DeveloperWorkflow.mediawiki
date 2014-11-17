@@ -1,0 +1,21 @@
+== Overview
+
+This page gives detailed information about how Continuous Integration (BuildBot) is involved in the overall Twisted development process.
+
+BuildBot provides a web interface (sometimes called the "web status") <https://buildbot.twistedmatrix.com/>.  This interface can be used to view recently results or to trigger new builds.
+
+BuildBot operates automatically in many cases.  It builds every revision of trunk as soon as it is committed.  For feature branches, builds must be triggered explicitly.
+
+== Read Access
+
+"Latest Builds" on the front page is a link to the primary overview page for Twisted.  From the "Latest Builds" (or "boxes-supported") view you can see the results of the last ten (or so) builds done by each builder (for "supported" builders only).  Each builder is given a row in the table.  Each column in the table roughly (but not exactly) corresponds to a particular revision of the code which was built.  Therefore, the common requirement of determining whether the most recent version of the code works on all supported builders (roughly corresponding to "in all supported configurations" or "on all supported platforms") can be satisfied by looking at the leftmost column (excluding the builder label column) to see if it is completely green (indicating success) or not (red indicating failure, purple indicating an internal error, yellow indicating in-progress).
+
+By default, only builds on the trunk branch are displayed.  This can be modified by using the form at the top-right of the page (enter a branch name and you will see results only for that branch).
+
+== Write Access
+
+After logging in, the web interface can be used to trigger new builds.  This is useful during development to test changes on the various platforms and under the various configurations which Twisted considers "supported" (and therefore must have a completely passing ("green") test suite).
+
+Credentials to log in to the web interface are available to any Twisted contributor - just ask on the IRC channel or the mailing.  Note that without SVN commit access, though, it's not possible to test new code (because the code must be committed to an SVN branch before BuildBot will execute it).
+
+After logging in, the "View" form at the top-right of the "Latest Builds" page will gain a "Force" button.  Enter a branch name and click "Force" in order to trigger a build.  Feel free to do this as often as necessary to successfully implement a change.  Try not to do it more often than necessary, particularly when other developers are trying to test out their changes: build resources are limited and everyone needs to share them.
