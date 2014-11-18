@@ -20,3 +20,8 @@ Credentials to log in to the web interface are available to any Twisted contribu
 
 After logging in, the "View" form at the top-right of the "Latest Builds" page will gain a "Force" button.  Enter a branch name and click "Force" in order to trigger a build.  Feel free to do this as often as necessary to successfully implement a change.  Try not to do it more often than necessary, particularly when other developers are trying to test out their changes: build resources are limited and everyone needs to share them.
 
+== Looking At A Ticket
+
+If the “branch” field is populated on a Trac ticket page, several useful links will be derived from it, including "diff" (a plain-text diff), "github" (a link to a pretty comparison of the branch as merged into trunk on github), "buildbot" (a link to the builds for that branch), and "log" (a list of commits the branch comprises in the Trac source browser).  The "branch" field should be populated automatically from a commit hook, but if it's not for some reason, you can manually fix it by editing the "branch" field to contain a value like "`branches/branchname-5000`".
+
+If you click on the "buildbot" link, you'll see the most recent builds for that ticket, and if you are logged in to the buildbot, you can click the "force" button at the top right to force a build for that branch.  This should be easier than manually copying and pasting the branch name.
