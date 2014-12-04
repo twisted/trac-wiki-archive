@@ -1,3 +1,8 @@
+[[PageOutline(1-100,Page Contents,inline)]]
+
+
+= General =
+
 This page collects links to useful pages describing the infrastructure behind twistedmatrix.com.
 
  * #twisted-admin on freenode.
@@ -9,7 +14,11 @@ This page collects links to useful pages describing the infrastructure behind tw
  * [wiki:Infrastructure/UpgradingTrac] - some results of trying upgrading Trac on a test system.
  * [wiki:Infrastructure/SwitchToGit switching to git] - some of the things we'll need to do to switch to Git.
 
-Historical Notes:
+= Historical Notes =
+
  * [wiki:Infrastructure/MovingTrac] - Some notes on setup of trac on cube (some of this hasn't been changed and isn't otherwise documented
  * [wiki:Infrastructure/CubeSetup] - Description of setup of old server
  * [wiki:Infrastructure/EmailMigrationToCube] - Hypothetical notes from an old migration
+
+= Subpages =
+[[TitleIndex(Infrastructure/, depth=0)]]
