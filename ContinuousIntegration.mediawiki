@@ -1,23 +1,31 @@
-=== Software ===
+[[PageOutline]] ¶
+
+
+
+= Software =
 
 Twisted's continuous integration solution is [http://buildbot.net BuildBot].  BuildBot runs the Twisted test suite (as well as a couple other tasks) each time a checkin is made to Twisted trunk (and can be asked to do the same for a branch checkin).  This provides developers with immediate feedback about their change across a wide array of platforms and Python versions.  If a test suite failure is ever reported on any ''supported'' platform by BuildBot, the checkin which introduced it is backed out until the failure can be fixed.
 
-==== Build Slaves ====
+== Build Slaves ==
 
 A build slave is a long-running program that connects to the build master and executes jobs the master sends to it.  A build slave needs to be online almost all of the time.  An offline slave creates uncertainty about whether Twisted trunk is in working order or not.
 
 If you have a host with good availability, [ContinuousIntegration/TestSlaveConfiguration operating a slave] is an easy and helpful way to contribute to Twisted.
 
-=== Configuration ===
+= Configuration =
 
-==== Test Suite ====
+== Test Suite ==
 
 The slaves connecting to Twisted's BuildBot master run in a variety of platforms.  These platforms determine what the ''supported'' configurations of Twisted are.
 
-==== Code Coverage ====
+== Code Coverage ==
 
 As well as running the Twisted test suite, BuildBot also runs coverage reporting tools to generate reports of how much of Twisted is covered by its test suite.  The [wiki:ContinuousIntegration/CoverageSlaveConfiguration configuration] for these slaves is similar to that of normal test slaves, but there are a couple extra dependencies.
 
-==== Documentation ====
+== Documentation ==
 
 BuildBot also generates Twisted's API and howto-style documentation.  These development snapshots are available for people looking for the most bleeding edge Twisted documentation.
+
+= Subpages list =
+
+[[TitleIndex(Infrastructure/, depth=0)]]
