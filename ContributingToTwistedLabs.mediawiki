@@ -1,5 +1,7 @@
 = Contributing To Twisted =
 
+[[PageOutline(1-100,,inline)]]
+
 There are many ways individuals and organizations can make contributions to Twisted.
 
 Many open source projects are perpetually crunched for volunteer labor. Twisted is no different in this respect — we could always use more help from the community.  However, we are lucky to have something that most projects don't: the ability to convert dollars directly into maintenance that benefits the project.
@@ -44,3 +46,9 @@ Donations are [http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation#Back
  * Provide technical support (answer questions on [TwistedCommunity IRC and the mail lists])
  * Provide [wiki:NeededBuildSlaves needed buildslaves]
  * Sign up for a [wiki:ProjectJobs project job]. Help us maintain our buildbot slaves, speed center, Trac instance, version control mirrors, and more.
+
+
+= Wiki Portals =
+
+ * [wiki:Infrastructure]
+ * [wiki:ContinuousIntegration]
