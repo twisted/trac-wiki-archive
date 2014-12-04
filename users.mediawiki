@@ -1,2 +1,2 @@
 = Subpages =
-[[TitleIndex(users/, depth=0)]]
+[[TitleIndex(users, depth=0)]]
