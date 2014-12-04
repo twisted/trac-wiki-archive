@@ -26,7 +26,7 @@ Donations are [http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation#Back
     * [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html SVN Access]
   * Understand the [wiki:ReviewProcess code review process]
   * [http://buildbot.twistedmatrix.com/ Buildbot] is used to automate the build process across platforms and test for breakage. Watch it. 
-    * You'll need to [wiki:UsingBuildbot Use it] before merging a branch.
+    * You'll need to [wiki:ContinuousIntegration/DeveloperWorkflow Use it] before merging a branch.
 
 === [#Explore Explore and Contribute] ===
   * Examine some of the [source:branches current branches]
