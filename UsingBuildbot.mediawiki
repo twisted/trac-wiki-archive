@@ -1,12 +1,1 @@
-== Using Buildbot ==
-
-Always run [http://buildbot.twistedmatrix.com buildbot] against a branch before merging it it trunk. 
-
- 1. Get `force-build`.
-    * `pip install twisted-dev-tools` to get
- 2. Run the script on your branch with `force-build [-b <branch name>] [-t <tests>] [--comment '<Comment>']`
-    * The current branch will be used by default, if you are using a [wiki:GitMirror]
-    * Otherwise, `/branches/` will be added automically, if it is not present.
- 3. Look at the results at the URL `http://buildbot.twistedmatrix.com/boxes-supported?branch=/branches/<branch name>`
-    * This link is printed by `force-build`
-    * The latest trunk build can been viewed at `http://buildbot.twistedmatrix.com/boxes-supported?branch=/trunk`
+See [wiki:ContinuousIntegration/DeveloperWorkflow]
