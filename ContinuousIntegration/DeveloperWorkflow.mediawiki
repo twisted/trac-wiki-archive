@@ -25,3 +25,15 @@ After logging in, the "View" form at the top-right of the "Latest Builds" page w
 If the “branch” field is populated on a Trac ticket page, several useful links will be derived from it, including "diff" (a plain-text diff), "github" (a link to a pretty comparison of the branch as merged into trunk on github), "buildbot" (a link to the builds for that branch), and "log" (a list of commits the branch comprises in the Trac source browser).  The "branch" field should be populated automatically from a commit hook, but if it's not for some reason, you can manually fix it by editing the "branch" field to contain a value like "`branches/branchname-5000`".
 
 If you click on the "buildbot" link, you'll see the most recent builds for that ticket, and if you are logged in to the buildbot, you can click the "force" button at the top right to force a build for that branch.  This should be easier than manually copying and pasting the branch name.
+
+
+== Using Buildbot Helpers
+
+ 1. Get `force-build`.
+    * `pip install twisted-dev-tools` to get
+ 2. Run the script on your branch with `force-build [-b <branch name>] [-t <tests>] [--comment '<Comment>']`
+    * The current branch will be used by default, if you are using a [wiki:GitMirror]
+    * Otherwise, `/branches/` will be added automically, if it is not present.
+ 3. Look at the results at the URL `http://buildbot.twistedmatrix.com/boxes-supported?branch=/branches/<branch name>`
+    * This link is printed by `force-build`
+    * The latest trunk build can been viewed at `http://buildbot.twistedmatrix.com/boxes-supported?branch=/trunk`
