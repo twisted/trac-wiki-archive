@@ -86,6 +86,7 @@ To release Twisted, we
 
  1. Check [http://buildbot.twistedmatrix.com/boxes-supported buildbot] to make sure all supported platforms are green (wait for pending builds if necessary).
  1. If a previously supported platform does not currently have a buildbot, move from supported platforms to "expected to work" in `INSTALL`. (Pending #1305)
+ 1. Clone down the svn branch (eg. `svn co svn+ssh://svn.twistedmatrix.com/svn/Twisted/branches/releases/release-$VERSION-7335 7335`
  1. Run `./bin/admin/change-versions --prerelease`
  1. Commit the changes made by `change-versions`
  1. Run `./bin/admin/build-news .`
