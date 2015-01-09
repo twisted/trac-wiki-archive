@@ -74,12 +74,12 @@ To release Twisted, we
     1. Check the required Python version.
     1. Check that the list matches the current set of buildbots.
     1. Any mistakes should be fixed in trunk before making the release branch
- 1. Choose a version number. Remember to include the 'preN' suffix
+ 1. Choose a version number.
  1. File a ticket
     1. Assign it to the upcoming release milestone
     1. Assign it to yourself
     1. Call it "Release $RELEASE"
- 1. Make a branch (e.g. `mkbranch Twisted releases/release-$RELEASE-4290`)
+ 1. Make a branch (`mkbranch releases/release-$RELEASE-4290`, using mkbranch from twisted-dev-tools)
 
 
 = How to do a pre-release =
