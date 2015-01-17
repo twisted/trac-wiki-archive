@@ -1,0 +1,66 @@
+= Twisted 2015 Maintainer Fellowship =
+== Introduction ==
+Proposed herein is a part-time fellowship for three months as a Maintainer of the Twisted Project.  Development and improvement of Twisted (as with most Open Source and Free Software) is done as a collaborative process between volunteer, corporate, and academic contributors.  A project's Maintainer works to balance the demands, feature requests, and improvement submissions from all parties to shepherd the software in the best direction.
+
+The maintainer will work for 4 hours a week, at US$60/hour. Increased hours or fellowship duration may be possible, especially if community donations increase.
+
+
+== Background ==
+Twisted is one of the most popular Python libraries. It is used in production environments at companies such as Google, Lucasfilm, and Apple, as well a component in various other Open Source and Free Software projects, such as the Launchpad software collaboration platform.  Twisted is also an excellent learning platform to help student  developers go from learning the basics of network programming to being  active contributors to Free Software projects.  Meanwhile, server  implementations in Twisted are the core of numerous other open source  applications, including BuildBot and Tahoe-LAFS.
+ 
+Twisted has long-been a staging ground for new ideas that have made their way into the Python language or influenced the design of servers and networking libraries  across many programming languages.
+ 
+The Twisted community has also been a leader in the Python and greater Open Source and Free Software community for promoting a pro-diversity, friendly, welcoming contributor environment. One example of this leadership is Twisted's partnership with the GNOME Outreach Program for Women, through which one woman learned and practiced the tools of open  source development in a paid Twisted summer internship this summer.
+
+Twisted's developers make all Twisted software available to the public  without charge, under Twisted's Open Source copyright license, the MIT license.  Twisted's license assures that Twisted is equally available to everyone freely on terms that allow both non-commercial and commercial activity.
+
+
+== The Need for a Fellowship ==
+
+Funding a skilled software developer and architect to work as a Maintainer will help Twisted grow as a project, and enable Twisted's develop community to increase their output of innovative code for the public's benefit. 
+
+Twisted has strict coding, testing, documentation, and review standards, which ensures excellent code quality, continually improving documentation and code test coverage, and minimal regressions. Code reviews are historically a bottleneck for getting new code merged.  A funded Maintainer would help alleviate this bottleneck, and speed Twisted's development. 
+
+In addition, a Maintainer can provide leadership and guidance on Twisted's active mailing lists and IRC channels, where developers share information about bugs and address design and implementation questions.  
+
+A Maintainer can also give prompt attention to bug reports and supervise the process for resolving tickets through Twisted's ticket workflow.  This gives developers and users more confidence in Twisted, improves retention of new contributors, and encourages greater adoption.
+
+
+== Work Plan ==
+
+Code review (55%)
+Review code, apply patches, and set and enforce standards for code quality.  Improve documentation and code test coverage.
+
+Mailing list and IRC participation (10%)
+Encourage and participate in discussions on Twisted's mailing lists and IRC channels. 
+
+Bug report triage (5%)
+Supervise Twisted's ticket workflow to ensure that bug tickets are addressed and closed. 
+
+New feature development (30%)
+Serve as architect for the development and implementation of new features.
+
+The Maintainer will provide a monthly written report of their progress to the Conservancy and the Twisted community.
+
+There are also some more specific [wiki:Fellowship2013/Priorities priorities].
+
+== Fellowship Candidate ==
+
+A candidate for the Maintainer fellowship will demonstrate the following:
+
+ * The ability to review code for suitability, stability, and clarity; to point out meritable work, and provide actionable feedback on how to improve the code when necessary.
+ * The ability to implement features in the Twisted library.
+ * A positive presence in Twisted's online community on IRC and the mailing list.
+
+Ideally the Maintainer will also:
+
+ * Have familiarity with the infrastructure of the Twisted project (including trac and buildbot).
+ * Work to provide education or outreach on Twisted in other forums such as workshops, conferences, and user groups.
+
+Conservancy and Twisted are excited to announce the Maintainer Fellowship for Twisted. Candidates for the Twisted Maintainer Fellowship should submit their proposal (including their CV) to:
+{{{
+#!html
+<a href="mailto:twistedfellowship@sfconservancy.org">twistedfellowship@sfconservancy.org</a>
+}}}
+
+The deadline for this initial round of proposals is January 31, 2015.
