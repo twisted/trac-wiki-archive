@@ -109,9 +109,14 @@ However, once you send your patches to the central SVN server with `git svn dcom
 
 Likewise, if you merge from trunk to branch, then `dcommit` the merge, it will become an ordinary commit that doesn't remember its ancestry, and merging it back onto the trunk later is likely to cause grief. So don't do that.
 
-== git svn merging forward ==
+== git svn merging forward / solving conflicts ==
 
-"Merging forward" means rebranching trunk and merging your changes in. It has roughly the same effect as merging in trunk in git. Doing it this way works more reliably with svn.
+"Merging forward" means rebranching trunk and merging your changes in.
+It has roughly the same effect as merging trunk into your branch in git.
+Doing it this way works more reliably with svn.
+
+In case your old branch conflicts with trunk, you will need to create a new branch merge it forward.
+Don't merge trunk into your branch in git using the usual {{{git merge}}} command. This will not fix the conflicts in SVN, but only on your local GIT branch.
 
 {{{
 mkbranch $BRANCH_NAME-2
@@ -121,6 +126,7 @@ git merge --squash origin/$BRANCH_NAME
 git commit -m'Merging forward'
 git svn dcommit
 }}}
+
 
 == git svn branch merging ==
 
