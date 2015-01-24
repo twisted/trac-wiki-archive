@@ -55,11 +55,11 @@ and then attach the patch to the appropriate ticket.
 = For Twisted core developers =
 
 == Creating a complete mirror ==
-To be able to interact with svn, the following commands need to be run in the repository created above.
+To be able to interact with svn, the following commands need to be run in the repository created above, replacing USERNAME with your SVN account name.
 
 {{{
 git svn init --stdlayout --tags tags/releases --prefix origin/  svn://svn.twistedmatrix.com/svn/Twisted/
-git config --add svn-remote.svn.pushurl svn+ssh://svn.twistedmatrix.com/svn/Twisted/
+git config --add svn-remote.svn.pushurl svn+ssh://USERNAME@svn.twistedmatrix.com/svn/Twisted/
 }}}
 
 Twisted does not completely follow the standard SVN repository layout. In particular, there is a "branches/releases" directory that contains more branches (as opposed to being a branch) and a "tags/releases" directory that contains more tags (as opposed to being a tag). Thus, git cannot be used to commit to release branches.   
