@@ -56,7 +56,8 @@ and then attach the patch to the appropriate ticket.
 
 Event if you will use git, you still need to have SVN installed, as at least mkbranch needs it.
 
-Configure SVN SSH transport to know about your SVN username. In {{{~/.subversion/config}}} do:
+Configure SVN SSH transport to know about your SVN username. In {{{~/.subversion/config}}} do
+(changing {{{~/.subversion/servers}}} will not work as those options are only for svn+http) :
 
 {{{
 [tunnels]
