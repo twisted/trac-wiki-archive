@@ -60,11 +60,11 @@ For the most part, we'd love for you to jump right in and start writing code!  T
 <pre class="wiki">
 Merge &lt;branch name&gt;: Brief description
 
-Author: &lt;names&gt;
-Reviewer: &lt;names&gt;
+Author: &lt;comma_separated_names&gt;
+Reviewer: &lt;comma_separated_names&gt;
 Fixes: #&lt;ticket number&gt;
 
-Long description (as long as you wish)
+Optional long description (as long as you wish)
 </pre>
 }}}
  * After the change is merged wait for the buildbots to finish running, if there is a regression on a supported builder you should [#Revertingachange revert your merge].
