@@ -147,4 +147,4 @@ git commit
 git svn dcommit
 }}}
 
-By "Canonical Merge Commit Message Format", I mean the example merge commit message in [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html#auto6 the Working From Twisted's Subversion Repository documentation].
+By "Canonical Merge Commit Message Format", I mean the example merge commit message in [wiki:ReviewProcess#Authors:Howtomergethechangetotrunk the review process].
