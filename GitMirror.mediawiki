@@ -54,6 +54,8 @@ and then attach the patch to the appropriate ticket.
 
 = For Twisted core developers =
 
+Start by reading the [wiki:CommitterCheckList general commiter check list]
+
 Event if you will use git, you still need to have SVN installed, as at least mkbranch needs it.
 
 Configure SVN SSH transport to know about your SVN username. In {{{~/.subversion/config}}} do
