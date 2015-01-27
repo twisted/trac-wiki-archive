@@ -64,7 +64,7 @@ Author: &lt;comma_separated_names&gt;
 Reviewer: &lt;comma_separated_names&gt;
 Fixes: #&lt;ticket number&gt;
 
-Optional long description (as long as you wish)
+Long description (as long as you wish)
 </pre>
 }}}
  * After the change is merged wait for the buildbots to finish running, if there is a regression on a supported builder you should [#Revertingachange revert your merge].
