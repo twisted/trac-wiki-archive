@@ -134,11 +134,17 @@ See [http://bazaar.launchpad.net/~exarkun/twisted-trac-integration/trunk/annotat
 
 Tickets should be described well enough that the change is already justified and the new code should be easy enough to read that further explanations aren't necessary to understand it, but sometimes diffs themselves can be more difficult to read than either the old or new state of the code, so comments like ''the implementation of foo moved from bar.py to baz.py'' can sometimes make a reviewer's job easier.
 
+If you're a committer, please always make sure the "branch" field is current and force a build; this helps decrease review latency if the reviewer can see the diff and build results from the convenient links at the top of the ticket without waiting.
+
 === Who can review? ===
 
 Changes must be reviewed by a developer other than the author of the changes. If changes are paired on, a third party must review them.  If changes constitute the work of several people who worked independently, a non-author must review them.
 
 A reviewer need not necessarily be familiar with the specific area of Twisted being changed, but he or she should feel confident in his or her abilities to spot problems in the change.
+
+Twisted committers may review anyone's tickets; those submitted by other committers or those submitted by non-committer contributors.  If a non-committer contributor submits a ticket that is acceptable to merge, it is the committer's responsibility to commit and merge the branch.  When a committer reviews a ticket, they are responsible if there are any problems with the review.
+
+Non-committer contributors may review tickets which committers have submitted.  When a non-committer views [report:25 review queue], it will ghost the rows submitted by other non-committers so they know not to review those.  When a non-committer does a passing review, the committer may accept it and land their change, but they are then responsible for the adequacy of the review.  So, if a non-committer does a review you feel might be incomplete, put it back into review and explain what they might have missed - this kind of reviewing-the-review is important to make sure that more people learn how to do reviews well!
  
 === How to be a good reviewer ===
 
