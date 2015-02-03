@@ -1,0 +1,14 @@
+= General =
+
+* github: https://github.com/adiroiban
+* Timezone: GMT
+
+
+= Commit rights application =
+
+
+== Contributed patches ==
+
+
+== Reviewed patches ==
+
