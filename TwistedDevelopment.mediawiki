@@ -23,6 +23,29 @@ If you prefer not to use {{{svn}}}, you can use a number of other version contro
 See [wiki:VcsWorkflows DVCS Workflows] for help using Git, Bazaar, and Mercurial to manage local development.
 
 
+=== Creating your work environment ===
+
+Twisted development does not enforce any specific work/build environment.
+
+For your convenience, the setup.py file defined optional components, `dev` component being one of them.
+
+Here is an example of creating an environment using virtualenv.
+{{{
+# Create base environment.
+virtualenv build/
+. build/bin/activate
+
+# Install dev dependencies, also forcing upgrade of existing versions.
+pip install -e -U ".[dev]"
+
+# Use the dev tools.
+./bin/trial twisted.conch.test.test_transport
+twistedchecker twisted.conch.ssh.transport
+pyflakes twisted/conch/ssh/transport.py
+
+}}}
+
+
 === Submitting a Patch ===
 
 Here's a quick step-by-step guide to getting from an idea for an improvement to Twisted to something that we can integrate.  First, I'll explain just the mechanics of getting your code into review, not what the code itself should do.  If you actually want us to be able to use your code, you will also want to read the section below on getting your patch accepted, too!
