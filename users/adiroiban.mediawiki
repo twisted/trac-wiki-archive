@@ -65,6 +65,7 @@ I am interested in the following Twisted components:
 * [ticket:7751] - new-feature, conch-hss
 * [ticket:7702] - deprecation, core
 * [ticket:6395] - deprecation, words
+* [ticket:6494] - cleanup, words
 * [ticket:7144] - refactor, conch-ssh
 * [ticket:7717] - new-feature, conch-ssh
 * [ticket:7672] - new-feature, conch-ssh
