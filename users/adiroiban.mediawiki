@@ -4,11 +4,71 @@
 * Timezone: GMT
 
 
+
 = Commit rights application =
 
+I am using Twisted for implementing file transfer related software.
 
-== Contributed patches ==
+I am interested in the following Twisted components:
+
+* core/internet/TCP/SSL
+
+* FTP
+
+* Conch SSH / SFTP. I also have an experimental embedded custom SCP process. 
+
+* HTTP / HTTPS
+
+* SMTP
+
+* development tools
+
+* documentation / code examples
+
+* python.filepath - but I ended up implementing my own Twisted independent / os independent replacement.
+
+
+
+== In review Contributed patches ==
+
+
+* [ticket:6927] - new-feature, web 
+* [ticket:6933] - new-feature, web
+* [ticket:6951] - new-feature, web
+* [ticket:7715] - examples, conch-ssh
+* [ticket:7016] - refactor, web
+* [ticket:7037] - test-coverage, conch-ssh
+* pyflakes cleanups
+
+
+== Merged Contributed patches ==
+
+There are few but I don't know how to dig for them in Trac ticket reports.
+
+
+* [ticket:6521] - bugfix, core
+* [ticket:5411] - bugfix, ftp
+* [ticket:6284] - bugfix, ftp
+* [ticket:1333] - bugfix, ftp
+* [ticket:4181] - bugfix, ftp
+* [ticket:4986] - bugfix, ftp
+* [ticket:4515] - bugfix, ftp
+* [ticket:4913] - bugfix, ftp
+* [ticket:4930] - test-coverate, ftp
+* [ticket:6956] - cleanup - web
+* [ticket:6892] - cleanup - conch-ssh
+* Pyflakes cleanup series :)
 
 
 == Reviewed patches ==
 
+* [ticket:7697] - new-feature, log
+* [ticket:7539] - new-feature, web
+* [ticket:7751] - new-feature, conch-hss
+* [ticket:7702] - deprecation, core
+* [ticket:6395] - deprecation, words
+* [ticket:7144] - refactor, conch-ssh
+* [ticket:7117] - new-feature, conch-ssh
+* [ticket:7672] - new-feature, conch-ssh
+
+* other cleanups for renaming test method / case names.
