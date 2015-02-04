@@ -43,8 +43,6 @@ I am interested in the following Twisted components:
 
 == Merged Contributed patches ==
 
-There are few but I don't know how to dig for them in Trac ticket reports.
-
 
 * [ticket:6521] - bugfix, core
 * [ticket:5411] - bugfix, ftp
