@@ -68,7 +68,7 @@ There are few but I don't know how to dig for them in Trac ticket reports.
 * [ticket:7702] - deprecation, core
 * [ticket:6395] - deprecation, words
 * [ticket:7144] - refactor, conch-ssh
-* [ticket:7117] - new-feature, conch-ssh
+* [ticket:7717] - new-feature, conch-ssh
 * [ticket:7672] - new-feature, conch-ssh
 
 * other cleanups for renaming test method / case names.
