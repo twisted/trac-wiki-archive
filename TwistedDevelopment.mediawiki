@@ -144,6 +144,8 @@ A Twisted ticket can be of one of three types.
 
   * Regressions are similar to defects, but are for bugs which are introduced into APIs in newer releases of Twisted.  Like defect tickets, regression tickets should have a runnable program attached to demonstrate the problem.
 
+A ticket can have attached the following official tags [wiki:BugKeywords]
+
 There are some UsefulQueries for finding issues in the tracker.
 
 
