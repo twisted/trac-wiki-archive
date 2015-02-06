@@ -100,18 +100,10 @@ After every commit to Twisted, the buildbot runs all the unit tests and reports 
 
 == Runtime and development depenencies ==
 
-Important dependencies:
+Required and optional dependencies are now documented inside the source code [browser:trunk/twisted/python/dist.py] `_EXTRAS_REQUIRE` variable.
 
- * zope.interface
+Some optional dependencies are not yet documented and they are presented here:
 
-There are some additional optional dependencies:
-
- * pycrypto and pyasn1 only need for Conch
- * pyobjc is required for cfreactor
- * pyopnessl for TLS support.
- * gmpy makes Conch a lot faster
- * pywin32 is required for process support on Windows
- * pyserial is required for serial ports
  * pygtk (or pygi or pygobject or something) is required for the gtk class of reactors
  * wxpython is required for wxsupport / wxreactor
  * gadfly, sqlite, pypgsql, psycopg, mysqldb, kinterbasdb (at least one) are required for twisted.enterprise.adbapi
@@ -122,10 +114,6 @@ There are some additional optional dependencies:
 And there are some additional development tools:
 
  * subunit is required for trial's subunit output plugin
- * pyflakes is require to check code for common static errors
- * twistedchecker is required for automated coding standard compliance checks
- * pydoctor is required to generate the api documentation
- * sphinx is required to generate narative documentation
  * cython is required to update iocpreactor and some Failure unit tests
 
 
