@@ -69,5 +69,6 @@ I am interested in the following Twisted components:
 * [ticket:7144] - refactor, conch-ssh
 * [ticket:7717] - new-feature, conch-ssh
 * [ticket:7672] - new-feature, conch-ssh
+* [ticket:7549] - defect, core
 
 * other cleanups for renaming test method / case names.
