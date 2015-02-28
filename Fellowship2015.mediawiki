@@ -1,8 +1,9 @@
 = Twisted 2015 Maintainer Fellowship =
+
 == Introduction ==
 Proposed herein is a part-time fellowship for three months as a Maintainer of the Twisted Project.  Development and improvement of Twisted (as with most Open Source and Free Software) is done as a collaborative process between volunteer, corporate, and academic contributors.  A project's Maintainer works to balance the demands, feature requests, and improvement submissions from all parties to shepherd the software in the best direction.
 
-The maintainer will work for 4 hours a week, at US$60/hour. Increased hours or fellowship duration may be possible, especially if community donations increase.
+The maintainer will work for a minimum 4 hours a week, at US$60/hour. The total funded hours will be 160 hours. Increased funded hours or fellowship may be possible, especially if community donations increase.
 
 
 == Background ==
@@ -28,21 +29,14 @@ A Maintainer can also give prompt attention to bug reports and supervise the pro
 
 == Work Plan ==
 
-Code review (55%)
+Code review (50%)
 Review code, apply patches, and set and enforce standards for code quality.  Improve documentation and code test coverage.
 
-Mailing list and IRC participation (10%)
-Encourage and participate in discussions on Twisted's mailing lists and IRC channels. 
-
-Bug report triage (5%)
-Supervise Twisted's ticket workflow to ensure that bug tickets are addressed and closed. 
-
-New feature development (30%)
-Serve as architect for the development and implementation of new features.
+GitHub switch (50%)
+The maintainer will develop a plan for migration of development to GitHub, and once it has been approved implement the plan.
 
 The Maintainer will provide a monthly written report of their progress to the Conservancy and the Twisted community.
 
-There are also some more specific [wiki:Fellowship2013/Priorities priorities].
 
 == Fellowship Candidate ==
 
@@ -63,4 +57,4 @@ Conservancy and Twisted are excited to announce the Maintainer Fellowship for Tw
 <a href="mailto:twistedfellowship@sfconservancy.org">twistedfellowship@sfconservancy.org</a>
 }}}
 
-The deadline for this initial round of proposals is January 31, 2015.
+The deadline for this initial round of proposals is March 31, 2015.
