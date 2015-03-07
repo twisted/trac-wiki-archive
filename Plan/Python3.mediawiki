@@ -58,7 +58,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
     * twisted.cred
       * checkers (#5808)
       * credentials (#6176)
-    * twisted.trial
+    * twisted.trial (#5966, #7803)
     * twisted.protocols
       * basic (#6025)
       * tls (#5979)
