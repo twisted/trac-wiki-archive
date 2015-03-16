@@ -53,8 +53,8 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
   1. `setup.py` should only install ported modules on Python 3 (#6040, #6096).
   1. Test-driven port of the following modules (some of which may be dependencies of above steps):
     * twisted.application
-      * internet
-      * service
+      * internet (#7817)
+      * service (#7816)
     * twisted.cred
       * checkers (#5808)
       * credentials (#6176)
