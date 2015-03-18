@@ -7,23 +7,20 @@ Twisted's continuous integration solution is [http://buildbot.net BuildBot].  Bu
 
 == Build Slaves ==
 
-A build slave is a long-running program that connects to the build master and executes jobs the master sends to it.  A build slave needs to be online almost all of the time.  An offline slave creates uncertainty about whether Twisted trunk is in working order or not.
+A build slave is a long-running program that **connects itself** to the build master and executes jobs the master sends to it.
+A build slave needs to be online almost all of the time.
+An offline slave creates uncertainty about whether Twisted trunk is in working order or not.
 
 If you have a host with good availability, [ContinuousIntegration/TestSlaveConfiguration operating a slave] is an easy and helpful way to contribute to Twisted.
 
-= Configuration =
+= Builder Configuration =
 
-== Test Suite ==
+* Test Suite - The slaves connecting to Twisted's BuildBot master run in a variety of platforms.  These platforms determine what the ''supported'' configurations of Twisted are.
 
-The slaves connecting to Twisted's BuildBot master run in a variety of platforms.  These platforms determine what the ''supported'' configurations of Twisted are.
+* Code Coverage - As well as running the Twisted test suite, BuildBot also runs coverage reporting tools to generate reports of how much of Twisted is covered by its test suite.  The [wiki:ContinuousIntegration/CoverageSlaveConfiguration configuration] for these slaves is similar to that of normal test slaves, but there are a couple extra dependencies.
 
-== Code Coverage ==
+* Documentation - generates Twisted's API and howto-style documentation.  These development snapshots are available for people looking for the most bleeding edge Twisted documentation.
 
-As well as running the Twisted test suite, BuildBot also runs coverage reporting tools to generate reports of how much of Twisted is covered by its test suite.  The [wiki:ContinuousIntegration/CoverageSlaveConfiguration configuration] for these slaves is similar to that of normal test slaves, but there are a couple extra dependencies.
-
-== Documentation ==
-
-BuildBot also generates Twisted's API and howto-style documentation.  These development snapshots are available for people looking for the most bleeding edge Twisted documentation.
 
 = Subpages list =
 
