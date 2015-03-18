@@ -28,4 +28,4 @@ BuildBot also generates Twisted's API and howto-style documentation.  These deve
 
 = Subpages list =
 
-[[TitleIndex(ContinousIntegration/, depth=0)]]
+[[TitleIndex(ContinuousIntegration/, depth=0)]]
