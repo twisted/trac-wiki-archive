@@ -1,4 +1,4 @@
-[[PageOutline]]
+[[PageOutline(1-100,Page Contents,inline)]]
 
 
 = Software =
