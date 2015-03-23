@@ -91,7 +91,11 @@ Changes must be accompanied by an entry in at least one `topfiles` directory. Th
 
 To get a sense of how the text in these files is presented to users, take a look at [source:trunk/NEWS the real overall news file] and [source:trunk/twisted/web/topfiles/NEWS one of the subproject news files].  The goal when writing the content for one of these files is to produce text that will fit well into the overall news files.
 
-The entry should contain a high-level description of the change suitable for end users. Generally, the grammatical subject of the sentence should be a Python object, and the verb should be something that the object does, prefixed with "now".
+Here are a few which should help you write good news fragments:
+
+* The entry SHOULD contain a high-level description of the change suitable for end users.
+* When the changes touch Python code, the grammatical subject of the sentence SHOULD be a Python class/method/function/interface/variable/etc, and the verb SHOULD be something that the object does. The verb MAY be prefixed with "now".
+* For bugfix, it MAY contain a reference to the version in which the bug was introduced.
 
 Here are some examples:
 
@@ -102,6 +106,19 @@ twisted.protocols.amp now raises InvalidSignature when bad arguments are passed 
 
 {{{
 The new module twisted.internet.endpoints provides an interface for specifying address families separately from socket types.
+}}}
+
+Bugfix:
+{{{
+twisted.internet.ssl.Certificate(...).getPublicKey().keyHash() now produces a stable value regardless of OpenSSL version. Unfortunately this means that it is different than the value produced by older Twisted versions.
+}}}
+
+{{{
+twisted.names.secondary.SecondaryAuthority can now answer queries again (broken since 13.2.0).
+}}}
+
+{{{
+The SSL server string endpoint parser (twisted.internet.endpoints.serverFromString) now constructs endpoints which, by default, disable the insecure SSLv3 protocol.
 }}}
 
 Deprecations:
