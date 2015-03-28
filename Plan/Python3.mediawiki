@@ -56,7 +56,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * internet (#7817)
       * service (#7816)
     * twisted.cred
-      * checkers (#5808)
+      * checkers (#5808, #7834)
       * credentials (#6176)
     * twisted.trial (#5966, #7803)
     * twisted.protocols
@@ -69,7 +69,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * [ticket:5985 address]
       * [ticket:6065 base]
       * [ticket:5947 defer]
-      * endpoints (#6088, #6157)
+      * endpoints (#6088, #6157, #7824)
       * [ticket:5972 error]
       * epollreactor (#6068)
       * [ticket:5974 fdesc]
@@ -92,6 +92,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * [ticket:5932 log]
       * util (#6054, #6158)
       * procutils
+      * [ticket:7831 urlpath]
       * [ticket:6061 randbytes]
     * twisted.protocols
       * [ticket:6833 amp]
