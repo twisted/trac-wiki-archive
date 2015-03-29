@@ -60,7 +60,30 @@ Twisted uses Trac for several things.  It is the project's issue tracker and run
 
 ==== Ticket Spam ====
 
-Anyone can register a new account in trac, and spammers take advantage of this from time to time to file new tickets containing spam or comment on old tickets with spam.  This job is for skimming all new tickets and deleting the ones filed by spammers, as well as deleting the spam account.
+Anyone can register a new account in trac.
+Spammers take advantage of this from time to time to file new tickets containing spam or comment on old tickets with spam.
+This job is for skimming all new tickets and deleting the ones filed by spammers as well as deleting the spam account.
+
+The RSS feeds provided by trac are a useful tool in keeping up with all activity.
+  * New tickets and ticket changes - http://twistedmatrix.com/trac/timeline?ticket=on&ticket_details=on&max=50&daysback=10&format=rss
+  * Wiki changes - http://twistedmatrix.com/trac/timeline?milestone=on&wiki=on&max=50&daysback=90&format=rss
+
+**TODO: How does spam cleanup with spam training in the spam plugin now active?**
+**TODO: Deleting spam accounts 
+
+To delete a spam ticket, visit <https://twistedmatrix.com/trac/admin/ticket/delete>.
+Ticket deletion is permanent.
+Take extreme care when deleting a spam ticket.
+If you accidentally delete a different ticket it can only be recovered from offline backups (if at all).
+Triple check the ticket number before submitting the delete form.
+
+To remove a spam account, visit <https://twistedmatrix.com/trac/admin/accounts/users>
+Mark the checkbox next to the spam account and use the "Remove Selected Accounts" submission button at the bottom.
+
+To be able to use the ticket deletion form, your trac account needs to be granted the `TICKET_ADMIN` permission.
+To be able to use the account removal form, your trac account needs to be granted the `ACCOUNTMGR_USER_ADMIN` permission.
+When you take on this job, ask a trac admin for these permissions.
+When you resign from this job, ask a trac admin to revoke these permissions.
 
 Assigned to: ''unassigned''
 Until: 
