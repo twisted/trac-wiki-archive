@@ -6,6 +6,8 @@ The page is currently organized roughly by the piece of software the jobs most r
 
 See a task you like? Awesome! Send mail to [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python the Twisted mailing list] describing your interest and we'll get you set up.
 
+We encourage you to volunteer for a specified duration.  If you're still having fun with the job when the interval expires, you're welcome to volunteer again - but many of these tasks are tedious and repetitive and we don't want to burn people out on them.  Try rotating from one to another if you continue to have time available to contribute to the project!  And when your stint is over, please try to find a replacement for yourself.
+
 === Mailing Lists ===
 
 There are several Mailman-hosted mailing lists associated with Twisted.  These occasionally require moderation activities.  This job involves reading emails sent by Mailman about list administration tasks and acting on them as necessary.
