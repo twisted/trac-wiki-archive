@@ -69,7 +69,6 @@ The RSS feeds provided by trac are a useful tool in keeping up with all activity
   * Wiki changes - http://twistedmatrix.com/trac/timeline?milestone=on&wiki=on&max=50&daysback=90&format=rss
 
 **TODO: How does spam cleanup with spam training in the spam plugin now active?**
-**TODO: Deleting spam accounts 
 
 To delete a spam ticket, visit <https://twistedmatrix.com/trac/admin/ticket/delete>.
 Ticket deletion is permanent.
