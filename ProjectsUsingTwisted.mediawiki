@@ -41,6 +41,7 @@ Twisted is used by many open-source, academic and commercial projects.
  * [https://launchpad.net/txfigleaftrial txFigleafTrial] - Allows you to use figleaf to generate code coverage reports with twisted.trial.
  * [https://launchpad.net/txfluiddb txFluidDB] - Bindings for the [http://fluidinfo.com FluidDB] HTTP interface.
  * [https://launchpad.net/txgenshi txGenshi] - This project provides a small Twisted/Nevow package for running Genshi templates in the Twisted web framework, Nevow.
+ * [https://github.com/dr4ke616/txGraylog txGraylog] - txGraylog is a Twisted-based client for Graylog servers. It supports multiple interfaces to send log messages to the server including: TCP and UDP (using either plain text or the Gelf protocol)
  * [https://launchpad.net/txjsonrpc txJSON-RPC] - This is the project page for creating Python JSON-RPC servers and clients using the Twisted Networking Engine.
  * [https://launchpad.net/txm txM] - Twisted for microcontrollers. txM aims to provide the Twisted asynchronous network programming idiom for solid-state devices without operating systems via the Python-on-a-chip Python VM.
  * [https://launchpad.net/txmailserver txMailServer] - This project provides a starter mail server written using Twisted.
