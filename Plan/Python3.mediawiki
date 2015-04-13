@@ -15,7 +15,8 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
 == Methodology ==
 
  1. Choose a single module.
-    * You can use https://rawgit.com/mythmon/twisted-py3-graph/master/index.html to identify a good candidate
+    * You can use http://djmitche.github.io/twisted-depgraph/index.html to identify a good candidate; see https://github.com/habnabit/twisted-depgraph to generate an up-to-date version of this graph, if necessary
+    * the raw data comes from `twisted.python.dist3`; consult that file as the authoritative source for what modules have and have not been ported. 
  1. Port the tests carefully; merely importing on Python 3 is insufficient. See the checklist below.
  1. Now that tests are importable, update the code carefully to pass all tests. If there is not full test coverage you may need to either write some tests, or sometimes just not include those parts of code in Python 3. The latter is easier if it's a standalone class.
  1. Deprecated code need not be ported, so if you notice some code that ought to be deprecated, open another ticket for that.
