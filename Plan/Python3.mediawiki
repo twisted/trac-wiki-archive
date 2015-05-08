@@ -116,6 +116,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * static (#6177)
       * server (#6079)
       * util (#6178)
+      * xmlrpc (#7795)
 
   1. [https://rawgit.com/mythmon/twisted-py3-graph/master/index.html A graph with Python 3.3 status]
   1. [milestone:Python-3.x Python 3.3 porting milestone]
