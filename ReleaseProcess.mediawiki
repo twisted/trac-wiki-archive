@@ -173,21 +173,17 @@ jml
 == Update documentation ==
 
  1. Get the dependencies
-    * Pydoctor (use the version from [https://code.launchpad.net/~twisted-dev/pydoctor/twisted-templates-2 lp:~twisted-dev/pydoctor/twisted-templates-2])
-    * [https://launchpad.net/divmod.org Nevow]
+    * Pydoctor (use the branch "twisted" from [https://github.com/twisted/pydoctor])
     * Epydoc (`python-epydoc` in Debian)
-    * Some version of Latex if you didn't use the Epydoc Debian/Ubuntu package or ignored the recommended packages
-    * netpbm (graphics conversion tools used by the book-builder)
  1. In another directory, export the version of Twisted being released
     * e.g. `svn export svn+ssh://svn.twistedmatrix.com/svn/Twisted/tags/releases/twisted-$RELEASE`
  1. Build the documentation
     1. `cd twisted-$RELEASE`
-    1. Retrieve the template file (eg. `wget https://raw.github.com/twisted-infra/t-web/master/docs/website-template.tpl`)
-    1. `./bin/admin/build-docs . ./website-template.tpl`
+    1. `./bin/admin/build-docs .`
       * This doesn't seem to build the book?
     1. `cp -R doc /tmp/twisted-release/`
  1. Run the `build-apidocs` script to build the API docs (in an export of the release tag) and then upload them (See also [wiki:APIDocs] and #2891).
-    1. Copy the `pydoctor` and `www` directories from `twisted-templates-2` into your export.
+    1. Copy the `pydoctor` directory from the twisted branch into your export.
     1. `./bin/admin/build-apidocs . /tmp/twisted-release/api`
     1. Documentation will be generated in a directory called `/tmp/twisted-release/api`
  1. Update the Read The Docs default to point to the release branch (via the [dashboard https://readthedocs.org/projects/twisted/]).
