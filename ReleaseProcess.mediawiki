@@ -20,7 +20,7 @@ If you want to make other changes to the release process, follow the normal Twis
 By the end of a Twisted release we'll have:
  * Tarballs for Twisted as a whole, and for each of its sub-projects
  * Windows installers for the whole Twisted project
- * Updated documentation (API, howtos & book) on the twistedmatrix.com site
+ * Updated documentation (API & howtos) on the twistedmatrix.com site
  * Updated documentation on Read The Docs
  * Updated download links on the twistedmatrix.com site
  * Announcement emails sent to major Python lists
@@ -322,8 +322,6 @@ Sometimes, bugs happen, and sometimes these are regressions in the current relea
  * What bugs should be considered release blockers?
    * Ultimately it's the RM's discretion
  * Should news fragments contain information about who made the changes?
- * A thought for future releases: since we'd really like folks to download the prereleases and try them out, perhaps we should put the [source:trunk/NEWS NEWS] file on the web somewhere official, too, so they can see all the cool stuff they can try out?
-   * '''XXX:''' jml doesn't know what this means any more
 
 = Bugs mentioned on this page =
 
@@ -332,8 +330,6 @@ Sometimes, bugs happen, and sometimes these are regressions in the current relea
  * [ticket:4315 Convenience command for removing news fragments]
  * [ticket:2891 Automate building & uploading API docs for website]
  * [ticket:2380 Automate building & uploading howto docs for website]
- * [ticket:4544 Lore applies quoting to contents of script tags]
- * [ticket:4545 Lore collapses script tags]
 
 = See also =
 
