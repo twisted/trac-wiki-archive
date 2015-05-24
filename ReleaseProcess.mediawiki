@@ -140,6 +140,8 @@ Thanks,
 jml
 }}}
 
+A week is a generally good length of time to wait before doing the final release.
+
 
 = How to do a final release =
 
@@ -300,7 +302,18 @@ If you choose the third option, then you should:
  1. Recreate the tag from the release branch once the fix has been applied to that branch
 
 
-= Examples =
+= Bug fix releases =
+
+Sometimes, bugs happen, and sometimes these are regressions in the current released version. This section goes over doing these "point" releases.
+
+ 1. Ensure all bugfixes are in trunk.
+ 1. Make a branch off the affected version.
+    1. eg. {{{svn cp svn+ssh://svn.twistedmatrix.com/svn/Twisted/branches/releases/release-$API.0-7844  svn+ssh://svn.twistedmatrix.com/svn/Twisted/branches/releases/release-$API.1-7906 -m "Branching to $API.1"}}}
+ 1. Cherry-pick the merge commits that merge the bugfixes into trunk, onto the new release branch.
+ 1. Go through the rest of the process for a full release from "How to do a pre-release", merging the release branch into trunk as normal as the end of the process.
+    1. Instead of {{{--prerelease}}} when running the change-versions script, add the patch flag, making it {{{--patch --prerelease}}}.
+    1. Instead of waiting a week, a shorter pause is acceptable for a patch release.
+
 
 = Open questions =
 
