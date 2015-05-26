@@ -61,6 +61,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * checkers (#5808, #7834)
       * credentials (#6176)
     * twisted.trial (#5966, #7803)
+    * twisted/plugins  (#7915 required for trial)
     * twisted.protocols
       * basic (#6025)
       * tls (#5979)
@@ -152,55 +153,6 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * Python 2.x native (byte) strings will be changed to Python 3.x native (text) strings except where some particular consideration dictates something else.  For example, strings which belong to APIs primarily related to network traffic (ie, strings that come out of or go into sockets) will remain as byte strings.
       * As a consequence, APIs which previously only supported Python 2.x native (byte) strings will be changed on Python 3.x to accept native (text) strings.  Where there does not introduce a new requirement to choose an encoding, arbitrary text will be supported.  Where it does and the choice of encoding is trivially obvious (for example, dealing with a protocol which mandates UTF-8 in an RFC), arbitrary text will be supported.  Where the choice if encoding is not trivially obvious, only ASCII text will be supported.
       * A later porting pass will revisit these ASCII only sites and expand support to include arbitrary text.
-
-  * Running `trial --version` requires the following modules:
-   * twisted
-   * twisted.application
-   * twisted.application.app
-   * twisted.application.reactors
-   * twisted.application.service
-   * [ticket:6040 twisted.copyright]
-   * twisted.internet
-   * [ticket:5947 twisted.internet.defer]
-   * [ticket:6060 twisted.internet.protocol]
-   * twisted.internet.utils
-   * twisted.persisted
-   * twisted.persisted.sob
-   * twisted.persisted.styles
-   * twisted.plugin
-   * twisted.python
-   * [ticket:5877 twisted.python.compat] (#6099)
-   * twisted.python.components
-   * [ticket:5934 twisted.python.context]
-   * twisted.python.deprecate (#5916, #6036)
-   * [ticket:5931 twisted.python.failure]
-   * [ticket:5903 twisted.python.filepath]
-   * [ticket:6342 twisted.python.hashlib]
-   * [ticket:5860 twisted.python.hook]
-   * [ticket:4920 twisted.python._initgroups]
-   * [ticket:5960 twisted.python.lockfile]
-   * [ticket:5932 twisted.python.log]
-   * [ticket:6749 twisted.python.logfile]
-   * twisted.python.modules (#6041, #7804)
-   * [ticket:5896 twisted.python.monkey]
-   * [ticket:6061 twisted.python.randbytes]
-   * [ticket:5897 twisted.python.runtime]
-   * twisted.python.reflect (#5906, #5913, #5914, #6100)
-   * twisted.python.text
-   * [ticket:5860 twisted.python.threadable]
-   * [ticket:7038 twisted.python.usage]
-   * twisted.python.util (#5933, #6054)
-   * [ticket:5917 twisted.python.versions]
-   * [ticket:6039 twisted.python.win32]
-   * [ticket:6917 twisted.python.zippath]
-   * [ticket:5966 twisted.scripts.trial]
-   * twisted.trial
-   * twisted.trial.itrial
-   * [ticket:5964 twisted.trial.reporter]
-   * [ticket:5965 twisted.trial.runner]
-   * twisted.trial.unittest (#5874, #5963, #6033)
-   * twisted.trial.util (#6019)
-   * [ticket:5886 twisted._version]
 
   Ideally we could omit a number of them:
     * `twisted.python.hook` (#5860)
