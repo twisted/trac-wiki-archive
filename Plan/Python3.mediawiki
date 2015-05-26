@@ -61,7 +61,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * checkers (#5808, #7834)
       * credentials (#6176)
     * twisted.trial (#5966, #7803)
-    * twisted/plugins  (#7915 required for trial)
+    * twisted.plugins  (#7915 - required for trial)
     * twisted.protocols
       * basic (#6025)
       * tls (#5979)
@@ -88,6 +88,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * [ticket:6067 threads]
       * tcp (#6002, #6069)
       * udp (#6003, #6023)
+      * [ticket:7874 unix]
     * twisted.python
       * [ticket:5983 components]
       * [ticket:6036 deprecate]
@@ -95,8 +96,9 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * [ticket:5932 log]
       * util (#6054, #6158)
       * procutils
-      * [ticket:7831 urlpath]
       * [ticket:6061 randbytes]
+      * [ticket:7884 sendmsg]
+      * [ticket:7831 urlpath]
     * twisted.protocols
       * [ticket:6833 amp]
       * [ticket:6109 loopback]
@@ -111,6 +113,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * [ticket:6092 hosts]
     * twisted.web
       * client (#6077)
+      * error (#7845)
       * http (#6110)
       * http_headers (#6080, #6082)
       * resource (#6078)
