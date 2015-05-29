@@ -150,3 +150,24 @@ git svn dcommit
 }}}
 
 By "Canonical Merge Commit Message Format", I mean the example merge commit message in [wiki:ReviewProcess#Authors:Howtomergethechangetotrunk the review process].
+
+
+== reverting - reopening ticktes ==
+
+In the unfortunate event of breaking trunk the commit which cause the failure should be reverted as soon as possible and the fix merged in a separate commnit.
+
+Identify the git SHA revision number of the commit which introduce the error and revert that commit.
+
+{{{
+
+git revert a1b2c313
+# Edit the new commit message
+# Then push the changes.
+git svn dcommit
+}}}
+
+As the commit message use the standard format as described in [wiki:ReviewProcess#Revertingachange]
+
+For now the commit message will contain the **SVN ID**.
+The SVN revision ID look for the `git-svn-id` comment from the commit message.
+
