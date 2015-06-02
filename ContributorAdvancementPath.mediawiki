@@ -1,6 +1,6 @@
 == How to Apply for Commit Privileges ==
 
-To request commit privileges, please submit an application to commit@twistedmatrix.com. The application should contain a list of 10 tickets, at least 5 of which are patches you've submitted, and at least 5 of which are code reviews you've done which have been accepted by a committer. At least 2 of your authored patches should have gone all of the way through the review process to be landed. Once you've sent in your application, a group of core contributors will review it and decide whether to grant you commit privileges.
+To request commit privileges, please submit an application to commit@twistedmatrix.com (you must be logged in to trac in order to view this email address). The application should contain a list of 10 tickets, at least 5 of which are patches you've submitted, and at least 5 of which are code reviews you've done which have been accepted by a committer. At least 2 of your authored patches should have gone all of the way through the review process to be landed. Once you've sent in your application, a group of core contributors will review it and decide whether to grant you commit privileges.
 
 The following is an example application using some of glyph's commit history:
 
