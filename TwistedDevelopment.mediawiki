@@ -98,7 +98,7 @@ To generate the API documentation, you will need [https://launchpad.net/pydoctor
 After every commit to Twisted, the buildbot runs all the unit tests and reports [http://buildbot.twistedmatrix.com/ test results on several platforms].  Here is a page showing only the [http://buildbot.twistedmatrix.com/boxes-supported test results on supported platforms]. All tests on supported platforms always pass. Watch the buildbot. Because sometimes, the buildbot watches back.
 
 
-== Runtime and development depenencies ==
+== Runtime and development dependencies ==
 
 Required and optional dependencies are now documented inside the source code [browser:trunk/twisted/python/dist.py] `_EXTRAS_REQUIRE` variable.
 
@@ -164,6 +164,9 @@ This series of documents is designed for people who wish to contribute to the Tw
  * [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html Subversion Development]
 
  * [wiki:ReviewProcess Review Process]
+
+ * [wiki:ContributorAdvancementPath Contributor Advancement Path]
+
 
 == Wiki pages maintenance ==
 
