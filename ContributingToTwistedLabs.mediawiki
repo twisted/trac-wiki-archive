@@ -36,6 +36,7 @@ Donations are [http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation#Back
   * Learn the [wiki:BugKeywords bug keywords]
     * [/query?status=new&status=assigned&status=reopened&keywords=%7Eeasy&order=priority 'Easy' keyword tickets] are low-hanging fruit and good to get your feet wet
   * [wiki:TwistedDevelopment#SubmittingaPatch Submit a Patch] in the  {{{diff -u}}} format by attaching it to an [/report open ticket] in the tracker. You can also create a [/newticket New Ticket] after you have [/register Registered]
+  * Learn how to apply for commit privileges with the [wiki:ContributorAdvancementPath Contributor Advancement Path]
 
 
 == [#OtherWays Other Ways to Contribute] ==
