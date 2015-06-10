@@ -1,0 +1,7 @@
+
+* Administrators: glyph
+* Users: adiroiban
+* hostname:  twisted1.egh.com
+* Intel(R) Core(TM) i7 CPU 870  @ 2.93GHz
+* 16G RAM
+* 350 GB HDD
