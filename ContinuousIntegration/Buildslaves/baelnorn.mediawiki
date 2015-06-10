@@ -23,4 +23,5 @@
 {{{
 # From your system
 ssh -L 5901:localhost:5900 USER@twisted1.egh.com
+# VNC on your local 5901 port ... and ask someone else for VNC credentials
 }}}
