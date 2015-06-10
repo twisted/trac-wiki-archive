@@ -1,3 +1,4 @@
+= General
 
 * Administrators: glyph
 * Users: adiroiban
@@ -5,3 +6,21 @@
 * Intel(R) Core(TM) i7 CPU 870  @ 2.93GHz
 * 16G RAM
 * 350 GB HDD
+
+= Slaves
+
+* bot-glyph-1 - runs directly on the os
+* bot-glyph-6 - runs as KVM
+
+= KVMs
+
+== win7-68bit-1
+
+* win7 64bit
+* KVM - VNC port forwareded on 5900
+* hosting bot-glyph-6
+
+{{{
+# From your system
+ssh -L 5901:localhost:5900 USER@twisted1.egh.com
+}}}
