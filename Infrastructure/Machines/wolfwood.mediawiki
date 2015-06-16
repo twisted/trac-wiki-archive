@@ -4,3 +4,4 @@
 * Hosting the svn/git  and other VCS services
 * Ubuntu 10.04.4 LTS
 * 1G Ram
+* 40G HDD
