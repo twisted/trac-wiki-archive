@@ -1,0 +1,5 @@
+This page is an index for the physical or virtual machines used by the project
+
+
+= Subpages =
+[[TitleIndex(Infrastructure/Machines/, depth=0)]]
