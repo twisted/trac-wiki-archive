@@ -1,0 +1,6 @@
+* hosted by tummy.com
+* root access: hawkowl, glyph, tomprince
+* all Twisted dev/committers have a normal account on it
+* Hosting the svn/git  and other VCS services
+* Ubuntu 10.04.4 LTS
+* 1G Ram
