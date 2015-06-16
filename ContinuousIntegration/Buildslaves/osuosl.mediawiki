@@ -1,0 +1,14 @@
+= General
+
+* Shared OS X 10.6 system managed by OSU Open Source Lab.
+* Contact OSU Open Source Lab support team for low level problems ... via email or irc.
+
+
+= Administration
+
+* Only normal user accounts via SSH keys: adiroiban
+
+
+= Slaves
+
+* osuosl-osx10.6 
