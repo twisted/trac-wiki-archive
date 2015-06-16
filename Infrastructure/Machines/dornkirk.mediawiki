@@ -1,0 +1,7 @@
+* hosted by tummy.com
+* hosting a lot of services.. trac, names, web,  codespeed, diffresource, highscore, buildmaster, etc
+* Ubuntu 12.04.5 LTS
+* root access: hawkowl, glyph, tomprince
+* 15G RAM
+* 2G HDD
+* Intel(R) Xeon(R) CPU E5503  @ 2.00GHz
