@@ -6,7 +6,7 @@
 
 = Administration
 
-* You need OSUOSL VPN access
+* You need OSUOSL VPN access: https://wiki.osuosl.org/supercell/supercell_vpn.html
 * Only normal user accounts via SSH keys: adiroiban
 * host name: ???
 * account name: ???
