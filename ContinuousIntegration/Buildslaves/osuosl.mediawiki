@@ -6,7 +6,10 @@
 
 = Administration
 
+* You need OSUOSL VPN access
 * Only normal user accounts via SSH keys: adiroiban
+* host name: ???
+* account name: ???
 
 
 = Slaves
