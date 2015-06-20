@@ -2,16 +2,18 @@
 
 * Shared OS X 10.6 system managed by OSU Open Source Lab.
 * Contact OSU Open Source Lab support team for low level problems ... via email or irc.
-
+* Intel Xeon (2.26Ghz, 4-core)
+* 24G RAM 
+* 1 x 160G 7.2 SATA
 
 = Administration
 
 * You need OSUOSL VPN access: https://wiki.osuosl.org/supercell/supercell_vpn.html
 * Only normal user accounts via SSH keys: adiroiban
-* host name: ???
-* account name: ???
+* host name: 10.20.0.84 - xserve1
+* account name: twisted
 
 
 = Slaves
 
-* osuosl-osx10.6 
+* osuosl-osx10.6  - use ./start-slave.sh
