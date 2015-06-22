@@ -39,7 +39,7 @@ virtualenv build/
 source build/Scripts/activate
 
 # Install dev dependencies, also forcing upgrade of existing versions.
-pip install -U -e ".[dev]"
+pip install -U -e '.[dev]'
 
 # Use the dev tools.
 ./bin/trial twisted.conch.test.test_transport
