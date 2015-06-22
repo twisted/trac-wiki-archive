@@ -33,10 +33,13 @@ Here is an example of creating an environment using virtualenv.
 {{{
 # Create base environment.
 virtualenv build/
+# For Unix
 . build/bin/activate
+# For windows
+source build/Scripts/activate
 
 # Install dev dependencies, also forcing upgrade of existing versions.
-pip install -e -U ".[dev]"
+pip install -U -e ".[dev]"
 
 # Use the dev tools.
 ./bin/trial twisted.conch.test.test_transport
