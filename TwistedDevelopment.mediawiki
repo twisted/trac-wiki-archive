@@ -44,7 +44,9 @@ pip install -U -e '.[dev]'
 
 # Use the dev tools.
 ./bin/trial twisted.conch.test.test_transport
+# Using the coding standard guidelines validation tool... will get a lot of false positives
 twistedchecker twisted.conch.ssh.transport
+# Static code analysis
 pyflakes twisted/conch/ssh/transport.py
 
 }}}
