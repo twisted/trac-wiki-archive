@@ -37,6 +37,7 @@ virtualenv build/
 . build/bin/activate
 # For windows
 source build/Scripts/activate
+pip install pypiwin32
 
 # Install dev dependencies, also forcing upgrade of existing versions.
 pip install -U -e '.[dev]'
@@ -183,12 +184,6 @@ If you want to edit wiki pages, ask for write permission via one of [wiki:Twiste
 == Win32 development ==
 
 If you want to hack Twisted or just use Twisted SVN on Win32, see Ying Li's [http://blog.ying.li/2012/03/twisted-development-on-windows-v2.html short tutorial on setting up a Twisted win32 development environment].
-
-You will need the pywin32:
-
-{{{
-pip install pypiwin32
-}}}
 
 
 == Twisted Maintenance ==
