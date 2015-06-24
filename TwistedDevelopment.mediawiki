@@ -184,6 +184,12 @@ If you want to edit wiki pages, ask for write permission via one of [wiki:Twiste
 
 If you want to hack Twisted or just use Twisted SVN on Win32, see Ying Li's [http://blog.ying.li/2012/03/twisted-development-on-windows-v2.html short tutorial on setting up a Twisted win32 development environment].
 
+You will need the pywin32:
+
+{{{
+pip install pypiwin32
+}}}
+
 
 == Twisted Maintenance ==
 
