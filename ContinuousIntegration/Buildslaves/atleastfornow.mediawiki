@@ -1,0 +1,12 @@
+= General
+
+* Administrators: hawkowl
+* hostname: atleastfornow.net
+* Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz
+* 2GB RAM
+
+= Slaves
+
+* hawkowl-debian7-py27 (Docker, Python 2.7, Debian 7)
+* hawkowl-debian7-py34 (Docker, Python 3.4, Debian 7)
+* hawkowl-debian8-py27 (Docker, Python 2.7, Debian 8)
