@@ -79,19 +79,20 @@ To release Twisted, we
     1. Assign it to the upcoming release milestone
     1. Assign it to yourself
     1. Call it "Release $RELEASE"
- 1. Make a branch (`mkbranch releases/release-$RELEASE-4290`, using mkbranch from twisted-dev-tools)
+ 1. Make a branch (`mkbranch release-$RELEASE-4290`, using mkbranch from twisted-dev-tools)
 
 
 = How to do a pre-release =
 
  1. Check [http://buildbot.twistedmatrix.com/boxes-supported buildbot] to make sure all supported platforms are green (wait for pending builds if necessary).
  1. If a previously supported platform does not currently have a buildbot, move from supported platforms to "expected to work" in `INSTALL`. (Pending #1305)
- 1. Clone down the svn branch (eg. `svn co svn+ssh://svn.twistedmatrix.com/svn/Twisted/branches/releases/release-$VERSION-7335 7335`
+ 1. In your Git-SVN-enabled Git repo, fetch and check out the new release branch.
  1. Run `./bin/admin/change-versions --prerelease`
  1. Commit the changes made by `change-versions`
  1. Run `./bin/admin/build-news .`
  1. Commit the changes made by `build-news` - this automatically removes the NEWS topfiles (see #4315)
  1. Bump copyright dates in `LICENSE`, `twisted/copyright.py`, and `README` if required
+ 1. `git svn dcommit --dry` to make sure everything looks fine, and then `git svn dcommit` to push up the changes.
  1. Make a temporary directory for the tarballs to live in (e.g. `mkdir /tmp/twisted-release`)
  1. Run `./bin/admin/build-tarballs . /tmp/twisted-release/`
     1. ''Note'': `build-tarballs` does not produce exactly the same output when run multiple times, even when nothing else has changed.  If a problem is encountered that requires `build-tarballs` to be re-run (either during the pre-release or later during the release), care must be taken to avoid releasing two or more '''different''' versions of the tarball.
