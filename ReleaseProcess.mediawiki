@@ -4,7 +4,7 @@
 
 This document describes the Twisted release process. Although it is still incomplete, every effort has been made to ensure that it is accurate and up-to-date. There are plans to eventually move this document into the source tree (#4543).
 
-This process has only been tested on Linux, so we recommend that you do the release on Linux.
+This process has only been tested on Linux or OS X, so we recommend that you do the release on Linux or OS X.
 
 {{{
 #!html
@@ -196,8 +196,7 @@ A week is a generally good length of time to wait before doing the final release
  1. Create a tarball with the contents of the release directory: `cd /tmp/twisted-release; tar -cvjf ../release.tar.bz2 *`
  1. Upload to the official upload locations (see #2888)
     1. `cd ~; git clone https://github.com/twisted-infra/braid`
-    1. `cd braid; git submodule update --init`
-    1. `cd services/t-web/; git checkout release-process; cd ../../`
+    1. `cd braid;`
     1. `virtualenv ~/dev/braid; source ~/dev/braid/bin/activate; cd ~/braid; python setup.py develop;`
     1. `cd ~/braid; fab config.production t-web.uploadRelease:$RELEASE,/tmp/release.tar.bz2`
  1. Test the generated docs
