@@ -115,6 +115,7 @@ Participate in the (newly-revamped) [wiki:TwistedSoftwareFoundation#BenefitsofSp
 = What is Twisted? =
 
 Twisted is an event-driven networking engine written in Python and licensed under the open source [http://www.opensource.org/licenses/mit-license.php MIT license].
+Twisted runs on Python 2 and an ever growing subset also works with Python 3.
 
 == Code Examples ==
 
