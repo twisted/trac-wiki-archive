@@ -42,6 +42,8 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
     * Etc..
   1. `twisted.python.compat` compatibility functions are used, rather than reinventing the wheel.
   1. `_PY3` checks are ideally only done at top of module, e.g. to define alternate helper modules.
+  1. If python 2 code is using an old style class we should always keep it as an old style class in Py2 and have a new style class only in the ported Py3 code.
+
 
 == Details ==
 
