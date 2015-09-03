@@ -85,7 +85,7 @@ With branch-based development, features are only merged to trunk after they have
 
 == Switch Developers Mid-Feature ==
 
-If a developer gets stuck because it turns out that part of a feature is outside his expertise, he can easily put code that he knows is broken into a branch, then indicate that branch to another developer and reassign the ticket, without breaking trunk.
+If a developer gets stuck because it turns out that part of a feature is outside their expertise, they can easily put code that they know is broken into a branch, then indicate that branch to another developer and reassign the ticket, without breaking trunk.
 
 == Provide Useful Progress Information to Management ==
 
