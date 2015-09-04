@@ -61,9 +61,8 @@ The Twisted Project will consider the value of non-monetary donations to the pro
 
 All donations to Twisted are collected by [http://sfconservancy.org Software Freedom Conservancy], a tax-exempt 501(c)(3) organization and the corporate home of the Twisted Project.  Conservancy maintains a restricted account for the Twisted Project's use.  
 
-To donate, you can use the form on the front page at any time to make donations via PayPal or Google.
+If you would like to participate in Twisted's Sponsorship program:  please note that Aluminum Adder sponsorships are accepted only via the PayPal widget below.  For sponsorships of Copperhead and higher, we'd welcome you to contact `accounting@sfconservancy.org` to coordinate payment methods by ACH or wire, so that we can avoid credit card fees and more of your donation can go to work for Twisted!  However, if you prefer PayPal, do feel free to use the PayPal widget to make your donation.  
 
-If you would like to participate in Twisted's Sponsorship program, please use this PayPal widget to submit your donation.
 
 {{{
 #!html
