@@ -97,7 +97,7 @@ Here are a few which should help you write good news fragments:
 * When the changes touch Python code, the grammatical subject of the sentence SHOULD be a Python class/method/function/interface/variable/etc, and the verb SHOULD be something that the object does. The verb MAY be prefixed with "now".
 * For bugfix, it MAY contain a reference to the version in which the bug was introduced.
 
-Here are some examples:
+Here are some examples. Check out the root `NEWS` file for more inspiration.:
 
 Features:
 {{{
@@ -145,7 +145,19 @@ Support for versions of pyOpenSSL older than 0.10 has been removed.
 
 Documentation:
 {{{
-The documentation for `twisted.internet.defer.DeferredSemaphore` now describes the actual usage for `limit` and `tokens` instance attributes.
+The documentation for twisted.internet.defer.DeferredSemaphore now describes the actual usage for `limit` and `tokens` instance attributes.
+}}}
+
+{{{
+The docstring for twisted.conch.ssh.userauth.SSHUserAuthClient is now clearer on how the preferredOrder instance variable is handled.
+}}}
+
+{{{
+twisted.mail.alias now has full API documentation.
+}}}
+
+{{{
+The howto document page of Deferred now has documentation about cancellation.
 }}}
 
 
