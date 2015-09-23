@@ -5,7 +5,7 @@ We want to continue to invest in and improve Twisted -- for the benefit of our u
 
 For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship here].
 
-=== Golden Tree Snake ===
+== Golden Tree Snake ==
 
 
 == Silver Sidewinder ==
