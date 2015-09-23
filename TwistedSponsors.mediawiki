@@ -14,18 +14,15 @@ For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwa
 == Silver Sidewinder ==
 {{{
 #!html
-<p><a href="http://dyn.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/Dyn_160x80.png"></a></p>
-}}}
-
-{{{
-#!html
-<p><a href="https://www.olark.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/official-olark-logo.png"></a></p>
-}}}
-
-{{{
-#!html
 <p><a href="https://www.variomedia.de/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/Variomedia-rescaled.png"></a></p>
 }}}
+
+{{{
+#!html
+<p><a href="https://www.atlassian.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/Atlassian-hipchat-logo.png"></a></p>
+}}}
+
+
 == Copperhead ==
 {{{
 #!html
