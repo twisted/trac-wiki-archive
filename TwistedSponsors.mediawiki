@@ -41,14 +41,8 @@ For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwa
 
 {{{
 #!html
-<p><a href="https://www.flowroute.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/flowroute-logo.gif"></a></p>
+<p><a href="http://www.videdressing.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/videdressing-logo-160x40.jpg"></a></p>
 }}}
 
-{{{
-#!html
-<p><a href="https://www.found.no/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/found_160x80.png"></a></p>
-}}}
-
-Note: Flowroute and Found were Bronze sponsors under Twisted's previous sponsorship policy.  
 
 For information on Twisted's founding sponsors, click [wiki:TSF/FoundingSponsors here].
