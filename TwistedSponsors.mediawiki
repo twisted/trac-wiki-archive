@@ -6,10 +6,7 @@ We want to continue to invest in and improve Twisted -- for the benefit of our u
 For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship here].
 
 === Golden Tree Snake ===
-{{{
-#!html
-<a href="http://www.critsend.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/critsend_logo.png"></a>
-}}}
+
 
 == Silver Sidewinder ==
 {{{
@@ -24,15 +21,7 @@ For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwa
 
 
 == Copperhead ==
-{{{
-#!html
-<p><a href="https://www.getpantheon.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/Pantheon-logo--right-size.png"></a></p>
-}}}
 
-{{{
-#!html
-<p><a href="http://sendgrid.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/SendGrid.png"></a></p>
-}}} 
 
 == Aluminum Adder ==
 
