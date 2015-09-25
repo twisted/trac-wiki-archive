@@ -20,27 +20,13 @@ See the [wiki:TwistedAdvantage TwistedAdvantage].
 
 Did you check the [wiki:Documentation HOWTO collection]? There are so many documents there that they might overwhelm you... try starting from the index, reading through the overviews and seeing if there seems to be a chapter which explains what you need to. You can try reading the !PostScript or PDF formatted books, inside the distribution. And, remember, the source will be with you... always.
 
-=== Why are there so many parts and subprojects? Isn't Twisted just Twisted? ===
-
-As of version 2.0, Twisted was split up into many subprojects, because it was getting too much to handle in a monolithic release, and we believe breaking the project into smaller chunks will help people understand the things they need to understand (There used to be a FAQ entry here asking Why is Twisted so big?).
-
 === How big is Twisted? ===
 
-As of Twisted 12.2, the source release archive of Twisted is 2.8MB.  This is about the same as the size of Twisted when installed as a zipfile.  Installed normally, uncompressed, Twisted is a bit larger - about 12MB.
-
-=== Why did the version number go from 2.5 to 8.x? ===
-
-Twisted has moved to a date based version number scheme.  The major version number now indicates the year the release was made in.  So all releases made in 2008 are 8.x, all releases in 2009 will be 9.x and so on.
-
-This is similar to, but less confusing than, Ubuntu's date based versioning scheme of {{{YEAR.MONTH}}}.  The Twisted versions still counts up from 0 for the minor number and patches.
+As of Twisted 15.4, the source release archive of Twisted is about 3MB. Installed normally, uncompressed, Twisted is a bit larger - about 12MB.
 
 === Which parts of Twisted are stable? ===
 
 In general, everything which is part of a Twisted release is stable.  See CompatibilityPolicy for details.
-
-=== Should I use Twisted Web2? ===
-
-What's that?
 
 === Why doesn't Twisted follow PEP 8? ===
 
@@ -48,39 +34,19 @@ Twisted does follow much of PEP 8 (as is documented in the [http://twistedmatrix
 
 == Installation ==
 
-=== I run mktap (from site-packages/twisted/scripts/mktap.py) and nothing happens! ===
-
-Don't run scripts out of {{{site-packages}}}. The Windows installer should install executable scripts to someplace like {{{C:\Python25\scripts\}}}, *nix installers put them in {{{$PREFIX/bin}}}, which should be in your {{{$PATH}}}.
-
-=== Why do the Debian packages for Alphas and Release Candidates have weird versions containing old version numbers? ===
-
-An example: 1.0.6+1.0.7rc1-1
-
-In Debian versioning, 1.0.7rc1 is greater than 1.0.7. This means that if you install a package with Version: 1.0.7rc1, and then that package gets a new version 1.0.7, apt will not upgrade it for you, because 1.0.7 looks like an older version. So, we prefix the previous version to the actual version. 1.0.6+1.0.7rc1 is less than 1.0.7. 
-
-=== Why am I getting !ImportErrors for Twisted subpackages on OS X 10.5? ===
-
-OS X 10.5 comes with a partial installation of Twisted.  This version is found first by Python and will hide any other version of Twisted you install.  In order to use a different version of Twisted, you need to modify your `PYTHONPATH` environment variable so that the location of the alternate install (`/Library/Python/2.5/site-packages/`) is inspected first.
-
 === Why am I getting !ImportErrors for Twisted subpackages on my 64bit installation of RedHat/Fedora/CentOS? ===
 
 Red Hat and derived Linux distributions arrange to have certain Python libraries installed in {{{/usr/lib/}}} and other parts installed in {{{/usr/lib64/}}}.  This is problematic for Twisted, since it results in some of Twisted being installed in one directory and the rest installed in another.  Python will load a package from only one directory.  You can override this default behavior when you install Twisted by supplying the {{{--install-lib}}} parameter when running Twisted's {{{setup.py}}}.
 
-=== Why am I getting a "Python does not appear to be installed" error message on Windows? ===
-
-Twisted requires a 32-bit version of Python for Windows. Using a 64-bit version of Python will result in this error message.
-
 === Can I install Twisted using easy_install or pip? ===
 
-Yes, Twisted can be installed both using pip and easy_install.
-
-Please note though that currently only easy_install with a local source directory [http://buildbot.twistedmatrix.com/builders/debian-easy-py2.6-epoll is part] of Twisted’s CI system so that other ways aren’t officially supported.
+Yes, Twisted can be installed both using pip and easy_install, although pip is recommended.
 
 == Core Twisted ==
 
 === Why does Twisted depend on Zope? ===
 
-Actually, Twisted depends on [http://www.zope.org/Products/ZopeInterface Zope Interface], an interface package which is also packaged and distributed independently from the main Zope distribution.  Twisted uses Zope Interface to define and document APIs. Packages are available for all major operating systems.
+Twisted only depends on [http://www.zope.org/Products/ZopeInterface Zope Interface], an interface package which is also packaged and distributed independently from the main Zope distribution.  Twisted uses Zope Interface to define and document APIs. Packages are available for all major operating systems.
 
 === How can I access self.factory from my Protocol's !__init!__? ===
 
@@ -322,10 +288,6 @@ You have 3 options:
 === Twisted really needs documentation for X, Y or Z - how come it's not documented?. ===
 
 Twisted's documentation is a work in progress, and one that we would appreciate assistance with. If you notice a gap or flaw in the documentation, please file a bug in the [http://twistedmatrix.com/trac/report Twisted issue tracker] and mark it as having topic 'documentation'. Patches appreciated. Unit tests even more so.
-
-=== Wow the Twisted documentation is nice! I want my docs to look like that too! ===
-
-Now you can, with [wiki:TwistedLore Lore].
 
 == Communicating with us ==
 
