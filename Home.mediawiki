@@ -72,7 +72,7 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 
 = [wiki:TwistedSponsors Twisted Sponsors] =
 
-Participate in the (newly-revamped) [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship Twisted Project Sponsorship Program]! For [wiki:TwistedSoftwareFoundation#SponsorshipLevels Silver Sidewinder and higher-level] sponsors, we will display your logo here on the front page for one year.  
+Participate in the [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship Twisted Project Sponsorship Program]! For [wiki:TwistedSoftwareFoundation#SponsorshipLevels Silver Sidewinder and higher-level] sponsors, we will display your logo here on the front page for one year.  
 
 {{{
 #!div class="twisted-sponsors"
