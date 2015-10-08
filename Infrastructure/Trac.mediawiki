@@ -1,6 +1,25 @@
-{{{
-#!rst
-
 This page documents the Trac deployment for the Twisted project.
 
-}}}
+Trac admins:
+
+* adiroiban
+* glyph
+* posita
+
+
+Only members of GROUP ???? can edit the wiki pages.
+
+
+= Fighting spam =
+
+https://twistedmatrix.com/trac/admin/spamfilter/monitor
+
+The way this page works is, these are _copies_ of things that happened on the site, the spam filter just treats them as blobs of text so this is a view of a queue of spam-filter events, and you are supposed to drain it ("delete" the items in it)
+
+You can delete an item as spam, ham, or neither
+
+If you post something to the site, and get rejected from the spam filter, go into this UI, check your post, "delete selected as ham", and try again
+
+Mistakes are very expensive on this page so be careful :)
+
+Free to "delete selected as spam" if you see obvious spam (and most of our spam is exceedingly obvious)
