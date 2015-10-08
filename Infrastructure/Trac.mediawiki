@@ -5,7 +5,7 @@ Trac admins:
 * adiroiban
 * glyph
 * posita
-
+* MANY OHTERS
 
 Only members of GROUP ``wiki_editors`` can edit the wiki pages.
 
