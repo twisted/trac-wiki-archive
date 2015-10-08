@@ -7,7 +7,7 @@ Trac admins:
 * posita
 
 
-Only members of GROUP ???? can edit the wiki pages.
+Only members of GROUP ``wiki_editors`` can edit the wiki pages.
 
 
 = Fighting spam =
