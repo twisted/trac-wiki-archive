@@ -14,4 +14,6 @@ Changing the repository must still meet the [wiki:WorkflowRequirements workflow 
  * [ticket:7035 Port the release scripts from Subversion to Git: #7035]
  * [ticket:7036 Port twisted.python.versions to use Git: #7036]
  * Is there any need to have a Git mirror on the same machine as Trac?
-   * we don't want our release repository on the same machine running the website.  (code.twistedmatrix.com has a much smaller attack surface)
+   * we don't want our release repository on the same machine running the website.
+    * (code.twistedmatrix.com has / should have a much smaller attack surface)
+    * a note on security: we can't upgrade the OS on code.twistedmatrix.com because we have never managed to successfully upgrade SVN versions.  However, Git is much less sensitive to version upgrades (as a DVCS where people could be using wildly divergent versions it kind of has to be) so we should be able to upgrade immediately once Subversion is turned off.  So this migration should be a big net benefit to locking down the VCS.
