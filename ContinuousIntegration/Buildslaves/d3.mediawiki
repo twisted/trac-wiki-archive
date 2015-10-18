@@ -1,0 +1,4 @@
+= General =
+
+* d3 is a mac builder
+* hostname: twisted2.egh.com
