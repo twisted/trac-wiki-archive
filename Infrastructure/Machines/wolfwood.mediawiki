@@ -1,3 +1,4 @@
+* base name: code.twistedmastrix.com
 * hosted by tummy.com
 * root access: hawkowl, glyph, tomprince
 * all Twisted dev/committers have a normal account on it
