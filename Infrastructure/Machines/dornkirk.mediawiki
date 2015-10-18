@@ -1,7 +1,8 @@
+* base name: twistedmatrix.com
 * hosted by tummy.com
-* hosting a lot of services.. trac, names, web,  codespeed, diffresource, highscore, buildmaster, etc
+* hosting a lot of services.. trac, names, web, codespeed, highscore, buildmaster, etc
 * Ubuntu 12.04.5 LTS
-* root access: hawkowl, glyph, tomprince
+* root access as root: hawkowl, glyph, tomprince, adiroiban
 * 15G RAM
 * 2G HDD
 * Intel(R) Xeon(R) CPU E5503  @ 2.00GHz
