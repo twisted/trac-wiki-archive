@@ -88,6 +88,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * [ticket:6060 protocol]
       * reactor
       * selectreactor (#5979, #6068)
+      * [ticket:8099 serialport]
       * [ticket:6142 ssl]
       * task (#5979, #6052)
       * [ticket:6067 threads]
