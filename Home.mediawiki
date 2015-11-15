@@ -14,10 +14,6 @@
 
  * [[ProjectVersion(https://pypi.python.org/packages/source/T/Twisted/Twisted-%(base)s.tar.bz2 Twisted %(base)s tar.bz2)]]
 
-== Windows (32-bit) ==
-
- * [[ProjectVersion(https://pypi.python.org/packages/2.7/T/Twisted/Twisted-%(base)s.win32-py2.7.msi Twisted %(base)s for Python 2.7)]]
-
 == Other ==
 
  * [wiki:Downloads More downloads]
