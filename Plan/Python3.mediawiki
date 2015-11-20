@@ -57,7 +57,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       1. Get the non-reactor parts passing their own tests on [http://www.python.org/download/releases/3.3.0/ Python 3.3]
     1. Test-driven port of the dependencies of the reactor features of trial
     1. Test-driven port of the reactor features of trial
-  1. `setup.py` should only install ported modules on Python 3 (#6040, #6096).
+  1. `setup.py` should only install ported modules on Python 3 (#6040, #6096, #7995).
   1. Test-driven port of the following modules (some of which may be dependencies of above steps):
     * twisted.application
       * internet (#7817)
@@ -65,7 +65,9 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
     * twisted.cred
       * checkers (#5808, #7834)
       * credentials (#6176)
-    * twisted.trial (#5966, #7803, #5965, #5964, #7813)
+    * twisted.conch.ssh
+      * keys (#7998)
+    * twisted.trial (#5966, #7803, #5965, #5964, #7813, #8025)
     * twisted.plugins  (#7915 - required for trial)
     * twisted.protocols
       * basic (#6025)
@@ -125,6 +127,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * resource (#6078)
       * static (#6177)
       * server (#6079)
+      * twcgi (#8009)
       * util (#6178)
       * xmlrpc (#7795)
 
