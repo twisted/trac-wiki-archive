@@ -12,9 +12,9 @@ If you wish to build and install the latest Twisted by-hand on Ubuntu ensure tha
 
 == Windows ==
 
- * Twisted [[ProjectVersion]] for Python 2.7 ([[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win32-py2.7.msi msi)]] | [[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win32-py2.7.exe exe)]])
- * Twisted [[ProjectVersion]] for Python 2.7 64 bits([[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win-amd64-py2.7.msi msi)]] | [[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.win-amd64-py2.7.exe exe)]])
+ * Twisted [[ProjectVersion]] for Python 2.7 64 bits ([[ProjectVersion(http://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s-cp27-none-win_amd64.whl whl)]])
  * [http://pypi.python.org/pypi/zope.interface#download Zope.Interface] (required)
+ * [http://pypi.python.org/pypi/pypiwin32 PyWin32] (required)
  * [http://pypi.python.org/pypi/pyOpenSSL PyOpenSSL] (needed for SSL)
 
 
@@ -41,6 +41,12 @@ To checkout code from the repository, use:
 
 
 == Signed MD5 & SHA1 Sums ==
+
+md5 sums of the 15.5.0 release are [http://twistedmatrix.com/Releases/twisted-15.5.0-md5sums.txt here].
+sha1 sums of the 15.5.0 release are [http://twistedmatrix.com/Releases/twisted-15.5.0-shasums.txt here].
+
+md5 sums of the 15.4.0 release are [http://twistedmatrix.com/Releases/twisted-15.4.0-md5sums.txt here].
+sha1 sums of the 15.4.0 release are [http://twistedmatrix.com/Releases/twisted-15.4.0-shasums.txt here].
 
 md5 sums of the 15.3.0 release are [http://twistedmatrix.com/Releases/twisted-15.3.0-md5sums.txt here].
 sha1 sums of the 15.3.0 release are [http://twistedmatrix.com/Releases/twisted-15.3.0-shasums.txt here].
