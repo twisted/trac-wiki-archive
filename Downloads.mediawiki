@@ -43,37 +43,37 @@ To checkout code from the repository, use:
 == Signed MD5 & SHA1 Sums ==
 
 md5 sums of the 15.5.0 release are [http://twistedmatrix.com/Releases/twisted-15.5.0-md5sums.txt here].
-sha1 sums of the 15.5.0 release are [http://twistedmatrix.com/Releases/twisted-15.5.0-shasums.txt here].
+sha512 sums of the 15.5.0 release are [http://twistedmatrix.com/Releases/twisted-15.5.0-shasums.txt here].
 
 md5 sums of the 15.4.0 release are [http://twistedmatrix.com/Releases/twisted-15.4.0-md5sums.txt here].
-sha1 sums of the 15.4.0 release are [http://twistedmatrix.com/Releases/twisted-15.4.0-shasums.txt here].
+sha512 sums of the 15.4.0 release are [http://twistedmatrix.com/Releases/twisted-15.4.0-shasums.txt here].
 
 md5 sums of the 15.3.0 release are [http://twistedmatrix.com/Releases/twisted-15.3.0-md5sums.txt here].
-sha1 sums of the 15.3.0 release are [http://twistedmatrix.com/Releases/twisted-15.3.0-shasums.txt here].
+sha512 sums of the 15.3.0 release are [http://twistedmatrix.com/Releases/twisted-15.3.0-shasums.txt here].
 
 md5 sums of the 15.2.0 release are [http://twistedmatrix.com/Releases/twisted-15.2.0-md5sums.txt here].
-sha1 sums of the 15.2.0 release are [http://twistedmatrix.com/Releases/twisted-15.2.0-shasums.txt here].
+sha512 sums of the 15.2.0 release are [http://twistedmatrix.com/Releases/twisted-15.2.0-shasums.txt here].
 
 md5 sums of the 15.1.0 release are [http://twistedmatrix.com/Releases/twisted-15.1.0-md5sums.txt here].
-sha1 sums of the 15.1.0 release are [http://twistedmatrix.com/Releases/twisted-15.1.0-shasums.txt here].
+sha512 sums of the 15.1.0 release are [http://twistedmatrix.com/Releases/twisted-15.1.0-shasums.txt here].
 
 md5 sums of the 15.0.0 release are [http://twistedmatrix.com/Releases/twisted-15.0.0-md5sums.txt here].
-sha1 sums of the 15.0.0 release are [http://twistedmatrix.com/Releases/twisted-15.0.0-shasums.txt here].
+sha512 sums of the 15.0.0 release are [http://twistedmatrix.com/Releases/twisted-15.0.0-shasums.txt here].
 
 md5 sums of the 14.0.2 release are [http://twistedmatrix.com/Releases/twisted-14.0.2-md5sums.txt here].
-sha1 sums of the 14.0.2 release are [http://twistedmatrix.com/Releases/twisted-14.0.2-shasums.txt here].
+sha512 sums of the 14.0.2 release are [http://twistedmatrix.com/Releases/twisted-14.0.2-shasums.txt here].
 
 md5 sums of the 14.0.1 release are [http://twistedmatrix.com/Releases/twisted-14.0.1-md5sums.txt here].
-sha1 sums of the 14.0.1 release are [http://twistedmatrix.com/Releases/twisted-14.0.1-shasums.txt here].
+sha512 sums of the 14.0.1 release are [http://twistedmatrix.com/Releases/twisted-14.0.1-shasums.txt here].
 
 md5 sums of the 14.0.0 release are [http://twistedmatrix.com/Releases/twisted-14.0.0-md5sums.txt here].
-sha1 sums of the 14.0.0 release are [http://twistedmatrix.com/Releases/twisted-14.0.0-shasums.txt here].
+sha512 sums of the 14.0.0 release are [http://twistedmatrix.com/Releases/twisted-14.0.0-shasums.txt here].
 
 md5 sums of the 13.2.0 release are [http://twistedmatrix.com/Releases/twisted-13.2.0-md5sums.txt here].
-sha1 sums of the 13.2.0 release are [http://twistedmatrix.com/Releases/twisted-13.2.0-shasums.txt here].
+sha512 sums of the 13.2.0 release are [http://twistedmatrix.com/Releases/twisted-13.2.0-shasums.txt here].
 
 md5 sums of the 13.1.0 release are [http://twistedmatrix.com/Releases/twisted-13.1.0-md5sums.txt here].
-sha1 sums of the 13.1.0 release are [http://twistedmatrix.com/Releases/twisted-13.1.0-shasums.txt here].
+sha512 sums of the 13.1.0 release are [http://twistedmatrix.com/Releases/twisted-13.1.0-shasums.txt here].
 
 md5 sums of the 13.0.0 release are [http://twistedmatrix.com/Releases/twisted-13.0.0-md5sums.txt here].
 
