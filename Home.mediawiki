@@ -220,8 +220,7 @@ from twisted.python import failure
 def main(reactor, username="alice", password="secret",
          strport="ssl:host=example.com:port=993"):
     endpoint = endpoints.clientFromString(reactor, strport)
-    factory = protocol.Factory()
-    factory.protocol = imap4.IMAP4Client
+    factory = protocol.Factory.forProtocol(imap4.IMAP4Client)
     try:
         client = yield endpoint.connect(factory)
         yield client.login(username, password)
