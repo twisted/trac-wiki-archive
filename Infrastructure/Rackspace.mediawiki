@@ -1,0 +1,6 @@
+* Rackspace is donating $2000/mo of free credit to Twisted
+* credentials for the Rackspace account are in wolfwood.twistedmatrix.com:/git/buildbot-secrets
+
+* List of VM hosted by rackspace:
+
+ * buildslaves contain "rackspace" in their names
