@@ -125,7 +125,7 @@ Don't merge trunk into your branch in git using the usual {{{git merge}}} comman
 mkbranch $BRANCH_NAME-2
 git fetch
 git checkout $BRANCH_NAME-2
-git merge --squash origin/$BRANCH_NAME
+git merge --ff --squash origin/$BRANCH_NAME
 git commit -m'Merging forward'
 git svn dcommit
 }}}
@@ -140,7 +140,7 @@ In the following example, `$BRANCH_NAME` means the name of the branch you're try
 git checkout origin/trunk
 
 # Apply all the changes on the branch to the trunk as one change set.
-git merge --squash origin/$BRANCH_NAME
+git merge --ff --squash origin/$BRANCH_NAME
 
 # Commit the change set. Remember to use the Canonical Merge Commit Message Format!
 git commit
