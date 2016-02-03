@@ -119,6 +119,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * [ticket:6057 dns]
       * [ticket:6058 error]
       * [ticket:6092 hosts]
+      * [ticket:8195 server]
     * twisted.web
       * client (#6077)
       * error (#7845)
