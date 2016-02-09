@@ -155,8 +155,9 @@ class Counter(resource.Resource):
 
     def render_GET(self, request):
         self.numberRequests += 1
-        request.setHeader("content-type", "text/plain")
-        return "I am request #" + str(self.numberRequests) + "\n"
+        request.setHeader(b"content-type", b"text/plain")
+        content = u"I am request #{}\n".format(self.numberRequests)
+        return content.encode("ascii")
 
 endpoints.serverFromString(reactor, "tcp:8080").listen(server.Site(Counter()))
 reactor.run()
@@ -186,7 +187,8 @@ class PubProtocol(basic.LineReceiver):
 
     def lineReceived(self, line):
         for c in self.factory.clients:
-            c.sendLine("<{}> {}".format(self.transport.getHost(), line))
+            source = u"<{}> ".format(self.transport.getHost()).encode("ascii")
+            c.sendLine(source + line)
 
 class PubFactory(protocol.Factory):
     def __init__(self):
