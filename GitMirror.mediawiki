@@ -58,21 +58,13 @@ Start by reading the [wiki:CommitterCheckList general commiter check list]
 
 Event if you will use git, you still need to have SVN installed, as at least mkbranch needs it.
 
-Configure SVN SSH transport to know about your SVN username. In {{{~/.subversion/config}}} do
-(changing {{{~/.subversion/servers}}} will not work as those options are only for svn+http) :
-
-{{{
-[tunnels]
-ssh = $SVN_SSH ssh -l USERNAME
-}}}
-
-
-== Creating a complete mirror ==
 To be able to interact with svn, the following commands need to be run in the repository created above, replacing USERNAME with your SVN account name.
 
 {{{
-git svn init --stdlayout --tags tags/releases --prefix origin/  svn://svn.twistedmatrix.com/svn/Twisted/
-git config --add svn-remote.svn.pushurl svn+ssh://USERNAME@svn.twistedmatrix.com/svn/Twisted/
+git svn init --stdlayout --tags tags/releases --prefix origin/ \
+    --rewrite-root=svn://svn.twistedmatrix.com/svn/Twisted \
+    svn+ssh://USERNAME@svn.twistedmatrix.com/svn/Twisted
+git svn dcommit -n
 }}}
 
 Twisted does not completely follow the standard SVN repository layout. In particular, there is a "branches/releases" directory that contains more branches (as opposed to being a branch) and a "tags/releases" directory that contains more tags (as opposed to being a tag). Thus, git cannot be used to commit to release branches.   
