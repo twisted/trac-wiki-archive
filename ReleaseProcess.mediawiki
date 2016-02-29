@@ -312,7 +312,9 @@ Sometimes, bugs happen, and sometimes these are regressions in the current relea
  * How do we manage the case where there are untested builds in trunk?
  * Should picking a release quote be part of the release or the pre-release?
  * What bugs should be considered release blockers?
-   * Ultimately it's the RM's discretion
+   * All bugs with a type from the **release blocker** family
+   * Anybody can create/submit a new ticket with a release blocker type
+   * Ultimately it's the RM's discretion to accept a ticket as a release blocker
  * Should news fragments contain information about who made the changes?
 
 = Bugs mentioned on this page =
