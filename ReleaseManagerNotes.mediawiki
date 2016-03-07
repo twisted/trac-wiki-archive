@@ -2,8 +2,8 @@ This is a page dedicated to short notes for the next release manager of Twisted.
 
 For example, if you need a topfile changed in NEWS, or special things need to be done for the next release, put it here so that it's not lost.
 
-'''Twisted 14.0'''
+'''Twisted 16.1'''
 
-- Please change the NEWS entry for #454 to "twisted.internet.interfaces.IUDPTransport - and that interface's implementations in Twisted - now supports enabling broadcasting.", the one I merged didn't meet guidelines. -hawkowl
+- #8215's topfile needs to be moved into web.
 
 
