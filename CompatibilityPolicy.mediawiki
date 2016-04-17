@@ -1,8 +1,13 @@
 [wiki:ContributingToTwistedLabs Contribute] > [wiki:TwistedDevelopment Development] > Compatibility Policy
 
+**This file is in the process of being moved to the Twisted official documentation.**
+
+**All new changes should be done in docs/core/development/policy/compatibility-policy.rst**
+
+
+
 = Compatibility Policy =
 
-NB: This is a work in progress.
 
 [[PageOutline(2-4,, inline)]]
 
