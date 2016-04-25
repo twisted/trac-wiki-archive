@@ -68,13 +68,14 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
     * twisted.conch.ssh
       * keys (#7998)
     * twisted.trial (#5966, #7803, #5965, #5964, #7813, #8025)
-    * twisted.plugins  (#7915 - required for trial)
+    * twisted.plugins  (#7915, #8299)
     * twisted.protocols
       * basic (#6025)
       * tls (#5979)
     * twisted.internet
       * [ticket:6140 _newtls]
       * [ticket:6141 _sslverify]
+      * [ticket:8018 _win32stdio]
       * abstract (#5980, #6163)
       * [ticket:5985 address]
       * [ticket:6065 base]
@@ -113,6 +114,7 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
       * [ticket:6097 policies]
       * [ticket:6139 tls]
     * twisted.names
+      * [ticket:8259 authority]
       * [ticket:6093 cache]
       * [ticket:6056 client]
       * [ticket:6059 common]
