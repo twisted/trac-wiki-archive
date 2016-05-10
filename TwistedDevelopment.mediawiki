@@ -15,7 +15,7 @@ If you want to become a developer, it is important to understand that all your c
 You can get Twisted's source code here:
 
 {{{
-svn co svn://svn.twistedmatrix.com/svn/Twisted/trunk MyTwistedTrunk
+git clone https://github.com/twisted/twisted Twisted
 }}}
 
 If you prefer not to use {{{svn}}}, you can use a number of other version control systems to produce patches for review.
