@@ -15,12 +15,22 @@ If you want to become a developer, it is important to understand that all your c
 You can get Twisted's source code here:
 
 {{{
-git clone https://github.com/twisted/twisted Twisted
+git clone -b trunk https://github.com/twisted/twisted.git Twisted
 }}}
 
-If you prefer not to use {{{svn}}}, you can use a number of other version control systems to produce patches for review.
+If you intend to contribute to Twisted via Git, but do not have write access to the Twisted repository, you should instead fork the project by going to https://github.com/twisted/twisted and clicking on "fork".
+Then set up your local repository:
 
-See [wiki:VcsWorkflows DVCS Workflows] for help using Git, Bazaar, and Mercurial to manage local development.
+{{{
+git clone -b trunk https://github.com/<yourusername>/twisted.git Twisted
+cd Twisted
+git remote add upstream https://github.com/twisted/twisted.git
+git fetch upstream
+git branch -u upstream/trunk trunk
+}}}
+
+NOTE for experienced Git users: for historical reasons, Twisted's main branch is currently named "trunk", instead of the usual "master".
+
 
 
 === Creating your work environment ===
@@ -56,14 +66,16 @@ pyflakes twisted/conch/ssh/transport.py
 
 Here's a quick step-by-step guide to getting from an idea for an improvement to Twisted to something that we can integrate.  First, I'll explain just the mechanics of getting your code into review, not what the code itself should do.  If you actually want us to be able to use your code, you will also want to read the section below on getting your patch accepted, too!
 
-  1. Check out the source code via one of the supported VCSs.
+  1. Create a fork on GitHub and clone it (see "Getting the source code" above).
+  1. Create a branch in git for your code: `git checkout trunk && git pull && git checkout -b my-new-change`
   1. Edit the code in the branch that you just checked out, making your awesome change to Twisted.
   1. Now is a good time to make sure that your patch fulfills all of the requirements of the [http://twistedmatrix.com/trac/wiki/ReviewProcess review process], so you don't need to submit your patch many repeated times. Pay special attention to the section about [http://twistedmatrix.com/trac/wiki/ReviewProcess#Newsfiles news files]!
-  1. Generate a patch file. See: [wiki:VcsWorkflows]
-  1. If you haven't already, [http://twistedmatrix.com/trac/register register for an account on this website].  If you have, make sure you are logged in.
+  1. Commit your changes (`git commit -am "Changed some stuff"`).
+  1. Push your changes to GitHub (`git push`).
+  1. Make sure you are logged in to this website (if not, click GitHub Login at the top).
   1. Search for an existing ticket which describes your change, using both the "search" field above, and Google.
     1. If you can't find one, file a new ticket using the "new ticket" link above. See: [#TicketManagement Ticket management]
-  1. Click on the "attach file" button on your ticket, and upload the `.patch` file you generated above.
+  1. Place a link to your branch in the ticket description or a comment.
   1. Put the ticket into review.  This is accomplished by doing the following:
     1. enter the word "review" into the "keywords" field of the ticket.  (If there are other keywords already there, just add a space to separate the keyword.)
     1. Click on the "reassign to" radio button.
@@ -71,7 +83,7 @@ Here's a quick step-by-step guide to getting from an idea for an improvement to 
     1. Optionally, add a comment explaining which patch you would like reviewed (if there are already other attached files), and explaining ''what'' your change does (as opposed to the ''why'' you want it done, which you should have put into the ticket's summary and description).
     1. Hit "submit changes".
   1. At this point, you need to wait for feedback.  If your patch is very good, very simple, and obviously correct, we may just apply it, but it is ''very unlikely'' that the first draft of a patch will be accepted as-is.  When a Twisted developer reviews your patch, they will re-assign the ticket to you; you can [http://twistedmatrix.com/trac/report/7 see the list of tickets assigned to you by clicking here].  Unfortunately, the time it takes us to deal with a ticket submitted for review is highly variable, and depends on how many other tickets are waiting review, the amount of free time that the Twisted core development team has, and how many resources we have available for [http://labs.twistedmatrix.com/ sponsored development].
-  1. When you do receive a review comment, attach a new patch (again un-assigning the ticket and adding the "review" keyword to it) which addresses that feedback.
+  1. When you do receive a review comment, push changes to your branch which address that feedback, then place the ticket back in review.
 
 
 === Getting Your Patch Accepted ===
@@ -96,8 +108,6 @@ Command from this section assume that you run them from withing Twisted source c
 To run the tests, simply run `./bin/trial twisted`. Make sure you run trial command that comes with twisted source code and not the one provided by your operating system.
 
 To generate the narrative documentation, `cd docs; make html`. Files are generated in `docs/_build/html/`. Make sure you have the latest Python Sphinx version.
-
-Many ancillary tools related to Twisted are in Bazaar repositories.  You may find it useful to [http://bazaar.canonical.com/en/ install the Bazaar version control system for your platform] so that you can easily get access to these.
 
 To generate the API documentation, you will need [https://launchpad.net/pydoctor pydoctor].  It depends on [http://epydoc.sourceforge.net/ epydoc].  Once you've got it, `./bin/admin/build-apidocs . apidocs` and look in the generated `apidocs` directory.
 
@@ -176,8 +186,6 @@ This series of documents is designed for people who wish to contribute to the Tw
 
  * [http://twistedmatrix.com/documents/current/core/development/philosophy.html Philosophy]
 
- * [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html Subversion Development]
-
  * [wiki:ReviewProcess Review Process]
 
  * [wiki:ContributorAdvancementPath Contributor Advancement Path]
@@ -194,7 +202,7 @@ If you want to edit wiki pages, ask for write permission via one of [wiki:Twiste
 
 == Win32 development ==
 
-If you want to hack Twisted on Win32, see Ying Li's [http://blog.ying.li/2012/03/twisted-development-on-windows-v2.html short tutorial on setting up a Twisted win32 development environment]; but note that it describes getting the code with Subversion and you will currently need to use Git.
+If you want to hack Twisted or just use Twisted SVN on Win32, see Ying Li's [http://blog.ying.li/2012/03/twisted-development-on-windows-v2.html short tutorial on setting up a Twisted win32 development environment].
 
 
 == Twisted Maintenance ==
