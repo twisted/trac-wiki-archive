@@ -15,43 +15,39 @@ The principles involved are:
   * '''All''' work on a project must be represented by tickets in a ticket tracker.  If it's not in the tracker, you shouldn't be working on it.  This provides a way to manage distractions and continuously re-focus on what's really important.
   * '''All''' development is done on branches - no development is done on the {{{trunk}}}. The {{{trunk}}} can be used to see branch differences, run test suites, build distributions, etc., but is not used for development. This may seem odd, but there are numerous reasons why it is a good idea (see below).
 
-The lifetime of a task in UQDS in practice (using [http://subversion.tigris.org/ Subversion] and [http://trac.edgewall.org/ Trac]) looks something like this, with a developer {{{dev}}} and a reviewer {{{rev}}}:
+The lifetime of a task in UQDS in practice (using [https://git-scm.com/ Git] and [https://trac.edgewall.org/ Trac]) looks something like this, with a developer {{{dev}}} and a reviewer {{{rev}}}:
 
   * A ticket is created in the issue tracker.
   * For features, a specification is attached to the ticket.  For defects, reproduction instructions.
   * The developer who is assigned the task "accepts" the task, by changing its state to "accepted".
-  * A branch is created in Subversion.  The branch is named with the convention <descriptive word>-<issue number>[-<branch number>].  For the first branch of any feature, the branch number is omitted.  (For smaller patches, or work done by non-committer developers, this and the next step can be omitted.  The developer can attach a patch to the ticket instead of creating a branch.)
+  * A branch is created in Git.  The branch is named with the convention <descriptive word>-<issue number>[-<branch number>].  (For smaller patches, or work done by non-committer developers, this and the next step can be omitted.  The developer can attach a patch to the ticket instead of creating a branch.)
 {{{
 #!sh
-dev@strange$ mkbranch Divmod sprocket-123
+dev@strange$ git checkout -b sprocket-123 trunk
 }}}
 
-    * Note that {{{mkbranch}}} is a command provided by [wiki:Combinator], a tool we use to simplify the management of revision control system branches.
   * Development occurs to implement the feature or resolve the defect in the branch.
   * When the code is deemed ready by the developer, the developer checks in their changes '''on the branch''' (not the trunk).
   * The branch is then assigned to another developer for review. The ticket should be given the keyword "review", assigned to the reviewer and the priority set to "highest".
   * The reviewer switches to the branch, then merges it locally, to review it in the context of how it will change trunk.
 {{{
 #!sh
-rev@charm$ chbranch Divmod sprocket-123
-rev@charm$ unbranch Divmod
-rev@charm$ cd Divmod/trunk
-rev@charm$ svn diff | less
+rev@charm$ git checkout trunk
+rev@charm$ git pull
+rev@charm$ git merge --no-ff --no-commit sprocket-123
+rev@charm$ git diff --staged
 }}}
-    * (If the patch does not merge cleanly, the reviewer may reassign to the developer to [wiki:TwistedWithCombinator merge forward] for review.  Branches and patches must always be sufficiently recent that they will apply cleanly to trunk in order to be considered for review).
-    * Note here that the {{{unbranch}}} command (also part of [wiki:Combinator]) merges your current branch ({{{sprocket-123}}}) into your local {{{trunk}}} in {{{Divmod/trunk}}}. Your trunk should be up to date - otherwise you will not be able to use {{{svn diff}}} to see just the new differences, and you will not be able to easily {{{svn revert}}} the merge.
+    * (If the patch does not merge cleanly, the reviewer may reassign to the developer to merge/rebase before reviewing again.  Branches and patches must always be sufficiently recent that they will apply cleanly to trunk in order to be considered for review).
   * The reviewer runs all automated tests.
 {{{
 #!sh
-rev@charm$ trial --testmodule Divmod.pth
+rev@charm$ trial twisted
 }}}
   * The reviewer verifies that the code makes sense, has unit tests, has documentation, updates any existing documentation that is affected, and actually resolves the issue in question.
-  * If any more work is required, the reviewer reassigns to the developer explaining what else needs to be done in a ticket comment.  The reviewer can use {{{svn revert}}} on their {{{trunk}}} if the branch changes are not acceptable, in preparation for a later {{{unbranch}}}. When this process has been repeated enough times that all the tests pass and the reviewer is satisfied, they re-assign to the developer for merging, and the developer merges.
+  * If any more work is required, the reviewer reassigns to the developer explaining what else needs to be done in a ticket comment.  The reviewer can use {{{git merge --abort}}} to back out of the merge if the branch changes are not acceptable. When this process has been repeated enough times that all the tests pass and the reviewer is satisfied, they re-assign to the developer for merging, and the developer merges.
 {{{
 #!sh
-dev@strange$ unbranch Divmod
-dev@strange$ cd Divmod/trunk
-dev@strange$ svn ci -m '
+dev@strange$ git commit -m '
 A brief description of the sprocket feature.
 
 Author: dev
@@ -63,19 +59,18 @@ Fixes #123
 A detailed description of the sprocket feature.
 '
 
-dev@strange$ svn rm svn+ssh://divmod.org/svn/Divmod/branches/sprocket-123
+dev@strange$ git branch -d sprocket-123
+dev@strange$ git push -d origin sprocket-123
 }}}
   * the "fixes" note in the commit message automatically resolves the ticket with a status of "fixed".  Voila!  Our feature is implemented and ready in trunk.
 
-Branch lifetimes should be short.  If trunk moves very far from the branch, the branch should be [wiki:MergedForward merged forward] to pick up bug fixes and feature enhancements which might be useful.  Doing this also makes the final merge easier, by keeping conflicts small and bringing them to the developer's attention before they become unmanageable.
+Branch lifetimes should be short.  If trunk moves very far from the branch, the branch should be rebased or merged to pick up bug fixes and feature enhancements which might be useful.  Doing this also makes the final merge easier, by keeping conflicts small and bringing them to the developer's attention before they become unmanageable.
 
 = Why Branches? =
 
 The most recent version of source code in the repository should always be working.  That makes it a lot easier to deploy fixes and tweaks quickly.  However, sometimes you need to check in code to test it on a different machine, or show it to a different developer.  A version control system is useful in many ways, and if you only have one branch, these purposes conflict.
 
-While we have only tried branch-based development with Subversion, other systems like Perforce and Bazaar will probably work just fine.
-
-Here at Divmod we think this is a ''really good'' methodology: here are some of its features.
+Here are some of its features.
 
 == Keep {{{trunk}}} Working ==
 
@@ -89,7 +84,7 @@ If a developer gets stuck because it turns out that part of a feature is outside
 
 == Provide Useful Progress Information to Management ==
 
-Branches directly correspond to user-facing tasks.  A quick look at [browser:/branches the list of branches] should indicate to managers (or throngs of adoring [wiki:DivmodFanClub fans]) what is actually going on.  [http://trac.edgewall.org/ Trac] helpfully provides a view which shows how long it has been since someone committed to a branch.  If there are a lot of branches (more than twice the number of developers, let's say), that means that the team's efforts are getting diffuse and they need to focus more and get branches merged.  If branches are being turned over quickly, it means that tasks are being completed quickly.
+Branches directly correspond to user-facing tasks.  A quick look at the list of branches should indicate to managers what is actually going on.  If there are a lot of branches (more than twice the number of developers, let's say), that means that the team's efforts are getting diffuse and they need to focus more and get branches merged.  If branches are being turned over quickly, it means that tasks are being completed quickly.
 
 == Mechanism for Code Review ==
 
@@ -141,7 +136,7 @@ Even if you already have awesome automated tests, branches can speed things up i
 
 Meanwhile, everyone else in the company has updated, and jethro returns from his early lunch.  Thus far, 30 developers * (1 hour of build + 20 minutes of tests) = 40 man hours have been wasted.  Everyone knows it was Jethro when he gets back because the build indicates failure on a revision he checks in, but now all 30 developers are standing behind his desk, waiting for him to get trunk back into a working state and test the fix so they can get back to work.  That requires ''at least'' another 1:20 of time waiting for the automated tests before Alice can commit her changes.
 
-Much of this waiting could have been circumvented if Jethro had checked his changes into a branch, and then asked the automated test system to run tests for him, and maybe had one other developer review it for him.  By the way, Buildbot has this feature, and [http://jade.code-bear.com:8010/q-linux Divmod's tests use it] - feel free to request a build of any branch :).
+Much of this waiting could have been circumvented if Jethro had checked his changes into a branch, and then asked the automated test system to run tests for him, and maybe had one other developer review it for him.  By the way, Buildbot has this feature, as do many other CI systems.
 
 = Questions =
 
