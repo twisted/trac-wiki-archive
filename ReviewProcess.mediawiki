@@ -54,7 +54,7 @@ For the most part, we'd love for you to jump right in and start writing code!  T
 
 == Authors: How to merge the change to trunk ==
 
- * Merge the change into a checkout of Twisted trunk (as a merge commit, using {{{ git merge --no-ff }}!) and commit it. The message must follow this format (See [#Thecommitmessage below]).
+ * Merge the change into a checkout of Twisted trunk (as a merge commit, using {{{ git merge --no-ff }}}!) and commit it. The message must follow this format (See [#Thecommitmessage below]).
 {{{
 #!html
 <pre class="wiki">
