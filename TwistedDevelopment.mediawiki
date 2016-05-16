@@ -45,14 +45,15 @@ Here is an example of creating an environment using virtualenv.
 virtualenv build/
 # For Unix
 . build/bin/activate
-# For windows
-source build/Scripts/activate
+# For windows (replace .bat with .ps1 for powershell)
+build/Scripts/activate.bat 
 pip install pypiwin32
 
 # Install dev dependencies, also forcing upgrade of existing versions.
 pip install -U -e '.[dev]'
 
 # Use the dev tools.
+# Prefix this with the path to python.exe on Windows
 ./bin/trial twisted.conch.test.test_transport
 # Using the coding standard guidelines validation tool... will get a lot of false positives
 twistedchecker twisted.conch.ssh.transport
