@@ -75,7 +75,7 @@ Here's a quick step-by-step guide to getting from an idea for an improvement to 
   1. Push your changes to GitHub (`git push`).
   1. Make sure you are logged in to this website (if not, click GitHub Login at the top).
   1. Search for an existing ticket which describes your change, using both the "search" field above, and Google.
-    1. If you can't find one, file a new ticket using the "new ticket" link above. See: [#TicketsManagement Tickets management]
+    1. If you can't find one, file a new ticket using the "new ticket" link above. See: [#Ticketsmanagement Tickets management]
   1. Place a link to your branch in the ticket description or a comment.
   1. Put the ticket into review.  This is accomplished by doing the following:
     1. enter the word "review" into the "keywords" field of the ticket.  (If there are other keywords already there, just add a space to separate the keyword.)
