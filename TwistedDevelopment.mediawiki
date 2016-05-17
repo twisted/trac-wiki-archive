@@ -22,7 +22,7 @@ If you intend to contribute to Twisted via Git, but do not have write access to 
 Then set up your local repository:
 
 {{{
-git clone -b trunk https://github.com/<yourusername>/twisted.git Twisted
+git clone https://github.com/<yourusername>/twisted.git Twisted
 cd Twisted
 git remote add upstream https://github.com/twisted/twisted.git
 git fetch upstream
