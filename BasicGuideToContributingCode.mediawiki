@@ -41,14 +41,8 @@ trial twisted
 === Submit a Patch ===
 Create a patch from the root of your checkout and attach it to the trac ticket:[[BR]]
 {{{
-svn diff -u > my-twisted-patch.patch
+git diff  > my-twisted-patch.patch
 }}}
-
-If the above doesn't work for you, your svn client may instead require the following syntax:[[BR]]
-{{{
-svn diff -x -u > my-twisted-patch.patch
-}}}
-
 
 
 === Review Process ===
