@@ -36,11 +36,7 @@ trial twisted
 }}}
 
 === Submit a Patch ===
-Create a patch from the root of your checkout and attach it to the trac ticket:[[BR]]
-{{{
-git diff  > my-twisted-patch.patch
-}}}
-
+Follow [[TwistedDevelopment#SubmittingaPatch]]
 
 === Review Process ===
   1. Begin the [wiki:ReviewProcess Review process]. A core developer will review your changes and give you feedback.
