@@ -203,7 +203,7 @@ If you want to edit wiki pages, ask for write permission via one of [wiki:Twiste
 
 == Win32 development ==
 
-If you want to hack Twisted or just use Twisted SVN on Win32, see Ying Li's [http://blog.ying.li/2012/03/twisted-development-on-windows-v2.html short tutorial on setting up a Twisted win32 development environment].
+If you want to hack Twisted on Win32, see Ying Li's [http://blog.ying.li/2012/03/twisted-development-on-windows-v2.html short tutorial on setting up a Twisted win32 development environment]; but note that it describes getting the code with Subversion and you will currently need to use Git.
 
 
 == Twisted Maintenance ==
