@@ -15,7 +15,7 @@ If you want to become a developer, it is important to understand that all your c
 You can get Twisted's source code here:
 
 {{{
-git clone -b trunk https://github.com/twisted/twisted.git Twisted
+git clone https://github.com/twisted/twisted.git Twisted
 }}}
 
 If you intend to contribute to Twisted via Git, but do not have write access to the Twisted repository, you should instead fork the project by going to https://github.com/twisted/twisted and clicking on "fork".
