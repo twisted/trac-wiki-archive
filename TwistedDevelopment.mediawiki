@@ -5,7 +5,7 @@
 
 == Contributing ==
 
-Twisted uses the [UltimateQualityDevelopmentSystem The Ultimate Quality Development System], in addition to this ReviewProcess.
+Twisted uses the [UlftimateQualityDevelopmentSystem The Ultimate Quality Development System], in addition to this ReviewProcess.
 
 If you want to become a developer, it is important to understand that all your contributions (including those initial patches you send to the bug tracker) will have to be licenced under the [http://www.opensource.org/licenses/mit-license.php MIT licence].
 
@@ -67,12 +67,25 @@ pyflakes twisted/conch/ssh/transport.py
 
 Here's a quick step-by-step guide to getting from an idea for an improvement to Twisted to something that we can integrate.  First, I'll explain just the mechanics of getting your code into review, not what the code itself should do.  If you actually want us to be able to use your code, you will also want to read the section below on getting your patch accepted, too!
 
+  1. Make sure that a ticket exists for the patch which you are submitting.  If not, create the ticket.  See:  [#Ticketsmanagement Tickets management]  
   1. Create a fork on GitHub and clone it (see "Getting the source code" above).
-  1. Create a branch in git for your code: `git checkout trunk && git pull && git checkout -b my-new-change`
+  1. Create a branch in git for your code: 
+  {{{
+       git checkout trunk
+       git pull
+       git checkout -b my-new-change
+   }}}
   1. Edit the code in the branch that you just checked out, making your awesome change to Twisted.
   1. Now is a good time to make sure that your patch fulfills all of the requirements of the [http://twistedmatrix.com/trac/wiki/ReviewProcess review process], so you don't need to submit your patch many repeated times. Pay special attention to the section about [http://twistedmatrix.com/trac/wiki/ReviewProcess#Newsfiles news files]!
-  1. Commit your changes (`git commit -am "Changed some stuff"`).
-  1. Push your changes to GitHub (`git push`).
+  1. Commit your changes 
+     {{{
+     git commit -am "Changed some stuff"
+     }}}
+     .
+  1. Push your changes to GitHub
+     {{{
+     git push my-new-change
+     }}}
   1. Make sure you are logged in to this website (if not, click GitHub Login at the top).
   1. Search for an existing ticket which describes your change, using both the "search" field above, and Google.
     1. If you can't find one, file a new ticket using the "new ticket" link above. See: [#Ticketsmanagement Tickets management]
