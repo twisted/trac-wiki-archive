@@ -9,10 +9,7 @@ First, a few recommendations:
 
 What you'll need:
   * [http://git-scm.com Git] client[[BR]][[BR]]
-  '''What about Git/Bazaar/Mercurial?'''[[BR]]
-  Twisted development takes place in a Subversion repository, but you're welcome to use another VCS for local development.[[BR]]
-  You'll still need to be able to checkout from the svn repository and keep your local development in-sync with Twisted trunk.[[BR]][[BR]]
-  See [wiki:VcsWorkflows DVCS Workflows] for tips on using your favorite DVCS and keeping up-to-date with trunk.
+  See [wiki:VcsWorkflows DVCS Workflows] for tips on keeping up-to-date with trunk.
 
   * [/register Register] with the site and create an account
 
