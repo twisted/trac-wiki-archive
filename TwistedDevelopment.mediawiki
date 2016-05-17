@@ -67,7 +67,8 @@ pyflakes twisted/conch/ssh/transport.py
 
 Here's a quick step-by-step guide to getting from an idea for an improvement to Twisted to something that we can integrate.  First, I'll explain just the mechanics of getting your code into review, not what the code itself should do.  If you actually want us to be able to use your code, you will also want to read the section below on getting your patch accepted, too!
 
-  1. Make sure that a ticket exists for the patch which you are submitting.  If not, create the ticket.  See:  [#Ticketsmanagement Tickets management]  
+  1. For the patch you are submitting, make sure that a [[https://twistedmatrix.com/trac/report|ticket exists using the "search" field above]], and Google for the patch which you are submitting.
+    1. If you can't find one, file a new ticket using the [[https://twistedmatrix.com/trac/newticket|"new ticket"]] link above. See: [#Ticketsmanagement Tickets management]
   1. Create a fork on GitHub and clone it (see "Getting the source code" above).
   1. Create a branch in git for your code: 
   {{{
@@ -87,8 +88,6 @@ Here's a quick step-by-step guide to getting from an idea for an improvement to 
      git push my-new-change
      }}}
   1. Make sure you are logged in to this website (if not, click GitHub Login at the top).
-  1. Search for an existing ticket which describes your change, using both the "search" field above, and Google.
-    1. If you can't find one, file a new ticket using the "new ticket" link above. See: [#Ticketsmanagement Tickets management]
   1. Place a link to your branch in the ticket description or a comment.
   1. Put the ticket into review.  This is accomplished by doing the following:
     1. enter the word "review" into the "keywords" field of the ticket.  (If there are other keywords already there, just add a space to separate the keyword.)
