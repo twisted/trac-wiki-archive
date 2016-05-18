@@ -2,7 +2,7 @@
 
 For more information about Twisted, please see the [wiki:TwistedProject Twisted project page]. You can get older releases from our [https://twistedmatrix.com/Releases/ download site].
 
-The current release is Twisted [[ProjectVersion]]: [[https://github.com/twisted/twisted/blob/%(base)s/NEWS Release notes)]]
+The current release is Twisted [[ProjectVersion]]: [[ProjectVersion(https://github.com/twisted/twisted/blob/%(base)s/NEWS Release notes)]]
 
 == Ubuntu and Debian ==
 
