@@ -69,7 +69,7 @@ Here's a quick step-by-step guide to getting from an idea for an improvement to 
 
   1. For the patch you are submitting, make sure that a [[https://twistedmatrix.com/trac/report|ticket exists using the "search" field above]], and Google for the patch which you are submitting.
     1. If you can't find one, file a new ticket using the [[https://twistedmatrix.com/trac/newticket|"new ticket"]] link above. See: [#Ticketsmanagement Tickets management]
-  1. Create a fork on GitHub and clone it (see "Getting the source code" above).
+  1. Create a fork on GitHub and clone it (see [#Gettingthesourcecode "Getting the source code"] above).
   1. Create a branch in git for your code: 
   {{{
        git checkout trunk
