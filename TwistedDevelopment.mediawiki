@@ -5,7 +5,7 @@
 
 == Contributing ==
 
-Twisted uses the [UlftimateQualityDevelopmentSystem The Ultimate Quality Development System], in addition to this ReviewProcess.
+Twisted uses the [UltimateQualityDevelopmentSystem The Ultimate Quality Development System], in addition to this ReviewProcess.
 
 If you want to become a developer, it is important to understand that all your contributions (including those initial patches you send to the bug tracker) will have to be licenced under the [http://www.opensource.org/licenses/mit-license.php MIT licence].
 
