@@ -87,8 +87,8 @@ Here's a quick step-by-step guide to getting from an idea for an improvement to 
      {{{
      git push my-new-change
      }}}
-  1. Make sure you are logged in to this website (if not, click GitHub Login at the top).
-  1. Place a link to your branch in the ticket description or a comment.
+  1. Create a [https://help.github.com/articles/creating-a-pull-request/|GitHub pull request] for the **my-new-change** branch.  Make sure that in the pull request, you put a link to the ticket that you filed above. 
+  1. In your ticket, put a link to the GitHub pull request.
   1. Put the ticket into review.  This is accomplished by doing the following:
     1. enter the word "review" into the "keywords" field of the ticket.  (If there are other keywords already there, just add a space to separate the keyword.)
     1. Click on the "reassign to" radio button.
