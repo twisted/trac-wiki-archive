@@ -7,7 +7,7 @@ To have Twisted available on Python 3.3 and newer, with the same functionality a
 
 == Strategy ==
 
-  * Single source - The result will be a version of Twisted that is source-compatible with Python 2.6, Python 2.7, and Python 3.3.  Please note that this specifically means you '''should not use 2to3 at any point in this process'''.
+  * Single source - The result will be a version of Twisted that is source-compatible with Python 2.7, and Python 3.3.  Please note that this specifically means you '''should not use 2to3 at any point in this process'''.
   * Test-driven - Following the standard Twisted development process, all changed code will be fully automatically unit tested.
   * Opportunistic - Where module dependencies (within Twisted) need to be ported to support porting of the high-priority modules, subsets of the module may be ported to provide specific functionality (but less than the full module).
 
@@ -192,4 +192,4 @@ Some further ideas to consider: https://wiki.ubuntu.com/Python/3
 
 Documentation potentially requires porting as well.  An individual example (ie, one of the runnable .py files in a ''doc/<project>/examples/'' directory) can be treated much as a module for the purposes of the porting workflow.  One difference, however, is that the example is not added to the list of ported modules in `dist3.py`.
 
-As with the rest of Twisted, the goal for porting documentation should be a version which is compatible with all supported versions of Python (eg, at this time, Python 2.6, Python 2.7, and Python 3.3).
+As with the rest of Twisted, the goal for porting documentation should be a version which is compatible with all supported versions of Python (eg, at this time, Python 2.7, and Python 3.3).
