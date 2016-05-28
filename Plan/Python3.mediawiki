@@ -7,7 +7,7 @@ To have Twisted available on Python 3.3 and newer, with the same functionality a
 
 == Strategy ==
 
-  * Single source - The result will be a version of Twisted that is source-compatible with Python 2.7, and Python 3.3.  Please note that this specifically means you '''should not use 2to3 at any point in this process'''.
+  * Single source - The result will be a version of Twisted that is source-compatible with Python 2.7, and Python 3.3.
   * Test-driven - Following the standard Twisted development process, all changed code will be fully automatically unit tested.
   * Opportunistic - Where module dependencies (within Twisted) need to be ported to support porting of the high-priority modules, subsets of the module may be ported to provide specific functionality (but less than the full module).
 
@@ -23,6 +23,22 @@ An initial minimal project (http://twistedmatrix.com/trac/milestone/Python%203.3
  1. Port the tests carefully; merely importing on Python 3 is insufficient. See the checklist below.
  1. Now that tests are importable, update the code carefully to pass all tests. If there is not full test coverage you may need to either write some tests, or sometimes just not include those parts of code in Python 3. The latter is easier if it's a standalone class.
  1. Deprecated code need not be ported, so if you notice some code that ought to be deprecated, open another ticket for that.
+
+
+== Mechanical changes ==
+
+For syntax changes or stdlib reorganization changes or method replacement changes you can submit a patch targeting a specific change, even if they don't fully port a module.
+
+Make sure the patch don't have more than 400 changes (removal + additions)
+
+The changes in the diff need 100% coverage on Python 2.7.
+
+If those lines were not previously covered, you need to write new tests.
+
+Syntax changes don't need 100% coverage as they are tested just by compiling/loading the module. But make sure that the changes are imported during the tests.
+
+You can use 2to3 as a starting point for performing mechanical changes. All changes produces by 2to3 need to be manually reviewed.
+
 
 == Reviewer check list ==
 
