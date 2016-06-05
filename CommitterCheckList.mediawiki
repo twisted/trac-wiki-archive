@@ -4,7 +4,7 @@ These are things that developers with commit access to the Twisted source reposi
   1. All code committed to trunk must go through the ReviewProcess.
   1. trunk commit messages must follow the format described on ReviewProcess so that various pieces of automation can work.
   1. If you check in something that breaks [http://buildbot.twistedmatrix.com/boxes-supported?branch=trunk&num_builds=20 trunk], revert it
-  1. Everything you check in to SVN is licensed under [browser:trunk/LICENSE Twisted's license]
+  1. Everything you check in to Git is licensed under [https://github.com/twisted/twisted/blob/trunk/LICENSE Twisted's license]
   1. Be in the IRC channel, at least when you're going to be committing to trunk (don't feel bad about avoiding the distraction when you're trying to get stuff done though).
   1. Have fun, but not too much.
 
