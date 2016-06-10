@@ -23,7 +23,7 @@ The lifetime of a task in UQDS in practice (using [https://git-scm.com/ Git] and
   * A branch is created in Git.  The branch is named with the convention <descriptive word>-<issue number>[-<branch number>].  (For smaller patches, or work done by non-committer developers, this and the next step can be omitted.  The developer can attach a patch to the ticket instead of creating a branch.)
 {{{
 #!sh
-dev@strange$ git checkout -b sprocket-123 trunk
+dev@strange$ git checkout -b 123-sprocket-fire trunk
 }}}
 
   * Development occurs to implement the feature or resolve the defect in the branch.
@@ -34,7 +34,7 @@ dev@strange$ git checkout -b sprocket-123 trunk
 #!sh
 rev@charm$ git checkout trunk
 rev@charm$ git pull
-rev@charm$ git merge --no-ff --no-commit sprocket-123
+rev@charm$ git merge --no-ff --no-commit 123-sprocket-fire
 rev@charm$ git diff --staged
 }}}
     * (If the patch does not merge cleanly, the reviewer may reassign to the developer to merge/rebase before reviewing again.  Branches and patches must always be sufficiently recent that they will apply cleanly to trunk in order to be considered for review).
@@ -59,8 +59,8 @@ Fixes #123
 A detailed description of the sprocket feature.
 '
 
-dev@strange$ git branch -d sprocket-123
-dev@strange$ git push -d origin sprocket-123
+dev@strange$ git branch -d 123-sprocket-fire
+dev@strange$ git push -d origin 123-sprocket-fire
 }}}
   * the "fixes" note in the commit message automatically resolves the ticket with a status of "fixed".  Voila!  Our feature is implemented and ready in trunk.
 
