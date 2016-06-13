@@ -212,6 +212,8 @@ Twisted includes a sophisticated IMAP4 client library.
 
 {{{
 #!python
+from __future__ import print_function
+
 import sys
 
 from twisted.internet import protocol, defer, endpoints, task
@@ -228,12 +230,11 @@ def main(reactor, username="alice", password="secret",
         yield client.login(username, password)
         yield client.select('INBOX')
         info = yield client.fetchEnvelope(imap4.MessageSet(1))
-        print 'First message subject:', info[1]['ENVELOPE'][1]
+        print('First message subject:', info[1]['ENVELOPE'][1])
     except:
-        print "IMAP4 client interaction failed"
+        print("IMAP4 client interaction failed")
         failure.Failure().printTraceback()
 
-# This API requires Twisted 12.3 or later, or a trunk checkout:
 task.react(main, sys.argv[1:])
 }}}
 
