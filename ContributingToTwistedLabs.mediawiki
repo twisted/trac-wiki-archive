@@ -17,7 +17,7 @@ Donations are [http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation#Back
  * [wiki:CommitterCheckList Checklist for Twisted committers], things that developers with commit access should know
 
 === [#Prepare Prepare] ===
-  * [/register Register] on this site
+  * Get a GitHub account and then come back and [/github/login Login using GitHub] on this site
   * Intimately familiarize yourself with [UltimateQualityDevelopmentSystem The Ultimate Quality Development System]
   * Understand the [wiki:Documentation Developer docs] (how-tos, core docs, examples, API reference)
   * Twisted has a rigorous policy standards for code, documentation, and testing:
