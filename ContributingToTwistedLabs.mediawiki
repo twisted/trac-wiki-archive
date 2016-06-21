@@ -25,7 +25,7 @@ Donations are [http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation#Back
     * [http://twistedmatrix.com/documents/current/core/development/policy/doc-standard.html Documentation standard]
     * [http://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html Writing Style guide]
     * [http://twistedmatrix.com/documents/current/core/development/policy/test-standard.html Testing standard]
-    * [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html SVN Access]
+    * [https://github.com/twisted/twisted/blob/trunk/docs/core/development/policy/code-dev.rst Git Access]
   * Understand the [wiki:ReviewProcess code review process]
   * [http://buildbot.twistedmatrix.com/ Buildbot] is used to automate the build process across platforms and test for breakage. Watch it. 
     * You'll need to [wiki:ContinuousIntegration/DeveloperWorkflow Use it] before merging a branch.
