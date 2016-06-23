@@ -7,40 +7,13 @@ Some requirements must be met to build the "Official" win32 Twisted.
 === Installation requirements ===
 
 * Install packages mentioned in [https://github.com/twisted/twisted/blob/trunk/INSTALL.rst#installation-requirements Installation requirements]
+* You must install the exact version of the MSVC compiler which matches you Python version: [https://wiki.python.org/moin/WindowsCompilers]
 
-=== With MSVC ===
-Without Cygwin installed, you need MSVC installed for the cl.exe
-compiler, which is the default on windows.  Just issue the command:
+=== Building ===
+
+Just issue the command:
 {{{
 $ python setup.py bdist_wheel
-}}}
-
-=== With Mingw ===
-The easiest way to build the extensions without MSVC is to install MinGW, for example using the [http://sourceforge.net/project/showfiles.php?group_id=2435&package_id=240780 automated installer].
-Then, create a distutils.cfg file in your distutils installation path (for example, C:\Python2.5\Lib\distutils\distutils.cfg), and put the following content:
-{{{
-[build]
-compiler=mingw32
-}}}
-
-And then issue {{{$ python setup.py install}}}. You can also pass the {{{--compiler=mingw32}}} option to the build command instead of using distutils.cfg.
-
-
-=== With Cygwin ===
-With Cygwin installed, you need to make sure these two packages are installed:
-  - gcc
-  - gcc-mingw
-
-Once that's done, just issue the command:
-
-{{{
-python setup.py build --compiler=mingw32 install
-}}}
-
-If for some reason extensions won't build, try this instead:
-
-{{{
-python setup.py build_py build_scripts install --skip-build
 }}}
 
 
@@ -62,28 +35,6 @@ packages.
 
  You need this little module:  http://www.rutherfurd.net/python/winreg/
 
-
- * Cygwin
-
- You will need Cygwin, with the gcc-mingw package installed.  Get Cygwin at: http://cygwin.com
-
- DO NOT INSTALL CYGWIN PYTHON!
-
- DO NOT INSTALL CYGWIN PYTHON!
-
- (Install Native Windows Python.)
-
-
- * Inno Setup
-
- This creates nice self-installers with uninstall functionality:  http://www.jrsoftware.org/isinfo.php
-
- You need version 4.0.8 or above.  (5.0.8 or later preferred.)
-
-
- * Bootstrap Twisted
-
- You will need an existing installation of Twisted, as the build script uses some utilities within Twisted.  The "bare minimum" install described above will suffice.
 
 
 == TROUBLESHOOTING ==
