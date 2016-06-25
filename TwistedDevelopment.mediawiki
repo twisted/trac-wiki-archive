@@ -70,11 +70,11 @@ Here's a quick step-by-step guide to getting from an idea for an improvement to 
   1. For the patch you are submitting, make sure that a [[https://twistedmatrix.com/trac/report|ticket exists using the "search" field above]], and Google for the patch which you are submitting.
     1. If you can't find one, file a new ticket using the [[https://twistedmatrix.com/trac/newticket|"new ticket"]] link above. See: [#Ticketsmanagement Tickets management]
   1. Create a [[https://help.github.com/articles/fork-a-repo/|fork on GitHub]] and clone it (see [#Gettingthesourcecode "Getting the source code"] above).
-  1. Create a branch in git for your code: 
+  1. Create a branch in git for your code.  If your ticket is **1234** and your GitHub ID is **myuserid**, you can create a branch like:
   {{{
        git checkout trunk
        git pull
-       git checkout -b my-new-change
+       git checkout -b 1234-myuserid-mychange
    }}}
   1. Edit the code in the branch that you just checked out, making your awesome change to Twisted.
   1. Now is a good time to make sure that your patch fulfills all of the requirements of the [http://twistedmatrix.com/trac/wiki/ReviewProcess review process], so you don't need to submit your patch many repeated times. Pay special attention to the section about [http://twistedmatrix.com/trac/wiki/ReviewProcess#Newsfiles news files]!
@@ -85,7 +85,7 @@ Here's a quick step-by-step guide to getting from an idea for an improvement to 
      .
   1. Push your changes to GitHub
      {{{
-     git push my-new-change
+     git push 1234-myuserid-mychange
      }}}
   1. Create a [https://help.github.com/articles/creating-a-pull-request/|GitHub pull request] for the **my-new-change** branch.  Make sure that in the pull request, you put a link to the ticket that you filed above. 
   1. In your ticket, put a link to the GitHub pull request.
