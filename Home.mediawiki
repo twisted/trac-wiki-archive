@@ -12,7 +12,7 @@
 
 == Source ==
 
- * [[ProjectVersion(https://pypi.python.org/packages/source/T/Twisted/Twisted-%(base)s.tar.bz2 Twisted %(base)s tar.bz2)]]
+ * [[ProjectVersion(https://files.pythonhosted.org/packages/source/T/Twisted/Twisted-%(base)s.tar.bz2 Twisted %(base)s tar.bz2)]]
 
 == Other ==
 
