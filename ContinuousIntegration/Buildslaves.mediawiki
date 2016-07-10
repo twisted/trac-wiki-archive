@@ -9,9 +9,18 @@ This page documents the buildslaves used by the Twisted project
 It is recommmended to create a dedicated non-administrator account for the buildslave. You can call it `buildslave`.
 During the installation you can temporary add the `buildslave` account to the `Administrators` group so that while an administrator you can `Run as...` commands using the `buildslave` account.
 
+* Install latest Git for Windows with pull and commit as-it-is
+
+For Python 2.7 builders and running the buildslave itself.
+
 * Get the latest Python 2.7 and install it in `c:\Python27`
 * Get the C++ compiler for Python 2.7 from MS and install it using the user under which the buildslave will run. The compiler is **not** installed for all users.
-* Install latest Git for Windows with pull and commit as-it-is
 * Latest python will come with pip, so using pip install `buildbot-slave virtualenv wheel`
 * Install the build-slave workdir in `c:\buildslave`
 * pypiwin32 will not copy the pywin32 system files to Windows. Copy the content of `C:\Python27\Lib\site-packages\pywin32_system32` to `C:\Python27\Lib\site-packages\win32` so that you can execute `C:\Python27\Lib\site-packages\win32\pythonservice.exe` as any user
+
+
+For Python 3.5:
+
+* Get the latest Python 3.5 and install it for all users in `c:\\Python35`
+* Install Microsoft Visual C++ Build Tools 2015. Chose custom install. Check Windows 8.1 SDK and Windows 10 SDK options.
