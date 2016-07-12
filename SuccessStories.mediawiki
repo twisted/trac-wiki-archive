@@ -2,6 +2,13 @@
 
 '''Have a success story for Twisted? Let us know! Contact success at twistedmatrix dot com'''
 
+= [https://github.com/labrad LabRAD] =
+
+[https://github.com/labrad LabRAD] is an RPC system designed for use in scientific research labs, presently in use by [https://github.com/labrad/labrad/wiki/Who-uses-LabRAD more than a dozen academic and industrial labs] around the world.
+
+The labrad python API has used Twisted for networking and asynchrony since around 2005, and Twisted continues to serve our needs well. Most of our servers use Python, and most LabRAD users use Python to run experiments; Twisted is an essential component for us on both the client and server sides. We particularly like the explicit coroutine style of asynchronous code made possible by the @inlineCallbacks decorator.
+
+-- Daniel Sank, LabRAD Project
 
 = [http://lucasfilm.com/ Lucasfilm] =
 
