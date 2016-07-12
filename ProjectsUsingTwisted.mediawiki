@@ -129,6 +129,7 @@ Twisted is used by many open-source, academic and commercial projects.
 
 = Research Projects =
 
+ * [http://github.com/labrad LabRAD] is an RPC system designed for use in scientific research labs, presently in use by [https://github.com/labrad/labrad/wiki/Who-uses-LabRAD more than a dozen academic and industrial labs] around the world.
  * [http://tycoon.hpl.hp.com/ Tycoon @ HP Labs] is a market-based system for managing compute resources in distributed clusters.
  * [http://dsd.lbl.gov/gtg/projects/pyGridWare/ pyGridWare @ Lawrence Berkeley National Labs] is a Python implementation of the WS-Resource framework. It includes support for WS-Addressing, WS-Notification, WS-Lifetime management, and WS-Security. 
  * [http://viff.dk/ VIFF @ University of Aarhus, Denmark] is an open source Python library for implementing secure multi-party computation.
