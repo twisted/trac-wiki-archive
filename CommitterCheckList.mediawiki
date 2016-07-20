@@ -25,7 +25,7 @@ This second list includes various technical details about how you might go about
     1. If you check in something that breaks [http://buildbot.twistedmatrix.com/boxes-supported?branch=trunk&num_builds=20 trunk], revert it
       1. If the bad revision was 07c854353d,
         1. `cd ~/Projects/Twisted/trunk`
-        1. `git revert 07c854353d .`
+        1. `git revert -m 1 07c854353d .`
       1. Use "Reopens #NNNN" in the commit message to re-open the corresponding ticket
       1. Explain what broke and how and perhaps on which platform in the commit message
   1. If you are merging a branch into trunk, you must commit exactly the merge.  You may not make extra changes in the trunk working copy after the merge.
