@@ -9,6 +9,8 @@ Mail list subscription information as well as list archives are available for th
  * [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-web twisted-web]
  * [https://mailman.ik.nu/mailman/listinfo/twisted-jabber twisted-jabber]
 
+If the above Web interfaces do not work for you then the Mailman software that manages them also provides an email interface. For example, you can subscribe to the twisted-python list by simply sending email to `twisted-python-join@twistedmatrix.com` - more details of this functionality can be found in [http://www.list.org/mailman-member/node10.html this Mailman documentation on its email interface].
+
 == Stack Overflow ==
 
 Stack Overflow is a programming Q & A site.  You can find Twisted-related questions there, often with answers:
