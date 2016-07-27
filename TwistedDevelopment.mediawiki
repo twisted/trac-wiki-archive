@@ -77,7 +77,8 @@ Here's a quick step-by-step guide to getting from an idea for an improvement to 
        git checkout -b 1234-myuserid-mychange
    }}}
   1. Edit the code in the branch that you just checked out, making your awesome change to Twisted.
-  1. Now is a good time to make sure that your patch fulfills all of the requirements of the [http://twistedmatrix.com/trac/wiki/ReviewProcess review process], so you don't need to submit your patch many repeated times. Pay special attention to the section about [http://twistedmatrix.com/trac/wiki/ReviewProcess#Newsfiles news files]!
+  1. Make sure that your patch fulfills all of the requirements of the [http://twistedmatrix.com/trac/wiki/ReviewProcess review process], so you don't need to submit your patch many repeated times.
+  1. Every patch needs a  [http://twistedmatrix.com/trac/wiki/ReviewProcess#Newsfiles topfile news file]
   1. Commit your changes 
      {{{
      git commit -am "Changed some stuff"
