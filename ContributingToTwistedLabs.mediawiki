@@ -12,8 +12,9 @@ Donations are [http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation#Back
 == Code Contributions ==
 ===  [#Overview Overview] ===
 
- * [wiki:BasicGuideToContributingCode Basic Guide To Contributing Code], a simplified overview
- * [wiki:TwistedDevelopment Detailed Contribution Requirements]
+ * [wiki:TwistedDevelopment#SubmittingaPatch Submitting a Patch], a simplified overview
+ * [wiki:TwistedDevelopment Detailed Contribution Requirements], with that and more
+ * [wiki:ReviewProcess Our Review Process], how contributed code is quality checked and reviewed 
  * [wiki:CommitterCheckList Checklist for Twisted committers], things that developers with commit access should know
 
 === [#Prepare Prepare] ===
@@ -35,7 +36,7 @@ Donations are [http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation#Back
   * Take a look at the [/report open tickets]
   * Learn the [wiki:BugKeywords bug keywords]
     * [/query?status=new&status=assigned&status=reopened&keywords=%7Eeasy&order=priority 'Easy' keyword tickets] are low-hanging fruit and good to get your feet wet
-  * [wiki:TwistedDevelopment#SubmittingaPatch Submit a Patch] in the  {{{diff -u}}} format by attaching it to an [/report open ticket] in the tracker. You can also create a [/newticket New Ticket] after you have [/register Registered]
+  * [wiki:TwistedDevelopment#SubmittingaPatch Submit a Patch]
   * Learn how to apply for commit privileges with the [wiki:ContributorAdvancementPath Contributor Advancement Path]
 
 
@@ -54,6 +55,4 @@ Donations are [http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation#Back
  * [wiki:Infrastructure]
  * [wiki:ContinuousIntegration]
  * [wiki:users]
- * [wiki:plan]
- * [wiki:Proposal]
  * [wiki:DocumentationAnalysis]
