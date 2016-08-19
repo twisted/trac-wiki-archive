@@ -42,6 +42,9 @@ To checkout code from the repository, use:
 
 == Signed MD5 & SHA1 Sums ==
 
+md5 sums of the 16.3.2 release are [https://twistedmatrix.com/Releases/twisted-16.3.2-md5sums.txt here].
+sha512 sums of the 16.3.2 release are [https://twistedmatrix.com/Releases/twisted-16.3.2-shasums.txt here].
+
 md5 sums of the 16.3.1 release are [https://twistedmatrix.com/Releases/twisted-16.3.1-md5sums.txt here].
 sha512 sums of the 16.3.1 release are [https://twistedmatrix.com/Releases/twisted-16.3.1-shasums.txt here].
 
