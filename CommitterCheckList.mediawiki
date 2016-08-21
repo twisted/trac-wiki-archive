@@ -24,10 +24,15 @@ This second list includes various technical details about how you might go about
         1. If it still doesn't work, find someone in the IRC channel to help
     1. If you check in something that breaks [http://buildbot.twistedmatrix.com/boxes-supported?branch=trunk&num_builds=20 trunk], revert it
       1. If the bad revision was 07c854353d,
-        1. `cd ~/Projects/Twisted/trunk`
+        1. `cd ~/Projects/Twisted`
         1. `git revert -m 1 07c854353d .`
       1. Use "Reopens #NNNN" in the commit message to re-open the corresponding ticket
       1. Explain what broke and how and perhaps on which platform in the commit message
+    1. If you need to re-merge the reverted branch, revert the reversion. 
+      1. Create a new branch or merge trunk into your branch with was previously reverted.
+      1. Revert again the commit containing the revert and commit the reversion: `git revert REVERT-SHA`.
+      1. Make your changes.
+      1. Push the changes for re-review
   1. If you are merging a branch into trunk, you must commit exactly the merge.  You may not make extra changes in the trunk working copy after the merge.
   1.  Use `force-build` if you want to test a branch on all supported builders before merging
     1. No, really, use it.  It saves a lot of time.
