@@ -182,23 +182,15 @@ There are some UsefulQueries for finding issues in the tracker.
 
 This series of documents is designed for people who wish to contribute to the Twisted codebase.
 
- * [http://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html Coding Standard]
+ * [http://twistedmatrix.com/documents/current/core/development/policy Development policies]
 
  * [http://twistedmatrix.com/documents/current/core/development/naming.html Naming Conventions]
-
- * [http://twistedmatrix.com/documents/current/core/development/policy/test-standard.html Unit Tests in Twisted]
 
  * [http://epydoc.sourceforge.net/epytext.html Epytext] for docstrings format.
 
  * [http://sphinx-doc.org/rest.html ReStructuredText and Sphinx] for narrative documentation.
 
- * [http://twistedmatrix.com/documents/current/core/development/policy/doc-standard.html Documentation Standard]
-
- * [http://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html Writing Standard]
-
  * [wiki:Security Security]
-
- * [CompatibilityPolicy Compatibility Policy]
 
  * [http://twistedmatrix.com/documents/current/core/development/philosophy.html Philosophy]
 
