@@ -62,7 +62,7 @@ Merge &lt;branch name&gt;: Brief description
 
 Author: &lt;comma_separated_names&gt;
 Reviewer: &lt;comma_separated_names&gt;
-Fixes: #&lt;ticket number&gt;
+Fixes: ticket:&lt;ticket number&gt;
 
 Long description (as long as you wish)
 </pre>
@@ -216,7 +216,7 @@ Revert r&lt;revision number&gt;: Brief description
 
 A description of the problem, or a traceback if pertinent
 
-Reopens: #&lt;ticket number&gt;
+Reopens: ticket:&lt;ticket number&gt;
 </pre>
 }}}
 
