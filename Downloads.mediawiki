@@ -4,25 +4,15 @@ For more information about Twisted, please see the [wiki:TwistedProject Twisted 
 
 The current release is Twisted [[ProjectVersion]]: [[ProjectVersion(https://github.com/twisted/twisted/blob/twisted-%(base)s/NEWS Release notes)]]
 
-== Ubuntu and Debian ==
+== Through Pip ==
 
-Packages of Twisted are available in Ubuntu and Debian as 'python-twisted'.
+The recommended way is to run {{{pip install Twisted}}}, preferably inside a virtualenv.
 
-If you wish to build and install the latest Twisted by-hand on Ubuntu ensure that you have the 'python-dev' and 'build-essential' packages installed.
+On Linux, and BSDs, you will need a C compiler (such as GCC).
 
-== Windows ==
+On macOS you will need to run {{{xcode-select --install}}}.
 
- * Twisted [[ProjectVersion]] for Python 2.7 64 bits ([[ProjectVersion(https://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s-cp27-none-win_amd64.whl whl)]])
- * [https://pypi.python.org/pypi/zope.interface#download Zope.Interface] (required)
- * [https://pypi.python.org/pypi/pypiwin32 PyWin32] (required)
- * [https://pypi.python.org/pypi/pyOpenSSL PyOpenSSL] (needed for SSL)
-
-
-== FreeBSD ==
-
-Packages of Twisted are available in FreeBSD ports as 'devel/py-twisted'.  You can choose what component of Twisted you install using command 'make config', you can simply install the Twisted package with `pkg_add devel/py-twisted`.
-
- * [https://www.freshports.org/devel/py-twisted/ Twisted for FreeBSD]
+If you are installing on Windows, {{{pip install Twisted[windows_platform]}}} will install the Windows-specific requirements.
 
 == Source Tarball ==
 
