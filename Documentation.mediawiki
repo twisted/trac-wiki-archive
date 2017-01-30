@@ -26,7 +26,7 @@ Dave Peticolas has written a number of [http://krondo.com/?page_id=1327 excellen
 
 == Mail Lists ==
 
- * Search the [http://www.google.com/coop/cse?cx=000092903031650492802:wmoqkjvon0i twisted-python] or [http://www.google.com/search?q=site%3Atwistedmatrix.com+inurl%3Apipermail%2Ftwisted-web&btnG=Search twisted-web] mail list archives.
+ * Search the [http://www.mail-archive.com/twisted-python@twistedmatrix.com twisted-python] or [http://www.google.com/search?q=site%3Atwistedmatrix.com+inurl%3Apipermail%2Ftwisted-web&btnG=Search twisted-web] mail list archives.
 
 == Books == 
 
