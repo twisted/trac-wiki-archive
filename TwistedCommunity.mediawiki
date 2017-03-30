@@ -5,11 +5,11 @@ For interacting with the twisted community members, you have several options:
 == Mail Lists ==
 
 If you want to participate in Twisted's community or development, you probably want to join the main mailing list:
- * [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python Twisted-Python, the main Twisted discussion list]
+ * [https://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python Twisted-Python, the main Twisted discussion list]
 
 There are also more specific lists, if your interest is narrower:
 
- * [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-web twisted-web] - web-specific technologies, including twisted as WSGI, twisted.web, klein, and treq
+ * [https://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-web twisted-web] - web-specific technologies, including twisted as WSGI, twisted.web, klein, and treq
  * [https://mailman.ik.nu/mailman/listinfo/twisted-jabber twisted-jabber] - xmpp-related projects, including twisted.words.protocols.jabber.
 
 You can subscribe to these mailing lists using the web interfaces linked above.
