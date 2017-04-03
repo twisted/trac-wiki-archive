@@ -26,13 +26,11 @@
 
 {{{
 #!div class="side-panel twisted-news"
-
-== [http://labs.twistedmatrix.com/ Twisted News] ==
-
-{{{
-#!div id="twisted-news" class="feed-content"
-[[Image(/chrome/common/throbber.gif, link=, class=throbber, title="", alt="")]]
-}}}
+== Community ==
+=== Read [http://labs.twistedmatrix.com/ our blog] ===
+=== Join [https://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python the discussion list] ===
+=== Come [https://webchat.freenode.net/?channels=%23twisted%2C%23twisted-web&uio=MTE9OTIaf chat] with us on IRC ===
+=== Ask [https://stackoverflow.com/questions/tagged/twisted on Stack Overflow] ===
 }}}
 
 
