@@ -26,13 +26,13 @@
 
 {{{
 #!div class="side-panel twisted-news"
-== Community ==
-=== See the code [https://github.com/twisted/twisted for Twisted] ([https://github.com/twisted and more]) on GitHub ===
-=== Read [http://labs.twistedmatrix.com/ our blog] ===
-=== Join [https://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python the discussion list] ===
-=== Come [https://webchat.freenode.net/?channels=%23twisted%2C%23twisted-web&uio=MTE9OTIaf chat] with us on IRC ===
-=== Ask [https://stackoverflow.com/questions/tagged/twisted on Stack Overflow] ===
-=== Follow us [https://twitter.com/twistedmatrix on Twitter] ===
+= Community =
+== See the code [https://github.com/twisted/twisted for Twisted] ([https://github.com/twisted and more]) on GitHub ==
+== Read [http://labs.twistedmatrix.com/ our blog] ==
+== Join [https://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python the discussion list] ==
+== Come [https://webchat.freenode.net/?channels=%23twisted%2C%23twisted-web&uio=MTE9OTIaf chat] with us on IRC ==
+== Ask [https://stackoverflow.com/questions/tagged/twisted on Stack Overflow] ==
+== Follow us [https://twitter.com/twistedmatrix on Twitter] ==
 }}}
 
 
