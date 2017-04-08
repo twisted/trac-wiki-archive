@@ -10,18 +10,25 @@
 
 = Downloads =
 
-== Source ==
+== Get Started with Pip ==
 
- * [[ProjectVersion(https://files.pythonhosted.org/packages/source/T/Twisted/Twisted-%(base)s.tar.bz2 Twisted %(base)s tar.bz2)]]
+{{{
+#!html
+<pre class="wiki"
+>$<a style="display: inline" href="https://hynek.me/articles/virtualenv-lives/">virtualenv</a>try-twisted
+$ pip install twisted[tls]
+$ . try-twisted/bin/activate
+$ twist --help
+</pre>
+}}}
 
-== Other ==
+== Download Direct form PyPI ==
 
- * [wiki:Downloads More downloads]
+[https://pypi.org/project/Twisted/ https://pypi.org/project/Twisted/]
 
+== Optional Dependencies ==
 
-== Dependencies ==
-
- * [https://pypi.python.org/pypi/zope.interface#download zope.interface]
+ * [https://twistedmatrix.com/documents/current/installation/howto/optional.html Install Extras]
 }}}
 
 {{{
