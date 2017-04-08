@@ -16,8 +16,8 @@
 #!html
 <pre class="wiki"
 >$<a style="display: inline" href="https://hynek.me/articles/virtualenv-lives/">virtualenv</a>try-twisted
-$ pip install twisted[tls]
 $ . try-twisted/bin/activate
+$ pip install twisted[tls]
 $ twist --help
 </pre>
 }}}
