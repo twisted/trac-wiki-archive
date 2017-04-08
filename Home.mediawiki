@@ -22,7 +22,7 @@ $ twist --help
 </pre>
 }}}
 
-== Download Direct form PyPI ==
+== Download Direct from PyPI ==
 
 [https://pypi.org/project/Twisted/ https://pypi.org/project/Twisted/]
 
