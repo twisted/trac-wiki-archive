@@ -75,7 +75,8 @@ Long description (as long as you wish)
 </pre>
 }}}
 
- * After the change is merged wait for the buildbots to finish running, if there is a regression on a supported builder you should [#Revertingachange revert your merge].
+ * After the change is merged wait for the [https://buildbot.twistedmatrix.com/boxes-supported?branch=trunk&num_builds=1 buildbots for trunk] to finish running.
+ * If there is a regression on a supported builder you should [#Revertingachange revert your merge].
  * '''If this fix has implications for an ongoing [wiki:ReleaseProcess pre-release in progress]''', please announce it on the mailing list so that the release manager will know.  A change definitely has implications for the release process if:
   - a pre-release has been issued for which there is no final release
   - this ticket was a known regression and is now closed, so another pre-release should be issued
