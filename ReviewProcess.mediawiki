@@ -53,13 +53,19 @@ For the most part, we'd love for you to jump right in and start writing code!  T
  * If the change is ready for trunk, indicate so by writing "please merge" or "+1".
    * Alternatively, if the author does not have commit access to trunk, merge the change for them.
 
+
 == Authors: How to merge the change to trunk ==
 
- * Merge the change into a checkout of Twisted trunk (as a merge commit, using {{{ git merge --no-ff }}}!) and commit it. The message must follow this format (See [#Thecommitmessage below]).
+ * Check in the GitHub PR that all tests are green (or the failed one are just unrelated/spurious failures)
+ * Use the GitHub merge button to merge the request, using the GitHub default commit subject, and with the standard commit format required by Twisted. See below for details.
+ * Alternatively, you can use the command line and merge the change into a checkout of Twisted trunk (as a merge commit, using {{{ git merge --no-ff }}}!) and commit it.
+
+The commit message, when using both the GitHub button or the CLI commit, must follow this format (See [#Thecommitmessage below]).
+
 {{{
 #!html
 <pre class="wiki">
-Merge &lt;branch name&gt;: Brief description
+Merge pull request #123 from twisted/4356-branch-name-with-trac-id
 
 Author: &lt;comma_separated_names&gt;
 Reviewer: &lt;comma_separated_names&gt;
@@ -68,6 +74,7 @@ Fixes: ticket:&lt;ticket number&gt;
 Long description (as long as you wish)
 </pre>
 }}}
+
  * After the change is merged wait for the buildbots to finish running, if there is a regression on a supported builder you should [#Revertingachange revert your merge].
  * '''If this fix has implications for an ongoing [wiki:ReleaseProcess pre-release in progress]''', please announce it on the mailing list so that the release manager will know.  A change definitely has implications for the release process if:
   - a pre-release has been issued for which there is no final release
