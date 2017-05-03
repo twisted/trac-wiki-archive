@@ -232,7 +232,7 @@ from twisted.python import failure
 
 @defer.inlineCallbacks
 def main(reactor, username="alice", password="secret",
-         strport="ssl:host=example.com:port=993"):
+         strport="tls:example.com:993"):
     endpoint = endpoints.clientFromString(reactor, strport)
     factory = protocol.Factory.forProtocol(imap4.IMAP4Client)
     try:
