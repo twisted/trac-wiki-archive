@@ -51,6 +51,9 @@ pip install pypiwin32
 
 # Install dev dependencies, also forcing upgrade of existing versions.
 pip install -U -e '.[dev]'
+# At least on my Ubuntu 16.06 the install_requires were not correctly installed,
+# so I am doing a manual install based on the content of src/twisted/python/_setup.py.
+pip install automat incremental constantly
 
 # Use the dev tools.
 # Prefix this with the path to python.exe on Windows
