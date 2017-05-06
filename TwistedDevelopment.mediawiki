@@ -53,13 +53,17 @@ pip install pypiwin32
 pip install -U -e '.[dev]'
 # At least on my Ubuntu 16.06 the install_requires were not correctly installed,
 # so I am doing a manual install based on the content of src/twisted/python/_setup.py.
-pip install automat incremental constantly
+pip install automat incremental constantly diff_cover
 
 # Use the dev tools.
 # Prefix this with the path to python.exe on Windows
 trial twisted.conch.test.test_transport
+
 # Using the coding standard guidelines validation tool... will get a lot of false positives
 twistedchecker twisted.conch.ssh.transport
+# On Linux/OSX there is a helper to only raise error for the diff
+./travis/twistedchecker-trunk-diff.sh src/twisted/
+
 # Static code analysis
 pyflakes twisted/conch/ssh/transport.py
 
