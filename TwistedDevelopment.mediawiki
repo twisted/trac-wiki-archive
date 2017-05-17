@@ -62,7 +62,7 @@ trial twisted.conch.test.test_transport
 # Using the coding standard guidelines validation tool... will get a lot of false positives
 twistedchecker twisted.conch.ssh.transport
 # On Linux/OSX there is a helper to only raise error for the diff
-./travis/twistedchecker-trunk-diff.sh src/twisted/
+./.travis/twistedchecker-trunk-diff.sh src/twisted/
 
 # Static code analysis
 pyflakes twisted/conch/ssh/transport.py
