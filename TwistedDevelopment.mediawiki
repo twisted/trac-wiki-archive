@@ -130,9 +130,7 @@ Command from this section assume that you run them from withing Twisted source c
 
 To run the tests, simply run `trial twisted`. Make sure you run trial command that comes with twisted source code and not the one provided by your operating system.
 
-To generate the narrative documentation, `cd docs; make html`. Files are generated in `docs/_build/html/`. Make sure you have the latest Python Sphinx version.
-
-To generate the API documentation, you will need [https://launchpad.net/pydoctor pydoctor].  It depends on [http://epydoc.sourceforge.net/ epydoc].  Once you've got it, `./bin/admin/build-apidocs . apidocs` and look in the generated `apidocs` directory.
+To generate the narrative documentation or API documentation, see [wiki:ReviewingDocumentation the wiki page on Twisted documentation].
 
 After every commit to Twisted, the buildbot runs all the unit tests and reports [http://buildbot.twistedmatrix.com/ test results on several platforms].  Here is a page showing only the [http://buildbot.twistedmatrix.com/boxes-supported test results on supported platforms]. All tests on supported platforms always pass. Watch the buildbot. Because sometimes, the buildbot watches back.
 
