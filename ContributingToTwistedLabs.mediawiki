@@ -23,7 +23,6 @@ Donations are [http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation#Back
   * Understand the [wiki:Documentation Developer docs] (how-tos, core docs, examples, API reference)
   * Twisted has a rigorous policy standards for code, documentation, and testing:
     * [http://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html Coding standard]
-    * [http://twistedmatrix.com/documents/current/core/development/policy/doc-standard.html Documentation standard]
     * [http://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html Writing Style guide]
     * [http://twistedmatrix.com/documents/current/core/development/policy/test-standard.html Testing standard]
     * [https://github.com/twisted/twisted/blob/trunk/docs/core/development/policy/code-dev.rst Git Access]
