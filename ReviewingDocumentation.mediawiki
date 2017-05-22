@@ -10,82 +10,53 @@ Note that the example and howto documentation on the website may be outdated, as
 
 === Editing example and howto documentation ===
 
-1. if you haven't already, check out a copy of the Twisted svn repository
-
-`svn checkout svn://svn.twistedmatrix.com/svn/Twisted/trunk ~/my-code-dir/Twisted/trunk`
+1. if you haven't already, [wiki:TwistedDevelopment#Creatingyourworkenvironment create your Twisted work environment].
 
 2. make sure you have the latest version of the code
-
-`cd ~/my-code-dir/Twisted/trunk`[[BR]]
-
-`svn update`
 
 3. Edit away!
 
-The documentation lives in xhtml files in subdirectories of `trunk/doc/`. Twisted uses the document generator [wiki:TwistedLore lore] to generate the html files you see on the web from these xhtml files. After adding your changes to an xhtml file, it's important to review your changes for correctness and to preview how they will look on the website.
+The documentation lives in [http://docutils.sourceforge.net/rst.html reStructuredText] (`.rst`) files in subdirectories of `Twisted/docs/`. Twisted uses the document generator [https://sphinx.readthedocs.io/en/stable/ sphinx] to generate the html files you see on the web from these `.rst` files. After adding your changes, it's important to review your changes for correctness and to preview how they will look on the website.
 
-4. Previewing with lore
+4. Previewing with sphinx
 
-For example, if I made changes to `trunk/doc/core/howto/choosing-reactor.xhtml`, I should[[BR]]
+For example, if I made changes to `Twisted/docs/core/howto/choosing-reactor.rst`, I should
 
-`cd ~/my-code-dir/Twisted/trunk/doc/core/howto`[[BR]]
+{{{
+. build/bin/activate  # only necessary once; 'build' is the virtualenv name used on the TwistedDevelopment wiki page
+python bin/admin/build-docs .
+}}}
 
-`lore choosing-reactor.xhtml`
+This generates `Twisted/doc/core/howto/choosing-reactor.html`, which you can view in a web browser via the URL
 
-lore expects a template file in the directory from which you execute the command. If there isn't a `template.tpl` file in your directory, copy one from a directory that does have one, like `doc/core/howto`, or run lore from a directory that does have one.
+`file:///path/to/Twisted/doc/core/howto/choosing-reactor.html`
 
-This generates `choosing-reactor.html`, which you can view in a web browser via the URL
-
-`file:///path/to/my-code-dir/Twisted/trunk/doc/core/howto/choosing-reactor.html`
-
-If everything looks good, submit a patch to the xhtml as described [wiki:TwistedDevelopment#SubmittingaPatch here].
+If everything looks good, submit a patch to the `.rst` as described [wiki:TwistedDevelopment#SubmittingaPatch here].
 
 === Editing API Docs ===
 
-The API docs are generated from the doc strings in the code by [http://codespeak.net/~mwh/pydoctor/ pydoctor], so to update what will be displayed in the API docs just update the doc strings. After making your changes, generate a test set of API docs to preview how they will look.
+The API docs are generated from the doc strings in the code by [https://github.com/twisted/pydoctor pydoctor], so to update what will be displayed in the API docs just update the doc strings. After making your changes, generate a test set of API docs to preview how they will look.
 
-1. if you haven't already, check out a copy of the Twisted svn repository
-
-`svn checkout svn://svn.twistedmatrix.com/svn/Twisted/trunk ~/my-code-dir/Twisted/trunk`
+1. if you haven't already, [wiki:TwistedDevelopment#Creatingyourworkenvironment create your Twisted work environment].
 
 2. make sure you have the latest version of the code
 
-`cd ~/my-code-dir/Twisted/trunk`[[BR]]
-
-`svn update`
-
-3. Edit away! Be sure to adhere to the docstring guidelines in the [http://twistedmatrix.com/trac/browser/trunk/doc/core/development/policy/coding-standard.xhtml?format=raw Twisted coding standard].
+3. Edit away! Be sure to adhere to the docstring guidelines in the [https://twistedmatrix.com/documents/current/core/development/policy/ Twisted coding standard].
 
 4. Preview your changes
 
-To generate API docs you need to have installed: 
- * [https://launchpad.net/pydoctor pydoctor] - API documentation tool for Python written to be used with Twisted
- * [http://epydoc.sourceforge.net/ Epydoc] - an API documentation tool on which pydoctor depends
- * [https://launchpad.net/divmod.org nevow] - pydoctor's HTML generation side uses Nevow templates
+Generate the docs with the build-apidocs admin script like so:
 
-Once everything is installed, generate the docs with the build-apidocs admin script like so:
-
-`bin/admin/build-apidocs /path/to/my-code-dir/Twisted/trunk apidocs`
+{{{
+. build/bin/activate  # only necessary once; 'build' is the virtualenv name used on the TwistedDevelopment wiki page
+python bin/admin/build-apidocs src apidocs
+}}}
 
 The above produces a folder called `apidocs` in your current working directory. You can then browse from the entry points to the docs in a web browser via the URL
 
 `file:///path/to/apidocs/index.html`
 
 If everything looks good, submit a patch as described [wiki:TwistedDevelopment#SubmittingaPatch here].
-
-=== Editing man pages ===
-
-Twisted man pages live in `doc/<subproject>/man`. The man pages are `lore`'d as part of a release to generate html files, so if you are reviewing man pages you should make sure they generate valid html through `lore`. The easiest way to do this is to steal from `twisted.python._release`. To, for example, generate xhtml from the troff files in `doc/core/man`:
-
-{{{
-from twisted.python.filepath import FilePath
-dir = FilePath('doc/core/man')
-from twisted.python._release import ManBuilder
-m = ManBuilder()
-m.build(dir)
-}}}
-
-you can then `lore` the resulting xhtml files as described [ReviewingDocumentation#Editingexampleandhowtodocumentation above] to generate html.
 
 === More ===
 see also [wiki:DocumentationAnalysis DocumentationAnalysis] from an old Twisted documentation sprint.
