@@ -1,4 +1,4 @@
-[wiki:ContributingToTwistedLabs Contribute] > [wiki:TwistedDevelopment Development] > Review Process
+ [wiki:ContributingToTwistedLabs Contribute] > [wiki:TwistedDevelopment Development] > Review Process
 
 = Twisted Code Review Process =
 
@@ -87,6 +87,8 @@ Long description (as long as you wish)
 == Details ==
 
 === News files ===
+
+**NB: If your pull request contains news fragments in {{{topfiles}}} directories, please run {{{admin/fix-for-towncrier.py}}} and then commit the result.**
 
 It is up to the authors of individual changes to write high-level descriptions for their changes. These descriptions will be aggregated into the release notes distributed with Twisted releases.  If we just let each author add to the [https://github.com/twisted/twisted/blob/trunk/NEWS NEWS] file on every commit, though, we would run into lots of spurious conflicts. To avoid this, we use [https://pypi.python.org/pypi/towncrier towncrier] to manage separate news fragments for each change.
 
