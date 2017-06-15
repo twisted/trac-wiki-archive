@@ -1,0 +1,19 @@
+Code coverage is an important part of the way that we ensure quality on Twisted.  We use https://codecov.io to produce coverage reports on github pull requests in order to make it easy for contributors to see what code is covered.
+
+''However'', there is an unfortunate detail in the way our code coverage reporting intersects with the way our continuous integration is set up.
+
+We have two kinds of continuous integration: ''hosted'' (i.e. infrastructure operated by services, such as [https://travis-ci.org Travis CI] and [http://appveyor.com Appveyor]) and ''custom'' (i.e. https://buildbot.twistedmatrix.com/ and https://speed.twistedmatrix.com/).
+
+Hosted continuous integration makes security somebody else's problem.  That means every random patch from every contributor can just automatically run - if it causes a security issue, it's not ''our'' security issue.  However, no hosted solution covers the diversity of platforms that we want to be able to support: in particular, FreeBSD, macOS*, and different linux ''kernels'' are not easy to get for free.
+
+*: Yes, we know Travis technically has macOS support.  We used it for some time, but it would delay builds by upwards of 4 hours at a time, slower than even our slowest appveyor build.  We hope to switch our OS X builders back to Travis at some point but right now it's still untenable.
+
+Given that many of our build environments are contributed, and not locked down for multi-tenant usage, we have a responsibility to at least glance over each patch to ensure that we're not, for example, participating in a denial of service attack by running the tests that some random contributor submitted.  As such, a project member (i.e. committer, someone with repo:write access) needs to create a branch in the `twisted/twisted` repo on github before our custom continuous integration will run it.
+
+The consequence for test coverage is that ''every change that comes from an external contributor will initially look like it's decreasing coverage'', because not all of the builders which submit combined coverage reporting have run.  There is a script in the repository, `./admin/pr_as_branch`, which project members can run to automatically push the latest commit on a given PR into a branch on the main repository, causing that commit to get built by our CI and causing the status to be submitted to that PR.  (Luckily, the way Github works with build statuses is that build statuses are actually for a particular commit, and not for a specific branch or PR, so the existence of the exact same commit as the tip of a branch is all that is necessary to make everything work properly.)
+
+You may also notice that certain required statuses are never submitted for PRs, leaving them in a "waiting" state forever; this is because some of or required statuses come from custom CI, not hosted CI.
+
+If you're an external contributor: sorry!  This is the best we can do right now to satisfy all of our constraints; we know that the situation isn't ideal, but doing better requires a lot more volunteer effort that we just don't have access to.  You can make this easier on yourself by getting project member access - faster access to build results is one of the perks of getting that :-).
+
+If you're a project member: whenever you peruse the open list of reviews at https://twisted.reviews/, please take a moment to run `pr_as_branch` on any open PRs that look like they aren't doing anything malicious but don't yet have a proper build status.
