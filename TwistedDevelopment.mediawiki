@@ -106,7 +106,7 @@ Here's a quick step-by-step guide to getting from an idea for an improvement to 
   1. At this point, you need to wait for feedback.  If your patch is very good, very simple, and obviously correct, we may just apply it, but it is ''very unlikely'' that the first draft of a patch will be accepted as-is.  When a Twisted developer reviews your patch, they will re-assign the ticket to you; you can [http://twistedmatrix.com/trac/report/7 see the list of tickets assigned to you by clicking here].  Unfortunately, the time it takes us to deal with a ticket submitted for review is highly variable, and depends on how many other tickets are waiting review, the amount of free time that the Twisted core development team has, and how many resources we have available for [http://labs.twistedmatrix.com/ sponsored development].
   1. When you do receive a review comment, push changes to your branch which address that feedback, then place the ticket back in review.
   1. When placing the ticket back for review, make sure your branch is up to date with latest trunk, and that there will be no merge conflicts.
-  1. Don't push your changes by rewriting the history, rebase your branch.
+  1. Don't push your changes by rewriting the history, merge trunk into your branch.
 
 
 === Getting Your Patch Accepted ===
