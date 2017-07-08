@@ -1,6 +1,6 @@
 Twisted is the premier networking library for the Python language.  Twisted, open source and volunteer driven since 2000, has the primary objective of making all kinds of network and event-driven programming easy while producing robust, high performance systems.  It provides many protocol implementations for developers (including HTTP, IMAP, SMTP, DNS, SSH and XMPP) and basic infrastructure for building applications using those protocols (web servers, chat clients, network proxies, and more).
 
-Twisted development is done almost entirely by volunteers.  When it is funded, it is funded almost entirely by donations from the community.  Twisted's issue tracker has over 1700 open issues for bug reports and feature requests.  Donations supporting current development efforts manage to address almost as many issues as are reported.  Ongoing support is needed to keep this up and - perhaps someday - turn the tide and implement as many features as are requested!
+Twisted development is done almost entirely by volunteers.  When it is funded, it is funded almost entirely by donations from the community.  Twisted's issue tracker has over 2300 open issues for bug reports and feature requests.  Donations supporting current development efforts manage to address almost as many issues as are reported.  Ongoing support is needed to keep this up and - perhaps someday - turn the tide and implement as many features as are requested!
 
 Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
 
