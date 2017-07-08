@@ -13,7 +13,6 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
         <input name="currency_code" value="USD" type="hidden">
         <input name="amount" value="25" type="hidden">
         <input onclick="return setDonationAmount(this.form, 'amount')" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" alt="PayPal">
-        <div style="text-align: center; padding-top: 3px; font-size: 0.85em; color: #555">PayPal</div>
         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>
 }}}
