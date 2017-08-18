@@ -79,10 +79,10 @@ Here's a quick step-by-step guide to getting from an idea for an improvement to 
   1. Create a [[https://help.github.com/articles/fork-a-repo/|fork on GitHub]] and clone it (see [#Gettingthesourcecode "Getting the source code"] above).
   1. Create a branch in git for your code.  If your ticket is **1234** and your GitHub ID is **myuserid**, you can create a branch like:
   {{{
-       git checkout trunk
-       git pull
-       git checkout -b 1234-myuserid-mychange
-   }}}
+  git checkout trunk
+  git pull
+  git checkout -b 1234-myuserid-mychange
+  }}}
   1. Edit the code in the branch that you just checked out, making your awesome change to Twisted.
   1. Make sure that your patch fulfills all of the requirements of the [http://twistedmatrix.com/trac/wiki/ReviewProcess review process], so you don't need to submit your patch many repeated times.
   1. Every patch needs a [http://twistedmatrix.com/trac/wiki/ReviewProcess#Newsfiles topfile news fragment] to tell the user what was changed
