@@ -231,7 +231,7 @@ from twisted.mail import imap4
 from twisted.python import failure
 
 @defer.inlineCallbacks
-def main(reactor, username="alice", password="secret",
+def main(reactor, username=b"alice", password=b"secret",
          strport="tls:example.com:993"):
     endpoint = endpoints.clientFromString(reactor, strport)
     factory = protocol.Factory.forProtocol(imap4.IMAP4Client)
