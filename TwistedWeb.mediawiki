@@ -13,11 +13,11 @@ Twisted Web supports numerous standards; for example, it can serve as a WSGI and
 == Advantages ==
 Twisted Web is a very simple to set up stand-alone server.  For example, to run a server that serves static content out of the current directory, you can just run this short command line:
 {{{
-twistd web --path . --port 8080
+twistd web --path . --port tcp:8080
 }}}
 To run a WSGI application, it's just as simple:
 {{{
-twistd web --wsgi my.application.name --port 8080
+twistd web --wsgi my.application.name --port tcp:8080
 }}}
 Because Twisted Web is also a Python library with a documented API, you can configure your server entirely using Python.  For example, let's say you have a bunch of directories with names corresponding to each domain you want to serve from your web server.  Here's the configuration file which creates a virtual host configuration serving static content for each domain out of the directory matching its name:
 {{{
@@ -32,7 +32,7 @@ for p in FilePath(".").children():
 }}}
 This configuration can be run with:
 {{{
-twistd web --resource-script=virtual.rpy --port 8080
+twistd web --resource-script=virtual.rpy --port tcp:8080
 }}}
 Unlike some other simple-to-run Python web servers, Twisted Web is an production-grade server that can be used to deploy real applications.  Among other sites, this web site (twistedmatrix.com) is run entirely via Twisted Web.  Because it's programmable, you can customize your deployment as much or as little as you like, including having your web server run [http://twistedmatrix.com/documents/current/api/twisted.internet.task.LoopingCall.html periodic tasks].  Because it's self-contained and requires no configuration, it's ideal for developing web applications because your production environment can mirror your deployment environment very closely with little effort.
 
