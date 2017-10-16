@@ -27,6 +27,11 @@ For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwa
 
 {{{
 #!html
+<p><a href="https://www.coupondc.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/CouponDC.png"></a></p>
+}}}
+
+{{{
+#!html
 <p><a href="http://www.videdressing.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/videdressing-logo-160x40.jpg"></a></p>
 }}}
 
