@@ -57,6 +57,23 @@ For the most part, we'd love for you to jump right in and start writing code!  T
 == Authors: How to merge the change to trunk ==
 
  * Check in the GitHub PR that all tests are green (or the failed one are just unrelated/spurious failures)
+ * When the PR is from a branch outside of the main repo, Buildbot builds are not automatically trigerred. You will need to manually triger them to get results:
+
+{{{
+$ # Create a new branch on the main repo, starting with Trunk.
+$ git checkout -b 1234-name-of-new-branch trunk
+
+$ # Get the remote code
+$ git pull https://github.com/CONTRIBUTOR-NAME/twisted.git NAME-OF-THE-REMOTE-BRANCH
+
+$ # Send the new branch to the repo. This will trigger Buildot.
+$ # Wait for the builds to end and you should start seeing reports in GitHub.
+$ # No need to create a new PR.
+$ git push --set-upstream origin 1234-name-of-new-branch
+}}}
+
+
+
  * Use the GitHub merge button to merge the request, using the GitHub default commit subject, and with the standard commit format required by Twisted. See below for details.
  * Alternatively, you can use the command line and merge the change into a checkout of Twisted trunk (as a merge commit, using {{{ git merge --no-ff }}}!) and commit it.
 
