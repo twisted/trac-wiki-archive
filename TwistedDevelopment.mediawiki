@@ -138,6 +138,12 @@ If you are interested in contributing to Twisted for the first time, consider wo
 
 Familiarize yourself with project policies and coding standards and make sure your full contribution (code, test, documentation, design) adheres to it. See: [#Policies Policies]
 
+There are a couple of tools to help with automatic policy checks.
+Make sure there are no errors when running these tox environments (or equivalent checks):
+{{{
+$ tox -e pyflakes,newsfragment,manifest-checker
+}}}
+
 Make sure that you have written unit tests and docstrings for all code which has changed in your patch.  It works best if you use test-driven development to write your patch initially, and write your tests before your code.  (Believe me, if you write your tests after you write your code, we ''will'' know.  It's more obvious than you think.)
 
 Run the full test suite ''before'' submitting your patch, and fix any problems you discover.  If a reviewer notices failing tests, they may not give your code a deep look, and you may have to wait longer for a second review. See: [#ToolsForDevelopment Tools for development]
