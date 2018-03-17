@@ -37,6 +37,26 @@ NOTE for experienced Git users: for historical reasons, Twisted's main branch is
 
 Twisted development does not enforce any specific work/build environment.
 
+Twisted uses Tox for managing the environment used in the continuous testing systems (Buildbot, Travis-CI, Appveyor).
+
+
+==== With Tox ====
+
+You will need Tox version at least 2.4. (On Ubuntu 16.04 you have 2.3.1).
+
+See tox.ini comments for more details. Note that some environments are for CI systems and not designed for local runs.
+
+Here is an example for running the test in a specific environment.
+{{{
+$ tox -e py27-alldeps-nocov-posix twisted.conch.test.test_transport
+$ tox -e pyflakes,newsfragment,manifest-checker
+}}}
+
+
+==== Without Tox ====
+
+For faster runs, you can skip tox and build a custom working environment.
+
 For your convenience, the setup.py file defined optional components, `dev` component being one of them.
 
 Here is an example of creating an environment using virtualenv.
@@ -64,8 +84,11 @@ twistedchecker twisted.conch.ssh.transport
 # On Linux/OSX there is a helper to only raise error for the diff
 ./.travis/twistedchecker-trunk-diff.sh src/twisted/
 
-# Static code analysis
+# Static code analysis and checkers (see tox.ini for inspiration)
 pyflakes twisted/conch/ssh/transport.py
+git diff trunk... | admin/pycodestyle-twisted.py --diff
+./bin/admin/check-newsfragment src/twisted/
+check-manifest --ignore "docs/_build*,docs/historic/*,admin*,bin/admin*,twisted/topfiles/*.Old"
 
 }}}
 
