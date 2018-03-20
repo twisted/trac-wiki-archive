@@ -53,6 +53,15 @@ $ tox -e pyflakes,newsfragment,manifest-checker
 }}}
 
 
+You can also use tox just to initialize the dev virtual environment and then manually active and use it:
+
+{{{
+tox -e py27-nodeps-nocov-posix --develop
+. build/py27-nodeps-nocov-posix/bin/active
+trial twisted.conch.test.test_transport
+}}}
+
+
 ==== Without Tox ====
 
 For faster runs, you can skip tox and build a custom working environment.
