@@ -2,6 +2,6 @@
 
 * d3 is a mac builder
 * hostname: twisted2.egh.com
-* root as root: glyph, tomprince, adiroiban
+* root as root: glyph, tomprince, adiroiban, runcifer
 * buildslave name: egh-osx-1 
 * buildslave working dir: /Users/buildbot/BuildSlave
