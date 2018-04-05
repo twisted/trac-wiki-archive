@@ -5,3 +5,17 @@
 * root as root: glyph, tomprince, adiroiban, markrwilliams (runciter)
 * buildslave name: egh-osx-1 
 * buildslave working dir: /Users/buildbot/BuildSlave
+
+This builder uses [https://github.com/pyenv/pyenv pyenv]-provided Pythons because its version of macOS includes an ancient version of OpenSSL.
+
+pyenv downloads OpenSSL 1.0.2 and links {{{_ssl}}} against it on older macOS releases:
+
+https://github.com/pyenv/pyenv/blob/b960f863ccf81e1311706b0976fde78e58141704/plugins/python-build/share/python-build/3.6.5#L2
+https://github.com/pyenv/pyenv/blob/b960f863ccf81e1311706b0976fde78e58141704/plugins/python-build/bin/python-build#L1479-L1484
+
+pyenv was chosen over [https://docs.brew.sh/ brew] because brew wants to take over /usr/local/bin, but other things have been installed there.
+
+The build master's configuration assumes:
+
+1. That Python 2.7.14 is installed ({{{pyenv install 2.7.14}}}) and aliased to {{{python}}} ({{{pyenv global 2.7.14}}})
+2. That the {{{virtualenv}}} package is installed and runnable by {{{python -m virtualenv}}} (e.g., {{{python -m pip install --user virtualenv}}})
