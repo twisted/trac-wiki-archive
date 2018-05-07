@@ -272,3 +272,9 @@ Twisted also supports many common network protocols, including SMTP, POP3, IMAP,
  * Learn about the [wiki:TwistedSponsors individuals and organisations] that aid Twisted with donations of hardware, software, hosting and other things;
  * Help improve Twisted on [wiki:Windows Windows]!
 }}}
+
+{{{
+#!div class="column-layout" style="display: none;"
+
+[mailto:dennis.mills@glyph.im Human beings, please do not send messages to this email address!]
+}}}
