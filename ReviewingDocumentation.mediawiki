@@ -1,35 +1,36 @@
 == Reviewing and Adding Documentation ==
 
-Some reasons the documentation need help include if:
- * the explanations are unclear
- * the examples don't work or have become outdated
- * the overall structure or the order in which information is presented is unintuitive 
- * examples for major concepts are missing
+The documentation may need help if:
+ * Explanations are unclear
+ * Examples don't work or have become outdated
+ * The overall structure or the order in which information is presented is unintuitive 
+ * Examples for major concepts are missing
 
-Note that the example and howto documentation on the website may be outdated, as they are only updated from trunk on releases.
+Note that the [https://twistedmatrix.com/documents/current/core/howto/index.html example and howto documentation on the website] may be outdated, as it is only updated from trunk on releases. The [https://twisted.readthedocs.io/en/latest/ latest build on Read the Docs reflects current trunk].
 
 === Editing example and howto documentation ===
 
-1. if you haven't already, [wiki:TwistedDevelopment#Creatingyourworkenvironment create your Twisted work environment].
+These narrative docs live in [http://docutils.sourceforge.net/rst.html reStructuredText] (`.rst`) files in subdirectories of [https://github.com/twisted/twisted/tree/trunk/docs docs/]. Twisted uses the document generator [https://sphinx.readthedocs.io/en/stable/ Sphinx] to generate the HTML files you see on the web from these `.rst` files. After adding your changes, it's important to review your changes for correctness and to preview how they will look on the website.
 
-2. make sure you have the latest version of the code
+1. If you haven't already, [wiki:TwistedDevelopment#Creatingyourworkenvironment create your Twisted work environment].
+
+2. Make sure you have the latest version of the code
 
 3. Edit away!
 
-The documentation lives in [http://docutils.sourceforge.net/rst.html reStructuredText] (`.rst`) files in subdirectories of `Twisted/docs/`. Twisted uses the document generator [https://sphinx.readthedocs.io/en/stable/ sphinx] to generate the html files you see on the web from these `.rst` files. After adding your changes, it's important to review your changes for correctness and to preview how they will look on the website.
+4. Preview your changes with Sphinx
 
-4. Previewing with sphinx
-
-For example, if I made changes to `Twisted/docs/core/howto/choosing-reactor.rst`, I should
+For example, if I made changes to `docs/core/howto/choosing-reactor.rst`, I should
 
 {{{
-. build/bin/activate  # only necessary once; 'build' is the virtualenv name used on the TwistedDevelopment wiki page
-python bin/admin/build-docs .
+tox -e narrativedocs
 }}}
 
-This generates `Twisted/doc/core/howto/choosing-reactor.html`, which you can view in a web browser via the URL
+This generates `docs/_build/core/howto/choosing-reactor.html`, which you can view in a web browser with the command:
 
-`file:///path/to/Twisted/doc/core/howto/choosing-reactor.html`
+{{{
+python -m webbrowser docs/_build/core/howto/choosing-reactor.html
+}}}
 
 If everything looks good, submit a patch to the `.rst` as described [wiki:TwistedDevelopment#SubmittingaPatch here].
 
@@ -37,26 +38,28 @@ If everything looks good, submit a patch to the `.rst` as described [wiki:Twiste
 
 The API docs are generated from the doc strings in the code by [https://github.com/twisted/pydoctor pydoctor], so to update what will be displayed in the API docs just update the doc strings. After making your changes, generate a test set of API docs to preview how they will look.
 
-1. if you haven't already, [wiki:TwistedDevelopment#Creatingyourworkenvironment create your Twisted work environment].
+1. If you haven't already, [wiki:TwistedDevelopment#Creatingyourworkenvironment create your Twisted work environment].
 
-2. make sure you have the latest version of the code
+2. Make sure you have the latest version of the code
 
 3. Edit away! Be sure to adhere to the docstring guidelines in the [https://twistedmatrix.com/documents/current/core/development/policy/ Twisted coding standard].
 
-4. Preview your changes
+4. Preview your changes with pydoctor
 
 Generate the docs with the build-apidocs admin script like so:
 
 {{{
-. build/bin/activate  # only necessary once; 'build' is the virtualenv name used on the TwistedDevelopment wiki page
-python bin/admin/build-apidocs src apidocs
+tox -e apidocs
 }}}
 
-The above produces a folder called `apidocs` in your current working directory. You can then browse from the entry points to the docs in a web browser via the URL
+The above produces a folder called `apidocs` in your current working directory. You can then open the docs in a web browser with the command:
 
-`file:///path/to/apidocs/index.html`
+{{{
+python -m webbrowser apidocs/index.html
+}}}
 
 If everything looks good, submit a patch as described [wiki:TwistedDevelopment#SubmittingaPatch here].
 
 === More ===
-see also [wiki:DocumentationAnalysis DocumentationAnalysis] from an old Twisted documentation sprint.
+
+See also [wiki:DocumentationAnalysis DocumentationAnalysis] from an old Twisted documentation sprint.
