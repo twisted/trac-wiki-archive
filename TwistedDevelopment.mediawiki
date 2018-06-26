@@ -49,7 +49,7 @@ See tox.ini comments for more details. Note that some environments are for CI sy
 Here is an example for running the test in a specific environment.
 {{{
 $ tox -e py27-alldeps-nocov-posix twisted.conch.test.test_transport
-$ tox -e pyflakes,newsfragment,manifest-checker
+$ tox -e pyflakes,newsfragment,manifest-checker,pycodestylediff
 }}}
 
 
@@ -150,7 +150,7 @@ Familiarize yourself with project policies and coding standards and make sure yo
 There are a couple of tools to help with automatic policy checks.
 Make sure there are no errors when running these tox environments (or equivalent checks):
 {{{
-$ tox -e pyflakes,newsfragment,manifest-checker
+$ tox -e pyflakes,newsfragment,manifest-checker,pycodestylediff
 }}}
 
 Make sure that you have written unit tests and docstrings for all code which has changed in your patch.  It works best if you use test-driven development to write your patch initially, and write your tests before your code.  (Believe me, if you write your tests after you write your code, we ''will'' know.  It's more obvious than you think.)
