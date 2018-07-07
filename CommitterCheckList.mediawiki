@@ -13,15 +13,6 @@ This second list includes various technical details about how you might go about
   1. All development is done in branches
     1. Branch names must follow the naming convention so that various pieces of automation can work.
   1. trunk commit messages must follow the format described on ReviewProcess so that various pieces of automation can work.
-    1. If you merge a branch with the correct "Fixes ticket:NNNN" message and the ticket is not automatically closed:
-      1. Make sure you got the ticket number right
-      1. trac is buggy [https://github.com/twisted-infra/trac-config/issues/20 trac-config/20]
-        1. Log on to the svn.twistedmatrix.com shell
-        1. Look at the end of `~/.post-commit.log` for a line like "+ /svn/Twisted/hooks/trac-post-commit-pb-client ..." which corresponds to your trunk commit
-        1. Cross your fingers
-        1. Re-run that command with all the same arguments
-        1. With sufficient delays to allow trac to catch up, try again one or two more times if it still doesn't work.
-        1. If it still doesn't work, find someone in the IRC channel to help
     1. If you check in something that breaks [http://buildbot.twistedmatrix.com/boxes-supported?branch=trunk&num_builds=20 trunk], revert it
       1. If the bad revision was 07c854353d,
         1. `cd ~/Projects/Twisted`
