@@ -24,7 +24,7 @@ This second list includes various technical details about how you might go about
       1. Revert again the commit containing the revert and commit the reversion: `git revert REVERT-SHA`.
       1. Make your changes.
       1. Push the changes for re-review
-  1. If you are merging a branch into trunk, you must commit exactly the merge.  You may not make extra changes in the trunk working copy after the merge.
+  1. If you are merging a branch into trunk, you must commit exactly the merge.  You may not make extra changes in the trunk working copy after the merge.  It's easiest to do this if you merge changes via the Github pull request UI.
 
 Other documents that overlap and supplement this information include:
  * [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html Working from Twisted's Code repository]
