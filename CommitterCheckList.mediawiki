@@ -25,12 +25,6 @@ This second list includes various technical details about how you might go about
       1. Make your changes.
       1. Push the changes for re-review
   1. If you are merging a branch into trunk, you must commit exactly the merge.  You may not make extra changes in the trunk working copy after the merge.
-  1.  Use `force-build` if you want to test a branch on all supported builders before merging
-    1. No, really, use it.  It saves a lot of time.
-    1. `pip install twisted-dev-tools` to get `force-build` and other useful tools.
-    1. `force-build` prints a link to a results page. The build results are also linked from the ticket page.
-    1. There are certain unit-tests on certain builders that are known to fail intermittently. There's no official list of such tests, but you can look at [http://buildbot.twistedmatrix.com/boxes-supported?branch=trunk&num_builds=20 the history of trunk builds] for a particular builder to see if a particular failure shows up a lot. If you're sure that a given build failure is intermittent and not caused by the changes in your branch, you can still merge.
-    1. See UsingBuildbot for more help.
 
 Other documents that overlap and supplement this information include:
  * [http://twistedmatrix.com/documents/current/core/development/policy/svn-dev.html Working from Twisted's Code repository]
