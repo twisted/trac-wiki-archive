@@ -84,8 +84,8 @@ The commit message, when using both the GitHub button or the CLI commit, must fo
 <pre class="wiki">
 Merge pull request #123 from twisted/4356-branch-name-with-trac-id
 
-Author: &lt;comma_separated_names&gt;
-Reviewer: &lt;comma_separated_names&gt;
+Author: &lt;comma_separated_github_usernames&gt;
+Reviewer: &lt;comma_separated_github_usernames&gt;
 Fixes: ticket:&lt;ticket number&gt;
 
 Long description (as long as you wish)
