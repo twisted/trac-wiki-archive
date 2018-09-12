@@ -84,6 +84,10 @@ Participate in the [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship Twisted
 #!div class="twisted-sponsors"
 
 === Golden Tree Snake ===
+{{{
+#!html
+<p><a href="https://thinkst.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/thinkst.png"></a></p>
+}}}
 
 === Silver Sidewinder ===
 {{{
