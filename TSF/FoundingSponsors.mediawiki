@@ -6,61 +6,61 @@ We'd like to acknowledge those companies and individuals who made critical contr
 
 {{{
 #!html
-<a href="http://www.itasoftware.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/ITA_logo_160x80.jpg?format=raw" /></a><br/>
+<a href="https://www.itasoftware.com/"><img align="center" src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/ITA_logo_160x80.jpg?format=raw" /></a><br/>
 }}}
 {{{
 #!html
-<a href="http://www.zenoss.com/tsf?utm_source=tsf&utm_medium=logolink&utm_campaign=inbound"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/zenoss.gif?format=raw" /></a><br/>
+<a href="https://www.zenoss.com/tsf?utm_source=tsf&utm_medium=logolink&utm_campaign=inbound"><img align="center" src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/zenoss.gif?format=raw" /></a><br/>
 
 <!--
-<a href="http://microsoft.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/microsoft.png?format=raw" /></a> - <i>for donations valued at over $10,000; made by special arrangement</i> <br/>
+<a href="https://microsoft.com/"><img align="center" src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/microsoft.png?format=raw" /></a> - <i>for donations valued at over $10,000; made by special arrangement</i> <br/>
 /-->
 
 }}}
 {{{
 #!html
-<a href="http://tummy.com"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/tummy.png?format=raw" /></a><br/>
-<a href="http://www.dcit.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/dcitlogo.png?format=raw" /></a><br/>
-<a href="http://sun.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/sun.png?format=raw" /></a><br/>
-<a href="https://www.securitymetrics.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/securitymetrics.png?format=raw" /></a><br />
+<a href="https://tummy.com"><img src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/tummy.png?format=raw" /></a><br/>
+<a href="https://www.dcit.com/"><img align="center" src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/dcitlogo.png?format=raw" /></a><br/>
+<a href="https://sun.com/"><img align="center" src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/sun.png?format=raw" /></a><br/>
+<a href="https://www.securitymetrics.com/"><img align="center" src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/securitymetrics.png?format=raw" /></a><br />
 <!-- OnResolve (tnelson): Donated 2008-04-04 -->
-<a href="http://www.onresolve.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/onresolve3.png?format=raw" /></a><br />
+<a href="https://www.onresolve.com/"><img align="center" src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/onresolve3.png?format=raw" /></a><br />
 <br />
-<a href="http://www.seafelt.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/seafelt.png?format=raw" /></a><br />
+<a href="https://www.seafelt.com/"><img align="center" src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/seafelt.png?format=raw" /></a><br />
 <br/>
-<a href="http://www.appropriatesolutions.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/Appropriate-Solutions-Inc.gif?format=raw" /></a><br />
+<a href="https://www.appropriatesolutions.com/"><img align="center" src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/Appropriate-Solutions-Inc.gif?format=raw" /></a><br />
 
 <br/>
 
-<a href="http://www.canonical.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/canonical.png?format=raw" /></a><br/>
+<a href="https://www.canonical.com/"><img align="center" src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/canonical.png?format=raw" /></a><br/>
 
 <br/>
-<a href="http://bazaar-vcs.org/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/bazaar2.png?format=raw" /></a><br/>
+<a href="https://bazaar-vcs.org/"><img align="center" src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/bazaar2.png?format=raw" /></a><br/>
 
 <br/>
-<a href="http://www.flumotion.com/incoming/twisted/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/flumotion-logo-160x50.gif?format=raw" /></a><br/>
+<a href="https://www.flumotion.com/incoming/twisted/"><img align="center" src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/flumotion-logo-160x50.gif?format=raw" /></a><br/>
 }}}
 {{{
 #!html
-<a href="http://www.allmydata.com/index.php?tracking=twisted-home"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/allmydata.jpg?format=raw" /></a><br/>
+<a href="https://www.allmydata.com/index.php?tracking=twisted-home"><img src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/allmydata.jpg?format=raw" /></a><br/>
 <!-- Holden Web: Donated 2008-03-19 -->
-<a href="http://holdenweb.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/hwebtsf160x80.png?format=raw" /></a><br/>
-<a href="http://hydralabs.com"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/hydra.png?format=raw" /></a><br/>
+<a href="https://holdenweb.com/"><img src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/hwebtsf160x80.png?format=raw" /></a><br/>
+<a href="https://hydralabs.com"><img src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/hydra.png?format=raw" /></a><br/>
 <!-- Magnetk: Donated 2008-04-10 -->
-<a href="http://magnetk.com/expandrive"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/ExpanDrive.gif?format=raw" /></a><br/>
-<a href="http://lucasfilm.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/lucasfilm.jpg?format=raw" /></a><br/>
+<a href="https://magnetk.com/expandrive"><img src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/ExpanDrive.gif?format=raw" /></a><br/>
+<a href="https://lucasfilm.com/"><img src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/lucasfilm.jpg?format=raw" /></a><br/>
 <br/>
-<a href="http://chesspark.com/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/chesspark.png?format=raw" /></a><br/>
-<a href="http://www.contentinople.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/Contentinople.jpg?format=raw" /></a><br />
-<a href="http://www.internetevolution.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/InternetEvolution.jpg?format=raw" /></a><br />
-<a href="http://www.lightreading.com/"><img align="center" src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/LightReading.jpg?format=raw" /></a><br />
+<a href="https://chesspark.com/"><img src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/chesspark.png?format=raw" /></a><br/>
+<a href="https://www.contentinople.com/"><img align="center" src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/Contentinople.jpg?format=raw" /></a><br />
+<a href="https://www.internetevolution.com/"><img align="center" src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/InternetEvolution.jpg?format=raw" /></a><br />
+<a href="https://www.lightreading.com/"><img align="center" src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/LightReading.jpg?format=raw" /></a><br />
 <br/>
-<a href="http://divmod.org/"><img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/divlogo4_8_w160_banner.jpg?format=raw" /></a><br/>
+<a href="https://divmod.org/"><img src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/divlogo4_8_w160_banner.jpg?format=raw" /></a><br/>
 
 }}}
 {{{
 #!html
-<img src="http://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/adytum.png?format=raw" /><br/>
+<img src="https://twistedmatrix.com/trac/attachment/wiki/TSF/SponsorLogos/adytum.png?format=raw" /><br/>
 }}}
 
 == Individuals ==
