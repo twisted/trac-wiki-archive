@@ -57,7 +57,7 @@ For the most part, we'd love for you to jump right in and start writing code!  T
 == Authors: How to merge the change to trunk ==
 
  * Check in the GitHub PR that all tests are green (or the failed one are just unrelated/spurious failures)
- * When the PR is from a branch outside of the main repo, Buildbot builds are not automatically trigerred. You will need to manually triger them to get results:
+ * When the PR is from a branch outside of the main repo, Buildbot builds are not automatically triggered. You will need to manually trigger them to get results. You can use the `admin/pr_as_branch` script to do this, or execute these steps manually:
 
 {{{
 $ # Create a new branch on the main repo, starting with Trunk.
