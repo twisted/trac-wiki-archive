@@ -100,6 +100,7 @@ Long description (as long as you wish)
   - this ticket was in the release milestone and is now closed, so another pre-release should be issued
   - as part of the final review, the reviewer noticed that this is fixing something that could be considered a regression.
   In general, if there's any doubt, communicate to the mailing list.  The mailing list is fairly low traffic, and so a little extra noise about interesting developments is much better than letting an important fix slip through the cracks.  If you're not sure whether something qualifies as a regression or not, let the release manager know so they can decide.
+ * If no regression appears, you can delete the source branch.
 
 == Details ==
 
