@@ -33,6 +33,10 @@ To checkout code from the repository, use:
 == Signed MD5 & SHA1 Sums ==
 
 
+sha512 sums of the 18.9.0 release are [https://twistedmatrix.com/Releases/twisted-18.9.0-shasums.txt here].
+
+sha512 sums of the 18.7.0 release are [https://twistedmatrix.com/Releases/twisted-18.7.0-shasums.txt here].
+
 sha512 sums of the 18.4.0 release are [https://twistedmatrix.com/Releases/twisted-18.4.0-shasums.txt here].
 
 sha512 sums of the 17.9.0 release are [https://twistedmatrix.com/Releases/twisted-17.9.0-shasums.txt here].
