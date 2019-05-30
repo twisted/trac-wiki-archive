@@ -1,8 +1,8 @@
- [wiki:ContributingToTwistedLabs Contribute] > [wiki:TwistedDevelopment Development] > Review Process
+[wiki:ContributingToTwistedLabs Contribute] > [wiki:TwistedDevelopment Development] > Review Process
 
 = Twisted Code Review Process =
-src/twisted/newsfiles 
-[[PageOutline(2-3, , inline)]]src/twisted/newsfiles 
+
+[[PageOutline(2-3, , inline)]]
 
 All commits to Twisted's trunk must follow this review process. The only exception is for the [https://github.com/twisted/twisted/blob/trunk/docs/fun/Twisted.Quotes Twisted Quotes] file. There are no other exceptions!
 
@@ -111,7 +111,7 @@ Long description (as long as you wish)
 
 It is up to the authors of individual changes to write high-level descriptions for their changes. These descriptions will be aggregated into the release notes distributed with Twisted releases.  If we just let each author add to the [https://github.com/twisted/twisted/blob/trunk/NEWS NEWS] file on every commit, though, we would run into lots of spurious conflicts. To avoid this, we use [https://pypi.python.org/pypi/towncrier towncrier] to manage separate news fragments for each change.
 
-Changes must be accompanied by a file whose content describes that change in at least one `newsfragments` directory. There are `newsfragments` directories for each subproject (''e.g.'' [https://github.com/twisted/twisted/tree/trunk/src/twisted/web/newsfragments src/twisted/web/newsfiles], [https://github.com/twisted/twisted/tree/trunk/src/twisted/names/newsfragments src/twisted/names/newsfiles], [https://github.com/twisted/twisted/tree/trunk/src/twisted/words/newsfragments src/twisted/words/newsfragments]), and one root directory ([https://github.com/twisted/twisted/tree/trunk/src/twisted/newsfragments src/twisted/newsfiles]) for core Twisted changes. If a change affects multiple areas of Twisted, then each affected area can have a newsfragments entry to detail the relevant changes.  An entry must be a file named `<ticket number>.<change type>` (eg. `1234.bugfix`). You should replace `<ticket number>` with the ticket number which is being resolved by the change (if multiple tickets are resolved, multiple files with the same contents should be added).  The `<change type>` extension is replaced by one of the following literal strings:
+Changes must be accompanied by a file whose content describes that change in at least one `newsfragments` directory. There are `newsfragments` directories for each subproject (''e.g.'' [https://github.com/twisted/twisted/tree/trunk/src/twisted/web/newsfragments src/twisted/web/newsfragments], [https://github.com/twisted/twisted/tree/trunk/src/twisted/names/newsfragments src/twisted/names/newsfragments], [https://github.com/twisted/twisted/tree/trunk/src/twisted/words/newsfragments src/twisted/words/newsfragments]), and one root directory ([https://github.com/twisted/twisted/tree/trunk/src/twisted/newsfragments src/twisted/newsfragments]) for core Twisted changes. If a change affects multiple areas of Twisted, then each affected area can have a newsfragments entry to detail the relevant changes.  An entry must be a file named `<ticket number>.<change type>` (eg. `1234.bugfix`). You should replace `<ticket number>` with the ticket number which is being resolved by the change (if multiple tickets are resolved, multiple files with the same contents should be added).  The `<change type>` extension is replaced by one of the following literal strings:
 
 ||'''feature'''||Tickets which are adding a new feature||
 ||'''bugfix'''||Tickets which are fixing a bug||
