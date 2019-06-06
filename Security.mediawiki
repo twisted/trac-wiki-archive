@@ -14,15 +14,16 @@ You may use our public key (below) to keep your message safe and please provide 
 
 The goal of the normal Twisted development procedure is to make all steps transparent and record all information at all times in a public location - either the issue tracker or a branch.
 
-The goal of the security variation of the Twisted development procedure is to keep track of progress resolving security issues without divulging information which might be useful to attackers before a fix for the issue is available to Twisted users.
+The goal of the security variation of the Twisted development procedure is to keep track of progress resolving security issues while minimizing the window of time where information useful to attackers is available before a fix for the issue is available to Twisted users.
 
-To wit:
+This process is intended as a helpful recommendation; elements of it may be followed more or less strictly depending on the severity of the issue in question.
 
- 1. File a ticket which does not describe the issue and simply says 'security issue, description pending' and has the 'security' keyword.
- 1. When the ticket goes into review, don't attach a patch or SVN branch, but put the code into a bzr branch in your home directory on svn.twistedmatrix.com.  Give the branch a name like 'security-issue-NNNN' for ticket NNNN, to avoid exposing more details in the branch name.  In lieu of a ticket description, the branch should of course contain a NEWS file that explains the issue and the resolution clearly. 
- 1. Mark the ticket for review as usual.  Point to the location of the branch (which only committers will be able to read).
- 1. Review comments will be relayed outside of the issue tracker, via email.  Remove the ''review'' keyword as usual, but only comment that feedback has been sent to the developer.
- 1. When the branch is reviewed and accepted, generate a diff from the bzr branch and apply it to svn trunk; update the tracker issue to describe the security issue.
+ 1. Begin by filing a ticket which does not describe the issue and simply says 'security issue, description pending' and has the 'security' keyword.
+ 1. Unfortunately, we are not aware of a way to securely transmit our code to our public continuous integration systems and our code review process on Github without making the branch public.  To minimize the time that this branch is available, perform some notifications first via private email.
+    1. Try to find a reviewer ahead of time; agree upon a time to do the review, and push your code up such that continuous integration will be roughly complete by the time they're looking at it (roughly an hour in advance).
+    1. Find a release manager to issue the security release, and coordinate with them around this time window as well; be sure they're aware that this is happening in advance.
+ 1. Push your code up, get it reviewed.  While security fixes don't circumvent any of our usual processes, do be mindful of the fact that users are vulnerable while security fixes are pending, so as much as possible review feedback should be deferred.
+ 1. Backport the patch and perform the security release of the most recently released version.
 
 Aside from hiding the details of the issue while development is ongoing, all of the normal policies apply; security fixes require unit tests, etc.  See ReviewProcess for further details.
 
