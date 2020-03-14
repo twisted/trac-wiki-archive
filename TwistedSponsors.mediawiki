@@ -32,7 +32,7 @@ For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwa
 
 {{{
 #!html
-<p><a href="https://landingi.com/" rel="nofollow">Landingi</a></p>
+<p><a href="https://landingi.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/landingi-logo.png"></a></p>
 }}}
 
 {{{
