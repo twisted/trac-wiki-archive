@@ -226,33 +226,34 @@ Twisted includes a sophisticated IMAP4 client library.
 
 {{{
 #!python
-from __future__ import print_function
-
 import sys
 
 from twisted.internet import protocol, defer, endpoints, task
 from twisted.mail import imap4
 from twisted.python import failure
 
-@defer.inlineCallbacks
-def main(reactor, username=b"alice", password=b"secret",
-         strport="tls:example.com:993"):
+
+async def main(
+    reactor, username="alice", password="secret", strport="tls:example.com:993"
+):
     endpoint = endpoints.clientFromString(reactor, strport)
     factory = protocol.Factory.forProtocol(imap4.IMAP4Client)
     try:
-        client = yield endpoint.connect(factory)
-        yield client.login(username, password)
-        yield client.select('INBOX')
-        info = yield client.fetchEnvelope(imap4.MessageSet(1))
-        print('First message subject:', info[1]['ENVELOPE'][1])
+        client = await endpoint.connect(factory)
+        await client.login(username.encode("utf-8"),
+                           password.encode("utf-8"))
+        await client.select("INBOX")
+        info = await client.fetchEnvelope(imap4.MessageSet(1))
+        print("First message subject:", info[1]["ENVELOPE"][1])
     except:
         print("IMAP4 client interaction failed")
-        failure.Failure().printTraceback()
+        print(failure.Failure().getTraceback())
 
-task.react(main, sys.argv[1:])
+
+task.react(lambda *a, **k: defer.ensureDeferred(main(*a, **k)), sys.argv[1:])
 }}}
 
-Give this a try, supplying your IMAP4 username, password, and [https://twistedmatrix.com/documents/current/core/howto/endpoints.html#auto7 client endpoint description] for your IMAP4 server.  You'll see the subject of the first message in your mailbox printed.
+Give this a try, supplying your IMAP4 username, app password ([https://support.google.com/accounts/answer/185833?hl=en generate one for gmail], [https://www.fastmail.com/help/clients/apppassword.html generate one for fastmail]), and [https://twistedmatrix.com/documents/current/core/howto/endpoints.html#auto7 client endpoint description] for your IMAP4 server.  You'll see the subject of the first message in your mailbox printed.
 
 See the TwistedMail documentation for more information.
 
