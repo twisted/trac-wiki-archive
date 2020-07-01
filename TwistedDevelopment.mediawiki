@@ -150,7 +150,7 @@ Familiarize yourself with project policies and coding standards and make sure yo
 There are a couple of tools to help with automatic policy checks.
 Make sure there are no errors when running these tox environments (or equivalent checks):
 {{{
-$ tox -e lint,pyflakes,newsfragment,manifest-checker
+$ tox -e lint,newsfragment,manifest-checker
 }}}
 
 Make sure that you have written unit tests and docstrings for all code which has changed in your patch.  It works best if you use test-driven development to write your patch initially, and write your tests before your code.  (Believe me, if you write your tests after you write your code, we ''will'' know.  It's more obvious than you think.)
