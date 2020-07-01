@@ -48,16 +48,16 @@ See tox.ini comments for more details. Note that some environments are for CI sy
 
 Here is an example for running the test in a specific environment.
 {{{
-$ tox -e py27-alldeps-nocov twisted.conch.test.test_transport
-$ tox -e lint,pyflakes,newsfragment,manifest-checker
+$ tox -e alldeps-nocov twisted.conch.test.test_transport
+$ tox -e lint,newsfragment,manifest-checker
 }}}
 
 
 You can also use tox just to initialize the dev virtual environment and then manually active and use it:
 
 {{{
-tox -e py27-nodeps-nocov-posix --develop
-. build/py27-nodeps-nocov-posix/bin/active
+tox -e nodeps-nocov-posix --develop
+. build/nodeps-nocov-posix/bin/active
 trial twisted.conch.test.test_transport
 }}}
 
