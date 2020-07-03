@@ -112,7 +112,7 @@ Participate in the [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship Twisted
 
 = What is Twisted? =
 
-Twisted is an event-driven networking engine written in Python and licensed under the open source [http://www.opensource.org/licenses/mit-license.php MIT license]. It supports CPython 2.7, CPython 3.5+, PyPy, and PyPy3. [https://labs.twistedmatrix.com/2020/03/twisted-drops-python-27-support.html Twisted 20.3.0 will be the last version with Python 2.7 support].
+Twisted is an event-driven networking engine written in Python and licensed under the open source [http://www.opensource.org/licenses/mit-license.php MIT license]. It supports CPython 2.7, CPython 3.5+, PyPy2, and PyPy3. [https://labs.twistedmatrix.com/2020/03/twisted-drops-python-27-support.html Twisted 20.3.0 is the last version with Python 2.7 and PyPy2 support].
 
 == Code Examples ==
 
