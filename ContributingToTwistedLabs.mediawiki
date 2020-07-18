@@ -45,7 +45,7 @@ Donations are [http://twistedmatrix.com/trac/wiki/TwistedSoftwareFoundation#Back
  * [wiki:ReviewProcess Code Reviews] 
  * Submit bug reports (you must first be [/register registered])  
  * Provide technical support (answer questions on [TwistedCommunity IRC and the mail lists])
- * Sign up for a [wiki:ProjectJobs project job]. Help us maintain our buildbot slaves, speed center, Trac instance, version control mirrors, and more.
+ * Sign up for a [wiki:ProjectJobs project job]. Help us maintain our build CI, speed center, Trac instance, and more.
 
 
 = Wiki Portals =
