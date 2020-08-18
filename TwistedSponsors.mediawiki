@@ -42,7 +42,7 @@ For more information about becoming a Twisted Sponsor, click [wiki:TwistedSoftwa
 
 {{{
 #!html
-<p><a href="https://julegenser.no/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/krismis.jpg"></a></p>
+<p><a href="https://julegenser.no/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/krismis.png"></a></p>
 }}}
 
 
