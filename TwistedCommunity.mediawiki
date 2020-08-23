@@ -18,22 +18,21 @@ You can subscribe to these mailing lists using the web interfaces linked above.
 
 Stack Overflow is a programming Q & A site.  You can find Twisted-related questions there, often with answers:
 
-  * http://stackoverflow.com/questions/tagged/twisted
+  * https://stackoverflow.com/questions/tagged/twisted
 
 == Real-Time Chat ==
 
-Server: {{{irc.freenode.net}}} (more about [http://freenode.net the Freenode IRC network])
+Server: {{{irc.freenode.net}}} (more about [https://freenode.net the Freenode IRC network])
 
 For support, you can join one of several channels:
 
-  - [irc://irc.freenode.net/twisted #twisted] | [https://botbot.me/freenode/twisted/ Logs] - support for Twisted and its ecosystem
-  - [irc://irc.freenode.net/twisted.web #twisted.web] | [https://botbot.me/freenode/twisted-dev/ Logs] - support for Twisted Web, and ecosystem projects such as Treq and Klein; both for development with it and deploying it
-  - [irc://irc.freenode.net/divmod #divmod] - support for and development of [https://launchpad.net/divmod.org technologies related to Twisted] such as the Nevow templating system.
+  - [irc://irc.freenode.net/twisted #twisted] | [https://freenode.logbot.info/twisted/ Logs] - support for Twisted and its ecosystem
+  - [irc://irc.freenode.net/twisted.web #twisted.web] | [https://freenode.logbot.info/twisted.web/ Logs] - support for Twisted Web, and ecosystem projects such as Treq, Klein and the Nevow templating system.; both for development with it and deploying it
 
 If you're working on Twisted, you should join the development channel.
 
-  - [irc://irc.freenode.net/twisted-dev #twisted-dev] | [https://botbot.me/freenode/twisted-dev/ Logs] - for development of Twisted
+  - [irc://irc.freenode.net/twisted-dev #twisted-dev] | [https://freenode.logbot.info/twisted-dev/ Logs] - for development of Twisted
 
 == Blogs ==
 
-Read [http://planet.twistedmatrix.com/ Planet Twisted].
+Read [https://planet.twistedmatrix.com/ Planet Twisted].
