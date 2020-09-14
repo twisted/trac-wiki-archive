@@ -7,7 +7,7 @@
 
 Twisted uses the [UltimateQualityDevelopmentSystem The Ultimate Quality Development System], in addition to this ReviewProcess.
 
-If you want to become a developer, it is important to understand that all your contributions (including those initial patches you send to the bug tracker) will have to be licenced under the [http://www.opensource.org/licenses/mit-license.php MIT licence].
+If you want to become a developer, it is important to understand that all your contributions (including those initial patches you send to the bug tracker) will have to be licenced under the [https://opensource.org/licenses/mit-license.php MIT licence].
 
 
 === Getting the source code ===
@@ -37,19 +37,20 @@ NOTE for experienced Git users: for historical reasons, Twisted's main branch is
 
 Twisted development does not enforce any specific work/build environment.
 
-Twisted uses Tox for managing the environment used in the continuous testing systems (Buildbot, Travis-CI, Appveyor).
+Twisted uses Tox for managing the environment used in the continuous testing systems (GitHub Actions, Circle CI, Travis-CI, Appveyor).
 
 
 ==== With Tox ====
 
 You will need Tox version at least 2.4. (On Ubuntu 16.04 you have 2.3.1).
 
-See tox.ini comments for more details. Note that some environments are for CI systems and not designed for local runs.
+See README.md and tox.ini comments for more details. Note that some environments are for CI systems and not designed for local runs.
 
-Here is an example for running the test in a specific environment.
+Here is an example for running the test in a specific environment:
+
 {{{
 $ tox -e alldeps-nocov twisted.conch.test.test_transport
-$ tox -e lint,newsfragment,manifest-checker
+$ tox -e lint,black,newsfragment,manifest-checker
 }}}
 
 
@@ -116,7 +117,7 @@ Here's a quick step-by-step guide to getting from an idea for an improvement to 
   git checkout -b 1234-myuserid-mychange
   }}}
   1. Edit the code in the branch that you just checked out, making your awesome change to Twisted.
-  1. Make sure that your patch fulfills all of the requirements of the [http://twistedmatrix.com/trac/wiki/ReviewProcess review process], so you don't need to submit your patch many repeated times.
+  1. Make sure that your patch fulfills all of the requirements of the [http://twistedmatrix.com/trac/wiki/ReviewProcess review process], so you don't need to submit your patch many repeated times. Run `tox -e black-reformat` to automate the formatting.
   1. Every patch needs a [http://twistedmatrix.com/trac/wiki/ReviewProcess#Newsfiles topfile news fragment] to tell the user what was changed
   1. Commit your changes 
      {{{
