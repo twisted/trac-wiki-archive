@@ -64,9 +64,9 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
         <input name="hosted_button_id" value="ZB3NXPUZHQUKS" type="hidden">
         <input name="currency_code" value="USD" type="hidden">
         <input name="amount" value="25" type="hidden">
-        <input onclick="return setDonationAmount(this.form, 'amount')" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" alt="PayPal">
+        <input onclick="return setDonationAmount(this.form, 'amount')" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="PayPal">
         <div style="text-align: center; padding-top: 3px; font-size: 0.85em; color: #555">PayPal</div>
-        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>
     </div>
 
@@ -87,18 +87,18 @@ Participate in the [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship Twisted
 === Golden Tree Snake ===
 {{{
 #!html
-<p><a href="https://thinkst.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/thinkst.png"></a></p>
+<p><a href="https://thinkst.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/thinkst.png" alt=""></a></p>
 }}}
 
 === Silver Sidewinder ===
 {{{
 #!html
-<p><a href="https://www.variomedia.de/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/Variomedia-rescaled.png"></a></p>
+<p><a href="https://www.variomedia.de/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/Variomedia-rescaled.png" alt=""></a></p>
 }}}
 
 {{{
 #!html
-<p><a href="https://www.atlassian.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/Atlassian-hipchat-logo.png"></a></p>
+<p><a href="https://www.atlassian.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/Atlassian-hipchat-logo.png" alt=""></a></p>
 }}}
 }}}
 
