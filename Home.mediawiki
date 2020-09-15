@@ -73,7 +73,7 @@ Donations are [wiki:TwistedSoftwareFoundation#Background tax-deductible].
     </div>
 
     <a href="https://flattr.com/thing/948720/Twisted-the-premier-networking-library-for-the-Python-language">
-      <img src="https://button.flattr.com/flattr-badge-large.png" alt="Flattr us!" title="Flattr us!" />
+      <img src="https://button.flattr.com/flattr-badge-large.png" alt="Flattr us!" title="Flattr us!" crossorigin="anonymous" />
     </a>
 </div>
 }}}
