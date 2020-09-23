@@ -102,7 +102,7 @@ Changes must be accompanied by a file whose content describes that change in at 
 ||'''removal'''||Tickets which are deprecating something or removing something which was already deprecated||
 ||'''misc'''||Tickets which are very minor and not worth summarizing outside of the git changelog.  These should be empty (their contents will be ignored)||
 
-To get a sense of how the text in these files is presented to users, take a look at [https://github.com/twisted/twisted/blob/trunk/NEWS the real overall news file].  The goal when writing the content for one of these files is to produce text that will fit well into the overall news files.
+To get a sense of how the text in these files is presented to users, take a look at [https://github.com/twisted/twisted/blob/trunk/NEWS.rst the real overall news file].  The goal when writing the content for one of these files is to produce text that will fit well into the overall news files.
 
 Here are a few which should help you write good news fragments:
 
