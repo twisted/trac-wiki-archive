@@ -1,44 +1,23 @@
 = Building Twisted on Windows =
 
-== OVERVIEW ==
 
-Some requirements must be met to build the "Official" win32 Twisted.
-
-=== Installation requirements ===
-
-* Install packages mentioned in [https://github.com/twisted/twisted/blob/trunk/INSTALL.rst#installation-requirements Installation requirements]
-* You must install the exact version of the MSVC compiler which matches you Python version: [https://wiki.python.org/moin/WindowsCompilers]
-
-=== Building ===
-
-Just issue the command:
-{{{
-$ python setup.py bdist_wheel
-}}}
+This contains information for building Twisted on Windows
 
 
-== OFFICIAL ==
+== Installation requirements ==
 
-The Official Twisted is built with native Python 2.7 (latest), not the
-Cygwin version of Python, however it is built with the help of Cygwin
-packages.
+You will need a standard Python 3 dev environment. See the official documentation at https://docs.python.org/3/using/windows.html
 
- You need both.
+Download Visual Studio Installer and get the following components for C++ build tools (might use newer versions):
 
+* MSVC v142 - VS 2019 C++ build tools
+* Windows 10 SDK
 
- * Zope``Interface 3.3.0
+You can get Python 3 via nuget.
 
- Download and install it for both versions of Python.
-
-
- * winreg
-
- You need this little module:  http://www.rutherfurd.net/python/winreg/
+Also get Git for Windows.
 
 
+== Dev process ===
 
-== TROUBLESHOOTING ==
-If you have trouble building the official build, try the following:
- 1. Make sure your cygwin .bash_profile isn't clobbering this system PATH
- 2. Make sure you don't have Cygwin's Python package installed. 
- 3. If you're doing an official release, see maintainer-notes.txt.
+I am making sure pip script is installed with `python -m pip install -U pip` as the default python might be created with only the pip module and without the pip script.
