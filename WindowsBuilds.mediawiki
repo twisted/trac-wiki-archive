@@ -18,6 +18,8 @@ You can get Python 3 via nuget.
 Also get Git for Windows.
 
 
-== Dev process ===
+== Dev process ==
 
-I am making sure pip script is installed with `python -m pip install -U pip` as the default python might be created with only the pip module and without the pip script.
+Make sure pip script is installed with `python -m pip install -U pip` as the default python might be created with only the pip module and without the pip script.
+
+Then you can do the standard `pip install -e .[dev]`
