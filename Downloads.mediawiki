@@ -1,143 +1,15 @@
 = Downloads =
 
-For more information about Twisted, please see the [wiki:TwistedProject Twisted project page]. You can get older releases from our [https://twistedmatrix.com/Releases/ download site].
+For more information about Twisted, please see the [wiki:TwistedProject Twisted project page].
 
-The current release is Twisted [[ProjectVersion]]: [[ProjectVersion(https://github.com/twisted/twisted/blob/twisted-%(base)s/NEWS.rst Release notes)]]
+You can get the latest release from [https://pypi.org/project/Twisted/ PyPI Twisted project page].
 
-== Through Pip ==
+You can get older releases from [https://pypi.org/project/Twisted/#history PyPI archives] or [https://twistedmatrix.com/Releases/ Twisted download site].
+
 
 The recommended way is to run {{{pip install Twisted}}}, preferably inside a virtualenv.
 
-On Linux, and BSDs, you will need a C compiler (such as GCC).
-
-On macOS you will need to run {{{xcode-select --install}}}.
+If you are installing on macOS, {{{pip install Twisted[macos_platform]}}} will install the macOS-specific requirements.
 
 If you are installing on Windows, {{{pip install Twisted[windows_platform]}}} will install the Windows-specific requirements.
 
-== Source Tarball ==
-
- * Twisted [[ProjectVersion]] [[ProjectVersion(https://twistedmatrix.com/Releases/Twisted/%(major)s.%(minor)s/Twisted-%(base)s.tar.bz2 tarball)]]
-
-== View on the Web ==
-
-You can view the source code on the web [https://github.com/twisted/twisted here].
-
-== Source Checkout ==
-
-To checkout code from the repository, use:
-{{{
-  git clone -b trunk https://github.com/twisted/twisted.git
-}}}
-
-
-== Signed MD5 & SHA1 Sums ==
-
-sha512 sums of the 20.3.0 release are [https://twistedmatrix.com/Releases/twisted-20.3.0-shasums.txt here].
-
-sha512 sums of the 19.10.0 release are [https://twistedmatrix.com/Releases/twisted-19.10.0-shasums.txt here].
-
-sha512 sums of the 19.7.0 release are [https://twistedmatrix.com/Releases/twisted-19.7.0-shasums.txt here].
-
-sha512 sums of the 19.2.1 release are [https://twistedmatrix.com/Releases/twisted-19.2.1-shasums.txt here].
-
-sha512 sums of the 19.2.0 release are [https://twistedmatrix.com/Releases/twisted-19.2.0-shasums.txt here].
-
-sha512 sums of the 18.9.0 release are [https://twistedmatrix.com/Releases/twisted-18.9.0-shasums.txt here].
-
-sha512 sums of the 18.7.0 release are [https://twistedmatrix.com/Releases/twisted-18.7.0-shasums.txt here].
-
-sha512 sums of the 18.4.0 release are [https://twistedmatrix.com/Releases/twisted-18.4.0-shasums.txt here].
-
-sha512 sums of the 17.9.0 release are [https://twistedmatrix.com/Releases/twisted-17.9.0-shasums.txt here].
-
-sha512 sums of the 17.5.0 release are [https://twistedmatrix.com/Releases/twisted-17.5.0-shasums.txt here].
-
-sha512 sums of the 17.1.0 release are [https://twistedmatrix.com/Releases/twisted-17.1.0-shasums.txt here].
-
-sha512 sums of the 16.6.0 release are [https://twistedmatrix.com/Releases/twisted-16.6.0-shasums.txt here].
-
-sha512 sums of the 16.5.0 release are [https://twistedmatrix.com/Releases/twisted-16.5.0-shasums.txt here].
-
-sha512 sums of the 16.4.1 release are [https://twistedmatrix.com/Releases/twisted-16.4.1-shasums.txt here].
-
-sha512 sums of the 16.4.0 release are [https://twistedmatrix.com/Releases/twisted-16.4.0-shasums.txt here].
-
-md5 sums of the 16.3.2 release are [https://twistedmatrix.com/Releases/twisted-16.3.2-md5sums.txt here].
-sha512 sums of the 16.3.2 release are [https://twistedmatrix.com/Releases/twisted-16.3.2-shasums.txt here].
-
-md5 sums of the 16.3.1 release are [https://twistedmatrix.com/Releases/twisted-16.3.1-md5sums.txt here].
-sha512 sums of the 16.3.1 release are [https://twistedmatrix.com/Releases/twisted-16.3.1-shasums.txt here].
-
-md5 sums of the 16.3.0 release are [https://twistedmatrix.com/Releases/twisted-16.3.0-md5sums.txt here].
-sha512 sums of the 16.3.0 release are [https://twistedmatrix.com/Releases/twisted-16.3.0-shasums.txt here].
-
-md5 sums of the 16.2.0 release are [https://twistedmatrix.com/Releases/twisted-16.2.0-md5sums.txt here].
-sha512 sums of the 16.2.0 release are [https://twistedmatrix.com/Releases/twisted-16.2.0-shasums.txt here].
-
-md5 sums of the 16.1.1 release are [https://twistedmatrix.com/Releases/twisted-16.1.1-md5sums.txt here].
-sha512 sums of the 16.1.1 release are [https://twistedmatrix.com/Releases/twisted-16.1.1-shasums.txt here].
-
-md5 sums of the 16.1.0 release are [https://twistedmatrix.com/Releases/twisted-16.1.0-md5sums.txt here].
-sha512 sums of the 16.1.0 release are [https://twistedmatrix.com/Releases/twisted-16.1.0-shasums.txt here].
-
-md5 sums of the 16.0.0 release are [https://twistedmatrix.com/Releases/twisted-16.0.0-md5sums.txt here].
-sha512 sums of the 16.0.0 release are [https://twistedmatrix.com/Releases/twisted-16.0.0-shasums.txt here].
-
-md5 sums of the 15.5.0 release are [https://twistedmatrix.com/Releases/twisted-15.5.0-md5sums.txt here].
-sha512 sums of the 15.5.0 release are [https://twistedmatrix.com/Releases/twisted-15.5.0-shasums.txt here].
-
-md5 sums of the 15.4.0 release are [https://twistedmatrix.com/Releases/twisted-15.4.0-md5sums.txt here].
-sha512 sums of the 15.4.0 release are [https://twistedmatrix.com/Releases/twisted-15.4.0-shasums.txt here].
-
-md5 sums of the 15.3.0 release are [https://twistedmatrix.com/Releases/twisted-15.3.0-md5sums.txt here].
-sha512 sums of the 15.3.0 release are [https://twistedmatrix.com/Releases/twisted-15.3.0-shasums.txt here].
-
-md5 sums of the 15.2.0 release are [https://twistedmatrix.com/Releases/twisted-15.2.0-md5sums.txt here].
-sha512 sums of the 15.2.0 release are [https://twistedmatrix.com/Releases/twisted-15.2.0-shasums.txt here].
-
-md5 sums of the 15.1.0 release are [https://twistedmatrix.com/Releases/twisted-15.1.0-md5sums.txt here].
-sha512 sums of the 15.1.0 release are [https://twistedmatrix.com/Releases/twisted-15.1.0-shasums.txt here].
-
-md5 sums of the 15.0.0 release are [https://twistedmatrix.com/Releases/twisted-15.0.0-md5sums.txt here].
-sha512 sums of the 15.0.0 release are [https://twistedmatrix.com/Releases/twisted-15.0.0-shasums.txt here].
-
-md5 sums of the 14.0.2 release are [https://twistedmatrix.com/Releases/twisted-14.0.2-md5sums.txt here].
-sha512 sums of the 14.0.2 release are [https://twistedmatrix.com/Releases/twisted-14.0.2-shasums.txt here].
-
-md5 sums of the 14.0.1 release are [https://twistedmatrix.com/Releases/twisted-14.0.1-md5sums.txt here].
-sha512 sums of the 14.0.1 release are [https://twistedmatrix.com/Releases/twisted-14.0.1-shasums.txt here].
-
-md5 sums of the 14.0.0 release are [https://twistedmatrix.com/Releases/twisted-14.0.0-md5sums.txt here].
-sha512 sums of the 14.0.0 release are [https://twistedmatrix.com/Releases/twisted-14.0.0-shasums.txt here].
-
-md5 sums of the 13.2.0 release are [https://twistedmatrix.com/Releases/twisted-13.2.0-md5sums.txt here].
-sha512 sums of the 13.2.0 release are [https://twistedmatrix.com/Releases/twisted-13.2.0-shasums.txt here].
-
-md5 sums of the 13.1.0 release are [https://twistedmatrix.com/Releases/twisted-13.1.0-md5sums.txt here].
-sha512 sums of the 13.1.0 release are [https://twistedmatrix.com/Releases/twisted-13.1.0-shasums.txt here].
-
-md5 sums of the 13.0.0 release are [https://twistedmatrix.com/Releases/twisted-13.0.0-md5sums.txt here].
-
-md5 sums of the 12.3.0 release are [https://twistedmatrix.com/Releases/twisted-12.3.0-md5sums.txt here].
-
-md5 sums of the 12.2.0 release are [https://twistedmatrix.com/Releases/twisted-12.2.0-md5sums.txt here].
-
-md5 sums of the 12.1.0 release are [https://twistedmatrix.com/Releases/twisted-12.1.0-md5sums.txt here].
-
-md5 sums of the 12.0.0 release are [https://twistedmatrix.com/Releases/twisted-12.0.0-md5sums.txt here].
-
-md5 sums of the 11.1.0 release are [https://twistedmatrix.com/Releases/twisted-11.1.0-md5sums.txt here].
-
-md5 sums of the 11.0.0 release are [https://twistedmatrix.com/Releases/twisted-11.0.0-md5sums.txt here].
-
-md5 sums of the 10.2.0 release are [https://twistedmatrix.com/Releases/twisted-10.2.0-md5sums.txt here].
-
-md5 sums of the 10.1.0 release are [https://twistedmatrix.com/Releases/twisted-10.1.0-md5sums.txt here].
-
-md5 sums of the 10.0.0 release are [https://twistedmatrix.com/Releases/twisted-10.0.0-md5sums.txt here].
-
-md5 sums of the 9.0.0 release are [https://twistedmatrix.com/Releases/twisted-9.0.0-md5sums.txt here].
-
-md5 sums of the 8.2.0 release are [https://twistedmatrix.com/Releases/twisted-8.2.0-md5sums.txt here].
-
-md5 sums of the 8.1.0 release are [https://twistedmatrix.com/Releases/twisted-8.1.0-md5sums.txt here].
