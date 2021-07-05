@@ -22,16 +22,16 @@ Stack Overflow is a programming Q & A site.  You can find Twisted-related questi
 
 == Real-Time Chat ==
 
-Server: {{{irc.freenode.net}}} (more about [https://freenode.net the Freenode IRC network])
+Server: {{{irc.libera.chat}}} (more about [https://https://libera.chat the Libera IRC network])
 
 For support, you can join one of several channels:
 
-  - [irc://irc.freenode.net/twisted #twisted] | [https://freenode.logbot.info/twisted/ Logs] - support for Twisted and its ecosystem
-  - [irc://irc.freenode.net/twisted.web #twisted.web] | [https://freenode.logbot.info/twisted.web/ Logs] - support for Twisted Web, and ecosystem projects such as Treq, Klein and the Nevow templating system.; both for development with it and deploying it
+  - [irc://irc.libera.chat/twisted #twisted] | [https://freenode.logbot.info/twisted/ Logs] - support for Twisted and its ecosystem
+  - [irc://irc.libera.chat/twisted.web #twisted.web] | [https://freenode.logbot.info/twisted.web/ Logs] - support for Twisted Web, and ecosystem projects such as Treq, Klein and the Nevow templating system.; both for development with it and deploying it
 
 If you're working on Twisted, you should join the development channel.
 
-  - [irc://irc.freenode.net/twisted-dev #twisted-dev] | [https://freenode.logbot.info/twisted-dev/ Logs] - for development of Twisted
+  - [irc://irc.libera.chat/twisted-dev #twisted-dev] | [https://freenode.logbot.info/twisted-dev/ Logs] - for development of Twisted
 
 == Blogs ==
 
