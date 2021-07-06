@@ -2,7 +2,9 @@
 
 = Twisted Lore =
 
-Lore is a documentation generator.  It is used to generate the Twisted documentation.  It produces output that looks like [http://twistedmatrix.com/projects/core/documentation/howto/servers.html this].
+Lore is deprecated. Check pydoctor.
+
+Lore was a documentation generator.  It is used to generate the Twisted documentation.  It produces output that looks like [http://twistedmatrix.com/projects/core/documentation/howto/servers.html this].
 
 Lore processes simple HTML documents (and troff-formatted man-pages) into slightly more complex HTML documents as well as `LaTeX` files (which can, in turn, be used to produce printed documentation [http://twistedmatrix.com/projects/core/documentation/howto/book.pdf such as the Twisted core documentation "book"]).  Its features include linking and syntax-highlighting source listings, "table of contents" generation, and embedding diagrams.  Where they are not automatic, these features are invoked by annotating elements in the input with special `class` attributes, which leaves the input a valid HTML document that can be viewed without the help of lore.
 
@@ -20,7 +22,7 @@ See the [wiki:Downloads] page.
 
 = Contact = 
 
-Subscribe to the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted-python] mailing list or visit the #twisted channel on irc.freenode.net to ask questions.
+Subscribe to the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted-python] mailing list or visit the #twisted channel on irc.libera.chat to ask questions.
 
 = Tickets =
 
