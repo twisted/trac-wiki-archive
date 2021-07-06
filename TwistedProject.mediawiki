@@ -18,6 +18,6 @@ See the [wiki:Downloads] page.
 
 = Contact = 
 
-Subscribe to the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted-python] mailing list or visit the #twisted channel on irc.freenode.net to ask questions.
+Subscribe to the [http://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python twisted-python] mailing list or visit the #twisted channel on irc.libera.chat to ask questions.
 
 You can browse the [query:status=new|assigned|reopened&component=core Twisted Core tickets]. Furthermore, if you [https://twistedmatrix.com/trac/github/login login], then you can [http://twistedmatrix.com/trac/newticket?type=defect&component=core report a bug] or [http://twistedmatrix.com/trac/newticket?type=enhancement&component=core request a feature] using the issue tracker.
