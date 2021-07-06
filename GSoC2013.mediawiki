@@ -104,7 +104,7 @@ http://openhatch.org/missions/diffpatch
 If you have any questions while going through this material, don't hesitate to ask for help in #twisted on IRC or on the [http://twistedmatrix.com/trac/wiki/TwistedCommunity#MailLists twisted-python mailing list].
 
 Once you've gone through this material, the next steps will be to:
-  1. Meet up on IRC (stop by the `#twisted` channel on Freenode)
+  1. Meet up on IRC (stop by the `#twisted` channel on Libera)
   2. Check out and explore the Twisted source code
   3. Read a few parts of the Twisted core documentation and run some example Twisted scripts
   4. Run the Twisted test suite - cd into the checkout folder and run "bin/trial twisted".
