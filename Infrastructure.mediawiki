@@ -5,7 +5,7 @@
 
 This page collects links to useful pages describing the infrastructure behind twistedmatrix.com.
 
- * #twisted-admin on freenode.
+ * #twisted-dev on https://libera.chat
 
  * [wiki:Infrastructure/Mail] - Plans for self-hosting of mail
  * [ContinuousIntegration/TestSlaveConfiguration Buildslave setup]
