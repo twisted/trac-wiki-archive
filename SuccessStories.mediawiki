@@ -2,6 +2,14 @@
 
 '''Have a success story for Twisted? Let us know! Contact success at twistedmatrix dot com'''
 
+= [https://www.battlehouse.com Battlehouse Games]
+
+Battlehouse creates and operates massively-multiplayer strategy games for browser and desktop platforms. Our most popular titles are nearly 10 years old and have served over 4 million users.
+
+Twisted plays an important role in our Python-based server stack. We use Twisted to handle many protocols including HTTP, WebSockets, and SQL. The asynchronous coroutine model helps us deliver low-latency gameplay without adding too much complexity to the codebase. Across 10 years of continuous evolution, Twisted has proven to be the most stable, well-documented, and flexible low-level networking library for Python.
+
+-- Dan Maas, CTO, Battlehouse Games
+
 = [https://github.com/labrad LabRAD] =
 
 [https://github.com/labrad LabRAD] is an RPC system designed for use in scientific research labs, presently in use by [https://github.com/labrad/labrad/wiki/Who-uses-LabRAD more than a dozen academic and industrial labs] around the world.
