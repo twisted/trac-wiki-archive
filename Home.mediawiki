@@ -39,7 +39,7 @@ $ twist --help
 }}}
 == See the code [https://github.com/twisted/twisted for Twisted] ([https://github.com/twisted and more]) on GitHub ==
 == Read [https://labs.twistedmatrix.com/ our blog] ==
-== Join [https://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python the discussion list] ==
+== Join [https://mail.python.org/mailman3/lists/twisted.python.org/ the discussion list] ==
 == Come [https://web.libera.chat/#twisted chat] with us on IRC ==
 == Report a [wiki:Security 🔒security issue] == 
 == Ask [https://stackoverflow.com/questions/tagged/twisted on Stack Overflow] ==
