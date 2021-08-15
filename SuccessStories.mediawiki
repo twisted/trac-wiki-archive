@@ -2,6 +2,18 @@
 
 '''Have a success story for Twisted? Let us know! Contact success at twistedmatrix dot com'''
 
+= [https://zont-online.ru/ ZONT Online]
+
+ZONT Online is an online platform for monitoring and control of internet-connected smart devices. We use Twisted from the first days in 2011 to power our fully-asynchronous python backend.
+
+Twisted powers a wide range of our server-side tasks: user-facing and API web servers, websockets, queue workers, custom TCP/IP servers, email and push sending, 3rd-party API integrations and so on.
+
+We found Twisted to be mature, well-designed and having batteries included. Its networking primitives are flexible enough to build a wide range of services and to integrate with both blocking and non-blocking libraries.
+
+Special mention should be made about how carefully Twisted team documents its releases and maintains backward-compatibility. During the 10 years of our work with Twisted we continuously migrated through almost all Python versions from 2.7 to 3.9 and Twisted versions from 11.0.0 to 21.7.0 without notable surprises.
+
+-- Ilya Skriblovsky, Lead of Online Services Development, ZONT Online Ltd.
+
 = [https://www.battlehouse.com Battlehouse Games]
 
 Battlehouse creates and operates massively-multiplayer strategy games for browser and desktop platforms. Our most popular titles are nearly 10 years old and have served over 4 million users.
