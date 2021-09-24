@@ -98,10 +98,6 @@ Participate in the [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship Twisted
 <p><a href="https://www.variomedia.de/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/Variomedia-rescaled.png" alt=""></a></p>
 }}}
 
-{{{
-#!html
-<p><a href="https://www.atlassian.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/Atlassian-hipchat-logo.png" alt=""></a></p>
-}}}
 }}}
 
 
