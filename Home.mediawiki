@@ -91,7 +91,7 @@ Participate in the [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship Twisted
 
 {{{
 #!html
-<p><a href="https://azure.microsoft.com/" rel="nofollow"><img src="https://www.vaisulweb.com/wp-content/uploads/2019/02/azure_logo_794_new.png" alt=""></a></p>
+<p><a href="https://azure.microsoft.com/" rel="nofollow"><img src="/trac/raw-attachment/wiki/TSF/SponsorLogos/azure_logo.png" alt=""></a></p>
 }}}
 
 
