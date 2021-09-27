@@ -86,6 +86,16 @@ Participate in the [wiki:TwistedSoftwareFoundation#BenefitsofSponsorship Twisted
 {{{
 #!div class="twisted-sponsors"
 
+
+=== VM Hosting sponsored by Microsoft Azure ===
+
+{{{
+#!html
+<p><a href="https://azure.microsoft.com/" rel="nofollow"><img src="https://www.vaisulweb.com/wp-content/uploads/2019/02/azure_logo_794_new.png" alt=""></a></p>
+}}}
+
+
+
 === Golden Tree Snake ===
 {{{
 #!html
