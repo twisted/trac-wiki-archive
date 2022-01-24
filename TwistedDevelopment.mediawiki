@@ -50,7 +50,7 @@ Here is an example for running the test in a specific environment:
 
 {{{
 $ tox -e alldeps-nocov twisted.conch.test.test_transport
-$ tox -e lint,black,newsfragment,manifest-checker
+$ tox -e lint,newsfragment
 }}}
 
 
