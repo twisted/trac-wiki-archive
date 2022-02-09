@@ -22,7 +22,7 @@ Stack Overflow is a programming Q & A site.  You can find Twisted-related questi
 
 == Real-Time Chat ==
 
-Server: {{{irc.libera.chat}}} (more about [https://https://libera.chat the Libera IRC network])
+Server: {{{irc.libera.chat}}} (more about [https://libera.chat the Libera IRC network])
 
 For support, you can join one of several channels:
 
