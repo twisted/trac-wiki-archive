@@ -5,12 +5,8 @@ For interacting with the twisted community members, you have several options:
 == Mail Lists ==
 
 If you want to participate in Twisted's community or development, you probably want to join the main mailing list:
- * [https://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-python Twisted-Python, the main Twisted discussion list]
-
-There are also more specific lists, if your interest is narrower:
-
- * [https://twistedmatrix.com/cgi-bin/mailman/listinfo/twisted-web twisted-web] - web-specific technologies, including twisted as WSGI, twisted.web, klein, and treq
- * [https://mailman.ik.nu/mailman/listinfo/twisted-jabber twisted-jabber] - xmpp-related projects, including twisted.words.protocols.jabber.
+ * [https://mail.python.org/mailman3/lists/twisted.python.org/ Twisted-Python, the main Twisted discussion list]
+ * [https://mail.python.org/mailman3/lists/twisted-web.python.org/ Twisted-Web] - Legacy list dedicated to web-specific technologies. Discussion moved to the main Twisted python list.
 
 You can subscribe to these mailing lists using the web interfaces linked above.
 
@@ -22,7 +18,10 @@ Stack Overflow is a programming Q & A site.  You can find Twisted-related questi
 
 == Real-Time Chat ==
 
-Server: {{{irc.libera.chat}}} (more about [https://libera.chat the Libera IRC network])
+
+Matrix/Gitter: https://gitter.im/twisted/twisted
+
+IRC: {{{irc.libera.chat}}} (more about [https://libera.chat the Libera IRC network])
 
 For support, you can join one of several channels:
 
