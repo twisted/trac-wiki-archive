@@ -5,6 +5,6 @@
       <meta http-equiv="refresh" content="0; url=https://github.com/twisted/twisted/security/policy" />
    </head>}}}
 
+}}}
 
-
-Page moved to 
+Page moved to https://github.com/twisted/twisted/security/policy
