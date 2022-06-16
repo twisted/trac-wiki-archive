@@ -1,9 +1,10 @@
 {{{
 #!html
+
    <head>
       <title>HTML Meta Tag</title>
       <meta http-equiv="refresh" content="0; url=https://github.com/twisted/twisted/security/policy" />
-   </head>}}}
+   </head>
 
 }}}
 
