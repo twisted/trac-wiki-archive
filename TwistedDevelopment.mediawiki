@@ -259,4 +259,4 @@ If you want to hack Twisted on Win32, see Ying Li's [http://blog.ying.li/2012/03
 
 == Twisted Maintenance ==
 
-You might be interested in learning about tasks related to [wiki:SiteMaintenance maintaining this website] or for [wiki:ReleaseProcess releasing Twisted].
+You might be interested in learning about tasks related to [wiki:SiteMaintenance maintaining this website] or for [​http://twisted.readthedocs.org/en/latest/core/development/policy/release-process.html releasing Twisted].
