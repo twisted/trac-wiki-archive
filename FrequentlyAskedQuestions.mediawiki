@@ -46,7 +46,7 @@ Yes, Twisted can be installed both using pip and easy_install, although pip is r
 
 === Why does Twisted depend on Zope? ===
 
-Twisted only depends on [http://www.zope.org/Products/ZopeInterface Zope Interface], an interface package which is also packaged and distributed independently from the main Zope distribution.  Twisted uses Zope Interface to define and document APIs. Packages are available for all major operating systems.
+Twisted only depends on [https://zopeinterface.readthedocs.io/en/latest/ Zope Interface], an interface package which is also packaged and distributed independently from the main Zope distribution.  Twisted uses Zope Interface to define and document APIs. Packages are available for all major operating systems.
 
 === How can I access self.factory from my Protocol's !__init!__? ===
 
